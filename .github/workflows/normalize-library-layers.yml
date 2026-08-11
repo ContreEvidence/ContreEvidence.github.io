@@ -1,0 +1,34 @@
+name: Normalize library catalog layers
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/normalize-library-layers.py'
+      - '.github/workflows/normalize-library-layers.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Align catalog consumers
+        run: python scripts/normalize-library-layers.py
+      - name: Commit maintenance alignment
+        run: |
+          if git diff --quiet; then
+            echo 'Catalog consumers already aligned.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add scripts/add-related-content.cjs scripts/generate-rss.cjs .github/workflows/catalog-integrity.yml .github/workflows/library-coverage-audit.yml .github/workflows/related-content-audit.yml
+          git commit -m 'Aligner les consommateurs du catalogue Bibliothèque'
+          git pull --rebase origin main
+          git push
