@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/</link>
     <description>Nouveaux guides, dossiers et outils de Contre-Évidence : patrimoine, vie professionnelle et décisions concrètes.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Tue, 11 Aug 2026 12:31:02 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 17:52:53 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/rss.xml" rel="self" type="application/rss+xml"/>
@@ -15,1013 +15,400 @@
       <link>https://contreevidence.github.io/</link>
     </image>
     <item>
-      <title>Utiliser son patrimoine pour gagner de la marge de manœuvre</title>
-      <link>https://contreevidence.github.io/dossiers/patrimoine-marge-de-manoeuvre.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/patrimoine-marge-de-manoeuvre.html</guid>
-      <pubDate>Tue, 11 Aug 2026 11:46:31 GMT</pubDate>
-      <category>Guide</category>
-      <category>Patrimoine</category>
-      <category>Vie professionnelle</category>
-      <category>Marge de manœuvre</category>
-      <description>Lire liquidité, dépenses, dette et actifs comme une capacité à absorber les chocs, financer des transitions et racheter du temps.</description>
-    </item>
-    <item>
-      <title>Bien immobilier : garder, vendre, louer ou transformer ?</title>
-      <link>https://contreevidence.github.io/dossiers/bien-immobilier-garder-vendre-transformer.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/bien-immobilier-garder-vendre-transformer.html</guid>
-      <pubDate>Tue, 11 Aug 2026 11:46:21 GMT</pubDate>
-      <category>Guide</category>
-      <category>Patrimoine</category>
-      <category>Immobilier</category>
-      <description>Recalculer le rendement futur, le capital net libérable, les travaux, la gestion, la concentration et les options cachées du bien.</description>
-    </item>
-    <item>
-      <title>Emploi : chercher, accepter, négocier ou évoluer</title>
-      <link>https://contreevidence.github.io/dossiers/emploi-chercher-accepter-negocier-evoluer.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/emploi-chercher-accepter-negocier-evoluer.html</guid>
-      <pubDate>Tue, 11 Aug 2026 11:46:07 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Emploi</category>
-      <description>Diagnostiquer où la chaîne emploi casse puis traiter candidature, entretien, offre, négociation ou mobilité avec la bonne méthode.</description>
-    </item>
-    <item>
-      <title>Acheter un logement sans se fragiliser financièrement</title>
-      <link>https://contreevidence.github.io/dossiers/acheter-logement-sans-se-fragiliser.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/acheter-logement-sans-se-fragiliser.html</guid>
-      <pubDate>Tue, 11 Aug 2026 11:40:31 GMT</pubDate>
-      <category>Guide</category>
-      <category>Patrimoine</category>
-      <category>Immobilier</category>
-      <description>Relier apport, épargne restante, coût complet, crédit, mobilité et scénarios avant de signer.</description>
-    </item>
-    <item>
-      <title>Travailler moins, gagner moins, vivre mieux : comment arbitrer ?</title>
-      <link>https://contreevidence.github.io/dossiers/travailler-moins-vivre-mieux.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/travailler-moins-vivre-mieux.html</guid>
-      <pubDate>Tue, 11 Aug 2026 11:40:08 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Qualité de vie</category>
-      <description>Relier temps partiel, revenu, trajet, santé, patrimoine et objectifs de vie sans réduire la décision au salaire.</description>
-    </item>
-    <item>
-      <title>Quitter son travail ou se reconvertir sans se fragiliser</title>
-      <link>https://contreevidence.github.io/dossiers/quitter-travail-reconversion-sans-se-fragiliser.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/quitter-travail-reconversion-sans-se-fragiliser.html</guid>
-      <pubDate>Tue, 11 Aug 2026 11:39:47 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Transition</category>
-      <description>Clarifier ce qui doit changer, mesurer la marge financière, tester le marché et choisir une transition progressive ou complète.</description>
-    </item>
-    <item>
-      <title>Deux offres d’emploi : laquelle choisir ?</title>
-      <link>https://contreevidence.github.io/dossiers/comparer-deux-offres-emploi.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/comparer-deux-offres-emploi.html</guid>
-      <pubDate>Tue, 11 Aug 2026 11:34:13 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Vie professionnelle</category>
-      <category>Choix d’emploi</category>
-      <description>Comparer salaire, revenu disponible, trajet, télétravail, temps, stabilité, compétences et qualité de vie.</description>
-    </item>
-    <item>
-      <title>Lancer une activité sans quitter son emploi : quand basculer ?</title>
-      <link>https://contreevidence.github.io/dossiers/lancer-activite-sans-quitter-emploi.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/lancer-activite-sans-quitter-emploi.html</guid>
-      <pubDate>Tue, 11 Aug 2026 11:33:53 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Entrepreneuriat</category>
-      <description>Tester demande, marge, trésorerie, temps disponible et seuil de bascule avant de quitter le salaire.</description>
-    </item>
-    <item>
-      <title>Puis-je financièrement me permettre une reconversion ?</title>
-      <link>https://contreevidence.github.io/dossiers/puis-je-me-permettre-reconversion.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/puis-je-me-permettre-reconversion.html</guid>
-      <pubDate>Tue, 11 Aug 2026 11:33:32 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Reconversion</category>
-      <description>Mesurer dépenses, réserve, manque à gagner, coût de formation, délai de retour à l’emploi et scénario adverse.</description>
-    </item>
-    <item>
-      <title>Passer à 80 % : combien ça coûte vraiment ?</title>
-      <link>https://contreevidence.github.io/dossiers/passer-80-pourcent-cout-reel.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/passer-80-pourcent-cout-reel.html</guid>
-      <pubDate>Tue, 11 Aug 2026 11:33:15 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Vie professionnelle</category>
-      <category>Temps de travail</category>
-      <description>Comparer revenu disponible, frais évités, retraite, épargne, charge réelle et temps récupéré.</description>
-    </item>
-    <item>
-      <title>Mon patrimoine me permet-il de travailler moins ?</title>
-      <link>https://contreevidence.github.io/dossiers/patrimoine-permet-il-travailler-moins.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/patrimoine-permet-il-travailler-moins.html</guid>
-      <pubDate>Tue, 11 Aug 2026 11:22:36 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Patrimoine</category>
-      <category>Liberté financière</category>
-      <description>Comparer baisse de revenu, dépenses, dette, retraite, actifs disponibles et valeur du temps libéré.</description>
-    </item>
-    <item>
-      <title>Acheter un logement sans vider son épargne : combien garder après l’achat ?</title>
-      <link>https://contreevidence.github.io/dossiers/acheter-sans-vider-epargne.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/acheter-sans-vider-epargne.html</guid>
-      <pubDate>Tue, 11 Aug 2026 11:22:15 GMT</pubDate>
-      <category>Guide</category>
-      <category>Patrimoine</category>
-      <category>Immobilier</category>
-      <description>Séparer apport, travaux et réserve puis tester la solidité du foyer après la signature.</description>
-    </item>
-    <item>
-      <title>Accepter un emploi moins payé pour vivre mieux ?</title>
-      <link>https://contreevidence.github.io/dossiers/accepter-emploi-moins-paye-vivre-mieux.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/accepter-emploi-moins-paye-vivre-mieux.html</guid>
-      <pubDate>Tue, 11 Aug 2026 11:21:56 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Vie professionnelle</category>
-      <category>Qualité de vie</category>
-      <description>Comparer revenu réellement disponible, trajet, temps, santé, télétravail, progression et soutenabilité financière.</description>
-    </item>
-    <item>
-      <title>Reconversion sans perte de salaire : quelles options sont réellement possibles ?</title>
-      <link>https://contreevidence.github.io/dossiers/reconversion-sans-perte-salaire.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/reconversion-sans-perte-salaire.html</guid>
-      <pubDate>Tue, 11 Aug 2026 11:21:33 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Reconversion</category>
-      <description>Distinguer maintien de revenu, manque à gagner, coût de formation et salaire de sortie avant de construire la transition.</description>
-    </item>
-    <item>
-      <title>Combien d’épargne faut-il avant de démissionner ?</title>
-      <link>https://contreevidence.github.io/dossiers/combien-epargne-avant-demissionner.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/combien-epargne-avant-demissionner.html</guid>
-      <pubDate>Tue, 11 Aug 2026 11:21:11 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Transition</category>
-      <description>Calculer la réserve réellement disponible à partir des dépenses essentielles et tester un retour à l’emploi plus long que prévu.</description>
-    </item>
-    <item>
-      <title>Quitter son CDI avec un crédit immobilier : comment savoir si vous pouvez vous le permettre ?</title>
-      <link>https://contreevidence.github.io/dossiers/quitter-cdi-avec-credit-immobilier.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/quitter-cdi-avec-credit-immobilier.html</guid>
-      <pubDate>Tue, 11 Aug 2026 11:20:36 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Transition</category>
-      <description>Mesurer la marge financière, vérifier les droits et comparer rester, préparer la sortie ou partir lorsque le foyer porte déjà un crédit.</description>
-    </item>
-    <item>
-      <title>Commercial B2B : transformer un besoin en décision d’achat rentable</title>
-      <link>https://contreevidence.github.io/fiches-metiers/commercial-b2b.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/fiches-metiers/commercial-b2b.html</guid>
-      <pubDate>Mon, 10 Aug 2026 15:58:39 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Fiche métier</category>
-      <description>Prospection, qualification, vente, négociation, marge, cycle de décision, CRM, preuves et transfert de compétences vers d’autres fonctions.</description>
-    </item>
-    <item>
-      <title>Chargé de recrutement et RH : réduire l’incertitude sans réduire les personnes à un CV</title>
-      <link>https://contreevidence.github.io/fiches-metiers/charge-recrutement-rh.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/fiches-metiers/charge-recrutement-rh.html</guid>
-      <pubDate>Mon, 10 Aug 2026 15:58:02 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Fiche métier</category>
-      <description>Besoin de recrutement, tri, entretien, intégration, droit, données et relations internes : comprendre les décisions et limites du rôle.</description>
-    </item>
-    <item>
-      <title>Responsable qualité : transformer des exigences en système de travail fiable</title>
-      <link>https://contreevidence.github.io/fiches-metiers/responsable-qualite.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/fiches-metiers/responsable-qualite.html</guid>
-      <pubDate>Mon, 10 Aug 2026 15:57:21 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Fiche métier</category>
-      <description>Processus, conformité, audit, amélioration, preuves, coopération avec les opérations et responsabilité : comprendre le métier au-delà des procédures.</description>
-    </item>
-    <item>
-      <title>Manager de proximité : coordonner le travail sans devenir le goulot d’étranglement</title>
-      <link>https://contreevidence.github.io/fiches-metiers/manager-proximite.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/fiches-metiers/manager-proximite.html</guid>
-      <pubDate>Mon, 10 Aug 2026 15:56:49 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Fiche métier</category>
-      <description>Finalité, arbitrages quotidiens, compétences, preuves, contraintes, responsabilités et évolutions d’un rôle d’encadrement de proximité.</description>
-    </item>
-    <item>
-      <title>Fiches métiers : comprendre le travail réel derrière un intitulé</title>
-      <link>https://contreevidence.github.io/fiches-metiers.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/fiches-metiers.html</guid>
-      <pubDate>Mon, 10 Aug 2026 15:56:15 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Fiches métiers</category>
-      <description>Lire un métier par sa finalité, ses activités, ses décisions, ses compétences, ses preuves, ses contraintes, ses responsabilités, ses portes d’entrée et ses évolutions.</description>
-    </item>
-    <item>
-      <title>Santé au travail et équilibre de vie : le coût d’un emploi ne se résume pas au salaire</title>
-      <link>https://contreevidence.github.io/dossiers/sante-travail-equilibre-vie-pro-perso.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/sante-travail-equilibre-vie-pro-perso.html</guid>
-      <pubDate>Mon, 10 Aug 2026 15:55:32 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Santé &amp; conditions de travail</category>
-      <description>Risques physiques, charge, horaires, récupération, risques psychosociaux, trajet, organisation et vie personnelle : évaluer la soutenabilité réelle d’un travail.</description>
-    </item>
-    <item>
-      <title>Préjugés au travail : ce qui est réellement évalué n’est pas toujours ce que l’on croit</title>
-      <link>https://contreevidence.github.io/dossiers/prejuges-biais-monde-professionnel.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/prejuges-biais-monde-professionnel.html</guid>
-      <pubDate>Mon, 10 Aug 2026 15:54:31 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Vie professionnelle</category>
-      <category>Perceptions &amp; biais</category>
-      <description>Âge, diplôme, parcours, apparence, statut, ancienneté et stéréotypes : distinguer biais de perception, critères professionnels légitimes et discrimination interdite.</description>
-    </item>
-    <item>
-      <title>Erreur, insuffisance, faute : qui est responsable de quoi au travail ?</title>
-      <link>https://contreevidence.github.io/dossiers/regles-responsabilites-fautes-travail.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/regles-responsabilites-fautes-travail.html</guid>
-      <pubDate>Mon, 10 Aug 2026 15:53:33 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Droit &amp; responsabilités</category>
-      <description>Distinguer erreur, insuffisance professionnelle, manquement disciplinaire, faute simple, grave ou lourde, et replacer les obligations du salarié, du manager et de l’employeur dans leur cadre.</description>
-    </item>
-    <item>
-      <title>Management, autorité et conflits : choisir le bon mode de fonctionnement</title>
-      <link>https://contreevidence.github.io/dossiers/management-relations-conflits.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/management-relations-conflits.html</guid>
-      <pubDate>Mon, 10 Aug 2026 15:52:33 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Management &amp; relations</category>
-      <description>Comparer direction, participation, délégation, autonomie, contrôle et feedback ; distinguer désaccord, tension et conflit puis traiter le problème au bon niveau.</description>
-    </item>
-    <item>
-      <title>Comment apprend-on réellement un métier et une compétence ?</title>
-      <link>https://contreevidence.github.io/dossiers/apprendre-developper-competences.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/apprendre-developper-competences.html</guid>
-      <pubDate>Mon, 10 Aug 2026 15:51:28 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Apprentissage</category>
-      <description>Formation formelle, pratique, observation, tutorat, autoformation, feedback, mise en situation et répétition : choisir le bon mode d’apprentissage selon la compétence visée.</description>
-    </item>
-    <item>
-      <title>Métier, poste, fonction, service : comprendre qui fait quoi dans une entreprise</title>
-      <link>https://contreevidence.github.io/dossiers/metiers-fonctions-organisation-entreprise.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/metiers-fonctions-organisation-entreprise.html</guid>
-      <pubDate>Mon, 10 Aug 2026 15:50:36 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Comprendre le travail</category>
-      <description>Lire une organisation par ses finalités, ses flux et ses responsabilités : direction, opérations, commercial, finance, RH, qualité, achats, logistique, numérique et fonctions support.</description>
-    </item>
-    <item>
       <title>Compétences, qualification, diplôme et employabilité : remettre chaque notion à sa place</title>
       <link>https://contreevidence.github.io/dossiers/competences-qualification-employabilite.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/dossiers/competences-qualification-employabilite.html</guid>
-      <pubDate>Mon, 10 Aug 2026 15:49:43 GMT</pubDate>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Guide</category>
       <category>Vie professionnelle</category>
       <category>Comprendre le travail</category>
       <description>Distinguer connaissances, savoir-faire, comportements professionnels, qualification, certification, diplôme, expérience, preuves et employabilité avant de choisir une formation ou un poste.</description>
     </item>
     <item>
+      <title>Métier, poste, fonction, service : comprendre qui fait quoi dans une entreprise</title>
+      <link>https://contreevidence.github.io/dossiers/metiers-fonctions-organisation-entreprise.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/metiers-fonctions-organisation-entreprise.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Comprendre le travail</category>
+      <description>Lire une organisation par ses finalités, ses flux et ses responsabilités : direction, opérations, commercial, finance, RH, qualité, achats, logistique, numérique et fonctions support.</description>
+    </item>
+    <item>
+      <title>Comment apprend-on réellement un métier et une compétence ?</title>
+      <link>https://contreevidence.github.io/dossiers/apprendre-developper-competences.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/apprendre-developper-competences.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Apprentissage</category>
+      <description>Formation formelle, pratique, observation, tutorat, autoformation, feedback, mise en situation et répétition : choisir le bon mode d’apprentissage selon la compétence visée.</description>
+    </item>
+    <item>
+      <title>Management, autorité et conflits : choisir le bon mode de fonctionnement</title>
+      <link>https://contreevidence.github.io/dossiers/management-relations-conflits.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/management-relations-conflits.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Management &amp; relations</category>
+      <description>Comparer direction, participation, délégation, autonomie, contrôle et feedback ; distinguer désaccord, tension et conflit puis traiter le problème au bon niveau.</description>
+    </item>
+    <item>
+      <title>Erreur, insuffisance, faute : qui est responsable de quoi au travail ?</title>
+      <link>https://contreevidence.github.io/dossiers/regles-responsabilites-fautes-travail.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/regles-responsabilites-fautes-travail.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Droit &amp; responsabilités</category>
+      <description>Distinguer erreur, insuffisance professionnelle, manquement disciplinaire, faute simple, grave ou lourde, et replacer les obligations du salarié, du manager et de l’employeur dans leur cadre.</description>
+    </item>
+    <item>
+      <title>Préjugés au travail : ce qui est réellement évalué n’est pas toujours ce que l’on croit</title>
+      <link>https://contreevidence.github.io/dossiers/prejuges-biais-monde-professionnel.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/prejuges-biais-monde-professionnel.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Perceptions &amp; biais</category>
+      <description>Âge, diplôme, parcours, apparence, statut, ancienneté et stéréotypes : distinguer biais de perception, critères professionnels légitimes et discrimination interdite.</description>
+    </item>
+    <item>
+      <title>Santé au travail et équilibre de vie : le coût d’un emploi ne se résume pas au salaire</title>
+      <link>https://contreevidence.github.io/dossiers/sante-travail-equilibre-vie-pro-perso.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/sante-travail-equilibre-vie-pro-perso.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Santé &amp; conditions de travail</category>
+      <description>Risques physiques, charge, horaires, récupération, risques psychosociaux, trajet, organisation et vie personnelle : évaluer la soutenabilité réelle d’un travail.</description>
+    </item>
+    <item>
+      <title>Fiches métiers : comprendre le travail réel derrière un intitulé</title>
+      <link>https://contreevidence.github.io/fiches-metiers.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/fiches-metiers.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Fiches métiers</category>
+      <description>Lire un métier par sa finalité, ses activités, ses décisions, ses compétences, ses preuves, ses contraintes, ses responsabilités, ses portes d’entrée et ses évolutions.</description>
+    </item>
+    <item>
+      <title>Manager de proximité : coordonner le travail sans devenir le goulot d’étranglement</title>
+      <link>https://contreevidence.github.io/fiches-metiers/manager-proximite.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/fiches-metiers/manager-proximite.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Fiche métier</category>
+      <description>Finalité, arbitrages quotidiens, compétences, preuves, contraintes, responsabilités et évolutions d’un rôle d’encadrement de proximité.</description>
+    </item>
+    <item>
+      <title>Responsable qualité : transformer des exigences en système de travail fiable</title>
+      <link>https://contreevidence.github.io/fiches-metiers/responsable-qualite.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/fiches-metiers/responsable-qualite.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Fiche métier</category>
+      <description>Processus, conformité, audit, amélioration, preuves, coopération avec les opérations et responsabilité : comprendre le métier au-delà des procédures.</description>
+    </item>
+    <item>
+      <title>Chargé de recrutement et RH : réduire l’incertitude sans réduire les personnes à un CV</title>
+      <link>https://contreevidence.github.io/fiches-metiers/charge-recrutement-rh.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/fiches-metiers/charge-recrutement-rh.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Fiche métier</category>
+      <description>Besoin de recrutement, tri, entretien, intégration, droit, données et relations internes : comprendre les décisions et limites du rôle.</description>
+    </item>
+    <item>
+      <title>Commercial B2B : transformer un besoin en décision d’achat rentable</title>
+      <link>https://contreevidence.github.io/fiches-metiers/commercial-b2b.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/fiches-metiers/commercial-b2b.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Fiche métier</category>
+      <description>Prospection, qualification, vente, négociation, marge, cycle de décision, CRM, preuves et transfert de compétences vers d’autres fonctions.</description>
+    </item>
+    <item>
       <title>Toutes les classes d’actifs : construire une allocation patrimoniale complète</title>
       <link>https://contreevidence.github.io/dossiers/classes-actifs-allocation-patrimoine.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/dossiers/classes-actifs-allocation-patrimoine.html</guid>
-      <pubDate>Mon, 10 Aug 2026 13:29:43 GMT</pubDate>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Guide</category>
       <category>Patrimoine</category>
       <category>Allocation globale</category>
       <description>Liquidités, fonds euros, obligations, actions, immobilier direct et indirect, non coté, infrastructures, or, matières premières, crypto et alternatifs : distinguer exposition économique, véhicule et enveloppe.</description>
     </item>
     <item>
-      <title>Comparer trois stratégies immobilières</title>
-      <link>https://contreevidence.github.io/simulateur-comparer-strategies-immobilieres.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-comparer-strategies-immobilieres.html</guid>
-      <pubDate>Mon, 10 Aug 2026 13:15:03 GMT</pubDate>
-      <category>Outil</category>
-      <category>Patrimoine</category>
-      <category>Stratégies immobilières</category>
-      <description>Mettre nue, meublée, colocation, courte durée, parking ou local commercial sur une même base de coût, vacance, gestion, fiscalité et temps personnel.</description>
-    </item>
-    <item>
       <title>Location nue, meublée, colocation, courte durée, parking, local commercial : comparer les stratégies immobilières</title>
       <link>https://contreevidence.github.io/dossiers/comparer-strategies-immobilieres.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/dossiers/comparer-strategies-immobilieres.html</guid>
-      <pubDate>Mon, 10 Aug 2026 13:08:57 GMT</pubDate>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Guide</category>
       <category>Patrimoine</category>
       <category>Immobilier &amp; allocation</category>
       <description>Comparer rendement net, gestion, stabilité, réglementation, ticket d’entrée, liquidité et scénario de sortie avant de choisir une forme d’immobilier.</description>
     </item>
     <item>
-      <title>Un bien immobilier vaut aussi par les options qu’il laisse ouvertes</title>
-      <link>https://contreevidence.github.io/dossiers/valeur-option-bien-immobilier.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/valeur-option-bien-immobilier.html</guid>
-      <pubDate>Mon, 10 Aug 2026 13:04:47 GMT</pubDate>
-      <category>Guide</category>
-      <category>Patrimoine</category>
-      <category>Optionnalité immobilière</category>
-      <description>Habiter, louer, diviser, exploiter une partie, transformer ou revendre : intégrer la flexibilité future dans l’analyse d’un bien immobilier.</description>
-    </item>
-    <item>
-      <title>Garages, parkings et locaux commerciaux : l’immobilier ne se résume pas au logement</title>
-      <link>https://contreevidence.github.io/dossiers/garages-parkings-locaux-commerciaux.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/garages-parkings-locaux-commerciaux.html</guid>
-      <pubDate>Mon, 10 Aug 2026 13:04:00 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Patrimoine</category>
-      <category>Immobilier alternatif</category>
-      <description>Ticket d’entrée, bail, vacance, travaux, dépendance à l’emplacement, liquidité et rendement : comparer les actifs immobiliers directs hors logement classique.</description>
-    </item>
-    <item>
-      <title>Location courte durée : rendement élevé ou petite activité hôtelière sous contrainte ?</title>
-      <link>https://contreevidence.github.io/dossiers/location-courte-duree-meuble-tourisme.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/location-courte-duree-meuble-tourisme.html</guid>
-      <pubDate>Mon, 10 Aug 2026 13:03:08 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Patrimoine</category>
-      <category>Meublé de tourisme</category>
-      <description>Occupation, saisonnalité, ménage, plateformes, copropriété, enregistrement, DPE et fiscalité : mesurer le rendement après exploitation et risque réglementaire.</description>
-    </item>
-    <item>
-      <title>Location nue ou meublée : comparer l’économie complète avant la fiscalité</title>
-      <link>https://contreevidence.github.io/dossiers/location-nue-ou-meublee-comparer.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/location-nue-ou-meublee-comparer.html</guid>
-      <pubDate>Mon, 10 Aug 2026 13:02:09 GMT</pubDate>
-      <category>Guide</category>
-      <category>Patrimoine</category>
-      <category>Investissement locatif</category>
-      <description>Bail, rotation, mobilier, travaux, fiscalité, temps de gestion et souplesse : comparer deux modes d’exploitation sans se limiter au loyer facial.</description>
-    </item>
-    <item>
       <title>Immobilier et allocation globale : quelle place donner à la pierre dans son patrimoine ?</title>
       <link>https://contreevidence.github.io/dossiers/immobilier-allocation-globale-patrimoine.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/dossiers/immobilier-allocation-globale-patrimoine.html</guid>
-      <pubDate>Mon, 10 Aug 2026 13:01:19 GMT</pubDate>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Dossier</category>
       <category>Patrimoine</category>
       <category>Immobilier &amp; allocation</category>
       <description>Résidence principale, locatif, dette, liquidité, rendement, concentration et diversification : juger l’immobilier à l’échelle du patrimoine complet.</description>
     </item>
     <item>
-      <title>Acheter en copropriété : l’audit à faire avant de signer</title>
-      <link>https://contreevidence.github.io/dossiers/audit-copropriete-avant-achat.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/audit-copropriete-avant-achat.html</guid>
-      <pubDate>Mon, 10 Aug 2026 09:04:01 GMT</pubDate>
-      <category>Dossier</category>
+      <title>Location nue ou meublée : comparer l’économie complète avant la fiscalité</title>
+      <link>https://contreevidence.github.io/dossiers/location-nue-ou-meublee-comparer.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/location-nue-ou-meublee-comparer.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
       <category>Patrimoine</category>
-      <category>Immobilier</category>
-      <description>Procès-verbaux, charges, impayés, travaux, toiture, façade, ascenseur et diagnostics : transformer les risques de l’immeuble en décisions chiffrées.</description>
+      <category>Investissement locatif</category>
+      <description>Bail, rotation, mobilier, travaux, fiscalité, temps de gestion et souplesse : comparer deux modes d’exploitation sans se limiter au loyer facial.</description>
     </item>
     <item>
-      <title>Achat immobilier : calculer le coût complet avant de regarder la mensualité</title>
-      <link>https://contreevidence.github.io/dossiers/cout-complet-achat-immobilier.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/cout-complet-achat-immobilier.html</guid>
-      <pubDate>Mon, 10 Aug 2026 08:54:51 GMT</pubDate>
+      <title>Location courte durée : rendement élevé ou petite activité hôtelière sous contrainte ?</title>
+      <link>https://contreevidence.github.io/dossiers/location-courte-duree-meuble-tourisme.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/location-courte-duree-meuble-tourisme.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Dossier</category>
       <category>Patrimoine</category>
-      <category>Immobilier</category>
-      <description>Prix, frais d’acquisition, crédit, apport, travaux, charges, revente et coût d’opportunité : reconstruire l’économie complète d’un achat.</description>
+      <category>Meublé de tourisme</category>
+      <description>Occupation, saisonnalité, ménage, plateformes, copropriété, enregistrement, DPE et fiscalité : mesurer le rendement après exploitation et risque réglementaire.</description>
     </item>
     <item>
-      <title>Combien coûte le fait d’attendre ?</title>
-      <link>https://contreevidence.github.io/simulateur-prix-attendre.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-prix-attendre.html</guid>
-      <pubDate>Mon, 10 Aug 2026 08:53:41 GMT</pubDate>
-      <category>Outil</category>
+      <title>Garages, parkings et locaux commerciaux : l’immobilier ne se résume pas au logement</title>
+      <link>https://contreevidence.github.io/dossiers/garages-parkings-locaux-commerciaux.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/garages-parkings-locaux-commerciaux.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
       <category>Patrimoine</category>
-      <category>Commencer ses finances</category>
-      <description>Séparer dépenses évitables, érosion du pouvoir d’achat et écart de capitalisation liés au report d’une décision financière.</description>
+      <category>Immobilier alternatif</category>
+      <description>Ticket d’entrée, bail, vacance, travaux, dépendance à l’emplacement, liquidité et rendement : comparer les actifs immobiliers directs hors logement classique.</description>
+    </item>
+    <item>
+      <title>Un bien immobilier vaut aussi par les options qu’il laisse ouvertes</title>
+      <link>https://contreevidence.github.io/dossiers/valeur-option-bien-immobilier.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/valeur-option-bien-immobilier.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Patrimoine</category>
+      <category>Optionnalité immobilière</category>
+      <description>Habiter, louer, diviser, exploiter une partie, transformer ou revendre : intégrer la flexibilité future dans l’analyse d’un bien immobilier.</description>
     </item>
     <item>
       <title>Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?</title>
       <link>https://contreevidence.github.io/dossiers/prix-attendre-finances.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/dossiers/prix-attendre-finances.html</guid>
-      <pubDate>Mon, 10 Aug 2026 07:45:45 GMT</pubDate>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Dossier</category>
       <category>Patrimoine</category>
       <category>Commencer ses finances</category>
       <description>Rendre visible le coût possible de l’inaction : dépenses récurrentes, inflation, retard d’investissement, frais et grosses décisions laissées sans contrôle.</description>
     </item>
     <item>
+      <title>Achat immobilier : calculer le coût complet avant de regarder la mensualité</title>
+      <link>https://contreevidence.github.io/dossiers/cout-complet-achat-immobilier.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/cout-complet-achat-immobilier.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Patrimoine</category>
+      <category>Immobilier</category>
+      <description>Prix, frais d’acquisition, crédit, apport, travaux, charges, revente et coût d’opportunité : reconstruire l’économie complète d’un achat.</description>
+    </item>
+    <item>
+      <title>Acheter en copropriété : l’audit à faire avant de signer</title>
+      <link>https://contreevidence.github.io/dossiers/audit-copropriete-avant-achat.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/audit-copropriete-avant-achat.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Patrimoine</category>
+      <category>Immobilier</category>
+      <description>Procès-verbaux, charges, impayés, travaux, toiture, façade, ascenseur et diagnostics : transformer les risques de l’immeuble en décisions chiffrées.</description>
+    </item>
+    <item>
       <title>Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent</title>
       <link>https://contreevidence.github.io/dossiers/inflation-comprendre-histoire-pouvoir-achat.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/dossiers/inflation-comprendre-histoire-pouvoir-achat.html</guid>
-      <pubDate>Sun, 09 Aug 2026 12:58:23 GMT</pubDate>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Dossier</category>
       <category>Patrimoine</category>
       <category>Inflation &amp; pouvoir d’achat</category>
       <description>Définition, causes, séries historiques depuis 1945, pouvoir d’achat, rendement réel, crédit, taux et placements.</description>
     </item>
     <item>
-      <title>Gestion pilotée : comment comparer les performances sans se faire piéger ?</title>
-      <link>https://contreevidence.github.io/dossiers/gestion-pilotee-comparer-performances.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/gestion-pilotee-comparer-performances.html</guid>
-      <pubDate>Sun, 09 Aug 2026 11:38:16 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Patrimoine</category>
-      <category>Gestion pilotée</category>
-      <description>Comparer performances publiées, niveau de risque, frais, benchmark, périodes et drawdowns avant de juger une gestion pilotée.</description>
-    </item>
-    <item>
-      <title>Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?</title>
-      <link>https://contreevidence.github.io/dossiers/depenses-recurrentes-abonnements-assurances.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/depenses-recurrentes-abonnements-assurances.html</guid>
-      <pubDate>Sun, 09 Aug 2026 11:17:39 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Patrimoine</category>
-      <category>Dépenses récurrentes</category>
-      <description>Ramener les prélèvements récurrents au coût annuel, retrouver les services oubliés, détecter les doublons et distinguer dépense inutile et protection utile.</description>
-    </item>
-    <item>
       <title>Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?</title>
       <link>https://contreevidence.github.io/dossiers/cout-reel-voiture-achat-credit-loa-lld.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/dossiers/cout-reel-voiture-achat-credit-loa-lld.html</guid>
-      <pubDate>Sun, 09 Aug 2026 11:17:05 GMT</pubDate>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Dossier</category>
       <category>Patrimoine</category>
       <category>Automobile</category>
       <description>Comparer sur une même durée le financement, la décote, l’entretien, l’assurance, le kilométrage et la valeur récupérée à la sortie.</description>
     </item>
     <item>
-      <title>Comparer rendements, frais et intérêts composés</title>
-      <link>https://contreevidence.github.io/simulateur-capitalisation-comparateur.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-capitalisation-comparateur.html</guid>
-      <pubDate>Sat, 08 Aug 2026 15:55:22 GMT</pubDate>
-      <category>Outil</category>
-      <category>Patrimoine</category>
-      <category>Comparaison &amp; capitalisation</category>
-      <description>Isoler l’effet des frais ou comparer vos propres hypothèses par classe d’actifs. Seul le taux réglementé du Livret A est chargé comme donnée.</description>
-    </item>
-    <item>
-      <title>Acheter ou louer : tester plusieurs scénarios</title>
-      <link>https://contreevidence.github.io/simulateur-acheter-ou-louer.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-acheter-ou-louer.html</guid>
-      <pubDate>Sat, 08 Aug 2026 15:36:26 GMT</pubDate>
-      <category>Outil</category>
-      <category>Patrimoine</category>
-      <category>Résidence principale</category>
-      <description>Comparer achat et location sous trois hypothèses explicites de prix du logement, loyer et rendement alternatif.</description>
-    </item>
-    <item>
-      <title>Vendre ou conserver un bien immobilier ?</title>
-      <link>https://contreevidence.github.io/simulateur-vendre-ou-conserver.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-vendre-ou-conserver.html</guid>
-      <pubDate>Sat, 08 Aug 2026 15:35:52 GMT</pubDate>
-      <category>Outil</category>
-      <category>Patrimoine</category>
-      <category>Immobilier</category>
-      <description>Comparer capital libérable et conservation sous plusieurs scénarios, avec extinction réelle de la dette à son échéance.</description>
-    </item>
-    <item>
-      <title>Rembourser son crédit ou investir ?</title>
-      <link>https://contreevidence.github.io/simulateur-rembourser-ou-investir.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-rembourser-ou-investir.html</guid>
-      <pubDate>Sat, 08 Aug 2026 15:34:50 GMT</pubDate>
-      <category>Outil</category>
-      <category>Patrimoine</category>
-      <category>Crédit &amp; investissement</category>
-      <description>Comparer les positions nettes et calculer le rendement d’équilibre, sans rendement de marché prérempli.</description>
-    </item>
-    <item>
-      <title>Structurer l’allocation d’un héritage ou d’une grosse somme</title>
-      <link>https://contreevidence.github.io/outil-repartir-grosse-somme.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/outil-repartir-grosse-somme.html</guid>
-      <pubDate>Sat, 08 Aug 2026 15:33:38 GMT</pubDate>
-      <category>Outil</category>
-      <category>Patrimoine</category>
-      <category>Héritage &amp; grosse somme</category>
-      <description>Isoler le capital réellement disponible, mesurer son effet sur le patrimoine existant, saisir et tester votre propre allocation, puis observer concentration, liquidité et stress.</description>
-    </item>
-    <item>
-      <title>Tester un investissement locatif</title>
-      <link>https://contreevidence.github.io/simulateur-investissement-locatif.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-investissement-locatif.html</guid>
-      <pubDate>Sat, 08 Aug 2026 15:33:14 GMT</pubDate>
-      <category>Outil</category>
-      <category>Patrimoine</category>
-      <category>Investissement locatif</category>
-      <description>Calculer coût, rendement, cash-flow et dette puis construire vous-même le stress de loyer et de charges.</description>
-    </item>
-    <item>
-      <title>Stress tester toutes les grandes classes d’actifs</title>
-      <link>https://contreevidence.github.io/simulateur-allocation-stress-test.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-allocation-stress-test.html</guid>
-      <pubDate>Sat, 08 Aug 2026 15:32:44 GMT</pubDate>
-      <category>Outil</category>
-      <category>Patrimoine</category>
-      <category>Allocation</category>
-      <description>Visualiser la concentration puis appliquer un choc distinct aux liquidités, taux, actions, immobilier direct et indirect, non coté, infrastructures, métaux, matières premières, crypto et alternatifs.</description>
-    </item>
-    <item>
-      <title>Tester sa réserve de sécurité</title>
-      <link>https://contreevidence.github.io/simulateur-reserve-securite.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-reserve-securite.html</guid>
-      <pubDate>Sat, 08 Aug 2026 15:32:13 GMT</pubDate>
-      <category>Outil</category>
-      <category>Patrimoine</category>
-      <category>Sécurité financière</category>
-      <description>Mesurer la couverture actuelle puis saisir les durées de réserve que vous voulez réellement tester.</description>
-    </item>
-    <item>
-      <title>Calculer le coût réel d’une formation</title>
-      <link>https://contreevidence.github.io/simulateur-cout-formation.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-cout-formation.html</guid>
-      <pubDate>Sat, 08 Aug 2026 15:20:58 GMT</pubDate>
-      <category>Outil</category>
-      <category>Vie professionnelle</category>
-      <category>Formation</category>
-      <description>Additionner coûts directs et revenu sacrifié puis tester les revenus futurs que vous saisissez vous-même.</description>
-    </item>
-    <item>
-      <title>Prévisionnel de trésorerie sur 13 semaines</title>
-      <link>https://contreevidence.github.io/outil-tresorerie-13-semaines.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/outil-tresorerie-13-semaines.html</guid>
-      <pubDate>Sat, 08 Aug 2026 15:20:25 GMT</pubDate>
-      <category>Outil</category>
-      <category>Vie professionnelle</category>
-      <category>Trésorerie</category>
-      <description>Séparer la trajectoire de cash certaine de celle qui inclut les encaissements probables et repérer le point bas prudent.</description>
-    </item>
-    <item>
-      <title>Matrice compétences → preuves</title>
-      <link>https://contreevidence.github.io/outil-competences-preuves-cv.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/outil-competences-preuves-cv.html</guid>
-      <pubDate>Sat, 08 Aug 2026 15:08:33 GMT</pubDate>
-      <category>Outil</category>
-      <category>Vie professionnelle</category>
-      <category>CV &amp; entretien</category>
-      <description>Transformer les exigences réellement importantes d’une offre en situations, actions, résultats et preuves, sans générer le CV à votre place.</description>
-    </item>
-    <item>
-      <title>Calculer un prix minimum rentable</title>
-      <link>https://contreevidence.github.io/simulateur-prix-minimum-rentable.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-prix-minimum-rentable.html</guid>
-      <pubDate>Sat, 08 Aug 2026 15:07:56 GMT</pubDate>
-      <category>Outil</category>
-      <category>Vie professionnelle</category>
-      <category>Prix &amp; rentabilité</category>
-      <description>Calculer le plancher économique d’une mission à partir du temps réellement mobilisé et de vos propres coûts.</description>
-    </item>
-    <item>
-      <title>Tableau de pilotage d’une recherche d’emploi</title>
-      <link>https://contreevidence.github.io/outil-pilotage-recherche-emploi.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/outil-pilotage-recherche-emploi.html</guid>
-      <pubDate>Sat, 08 Aug 2026 15:07:21 GMT</pubDate>
-      <category>Outil</category>
-      <category>Vie professionnelle</category>
-      <category>Recherche d’emploi</category>
-      <description>Observer candidatures, réponses, entretiens et offres par séries comparables, sans taux cible universel.</description>
-    </item>
-    <item>
-      <title>Audit financier personnel</title>
-      <link>https://contreevidence.github.io/outil-audit-financier-personnel.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/outil-audit-financier-personnel.html</guid>
-      <pubDate>Sat, 08 Aug 2026 15:06:41 GMT</pubDate>
-      <category>Outil</category>
-      <category>Patrimoine</category>
-      <category>Budget</category>
-      <description>Photographier revenus, dépenses, liquidités, actifs et dettes sans score ni seuil universel.</description>
-    </item>
-    <item>
-      <title>Tester sa capacité d’emprunt immobilier</title>
-      <link>https://contreevidence.github.io/simulateur-capacite-emprunt.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-capacite-emprunt.html</guid>
-      <pubDate>Sat, 08 Aug 2026 14:50:33 GMT</pubDate>
-      <category>Outil</category>
-      <category>Patrimoine</category>
-      <category>Crédit immobilier</category>
-      <description>Estimer mensualité et capital empruntable avec règles HCSF et repère Banque de France daté et modifiable.</description>
-    </item>
-    <item>
-      <title>Quand votre expérience inquiète le recruteur</title>
-      <link>https://contreevidence.github.io/dossiers/experience-devient-risque-recruteur.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/experience-devient-risque-recruteur.html</guid>
-      <pubDate>Sat, 08 Aug 2026 12:31:56 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Expérience &amp; recrutement</category>
-      <description>Âge, surqualification, salaire, hiérarchie, stabilité et adaptation : identifier le risque perçu et préparer les preuves qui y répondent.</description>
-    </item>
-    <item>
-      <title>Améliorer une procédure sans dégrader le service</title>
-      <link>https://contreevidence.github.io/dossiers/ameliorer-processus-sans-degrader-service.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/ameliorer-processus-sans-degrader-service.html</guid>
-      <pubDate>Sat, 08 Aug 2026 12:23:57 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Organisation</category>
-      <description>Cartographier le flux, comprendre les contrôles, choisir les bons indicateurs, anticiper les effets pervers et piloter avant de déployer.</description>
-    </item>
-    <item>
-      <title>Automatiser ou non un processus : calculer le vrai gain</title>
-      <link>https://contreevidence.github.io/dossiers/automatiser-ou-non-processus.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/automatiser-ou-non-processus.html</guid>
-      <pubDate>Sat, 08 Aug 2026 12:21:35 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Automatisation</category>
-      <description>Volume, temps économisé, erreurs, maintenance, dépendances et contrôle humain avant de choisir un outil.</description>
-    </item>
-    <item>
-      <title>Embaucher ou sous-traiter ? Choisir comment créer de la capacité</title>
-      <link>https://contreevidence.github.io/dossiers/embaucher-ou-sous-traiter.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/embaucher-ou-sous-traiter.html</guid>
-      <pubDate>Sat, 08 Aug 2026 12:03:31 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Capacité</category>
-      <description>Comparer coût complet, seuil de rentabilité, flexibilité, contrôle qualité, management et risque fixe.</description>
-    </item>
-    <item>
-      <title>Quitter un emploi stable ou rester ?</title>
-      <link>https://contreevidence.github.io/dossiers/quitter-emploi-stable-ou-rester.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/quitter-emploi-stable-ou-rester.html</guid>
-      <pubDate>Sat, 08 Aug 2026 12:02:48 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Vie professionnelle</category>
-      <category>Mobilité</category>
-      <description>Comparer rémunération totale, santé, employabilité, marché, réserve financière et options futures.</description>
-    </item>
-    <item>
-      <title>Cette formation vaut-elle vraiment le coût ?</title>
-      <link>https://contreevidence.github.io/dossiers/formation-vaut-elle-le-cout.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/formation-vaut-elle-le-cout.html</guid>
-      <pubDate>Sat, 08 Aug 2026 12:02:06 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Formation</category>
-      <description>Débouchés, coût économique total, probabilité d’emploi, délai de retour et alternatives plus courtes.</description>
-    </item>
-    <item>
-      <title>Vendre ou conserver un bien immobilier déjà détenu ?</title>
-      <link>https://contreevidence.github.io/dossiers/vendre-ou-conserver-bien-immobilier.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/vendre-ou-conserver-bien-immobilier.html</guid>
-      <pubDate>Sat, 08 Aug 2026 11:57:20 GMT</pubDate>
+      <title>Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?</title>
+      <link>https://contreevidence.github.io/dossiers/depenses-recurrentes-abonnements-assurances.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/depenses-recurrentes-abonnements-assurances.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Dossier</category>
       <category>Patrimoine</category>
-      <category>Immobilier</category>
-      <description>Comparer capital net libérable, rendement futur, travaux, fiscalité, concentration et usage alternatif du capital.</description>
+      <category>Dépenses récurrentes</category>
+      <description>Ramener les prélèvements récurrents au coût annuel, retrouver les services oubliés, détecter les doublons et distinguer dépense inutile et protection utile.</description>
     </item>
     <item>
-      <title>Votre planning est plein : faut-il encore accepter du travail ?</title>
-      <link>https://contreevidence.github.io/dossiers/capacite-refuser-travail-rentabilite.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/capacite-refuser-travail-rentabilite.html</guid>
-      <pubDate>Sat, 08 Aug 2026 11:56:39 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Vie professionnelle</category>
-      <category>Capacité</category>
-      <description>Mesurer capacité vendable, marge par heure contrainte, coût de complexité et arbitrer prix, délai, périmètre ou refus.</description>
-    </item>
-    <item>
-      <title>Vous êtes compétent mais personne ne le voit</title>
-      <link>https://contreevidence.github.io/dossiers/competent-mais-invisible-travail.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/competent-mais-invisible-travail.html</guid>
-      <pubDate>Sat, 08 Aug 2026 11:55:57 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Vie professionnelle</category>
-      <category>Visibilité professionnelle</category>
-      <description>Construire un système de preuves, rendre les résultats lisibles et comprendre qui décide réellement de la progression.</description>
-    </item>
-    <item>
-      <title>Devenir manager pour la première fois : votre ancien métier n’est plus votre métier</title>
-      <link>https://contreevidence.github.io/dossiers/devenir-manager-premiere-fois.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/devenir-manager-premiere-fois.html</guid>
-      <pubDate>Sat, 08 Aug 2026 11:55:19 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Management</category>
-      <description>Clarifier le mandat, déléguer, installer des rituels utiles et éviter de devenir le goulot d’étranglement.</description>
-    </item>
-    <item>
-      <title>Quels risques assurer et lesquels absorber soi-même ?</title>
-      <link>https://contreevidence.github.io/dossiers/assurer-ou-autoassurer-risques.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/assurer-ou-autoassurer-risques.html</guid>
-      <pubDate>Sat, 08 Aug 2026 11:47:03 GMT</pubDate>
+      <title>Gestion pilotée : comment comparer les performances sans se faire piéger ?</title>
+      <link>https://contreevidence.github.io/dossiers/gestion-pilotee-comparer-performances.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/gestion-pilotee-comparer-performances.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Dossier</category>
       <category>Patrimoine</category>
-      <category>Protection</category>
-      <description>Arbitrer entre assurance, franchise et réserve selon fréquence, gravité et capacité financière à absorber le choc.</description>
-    </item>
-    <item>
-      <title>Une activité peut être rentable et manquer de trésorerie</title>
-      <link>https://contreevidence.github.io/dossiers/tresorerie-bfr-entreprise.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/tresorerie-bfr-entreprise.html</guid>
-      <pubDate>Sat, 08 Aug 2026 11:46:23 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Trésorerie</category>
-      <description>Cycle de cash, BFR, délais clients, acomptes, prévisionnel 13 semaines et risque de croissance.</description>
-    </item>
-    <item>
-      <title>Un client représente 60 % du chiffre d’affaires : mesurer et réduire la dépendance</title>
-      <link>https://contreevidence.github.io/dossiers/dependance-gros-client.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/dependance-gros-client.html</guid>
-      <pubDate>Sat, 08 Aug 2026 11:41:43 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Vie professionnelle</category>
-      <category>Risque client</category>
-      <description>Concentration en CA, marge et temps, scénarios de rupture, trésorerie et plan de diversification.</description>
-    </item>
-    <item>
-      <title>Négocier salaire et responsabilités sans improviser</title>
-      <link>https://contreevidence.github.io/dossiers/negocier-salaire-responsabilites.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/negocier-salaire-responsabilites.html</guid>
-      <pubDate>Sat, 08 Aug 2026 11:41:00 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Salaire &amp; responsabilités</category>
-      <description>Périmètre réel, preuves, fourchette, cible, plancher, alternatives et date de revue.</description>
-    </item>
-    <item>
-      <title>Rembourser son crédit ou investir ?</title>
-      <link>https://contreevidence.github.io/dossiers/rembourser-credit-ou-investir.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/rembourser-credit-ou-investir.html</guid>
-      <pubDate>Sat, 08 Aug 2026 11:40:22 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Patrimoine</category>
-      <category>Crédit &amp; investissement</category>
-      <description>Comparer coût certain de la dette, rendement net espéré, liquidité, fiscalité, levier et solution hybride.</description>
-    </item>
-    <item>
-      <title>Combien garder en liquidités ? Construire une réserve de sécurité</title>
-      <link>https://contreevidence.github.io/dossiers/liquidites-reserve-securite.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/liquidites-reserve-securite.html</guid>
-      <pubDate>Sat, 08 Aug 2026 11:39:40 GMT</pubDate>
-      <category>Guide</category>
-      <category>Patrimoine</category>
-      <category>Sécurité financière</category>
-      <description>Dimensionner la réserve selon revenus, charges incompressibles, dette, projets et risques réels.</description>
-    </item>
-    <item>
-      <title>Démarche bloquée : comment sortir d’une boucle administrative</title>
-      <link>https://contreevidence.github.io/dossiers/debloquer-demarche-administrative.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/debloquer-demarche-administrative.html</guid>
-      <pubDate>Sat, 08 Aug 2026 09:20:52 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Démarches</category>
-      <description>Chronologie, preuve équivalente, motif écrit, interlocuteur compétent et escalade propre.</description>
-    </item>
-    <item>
-      <title>Prendre une décision importante sans tourner en rond</title>
-      <link>https://contreevidence.github.io/dossiers/decider-sans-tourner-en-rond.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/decider-sans-tourner-en-rond.html</guid>
-      <pubDate>Sat, 08 Aug 2026 09:20:06 GMT</pubDate>
-      <category>Guide</category>
-      <category>Patrimoine</category>
-      <category>Vie professionnelle</category>
-      <category>Décision</category>
-      <description>Taux de base, coût d’erreur, valeur de l’option, coûts irrécupérables, effets de second ordre et pré-mortem.</description>
-    </item>
-    <item>
-      <title>Avant de croire une réponse IA : le protocole de vérification en 10 minutes</title>
-      <link>https://contreevidence.github.io/dossiers/protocole-verifier-reponse-ia.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/protocole-verifier-reponse-ia.html</guid>
-      <pubDate>Sat, 08 Aug 2026 09:17:04 GMT</pubDate>
-      <category>Guide</category>
-      <category>Patrimoine</category>
-      <category>Vie professionnelle</category>
-      <category>IA appliquée</category>
-      <description>Classer le risque, isoler le fait central, hiérarchiser les sources et chercher la contradiction.</description>
-    </item>
-    <item>
-      <title>30 jours pour relancer une recherche d’emploi qui tourne en rond</title>
-      <link>https://contreevidence.github.io/dossiers/plan-30-jours-recherche-emploi.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/plan-30-jours-recherche-emploi.html</guid>
-      <pubDate>Sat, 08 Aug 2026 09:16:16 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Recherche d’emploi</category>
-      <description>Segmenter le marché, construire les preuves, rendre un parcours atypique lisible, mesurer les conversions et traiter le risque perçu en entretien.</description>
-    </item>
-    <item>
-      <title>Quel prix minimum facturer pour gagner réellement de l’argent ?</title>
-      <link>https://contreevidence.github.io/dossiers/calculer-prix-minimum-rentable.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/calculer-prix-minimum-rentable.html</guid>
-      <pubDate>Sat, 08 Aug 2026 09:15:28 GMT</pubDate>
-      <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Prix &amp; marge</category>
-      <description>Capacité facturable, coûts, marge contributive, point mort et coût d’opportunité.</description>
+      <category>Gestion pilotée</category>
+      <description>Comparer performances publiées, niveau de risque, frais, benchmark, périodes et drawdowns avant de juger une gestion pilotée.</description>
     </item>
     <item>
       <title>Où part votre argent ? Faire l’audit de son budget en 60 minutes</title>
       <link>https://contreevidence.github.io/dossiers/audit-budget-60-minutes.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/dossiers/audit-budget-60-minutes.html</guid>
-      <pubDate>Sat, 08 Aug 2026 09:14:45 GMT</pubDate>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Guide</category>
       <category>Patrimoine</category>
       <category>Budget</category>
       <description>Trois mois de relevés, quatre nombres et trois corrections maximum pour rendre le budget pilotable.</description>
     </item>
     <item>
-      <title>Tout le monde trouve votre idée intéressante, mais personne n’achète</title>
-      <link>https://contreevidence.github.io/articles/clients-interesses-personne-nachete.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/articles/clients-interesses-personne-nachete.html</guid>
-      <pubDate>Sat, 08 Aug 2026 08:50:29 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Vie professionnelle</category>
-      <category>Offre &amp; clients</category>
-      <description>Mesurer les comportements, tester une offre et un prix réels, classer les objections et suivre l’entonnoir.</description>
-    </item>
-    <item>
-      <title>Quand on veut retravailler vite : faut-il accepter un poste imparfait ?</title>
-      <link>https://contreevidence.github.io/articles/accepter-nimporte-quel-poste-retour-emploi.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/articles/accepter-nimporte-quel-poste-retour-emploi.html</guid>
-      <pubDate>Sat, 08 Aug 2026 08:47:13 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Vie professionnelle</category>
-      <category>Choix d’emploi</category>
-      <description>Comparer marge financière, gain net réel, temps capturé, santé, valeur de CV et options créées à 30 et 90 jours.</description>
-    </item>
-    <item>
-      <title>Vous décrochez des entretiens mais jamais le poste : où ça bloque ?</title>
-      <link>https://contreevidence.github.io/articles/entretien-rate-ce-qui-bloque.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/articles/entretien-rate-ce-qui-bloque.html</guid>
-      <pubDate>Sat, 08 Aug 2026 08:46:50 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Vie professionnelle</category>
-      <category>Entretien</category>
-      <description>Diagnostiquer l’étape, le risque perçu, les preuves manquantes et les objections récurrentes avant de refaire toute la candidature.</description>
-    </item>
-    <item>
-      <title>50 candidatures, zéro réponse : avant d’en envoyer 50 de plus</title>
-      <link>https://contreevidence.github.io/articles/50-candidatures-zero-reponse.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/articles/50-candidatures-zero-reponse.html</guid>
-      <pubDate>Sat, 08 Aug 2026 08:46:25 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Vie professionnelle</category>
-      <category>Recherche d’emploi</category>
-      <description>Diagnostiquer ciblage, CV et preuves avant de multiplier les envois identiques.</description>
-    </item>
-    <item>
-      <title>Transmission du patrimoine : préparer sans improviser</title>
-      <link>https://contreevidence.github.io/dossiers/finances-transmission-patrimoine.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/finances-transmission-patrimoine.html</guid>
-      <pubDate>Fri, 07 Aug 2026 11:12:03 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Patrimoine</category>
-      <category>Transmission</category>
-      <description>Objectifs, propriété, liquidité, bénéficiaires, partage et coordination civile et fiscale.</description>
-    </item>
-    <item>
-      <title>Retraite et décumulation : transformer un patrimoine en revenus</title>
-      <link>https://contreevidence.github.io/dossiers/finances-retraite-decumulation.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/finances-retraite-decumulation.html</guid>
-      <pubDate>Fri, 07 Aug 2026 11:11:37 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Patrimoine</category>
-      <category>Retraite</category>
-      <description>Dépenses, revenus garantis, risque de séquence, inflation, longévité et règles de retrait.</description>
-    </item>
-    <item>
-      <title>Investissement locatif : rendement, cash-flow et stress tests</title>
-      <link>https://contreevidence.github.io/dossiers/finances-investissement-locatif.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/finances-investissement-locatif.html</guid>
-      <pubDate>Fri, 07 Aug 2026 11:10:49 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Patrimoine</category>
-      <category>Investissement locatif</category>
-      <description>Prix total, rendement net, couverture de dette, vacance, travaux, fiscalité et concentration.</description>
-    </item>
-    <item>
-      <title>Acheter ou louer sa résidence principale : durée, mobilité et scénarios de sortie</title>
-      <link>https://contreevidence.github.io/dossiers/finances-residence-principale.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/finances-residence-principale.html</guid>
-      <pubDate>Fri, 07 Aug 2026 11:10:27 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Patrimoine</category>
-      <category>Résidence principale</category>
-      <description>Comparer achat et location par durée probable, mobilité, valeur d’usage, liquidité restante et scénario de sortie ; le coût complet est traité dans un dossier dédié.</description>
-    </item>
-    <item>
-      <title>Crédit et endettement : utiliser la dette sans fragiliser son patrimoine</title>
-      <link>https://contreevidence.github.io/dossiers/finances-credit-endettement.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/finances-credit-endettement.html</guid>
-      <pubDate>Fri, 07 Aug 2026 11:10:01 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Patrimoine</category>
-      <category>Crédit</category>
-      <description>Coût total, durée, levier, capacité de remboursement, liquidité et scénario dégradé.</description>
-    </item>
-    <item>
-      <title>Analyser un investissement de A à Z</title>
-      <link>https://contreevidence.github.io/dossiers/methode-analyse-complete.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/methode-analyse-complete.html</guid>
-      <pubDate>Fri, 07 Aug 2026 09:04:17 GMT</pubDate>
+      <title>Combien garder en liquidités ? Construire une réserve de sécurité</title>
+      <link>https://contreevidence.github.io/dossiers/liquidites-reserve-securite.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/liquidites-reserve-securite.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Guide</category>
       <category>Patrimoine</category>
-      <category>Analyse avancée</category>
-      <description>Horizon, benchmark, macro, ROIC, FCF, valorisation, technique, sizing, scénario adverse et invalidation.</description>
+      <category>Sécurité financière</category>
+      <description>Dimensionner la réserve selon revenus, charges incompressibles, dette, projets et risques réels.</description>
     </item>
     <item>
-      <title>PEA, assurance-vie, CTO, PER : choisir l’enveloppe après la stratégie</title>
-      <link>https://contreevidence.github.io/dossiers/finances-enveloppes-fiscalite.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/finances-enveloppes-fiscalite.html</guid>
-      <pubDate>Fri, 07 Aug 2026 07:29:57 GMT</pubDate>
+      <title>Quels risques assurer et lesquels absorber soi-même ?</title>
+      <link>https://contreevidence.github.io/dossiers/assurer-ou-autoassurer-risques.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/assurer-ou-autoassurer-risques.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Dossier</category>
       <category>Patrimoine</category>
-      <category>Enveloppes</category>
-      <description>Comparer disponibilité, fiscalité, supports, frais et horizon sans confondre enveloppe et placement.</description>
-    </item>
-    <item>
-      <title>Construire une allocation patrimoniale robuste</title>
-      <link>https://contreevidence.github.io/dossiers/finances-allocation-portefeuille.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/finances-allocation-portefeuille.html</guid>
-      <pubDate>Fri, 07 Aug 2026 07:29:20 GMT</pubDate>
-      <category>Guide</category>
-      <category>Patrimoine</category>
-      <category>Allocation</category>
-      <description>Fonction des classes d’actifs, capacité de risque, drawdown, concentration, scénarios de stress et rééquilibrage.</description>
+      <category>Protection</category>
+      <description>Arbitrer entre assurance, franchise et réserve selon fréquence, gravité et capacité financière à absorber le choc.</description>
     </item>
     <item>
       <title>Écrire sa politique patrimoniale en une page</title>
       <link>https://contreevidence.github.io/dossiers/finances-cadre-global.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/dossiers/finances-cadre-global.html</guid>
-      <pubDate>Fri, 07 Aug 2026 07:27:28 GMT</pubDate>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Dossier</category>
       <category>Patrimoine</category>
       <category>Politique patrimoniale</category>
       <description>Fixer objectifs, réserve minimale, allocation cible, plafonds de concentration, règles de rééquilibrage et date de revue avant les mouvements de marché.</description>
     </item>
     <item>
-      <title>Tester un métier avant d’investir plusieurs mois de formation</title>
-      <link>https://contreevidence.github.io/articles/tester-metier-avant-investir.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/articles/tester-metier-avant-investir.html</guid>
-      <pubDate>Thu, 06 Aug 2026 11:33:02 GMT</pubDate>
+      <title>Construire une allocation patrimoniale robuste</title>
+      <link>https://contreevidence.github.io/dossiers/finances-allocation-portefeuille.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/finances-allocation-portefeuille.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Guide</category>
-      <category>Vie professionnelle</category>
-      <category>Reconversion</category>
-      <description>Offres réelles, immersion, contraintes, revenu d’entrée, pratique et critères d’arrêt avant de s’engager.</description>
+      <category>Patrimoine</category>
+      <category>Allocation</category>
+      <description>Fonction des classes d’actifs, capacité de risque, drawdown, concentration, scénarios de stress et rééquilibrage.</description>
     </item>
     <item>
-      <title>Comment identifier ses compétences réellement transférables</title>
-      <link>https://contreevidence.github.io/articles/competences-transferables.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/articles/competences-transferables.html</guid>
-      <pubDate>Thu, 06 Aug 2026 11:33:02 GMT</pubDate>
+      <title>Rembourser son crédit ou investir ?</title>
+      <link>https://contreevidence.github.io/dossiers/rembourser-credit-ou-investir.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/rembourser-credit-ou-investir.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Dossier</category>
-      <category>Vie professionnelle</category>
-      <category>Compétences</category>
-      <description>Passer des intitulés de postes aux problèmes résolus, méthodes, responsabilités et résultats.</description>
+      <category>Patrimoine</category>
+      <category>Crédit &amp; investissement</category>
+      <description>Comparer coût certain de la dette, rendement net espéré, liquidité, fiscalité, levier et solution hybride.</description>
     </item>
     <item>
-      <title>Sans le diplôme attendu : chercher les autres chemins d’accès</title>
-      <link>https://contreevidence.github.io/articles/sans-diplome-chemins-alternatifs.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/articles/sans-diplome-chemins-alternatifs.html</guid>
-      <pubDate>Thu, 06 Aug 2026 11:33:02 GMT</pubDate>
+      <title>Acheter ou louer sa résidence principale : durée, mobilité et scénarios de sortie</title>
+      <link>https://contreevidence.github.io/dossiers/finances-residence-principale.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/finances-residence-principale.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Dossier</category>
-      <category>Vie professionnelle</category>
-      <category>Diplôme</category>
-      <description>Distinguer obligation réglementaire, filtre de recrutement et signal de compétence, puis comparer VAE, qualification et preuve par l’expérience.</description>
+      <category>Patrimoine</category>
+      <category>Résidence principale</category>
+      <description>Comparer achat et location par durée probable, mobilité, valeur d’usage, liquidité restante et scénario de sortie ; le coût complet est traité dans un dossier dédié.</description>
     </item>
     <item>
-      <title>Obtenir une première chance quand personne ne veut prendre le risque</title>
-      <link>https://contreevidence.github.io/articles/premiere-chance-sans-experience.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/articles/premiere-chance-sans-experience.html</guid>
-      <pubDate>Thu, 06 Aug 2026 11:33:02 GMT</pubDate>
+      <title>Investissement locatif : rendement, cash-flow et stress tests</title>
+      <link>https://contreevidence.github.io/dossiers/finances-investissement-locatif.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/finances-investissement-locatif.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Dossier</category>
-      <category>Vie professionnelle</category>
-      <category>Première chance</category>
-      <description>Réduire le risque perçu par l’employeur avec des preuves et un essai crédible.</description>
+      <category>Patrimoine</category>
+      <category>Investissement locatif</category>
+      <description>Prix total, rendement net, couverture de dette, vacance, travaux, fiscalité et concentration.</description>
     </item>
     <item>
-      <title>Vous ne manquez peut-être pas de compétences. Vous manquez de preuves.</title>
-      <link>https://contreevidence.github.io/articles/competences-invisibles-preuves.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/articles/competences-invisibles-preuves.html</guid>
-      <pubDate>Thu, 06 Aug 2026 11:33:02 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Vie professionnelle</category>
-      <category>Preuves</category>
-      <description>Transformer une compétence déclarée en éléments observables qui rassurent un recruteur ou un client.</description>
+      <title>Bien immobilier : garder, vendre, louer ou transformer ?</title>
+      <link>https://contreevidence.github.io/dossiers/bien-immobilier-garder-vendre-transformer.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/bien-immobilier-garder-vendre-transformer.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Patrimoine</category>
+      <category>Immobilier</category>
+      <description>Recalculer le rendement futur, le capital net libérable, les travaux, la gestion, la concentration et les options cachées du bien.</description>
     </item>
     <item>
-      <title>Retrouver un emploi après une longue interruption</title>
-      <link>https://contreevidence.github.io/articles/retrouver-emploi-apres-interruption.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/articles/retrouver-emploi-apres-interruption.html</guid>
-      <pubDate>Thu, 06 Aug 2026 11:33:02 GMT</pubDate>
+      <title>Crédit et endettement : utiliser la dette sans fragiliser son patrimoine</title>
+      <link>https://contreevidence.github.io/dossiers/finances-credit-endettement.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/finances-credit-endettement.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Dossier</category>
-      <category>Vie professionnelle</category>
-      <category>Retour à l’emploi</category>
-      <description>Reconstruire des signaux actuels, tester le rythme et choisir une porte de retour crédible.</description>
+      <category>Patrimoine</category>
+      <category>Crédit</category>
+      <description>Coût total, durée, levier, capacité de remboursement, liquidité et scénario dégradé.</description>
+    </item>
+    <item>
+      <title>PEA, assurance-vie, CTO, PER : choisir l’enveloppe après la stratégie</title>
+      <link>https://contreevidence.github.io/dossiers/finances-enveloppes-fiscalite.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/finances-enveloppes-fiscalite.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Patrimoine</category>
+      <category>Enveloppes</category>
+      <description>Comparer disponibilité, fiscalité, supports, frais et horizon sans confondre enveloppe et placement.</description>
+    </item>
+    <item>
+      <title>Retraite et décumulation : transformer un patrimoine en revenus</title>
+      <link>https://contreevidence.github.io/dossiers/finances-retraite-decumulation.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/finances-retraite-decumulation.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Patrimoine</category>
+      <category>Retraite</category>
+      <description>Dépenses, revenus garantis, risque de séquence, inflation, longévité et règles de retrait.</description>
+    </item>
+    <item>
+      <title>Transmission du patrimoine : préparer sans improviser</title>
+      <link>https://contreevidence.github.io/dossiers/finances-transmission-patrimoine.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/finances-transmission-patrimoine.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Patrimoine</category>
+      <category>Transmission</category>
+      <description>Objectifs, propriété, liquidité, bénéficiaires, partage et coordination civile et fiscale.</description>
     </item>
     <item>
       <title>Vous recevez une grosse somme d’argent : que faire pendant les 90 premiers jours ?</title>
       <link>https://contreevidence.github.io/articles/grosse-entree-argent-que-faire.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/articles/grosse-entree-argent-que-faire.html</guid>
-      <pubDate>Thu, 06 Aug 2026 09:38:03 GMT</pubDate>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Guide</category>
       <category>Patrimoine</category>
       <category>Entrée d’argent</category>
@@ -1031,7 +418,7 @@
       <title>Construire son épargne à partir de zéro : dans quel ordre avancer ?</title>
       <link>https://contreevidence.github.io/articles/construire-epargne-de-zero.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/articles/construire-epargne-de-zero.html</guid>
-      <pubDate>Thu, 06 Aug 2026 09:38:03 GMT</pubDate>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Guide</category>
       <category>Patrimoine</category>
       <category>Épargne</category>
@@ -1041,7 +428,7 @@
       <title>Livrets, compte à terme, PEL, fonds en euros : quel produit pour quel besoin ?</title>
       <link>https://contreevidence.github.io/articles/comparatif-produits-bancaires.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/articles/comparatif-produits-bancaires.html</guid>
-      <pubDate>Thu, 06 Aug 2026 09:38:03 GMT</pubDate>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Dossier</category>
       <category>Patrimoine</category>
       <category>Produits sécurisés</category>
@@ -1051,7 +438,7 @@
       <title>Investir une grosse somme d’un coup ou progressivement ?</title>
       <link>https://contreevidence.github.io/articles/investir-grosse-somme-dun-coup-ou-progressivement.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/articles/investir-grosse-somme-dun-coup-ou-progressivement.html</guid>
-      <pubDate>Thu, 06 Aug 2026 09:38:03 GMT</pubDate>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Dossier</category>
       <category>Patrimoine</category>
       <category>Mise en œuvre</category>
@@ -1061,7 +448,7 @@
       <title>Choisir un ETF diversifié : les critères essentiels</title>
       <link>https://contreevidence.github.io/articles/choisir-etf-mondial-debutant.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/articles/choisir-etf-mondial-debutant.html</guid>
-      <pubDate>Thu, 06 Aug 2026 09:38:03 GMT</pubDate>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Dossier</category>
       <category>Patrimoine</category>
       <category>ETF</category>
@@ -1071,7 +458,7 @@
       <title>Frais et fiscalité : pourquoi le rendement affiché n’est pas celui que vous gardez</title>
       <link>https://contreevidence.github.io/articles/frais-fiscalite-rendement-net.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/articles/frais-fiscalite-rendement-net.html</guid>
-      <pubDate>Thu, 06 Aug 2026 09:38:03 GMT</pubDate>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Dossier</category>
       <category>Patrimoine</category>
       <category>Rendement net</category>
@@ -1081,11 +468,644 @@
       <title>Avant de placer une grosse somme : la checklist contre les erreurs et les arnaques</title>
       <link>https://contreevidence.github.io/articles/checklist-avant-placement-conseiller.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/articles/checklist-avant-placement-conseiller.html</guid>
-      <pubDate>Thu, 06 Aug 2026 09:38:03 GMT</pubDate>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Guide</category>
       <category>Patrimoine</category>
       <category>Protection</category>
       <description>Vérifier interlocuteur, organisme, produit, transaction, frais, risques et liquidité.</description>
+    </item>
+    <item>
+      <title>Analyser un investissement de A à Z</title>
+      <link>https://contreevidence.github.io/dossiers/methode-analyse-complete.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/methode-analyse-complete.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Patrimoine</category>
+      <category>Analyse avancée</category>
+      <description>Horizon, benchmark, macro, ROIC, FCF, valorisation, technique, sizing, scénario adverse et invalidation.</description>
+    </item>
+    <item>
+      <title>Acheter un logement sans vider son épargne : combien garder après l’achat ?</title>
+      <link>https://contreevidence.github.io/dossiers/acheter-sans-vider-epargne.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/acheter-sans-vider-epargne.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Patrimoine</category>
+      <category>Immobilier</category>
+      <description>Séparer apport, travaux et réserve puis tester la solidité du foyer après la signature.</description>
+    </item>
+    <item>
+      <title>Acheter un logement sans se fragiliser financièrement</title>
+      <link>https://contreevidence.github.io/dossiers/acheter-logement-sans-se-fragiliser.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/acheter-logement-sans-se-fragiliser.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Patrimoine</category>
+      <category>Immobilier</category>
+      <description>Relier apport, épargne restante, coût complet, crédit, mobilité et scénarios avant de signer.</description>
+    </item>
+    <item>
+      <title>Mon patrimoine me permet-il de travailler moins ?</title>
+      <link>https://contreevidence.github.io/dossiers/patrimoine-permet-il-travailler-moins.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/patrimoine-permet-il-travailler-moins.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Patrimoine</category>
+      <category>Liberté financière</category>
+      <description>Comparer baisse de revenu, dépenses, dette, retraite, actifs disponibles et valeur du temps libéré.</description>
+    </item>
+    <item>
+      <title>Utiliser son patrimoine pour gagner de la marge de manœuvre</title>
+      <link>https://contreevidence.github.io/dossiers/patrimoine-marge-de-manoeuvre.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/patrimoine-marge-de-manoeuvre.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Patrimoine</category>
+      <category>Vie professionnelle</category>
+      <category>Marge de manœuvre</category>
+      <description>Lire liquidité, dépenses, dette et actifs comme une capacité à absorber les chocs, financer des transitions et racheter du temps.</description>
+    </item>
+    <item>
+      <title>Tester un métier avant d’investir plusieurs mois de formation</title>
+      <link>https://contreevidence.github.io/articles/tester-metier-avant-investir.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/articles/tester-metier-avant-investir.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Reconversion</category>
+      <description>Offres réelles, immersion, contraintes, revenu d’entrée, pratique et critères d’arrêt avant de s’engager.</description>
+    </item>
+    <item>
+      <title>Cette formation vaut-elle vraiment le coût ?</title>
+      <link>https://contreevidence.github.io/dossiers/formation-vaut-elle-le-cout.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/formation-vaut-elle-le-cout.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Formation</category>
+      <description>Débouchés, coût économique total, probabilité d’emploi, délai de retour et alternatives plus courtes.</description>
+    </item>
+    <item>
+      <title>Comment identifier ses compétences réellement transférables</title>
+      <link>https://contreevidence.github.io/articles/competences-transferables.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/articles/competences-transferables.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Compétences</category>
+      <description>Passer des intitulés de postes aux problèmes résolus, méthodes, responsabilités et résultats.</description>
+    </item>
+    <item>
+      <title>Sans le diplôme attendu : chercher les autres chemins d’accès</title>
+      <link>https://contreevidence.github.io/articles/sans-diplome-chemins-alternatifs.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/articles/sans-diplome-chemins-alternatifs.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Diplôme</category>
+      <description>Distinguer obligation réglementaire, filtre de recrutement et signal de compétence, puis comparer VAE, qualification et preuve par l’expérience.</description>
+    </item>
+    <item>
+      <title>30 jours pour relancer une recherche d’emploi qui tourne en rond</title>
+      <link>https://contreevidence.github.io/dossiers/plan-30-jours-recherche-emploi.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/plan-30-jours-recherche-emploi.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Recherche d’emploi</category>
+      <description>Segmenter le marché, construire les preuves, rendre un parcours atypique lisible, mesurer les conversions et traiter le risque perçu en entretien.</description>
+    </item>
+    <item>
+      <title>Emploi : chercher, accepter, négocier ou évoluer</title>
+      <link>https://contreevidence.github.io/dossiers/emploi-chercher-accepter-negocier-evoluer.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/emploi-chercher-accepter-negocier-evoluer.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Emploi</category>
+      <description>Diagnostiquer où la chaîne emploi casse puis traiter candidature, entretien, offre, négociation ou mobilité avec la bonne méthode.</description>
+    </item>
+    <item>
+      <title>50 candidatures, zéro réponse : avant d’en envoyer 50 de plus</title>
+      <link>https://contreevidence.github.io/articles/50-candidatures-zero-reponse.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/articles/50-candidatures-zero-reponse.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Recherche d’emploi</category>
+      <description>Diagnostiquer ciblage, CV et preuves avant de multiplier les envois identiques.</description>
+    </item>
+    <item>
+      <title>Vous décrochez des entretiens mais jamais le poste : où ça bloque ?</title>
+      <link>https://contreevidence.github.io/articles/entretien-rate-ce-qui-bloque.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/articles/entretien-rate-ce-qui-bloque.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Entretien</category>
+      <description>Diagnostiquer l’étape, le risque perçu, les preuves manquantes et les objections récurrentes avant de refaire toute la candidature.</description>
+    </item>
+    <item>
+      <title>Obtenir une première chance quand personne ne veut prendre le risque</title>
+      <link>https://contreevidence.github.io/articles/premiere-chance-sans-experience.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/articles/premiere-chance-sans-experience.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Première chance</category>
+      <description>Réduire le risque perçu par l’employeur avec des preuves et un essai crédible.</description>
+    </item>
+    <item>
+      <title>Vous ne manquez peut-être pas de compétences. Vous manquez de preuves.</title>
+      <link>https://contreevidence.github.io/articles/competences-invisibles-preuves.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/articles/competences-invisibles-preuves.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Preuves</category>
+      <description>Transformer une compétence déclarée en éléments observables qui rassurent un recruteur ou un client.</description>
+    </item>
+    <item>
+      <title>Retrouver un emploi après une longue interruption</title>
+      <link>https://contreevidence.github.io/articles/retrouver-emploi-apres-interruption.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/articles/retrouver-emploi-apres-interruption.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Retour à l’emploi</category>
+      <description>Reconstruire des signaux actuels, tester le rythme et choisir une porte de retour crédible.</description>
+    </item>
+    <item>
+      <title>Quand votre expérience inquiète le recruteur</title>
+      <link>https://contreevidence.github.io/dossiers/experience-devient-risque-recruteur.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/experience-devient-risque-recruteur.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Expérience &amp; recrutement</category>
+      <description>Âge, surqualification, salaire, hiérarchie, stabilité et adaptation : identifier le risque perçu et préparer les preuves qui y répondent.</description>
+    </item>
+    <item>
+      <title>Quand on veut retravailler vite : faut-il accepter un poste imparfait ?</title>
+      <link>https://contreevidence.github.io/articles/accepter-nimporte-quel-poste-retour-emploi.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/articles/accepter-nimporte-quel-poste-retour-emploi.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Choix d’emploi</category>
+      <description>Comparer marge financière, gain net réel, temps capturé, santé, valeur de CV et options créées à 30 et 90 jours.</description>
+    </item>
+    <item>
+      <title>Négocier salaire et responsabilités sans improviser</title>
+      <link>https://contreevidence.github.io/dossiers/negocier-salaire-responsabilites.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/negocier-salaire-responsabilites.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Salaire &amp; responsabilités</category>
+      <description>Périmètre réel, preuves, fourchette, cible, plancher, alternatives et date de revue.</description>
+    </item>
+    <item>
+      <title>Quitter un emploi stable ou rester ?</title>
+      <link>https://contreevidence.github.io/dossiers/quitter-emploi-stable-ou-rester.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/quitter-emploi-stable-ou-rester.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Mobilité</category>
+      <description>Comparer rémunération totale, santé, employabilité, marché, réserve financière et options futures.</description>
+    </item>
+    <item>
+      <title>Quitter son CDI avec un crédit immobilier : comment savoir si vous pouvez vous le permettre ?</title>
+      <link>https://contreevidence.github.io/dossiers/quitter-cdi-avec-credit-immobilier.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/quitter-cdi-avec-credit-immobilier.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Transition</category>
+      <description>Mesurer la marge financière, vérifier les droits et comparer rester, préparer la sortie ou partir lorsque le foyer porte déjà un crédit.</description>
+    </item>
+    <item>
+      <title>Combien d’épargne faut-il avant de démissionner ?</title>
+      <link>https://contreevidence.github.io/dossiers/combien-epargne-avant-demissionner.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/combien-epargne-avant-demissionner.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Transition</category>
+      <description>Calculer la réserve réellement disponible à partir des dépenses essentielles et tester un retour à l’emploi plus long que prévu.</description>
+    </item>
+    <item>
+      <title>Quitter son travail ou se reconvertir sans se fragiliser</title>
+      <link>https://contreevidence.github.io/dossiers/quitter-travail-reconversion-sans-se-fragiliser.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/quitter-travail-reconversion-sans-se-fragiliser.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Transition</category>
+      <description>Clarifier ce qui doit changer, mesurer la marge financière, tester le marché et choisir une transition progressive ou complète.</description>
+    </item>
+    <item>
+      <title>Reconversion sans perte de salaire : quelles options sont réellement possibles ?</title>
+      <link>https://contreevidence.github.io/dossiers/reconversion-sans-perte-salaire.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/reconversion-sans-perte-salaire.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Reconversion</category>
+      <description>Distinguer maintien de revenu, manque à gagner, coût de formation et salaire de sortie avant de construire la transition.</description>
+    </item>
+    <item>
+      <title>Puis-je financièrement me permettre une reconversion ?</title>
+      <link>https://contreevidence.github.io/dossiers/puis-je-me-permettre-reconversion.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/puis-je-me-permettre-reconversion.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Reconversion</category>
+      <description>Mesurer dépenses, réserve, manque à gagner, coût de formation, délai de retour à l’emploi et scénario adverse.</description>
+    </item>
+    <item>
+      <title>Accepter un emploi moins payé pour vivre mieux ?</title>
+      <link>https://contreevidence.github.io/dossiers/accepter-emploi-moins-paye-vivre-mieux.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/accepter-emploi-moins-paye-vivre-mieux.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Qualité de vie</category>
+      <description>Comparer revenu réellement disponible, trajet, temps, santé, télétravail, progression et soutenabilité financière.</description>
+    </item>
+    <item>
+      <title>Travailler moins, gagner moins, vivre mieux : comment arbitrer ?</title>
+      <link>https://contreevidence.github.io/dossiers/travailler-moins-vivre-mieux.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/travailler-moins-vivre-mieux.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Qualité de vie</category>
+      <description>Relier temps partiel, revenu, trajet, santé, patrimoine et objectifs de vie sans réduire la décision au salaire.</description>
+    </item>
+    <item>
+      <title>Passer à 80 % : combien ça coûte vraiment ?</title>
+      <link>https://contreevidence.github.io/dossiers/passer-80-pourcent-cout-reel.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/passer-80-pourcent-cout-reel.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Temps de travail</category>
+      <description>Comparer revenu disponible, frais évités, retraite, épargne, charge réelle et temps récupéré.</description>
+    </item>
+    <item>
+      <title>Deux offres d’emploi : laquelle choisir ?</title>
+      <link>https://contreevidence.github.io/dossiers/comparer-deux-offres-emploi.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/comparer-deux-offres-emploi.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Choix d’emploi</category>
+      <description>Comparer salaire, revenu disponible, trajet, télétravail, temps, stabilité, compétences et qualité de vie.</description>
+    </item>
+    <item>
+      <title>Lancer une activité sans quitter son emploi : quand basculer ?</title>
+      <link>https://contreevidence.github.io/dossiers/lancer-activite-sans-quitter-emploi.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/lancer-activite-sans-quitter-emploi.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Entrepreneuriat</category>
+      <description>Tester demande, marge, trésorerie, temps disponible et seuil de bascule avant de quitter le salaire.</description>
+    </item>
+    <item>
+      <title>Vous êtes compétent mais personne ne le voit</title>
+      <link>https://contreevidence.github.io/dossiers/competent-mais-invisible-travail.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/competent-mais-invisible-travail.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Visibilité professionnelle</category>
+      <description>Construire un système de preuves, rendre les résultats lisibles et comprendre qui décide réellement de la progression.</description>
+    </item>
+    <item>
+      <title>Devenir manager pour la première fois : votre ancien métier n’est plus votre métier</title>
+      <link>https://contreevidence.github.io/dossiers/devenir-manager-premiere-fois.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/devenir-manager-premiere-fois.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Management</category>
+      <description>Clarifier le mandat, déléguer, installer des rituels utiles et éviter de devenir le goulot d’étranglement.</description>
+    </item>
+    <item>
+      <title>Tout le monde trouve votre idée intéressante, mais personne n’achète</title>
+      <link>https://contreevidence.github.io/articles/clients-interesses-personne-nachete.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/articles/clients-interesses-personne-nachete.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Offre &amp; clients</category>
+      <description>Mesurer les comportements, tester une offre et un prix réels, classer les objections et suivre l’entonnoir.</description>
+    </item>
+    <item>
+      <title>Quel prix minimum facturer pour gagner réellement de l’argent ?</title>
+      <link>https://contreevidence.github.io/dossiers/calculer-prix-minimum-rentable.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/calculer-prix-minimum-rentable.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Prix &amp; marge</category>
+      <description>Capacité facturable, coûts, marge contributive, point mort et coût d’opportunité.</description>
+    </item>
+    <item>
+      <title>Une activité peut être rentable et manquer de trésorerie</title>
+      <link>https://contreevidence.github.io/dossiers/tresorerie-bfr-entreprise.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/tresorerie-bfr-entreprise.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Trésorerie</category>
+      <description>Cycle de cash, BFR, délais clients, acomptes, prévisionnel 13 semaines et risque de croissance.</description>
+    </item>
+    <item>
+      <title>Un client représente 60 % du chiffre d’affaires : mesurer et réduire la dépendance</title>
+      <link>https://contreevidence.github.io/dossiers/dependance-gros-client.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/dependance-gros-client.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Risque client</category>
+      <description>Concentration en CA, marge et temps, scénarios de rupture, trésorerie et plan de diversification.</description>
+    </item>
+    <item>
+      <title>Votre planning est plein : faut-il encore accepter du travail ?</title>
+      <link>https://contreevidence.github.io/dossiers/capacite-refuser-travail-rentabilite.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/capacite-refuser-travail-rentabilite.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Capacité</category>
+      <description>Mesurer capacité vendable, marge par heure contrainte, coût de complexité et arbitrer prix, délai, périmètre ou refus.</description>
+    </item>
+    <item>
+      <title>Embaucher ou sous-traiter ? Choisir comment créer de la capacité</title>
+      <link>https://contreevidence.github.io/dossiers/embaucher-ou-sous-traiter.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/embaucher-ou-sous-traiter.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Capacité</category>
+      <description>Comparer coût complet, seuil de rentabilité, flexibilité, contrôle qualité, management et risque fixe.</description>
+    </item>
+    <item>
+      <title>Automatiser ou non un processus : calculer le vrai gain</title>
+      <link>https://contreevidence.github.io/dossiers/automatiser-ou-non-processus.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/automatiser-ou-non-processus.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Automatisation</category>
+      <description>Volume, temps économisé, erreurs, maintenance, dépendances et contrôle humain avant de choisir un outil.</description>
+    </item>
+    <item>
+      <title>Améliorer une procédure sans dégrader le service</title>
+      <link>https://contreevidence.github.io/dossiers/ameliorer-processus-sans-degrader-service.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/ameliorer-processus-sans-degrader-service.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Organisation</category>
+      <description>Cartographier le flux, comprendre les contrôles, choisir les bons indicateurs, anticiper les effets pervers et piloter avant de déployer.</description>
+    </item>
+    <item>
+      <title>Avant de croire une réponse IA : le protocole de vérification en 10 minutes</title>
+      <link>https://contreevidence.github.io/dossiers/protocole-verifier-reponse-ia.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/protocole-verifier-reponse-ia.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Patrimoine</category>
+      <category>Vie professionnelle</category>
+      <category>IA appliquée</category>
+      <description>Classer le risque, isoler le fait central, hiérarchiser les sources et chercher la contradiction.</description>
+    </item>
+    <item>
+      <title>Démarche bloquée : comment sortir d’une boucle administrative</title>
+      <link>https://contreevidence.github.io/dossiers/debloquer-demarche-administrative.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/debloquer-demarche-administrative.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Démarches</category>
+      <description>Chronologie, preuve équivalente, motif écrit, interlocuteur compétent et escalade propre.</description>
+    </item>
+    <item>
+      <title>Prendre une décision importante sans tourner en rond</title>
+      <link>https://contreevidence.github.io/dossiers/decider-sans-tourner-en-rond.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/decider-sans-tourner-en-rond.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Patrimoine</category>
+      <category>Vie professionnelle</category>
+      <category>Décision</category>
+      <description>Taux de base, coût d’erreur, valeur de l’option, coûts irrécupérables, effets de second ordre et pré-mortem.</description>
+    </item>
+    <item>
+      <title>Audit financier personnel</title>
+      <link>https://contreevidence.github.io/outil-audit-financier-personnel.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/outil-audit-financier-personnel.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Outil</category>
+      <category>Patrimoine</category>
+      <category>Budget</category>
+      <description>Photographier revenus, dépenses, liquidités, actifs et dettes sans score ni seuil universel.</description>
+    </item>
+    <item>
+      <title>Combien coûte le fait d’attendre ?</title>
+      <link>https://contreevidence.github.io/simulateur-prix-attendre.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-prix-attendre.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Outil</category>
+      <category>Patrimoine</category>
+      <category>Commencer ses finances</category>
+      <description>Séparer dépenses évitables, érosion du pouvoir d’achat et écart de capitalisation liés au report d’une décision financière.</description>
+    </item>
+    <item>
+      <title>Tester sa réserve de sécurité</title>
+      <link>https://contreevidence.github.io/simulateur-reserve-securite.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-reserve-securite.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Outil</category>
+      <category>Patrimoine</category>
+      <category>Sécurité financière</category>
+      <description>Mesurer la couverture actuelle puis saisir les durées de réserve que vous voulez réellement tester.</description>
+    </item>
+    <item>
+      <title>Structurer l’allocation d’un héritage ou d’une grosse somme</title>
+      <link>https://contreevidence.github.io/outil-repartir-grosse-somme.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/outil-repartir-grosse-somme.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Outil</category>
+      <category>Patrimoine</category>
+      <category>Héritage &amp; grosse somme</category>
+      <description>Isoler le capital réellement disponible, mesurer son effet sur le patrimoine existant, saisir et tester votre propre allocation, puis observer concentration, liquidité et stress.</description>
+    </item>
+    <item>
+      <title>Stress tester toutes les grandes classes d’actifs</title>
+      <link>https://contreevidence.github.io/simulateur-allocation-stress-test.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-allocation-stress-test.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Outil</category>
+      <category>Patrimoine</category>
+      <category>Allocation</category>
+      <description>Visualiser la concentration puis appliquer un choc distinct aux liquidités, taux, actions, immobilier direct et indirect, non coté, infrastructures, métaux, matières premières, crypto et alternatifs.</description>
+    </item>
+    <item>
+      <title>Comparer rendements, frais et intérêts composés</title>
+      <link>https://contreevidence.github.io/simulateur-capitalisation-comparateur.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-capitalisation-comparateur.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Outil</category>
+      <category>Patrimoine</category>
+      <category>Comparaison &amp; capitalisation</category>
+      <description>Isoler l’effet des frais ou comparer vos propres hypothèses par classe d’actifs. Seul le taux réglementé du Livret A est chargé comme donnée.</description>
+    </item>
+    <item>
+      <title>Rembourser son crédit ou investir ?</title>
+      <link>https://contreevidence.github.io/simulateur-rembourser-ou-investir.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-rembourser-ou-investir.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Outil</category>
+      <category>Patrimoine</category>
+      <category>Crédit &amp; investissement</category>
+      <description>Comparer les positions nettes et calculer le rendement d’équilibre, sans rendement de marché prérempli.</description>
+    </item>
+    <item>
+      <title>Tester sa capacité d’emprunt immobilier</title>
+      <link>https://contreevidence.github.io/simulateur-capacite-emprunt.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-capacite-emprunt.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Outil</category>
+      <category>Patrimoine</category>
+      <category>Crédit immobilier</category>
+      <description>Estimer mensualité et capital empruntable avec règles HCSF et repère Banque de France daté et modifiable.</description>
+    </item>
+    <item>
+      <title>Acheter ou louer : tester plusieurs scénarios</title>
+      <link>https://contreevidence.github.io/simulateur-acheter-ou-louer.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-acheter-ou-louer.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Outil</category>
+      <category>Patrimoine</category>
+      <category>Résidence principale</category>
+      <description>Comparer achat et location sous trois hypothèses explicites de prix du logement, loyer et rendement alternatif.</description>
+    </item>
+    <item>
+      <title>Tester un investissement locatif</title>
+      <link>https://contreevidence.github.io/simulateur-investissement-locatif.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-investissement-locatif.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Outil</category>
+      <category>Patrimoine</category>
+      <category>Investissement locatif</category>
+      <description>Calculer coût, rendement, cash-flow et dette puis construire vous-même le stress de loyer et de charges.</description>
+    </item>
+    <item>
+      <title>Comparer trois stratégies immobilières</title>
+      <link>https://contreevidence.github.io/simulateur-comparer-strategies-immobilieres.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-comparer-strategies-immobilieres.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Outil</category>
+      <category>Patrimoine</category>
+      <category>Stratégies immobilières</category>
+      <description>Mettre nue, meublée, colocation, courte durée, parking ou local commercial sur une même base de coût, vacance, gestion, fiscalité et temps personnel.</description>
+    </item>
+    <item>
+      <title>Vendre ou conserver un bien immobilier ?</title>
+      <link>https://contreevidence.github.io/simulateur-vendre-ou-conserver.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-vendre-ou-conserver.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Outil</category>
+      <category>Patrimoine</category>
+      <category>Immobilier</category>
+      <description>Comparer capital libérable et conservation sous plusieurs scénarios, avec extinction réelle de la dette à son échéance.</description>
+    </item>
+    <item>
+      <title>Combien d’épargne avant de démissionner ?</title>
+      <link>https://contreevidence.github.io/simulateur-epargne-demission.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-epargne-demission.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Outil</category>
+      <category>Vie professionnelle</category>
+      <category>Démission &amp; sécurité</category>
+      <description>Transformer l’épargne réellement mobilisable en mois de marge selon dépenses essentielles, revenus certains, réserve protégée et scénario adverse.</description>
+    </item>
+    <item>
+      <title>Passer à 80 % : combien ça coûte vraiment ?</title>
+      <link>https://contreevidence.github.io/simulateur-80-pourcent-cout-reel.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-80-pourcent-cout-reel.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Outil</category>
+      <category>Vie professionnelle</category>
+      <category>Temps partiel</category>
+      <description>Mesurer baisse de revenu, coûts de travail évités, nouvelle capacité d’épargne et prix de chaque heure réellement récupérée.</description>
+    </item>
+    <item>
+      <title>Comparer deux offres d’emploi sans score artificiel</title>
+      <link>https://contreevidence.github.io/outil-comparer-offres-emploi.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/outil-comparer-offres-emploi.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Outil</category>
+      <category>Vie professionnelle</category>
+      <category>Choix d’emploi</category>
+      <description>Mettre sur la même base revenu disponible, temps capturé et trajet, puis garder séparés contrat, manager, risque, capital professionnel, qualité de vie et inconnues.</description>
+    </item>
+    <item>
+      <title>Tableau de pilotage d’une recherche d’emploi</title>
+      <link>https://contreevidence.github.io/outil-pilotage-recherche-emploi.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/outil-pilotage-recherche-emploi.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Outil</category>
+      <category>Vie professionnelle</category>
+      <category>Recherche d’emploi</category>
+      <description>Observer candidatures, réponses, entretiens et offres par séries comparables, sans taux cible universel.</description>
+    </item>
+    <item>
+      <title>Matrice compétences → preuves</title>
+      <link>https://contreevidence.github.io/outil-competences-preuves-cv.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/outil-competences-preuves-cv.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Outil</category>
+      <category>Vie professionnelle</category>
+      <category>CV &amp; entretien</category>
+      <description>Transformer les exigences réellement importantes d’une offre en situations, actions, résultats et preuves, sans générer le CV à votre place.</description>
+    </item>
+    <item>
+      <title>Calculer le coût réel d’une formation</title>
+      <link>https://contreevidence.github.io/simulateur-cout-formation.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-cout-formation.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Outil</category>
+      <category>Vie professionnelle</category>
+      <category>Formation</category>
+      <description>Additionner coûts directs et revenu sacrifié puis tester les revenus futurs que vous saisissez vous-même.</description>
+    </item>
+    <item>
+      <title>Calculer un prix minimum rentable</title>
+      <link>https://contreevidence.github.io/simulateur-prix-minimum-rentable.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-prix-minimum-rentable.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Outil</category>
+      <category>Vie professionnelle</category>
+      <category>Prix &amp; rentabilité</category>
+      <description>Calculer le plancher économique d’une mission à partir du temps réellement mobilisé et de vos propres coûts.</description>
+    </item>
+    <item>
+      <title>Prévisionnel de trésorerie sur 13 semaines</title>
+      <link>https://contreevidence.github.io/outil-tresorerie-13-semaines.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/outil-tresorerie-13-semaines.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Outil</category>
+      <category>Vie professionnelle</category>
+      <category>Trésorerie</category>
+      <description>Séparer la trajectoire de cash certaine de celle qui inclut les encaissements probables et repérer le point bas prudent.</description>
     </item>
   </channel>
 </rss>
