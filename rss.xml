@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/</link>
     <description>Nouveaux guides, dossiers et outils de Contre-Évidence : patrimoine, vie professionnelle et décisions concrètes.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Tue, 11 Aug 2026 21:08:17 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 21:31:17 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/rss.xml" rel="self" type="application/rss+xml"/>
@@ -1088,14 +1088,14 @@
       <description>Mettre sur la même base revenu disponible, temps capturé et trajet, puis garder séparés contrat, manager, risque, capital professionnel, qualité de vie et inconnues.</description>
     </item>
     <item>
-      <title>Tableau de pilotage d’une recherche d’emploi</title>
+      <title>Tableau de suivi de recherche d’emploi : candidatures, entretiens et offres</title>
       <link>https://contreevidence.github.io/outil-pilotage-recherche-emploi.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/outil-pilotage-recherche-emploi.html</guid>
       <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Outil</category>
       <category>Vie professionnelle</category>
       <category>Recherche d’emploi</category>
-      <description>Observer candidatures, réponses, entretiens et offres par séries comparables, sans taux cible universel.</description>
+      <description>Enregistrer candidatures, réponses, entretiens et offres, puis comparer des séries cohérentes pour identifier où l’entonnoir de recherche bloque, sans taux cible universel.</description>
     </item>
     <item>
       <title>Matrice compétences → preuves</title>
@@ -1108,24 +1108,24 @@
       <description>Transformer les exigences réellement importantes d’une offre en situations, actions, résultats et preuves, sans générer le CV à votre place.</description>
     </item>
     <item>
-      <title>Calculer le coût réel d’une formation</title>
+      <title>Calculer le coût réel d’une formation : prix, salaire perdu et retour</title>
       <link>https://contreevidence.github.io/simulateur-cout-formation.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/simulateur-cout-formation.html</guid>
       <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Outil</category>
       <category>Vie professionnelle</category>
       <category>Formation</category>
-      <description>Additionner coûts directs et revenu sacrifié puis tester les revenus futurs que vous saisissez vous-même.</description>
+      <description>Additionner prix net, frais, revenu sacrifié et mois de transition, puis tester vos propres hypothèses de revenu futur et le délai simple de récupération.</description>
     </item>
     <item>
-      <title>Calculer un prix minimum rentable</title>
+      <title>Calculer son prix minimum rentable : temps, coûts et tarif plancher</title>
       <link>https://contreevidence.github.io/simulateur-prix-minimum-rentable.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/simulateur-prix-minimum-rentable.html</guid>
       <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Outil</category>
       <category>Vie professionnelle</category>
       <category>Prix &amp; rentabilité</category>
-      <description>Calculer le plancher économique d’une mission à partir du temps réellement mobilisé et de vos propres coûts.</description>
+      <description>Calculer le plancher économique d’une mission à partir du revenu à couvrir, des heures réellement mobilisables, du temps total consommé et des coûts directs.</description>
     </item>
     <item>
       <title>Prévisionnel de trésorerie sur 13 semaines</title>
