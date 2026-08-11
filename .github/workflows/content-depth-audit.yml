@@ -5,6 +5,9 @@ on:
   push:
     branches: [main]
     paths:
+      - "articles/**/*.html"
+      - "dossiers/**/*.html"
+      - "sitemap.xml"
       - ".github/workflows/content-depth-audit.yml"
 
 permissions:
@@ -15,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - name: Inventory depth of indexable dossiers and articles
+      - name: Inventory depth and source quality of indexable dossiers and articles
         shell: python
         run: |
           from __future__ import annotations
@@ -28,8 +31,7 @@ jobs:
           root = pathlib.Path('.').resolve()
           prefix = 'https://contreevidence.github.io/'
           ns = {'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
-          sitemap = ET.parse('sitemap.xml')
-          urls = [n.text.strip() for n in sitemap.findall('.//s:loc', ns) if n.text]
+          urls = [n.text.strip() for n in ET.parse('sitemap.xml').findall('.//s:loc', ns) if n.text]
 
           script_re = re.compile(r'<(script|style)\b.*?</\1>', re.I | re.S)
           tag_re = re.compile(r'<[^>]+>')
@@ -38,56 +40,62 @@ jobs:
           source_re = re.compile(r'href=["\']https?://([^/"\']+)', re.I)
           word_re = re.compile(r"[A-Za-zÀ-ÖØ-öø-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÖØ-öø-ÿ0-9]+)*")
 
-          official = (
+          institutional = (
               'banque-france.fr','economie.gouv.fr','service-public.fr','service-public.gouv.fr',
               'legifrance.gouv.fr','amf-france.org','francetravail.fr','francecompetences.fr',
-              'moncompteformation.gouv.fr','transitionspro.fr','insee.fr','urssaf.fr','impots.gouv.fr'
+              'moncompteformation.gouv.fr','transitionspro.fr','insee.fr','urssaf.fr','impots.gouv.fr',
+              'anil.org','abe-infoservice.fr','data.gouv.fr','ecologie.gouv.fr','travail-emploi.gouv.fr'
           )
+          primary_market = (
+              'msci.com','spglobal.com','ecb.europa.eu','eurostat.ec.europa.eu'
+          )
+
+          def count_hosts(hosts, domains):
+              return sum(1 for host in hosts if any(host == d or host.endswith('.'+d) for d in domains))
 
           rows = []
           for url in urls:
-              if not url.startswith(prefix):
-                  continue
+              if not url.startswith(prefix): continue
               rel = urllib.parse.unquote(url[len(prefix):]) or 'index.html'
-              if not (rel.startswith('dossiers/') or rel.startswith('articles/')):
-                  continue
+              if not (rel.startswith('dossiers/') or rel.startswith('articles/')): continue
               page = root / rel
-              if not page.exists():
-                  continue
+              if not page.exists(): continue
               raw = page.read_text(encoding='utf-8', errors='replace')
-              visible = script_re.sub(' ', raw)
-              visible = html.unescape(tag_re.sub(' ', visible))
+              visible = html.unescape(tag_re.sub(' ', script_re.sub(' ', raw)))
               words = len(word_re.findall(visible))
               h2 = len(h2_re.findall(raw))
               tables = len(table_re.findall(raw))
               hosts = [h.lower() for h in source_re.findall(raw)]
-              official_links = sum(1 for host in hosts if any(host == d or host.endswith('.'+d) for d in official))
-              external_links = len(hosts)
-              rows.append((words, rel, h2, tables, official_links, external_links))
+              inst = count_hosts(hosts, institutional)
+              primary = count_hosts(hosts, primary_market)
+              external = len(hosts)
+              rows.append((words, rel, h2, tables, inst, primary, external))
 
           rows.sort()
           print(f'Indexable dossiers/articles: {len(rows)}')
           print('\n20 contenus les plus courts:')
-          print('mots | h2 | tableaux | liens officiels | liens externes | fichier')
-          for words, rel, h2, tables, official_links, external_links in rows[:20]:
-              print(f'{words:4} | {h2:2} | {tables:2} | {official_links:2} | {external_links:2} | {rel}')
+          print('mots | h2 | tableaux | institutionnel | primaire marché | externes | fichier')
+          for words, rel, h2, tables, inst, primary, external in rows[:20]:
+              print(f'{words:4} | {h2:2} | {tables:2} | {inst:2} | {primary:2} | {external:2} | {rel}')
 
           print('\nContenus sous seuil indicatif (dossier < 900 mots ; article < 700 mots):')
           flagged = []
           for row in rows:
               words, rel, *_ = row
               threshold = 900 if rel.startswith('dossiers/') else 700
-              if words < threshold:
-                  flagged.append(row)
+              if words < threshold: flagged.append(row)
           if not flagged:
               print('Aucun.')
           else:
-              for words, rel, h2, tables, official_links, external_links in flagged:
-                  print(f'{words:4} mots | {h2} h2 | {tables} tableaux | {official_links} officiels | {rel}')
+              for words, rel, h2, tables, inst, primary, external in flagged:
+                  print(f'{words:4} mots | {h2} h2 | {tables} tableaux | {inst} institutionnels | {primary} primaires marché | {rel}')
 
-          print('\nContenus longs sans lien externe officiel détecté (signal de revue, pas erreur):')
-          for words, rel, h2, tables, official_links, external_links in rows:
-              if words >= 1200 and official_links == 0:
-                  print(f'{words:4} mots | {rel}')
+          print('\nContenus longs sans source institutionnelle ni primaire de marché détectée (file de revue, pas erreur):')
+          review=[]
+          for words, rel, h2, tables, inst, primary, external in rows:
+              if words >= 1200 and inst == 0 and primary == 0:
+                  review.append((words,rel,external))
+                  print(f'{words:4} mots | {external:2} liens externes | {rel}')
 
-          print('\nAudit informatif uniquement : la longueur n’est pas un critère de classement et un contenu court peut être la meilleure réponse à une intention précise.')
+          print(f'\nFile de revue longue sans source institutionnelle/primaire: {len(review)} page(s).')
+          print('Audit informatif : la longueur n’est pas un critère de classement et une page non-YMYL peut être excellente sans source institutionnelle. Le signal sert à prioriser une vérification humaine des affirmations factuelles sensibles.')
