@@ -1,7 +1,8 @@
 {
-  "name": "Contre-évidence",
-  "short_name": "Contre-évidence",
-  "start_url": "./index.html",
+  "name": "Contre-Évidence",
+  "short_name": "Contre-Évidence",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#f7f4ec",
   "theme_color": "#101820",
