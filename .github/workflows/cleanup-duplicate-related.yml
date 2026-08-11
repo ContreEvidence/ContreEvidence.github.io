@@ -1,0 +1,57 @@
+name: Clean duplicate related-content blocks
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/cleanup-duplicate-related.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Remove legacy ce-related sections when generated block exists
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          excluded={'.git','.github','scripts','editorial','publication','publications','node_modules','_site'}
+          section_re=re.compile(r'<section\b(?=[^>]*\bclass=["\'][^"\']*\bce-related\b[^"\']*["\'])[^>]*>[\s\S]*?</section>',re.I)
+          generated_re=re.compile(r'<section\b(?=[^>]*\bclass=["\'][^"\']*\bce-related\b[^"\']*["\'])(?=[^>]*\bdata-ce-related=["\']1["\'])[^>]*>[\s\S]*?</section>',re.I)
+          changed=[]; removed=0
+          for p in Path('.').rglob('*.html'):
+              if any(part in excluded for part in p.parts): continue
+              text=p.read_text(encoding='utf-8',errors='replace')
+              if not generated_re.search(text): continue
+              sections=list(section_re.finditer(text))
+              legacy=[m for m in sections if 'data-ce-related' not in m.group(0)[:m.group(0).find('>')+1]]
+              if not legacy: continue
+              new=text
+              for m in reversed(legacy):
+                  new=new[:m.start()]+new[m.end():]
+              if new!=text:
+                  p.write_text(new,encoding='utf-8')
+                  changed.append(str(p)); removed+=len(legacy)
+          print(f'Removed {removed} superseded related-content block(s) from {len(changed)} page(s).')
+          for p in changed: print(p)
+
+      - name: Commit cleanup
+        run: |
+          if git diff --quiet; then
+            echo 'No superseded related blocks found.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- '*.html' articles dossiers fiches-metiers themes
+          git commit -m 'Supprimer les anciens blocs de recommandations'
+          git pull --rebase origin main
+          git push
