@@ -69,7 +69,9 @@ jobs:
           for url, stamp in sitemap_pages:
               lines.append(f'  <url><loc>{escape(url)}</loc><lastmod>{stamp}</lastmod></url>')
           lines.append('</urlset>')
-          Path('sitemap.xml').write_text('\n'.join(lines) + '\n', encoding='utf-8')
+          xml = '\n'.join(lines) + '\n'
+          Path('sitemap.xml').write_text(xml, encoding='utf-8')
+          Path('sitemap-google.xml').write_text(xml, encoding='utf-8')
           Path('sitemap.txt').write_text('\n'.join(url for url, _ in sitemap_pages) + '\n', encoding='utf-8')
 
           def group_for(rel):
@@ -101,12 +103,12 @@ jobs:
 
       - name: Commit generated discovery files if changed
         run: |
-          if git diff --quiet -- sitemap.xml sitemap.txt plan-du-site.html && git ls-files --error-unmatch sitemap.txt plan-du-site.html >/dev/null 2>&1; then
+          if git diff --quiet -- sitemap.xml sitemap-google.xml sitemap.txt plan-du-site.html && git ls-files --error-unmatch sitemap.txt plan-du-site.html sitemap-google.xml >/dev/null 2>&1; then
             echo "Discovery files are already current."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add sitemap.xml sitemap.txt plan-du-site.html
+          git add sitemap.xml sitemap-google.xml sitemap.txt plan-du-site.html
           git commit -m "Mise à jour automatique de la découverte SEO"
           git push
