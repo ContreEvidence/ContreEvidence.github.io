@@ -3,6 +3,12 @@ name: Deploy Contre-Evidence root site
 on:
   push:
     branches: [main]
+  workflow_run:
+    workflows:
+      - "Update sitemap"
+      - "Update RSS feeds"
+      - "Update library search index"
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -16,13 +22,16 @@ concurrency:
 
 jobs:
   deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout latest production branch
         uses: actions/checkout@v5
+        with:
+          ref: main
 
       - name: Prepare public artifact
         shell: bash
