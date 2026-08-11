@@ -1,0 +1,46 @@
+name: Update library search index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'articles/**/*.html'
+      - 'dossiers/**/*.html'
+      - 'fiches-metiers/**/*.html'
+      - 'fiches-metiers.html'
+      - 'assets/library-catalog.js'
+      - 'assets/library-daily-money.js'
+      - 'assets/library-work-foundations.js'
+      - 'assets/library-transitions.js'
+      - 'assets/library-acquisition.js'
+      - 'scripts/generate-search-index.cjs'
+      - '.github/workflows/search-index.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generate full-text library index
+        run: node scripts/generate-search-index.cjs
+      - name: Commit index if changed
+        run: |
+          if git diff --quiet -- assets/search-index.js; then
+            echo 'Search index already current.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/search-index.js
+          git commit -m 'Mettre à jour l’index de recherche de la Bibliothèque'
+          git pull --rebase origin main
+          git push
