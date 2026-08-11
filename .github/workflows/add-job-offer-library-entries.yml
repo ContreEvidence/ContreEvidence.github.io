@@ -17,36 +17,40 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - name: Add contract and pre-acceptance question dossiers to work catalog
+      - name: Add missing job-offer dossiers to work catalog
         shell: python
         run: |
           from pathlib import Path
-          p=Path('assets/library-work-foundations.js')
-          text=p.read_text(encoding='utf-8')
-          if 'dossiers/questions-poser-avant-prise-de-poste.html' in text and 'dossiers/contrat-travail-clauses-verifier-avant-signer.html' in text:
+          p = Path('assets/library-work-foundations.js')
+          text = p.read_text(encoding='utf-8')
+          q = 'dossiers/questions-poser-avant-prise-de-poste.html'
+          c = 'dossiers/contrat-travail-clauses-verifier-avant-signer.html'
+          if q in text and c in text:
               print('Entries already present.')
               raise SystemExit(0)
-          marker='  const additions = [\n'
-          addition="""  const additions = [
-    {
-      d:'vie-pro',t:'guide',c:'Choix d’emploi',
-      h:'dossiers/questions-poser-avant-prise-de-poste.html',
-      n:'Les questions à poser avant d’accepter un poste',
-      x:'Vérifier pourquoi le poste est ouvert, les attentes, la charge, les moyens, le manager, le variable, le télétravail, la progression et les contradictions avant de dire oui.',
-      k:'questions avant accepter poste offre emploi manager charge moyens objectifs turnover variable télétravail évolution prise de poste'
-    },
-    {
-      d:'vie-pro',t:'guide',c:'Contrat de travail',
-      h:'dossiers/contrat-travail-clauses-verifier-avant-signer.html',
-      n:'Contrat de travail : les clauses à vérifier avant de signer',
-      x:'Fonctions, classification, lieu, mobilité, temps de travail, variable, télétravail, période d’essai, exclusivité, non-concurrence et promesses écrites : contrôler ce qui vous engage réellement.',
-      k:'contrat travail vérifier avant signer cdi clause mobilité forfait jours variable télétravail essai exclusivité non concurrence classification salaire'
-    },
-"""
+          marker = '  const additions = [\n'
+          lines = [
+              '  const additions = [',
+              '    {',
+              "      d:'vie-pro',t:'guide',c:'Choix d’emploi',",
+              "      h:'dossiers/questions-poser-avant-prise-de-poste.html',",
+              "      n:'Les questions à poser avant d’accepter un poste',",
+              "      x:'Vérifier pourquoi le poste est ouvert, les attentes, la charge, les moyens, le manager, le variable, le télétravail, la progression et les contradictions avant de dire oui.',",
+              "      k:'questions avant accepter poste offre emploi manager charge moyens objectifs turnover variable télétravail évolution prise de poste'",
+              '    },',
+              '    {',
+              "      d:'vie-pro',t:'guide',c:'Contrat de travail',",
+              "      h:'dossiers/contrat-travail-clauses-verifier-avant-signer.html',",
+              "      n:'Contrat de travail : les clauses à vérifier avant de signer',",
+              "      x:'Fonctions, classification, lieu, mobilité, temps de travail, variable, télétravail, période d’essai, exclusivité, non-concurrence et promesses écrites : contrôler ce qui vous engage réellement.',",
+              "      k:'contrat travail vérifier avant signer cdi clause mobilité forfait jours variable télétravail essai exclusivité non concurrence classification salaire'",
+              '    },',
+          ]
+          addition = '\n'.join(lines) + '\n'
           if marker not in text:
               raise SystemExit('Catalog insertion marker not found')
-          text=text.replace(marker,addition,1)
-          p.write_text(text,encoding='utf-8')
+          text = text.replace(marker, addition, 1)
+          p.write_text(text, encoding='utf-8')
           print('Added two high-intent job-offer dossiers to work catalog.')
       - name: Commit catalog entries
         run: |
