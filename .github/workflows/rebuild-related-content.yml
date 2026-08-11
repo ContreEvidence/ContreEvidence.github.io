@@ -5,6 +5,10 @@ on:
   push:
     branches: [main]
     paths:
+      - 'assets/library-catalog.js'
+      - 'assets/library-daily-money.js'
+      - 'assets/library-work-foundations.js'
+      - 'scripts/add-related-content.cjs'
       - '.github/workflows/rebuild-related-content.yml'
 
 permissions:
@@ -12,6 +16,7 @@ permissions:
 
 jobs:
   rebuild:
+    if: github.actor != 'github-actions[bot]' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -31,6 +36,6 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -- '*.html' articles dossiers fiches-metiers themes
-          git commit -m 'Améliorer les recommandations de lecture'
+          git commit -m 'Synchroniser les recommandations de lecture'
           git pull --rebase origin main
           git push
