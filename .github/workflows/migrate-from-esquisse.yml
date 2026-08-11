@@ -41,7 +41,7 @@ jobs:
           set -euo pipefail
           rsync -a --delete --exclude='.git/' /tmp/ce-source/ ./
 
-          # The new repository must not duplicate social publishing jobs from Esquisse.
+          # The root repository must not duplicate social publishing jobs from Esquisse.
           rm -f .github/workflows/social.yml \
                 .github/workflows/social-publish.yml \
                 .github/workflows/social-auth-probe.yml \
@@ -52,8 +52,8 @@ jobs:
           from pathlib import Path
 
           text_ext = {
-              '.html','.htm','.css','.js','.mjs','.json','.xml','.txt','.md',
-              '.yml','.yaml','.webmanifest','.ps1','.py','.csv'
+              '.html','.htm','.css','.js','.mjs','.cjs','.json','.xml','.txt','.md',
+              '.yml','.yaml','.webmanifest','.ps1','.py','.csv','.sh'
           }
           replacements = [
               ('https://contreevidence.github.io/Esquisse/', 'https://contreevidence.github.io/'),
@@ -87,7 +87,7 @@ jobs:
           print(f'Root URL rewritten in {changed} text files.')
           PY
 
-          # Root deployment workflow for every future content push.
+          # Persistent deployment workflow for every future content push.
           cat > .github/workflows/pages-root.yml <<'YAML'
           name: Deploy root GitHub Pages
 
@@ -109,7 +109,6 @@ jobs:
             deploy:
               environment:
                 name: github-pages
-                url: ${{ steps.deployment.outputs.page_url }}
               runs-on: ubuntu-latest
               steps:
                 - name: Checkout
@@ -125,7 +124,6 @@ jobs:
                   uses: actions/deploy-pages@v4
           YAML
 
-          # Human-readable migration marker.
           cat > ROOT-MIGRATION.md <<'MD'
           # Contre-Evidence root migration
 
@@ -135,10 +133,11 @@ jobs:
           The former project site is retained only as a redirect layer once the root site is verified.
           MD
 
-          # No canonical or sitemap URL should still use the project path.
-          if grep -RIl --exclude-dir=.git 'contreevidence.github.io/Esquisse' . | grep -q .; then
+          # No absolute canonical/sitemap/feed URL may still use the project path.
+          remaining="$(grep -RIl --exclude-dir=.git 'contreevidence.github.io/Esquisse' . || true)"
+          if [ -n "$remaining" ]; then
             echo 'Remaining absolute /Esquisse URLs:'
-            grep -RIl --exclude-dir=.git 'contreevidence.github.io/Esquisse' .
+            echo "$remaining"
             exit 1
           fi
 
