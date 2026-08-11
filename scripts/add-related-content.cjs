@@ -5,7 +5,7 @@ const vm = require('vm');
 const ROOT = path.resolve(__dirname, '..');
 const ctx = { window: {} };
 vm.createContext(ctx);
-for (const rel of ['assets/library-catalog.js','assets/library-daily-money.js','assets/library-work-foundations.js']) {
+for (const rel of ['assets/library-catalog.js','assets/library-daily-money.js','assets/library-work-foundations.js','assets/library-transitions.js','assets/library-acquisition.js']) {
   const file = path.join(ROOT, rel);
   if (fs.existsSync(file)) vm.runInContext(fs.readFileSync(file,'utf8'), ctx, { filename: rel });
 }
@@ -31,6 +31,7 @@ const preferredNext = new Map([
   ['dossiers/sante-travail-equilibre-vie-pro-perso.html','dossiers/management-relations-conflits.html'],
   ['dossiers/prejuges-biais-monde-professionnel.html','dossiers/competences-qualification-employabilite.html'],
   ['articles/construire-epargne-de-zero.html','dossiers/liquidites-reserve-securite.html'],
+  ['articles/choisir-etf-mondial-debutant.html','dossiers/finances-allocation-portefeuille.html'],
   ['articles/frais-fiscalite-rendement-net.html','dossiers/finances-enveloppes-fiscalite.html'],
   ['articles/checklist-avant-placement-conseiller.html','dossiers/classes-actifs-allocation-patrimoine.html'],
   ['dossiers/gestion-pilotee-comparer-performances.html','dossiers/finances-allocation-portefeuille.html'],
@@ -106,7 +107,9 @@ for (const item of enriched) {
     || ranked.find(x => !used.has(x.other.h) && x.domain && x.shared >= 1 && x.score >= 10);
   if (otherAngle) used.add(otherAngle.other.h);
 
-  const curiosity = ranked.find(x => !used.has(x.other.h) && !x.domain && x.shared >= 2);
+  // A cross-domain curiosity is deliberately harder to earn than a same-domain recommendation.
+  // Three significant shared concepts avoids sending a beginner to a merely adjacent topic.
+  const curiosity = ranked.find(x => !used.has(x.other.h) && !x.domain && x.shared >= 3 && x.score >= 15);
 
   const primaryHref = esc(hrefFrom(item.h,primary.other.h));
   const primaryDesc = esc(primary.other.x || 'Poursuivre le raisonnement avec un dossier directement lié à cette décision.');
