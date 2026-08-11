@@ -1,0 +1,34 @@
+name: Promote three acquisition tools
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/promote-three-acquisition-tools.py'
+      - '.github/workflows/promote-three-acquisition-tools.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Promote selected tools
+        run: python scripts/promote-three-acquisition-tools.py
+      - name: Commit promoted tools
+        run: |
+          if git diff --quiet -- simulateur-prix-minimum-rentable.html simulateur-cout-formation.html outil-pilotage-recherche-emploi.html; then
+            echo 'Selected tools already promoted.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add simulateur-prix-minimum-rentable.html simulateur-cout-formation.html outil-pilotage-recherche-emploi.html
+          git commit -m 'Indexer trois outils de décision à forte intention'
+          git pull --rebase origin main
+          git push
