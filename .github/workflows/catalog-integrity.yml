@@ -1,0 +1,58 @@
+name: Library catalog integrity
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/library-*.js'
+      - 'sitemap.xml'
+      - '.github/workflows/catalog-integrity.yml'
+  pull_request:
+    paths:
+      - 'assets/library-*.js'
+      - 'sitemap.xml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check library targets, duplicates and sitemap membership
+        run: |
+          node <<'NODE'
+          const fs=require('fs'),vm=require('vm');
+          const ctx={window:{}};vm.createContext(ctx);
+          for(const rel of ['assets/library-catalog.js','assets/library-daily-money.js','assets/library-work-foundations.js']){
+            if(fs.existsSync(rel))vm.runInContext(fs.readFileSync(rel,'utf8'),ctx,{filename:rel});
+          }
+          const items=Array.isArray(ctx.window.CE_LIBRARY_CATALOG)?ctx.window.CE_LIBRARY_CATALOG:[];
+          const sitemap=fs.readFileSync('sitemap.xml','utf8');
+          const urls=new Set([...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1]));
+          const base='https://contreevidence.github.io/';
+          const seen=new Map(), errors=[], warnings=[];
+          const noindex=/<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex|<meta\b[^>]*content=["'][^"']*noindex[^"']*["'][^>]*name=["']robots["']/i;
+          for(const item of items){
+            if(!item?.h)continue;
+            if(seen.has(item.h))errors.push(`Duplicate catalog target: ${item.h} (${seen.get(item.h)} / ${item.n||''})`);
+            else seen.set(item.h,item.n||'');
+            if(!fs.existsSync(item.h)){errors.push(`Missing target: ${item.h} | ${item.n||''}`);continue;}
+            const html=fs.readFileSync(item.h,'utf8');
+            if(noindex.test(html))errors.push(`Catalog points to noindex page: ${item.h} | ${item.n||''}`);
+            const url=base+item.h;
+            if(!urls.has(url))errors.push(`Catalog target absent from sitemap: ${item.h} | ${item.n||''}`);
+            if(!item.n||!item.x||!item.c||!item.d)warnings.push(`Incomplete metadata: ${item.h}`);
+          }
+          console.log(`Catalog entries: ${items.length}`);
+          console.log(`Unique targets: ${seen.size}`);
+          for(const w of warnings)console.log('WARNING:',w);
+          for(const e of errors)console.log('ERROR:',e);
+          if(errors.length)process.exit(1);
+          console.log('OK — every library entry resolves to a unique indexable sitemap page.');
+          NODE
