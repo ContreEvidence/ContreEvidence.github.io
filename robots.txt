@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://contreevidence.github.io/sitemap.xml

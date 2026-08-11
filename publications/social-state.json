@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "lastPublicationAt": null,
+  "items": {
+    "https://contreevidence.github.io/dossiers/depenses-recurrentes-abonnements-assurances.html": {
+      "complete": true,
+      "deferred": true,
+      "deferReason": "Prioriser le dossier d'introduction Le prix d'attendre avant les contenus spécialisés.",
+      "platforms": {
+        "youtube": {
+          "ok": false,
+          "error": "400 Bad Request",
+          "checkedAt": "2026-08-10T07:47:48.180Z"
+        }
+      },
+      "title": "Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?",
+      "pubDate": "Sun, 09 Aug 2026 11:17:39 GMT"
+    },
+    "https://contreevidence.github.io/dossiers/cout-reel-voiture-achat-credit-loa-lld.html": {
+      "complete": false,
+      "platforms": {
+        "youtube": {
+          "ok": false,
+          "error": "400 Bad Request",
+          "checkedAt": "2026-08-10T15:49:02.640Z"
+        }
+      },
+      "title": "Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?",
+      "pubDate": "Sun, 09 Aug 2026 11:17:05 GMT"
+    }
+  }
+}

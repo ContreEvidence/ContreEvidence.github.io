@@ -1,0 +1,431 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "lastChecked": "2026-08-09",
+    "country": "FR",
+    "principle": "Séparer données observées, performances publiées par les fournisseurs et hypothèses de simulation. Chaque chiffre conserve sa source, sa date et son périmètre.",
+    "refresh": "Les données datées doivent être revérifiées avant toute mise à jour éditoriale importante."
+  },
+  "markets": {
+    "msciWorld": {
+      "asOf": "2026-07-31",
+      "constituents": 1282,
+      "top10WeightPct": 26.43,
+      "annualizedVolatility10yPct": 14.89,
+      "maxDrawdownPct": 57.82,
+      "maxDrawdownPeriod": "2007-10-31 / 2009-03-09",
+      "topConstituents": [
+        {
+          "name": "NVIDIA",
+          "weightPct": 5.18
+        },
+        {
+          "name": "Apple",
+          "weightPct": 5.07
+        },
+        {
+          "name": "Microsoft",
+          "weightPct": 3.66
+        },
+        {
+          "name": "Amazon",
+          "weightPct": 2.94
+        },
+        {
+          "name": "Alphabet A",
+          "weightPct": 2.32
+        }
+      ],
+      "source": "https://www.msci.com/indexes/index/990100/msci-world-index",
+      "sourceLabel": "MSCI — MSCI World Index",
+      "status": "observed",
+      "riskAsOf": "2026-06-30",
+      "constituentsRiskSnapshot": 1283
+    },
+    "spivaEurope": {
+      "globalEquityEurUnderperformed2025Pct": 71,
+      "globalEquityEurUnderperformed10yAt2025H1Pct": 98,
+      "persistence": {
+        "sample": 408,
+        "startingCondition": "Fonds Global Equity dans la moitié supérieure sur les cinq ans finissant en 2020",
+        "remainedTopHalfNext5yPct": 16
+      },
+      "sources": [
+        "https://www.spglobal.com/spdji/en/spiva/article/spiva-europe/",
+        "https://www.spglobal.com/spdji/en/spiva/article/spiva-europe-mid-year-2025/",
+        "https://www.spglobal.com/spdji/en/spiva/article/europe-persistence-scorecard/"
+      ],
+      "sourceLabel": "S&P Dow Jones Indices — SPIVA Europe",
+      "status": "observed"
+    },
+    "lumpSumVsCostAveraging": {
+      "study": "Vanguard 2023",
+      "historicalPeriod": "1976-2022",
+      "equityBenchmark": "MSCI World Index",
+      "costAveraging": "3 equal monthly investments",
+      "horizon": "1 year",
+      "lumpSumBeatsCostAveragingPct": 68,
+      "costAveragingBeatsCashPct": 69,
+      "lumpSumBeatsCashPct": 70,
+      "equityMedian": {
+        "lumpSum": 111940,
+        "costAveraging": 109580
+      },
+      "equity5thPct": {
+        "lumpSum": 82947,
+        "costAveraging": 85906
+      },
+      "equity95thPct": {
+        "lumpSum": 139453,
+        "costAveraging": 131012
+      },
+      "source": "https://corporate.vanguard.com/content/dam/corp/research/pdf/cost_averaging_invest_now_or_temporarily_hold_your_cash.pdf",
+      "status": "observed-historical"
+    }
+  },
+  "managedPortfolios": {
+    "yomoni": {
+      "providerReported": true,
+      "performance": {
+        "P3": {
+          "equitySharePct": 20,
+          "2023Pct": 6.1,
+          "2024Pct": 5.7,
+          "2025Pct": 4
+        },
+        "P6": {
+          "equitySharePct": 50,
+          "2023Pct": 11.7,
+          "2024Pct": 10.6,
+          "2025Pct": 6
+        },
+        "P10": {
+          "equitySharePct": 100,
+          "2023Pct": 19,
+          "2024Pct": 19.6,
+          "2025Pct": 11.1
+        }
+      },
+      "fees": {
+        "mandateMaxPct": 0.7,
+        "insurerMaxPct": 0.6,
+        "etfMaxPct": 0.3,
+        "approxAllInMaxPct": 1.6
+      },
+      "sources": [
+        "https://blog.yomoni.fr/le-bilan-2025-de-la-gestion/",
+        "https://www.yomoni.fr/performances/profils-investissement",
+        "https://www.yomoni.fr/tarifs"
+      ],
+      "status": "provider-reported"
+    },
+    "nalo": {
+      "providerReported": true,
+      "performancePageAsOf": "2026-07-24",
+      "fundEuro": {
+        "2023Pct": 2.95,
+        "2024Pct": 2.9,
+        "2025Pct": 2.9
+      },
+      "fees": {
+        "minPct": 0.85,
+        "maxPct": 1.65,
+        "insurerPct": 0.85,
+        "mandatePct": 0.55,
+        "etfApproxPct": 0.25
+      },
+      "note": "Nalo ne publie pas de profils génériques fixes : les performances sont affichées selon la part d'actions. Comparer seulement à exposition et période comparables.",
+      "sources": [
+        "https://www.nalo.fr/performances",
+        "https://content.nalo.fr/fr/help/quels-sont-les-frais-de-nalo-patrimoine-nalo-faq?hsLang=fr"
+      ],
+      "status": "provider-reported"
+    },
+    "ramify": {
+      "providerReported": true,
+      "asOf": "2026-06-30",
+      "example": {
+        "portfolio": "Essential Standard",
+        "riskLevel": "10/10 Dynamique",
+        "2024Pct": 27.12,
+        "2025Pct": 5.66,
+        "2026YtdPct": 9.67,
+        "fiveYearCumulativePct": 81.36,
+        "fiveYearAnnualizedPct": 12.64
+      },
+      "fees": {
+        "managementRangePct": "1.0-1.4",
+        "note": "hors frais des supports selon la page produit"
+      },
+      "source": "https://www.ramify.fr/performances",
+      "sourceLabel": "Ramify — Performances",
+      "status": "provider-reported"
+    }
+  },
+  "savings": {
+    "asOf": "2026-08-01",
+    "livretA": {
+      "annualRatePct": 1.7,
+      "ceilingEur": 22950,
+      "tax": "exempt",
+      "source": "https://presse.economie.gouv.fr/epargne-reglementee-le-livret-a-passe-a-17-et-le-lep-se-maintient-a-25-a-compter-du-1er-aout-2026/",
+      "status": "observed"
+    },
+    "ldds": {
+      "annualRatePct": 1.7,
+      "tax": "exempt",
+      "status": "observed",
+      "source": "https://presse.economie.gouv.fr/epargne-reglementee-le-livret-a-passe-a-17-et-le-lep-se-maintient-a-25-a-compter-du-1er-aout-2026/",
+      "sourceNote": "Le taux du LDDS est aligné sur celui du Livret A ; la même publication officielle est utilisée pour ce repère."
+    },
+    "lep": {
+      "annualRatePct": 2.5,
+      "ceilingEur": 10000,
+      "tax": "exempt",
+      "eligibility": "income-tested",
+      "source": "https://www.economie.gouv.fr/particuliers/gerer-mon-argent/gerer-mon-budget-et-mon-epargne/livret-depargne-populaire-lep-comment-ca-marche",
+      "status": "observed"
+    },
+    "pel2026": {
+      "annualRateGrossPct": 2,
+      "openingFrom": "2026-01-01",
+      "withdrawalBefore4Years": "closure in principle",
+      "source": "https://www.economie.gouv.fr/particuliers/gerer-mon-argent/gerer-mon-budget-et-mon-epargne/plan-epargne-logement-pel-comment-ca-marche",
+      "status": "observed"
+    }
+  },
+  "credit": {
+    "asOf": "2026-05",
+    "housingNewLoansExRenegotiationPct": 3.21,
+    "consumerAmortizingLoansPct": 6.53,
+    "scope": "Taux effectif au sens étroit, moyennes pondérées par les flux, hors frais et assurance pour habitat",
+    "source": "https://www.banque-france.fr/fr/statistiques/credit/credits-aux-particuliers-2026-05",
+    "status": "observed"
+  },
+  "secureProducts": {
+    "termDepositsMay2026": {
+      "householdsNewContractsUpTo2YearsPct": 2.23,
+      "status": "observed",
+      "source": "https://www.banque-france.fr/fr/statistiques/epargne/taux-de-remuneration-des-depots-bancaires-2026-05"
+    },
+    "euroFunds2025": {
+      "individualAverageRevaluationPct": 2.63,
+      "averageManagementChargePct": 0.63,
+      "scope": "net de prélèvements sur encours, avant prélèvements sociaux",
+      "dispersionCommercialBonusesAtLeastPctPoint": 0.4,
+      "status": "observed-market-average",
+      "source": "https://acpr.banque-france.fr/en/node/1922312"
+    }
+  },
+  "labourMarket": {
+    "france2026": {
+      "recruitmentProjectsM": 2.3,
+      "changeYoYPct": -6.5,
+      "difficultRecruitmentPct": 43.8,
+      "status": "survey-employer-intentions",
+      "source": "https://statistiques.francetravail.org/bmo/bmopub?year=2026"
+    },
+    "seniorEmployment2025": {
+      "employmentRate50to64Pct": 69.2,
+      "change50to64YoYPp": 0.9,
+      "employmentRate60to64Pct": 44.4,
+      "change60to64YoYPp": 2,
+      "shareWorkersAge50PlusPct": 32.8,
+      "status": "observed",
+      "source": "https://www.insee.fr/fr/statistiques/8733041?sommaire=8733125"
+    }
+  },
+  "realEstate": {
+    "asOf": "2026-Q1",
+    "oldHousingFrance": {
+      "quarterlyChangePct": 0.2,
+      "annualChangePct": 0.1,
+      "apartmentsAnnualPct": 0.6,
+      "housesAnnualPct": -0.2,
+      "transactions12mEndMarch2026": 952000,
+      "status": "observed-provisional",
+      "source": "https://www.insee.fr/fr/statistiques/8995299"
+    },
+    "mortgageRules": {
+      "maxEffortRatePct": 35,
+      "maxMaturityYears": 25,
+      "bankFlexibilitySharePct": 20,
+      "status": "regulatory-current",
+      "source": "https://www.economie.gouv.fr/hcsf/mesures/mesure-relative-loctroi-de-credits-immobiliers"
+    },
+    "irl2026Q2": {
+      "index": 148.37,
+      "annualChangePct": 1.15,
+      "status": "observed",
+      "source": "https://www.insee.fr/fr/statistiques/9022797"
+    }
+  },
+  "tax2026": {
+    "status": "official-current",
+    "pea": {
+      "depositCeilingEur": 150000,
+      "peaPlusPeaPmeCeilingEur": 225000,
+      "pfuBefore5YearsPct": 31.4,
+      "socialLeviesAfter5YearsPct": 18.6,
+      "source": "https://www.impots.gouv.fr/particulier/questions/jai-un-plan-depargne-en-actions-pea-les-retraits-sont-ils-imposables"
+    },
+    "lifeInsurance": {
+      "abatementAfter8YearsSingleEur": 4600,
+      "abatementAfter8YearsCoupleEur": 9200,
+      "socialLeviesPct": 17.2,
+      "source": "https://www.impots.gouv.fr/particulier/lassurance-vie-et-le-pea-0"
+    },
+    "cto": {
+      "pfuPct": 31.4,
+      "incomeTaxPct": 12.8,
+      "socialLeviesPct": 18.6,
+      "source": "https://www.impots.gouv.fr/particulier/questions/jai-des-valeurs-mobilieres-comment-sont-elles-imposees"
+    },
+    "per": {
+      "contributionsAfter70Deductible": false,
+      "capitalGainsGlobalRatePct": 31.4,
+      "source": "https://www.economie.gouv.fr/particuliers/gerer-mon-argent/gerer-mon-budget-et-mon-epargne/comment-fonctionne-le-plan-depargne-retraite-individuel"
+    },
+    "sources": [
+      "https://www.impots.gouv.fr/particulier/questions/jai-un-plan-depargne-en-actions-pea-les-retraits-sont-ils-imposables",
+      "https://www.impots.gouv.fr/particulier/lassurance-vie-et-le-pea-0",
+      "https://www.impots.gouv.fr/particulier/questions/jai-des-valeurs-mobilieres-comment-sont-elles-imposees",
+      "https://www.economie.gouv.fr/particuliers/gerer-mon-argent/gerer-mon-budget-et-mon-epargne/comment-fonctionne-le-plan-depargne-retraite-individuel"
+    ]
+  },
+  "retirement2026": {
+    "lifeExpectancyAt65_2025": {
+      "menYears": 20,
+      "womenYears": 23.6,
+      "status": "observed-provisional",
+      "source": "https://www.insee.fr/fr/statistiques/2416631"
+    },
+    "inflationJune2026YoYPct": 1.8,
+    "inflationSource": "https://www.insee.fr/fr/statistiques/9021808"
+  },
+  "transmission2026": {
+    "parentChildDonationAllowanceEur": 100000,
+    "renewalYears": 15,
+    "familyCashGiftAllowanceEur": 31865,
+    "temporaryHousingGift": {
+      "maxPerDonorDoneeEur": 100000,
+      "maxPerRecipientEur": 300000,
+      "endDate": "2026-12-31"
+    },
+    "lifeInsuranceBefore70AllowancePerBeneficiaryEur": 152500,
+    "lifeInsuranceAfter70GlobalAllowanceEur": 30500,
+    "sources": [
+      "https://www.service-public.fr/particuliers/vosdroits/F36656",
+      "https://www.impots.gouv.fr/particulier/questions/je-suis-beneficiaire-dune-assurance-vie-comment-la-declarer"
+    ]
+  },
+  "training2026": {
+    "cpfMandatoryContributionEur": 150,
+    "effectiveSince": "2026-04-01",
+    "skillsAssessmentCpfCapEur": 1600,
+    "specificRegistryCpfCapEur": 1500,
+    "source": "https://www.moncompteformation.gouv.fr/espace-public/une-participation-financiere-pourquoi-et-comment"
+  },
+  "wages2024": {
+    "privateSectorNetMonthlyAverageEqtpEur": 2730,
+    "privateSectorNetMonthlyMedianEqtpEur": 2190,
+    "decile1Eur": 1492,
+    "decile9Eur": 4334,
+    "under10EmployeesAverageEur": 2190,
+    "over5000EmployeesAverageEur": 3260,
+    "status": "observed",
+    "sources": [
+      "https://www.insee.fr/fr/statistiques/8733089?sommaire=8733125",
+      "https://www.insee.fr/fr/statistiques/8733091?sommaire=8733125"
+    ]
+  },
+  "business2026": {
+    "paymentTerms": {
+      "defaultDays": 30,
+      "maxNegotiatedDays": 60,
+      "alternative": "45 days end of month",
+      "collectionIndemnityEur": 40,
+      "status": "regulatory-current",
+      "sources": [
+        "https://www.economie.gouv.fr/entreprises/gerer-sa-comptabilite-et-ses-demarches/entreprises-quels-sont-les-delais-de-paiement",
+        "https://www.economie.gouv.fr/dgccrf/les-fiches-pratiques/conditions-generales-de-vente-quelles-mentions-sont-obligatoires"
+      ]
+    }
+  },
+  "insurance2025": {
+    "home": {
+      "averagePremiumHtEur": 323,
+      "occupantAveragePremiumHtEur": 351,
+      "nonOccupantAveragePremiumHtEur": 191,
+      "averagePremiumYoYPct": 7.8,
+      "source": "https://www.franceassureurs.fr/nos-chiffres-cles/assurance-de-dommages-et-responsabilite/assurance-habitation-2025/",
+      "status": "market-reported"
+    },
+    "nonLife": {
+      "premiumsYoYPct": 5.6,
+      "autoPremiumsYoYPct": 7,
+      "propertyPremiumsYoYPct": 8,
+      "autoClaimsYoYPct": 10,
+      "autoRepairAverageCostYoYPct": 5.9,
+      "source": "https://acpr.banque-france.fr/fr/publications-et-statistiques/publications/ndeg-181-la-situation-des-assureurs-en-france-fin-2025",
+      "status": "regulator-observed"
+    }
+  },
+  "subcontracting2026": {
+    "vigilanceThresholdHtEur": 5000,
+    "recheckMonths": 6,
+    "source": "https://www.urssaf.fr/accueil/attestation-vigilance.html",
+    "status": "regulatory-current"
+  },
+  "automationExamples": {
+    "status": "illustrative-user-replaceable",
+    "setupEur": 4500,
+    "hourlyCostEur": 30,
+    "manualMinutes": 12,
+    "controlMinutes": 2,
+    "subscriptionMonthlyEur": 150,
+    "maintenanceHoursMonthly": 3
+  },
+  "careerDecision2026": {
+    "resignationReconversion": {
+      "continuousWorkDaysRequired": 1300,
+      "referencePeriodMonths": 60,
+      "cepBeforeResignation": true,
+      "projectMustBeCertifiedRealSerious": true,
+      "status": "regulatory-current",
+      "source": "https://www.francetravail.fr/candidat/mes-droits-aux-aides-et-allocati/a-chaque-situation-son-allocatio/quelle-est-ma-situation-professi/je-perds-ou-je-quitte-un-emploi/je-veux-demissionner-et-jai-un-p.html"
+    }
+  },
+  "editorialExamplesWave4": {
+    "status": "illustrative-user-replaceable",
+    "jobChange": {
+      "currentNetMonthlyEur": 2400,
+      "newNetMonthlyEur": 2700,
+      "currentVariableAnnualEur": 1500,
+      "currentTransportMonthlyEur": 120,
+      "newTransportMonthlyEur": 360,
+      "newParkingMonthlyEur": 70,
+      "extraCommuteHoursAnnual": 220
+    },
+    "manager": {
+      "directReports": 8,
+      "interruptionsPerPersonPerDay": 2,
+      "minutesPerInterruption": 8,
+      "workingWeeks": 46
+    },
+    "process": {
+      "monthlyCases": 1000,
+      "currentMinutes": 25,
+      "currentReworkPct": 11,
+      "currentReworkMinutes": 12,
+      "improvedMinutes": 20,
+      "improvedReworkPct": 8,
+      "hourlyCostEur": 32
+    },
+    "valueOfInformation": {
+      "commitmentAtRiskEur": 11600,
+      "testCostEur": 440,
+      "breakEvenProbabilityPct": 3.8
+    }
+  }
+}
