@@ -53,6 +53,7 @@ jobs:
               'www.banque-france.fr', 'banque-france.fr',
               'www.economie.gouv.fr', 'economie.gouv.fr',
               'www.legifrance.gouv.fr', 'legifrance.gouv.fr',
+              'www.data.gouv.fr', 'data.gouv.fr',
               'www.service-public.fr', 'service-public.fr',
               'www.service-public.gouv.fr', 'service-public.gouv.fr',
               'www.francetravail.fr', 'francetravail.fr',
