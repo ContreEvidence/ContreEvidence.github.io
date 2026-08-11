@@ -1,0 +1,85 @@
+name: Clean catalog debt and strengthen YMYL sources
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/cleanup-catalog-and-yml-sources.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Remove hidden legacy catalog entry and add authoritative finance sources
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          changed=[]
+
+          # 1) Remove the old immobilier entry from the source catalog itself.
+          p=Path('assets/library-catalog.js')
+          text=p.read_text(encoding='utf-8')
+          old_re=re.compile(r"\n\s*\{d:'patrimoine',t:'dossier',c:'Immobilier',h:'dossiers/finances-immobilier-patrimoine\.html'.*?\},",re.S)
+          new,n=old_re.subn('',text,count=1)
+          if n:
+              p.write_text(new,encoding='utf-8'); changed.append(str(p))
+
+          # 2) Remove the runtime filter that had become a hidden compatibility patch.
+          p=Path('assets/library-daily-money.js')
+          text=p.read_text(encoding='utf-8')
+          old="  /* Le nouveau dossier d'allocation immobilière remplace l'ancien panorama devenu redondant. */\n  window.CE_LIBRARY_CATALOG = window.CE_LIBRARY_CATALOG.filter(item => item.h !== 'dossiers/finances-immobilier-patrimoine.html');\n\n"
+          if old in text:
+              p.write_text(text.replace(old,'',1),encoding='utf-8'); changed.append(str(p))
+
+          # 3) Add AMF institutional references to the management-pilotée source list.
+          p=Path('dossiers/gestion-pilotee-comparer-performances.html')
+          text=p.read_text(encoding='utf-8')
+          marker='<ul><li><a href="https://www.msci.com/indexes/index/990100/msci-world-index"'
+          if 'comprendre-les-frais-des-placements-financiers' not in text and marker in text:
+              replacement='<ul><li><a href="https://www.amf-france.org/fr/espace-epargnants/comprendre-les-produits-financiers/supports-dinvestissement/mandat-de-gestion" rel="noopener noreferrer">AMF — le mandat de gestion : coûts, information et relevés</a></li><li><a href="https://www.amf-france.org/fr/espace-epargnants/les-frais-des-placements-financiers/comprendre-les-frais-des-placements-financiers" rel="noopener noreferrer">AMF — comprendre les frais des placements financiers</a></li><li><a href="https://www.amf-france.org/fr/espace-epargnants/savoir-bien-investir/cadrer-son-projet/risques-et-rendements-des-placements" rel="noopener noreferrer">AMF — rendements et risques des placements financiers</a></li><li><a href="https://www.msci.com/indexes/index/990100/msci-world-index"'
+              text=text.replace(marker,replacement,1)
+              text=text.replace('<meta name="dateModified" content="2026-08-10"/>','<meta name="dateModified" content="2026-08-11"/>',1)
+              text=text.replace('<meta property="article:modified_time" content="2026-08-10"/>','<meta property="article:modified_time" content="2026-08-11"/>',1)
+              text=text.replace('"dateModified":"2026-08-10"','"dateModified":"2026-08-11"',1)
+              text=text.replace('Sources · vérifiées le 9 août 2026','Sources · vérifiées le 11 août 2026',1)
+              p.write_text(text,encoding='utf-8'); changed.append(str(p))
+
+          # 4) The classes-assets dossier promised sources but had no visible source section.
+          p=Path('dossiers/classes-actifs-allocation-patrimoine.html')
+          text=p.read_text(encoding='utf-8')
+          if 'Repères institutionnels sur les risques et véhicules' not in text:
+              marker='<section class="ce-related" data-ce-related="1"'
+              sources='''<h2>17. Repères institutionnels sur les risques et véhicules</h2><p>Cette cartographie sert à classer les expositions, pas à déclarer qu’une classe est « bonne » ou « mauvaise ». Pour les produits financiers, le document d’informations clés et la nature du sous-jacent restent déterminants.</p><ul><li><a href="https://www.amf-france.org/fr/espace-epargnants/comprendre-les-produits-financiers/placements-collectifs/trackers-etf" rel="noopener noreferrer">AMF — ETF : fonctionnement, diversification, frais et risques</a></li><li><a href="https://www.amf-france.org/fr/espace-epargnants/comprendre-les-produits-financiers/placements-collectifs/scpiopci-un-placement-non-garanti-soumis-aux-fluctuations-du-marche-immobilier" rel="noopener noreferrer">AMF — SCPI/OPCI : capital non garanti et risque immobilier</a></li><li><a href="https://www.amf-france.org/fr/espace-epargnants/savoir-bien-investir/cadrer-son-projet/placements-que-savoir-sur-la-liquidite-0" rel="noopener noreferrer">AMF — comprendre le risque de liquidité</a></li><li><a href="https://www.amf-france.org/fr/espace-epargnants/proteger-son-epargne/crypto-actifs-bitcoin-etc/investir-en-crypto-actifs-les-precautions-pratiques" rel="noopener noreferrer">AMF — crypto-actifs : volatilité, risques techniques et précautions</a></li><li><a href="https://www.abe-infoservice.fr/fr/assurance/assurance-vie/que-faut-il-savoir-avant-de-souscrire-beneficier-dun-conseil-adapte-comprendre-et-comparer-les" rel="noopener noreferrer">ABE Infoservice — fonds en euros et unités de compte</a></li></ul><div class="warning-box"><strong>Limite :</strong> le risque réel dépend du véhicule précis. Deux produits rangés dans la même grande classe peuvent avoir des liquidités, frais, garanties et risques très différents.</div>'''
+              if marker not in text:
+                  raise SystemExit('Related-content marker missing in classes-assets dossier')
+              text=text.replace(marker,sources+marker,1)
+              text=text.replace('<meta name="dateModified" content="2026-08-10"/>','<meta name="dateModified" content="2026-08-11"/>',1)
+              text=text.replace('<meta property="article:modified_time" content="2026-08-10"/>','<meta property="article:modified_time" content="2026-08-11"/>',1)
+              text=text.replace('"dateModified":"2026-08-10"','"dateModified":"2026-08-11"',1)
+              text=text.replace('Mis à jour le 10/08/2026 · Sources et hypothèses précisées dans le dossier','Mis à jour le 11/08/2026 · Sources institutionnelles et hypothèses précisées dans le dossier',1)
+              p.write_text(text,encoding='utf-8'); changed.append(str(p))
+
+          print('Changed files:')
+          for f in changed: print('-',f)
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo 'Nothing to update.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/library-catalog.js assets/library-daily-money.js dossiers/gestion-pilotee-comparer-performances.html dossiers/classes-actifs-allocation-patrimoine.html
+          git commit -m 'Nettoyer le catalogue et renforcer les sources financières'
+          git pull --rebase origin main
+          git push
