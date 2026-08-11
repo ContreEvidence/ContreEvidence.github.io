@@ -5,7 +5,13 @@ on:
   push:
     branches: [main]
     paths:
+      - '**/*.html'
+      - 'sitemap.xml'
       - '.github/workflows/head-hygiene-audit.yml'
+  pull_request:
+    paths:
+      - '**/*.html'
+      - 'sitemap.xml'
 
 permissions:
   contents: read
@@ -15,11 +21,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - name: Find duplicated or ambiguous SEO head tags
+      - name: Enforce unambiguous SEO head tags on indexable pages
         shell: python
         run: |
           from pathlib import Path
           import re
+          import sys
           import urllib.parse
           import xml.etree.ElementTree as ET
 
@@ -32,14 +39,19 @@ jobs:
               'title': re.compile(r'<title\b[^>]*>.*?</title>', re.I|re.S),
               'description': re.compile(r'<meta\b(?=[^>]*\bname=["\']description["\'])[^>]*>', re.I),
               'canonical': re.compile(r'<link\b(?=[^>]*\brel=["\'][^"\']*canonical[^"\']*["\'])[^>]*>', re.I),
+              'og:type': re.compile(r'<meta\b(?=[^>]*\bproperty=["\']og:type["\'])[^>]*>', re.I),
               'og:title': re.compile(r'<meta\b(?=[^>]*\bproperty=["\']og:title["\'])[^>]*>', re.I),
               'og:description': re.compile(r'<meta\b(?=[^>]*\bproperty=["\']og:description["\'])[^>]*>', re.I),
               'og:url': re.compile(r'<meta\b(?=[^>]*\bproperty=["\']og:url["\'])[^>]*>', re.I),
+              'og:image': re.compile(r'<meta\b(?=[^>]*\bproperty=["\']og:image["\'])[^>]*>', re.I),
+              'twitter:card': re.compile(r'<meta\b(?=[^>]*\bname=["\']twitter:card["\'])[^>]*>', re.I),
+              'twitter:title': re.compile(r'<meta\b(?=[^>]*\bname=["\']twitter:title["\'])[^>]*>', re.I),
+              'twitter:description': re.compile(r'<meta\b(?=[^>]*\bname=["\']twitter:description["\'])[^>]*>', re.I),
+              'twitter:image': re.compile(r'<meta\b(?=[^>]*\bname=["\']twitter:image["\'])[^>]*>', re.I),
               'h1': re.compile(r'<h1\b[^>]*>', re.I),
           }
 
           problems = []
-          counts = {k:0 for k in patterns}
           total = 0
           for url in urls:
               if not url.startswith(base):
@@ -57,11 +69,9 @@ jobs:
               for required in ('title','description','canonical','h1'):
                   if found[required] != 1:
                       bad.append(f'{required}={found[required]}')
-                      counts[required] += 1
-              for social in ('og:title','og:description','og:url'):
-                  if found[social] > 1:
-                      bad.append(f'{social}={found[social]}')
-                      counts[social] += 1
+              for singleton in ('og:type','og:title','og:description','og:url','og:image','twitter:card','twitter:title','twitter:description','twitter:image'):
+                  if found[singleton] > 1:
+                      bad.append(f'{singleton}={found[singleton]}')
               if bad:
                   problems.append((rel, ', '.join(bad)))
 
@@ -69,4 +79,6 @@ jobs:
           print(f'Pages with head ambiguity: {len(problems)}')
           for rel, bad in problems:
               print(f'{rel} | {bad}')
-          print('Summary:', counts)
+          if problems:
+              sys.exit(1)
+          print('OK — one title, description, canonical and H1 per indexable page; no duplicated social singleton tags.')
