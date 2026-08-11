@@ -1,0 +1,74 @@
+name: Structured data audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.html'
+      - 'sitemap.xml'
+      - '.github/workflows/structured-data-audit.yml'
+  pull_request:
+    paths:
+      - '**/*.html'
+      - 'sitemap.xml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Parse JSON-LD and compare declared URLs with canonicals
+        shell: python
+        run: |
+          from pathlib import Path
+          import json,re,sys,urllib.parse,xml.etree.ElementTree as ET
+          root=Path('.').resolve(); base='https://contreevidence.github.io/'
+          ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls=[n.text.strip() for n in ET.parse('sitemap.xml').findall('.//s:loc',ns) if n.text]
+          script_re=re.compile(r'<script\b[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',re.I|re.S)
+          canon_re=re.compile(r'<link\b[^>]*rel=["\'][^"\']*canonical[^"\']*["\'][^>]*href=["\']([^"\']+)["\']|<link\b[^>]*href=["\']([^"\']+)["\'][^>]*rel=["\'][^"\']*canonical[^"\']*["\']',re.I)
+          errors=[]; warnings=[]; pages=0; scripts=0; typed={}
+          def walk(obj):
+              if isinstance(obj,dict):
+                  yield obj
+                  for v in obj.values(): yield from walk(v)
+              elif isinstance(obj,list):
+                  for v in obj: yield from walk(v)
+          for url in urls:
+              if not url.startswith(base): continue
+              rel=urllib.parse.unquote(url[len(base):]) or 'index.html'
+              if not rel.endswith('.html'): continue
+              p=root/rel
+              if not p.exists(): continue
+              pages+=1; text=p.read_text(encoding='utf-8',errors='replace')
+              cm=canon_re.search(text); canonical=next((g for g in cm.groups() if g),'') if cm else ''
+              blocks=script_re.findall(text)
+              for i,raw in enumerate(blocks,1):
+                  scripts+=1
+                  try: data=json.loads(raw)
+                  except Exception as e:
+                      errors.append(f'{rel}: JSON-LD #{i} invalide: {e}')
+                      continue
+                  for obj in walk(data):
+                      typ=obj.get('@type')
+                      if isinstance(typ,str): typed[typ]=typed.get(typ,0)+1
+                      declared=obj.get('url')
+                      if isinstance(declared,str) and declared.startswith(base) and typ in {'Article','WebPage','CollectionPage','WebSite'}:
+                          if typ!='WebSite' and canonical and declared.rstrip('/')!=canonical.rstrip('/'):
+                              errors.append(f'{rel}: {typ}.url={declared} != canonical={canonical}')
+                      if typ=='Article':
+                          for key in ('headline','dateModified','author','publisher'):
+                              if key not in obj: warnings.append(f'{rel}: Article sans {key}')
+                          author=obj.get('author')
+                          if isinstance(author,dict) and not author.get('name'): warnings.append(f'{rel}: Article auteur sans nom')
+              if len(blocks)>4:
+                  warnings.append(f'{rel}: {len(blocks)} blocs JSON-LD, vérifier la nécessité')
+          print(f'Indexable HTML checked: {pages}; JSON-LD blocks: {scripts}; types: {typed}')
+          for w in warnings: print('WARNING:',w)
+          for e in errors: print('ERROR:',e)
+          if errors: sys.exit(1)
+          print(f'OK — JSON-LD parseable and page URLs consistent with canonicals ({len(warnings)} warning(s)).')
