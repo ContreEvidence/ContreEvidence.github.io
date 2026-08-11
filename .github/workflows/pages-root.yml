@@ -51,7 +51,8 @@ jobs:
             --exclude='ROOT-MIGRATION.md'
           rm -f _site/assets/APPLIQUER-CORRECTION.bat \
                 _site/assets/APPLIQUER-CORRECTION.ps1 \
-                _site/assets/NOTICE-INSTALLATION.txt
+                _site/assets/NOTICE-INSTALLATION.txt \
+                _site/assets/logo-ce.png
 
       - name: Configure Pages
         uses: actions/configure-pages@v6
