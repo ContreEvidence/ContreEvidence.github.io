@@ -22,6 +22,8 @@ function runCatalog(relativePath) {
 runCatalog('assets/library-catalog.js');
 runCatalog('assets/library-daily-money.js');
 runCatalog('assets/library-work-foundations.js');
+runCatalog('assets/library-transitions.js');
+runCatalog('assets/library-acquisition.js');
 runCatalog('assets/tools-catalog.js');
 
 const editorial = Array.isArray(context.window.CE_LIBRARY_CATALOG)
