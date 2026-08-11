@@ -22,17 +22,35 @@ const preferredNext = new Map([
   ['dossiers/experience-devient-risque-recruteur.html','dossiers/plan-30-jours-recherche-emploi.html'],
   ['dossiers/formation-vaut-elle-le-cout.html','articles/tester-metier-avant-investir.html'],
   ['articles/tester-metier-avant-investir.html','dossiers/formation-vaut-elle-le-cout.html'],
+  ['articles/competences-transferables.html','articles/tester-metier-avant-investir.html'],
   ['dossiers/competences-qualification-employabilite.html','dossiers/apprendre-developper-competences.html'],
   ['dossiers/apprendre-developper-competences.html','dossiers/competences-qualification-employabilite.html'],
   ['dossiers/metiers-fonctions-organisation-entreprise.html','fiches-metiers.html'],
   ['dossiers/management-relations-conflits.html','dossiers/prejuges-biais-monde-professionnel.html'],
   ['dossiers/regles-responsabilites-fautes-travail.html','dossiers/sante-travail-equilibre-vie-pro-perso.html'],
   ['dossiers/sante-travail-equilibre-vie-pro-perso.html','dossiers/management-relations-conflits.html'],
-  ['dossiers/prejuges-biais-monde-professionnel.html','dossiers/competences-qualification-employabilite.html']
+  ['dossiers/prejuges-biais-monde-professionnel.html','dossiers/competences-qualification-employabilite.html'],
+  ['articles/construire-epargne-de-zero.html','dossiers/liquidites-reserve-securite.html'],
+  ['articles/frais-fiscalite-rendement-net.html','dossiers/finances-enveloppes-fiscalite.html'],
+  ['articles/checklist-avant-placement-conseiller.html','dossiers/classes-actifs-allocation-patrimoine.html'],
+  ['dossiers/gestion-pilotee-comparer-performances.html','dossiers/finances-allocation-portefeuille.html'],
+  ['dossiers/finances-transmission-patrimoine.html','dossiers/finances-cadre-global.html'],
+  ['articles/clients-interesses-personne-nachete.html','dossiers/calculer-prix-minimum-rentable.html'],
+  ['dossiers/calculer-prix-minimum-rentable.html','dossiers/tresorerie-bfr-entreprise.html'],
+  ['dossiers/tresorerie-bfr-entreprise.html','dossiers/lancer-activite-sans-quitter-emploi.html'],
+  ['dossiers/dependance-gros-client.html','dossiers/tresorerie-bfr-entreprise.html'],
+  ['dossiers/embaucher-ou-sous-traiter.html','dossiers/automatiser-ou-non-processus.html'],
+  ['dossiers/automatiser-ou-non-processus.html','dossiers/embaucher-ou-sous-traiter.html'],
+  ['dossiers/ameliorer-processus-sans-degrader-service.html','dossiers/automatiser-ou-non-processus.html']
 ]);
 
+const STOP = new Set([
+  'une','des','les','aux','avec','sans','pour','dans','sur','sous','entre','vers','chez','par','pas','plus','moins','tres','tout','tous','toute','toutes',
+  'vous','votre','vos','nous','notre','nos','leur','leurs','son','ses','est','sont','etre','avoir','fait','faire','peut','comment','pourquoi','quel','quelle','quels','quelles',
+  'avant','apres','encore','vraiment','reellement','simplement','bien','bon','bonne','guide','dossier','article','comprendre','choisir','mesurer','comparer','decider','contre','evidence'
+]);
 function tokens(s='') {
-  return new Set(String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().split(/[^a-z0-9]+/).filter(x => x.length > 2));
+  return new Set(String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().split(/[^a-z0-9]+/).filter(x => x.length > 2 && !STOP.has(x)));
 }
 function overlap(a,b) {
   let n=0;
@@ -71,7 +89,7 @@ for (const item of enriched) {
     const domain = sameDomain(item,other);
     const category = sameCategory(item,other);
     const shared = overlap(item._tokens,other._tokens);
-    const score = shared * 4 + (domain ? 5 : 0) + (category ? 8 : 0) + (other.t === 'guide' ? 1 : 0);
+    const score = shared * 5 + (domain ? 5 : 0) + (category ? 8 : 0) + (other.t === 'guide' ? 1 : 0);
     return {other,score,domain,category,shared};
   }).sort((a,b) => b.score-a.score || a.other.n.localeCompare(b.other.n,'fr'));
 
@@ -79,18 +97,16 @@ for (const item of enriched) {
   const preferredItem = preferredHref ? byHref.get(preferredHref) : null;
   const primary = preferredItem
     ? {other:preferredItem,score:999,domain:sameDomain(item,preferredItem),category:sameCategory(item,preferredItem),shared:overlap(item._tokens,preferredItem._tokens)}
-    : ranked.find(x => x.score >= 7);
+    : ranked.find(x => x.domain && x.category && x.shared >= 1)
+      || ranked.find(x => x.domain && x.shared >= 2);
   if (!primary) { fs.writeFileSync(file,html,'utf8'); continue; }
 
   const used = new Set([primary.other.h]);
-  const otherAngle = ranked.find(x => !used.has(x.other.h) && x.domain && !x.category && x.score >= 5)
-    || ranked.find(x => !used.has(x.other.h) && x.domain && x.score >= 6)
-    || ranked.find(x => !used.has(x.other.h) && x.score >= 7);
+  const otherAngle = ranked.find(x => !used.has(x.other.h) && x.domain && !x.category && x.shared >= 2)
+    || ranked.find(x => !used.has(x.other.h) && x.domain && x.shared >= 1 && x.score >= 10);
   if (otherAngle) used.add(otherAngle.other.h);
 
-  const curiosity = ranked.find(x => !used.has(x.other.h) && !x.domain && x.shared >= 1)
-    || ranked.find(x => !used.has(x.other.h) && !x.category && x.score >= 5)
-    || ranked.find(x => !used.has(x.other.h) && x.score >= 7);
+  const curiosity = ranked.find(x => !used.has(x.other.h) && !x.domain && x.shared >= 2);
 
   const primaryHref = esc(hrefFrom(item.h,primary.other.h));
   const primaryDesc = esc(primary.other.x || 'Poursuivre le raisonnement avec un dossier directement lié à cette décision.');
