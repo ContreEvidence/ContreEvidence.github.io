@@ -10,13 +10,16 @@ const CATALOG_LAYERS = [
   'assets/library-daily-money.js',
   'assets/library-work-foundations.js',
   'assets/library-transitions.js',
-  'assets/library-acquisition.js'
+  'assets/library-acquisition.js',
+  'assets/tools-catalog.js'
 ];
 for (const rel of CATALOG_LAYERS) {
   const file=path.join(ROOT,rel);
   if(fs.existsSync(file)) vm.runInContext(fs.readFileSync(file,'utf8'),ctx,{filename:rel});
 }
-const items=Array.isArray(ctx.window.CE_LIBRARY_CATALOG)?ctx.window.CE_LIBRARY_CATALOG:[];
+const editorial=Array.isArray(ctx.window.CE_LIBRARY_CATALOG)?ctx.window.CE_LIBRARY_CATALOG:[];
+const tools=Array.isArray(ctx.window.CE_TOOLS_CATALOG)?ctx.window.CE_TOOLS_CATALOG:[];
+const items=[...editorial,...tools];
 
 function text(html=''){
   return html
@@ -37,11 +40,11 @@ function text(html=''){
 }
 const out={};
 for(const item of items){
-  if(!item?.h) continue;
+  if(!item?.h || out[item.h]) continue;
   const file=path.join(ROOT,item.h);
   if(!fs.existsSync(file)) continue;
   const body=text(fs.readFileSync(file,'utf8'));
   out[item.h]=body.slice(0,24000);
 }
 fs.writeFileSync(path.join(ROOT,'assets/search-index.js'),`window.CE_SEARCH_INDEX=${JSON.stringify(out)};\n`,'utf8');
-console.log(`Index plein texte généré pour ${Object.keys(out).length} contenus.`);
+console.log(`Index plein texte généré pour ${Object.keys(out).length} contenus, outils inclus.`);
