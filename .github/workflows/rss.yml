@@ -14,6 +14,8 @@ on:
       - 'assets/library-catalog.js'
       - 'assets/library-daily-money.js'
       - 'assets/library-work-foundations.js'
+      - 'assets/library-transitions.js'
+      - 'assets/library-acquisition.js'
       - 'assets/tools-catalog.js'
       - 'scripts/generate-rss.cjs'
       - '.github/workflows/rss.yml'
