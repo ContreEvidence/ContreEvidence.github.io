@@ -2,6 +2,20 @@
   if (!Array.isArray(window.CE_LIBRARY_CATALOG)) return;
   const additions = [
     {
+      d:'vie-pro',t:'guide',c:'Choix d’emploi',
+      h:'dossiers/questions-poser-avant-prise-de-poste.html',
+      n:'Les questions à poser avant d’accepter un poste',
+      x:'Vérifier pourquoi le poste est ouvert, les attentes, la charge, les moyens, le manager, le variable, le télétravail, la progression et les contradictions avant de dire oui.',
+      k:'questions avant accepter poste offre emploi manager charge moyens objectifs turnover variable télétravail évolution prise de poste'
+    },
+    {
+      d:'vie-pro',t:'guide',c:'Contrat de travail',
+      h:'dossiers/contrat-travail-clauses-verifier-avant-signer.html',
+      n:'Contrat de travail : les clauses à vérifier avant de signer',
+      x:'Fonctions, classification, lieu, mobilité, temps de travail, variable, télétravail, période d’essai, exclusivité, non-concurrence et promesses écrites : contrôler ce qui vous engage réellement.',
+      k:'contrat travail vérifier avant signer cdi clause mobilité forfait jours variable télétravail essai exclusivité non concurrence classification salaire'
+    },
+    {
       d:'vie-pro',t:'guide',c:'Comprendre le travail',
       h:'dossiers/competences-qualification-employabilite.html',
       n:'Compétences, qualification, diplôme et employabilité : remettre chaque notion à sa place',
