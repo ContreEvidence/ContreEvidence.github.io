@@ -1,0 +1,69 @@
+name: Public weight audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/**'
+      - 'videos/**'
+      - '**/*.html'
+      - '.github/workflows/public-weight-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Inventory public assets and per-page static payload references
+        shell: python
+        run: |
+          from pathlib import Path
+          import collections,re,urllib.parse,xml.etree.ElementTree as ET
+          root=Path('.').resolve(); base='https://contreevidence.github.io/'
+          ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls=[n.text.strip() for n in ET.parse('sitemap.xml').findall('.//s:loc',ns) if n.text]
+          ref_re=re.compile(r'(?:src|href)=["\']([^"\']+)["\']',re.I)
+          static_ext={'.css','.js','.mjs','.png','.jpg','.jpeg','.webp','.svg','.gif','.mp4','.mp3','.woff','.woff2'}
+          pages=[]; usage=collections.Counter(); missing=[]
+          for url in urls:
+              if not url.startswith(base): continue
+              rel=urllib.parse.unquote(url[len(base):]) or 'index.html'
+              if not rel.endswith('.html'): continue
+              p=root/rel
+              if not p.exists(): continue
+              total=0; refs=set()
+              text=p.read_text(encoding='utf-8',errors='replace')
+              for raw in ref_re.findall(text):
+                  parsed=urllib.parse.urlparse(raw)
+                  if parsed.scheme in ('http','https','data'): continue
+                  clean=urllib.parse.unquote(parsed.path)
+                  if not clean or Path(clean).suffix.lower() not in static_ext: continue
+                  target=(p.parent/clean).resolve()
+                  try: target.relative_to(root)
+                  except ValueError: continue
+                  if not target.exists(): missing.append((rel,raw)); continue
+                  refs.add(target)
+              for target in refs:
+                  size=target.stat().st_size; total+=size; usage[target]+=1
+              pages.append((total,rel,len(refs)))
+          pages.sort(reverse=True)
+          print('Top 20 indexable pages by referenced local static bytes (not equal to transferred bytes: video preload/cache/browser behavior matters):')
+          for total,rel,n in pages[:20]: print(f'{total/1024/1024:7.2f} MB | {n:2} refs | {rel}')
+          print('\nLargest public media/assets in repository:')
+          candidates=[]
+          for folder in ('assets','videos'):
+              d=root/folder
+              if not d.exists(): continue
+              for p in d.rglob('*'):
+                  if p.is_file() and p.suffix.lower() in static_ext:
+                      candidates.append((p.stat().st_size,p.relative_to(root)))
+          for size,rel in sorted(candidates,reverse=True)[:30]: print(f'{size/1024/1024:7.2f} MB | {rel}')
+          print('\nMost widely referenced assets:')
+          for p,n in usage.most_common(25): print(f'{n:3} pages | {p.stat().st_size/1024:7.1f} KB | {p.relative_to(root)}')
+          print('\nMissing referenced local assets:',len(missing))
+          for rel,raw in missing[:50]: print('MISSING |',rel,'->',raw)
+          if missing: raise SystemExit(1)
