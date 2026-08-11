@@ -1,0 +1,78 @@
+name: Accessibility basics audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.html'
+      - 'sitemap.xml'
+      - '.github/workflows/accessibility-audit.yml'
+  pull_request:
+    paths:
+      - '**/*.html'
+      - 'sitemap.xml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Audit common static accessibility defects
+        shell: python
+        run: |
+          from pathlib import Path
+          import collections,html,re,sys,urllib.parse,xml.etree.ElementTree as ET
+          root=Path('.').resolve(); base='https://contreevidence.github.io/'
+          ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls=[n.text.strip() for n in ET.parse('sitemap.xml').findall('.//s:loc',ns) if n.text]
+          issues=collections.defaultdict(list); pages=0
+          tagstrip=re.compile(r'<[^>]+>')
+          attr=lambda tag,name: (re.search(r'\b'+re.escape(name)+r'\s*=\s*["\']([^"\']*)["\']',tag,re.I) or [None,''])[1]
+          for url in urls:
+              if not url.startswith(base): continue
+              rel=urllib.parse.unquote(url[len(base):]) or 'index.html'
+              if not rel.endswith('.html'): continue
+              p=root/rel
+              if not p.exists(): continue
+              pages+=1; text=p.read_text(encoding='utf-8',errors='replace')
+              if not re.search(r'<html\b[^>]*\blang=["\'][^"\']+["\']',text,re.I): issues['missing-lang'].append(rel)
+              ids=re.findall(r'\bid=["\']([^"\']+)["\']',text,re.I)
+              dup=[x for x,n in collections.Counter(ids).items() if n>1]
+              if dup: issues['duplicate-id'].append(f'{rel}: {", ".join(dup)}')
+              for tag in re.findall(r'<img\b[^>]*>',text,re.I):
+                  if not re.search(r'\balt\s*=',tag,re.I): issues['img-no-alt'].append(rel)
+              for tag in re.findall(r'<input\b[^>]*>',text,re.I):
+                  typ=attr(tag,'type').lower()
+                  if typ in {'hidden','submit','button','reset','image'}: continue
+                  iid=attr(tag,'id'); aria=attr(tag,'aria-label') or attr(tag,'aria-labelledby')
+                  labelled=bool(aria or (iid and re.search(r'<label\b[^>]*for=["\']'+re.escape(iid)+r'["\']',text,re.I)))
+                  # Input nested in a label is accepted by this static audit.
+                  if not labelled:
+                      pos=text.find(tag); before=text[max(0,pos-400):pos]
+                      if '<label' not in before or before.rfind('<label') < before.rfind('</label>'):
+                          issues['input-no-label'].append(f'{rel}: {tag[:140]}')
+              for tag,body in re.findall(r'(<a\b[^>]*>)(.*?)</a>',text,re.I|re.S):
+                  visible=html.unescape(tagstrip.sub('',body)).strip()
+                  aria=attr(tag,'aria-label') or attr(tag,'title')
+                  has_img=bool(re.search(r'<img\b[^>]*\balt=["\'][^"\']+["\']',body,re.I))
+                  if not visible and not aria and not has_img: issues['empty-link'].append(rel)
+              for tag,body in re.findall(r'(<button\b[^>]*>)(.*?)</button>',text,re.I|re.S):
+                  visible=html.unescape(tagstrip.sub('',body)).strip(); aria=attr(tag,'aria-label') or attr(tag,'title')
+                  if not visible and not aria: issues['empty-button'].append(rel)
+              for tag,body in re.findall(r'(<video\b[^>]*>)(.*?)</video>',text,re.I|re.S):
+                  if not re.search(r'<track\b[^>]*kind=["\']captions["\']',body,re.I): issues['video-no-captions'].append(rel)
+          print('Indexable HTML checked:',pages)
+          fatal={'missing-lang','duplicate-id','img-no-alt','input-no-label','empty-link','empty-button'}
+          for kind,rows in issues.items():
+              uniq=list(dict.fromkeys(rows)); print(f'\n{kind}: {len(uniq)}')
+              for row in uniq[:80]: print(row)
+          fatal_count=sum(len(set(issues[k])) for k in fatal)
+          print('\nVideos without captions are reported for editorial review but do not fail this static audit.')
+          if fatal_count:
+              print(f'ERROR — {fatal_count} static accessibility defect group occurrence(s).')
+              sys.exit(1)
+          print('OK — no basic static accessibility defect detected.')
