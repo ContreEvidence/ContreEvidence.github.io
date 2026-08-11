@@ -53,6 +53,12 @@ jobs:
           ns = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
           urls = [node.text.strip() for node in tree.findall('.//s:loc', ns) if node.text]
 
+          noindex_re = re.compile(
+              r'''<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex|'''
+              r'''<meta\b[^>]*content=["'][^"']*noindex[^"']*["'][^>]*name=["']robots["']''',
+              re.I,
+          )
+
           indexable_files = []
           for url in urls:
               target = local_path_from_site_url(url)
@@ -63,6 +69,10 @@ jobs:
                   errors.append(f'Sitemap → fichier introuvable: {url} -> {target.relative_to(root)}')
                   continue
               if target.suffix.lower() == '.html':
+                  target_text = target.read_text(encoding='utf-8', errors='replace')
+                  if noindex_re.search(target_text):
+                      errors.append(f'Page noindex présente dans le sitemap: {target.relative_to(root)}')
+                      continue
                   indexable_files.append(target)
 
           href_re = re.compile(r'''href\s*=\s*["']([^"']+)["']''', re.I)
