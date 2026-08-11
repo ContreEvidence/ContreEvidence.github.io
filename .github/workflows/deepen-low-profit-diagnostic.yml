@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/deepen-low-profit-diagnostic.yml'
+      - 'scripts/deepen-low-profit-diagnostic.py'
 
 permissions:
   contents: write
@@ -18,39 +19,13 @@ jobs:
         with:
           fetch-depth: 0
       - name: Add thresholds, scenarios and stress tests
-        shell: python
-        run: |
-          from pathlib import Path
-          p=Path('articles/travailler-beaucoup-gagner-peu-prix.html')
-          text=p.read_text(encoding='utf-8')
-          if 'Le problème peut venir de quatre endroits différents' in text:
-              print('Article already deepened.')
-              raise SystemExit(0)
-          marker='<h2>Le vrai guide de calcul est ailleurs</h2>'
-          block='''<h2>Le problème peut venir de quatre endroits différents</h2><p>Deux indépendants peuvent travailler le même nombre d’heures et manquer de revenu pour des raisons opposées. Avant d’augmenter les prix partout, séparez les quatre mécanismes.</p><div class="compare-wrap"><table class="compare-table"><thead><tr><th>Goulot</th><th>Signal</th><th>Correction à tester d’abord</th></tr></thead><tbody><tr><td><strong>Prix / marge</strong></td><td>Les prestations restent faibles même une fois les trajets et l’administratif maîtrisés.</td><td>Prix, minimum de facturation, périmètre inclus, suppléments réellement coûteux.</td></tr><tr><td><strong>Taux de temps facturable</strong></td><td>La semaine est pleine mais une petite partie seulement est vendue.</td><td>Regrouper les déplacements, standardiser devis/achats, réduire les micro-interventions.</td></tr><tr><td><strong>Mix de prestations</strong></td><td>Quelques services occupent beaucoup de capacité pour très peu de marge.</td><td>Limiter, reconfigurer ou arrêter les prestations les moins contributives.</td></tr><tr><td><strong>Capacité / organisation</strong></td><td>Les bonnes prestations sont rentables mais vous ne pouvez plus en accepter.</td><td>Délai, planning, sous-traitance, automatisation ou hausse de prix sélective.</td></tr></tbody></table></div><p>La mauvaise réponse consiste à traiter les quatre problèmes avec le même remède. Une hausse de prix ne répare pas un agenda fragmenté si le marché refuse ce prix ; travailler plus vite ne répare pas une prestation structurellement sous-tarifée.</p>
-
-<h2>Calculez le seuil économique de votre heure vendable</h2><p>Au lieu de partir du tarif des concurrents, partez du montant annuel que votre activité doit réellement financer. Additionnez vos coûts fixes professionnels, la rémunération que l’activité doit permettre, les prélèvements sociaux/fiscaux qui dépendent de votre statut lorsqu’ils ne sont pas déjà intégrés, et une marge de sécurité. Puis divisez ce besoin par le nombre d’heures que vous pouvez <strong>réellement facturer</strong>, pas par toutes les heures travaillées.</p><div class="decision-box"><h3>Formule de pilotage</h3><p><strong>Contribution minimale par heure facturable = besoin annuel à financer ÷ heures facturables annuelles.</strong></p><p>Le prix facturé doit ensuite couvrir cette contribution <strong>plus les coûts variables liés à la prestation</strong>. Ce calcul n’est pas un barème fiscal ou comptable : remplacez chaque poste par vos propres décaissements.</p></div>
-
-<h2>Exemple : le même tarif peut être viable ou insuffisant selon le temps facturable</h2><p>Supposons qu’une activité doive dégager <strong>45 000 € de marge contributive annuelle</strong> pour financer ses coûts fixes, la rémunération visée et une petite réserve. Elle travaille 46 semaines par an.</p><div class="compare-wrap"><table class="compare-table"><thead><tr><th>Scénario</th><th>Heures facturables / semaine</th><th>Heures facturables / an</th><th>Contribution minimale / h</th></tr></thead><tbody><tr><td>A · Agenda bien regroupé</td><td>26 h</td><td>1 196 h</td><td>≈ 37,60 €</td></tr><tr><td>B · Beaucoup de temps invisible</td><td>20 h</td><td>920 h</td><td>≈ 48,90 €</td></tr><tr><td>C · Agenda très fragmenté</td><td>16 h</td><td>736 h</td><td>≈ 61,10 €</td></tr></tbody></table></div><p>Si une prestation consomme en plus 8 € de coûts variables par heure vendue, le seuil indicatif passe respectivement à environ 45,60 €, 56,90 € et 69,10 € facturés par heure. <strong>Le problème du scénario C n’est donc pas seulement le tarif : c’est aussi la structure de la semaine.</strong></p><p>Ce type de calcul explique pourquoi copier le prix d’un concurrent peut être dangereux : son rayon géographique, son matériel, son panier moyen, son organisation et son nombre d’heures vendables peuvent être très différents des vôtres.</p>
-
-<h2>Trois entreprises pleines, trois diagnostics opposés</h2><div class="compare-wrap"><table class="compare-table"><thead><tr><th>Cas</th><th>Ce qui se passe</th><th>Ce qu’il ne faut pas faire</th><th>Premier test</th></tr></thead><tbody><tr><td><strong>A · Prix trop bas</strong></td><td>Les interventions proches et simples restent peu contributives.</td><td>Chercher encore plus de volume.</td><td>Recalculer un prix plancher et tester une hausse sur nouveaux devis.</td></tr><tr><td><strong>B · Prix correct, agenda mauvais</strong></td><td>Le taux sur site semble bon, mais trajets et petites missions absorbent la journée.</td><td>Augmenter uniformément tous les tarifs.</td><td>Minimum d’intervention, journées par zone, créneaux regroupés.</td></tr><tr><td><strong>C · Bons clients, mauvaise composition</strong></td><td>80 % de la marge vient de 40 % des heures ; le reste bloque le planning.</td><td>Traiter tous les clients comme équivalents.</td><td>Classer par marge par heure contrainte et renégocier les derniers.</td></tr></tbody></table></div>
-
-<h2>Ne mesurez pas seulement la marge par heure « chez le client »</h2><p>Une heure peut paraître très rentable alors qu’elle déclenche quarante minutes de trajet, un achat spécifique, plusieurs messages et une facture isolée. Pour arbitrer deux prestations, utilisez plutôt la <strong>marge par heure contrainte</strong> :</p><div class="decision-box"><h3>Marge par heure contrainte</h3><p><strong>(Prix encaissable − coûts variables directs) ÷ temps total mobilisé.</strong></p><p>Le temps total inclut le service, le déplacement spécifique, la préparation, le rangement et l’administratif qui n’existeraient pas sans cette mission.</p></div><p>Cette mesure n’a pas vocation à transformer chaque minute en ligne de tableur. Elle sert à repérer les écarts suffisamment gros pour changer une décision : une prestation à 44 €/h contrainte et une autre à 18 €/h ne devraient probablement pas recevoir la même priorité lorsque la capacité est pleine.</p>
-
-<h2>Stress test : votre modèle tient-il quand la semaine est moins parfaite ?</h2><p>Une activité qui ne fonctionne que lorsque tout est plein, payé à l’heure et sans imprévu est fragile. Refaites le calcul avec trois chocs simples.</p><div class="compare-wrap"><table class="compare-table"><thead><tr><th>Choc</th><th>Test</th><th>Ce qu’il révèle</th></tr></thead><tbody><tr><td>10 % d’heures facturables en moins</td><td>Annulations, creux, maladie, saisonnalité</td><td>Dépendance à un planning parfait.</td></tr><tr><td>+15 % sur les coûts variables</td><td>Carburant, consommables, sous-traitance</td><td>Marge trop serrée ou tarif mal indexé.</td></tr><tr><td>Perte du premier client</td><td>Retirer son CA et les heures qu’il occupait</td><td>Dépendance économique et capacité à remplacer la marge.</td></tr></tbody></table></div><p>Si un choc raisonnable transforme immédiatement une activité rentable en déficit de trésorerie, la priorité n’est pas forcément la croissance. Elle peut être de reconstruire une marge de sécurité.</p>
-
-<h2>Le seuil qui fait changer la décision</h2><p>Pour chaque prestation importante, notez le prix à partir duquel elle devient acceptable <em>ou</em> le temps maximal qu’elle peut consommer à prix inchangé. Vous obtenez alors un seuil négociable au lieu d’une impression.</p><ul><li>Si le client accepte le nouveau prix, la prestation reste.</li><li>S’il refuse mais que vous pouvez réduire le temps invisible, testez l’organisation.</li><li>Si ni le prix ni le temps ne peuvent bouger, elle doit justifier sa place par une autre valeur : récurrence, apprentissage, accès à un meilleur client ou remplissage d’un créneau réellement perdu.</li><li>Si aucune de ces valeurs n’existe, arrêter peut être plus rentable que remplir l’agenda.</li></ul>
-
-<h2>Plan de correction sur 30 jours</h2><ol><li><strong>Semaine 1 :</strong> mesurer les dix dernières prestations avec temps total, coûts directs et prix.</li><li><strong>Semaine 2 :</strong> classer les prestations et identifier le goulot dominant : prix, temps facturable, mix ou capacité.</li><li><strong>Semaine 3 :</strong> tester une seule correction mesurable sur les nouveaux devis : minimum de facturation, zone, prix, regroupement ou périmètre.</li><li><strong>Semaine 4 :</strong> comparer taux de conversion, marge par heure contrainte et qualité du planning avant de généraliser.</li></ol><div class="warning-box"><strong>Évitez de modifier cinq choses à la fois.</strong> Si prix, zone, offre et minimum de facturation changent simultanément, vous ne saurez pas ce qui a amélioré — ou détérioré — le résultat.</div>
-
-'''
-          if marker not in text:
-              raise SystemExit('Insertion marker not found')
-          text=text.replace(marker,block+marker,1)
-          p.write_text(text,encoding='utf-8')
+        run: python scripts/deepen-low-profit-diagnostic.py
       - name: Commit article
         run: |
-          if git diff --quiet -- articles/travailler-beaucoup-gagner-peu-prix.html; then exit 0; fi
+          if git diff --quiet -- articles/travailler-beaucoup-gagner-peu-prix.html; then
+            echo 'Article already current.'
+            exit 0
+          fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add articles/travailler-beaucoup-gagner-peu-prix.html
