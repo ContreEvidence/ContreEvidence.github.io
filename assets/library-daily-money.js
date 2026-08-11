@@ -1,9 +1,6 @@
 (() => {
   if (!Array.isArray(window.CE_LIBRARY_CATALOG)) return;
 
-  /* Le nouveau dossier d'allocation immobilière remplace l'ancien panorama devenu redondant. */
-  window.CE_LIBRARY_CATALOG = window.CE_LIBRARY_CATALOG.filter(item => item.h !== 'dossiers/finances-immobilier-patrimoine.html');
-
   const policy = window.CE_LIBRARY_CATALOG.find(item => item.h === 'dossiers/finances-cadre-global.html');
   if (policy) {
     policy.c = 'Politique patrimoniale';
