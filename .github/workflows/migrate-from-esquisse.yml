@@ -39,14 +39,14 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          rsync -a --delete --exclude='.git/' /tmp/ce-source/ ./
 
-          # The root repository must not duplicate social publishing jobs from Esquisse.
-          rm -f .github/workflows/social.yml \
-                .github/workflows/social-publish.yml \
-                .github/workflows/social-auth-probe.yml \
-                .github/workflows/enrich-wave1b.yml \
-                .github/workflows/migrate-from-esquisse.yml
+          # Copy the whole public site, but never let this workflow create/update
+          # workflow files: GitHub's automatic token does not have that permission.
+          # Root workflows are installed separately after the content migration.
+          rsync -a --delete \
+            --exclude='.git/' \
+            --exclude='.github/workflows/' \
+            /tmp/ce-source/ ./
 
           python - <<'PY'
           from pathlib import Path
@@ -76,6 +76,8 @@ jobs:
           for path in Path('.').rglob('*'):
               if not path.is_file() or '.git' in path.parts:
                   continue
+              if len(path.parts) >= 2 and path.parts[0] == '.github' and path.parts[1] == 'workflows':
+                  continue
               if path.suffix.lower() not in text_ext and path.name not in {'robots.txt', '.nojekyll'}:
                   continue
               try:
@@ -91,43 +93,6 @@ jobs:
           print(f'Root URL rewritten in {changed} text files.')
           PY
 
-          # Persistent deployment workflow for every future content push.
-          cat > .github/workflows/pages-root.yml <<'YAML'
-          name: Deploy root GitHub Pages
-
-          on:
-            push:
-              branches: [main]
-            workflow_dispatch:
-
-          permissions:
-            contents: read
-            pages: write
-            id-token: write
-
-          concurrency:
-            group: pages
-            cancel-in-progress: true
-
-          jobs:
-            deploy:
-              environment:
-                name: github-pages
-              runs-on: ubuntu-latest
-              steps:
-                - name: Checkout
-                  uses: actions/checkout@v5
-                - name: Configure Pages
-                  uses: actions/configure-pages@v6
-                - name: Upload static site
-                  uses: actions/upload-pages-artifact@v4
-                  with:
-                    path: '.'
-                - name: Deploy to GitHub Pages
-                  id: deployment
-                  uses: actions/deploy-pages@v4
-          YAML
-
           cat > ROOT-MIGRATION.md <<'MD'
           # Contre-Evidence root migration
 
@@ -137,10 +102,10 @@ jobs:
           The former project site is retained only as a redirect layer once the root site is verified.
           MD
 
-          # No absolute canonical/sitemap/feed URL may still use the project path.
-          remaining="$(grep -RIli --exclude-dir=.git 'contreevidence.github.io/Esquisse' . || true)"
+          # No public content may still advertise the old project URL.
+          remaining="$(grep -RIli --exclude-dir=.git --exclude-dir=workflows 'contreevidence.github.io/Esquisse' . || true)"
           if [ -n "$remaining" ]; then
-            echo 'Remaining absolute /Esquisse URLs:'
+            echo 'Remaining absolute /Esquisse URLs in migrated public content:'
             echo "$remaining"
             exit 1
           fi
@@ -152,6 +117,7 @@ jobs:
           git config user.name 'ContreEvidence migration'
           git config user.email 'contreevidence@gmail.com'
           git add -A
+          git reset -- .github/workflows/
           git commit -m 'Publish Contre-Evidence at root GitHub Pages URL'
           git push origin main
 
