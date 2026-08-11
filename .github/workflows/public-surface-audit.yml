@@ -1,0 +1,141 @@
+name: Public surface audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/public-surface-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Audit public HTML surface, noindex pages and internal orphans
+        shell: python
+        run: |
+          from __future__ import annotations
+          import collections
+          import html
+          import pathlib
+          import re
+          import urllib.parse
+          import xml.etree.ElementTree as ET
+
+          root = pathlib.Path('.').resolve()
+          excluded_dirs = {'.git', '.github', 'scripts', 'editorial', 'publication', 'publications', 'node_modules', '_site'}
+          base = 'https://contreevidence.github.io/'
+
+          public_html = []
+          for p in root.rglob('*.html'):
+              rel = p.relative_to(root)
+              if any(part in excluded_dirs for part in rel.parts):
+                  continue
+              public_html.append(p.resolve())
+
+          sitemap = ET.parse(root / 'sitemap.xml')
+          ns = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          sitemap_urls = [n.text.strip() for n in sitemap.findall('.//s:loc', ns) if n.text]
+          sitemap_paths = set()
+          for url in sitemap_urls:
+              if not url.startswith(base):
+                  continue
+              rel = urllib.parse.unquote(url[len(base):]) or 'index.html'
+              sitemap_paths.add((root / rel).resolve())
+
+          robots_noindex = re.compile(r'<meta\b[^>]*name=["\']robots["\'][^>]*content=["\'][^"\']*noindex|<meta\b[^>]*content=["\'][^"\']*noindex[^"\']*["\'][^>]*name=["\']robots["\']', re.I)
+          href_re = re.compile(r'href\s*=\s*["\']([^"\']+)["\']', re.I)
+          canonical_re = re.compile(r'<link\b[^>]*rel=["\'][^"\']*canonical[^"\']*["\'][^>]*href=["\']([^"\']+)["\']|<link\b[^>]*href=["\']([^"\']+)["\'][^>]*rel=["\'][^"\']*canonical[^"\']*["\']', re.I)
+          refresh_re = re.compile(r'<meta\b[^>]*http-equiv=["\']refresh["\']', re.I)
+          title_re = re.compile(r'<title>(.*?)</title>', re.I | re.S)
+          tag_re = re.compile(r'<[^>]+>')
+
+          info = {}
+          incoming_all = collections.Counter()
+          incoming_indexable = collections.Counter()
+          links_to_noindex = collections.defaultdict(list)
+
+          def resolve(page: pathlib.Path, raw: str):
+              raw = html.unescape(raw).strip()
+              if not raw or raw.startswith(('#','mailto:','tel:','javascript:','data:')):
+                  return None
+              parsed = urllib.parse.urlparse(raw)
+              if parsed.scheme in ('http','https'):
+                  if parsed.netloc != 'contreevidence.github.io':
+                      return None
+                  rel = urllib.parse.unquote(parsed.path).lstrip('/') or 'index.html'
+                  return (root / rel).resolve()
+              clean = urllib.parse.unquote(parsed.path)
+              if not clean:
+                  return None
+              target = (page.parent / clean).resolve()
+              if clean.endswith('/'):
+                  target = target / 'index.html'
+              return target
+
+          for page in public_html:
+              text = page.read_text(encoding='utf-8', errors='replace')
+              noindex = bool(robots_noindex.search(text))
+              canon_m = canonical_re.search(text)
+              canonical = html.unescape(next((g for g in canon_m.groups() if g), '')).strip() if canon_m else ''
+              title_m = title_re.search(text)
+              title = re.sub(r'\s+', ' ', tag_re.sub('', title_m.group(1))).strip() if title_m else ''
+              links = []
+              for raw in href_re.findall(text):
+                  target = resolve(page, raw)
+                  if target is not None and target.suffix.lower() == '.html' and target.exists():
+                      links.append(target)
+                      incoming_all[target] += 1
+              info[page] = {
+                  'noindex': noindex,
+                  'canonical': canonical,
+                  'refresh': bool(refresh_re.search(text)),
+                  'title': title,
+                  'links': links,
+              }
+
+          indexable = {p for p in public_html if p in sitemap_paths and not info[p]['noindex']}
+          for source in indexable:
+              for target in info[source]['links']:
+                  incoming_indexable[target] += 1
+                  if target in info and info[target]['noindex']:
+                      links_to_noindex[target].append(source)
+
+          def rel(p):
+              return str(p.relative_to(root)).replace('\\','/')
+
+          accidental = [p for p in public_html if p not in sitemap_paths and not info[p]['noindex'] and p.name != '404.html']
+          noindex = [p for p in public_html if info[p]['noindex']]
+          orphans = [p for p in indexable if p.name != 'index.html' and incoming_indexable[p] == 0]
+
+          print(f'Public HTML files: {len(public_html)}')
+          print(f'Indexable sitemap HTML: {len(indexable)}')
+          print(f'Noindex public HTML: {len(noindex)}')
+          print(f'Public HTML outside sitemap without noindex: {len(accidental)}')
+          print(f'Indexable pages with zero inbound link from another indexable page: {len(orphans)}')
+          print(f'Noindex pages linked from indexable pages: {len(links_to_noindex)}')
+
+          print('\n=== POTENTIAL ACCIDENTAL PUBLIC PAGES (outside sitemap, not noindex) ===')
+          for p in sorted(accidental, key=rel):
+              print(f'{rel(p)} | title={info[p]["title"]!r} | canonical={info[p]["canonical"]!r}')
+
+          print('\n=== INDEXABLE ORPHANS ===')
+          for p in sorted(orphans, key=rel):
+              print(f'{rel(p)} | {info[p]["title"]}')
+
+          print('\n=== INDEXABLE LINKS TO NOINDEX PAGES ===')
+          for target in sorted(links_to_noindex, key=rel):
+              sources = sorted({rel(s) for s in links_to_noindex[target]})
+              print(f'{rel(target)} <- {", ".join(sources)}')
+
+          print('\n=== NOINDEX PUBLIC PAGES ===')
+          for p in sorted(noindex, key=rel):
+              canonical = info[p]['canonical'] or '(none)'
+              mode = 'redirect-like' if info[p]['refresh'] else 'content/transition'
+              print(f'{rel(p)} | inbound-indexable={incoming_indexable[p]} | {mode} | canonical={canonical}')
+
+          print('\nAudit informatif : une page noindex peut être volontairement conservée pour les anciens liens ou un parcours utilisateur.')
