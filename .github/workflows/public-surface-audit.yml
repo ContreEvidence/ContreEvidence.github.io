@@ -5,7 +5,13 @@ on:
   push:
     branches: [main]
     paths:
+      - '**/*.html'
+      - 'sitemap.xml'
       - '.github/workflows/public-surface-audit.yml'
+  pull_request:
+    paths:
+      - '**/*.html'
+      - 'sitemap.xml'
 
 permissions:
   contents: read
@@ -23,6 +29,7 @@ jobs:
           import html
           import pathlib
           import re
+          import sys
           import urllib.parse
           import xml.etree.ElementTree as ET
 
@@ -55,7 +62,6 @@ jobs:
           tag_re = re.compile(r'<[^>]+>')
 
           info = {}
-          incoming_all = collections.Counter()
           incoming_indexable = collections.Counter()
           links_to_noindex = collections.defaultdict(list)
 
@@ -89,14 +95,7 @@ jobs:
                   target = resolve(page, raw)
                   if target is not None and target.suffix.lower() == '.html' and target.exists():
                       links.append(target)
-                      incoming_all[target] += 1
-              info[page] = {
-                  'noindex': noindex,
-                  'canonical': canonical,
-                  'refresh': bool(refresh_re.search(text)),
-                  'title': title,
-                  'links': links,
-              }
+              info[page] = {'noindex': noindex, 'canonical': canonical, 'refresh': bool(refresh_re.search(text)), 'title': title, 'links': links}
 
           indexable = {p for p in public_html if p in sitemap_paths and not info[p]['noindex']}
           for source in indexable:
@@ -132,10 +131,9 @@ jobs:
               sources = sorted({rel(s) for s in links_to_noindex[target]})
               print(f'{rel(target)} <- {", ".join(sources)}')
 
-          print('\n=== NOINDEX PUBLIC PAGES ===')
-          for p in sorted(noindex, key=rel):
-              canonical = info[p]['canonical'] or '(none)'
-              mode = 'redirect-like' if info[p]['refresh'] else 'content/transition'
-              print(f'{rel(p)} | inbound-indexable={incoming_indexable[p]} | {mode} | canonical={canonical}')
+          if accidental or orphans:
+              print('\nERROR — la surface indexable contient une page oubliée hors sitemap ou une page orpheline.')
+              sys.exit(1)
 
-          print('\nAudit informatif : une page noindex peut être volontairement conservée pour les anciens liens ou un parcours utilisateur.')
+          print('\nOK — aucune page indexable accidentelle et aucune page indexable orpheline.')
+          print('Les liens vers des pages noindex restent informatifs : certains outils et espaces utilisateurs sont volontairement non indexables.')
