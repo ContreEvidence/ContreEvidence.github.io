@@ -18,39 +18,34 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Compare generated primary recommendations with catalog domains and categories
+      - name: Audit semantic strength of primary recommendations
         run: |
           node <<'NODE'
-          const fs = require('fs');
-          const path = require('path');
-          const vm = require('vm');
+          const fs=require('fs'),path=require('path'),vm=require('vm');
           const ctx={window:{}}; vm.createContext(ctx);
-          for(const rel of ['assets/library-catalog.js','assets/library-daily-money.js','assets/library-work-foundations.js']){
-            if(fs.existsSync(rel)) vm.runInContext(fs.readFileSync(rel,'utf8'),ctx,{filename:rel});
-          }
-          const items=(ctx.window.CE_LIBRARY_CATALOG||[]).filter(x=>x?.h&&x?.n);
-          const byHref=new Map(items.map(x=>[x.h,x]));
-          const normalize=(from,href)=>path.posix.normalize(path.posix.join(path.posix.dirname(from),href));
-          const primaryRe=/<a class="ce-related-primary" href="([^"]+)"/i;
-          let total=0,crossDomain=[],sameDomainDiffCategory=[],missing=[];
-          const domains=x=>new Set(String(x?.d||'').split(/\s+/).filter(Boolean));
+          for(const rel of ['assets/library-catalog.js','assets/library-daily-money.js','assets/library-work-foundations.js']) if(fs.existsSync(rel)) vm.runInContext(fs.readFileSync(rel,'utf8'),ctx,{filename:rel});
+          const items=(ctx.window.CE_LIBRARY_CATALOG||[]).filter(x=>x?.h&&x?.n), byHref=new Map(items.map(x=>[x.h,x]));
+          const STOP=new Set(['une','des','les','aux','avec','sans','pour','dans','sur','sous','entre','vers','chez','par','pas','plus','moins','tres','tout','tous','toute','toutes','vous','votre','vos','nous','notre','nos','leur','leurs','son','ses','est','sont','etre','avoir','fait','faire','peut','comment','pourquoi','quel','quelle','quels','quelles','avant','apres','encore','vraiment','reellement','simplement','bien','bon','bonne','guide','dossier','article','comprendre','choisir','mesurer','comparer','decider','contre','evidence']);
+          const tokens=s=>new Set(String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().split(/[^a-z0-9]+/).filter(x=>x.length>2&&!STOP.has(x)));
+          const tok=x=>tokens(`${x.n} ${x.c||''} ${x.k||''} ${x.x||''}`);
+          const shared=(a,b)=>{let n=0,B=tok(b);for(const x of tok(a))if(B.has(x))n++;return n};
+          const domains=x=>new Set(String(x.d||'').split(/\s+/).filter(Boolean));
           const sameDomain=(a,b)=>[...domains(a)].some(d=>domains(b).has(d));
+          const normalize=(from,href)=>path.posix.normalize(path.posix.join(path.posix.dirname(from),href.split('#')[0].split('?')[0]));
+          const re=/<a class="ce-related-primary" href="([^"]+)"/i;
+          let total=0,cross=[],weak=[],missing=[];
           for(const item of items){
-            if(!fs.existsSync(item.h)) continue;
-            const html=fs.readFileSync(item.h,'utf8');
-            const m=primaryRe.exec(html); if(!m) continue;
-            total++;
-            const targetHref=normalize(item.h,m[1].split('#')[0].split('?')[0]);
-            const target=byHref.get(targetHref);
-            if(!target){ missing.push([item.h,targetHref]); continue; }
-            if(!sameDomain(item,target)) crossDomain.push([item.h,item.n,target.h,target.n,item.d,target.d]);
-            else if(item.c && target.c && item.c!==target.c) sameDomainDiffCategory.push([item.h,item.n,item.c,target.h,target.n,target.c]);
+            if(!fs.existsSync(item.h))continue;
+            const m=re.exec(fs.readFileSync(item.h,'utf8')); if(!m)continue;
+            total++; const href=normalize(item.h,m[1]), target=byHref.get(href);
+            if(!target){missing.push([item.h,href]);continue}
+            const sh=shared(item,target), cat=item.c&&target.c&&item.c===target.c;
+            if(!sameDomain(item,target)) cross.push([item.h,target.h,sh]);
+            else if(!cat&&sh<2) weak.push([item.h,item.n,item.c||'',target.h,target.n,target.c||'',sh]);
           }
           console.log('Primary related links:',total);
-          console.log('Cross-domain primary links:',crossDomain.length);
-          for(const x of crossDomain) console.log('CROSS | '+x.join(' | '));
-          console.log('Same-domain but different-category primary links:',sameDomainDiffCategory.length);
-          for(const x of sameDomainDiffCategory) console.log('DIFFCAT | '+x.join(' | '));
-          console.log('Targets missing from catalog:',missing.length);
-          for(const x of missing) console.log('MISSING | '+x.join(' | '));
+          console.log('Cross-domain:',cross.length); for(const x of cross)console.log('CROSS | '+x.join(' | '));
+          console.log('Weak non-category links (<2 meaningful shared concepts):',weak.length); for(const x of weak)console.log('WEAK | '+x.join(' | '));
+          console.log('Targets missing from catalog:',missing.length); for(const x of missing)console.log('MISSING | '+x.join(' | '));
+          if(cross.length) process.exit(1);
           NODE
