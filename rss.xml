@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/</link>
     <description>Nouveaux guides, dossiers et outils de Contre-Évidence : patrimoine, vie professionnelle et décisions concrètes.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Tue, 11 Aug 2026 18:40:30 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 19:16:06 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/rss.xml" rel="self" type="application/rss+xml"/>
@@ -14,6 +14,26 @@
       <title>Contre-Évidence</title>
       <link>https://contreevidence.github.io/</link>
     </image>
+    <item>
+      <title>Les questions à poser avant d’accepter un poste</title>
+      <link>https://contreevidence.github.io/dossiers/questions-poser-avant-prise-de-poste.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/questions-poser-avant-prise-de-poste.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Choix d’emploi</category>
+      <description>Vérifier pourquoi le poste est ouvert, les attentes, la charge, les moyens, le manager, le variable, le télétravail, la progression et les contradictions avant de dire oui.</description>
+    </item>
+    <item>
+      <title>Contrat de travail : les clauses à vérifier avant de signer</title>
+      <link>https://contreevidence.github.io/dossiers/contrat-travail-clauses-verifier-avant-signer.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/contrat-travail-clauses-verifier-avant-signer.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Contrat de travail</category>
+      <description>Fonctions, classification, lieu, mobilité, temps de travail, variable, télétravail, période d’essai, exclusivité, non-concurrence et promesses écrites : contrôler ce qui vous engage réellement.</description>
+    </item>
     <item>
       <title>Compétences, qualification, diplôme et employabilité : remettre chaque notion à sa place</title>
       <link>https://contreevidence.github.io/dossiers/competences-qualification-employabilite.html</link>
