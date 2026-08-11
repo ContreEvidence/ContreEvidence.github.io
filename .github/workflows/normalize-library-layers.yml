@@ -22,13 +22,13 @@ jobs:
         run: python scripts/normalize-library-layers.py
       - name: Commit maintenance alignment
         run: |
-          if git diff --quiet; then
+          if git diff --quiet -- scripts/add-related-content.cjs scripts/generate-rss.cjs; then
             echo 'Catalog consumers already aligned.'
             exit 0
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add scripts/add-related-content.cjs scripts/generate-rss.cjs .github/workflows/catalog-integrity.yml .github/workflows/library-coverage-audit.yml .github/workflows/related-content-audit.yml
+          git add scripts/add-related-content.cjs scripts/generate-rss.cjs
           git commit -m 'Aligner les consommateurs du catalogue Bibliothèque'
           git pull --rebase origin main
           git push
