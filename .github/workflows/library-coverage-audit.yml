@@ -1,0 +1,44 @@
+name: Library coverage audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/library-*.js'
+      - 'sitemap.xml'
+      - '.github/workflows/library-coverage-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: List indexable editorial pages missing from library catalog
+        run: |
+          node <<'NODE'
+          const fs=require('fs'),vm=require('vm');
+          const ctx={window:{}};vm.createContext(ctx);
+          for(const rel of ['assets/library-catalog.js','assets/library-daily-money.js','assets/library-work-foundations.js']) if(fs.existsSync(rel)) vm.runInContext(fs.readFileSync(rel,'utf8'),ctx,{filename:rel});
+          const items=Array.isArray(ctx.window.CE_LIBRARY_CATALOG)?ctx.window.CE_LIBRARY_CATALOG:[];
+          const inCatalog=new Set(items.map(x=>x.h));
+          const xml=fs.readFileSync('sitemap.xml','utf8');
+          const base='https://contreevidence.github.io/';
+          const urls=[...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1]).filter(x=>x.startsWith(base));
+          const editorial=urls.map(x=>x.slice(base.length)).filter(rel=>rel.startsWith('articles/')||rel.startsWith('dossiers/')||rel.startsWith('fiches-metiers/'));
+          const missing=editorial.filter(rel=>!inCatalog.has(rel));
+          console.log('Indexable editorial pages:',editorial.length);
+          console.log('Catalog entries:',items.length);
+          console.log('Indexable editorial pages absent from library:',missing.length);
+          for(const rel of missing){
+            const text=fs.existsSync(rel)?fs.readFileSync(rel,'utf8'):'';
+            const title=(text.match(/<title>(.*?)<\/title>/is)||[])[1]||'';
+            console.log(`${rel} | ${title.replace(/\s+/g,' ').trim()}`);
+          }
+          NODE
