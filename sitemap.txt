@@ -103,7 +103,9 @@ https://contreevidence.github.io/parcours-argent.html
 https://contreevidence.github.io/parcours-de-vie.html
 https://contreevidence.github.io/parcours-vie-professionnelle.html
 https://contreevidence.github.io/simulateur-80-pourcent-cout-reel.html
+https://contreevidence.github.io/simulateur-acheter-ou-louer.html
 https://contreevidence.github.io/simulateur-epargne-demission.html
+https://contreevidence.github.io/simulateur-prix-attendre.html
 https://contreevidence.github.io/themes/argent.html
 https://contreevidence.github.io/themes/entreprendre.html
 https://contreevidence.github.io/themes/travail.html
