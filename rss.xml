@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/</link>
     <description>Nouveaux guides, dossiers et outils de Contre-Évidence : patrimoine, vie professionnelle et décisions concrètes.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Tue, 11 Aug 2026 19:24:43 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 21:06:59 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/rss.xml" rel="self" type="application/rss+xml"/>
@@ -556,24 +556,24 @@
       <description>Offres réelles, immersion, contraintes, revenu d’entrée, pratique et critères d’arrêt avant de s’engager.</description>
     </item>
     <item>
-      <title>Cette formation vaut-elle vraiment le coût ?</title>
+      <title>Choisir une formation pour une reconversion : coût, RNCP et débouchés</title>
       <link>https://contreevidence.github.io/dossiers/formation-vaut-elle-le-cout.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/dossiers/formation-vaut-elle-le-cout.html</guid>
       <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Guide</category>
       <category>Vie professionnelle</category>
       <category>Formation</category>
-      <description>Débouchés, coût économique total, probabilité d’emploi, délai de retour et alternatives plus courtes.</description>
+      <description>Partir du métier et des offres réelles, vérifier RNCP/RS, insertion, coût économique total, revenu sacrifié et alternatives plus courtes.</description>
     </item>
     <item>
-      <title>Comment identifier ses compétences réellement transférables</title>
+      <title>Changer de métier sans repartir de zéro : quelles compétences sont transférables ?</title>
       <link>https://contreevidence.github.io/articles/competences-transferables.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/articles/competences-transferables.html</guid>
       <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Dossier</category>
       <category>Vie professionnelle</category>
       <category>Compétences</category>
-      <description>Passer des intitulés de postes aux problèmes résolus, méthodes, responsabilités et résultats.</description>
+      <description>Comparer profondeur de maîtrise, proximité de contexte, preuves et écarts à combler pour choisir entre candidature directe, poste passerelle ou formation.</description>
     </item>
     <item>
       <title>Sans le diplôme attendu : chercher les autres chemins d’accès</title>
@@ -766,24 +766,24 @@
       <description>Relier temps partiel, revenu, trajet, santé, patrimoine et objectifs de vie sans réduire la décision au salaire.</description>
     </item>
     <item>
-      <title>Passer à 80 % : combien ça coûte vraiment ?</title>
+      <title>Passer à 80 % : combien je perds en salaire et quel coût réel ?</title>
       <link>https://contreevidence.github.io/dossiers/passer-80-pourcent-cout-reel.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/dossiers/passer-80-pourcent-cout-reel.html</guid>
       <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Dossier</category>
       <category>Vie professionnelle</category>
       <category>Temps de travail</category>
-      <description>Comparer revenu disponible, frais évités, retraite, épargne, charge réelle et temps récupéré.</description>
+      <description>Comparer baisse de revenu, frais évités, temps réellement récupéré, épargne, retraite et charge de travail avant de passer à temps partiel.</description>
     </item>
     <item>
-      <title>Deux offres d’emploi : laquelle choisir ?</title>
+      <title>Comparer deux offres d’emploi : salaire, contrat, temps, risques et évolution</title>
       <link>https://contreevidence.github.io/dossiers/comparer-deux-offres-emploi.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/dossiers/comparer-deux-offres-emploi.html</guid>
       <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
       <category>Dossier</category>
       <category>Vie professionnelle</category>
       <category>Choix d’emploi</category>
-      <description>Comparer salaire, revenu disponible, trajet, télétravail, temps, stabilité, compétences et qualité de vie.</description>
+      <description>Comparer revenu disponible, temps capturé, contrat, manager, risque organisationnel, qualité de vie, capital professionnel et scénarios avant de signer.</description>
     </item>
     <item>
       <title>Lancer une activité sans quitter son emploi : quand basculer ?</title>
@@ -834,6 +834,16 @@
       <category>Vie professionnelle</category>
       <category>Prix &amp; marge</category>
       <description>Capacité facturable, coûts, marge contributive, point mort et coût d’opportunité.</description>
+    </item>
+    <item>
+      <title>Je travaille beaucoup mais je gagne peu : où part la marge ?</title>
+      <link>https://contreevidence.github.io/articles/travailler-beaucoup-gagner-peu-prix.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/articles/travailler-beaucoup-gagner-peu-prix.html</guid>
+      <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Prix &amp; marge</category>
+      <description>Diagnostiquer une activité pleine mais peu rentable avec le temps total, le taux horaire réel, la marge contributive, le panier moyen et le temps facturable.</description>
     </item>
     <item>
       <title>Une activité peut être rentable et manquer de trésorerie</title>
