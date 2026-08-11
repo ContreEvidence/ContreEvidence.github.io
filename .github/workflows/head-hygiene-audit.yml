@@ -1,0 +1,72 @@
+name: Head hygiene audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/head-hygiene-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Find duplicated or ambiguous SEO head tags
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+          import urllib.parse
+          import xml.etree.ElementTree as ET
+
+          root = Path('.').resolve()
+          base = 'https://contreevidence.github.io/'
+          ns = {'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls = [n.text.strip() for n in ET.parse('sitemap.xml').findall('.//s:loc', ns) if n.text]
+
+          patterns = {
+              'title': re.compile(r'<title\b[^>]*>.*?</title>', re.I|re.S),
+              'description': re.compile(r'<meta\b(?=[^>]*\bname=["\']description["\'])[^>]*>', re.I),
+              'canonical': re.compile(r'<link\b(?=[^>]*\brel=["\'][^"\']*canonical[^"\']*["\'])[^>]*>', re.I),
+              'og:title': re.compile(r'<meta\b(?=[^>]*\bproperty=["\']og:title["\'])[^>]*>', re.I),
+              'og:description': re.compile(r'<meta\b(?=[^>]*\bproperty=["\']og:description["\'])[^>]*>', re.I),
+              'og:url': re.compile(r'<meta\b(?=[^>]*\bproperty=["\']og:url["\'])[^>]*>', re.I),
+              'h1': re.compile(r'<h1\b[^>]*>', re.I),
+          }
+
+          problems = []
+          counts = {k:0 for k in patterns}
+          total = 0
+          for url in urls:
+              if not url.startswith(base):
+                  continue
+              rel = urllib.parse.unquote(url[len(base):]) or 'index.html'
+              if not rel.endswith('.html'):
+                  continue
+              page = root / rel
+              if not page.exists():
+                  continue
+              total += 1
+              text = page.read_text(encoding='utf-8', errors='replace')
+              found = {name: len(rx.findall(text)) for name,rx in patterns.items()}
+              bad = []
+              for required in ('title','description','canonical','h1'):
+                  if found[required] != 1:
+                      bad.append(f'{required}={found[required]}')
+                      counts[required] += 1
+              for social in ('og:title','og:description','og:url'):
+                  if found[social] > 1:
+                      bad.append(f'{social}={found[social]}')
+                      counts[social] += 1
+              if bad:
+                  problems.append((rel, ', '.join(bad)))
+
+          print(f'Indexable HTML checked: {total}')
+          print(f'Pages with head ambiguity: {len(problems)}')
+          for rel, bad in problems:
+              print(f'{rel} | {bad}')
+          print('Summary:', counts)
