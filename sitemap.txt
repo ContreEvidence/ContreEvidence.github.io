@@ -107,4 +107,3 @@ https://contreevidence.github.io/simulateur-epargne-demission.html
 https://contreevidence.github.io/themes/argent.html
 https://contreevidence.github.io/themes/entreprendre.html
 https://contreevidence.github.io/themes/travail.html
-https://contreevidence.github.io/plan-du-site.html
