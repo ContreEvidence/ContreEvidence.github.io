@@ -1,0 +1,34 @@
+name: Add companion tool bridges
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/add-companion-tool-bridges.py'
+      - '.github/workflows/add-companion-tool-bridges.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Add dossier to tool bridges
+        run: python scripts/add-companion-tool-bridges.py
+      - name: Commit dossier bridges
+        run: |
+          if git diff --quiet -- dossiers/calculer-prix-minimum-rentable.html dossiers/formation-vaut-elle-le-cout.html dossiers/plan-30-jours-recherche-emploi.html; then
+            echo 'Companion tool bridges already present.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add dossiers/calculer-prix-minimum-rentable.html dossiers/formation-vaut-elle-le-cout.html dossiers/plan-30-jours-recherche-emploi.html
+          git commit -m 'Relier trois dossiers à leurs outils pratiques'
+          git pull --rebase origin main
+          git push
