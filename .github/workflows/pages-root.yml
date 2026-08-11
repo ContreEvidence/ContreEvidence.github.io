@@ -24,6 +24,35 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
+      - name: Prepare public artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf _site
+          mkdir _site
+          rsync -a ./ _site/ \
+            --exclude='_site/' \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='scripts/' \
+            --exclude='editorial/' \
+            --exclude='publication/' \
+            --exclude='publications/' \
+            --exclude='node_modules/' \
+            --exclude='APPLIQUER-EN-LOCAL.ps1' \
+            --exclude='ARTICLE-WORD-COUNTS.txt' \
+            --exclude='BRAND-REFERENCE.md' \
+            --exclude='CHARTE-DE-VOIX.txt' \
+            --exclude='NOTICE-INSTALLATION.txt' \
+            --exclude='README-INSTALLATION.txt' \
+            --exclude='README-PACK-06.txt' \
+            --exclude='README-V3.txt' \
+            --exclude='README.md' \
+            --exclude='ROOT-MIGRATION.md'
+          rm -f _site/assets/APPLIQUER-CORRECTION.bat \
+                _site/assets/APPLIQUER-CORRECTION.ps1 \
+                _site/assets/NOTICE-INSTALLATION.txt
+
       - name: Configure Pages
         uses: actions/configure-pages@v6
         with:
@@ -32,7 +61,7 @@ jobs:
       - name: Upload static site
         uses: actions/upload-pages-artifact@v4
         with:
-          path: '.'
+          path: '_site'
 
       - name: Deploy to GitHub Pages
         id: deployment
