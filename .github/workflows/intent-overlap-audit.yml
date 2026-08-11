@@ -1,0 +1,81 @@
+name: Intent overlap audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'articles/**/*.html'
+      - 'dossiers/**/*.html'
+      - 'themes/**/*.html'
+      - 'parcours-*.html'
+      - 'sitemap.xml'
+      - '.github/workflows/intent-overlap-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Rank suspiciously similar search intents
+        shell: python
+        run: |
+          from pathlib import Path
+          import collections,html,math,re,urllib.parse,xml.etree.ElementTree as ET
+          root=Path('.').resolve(); base='https://contreevidence.github.io/'
+          ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls=[n.text.strip() for n in ET.parse('sitemap.xml').findall('.//s:loc',ns) if n.text]
+          stop=set('''une des les aux avec sans pour dans sur sous entre vers chez par pas plus moins tres tout tous toute toutes vous votre vos nous notre nos leur leurs son ses est sont etre avoir fait faire peut comment pourquoi quel quelle quels quelles avant apres encore vraiment reellement simplement bien bon bonne guide dossier article comprendre choisir mesurer comparer decider contre evidence ce cette ces qui que quoi dont ou et mais donc car ni si au du de la le un en se sa mon ma mes je il elle on ne d une'''.split())
+          def norm(s):
+              import unicodedata
+              s=''.join(c for c in unicodedata.normalize('NFD',s.lower()) if unicodedata.category(c)!='Mn')
+              return re.findall(r'[a-z0-9]+',s)
+          def tokens(s): return [x for x in norm(s) if len(x)>2 and x not in stop]
+          title_re=re.compile(r'<title>(.*?)</title>',re.I|re.S)
+          desc_re=re.compile(r'<meta\b[^>]*name=["\']description["\'][^>]*content=["\']([^"\']*)["\']|<meta\b[^>]*content=["\']([^"\']*)["\'][^>]*name=["\']description["\']',re.I|re.S)
+          h1_re=re.compile(r'<h1\b[^>]*>(.*?)</h1>',re.I|re.S); tags=re.compile(r'<[^>]+>')
+          docs=[]
+          for url in urls:
+              if not url.startswith(base): continue
+              rel=urllib.parse.unquote(url[len(base):]) or 'index.html'
+              if not (rel.startswith('articles/') or rel.startswith('dossiers/') or rel.startswith('themes/') or rel.startswith('parcours-')): continue
+              p=root/rel
+              if not p.exists(): continue
+              text=p.read_text(encoding='utf-8',errors='replace')
+              tm=title_re.search(text); dm=desc_re.search(text); hm=h1_re.search(text)
+              title=html.unescape(tags.sub(' ',tm.group(1))) if tm else ''
+              desc=html.unescape(next((g for g in dm.groups() if g),'') if dm else '')
+              h1=html.unescape(tags.sub(' ',hm.group(1))) if hm else ''
+              # Intent fields are deliberately weighted more than body copy.
+              bag=tokens(title+' '+title+' '+h1+' '+h1+' '+desc+' '+rel.replace('/',' ').replace('-',' '))
+              docs.append({'rel':rel,'title':re.sub(r'\s+',' ',title).strip(),'bag':collections.Counter(bag)})
+          df=collections.Counter()
+          for d in docs:
+              for t in d['bag']: df[t]+=1
+          N=len(docs)
+          def vec(d):
+              out={}
+              for t,n in d['bag'].items():
+                  idf=math.log((N+1)/(df[t]+1))+1
+                  out[t]=(1+math.log(n))*idf
+              return out
+          vecs=[vec(d) for d in docs]
+          def cosine(a,b):
+              common=set(a)&set(b); num=sum(a[t]*b[t] for t in common)
+              da=math.sqrt(sum(v*v for v in a.values())); db=math.sqrt(sum(v*v for v in b.values()))
+              return num/(da*db) if da and db else 0
+          pairs=[]
+          for i in range(N):
+              for j in range(i+1,N):
+                  s=cosine(vecs[i],vecs[j])
+                  if s>=0.34: pairs.append((s,docs[i],docs[j]))
+          pairs.sort(key=lambda x:x[0],reverse=True)
+          print('Editorial/hub pages compared:',N)
+          print('Pairs >= 0.34 cosine intent similarity:',len(pairs))
+          print('\nTop suspicious overlaps:')
+          for s,a,b in pairs[:60]:
+              print(f'{s:.3f} | {a["rel"]} | {a["title"]} || {b["rel"]} | {b["title"]}')
+          print('\nThis is a review queue, not a merge instruction: related master/satellite pages are expected to score highly.')
