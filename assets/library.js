@@ -3,7 +3,8 @@
 
   const contentCatalog = Array.isArray(window.CE_LIBRARY_CATALOG) ? window.CE_LIBRARY_CATALOG : [];
   const toolsCatalog = Array.isArray(window.CE_TOOLS_CATALOG) ? window.CE_TOOLS_CATALOG : [];
-  const fullTextIndex = window.CE_SEARCH_INDEX && typeof window.CE_SEARCH_INDEX === 'object' ? window.CE_SEARCH_INDEX : {};
+  let fullTextIndex = window.CE_SEARCH_INDEX && typeof window.CE_SEARCH_INDEX === 'object' ? window.CE_SEARCH_INDEX : {};
+  let fullTextPromise = null;
   const catalog = [...contentCatalog, ...toolsCatalog];
   const list = document.querySelector('.articles');
   const tools = document.querySelector('.library-tools');
@@ -45,11 +46,37 @@
   const count = tools.querySelector('[data-results-count]');
   const cards = [...list.querySelectorAll('.filter-card')];
   search.value = state.query;
+
+  function ensureFullTextIndex(){
+    if (window.CE_SEARCH_INDEX && typeof window.CE_SEARCH_INDEX === 'object') {
+      fullTextIndex = window.CE_SEARCH_INDEX;
+      return Promise.resolve(fullTextIndex);
+    }
+    if (fullTextPromise) return fullTextPromise;
+    fullTextPromise = new Promise(resolve => {
+      const script = document.createElement('script');
+      script.src = 'assets/search-index.js?v=20260809-1';
+      script.async = true;
+      script.onload = () => {
+        fullTextIndex = window.CE_SEARCH_INDEX && typeof window.CE_SEARCH_INDEX === 'object' ? window.CE_SEARCH_INDEX : {};
+        resolve(fullTextIndex);
+      };
+      script.onerror = () => resolve(fullTextIndex);
+      document.head.appendChild(script);
+    });
+    return fullTextPromise;
+  }
+
   const queryTokens = query => { const base=normalise(query).split(/\s+/).filter(Boolean),expanded=[...base]; base.forEach(token=>{if(aliases[token])expanded.push(...normalise(aliases[token]).split(/\s+/));}); return [...new Set(expanded)]; };
   function scoreCard(card,query){ if(!query.trim())return 0; const title=normalise(card.querySelector('h3')?.textContent),chip=normalise(card.querySelector('.theme-chip')?.textContent),desc=normalise(card.querySelector('p')?.textContent),tags=normalise(card.dataset.tags),full=normalise(fullTextIndex[card.dataset.href]||''),phrase=normalise(query),tokens=queryTokens(query); let score=0; if(title===phrase)score+=180;else if(title.startsWith(phrase))score+=130;else if(title.includes(phrase))score+=90; if(chip.includes(phrase))score+=45;if(tags.includes(phrase))score+=45;if(desc.includes(phrase))score+=30;if(full.includes(phrase))score+=22; tokens.forEach(token=>{if(title.includes(token))score+=24;if(chip.includes(token))score+=12;if(tags.includes(token))score+=14;if(desc.includes(token))score+=7;if(full.includes(token))score+=3;}); if(card.dataset.contentType==='guide')score+=24;else if(card.dataset.contentType==='dossier')score+=20;else score+=8; return score; }
   function typePriority(card){return card.dataset.contentType==='guide'?0:card.dataset.contentType==='dossier'?1:2;}
   function sync(){domainButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.domain===state.domain)));typeButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.type===state.type)));}
   function updateURL(){const next=new URLSearchParams();if(state.domain!=='all')next.set('domain',state.domain);if(state.type!=='editorial')next.set('type',state.type);if(state.query.trim())next.set('q',state.query.trim());history.replaceState(null,'',next.toString()?`?${next}`:location.pathname);}
   function apply(){const hasQuery=Boolean(state.query.trim());let visible=0;const ranked=[];cards.forEach(card=>{const domains=(card.dataset.domain||'').split(/\s+/),domainOK=state.domain==='all'||domains.includes(state.domain),typeOK=state.type==='editorial'?card.dataset.contentType!=='outil':state.type==='all'||card.dataset.contentType===state.type,score=scoreCard(card,state.query),queryOK=!hasQuery||score>0,show=domainOK&&typeOK&&queryOK;card.classList.toggle('is-hidden',!show);if(show){visible++;ranked.push({card,score,typePriority:typePriority(card),order:Number(card.dataset.originalOrder||0)});}});ranked.sort((a,b)=>hasQuery?(b.score-a.score||a.typePriority-b.typePriority||a.order-b.order):(a.order-b.order));ranked.forEach(x=>list.appendChild(x.card));count.textContent=`${visible} contenu${visible>1?'s':''}`;sync();updateURL();}
-  domainButtons.forEach(b=>b.addEventListener('click',()=>{state.domain=b.dataset.domain;apply();}));typeButtons.forEach(b=>b.addEventListener('click',()=>{state.type=b.dataset.type;apply();}));search.addEventListener('input',()=>{state.query=search.value;apply();});apply();
+  domainButtons.forEach(b=>b.addEventListener('click',()=>{state.domain=b.dataset.domain;apply();}));
+  typeButtons.forEach(b=>b.addEventListener('click',()=>{state.type=b.dataset.type;apply();}));
+  search.addEventListener('focus',()=>{ ensureFullTextIndex().then(()=>{ if(state.query.trim()) apply(); }); },{once:true});
+  search.addEventListener('input',()=>{state.query=search.value;apply(); if(state.query.trim()) ensureFullTextIndex().then(apply);});
+  apply();
+  if(state.query.trim()) ensureFullTextIndex().then(apply);
 })();
