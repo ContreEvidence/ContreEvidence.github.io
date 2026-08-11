@@ -1,0 +1,41 @@
+name: Add low-profit diagnostic to library
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/add-low-profit-article-to-library.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Add the newly indexable diagnostic after the pricing guide
+        shell: python
+        run: |
+          from pathlib import Path
+          p=Path('assets/library-catalog.js')
+          text=p.read_text(encoding='utf-8')
+          href='articles/travailler-beaucoup-gagner-peu-prix.html'
+          if href in text:
+              print('Entry already present.'); raise SystemExit(0)
+          marker="  {d:'vie-pro',t:'guide',c:'Prix & marge',h:'dossiers/calculer-prix-minimum-rentable.html',n:'Quel prix minimum facturer pour gagner réellement de l’argent ?',x:'Capacité facturable, coûts, marge contributive, point mort et coût d’opportunité.',k:'prix tarif marge rentabilité point mort entreprise devis client'},\n"
+          addition=marker+"  {d:'vie-pro',t:'dossier',c:'Prix & marge',h:'articles/travailler-beaucoup-gagner-peu-prix.html',n:'Je travaille beaucoup mais je gagne peu : où part la marge ?',x:'Diagnostiquer une activité pleine mais peu rentable avec le temps total, le taux horaire réel, la marge contributive, le panier moyen et le temps facturable.',k:'travaille beaucoup gagne peu entrepreneur indépendant rentabilité marge taux horaire temps facturable panier moyen prix activité pleine revenu'},\n"
+          if marker not in text: raise SystemExit('Pricing guide marker not found')
+          p.write_text(text.replace(marker,addition,1),encoding='utf-8')
+      - name: Commit library entry
+        run: |
+          if git diff --quiet -- assets/library-catalog.js; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/library-catalog.js
+          git commit -m 'Ajouter le diagnostic activité pleine peu rentable à la Bibliothèque'
+          git pull --rebase origin main
+          git push
