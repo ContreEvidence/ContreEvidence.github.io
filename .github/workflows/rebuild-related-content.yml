@@ -8,6 +8,8 @@ on:
       - 'assets/library-catalog.js'
       - 'assets/library-daily-money.js'
       - 'assets/library-work-foundations.js'
+      - 'assets/library-transitions.js'
+      - 'assets/library-acquisition.js'
       - 'scripts/add-related-content.cjs'
       - '.github/workflows/rebuild-related-content.yml'
 
