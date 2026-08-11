@@ -1,0 +1,167 @@
+name: Migrate Contre-Evidence to root
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/migrate-from-esquisse.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+env:
+  SOURCE_REPO: ContreEvidence/Esquisse
+
+jobs:
+  migrate-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout root repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+
+      - name: Download current Esquisse site
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/ce-source
+          curl -fsSL "https://codeload.github.com/${SOURCE_REPO}/tar.gz/refs/heads/main" -o /tmp/ce-source.tgz
+          tar -xzf /tmp/ce-source.tgz --strip-components=1 -C /tmp/ce-source
+
+      - name: Copy complete site and switch canonical root
+        shell: bash
+        run: |
+          set -euo pipefail
+          rsync -a --delete --exclude='.git/' /tmp/ce-source/ ./
+
+          # The new repository must not duplicate social publishing jobs from Esquisse.
+          rm -f .github/workflows/social.yml \
+                .github/workflows/social-publish.yml \
+                .github/workflows/social-auth-probe.yml \
+                .github/workflows/enrich-wave1b.yml \
+                .github/workflows/migrate-from-esquisse.yml
+
+          python - <<'PY'
+          from pathlib import Path
+
+          text_ext = {
+              '.html','.htm','.css','.js','.mjs','.json','.xml','.txt','.md',
+              '.yml','.yaml','.webmanifest','.ps1','.py','.csv'
+          }
+          replacements = [
+              ('https://contreevidence.github.io/Esquisse/', 'https://contreevidence.github.io/'),
+              ('https://contreevidence.github.io/Esquisse', 'https://contreevidence.github.io'),
+              ('https://ContreEvidence.github.io/Esquisse/', 'https://contreevidence.github.io/'),
+              ('https://ContreEvidence.github.io/Esquisse', 'https://contreevidence.github.io'),
+              ("site_prefix = '/Esquisse/'", "site_prefix = '/'"),
+              ('site_prefix = "/Esquisse/"', 'site_prefix = "/"'),
+              ("'/Esquisse/'", "'/'"),
+              ('"/Esquisse/"', '"/"'),
+              ("'/Esquisse'", "''"),
+              ('"/Esquisse"', '""'),
+          ]
+
+          changed = 0
+          for path in Path('.').rglob('*'):
+              if not path.is_file() or '.git' in path.parts:
+                  continue
+              if path.suffix.lower() not in text_ext and path.name not in {'robots.txt', '.nojekyll'}:
+                  continue
+              try:
+                  text = path.read_text(encoding='utf-8')
+              except UnicodeDecodeError:
+                  continue
+              new = text
+              for old, repl in replacements:
+                  new = new.replace(old, repl)
+              if new != text:
+                  path.write_text(new, encoding='utf-8')
+                  changed += 1
+          print(f'Root URL rewritten in {changed} text files.')
+          PY
+
+          # Root deployment workflow for every future content push.
+          cat > .github/workflows/pages-root.yml <<'YAML'
+          name: Deploy root GitHub Pages
+
+          on:
+            push:
+              branches: [main]
+            workflow_dispatch:
+
+          permissions:
+            contents: read
+            pages: write
+            id-token: write
+
+          concurrency:
+            group: pages
+            cancel-in-progress: true
+
+          jobs:
+            deploy:
+              environment:
+                name: github-pages
+                url: ${{ steps.deployment.outputs.page_url }}
+              runs-on: ubuntu-latest
+              steps:
+                - name: Checkout
+                  uses: actions/checkout@v5
+                - name: Configure Pages
+                  uses: actions/configure-pages@v6
+                - name: Upload static site
+                  uses: actions/upload-pages-artifact@v4
+                  with:
+                    path: '.'
+                - name: Deploy to GitHub Pages
+                  id: deployment
+                  uses: actions/deploy-pages@v4
+          YAML
+
+          # Human-readable migration marker.
+          cat > ROOT-MIGRATION.md <<'MD'
+          # Contre-Evidence root migration
+
+          Canonical public site: https://contreevidence.github.io/
+
+          Migrated from the historical project site `/Esquisse/` on 2026-08-11.
+          The former project site is retained only as a redirect layer once the root site is verified.
+          MD
+
+          # No canonical or sitemap URL should still use the project path.
+          if grep -RIl --exclude-dir=.git 'contreevidence.github.io/Esquisse' . | grep -q .; then
+            echo 'Remaining absolute /Esquisse URLs:'
+            grep -RIl --exclude-dir=.git 'contreevidence.github.io/Esquisse' .
+            exit 1
+          fi
+
+      - name: Commit migrated root site
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'ContreEvidence migration'
+          git config user.email 'contreevidence@gmail.com'
+          git add -A
+          git commit -m 'Publish Contre-Evidence at root GitHub Pages URL'
+          git push origin main
+
+      - name: Enable and configure GitHub Pages
+        uses: actions/configure-pages@v6
+        with:
+          enablement: true
+
+      - name: Upload root site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: '.'
+
+      - name: Deploy root site
+        id: deployment
+        uses: actions/deploy-pages@v4
