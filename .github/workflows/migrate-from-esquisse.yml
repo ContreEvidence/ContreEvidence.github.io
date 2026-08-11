@@ -60,6 +60,10 @@ jobs:
               ('https://contreevidence.github.io/Esquisse', 'https://contreevidence.github.io'),
               ('https://ContreEvidence.github.io/Esquisse/', 'https://contreevidence.github.io/'),
               ('https://ContreEvidence.github.io/Esquisse', 'https://contreevidence.github.io'),
+              ('contreevidence.github.io/Esquisse', 'contreevidence.github.io'),
+              ('ContreEvidence.github.io/Esquisse', 'contreevidence.github.io'),
+              ('https://raw.githubusercontent.com/ContreEvidence/Esquisse/main/', 'https://raw.githubusercontent.com/ContreEvidence/ContreEvidence.github.io/main/'),
+              ('https://github.com/ContreEvidence/Esquisse', 'https://github.com/ContreEvidence/ContreEvidence.github.io'),
               ("site_prefix = '/Esquisse/'", "site_prefix = '/'"),
               ('site_prefix = "/Esquisse/"', 'site_prefix = "/"'),
               ("'/Esquisse/'", "'/'"),
@@ -134,7 +138,7 @@ jobs:
           MD
 
           # No absolute canonical/sitemap/feed URL may still use the project path.
-          remaining="$(grep -RIl --exclude-dir=.git 'contreevidence.github.io/Esquisse' . || true)"
+          remaining="$(grep -RIli --exclude-dir=.git 'contreevidence.github.io/Esquisse' . || true)"
           if [ -n "$remaining" ]; then
             echo 'Remaining absolute /Esquisse URLs:'
             echo "$remaining"
