@@ -1,0 +1,34 @@
+name: Clean navigation reliquats
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/clean-navigation-reliquats.py'
+      - '.github/workflows/clean-navigation-reliquats.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Clean remaining navigation wording
+        run: python scripts/clean-navigation-reliquats.py
+      - name: Commit navigation cleanup
+        run: |
+          if git diff --quiet -- themes/argent.html themes/travail.html dossiers/formation-vaut-elle-le-cout.html; then
+            echo 'Navigation wording already current.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add themes/argent.html themes/travail.html dossiers/formation-vaut-elle-le-cout.html
+          git commit -m 'Achever la navigation par situations'
+          git pull --rebase origin main
+          git push
