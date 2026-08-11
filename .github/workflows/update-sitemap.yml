@@ -113,3 +113,4 @@ jobs:
           git push
 
 # Les pages noindex et le plan HTML utilitaire sont exclus des sitemaps XML/TXT.
+# Toute promotion d’un outil indexable est ainsi reprise automatiquement au prochain passage.
