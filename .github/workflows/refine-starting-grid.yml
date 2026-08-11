@@ -1,0 +1,48 @@
+name: Refine central starting grid
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/refine-starting-grid.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Mark and style the four-card starting grid
+        shell: python
+        run: |
+          from pathlib import Path
+          p=Path('parcours-de-vie.html')
+          text=p.read_text(encoding='utf-8')
+          anchor='<div class="section-head"><div class="kicker">Votre point de départ</div>'
+          pos=text.find(anchor)
+          if pos < 0: raise SystemExit('Starting section not found')
+          grid=text.find('<div class="situation-grid">',pos)
+          if grid < 0: raise SystemExit('Starting grid not found')
+          text=text[:grid]+text[grid:].replace('<div class="situation-grid">','<div class="situation-grid starting-grid">',1)
+          p.write_text(text,encoding='utf-8')
+
+          css=Path('assets/pro.css')
+          c=css.read_text(encoding='utf-8')
+          rule='\n.situation-grid.starting-grid{grid-template-columns:repeat(2,minmax(0,1fr))}\n'
+          if '.situation-grid.starting-grid{' not in c:
+              c=c.replace('.situation-card{',rule+'.situation-card{',1)
+              css.write_text(c,encoding='utf-8')
+      - name: Commit layout refinement
+        run: |
+          if git diff --quiet -- parcours-de-vie.html assets/pro.css; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add parcours-de-vie.html assets/pro.css
+          git commit -m 'Équilibrer les quatre points d’entrée'
+          git pull --rebase origin main
+          git push
