@@ -1,6 +1,8 @@
 
 /* Pack 06 — Vie professionnelle par situations */
 .situation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1.3rem}
+
+.situation-grid.starting-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .situation-card{display:block;padding:1.25rem;border:1px solid rgba(16,24,32,.14);border-radius:20px;background:#fff;color:inherit;text-decoration:none;transition:.18s ease}
 .situation-card:hover{transform:translateY(-3px);border-color:#d6a94a;box-shadow:0 14px 32px rgba(16,24,32,.08)}
 .situation-card .number{display:inline-flex;width:2.2rem;height:2.2rem;align-items:center;justify-content:center;border-radius:12px;background:#101820;color:#d6a94a;font-weight:900}
