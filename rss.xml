@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/</link>
     <description>Nouveaux guides, dossiers et outils de Contre-Évidence : patrimoine, vie professionnelle et décisions concrètes.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Wed, 12 Aug 2026 06:35:19 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 06:37:08 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/rss.xml" rel="self" type="application/rss+xml"/>
@@ -14,6 +14,28 @@
       <title>Contre-Évidence</title>
       <link>https://contreevidence.github.io/</link>
     </image>
+    <item>
+      <title>Simulateur : salaire minimum pour déménager pour un emploi</title>
+      <link>https://contreevidence.github.io/simulateur-salaire-minimum-demenagement.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-salaire-minimum-demenagement.html</guid>
+      <pubDate>Wed, 12 Aug 2026 06:36:26 GMT</pubDate>
+      <category>Outil</category>
+      <category>Patrimoine</category>
+      <category>Vie professionnelle</category>
+      <category>Mobilité &amp; emploi</category>
+      <description>Calculez le salaire net de bascule après logement, transport, coûts de transition, temps et marge de sécurité.</description>
+    </item>
+    <item>
+      <title>Déménager pour un emploi : quel salaire supplémentaire faut-il ?</title>
+      <link>https://contreevidence.github.io/dossiers/demenager-pour-un-emploi-salaire-minimum.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/demenager-pour-un-emploi-salaire-minimum.html</guid>
+      <pubDate>Wed, 12 Aug 2026 06:35:09 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Patrimoine</category>
+      <category>Vie professionnelle</category>
+      <category>Mobilité &amp; emploi</category>
+      <description>Calculer le salaire net minimum qui compense logement, transport, déménagement, temps et risque avant d’accepter une mobilité géographique.</description>
+    </item>
     <item>
       <title>Changer de travail avant ou après un achat immobilier ?</title>
       <link>https://contreevidence.github.io/dossiers/changer-travail-avant-credit-immobilier.html</link>
