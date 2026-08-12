@@ -1,0 +1,60 @@
+/* Contre-Evidence — parcours de décision et centre de décisions */
+.ce-decision-journey{margin:2.5rem 0 0;padding:2rem 0;border-top:1px solid rgba(16,24,32,.12);background:linear-gradient(180deg,rgba(247,244,236,.35),rgba(255,255,255,0))}
+.ce-decision-journey .ce-journey-head{display:flex;justify-content:space-between;gap:1.5rem;align-items:end;margin-bottom:1rem}
+.ce-decision-journey .ce-journey-head h2{margin:.25rem 0 .4rem;font-size:clamp(1.65rem,3vw,2.45rem);letter-spacing:-.035em}
+.ce-decision-journey .ce-journey-head p{margin:0;max-width:780px;color:#5c666d;line-height:1.55}
+.ce-journey-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.7rem}
+.ce-journey-step{position:relative;display:flex;flex-direction:column;min-height:176px;padding:1rem;border:1px solid rgba(16,24,32,.12);border-radius:15px;background:#fff;color:#101820;text-decoration:none}
+.ce-journey-step:hover{border-color:rgba(212,171,86,.7);box-shadow:0 9px 22px rgba(16,24,32,.06)}
+.ce-journey-step .ce-step-n{font-size:.68rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:#775b20}
+.ce-journey-step strong{display:block;margin:.45rem 0 .45rem;font-size:1.02rem;line-height:1.25}
+.ce-journey-step small{display:block;color:#657078;line-height:1.45}
+.ce-journey-step .ce-step-state{margin-top:auto;padding-top:.75rem;font-size:.78rem;font-weight:850}
+.ce-journey-step.is-current{background:#101820;color:#fff;border-color:#d4ab56;box-shadow:inset 0 3px 0 #d4ab56}
+.ce-journey-step.is-current .ce-step-n,.ce-journey-step.is-current .ce-step-state{color:#e8c979}
+.ce-journey-step.is-current small{color:#d4dce0}
+.ce-journey-step.is-done{background:#faf8f2}
+.ce-journey-actions{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1rem;align-items:center}
+.ce-journey-save{min-height:40px;padding:.55rem .8rem;border:1px solid #d4ab56;border-radius:10px;background:#d4ab56;color:#101820;font:inherit;font-weight:900;cursor:pointer}
+.ce-journey-save:hover{background:#e8c979}
+.ce-journey-actions a{font-weight:850;color:#6e531d;text-decoration:none}
+.ce-journey-toast{font-size:.84rem;color:#526068}
+
+.ce-decision-center{margin:1.25rem auto 1.8rem;padding:1.25rem;border:1px solid rgba(212,171,86,.42);border-radius:18px;background:#fbfaf6}
+.ce-decision-center-head{display:flex;justify-content:space-between;gap:1rem;align-items:flex-end;margin-bottom:1rem}
+.ce-decision-center-head h2{margin:.25rem 0 .3rem;font-size:clamp(1.6rem,3vw,2.35rem)}
+.ce-decision-center-head p{margin:0;max-width:760px;color:#5d6870;line-height:1.55}
+.ce-dc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
+.ce-dc-card{padding:1rem;border:1px solid rgba(16,24,32,.12);border-radius:14px;background:#fff}
+.ce-dc-card-top{display:flex;justify-content:space-between;gap:.8rem;align-items:start}
+.ce-dc-card h3{margin:.15rem 0 .2rem;font-size:1.18rem}
+.ce-dc-meta{color:#737d83;font-size:.78rem}
+.ce-dc-field{display:grid;gap:.28rem;margin-top:.7rem}
+.ce-dc-field label{font-size:.76rem;font-weight:850;color:#4f5a61}
+.ce-dc-field input,.ce-dc-field select,.ce-dc-field textarea{width:100%;box-sizing:border-box;padding:.6rem .65rem;border:1px solid rgba(16,24,32,.18);border-radius:9px;background:#fff;color:#101820;font:inherit}
+.ce-dc-field textarea{min-height:72px;resize:vertical}
+.ce-dc-linked{margin-top:.7rem;padding-top:.65rem;border-top:1px solid rgba(16,24,32,.09);font-size:.83rem;color:#58646b}
+.ce-dc-linked strong{color:#101820}
+.ce-dc-sims{margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(16,24,32,.12)}
+.ce-dc-sims h3{margin:.1rem 0 .25rem}
+.ce-dc-sims>p{margin:.15rem 0 .8rem;color:#647078}
+.ce-dc-sim-row{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(180px,.7fr) auto;gap:.55rem;align-items:center;padding:.55rem 0;border-top:1px solid rgba(16,24,32,.07)}
+.ce-dc-sim-row:first-of-type{border-top:0}
+.ce-dc-sim-row select,.ce-dc-compare select{padding:.5rem;border:1px solid rgba(16,24,32,.16);border-radius:8px;background:#fff}
+.ce-dc-mini-btn{min-height:36px;padding:.45rem .65rem;border:1px solid rgba(16,24,32,.18);border-radius:8px;background:#fff;color:#101820;font:inherit;font-size:.82rem;font-weight:850;cursor:pointer}
+.ce-dc-mini-btn.primary{border-color:#d4ab56;background:#d4ab56}
+.ce-dc-compare{margin-top:1rem;padding:1rem;border-radius:12px;background:#101820;color:#fff}
+.ce-dc-compare h3{color:#fff;margin:0 0 .55rem}
+.ce-dc-compare-controls{display:grid;grid-template-columns:1fr 1fr auto;gap:.55rem;align-items:center}
+.ce-dc-diff{margin-top:.8rem;overflow:auto}
+.ce-dc-diff table{width:100%;border-collapse:collapse;font-size:.8rem}
+.ce-dc-diff th,.ce-dc-diff td{padding:.45rem .5rem;border-top:1px solid rgba(255,255,255,.13);text-align:left;vertical-align:top}
+.ce-dc-diff th{color:#e8c979}
+.ce-dc-empty{padding:1rem;border:1px dashed rgba(16,24,32,.22);border-radius:12px;color:#59656c;background:#fff}
+.ce-dc-save-state{display:inline-block;margin-top:.35rem;font-size:.76rem;color:#6b762f;opacity:0;transition:.2s}.ce-dc-save-state.is-visible{opacity:1}
+
+/* Repères stables pour l'analyse des pages d'entrée. */
+[data-ce-home-section]{scroll-margin-top:90px}
+
+@media(max-width:900px){.ce-journey-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ce-dc-grid{grid-template-columns:1fr}}
+@media(max-width:620px){.ce-decision-journey .ce-journey-head,.ce-decision-center-head{display:block}.ce-journey-grid{grid-template-columns:1fr}.ce-journey-step{min-height:0}.ce-dc-sim-row,.ce-dc-compare-controls{grid-template-columns:1fr}.ce-decision-center{padding:.9rem}}
