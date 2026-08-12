@@ -1,0 +1,29 @@
+name: Site evolution audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'assets/site-evolution.js'
+      - 'assets/site-evolution.css'
+      - 'assets/analytics-loader.js'
+      - 'scripts/audit_content_freshness.py'
+      - '.github/workflows/site-evolution-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check JavaScript syntax
+        run: |
+          node --check assets/site-evolution.js
+          node --check assets/analytics-loader.js
+
+      - name: Check Python syntax
+        run: python -m py_compile scripts/audit_content_freshness.py
