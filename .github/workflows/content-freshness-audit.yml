@@ -1,6 +1,7 @@
 name: Content freshness audit
 
 # Evergreen guidance stays out of the urgent queue; rules and time-sensitive data are revalidated.
+# Editorial voice changes must not weaken freshness checks on decision-sensitive dossiers.
 on:
   workflow_dispatch:
   schedule:
