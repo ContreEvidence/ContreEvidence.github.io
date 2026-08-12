@@ -45,6 +45,7 @@ https://contreevidence.github.io/dossiers/contrat-travail-clauses-verifier-avant
 https://contreevidence.github.io/dossiers/cout-complet-achat-immobilier.html
 https://contreevidence.github.io/dossiers/cout-reel-voiture-achat-credit-loa-lld.html
 https://contreevidence.github.io/dossiers/debloquer-demarche-administrative.html
+https://contreevidence.github.io/dossiers/decider-a-deux-travail-patrimoine.html
 https://contreevidence.github.io/dossiers/decider-sans-tourner-en-rond.html
 https://contreevidence.github.io/dossiers/demenager-pour-un-emploi-salaire-minimum.html
 https://contreevidence.github.io/dossiers/dependance-gros-client.html
@@ -102,7 +103,9 @@ https://contreevidence.github.io/
 https://contreevidence.github.io/marches-analyses-avancees.html
 https://contreevidence.github.io/mentions.html
 https://contreevidence.github.io/methode-sources.html
+https://contreevidence.github.io/outil-capital-professionnel.html
 https://contreevidence.github.io/outil-comparer-offres-emploi.html
+https://contreevidence.github.io/outil-microscope-pea.html
 https://contreevidence.github.io/outil-pilotage-recherche-emploi.html
 https://contreevidence.github.io/parcours-argent.html
 https://contreevidence.github.io/parcours-de-vie.html
