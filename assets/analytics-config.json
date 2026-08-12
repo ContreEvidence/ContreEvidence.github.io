@@ -1,6 +1,6 @@
 {
-  "enabled": false,
+  "enabled": true,
   "provider": "cloudflare-web-analytics",
-  "token": "",
-  "note": "Activer uniquement après création du site dans Cloudflare Web Analytics et ajout du token public correspondant."
+  "token": "72fa373fc7e649f5884b90c7c6f1c012",
+  "note": "Cloudflare Web Analytics activé pour contreevidence.github.io. Le token est un identifiant public de site destiné au beacon côté client."
 }
