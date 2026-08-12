@@ -122,6 +122,9 @@ jobs:
                   href = html.unescape(raw_href).strip()
                   if not href or href.startswith(('#', 'mailto:', 'tel:', 'javascript:', 'data:')):
                       continue
+                  # JavaScript/template placeholders are not static links and must not be resolved as files.
+                  if '${' in href or '{{' in href:
+                      continue
                   parsed = urllib.parse.urlparse(href)
                   if parsed.scheme in ('http', 'https'):
                       if parsed.netloc != 'contreevidence.github.io':
