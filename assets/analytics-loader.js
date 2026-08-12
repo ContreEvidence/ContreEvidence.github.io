@@ -23,6 +23,13 @@
     document.head.appendChild(script);
   }
 
+  // Ne jamais envoyer de télémétrie depuis les serveurs locaux utilisés en
+  // développement, prévisualisation ou audit Lighthouse. Le beacon reste actif
+  // sur le véritable hostname public du site.
+  const host = String(window.location.hostname || '').toLowerCase();
+  const isLocalHost = host === 'localhost' || host === '127.0.0.1' || host === '::1' || host.endsWith('.localhost');
+  if (isLocalHost) return;
+
   const configUrl = new URL('analytics-config.json', base);
   fetch(configUrl, { cache: 'no-store', credentials: 'same-origin' })
     .then(response => response.ok ? response.json() : null)
