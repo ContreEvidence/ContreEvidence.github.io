@@ -1,0 +1,47 @@
+name: Simplicity principle
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/simplicity-principle.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Add simplicity principle to decision dossier
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('dossiers/decider-sans-tourner-en-rond.html')
+          s = p.read_text(encoding='utf-8')
+          anchor = '<h2>3. Limiter les critères à cinq</h2>'
+          insert = '''<div class="decision-box"><h3>Principe de simplicité</h3><p>Une décision n’a pas besoin du maximum d’informations, mais du minimum d’informations capables de la faire basculer. <strong>Si une donnée ne peut pas changer le choix, elle n’a probablement pas besoin d’être dans le tableau.</strong></p><p><strong>Test rapide :</strong> cette information peut-elle éliminer une option, modifier mon classement ou changer le moment où j’agis ? Si la réponse est non aux trois, continuer à chercher apporte probablement peu.</p></div>'''
+          if insert in s:
+              raise SystemExit('Simplicity principle already present')
+          if anchor not in s:
+              raise SystemExit('Expected anchor not found')
+          s = s.replace(anchor, insert + anchor, 1)
+          s = s.replace('<meta name="dateModified" content="2026-08-10"/>', '<meta name="dateModified" content="2026-08-12"/>', 1)
+          s = s.replace('<meta property="article:modified_time" content="2026-08-10"/>', '<meta property="article:modified_time" content="2026-08-12"/>', 1)
+          s = s.replace('"dateModified":"2026-08-10"', '"dateModified":"2026-08-12"', 1)
+          s = s.replace('Mis à jour le 09/08/2026 · Sources et hypothèses précisées dans le dossier', 'Mis à jour le 12/08/2026 · Principe de simplicité et méthode de décision précisés', 1)
+          p.write_text(s, encoding='utf-8')
+          PY
+      - name: Commit dossier refinement
+        run: |
+          if git diff --quiet; then
+            echo "No changes needed"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dossiers/decider-sans-tourner-en-rond.html
+          git commit -m "Clarify simplicity principle in decision dossier"
+          git push
