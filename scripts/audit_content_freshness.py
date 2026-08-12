@@ -19,8 +19,9 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 
 OFFICIAL_DOMAINS = {
-    "service-public.fr", "economie.gouv.fr", "impots.gouv.fr", "urssaf.fr",
+    "service-public.fr", "service-public.gouv.fr", "economie.gouv.fr", "impots.gouv.fr", "urssaf.fr",
     "francetravail.fr", "france-travail.fr", "banque-france.fr", "hcsf.gouv.fr",
+    "amf-france.org", "garantiedesdepots.fr", "demission-reconversion.gouv.fr",
     "anil.org", "insee.fr", "legifrance.gouv.fr", "travail-emploi.gouv.fr",
     "ameli.fr", "caf.fr", "info-retraite.fr", "lassuranceretraite.fr",
     "ecologie.gouv.fr", "entreprises.gouv.fr", "education.gouv.fr",
