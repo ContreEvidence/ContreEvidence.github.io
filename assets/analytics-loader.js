@@ -34,7 +34,7 @@
       if (document.querySelector('script[data-cf-beacon]')) return;
 
       const beacon = document.createElement('script');
-      beacon.defer = true;
+      beacon.type = 'module';
       beacon.src = 'https://static.cloudflareinsights.com/beacon.min.js';
       beacon.setAttribute('data-cf-beacon', JSON.stringify({ token, spa: false }));
       document.head.appendChild(beacon);
