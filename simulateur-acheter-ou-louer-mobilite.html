@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Acheter ou louer si vous risquez de déménager : simulateur | Contre-Évidence</title>
+<meta name="description" content="Comparez achat et location si vous pouvez devoir déménager dans 2, 3, 5 ou 8 ans. Calculez le coût net d'une revente, le capital restant dû et la durée de détention de bascule.">
+<link rel="canonical" href="https://contreevidence.github.io/simulateur-acheter-ou-louer-mobilite.html">
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/navigation.css">
+<link rel="stylesheet" href="assets/voice.css">
+<link rel="stylesheet" href="assets/pro.css">
+<link rel="stylesheet" href="assets/brand.css?v=20260808-22">
+<link rel="stylesheet" href="assets/tools.css?v=20260808-22">
+<link rel="stylesheet" href="assets/personal-space.css?v=20260810-13">
+<link rel="stylesheet" href="assets/ux-retention.css?v=20260810-13">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Acheter ou louer si vous pouvez devoir déménager ?">
+<meta property="og:description" content="Testez plusieurs durées de détention et voyez à partir de quand l'achat rattrape la location avec vos propres hypothèses.">
+<meta property="og:url" content="https://contreevidence.github.io/simulateur-acheter-ou-louer-mobilite.html">
+<meta property="og:image" content="https://contreevidence.github.io/assets/og-cover-brand.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Simulateur achat ou location × mobilité">
+<meta name="twitter:description" content="Une revente à 3 ans n'a pas la même économie qu'une détention à 10 ans. Calculez votre seuil.">
+<meta name="twitter:image" content="https://contreevidence.github.io/assets/og-cover-brand.png">
+<meta name="dateModified" content="2026-08-12">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Simulateur acheter ou louer en cas de mobilité","url":"https://contreevidence.github.io/simulateur-acheter-ou-louer-mobilite.html","description":"Comparer le coût net d'un achat immobilier revendu après quelques années au coût de la location, en intégrant financement, frais et évolution du prix.","applicationCategory":"FinanceApplication","operatingSystem":"Web","isAccessibleForFree":true,"author":{"@type":"Organization","name":"Contre-Évidence","url":"https://contreevidence.github.io/"},"publisher":{"@type":"Organization","name":"Contre-Évidence","url":"https://contreevidence.github.io/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://contreevidence.github.io/"},{"@type":"ListItem","position":2,"name":"Outils","item":"https://contreevidence.github.io/bibliotheque.html?type=outil"},{"@type":"ListItem","position":3,"name":"Acheter ou louer si une mobilité est possible","item":"https://contreevidence.github.io/simulateur-acheter-ou-louer-mobilite.html"}]}</script>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header id="site-header"><div class="ce-fallback-header" aria-label="Navigation principale"><a class="ce-fallback-brand" href="index.html">CONTRE-ÉVIDENCE</a><nav><a href="themes/argent.html">Patrimoine</a><a href="parcours-vie-professionnelle.html">Vie professionnelle</a><a href="hors-cadre.html">Fenêtres</a><a href="bibliotheque.html?type=outil">Outils</a><a href="bibliotheque.html">Bibliothèque</a><a href="mon-espace.html" data-ce-space-link="1">Mon espace</a></nav></div></header>
+<main id="contenu">
+<section class="article-hero"><div class="container">
+<div class="voice-signature">Acheter peut être une bonne idée. Devoir revendre trop tôt peut en être une autre.</div>
+<div class="kicker">Simulateur · Patrimoine × logement × mobilité</div>
+<h1>Acheter ou louer si vous risquez de déménager ?</h1>
+<p>Testez le coût d'une revente après quelques années au lieu de supposer que vous resterez longtemps. Le calculateur distingue <strong>capital remboursé</strong>, <strong>intérêts et coûts perdus</strong>, <strong>valeur de revente</strong> et <strong>loyer évité</strong>.</p>
+<div class="ce-update-meta"><span>Mis à jour le 12/08/2026 · Calcul local, aucune donnée transmise</span></div>
+</div></section>
+<section><div class="container tool-shell">
+<div class="tool-privacy"><div>🔒</div><div><strong>Vos montants restent sur cet appareil.</strong><span class="tool-muted"> Aucun prix, crédit ou montant d'épargne n'est envoyé à Contre-Évidence.</span></div></div>
+
+<div class="tool-split">
+<div class="tool-panel">
+<h2 class="tool-section-title">1. Projet d'achat</h2>
+<div class="tool-grid">
+<div class="tool-field"><label for="price">Prix du logement</label><input id="price" type="number" min="0" step="5000" value="300000"></div>
+<div class="tool-field"><label for="acquisitionCosts">Frais d'acquisition</label><input id="acquisitionCosts" type="number" min="0" step="500" value="24000"><small>Utilisez l'estimation du notaire : ne supposez pas un pourcentage universel.</small></div>
+<div class="tool-field"><label for="initialWorks">Travaux / installation non récupérables</label><input id="initialWorks" type="number" min="0" step="500" value="5000"><small>N'ajoutez ici que la part que vous ne pensez pas récupérer dans le prix de revente.</small></div>
+<div class="tool-field"><label for="loan">Montant emprunté</label><input id="loan" type="number" min="0" step="5000" value="240000"></div>
+<div class="tool-field"><label for="rate">Taux nominal annuel du crédit</label><input id="rate" type="number" min="0" max="20" step="0.05" value="3.20"><small>Hors assurance.</small></div>
+<div class="tool-field"><label for="loanYears">Durée initiale du crédit</label><input id="loanYears" type="number" min="1" max="40" step="1" value="20"><small>Années.</small></div>
+<div class="tool-field"><label for="insurance">Assurance emprunteur mensuelle</label><input id="insurance" type="number" min="0" step="5" value="45"></div>
+<div class="tool-field"><label for="ownerCosts">Surcoûts propriétaire mensuels</label><input id="ownerCosts" type="number" min="0" step="25" value="250"><small>Taxe foncière/12, charges non récupérables, entretien, assurance propriétaire… uniquement ce qui diffère de la location.</small></div>
+</div>
+
+<h2 class="tool-section-title" style="margin-top:1.3rem">2. Si vous deviez revendre</h2>
+<div class="tool-grid">
+<div class="tool-field"><label for="horizon">Durée de détention testée</label><input id="horizon" type="number" min="1" max="30" step="1" value="3"><small>Années.</small></div>
+<div class="tool-field"><label for="priceGrowth">Évolution annuelle supposée du prix</label><input id="priceGrowth" type="number" min="-15" max="15" step="0.25" value="0"><small>0 % est un bon point de départ pour ne pas faire dépendre le projet d'une hausse du marché.</small></div>
+<div class="tool-field"><label for="sellingRate">Frais de vente</label><input id="sellingRate" type="number" min="0" max="20" step="0.25" value="5"><small>% du prix de revente : agence ou autres frais proportionnels réellement prévus.</small></div>
+<div class="tool-field"><label for="exitFixed">Autres coûts fixes de sortie</label><input id="exitFixed" type="number" min="0" step="250" value="0"><small>Diagnostics, frais liés au financement, indemnité éventuelle de remboursement anticipé… utilisez votre estimation réelle.</small></div>
+</div>
+</div>
+
+<aside class="tool-panel">
+<h2 class="tool-section-title">Photo à la date de revente</h2>
+<div class="tool-kpis">
+<div class="tool-kpi"><span>Mensualité de crédit</span><strong id="payment">—</strong></div>
+<div class="tool-kpi"><span>Capital restant dû</span><strong id="balance">—</strong></div>
+<div class="tool-kpi"><span>Capital déjà remboursé</span><strong id="principalPaid">—</strong></div>
+</div>
+<div class="tool-kpis" style="margin-top:.75rem">
+<div class="tool-kpi"><span>Prix de revente simulé</span><strong id="salePrice">—</strong></div>
+<div class="tool-kpi"><span>Net récupéré après vente + crédit</span><strong id="saleEquity">—</strong></div>
+<div class="tool-kpi"><span>Intérêts payés</span><strong id="interestPaid">—</strong></div>
+</div>
+<div class="tool-result-note" id="saleDiagnostic">Modifiez l'horizon ou l'évolution du prix pour tester une mobilité plus ou moins précoce.</div>
+</aside>
+</div>
+
+<div class="tool-split">
+<div class="tool-panel">
+<h2 class="tool-section-title">3. Scénario location</h2>
+<div class="tool-grid">
+<div class="tool-field"><label for="rent">Loyer mensuel comparable aujourd'hui</label><input id="rent" type="number" min="0" step="25" value="1200"><small>Comparez un logement réellement substituable au bien acheté.</small></div>
+<div class="tool-field"><label for="rentGrowth">Hausse annuelle supposée du loyer</label><input id="rentGrowth" type="number" min="-5" max="10" step="0.25" value="1.5"></div>
+<div class="tool-field"><label for="altReturn">Rendement alternatif de l'apport</label><input id="altReturn" type="number" min="0" max="15" step="0.25" value="0"><small>Optionnel. 0 % si vous ne voulez pas valoriser le coût d'opportunité du cash immobilisé.</small></div>
+</div>
+</div>
+<aside class="tool-panel">
+<h2 class="tool-section-title">Achat vs location à cet horizon</h2>
+<div class="tool-kpis">
+<div class="tool-kpi"><span>Cash initial immobilisé</span><strong id="upfrontCash">—</strong></div>
+<div class="tool-kpi"><span>Coût net du scénario achat</span><strong id="ownerNetCost">—</strong></div>
+<div class="tool-kpi"><span>Loyers cumulés</span><strong id="rentCost">—</strong></div>
+</div>
+<div class="tool-kpis" style="margin-top:.75rem">
+<div class="tool-kpi"><span>Avantage achat (+) / location (−)</span><strong id="advantage">—</strong></div>
+<div class="tool-kpi"><span>Prix de revente nécessaire à l'équilibre</span><strong id="requiredSalePrice">—</strong></div>
+<div class="tool-kpi"><span>Évolution annuelle nécessaire</span><strong id="requiredGrowth">—</strong></div>
+</div>
+<div class="tool-result-note" id="decisionDiagnostic">Le résultat est une comparaison de scénarios, pas une prévision de prix immobilier.</div>
+</aside>
+</div>
+
+<div class="tool-panel">
+<h2>À partir de quelle durée l'achat rattrape-t-il la location ?</h2>
+<div class="tool-kpis">
+<div class="tool-kpi"><span>Premier horizon favorable à l'achat</span><strong id="breakEvenYear">—</strong></div>
+<div class="tool-kpi"><span>Hypothèse de prix utilisée</span><strong id="growthReminder">—</strong></div>
+</div>
+<div class="tool-result-note" id="breakEvenDiagnostic">Le seuil est recalculé de 1 à 30 ans avec les mêmes hypothèses de prix, de loyer et de coûts.</div>
+<div class="tool-table-wrap" style="margin-top:1rem"><table class="tool-table" style="min-width:760px"><thead><tr><th>Sortie après</th><th>Capital restant dû</th><th>Prix de revente</th><th>Coût net achat</th><th>Coût location</th><th>Écart achat − location</th></tr></thead><tbody id="stressRows"></tbody></table></div>
+</div>
+
+<div class="tool-panel">
+<h2>Comment lire le résultat</h2>
+<p><strong>Coût net du scénario achat</strong> = cash initial + mensualités + assurance + surcoûts propriétaire + coûts de vente + coût d'opportunité choisi − argent récupéré après la vente et remboursement du crédit. Le capital remboursé n'est donc pas traité comme une dépense perdue : il réapparaît dans la valeur nette récupérée à la sortie.</p>
+<div class="warning-box"><strong>Ce que le calculateur ne peut pas savoir :</strong> le futur prix du logement, les travaux exceptionnels, votre fiscalité future, la valeur exacte d'une option de mobilité ou les clauses de votre crédit. Testez plusieurs scénarios plutôt qu'un seul chiffre.</div>
+</div>
+
+<div class="start-here"><div><div class="kicker">Comprendre avant de décider</div><h2>La flexibilité a une valeur lorsque votre horizon professionnel est incertain.</h2><p>Le dossier explique pourquoi une revente rapide peut dégrader un achat pourtant finançable et comment raisonner par scénarios de 2, 3, 5 et 8 ans.</p></div><a class="btn btn-primary" href="dossiers/acheter-ou-louer-si-on-risque-demenager.html">Lire le dossier complet</a></div>
+</div></section>
+<section class="ce-related" data-ce-related="1" aria-label="À lire ensuite"><div class="container"><div class="kicker">À lire ensuite</div><h2>Continuez sans repartir de zéro.</h2><a class="ce-related-primary" href="dossiers/acheter-ou-louer-si-on-risque-demenager.html"><div><span class="ce-related-label">Continuer ce raisonnement</span><strong>Acheter ou louer si vous risquez de déménager bientôt ?</strong></div><span class="ce-related-arrow">→</span><p>Comprendre pourquoi l'horizon de détention et la mobilité peuvent inverser la décision.</p></a><div class="ce-related-secondary"><a href="dossiers/changer-travail-avant-credit-immobilier.html"><div><span class="ce-related-label">Autre angle</span><strong>Changer de travail avant ou après un achat immobilier ?</strong></div><span>→</span></a></div></div></section>
+</main>
+<footer><div class="container foot"><span>© <span data-year></span> Contre-Évidence</span><span><a href="methode-sources.html">Méthode & sources</a> · <a href="mentions.html">Mentions</a></span></div></footer>
+<script src="assets/follow.js?v=20260810-13"></script>
+<script src="assets/personal-space.js?v=20260810-13"></script>
+<script src="assets/navigation-v3.js?v=20260810-13"></script>
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const n = id => Number($(id).value) || 0;
+  const euro = v => new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(v);
+  const pct = v => `${new Intl.NumberFormat('fr-FR',{maximumFractionDigits:2}).format(v)} %`;
+  const signedEuro = v => `${v >= 0 ? '+' : '−'}${euro(Math.abs(v))}`;
+
+  function mortgagePayment(principal, annualRate, years){
+    const months = Math.max(1, Math.round(years * 12));
+    const r = annualRate / 100 / 12;
+    if (principal <= 0) return 0;
+    if (r === 0) return principal / months;
+    return principal * r / (1 - Math.pow(1 + r, -months));
+  }
+
+  function loanAt(months, principal, annualRate, years){
+    const totalMonths = Math.max(1, Math.round(years * 12));
+    const m = Math.min(Math.max(0, Math.round(months)), totalMonths);
+    const payment = mortgagePayment(principal, annualRate, years);
+    const r = annualRate / 100 / 12;
+    let balance;
+    if (principal <= 0) balance = 0;
+    else if (r === 0) balance = Math.max(0, principal - payment * m);
+    else balance = principal * Math.pow(1 + r, m) - payment * (Math.pow(1 + r, m) - 1) / r;
+    balance = Math.max(0, balance);
+    const paid = payment * m;
+    const principalPaid = Math.max(0, principal - balance);
+    const interestPaid = Math.max(0, paid - principalPaid);
+    return {payment, balance, paid, principalPaid, interestPaid, months:m};
+  }
+
+  function cumulativeRent(months, firstRent, annualGrowth){
+    let total = 0;
+    for (let m = 0; m < months; m++) {
+      const year = Math.floor(m / 12);
+      total += firstRent * Math.pow(1 + annualGrowth / 100, year);
+    }
+    return total;
+  }
+
+  function scenario(years){
+    const price = n('price');
+    const acquisition = n('acquisitionCosts');
+    const works = n('initialWorks');
+    const loan = n('loan');
+    const months = Math.round(years * 12);
+    const credit = loanAt(months, loan, n('rate'), n('loanYears'));
+    const totalProject = price + acquisition + works;
+    const upfront = Math.max(0, totalProject - loan);
+    const salePrice = price * Math.pow(1 + n('priceGrowth') / 100, years);
+    const sellingCosts = salePrice * n('sellingRate') / 100 + n('exitFixed');
+    const saleEquity = salePrice - sellingCosts - credit.balance;
+    const ownerRecurring = n('ownerCosts') * months;
+    const insurance = n('insurance') * credit.months;
+    const opportunity = upfront * (Math.pow(1 + n('altReturn') / 100, years) - 1);
+    const ownerNetCost = upfront + credit.paid + insurance + ownerRecurring + opportunity - saleEquity;
+    const rentCost = cumulativeRent(months, n('rent'), n('rentGrowth'));
+    const advantage = rentCost - ownerNetCost;
+    const saleRate = n('sellingRate') / 100;
+    const preSaleOwner = upfront + credit.paid + insurance + ownerRecurring + opportunity + n('exitFixed') + credit.balance;
+    const requiredSalePrice = (1 - saleRate) > 0 ? Math.max(0, (preSaleOwner - rentCost) / (1 - saleRate)) : NaN;
+    const requiredGrowth = price > 0 && years > 0 && requiredSalePrice > 0 ? (Math.pow(requiredSalePrice / price, 1 / years) - 1) * 100 : NaN;
+    return {years, months, credit, upfront, salePrice, sellingCosts, saleEquity, ownerRecurring, insurance, opportunity, ownerNetCost, rentCost, advantage, requiredSalePrice, requiredGrowth};
+  }
+
+  function calc(){
+    const years = Math.max(1, Math.min(30, n('horizon')));
+    const s = scenario(years);
+    $('payment').textContent = euro(s.credit.payment);
+    $('balance').textContent = euro(s.credit.balance);
+    $('principalPaid').textContent = euro(s.credit.principalPaid);
+    $('salePrice').textContent = euro(s.salePrice);
+    $('saleEquity').textContent = euro(s.saleEquity);
+    $('interestPaid').textContent = euro(s.credit.interestPaid);
+    $('upfrontCash').textContent = euro(s.upfront);
+    $('ownerNetCost').textContent = euro(s.ownerNetCost);
+    $('rentCost').textContent = euro(s.rentCost);
+    $('advantage').textContent = signedEuro(s.advantage);
+    $('requiredSalePrice').textContent = Number.isFinite(s.requiredSalePrice) ? euro(s.requiredSalePrice) : '—';
+    $('requiredGrowth').textContent = Number.isFinite(s.requiredGrowth) ? pct(s.requiredGrowth) + '/an' : '—';
+    $('growthReminder').textContent = pct(n('priceGrowth')) + '/an';
+
+    if (s.saleEquity < 0) $('saleDiagnostic').textContent = `Dans ce scénario, le produit net de vente ne suffit pas à solder le capital restant dû : il manquerait ${euro(Math.abs(s.saleEquity))}.`;
+    else $('saleDiagnostic').textContent = `Après les frais de vente saisis et le remboursement du crédit, vous récupérez environ ${euro(s.saleEquity)} à la sortie.`;
+
+    if (s.advantage >= 0) $('decisionDiagnostic').textContent = `À ${years} an${years > 1 ? 's' : ''}, le scénario achat ressort moins coûteux d'environ ${euro(s.advantage)} que la location avec ces hypothèses.`;
+    else $('decisionDiagnostic').textContent = `À ${years} an${years > 1 ? 's' : ''}, la location ressort moins coûteuse d'environ ${euro(Math.abs(s.advantage))} avec ces hypothèses.`;
+
+    let breakEven = null;
+    for (let y = 1; y <= 30; y++) {
+      if (scenario(y).advantage >= 0) { breakEven = y; break; }
+    }
+    $('breakEvenYear').textContent = breakEven ? `${breakEven} an${breakEven > 1 ? 's' : ''}` : 'Non atteint ≤ 30 ans';
+    $('breakEvenDiagnostic').textContent = breakEven
+      ? `Avec les hypothèses actuelles, c'est le premier horizon entier où le coût net calculé de l'achat devient inférieur ou égal aux loyers cumulés.`
+      : `Avec les hypothèses actuelles, l'achat ne rattrape pas la location sur les 30 premières années testées.`;
+
+    const horizons = [2,3,5,8];
+    $('stressRows').innerHTML = horizons.map(y => {
+      const x = scenario(y);
+      const gap = x.ownerNetCost - x.rentCost;
+      return `<tr><td><strong>${y} ans</strong></td><td>${euro(x.credit.balance)}</td><td>${euro(x.salePrice)}</td><td>${euro(x.ownerNetCost)}</td><td>${euro(x.rentCost)}</td><td>${signedEuro(gap)}</td></tr>`;
+    }).join('');
+  }
+
+  document.querySelectorAll('input').forEach(el => el.addEventListener('input', calc));
+  calc();
+})();
+</script>
+</body>
+</html>
