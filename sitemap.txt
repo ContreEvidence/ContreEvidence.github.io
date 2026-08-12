@@ -44,6 +44,7 @@ https://contreevidence.github.io/dossiers/cout-complet-achat-immobilier.html
 https://contreevidence.github.io/dossiers/cout-reel-voiture-achat-credit-loa-lld.html
 https://contreevidence.github.io/dossiers/debloquer-demarche-administrative.html
 https://contreevidence.github.io/dossiers/decider-sans-tourner-en-rond.html
+https://contreevidence.github.io/dossiers/demenager-pour-un-emploi-salaire-minimum.html
 https://contreevidence.github.io/dossiers/dependance-gros-client.html
 https://contreevidence.github.io/dossiers/depenses-recurrentes-abonnements-assurances.html
 https://contreevidence.github.io/dossiers/devenir-manager-premiere-fois.html
@@ -110,6 +111,7 @@ https://contreevidence.github.io/simulateur-cout-formation.html
 https://contreevidence.github.io/simulateur-epargne-demission.html
 https://contreevidence.github.io/simulateur-prix-attendre.html
 https://contreevidence.github.io/simulateur-prix-minimum-rentable.html
+https://contreevidence.github.io/simulateur-salaire-minimum-demenagement.html
 https://contreevidence.github.io/themes/argent.html
 https://contreevidence.github.io/themes/entreprendre.html
 https://contreevidence.github.io/themes/travail.html
