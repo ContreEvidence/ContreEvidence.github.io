@@ -1,0 +1,68 @@
+name: Content freshness audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 6 * * 1'
+  push:
+    paths:
+      - 'dossiers/**/*.html'
+      - 'articles/**/*.html'
+      - 'scripts/audit_content_freshness.py'
+      - '.github/workflows/content-freshness-audit.yml'
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Audit sensitive content freshness
+        run: python scripts/audit_content_freshness.py
+
+      - name: Add report to workflow summary
+        if: always()
+        run: cat freshness-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: content-freshness-report
+          path: |
+            freshness-report.md
+            freshness-report.json
+          retention-days: 30
+
+      - name: Open or refresh the editorial review issue
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('freshness-report.md', 'utf8');
+            const data = JSON.parse(fs.readFileSync('freshness-report.json', 'utf8'));
+            const actionable = data.filter(x => x.status !== 'ok');
+            const title = '[Audit] Contenus sensibles à revalider';
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100
+            });
+            const existing = issues.find(i => i.title === title && !i.pull_request);
+            if (actionable.length) {
+              const body = `${report}\n\n---\n_Mise à jour automatiquement par le workflow Content freshness audit._`;
+              if (existing) {
+                await github.rest.issues.update({owner: context.repo.owner, repo: context.repo.repo, issue_number: existing.number, body});
+              } else {
+                await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo, title, body});
+              }
+            } else if (existing) {
+              await github.rest.issues.update({owner: context.repo.owner, repo: context.repo.repo, issue_number: existing.number, state: 'closed', state_reason: 'completed'});
+            }
