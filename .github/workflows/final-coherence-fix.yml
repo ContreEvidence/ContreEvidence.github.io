@@ -1,0 +1,51 @@
+name: Final coherence fix
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/final-coherence-fix.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Apply final coherence fixes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          # 1) Keep the Vie professionnelle card aligned with its explicit CTA.
+          p = Path('parcours-vie-professionnelle.html')
+          s = p.read_text(encoding='utf-8')
+          old = '<p>Comparer rester, partir ou préparer une troisième voie, avec leurs coûts, leurs risques et les options futures qu’ils ouvrent.</p>'
+          new = '<p>Voir ce qui peut encore changer dans le poste et ce qui deviendrait possible en partant.</p>'
+          if old not in s:
+              raise SystemExit('Expected Vie pro card copy not found')
+          p.write_text(s.replace(old, new, 1), encoding='utf-8')
+
+          # 2) Site-integrity must not interpret JS template placeholders as static HTML links.
+          p = Path('.github/workflows/site-integrity.yml')
+          s = p.read_text(encoding='utf-8')
+          old = """                  href = html.unescape(raw_href).strip()\n                  if not href or href.startswith(('#', 'mailto:', 'tel:', 'javascript:', 'data:')):\n                      continue\n"""
+          new = """                  href = html.unescape(raw_href).strip()\n                  if not href or href.startswith(('#', 'mailto:', 'tel:', 'javascript:', 'data:')):\n                      continue\n                  # Ignore href values embedded in JavaScript/template strings: they are not static links.\n                  if '${' in href or '{{' in href:\n                      continue\n"""
+          if old not in s:
+              raise SystemExit('Expected site-integrity href block not found')
+          p.write_text(s.replace(old, new, 1), encoding='utf-8')
+          PY
+      - name: Commit fixes
+        run: |
+          if git diff --quiet; then
+            echo "No changes needed"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add parcours-vie-professionnelle.html .github/workflows/site-integrity.yml
+          git commit -m "Resolve final site coherence issues"
+          git push
