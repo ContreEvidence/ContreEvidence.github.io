@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/</link>
     <description>Nouveaux guides, dossiers et outils Contre-Évidence consacrés à Vie professionnelle.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Wed, 12 Aug 2026 08:08:34 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 08:09:09 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/rss-vie-pro.xml" rel="self" type="application/rss+xml"/>
@@ -14,6 +14,28 @@
       <title>Contre-Évidence</title>
       <link>https://contreevidence.github.io/</link>
     </image>
+    <item>
+      <title>Simulateur : acheter ou louer si vous pouvez devoir déménager</title>
+      <link>https://contreevidence.github.io/simulateur-acheter-ou-louer-mobilite.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-acheter-ou-louer-mobilite.html</guid>
+      <pubDate>Wed, 12 Aug 2026 08:08:26 GMT</pubDate>
+      <category>Outil</category>
+      <category>Patrimoine</category>
+      <category>Vie professionnelle</category>
+      <category>Immobilier &amp; mobilité</category>
+      <description>Comparez achat et location à 2, 3, 5 ou 8 ans avec crédit, capital restant dû, frais de vente et évolution du prix.</description>
+    </item>
+    <item>
+      <title>Acheter ou louer si vous risquez de déménager bientôt ?</title>
+      <link>https://contreevidence.github.io/dossiers/acheter-ou-louer-si-on-risque-demenager.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/acheter-ou-louer-si-on-risque-demenager.html</guid>
+      <pubDate>Wed, 12 Aug 2026 08:06:40 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Patrimoine</category>
+      <category>Vie professionnelle</category>
+      <category>Immobilier &amp; mobilité</category>
+      <description>Mesurer la durée de détention nécessaire lorsque travail, couple ou projet de vie peuvent imposer une revente rapide.</description>
+    </item>
     <item>
       <title>Simulateur : le vrai coût d’un trajet domicile-travail</title>
       <link>https://contreevidence.github.io/simulateur-cout-trajet-emploi.html</link>
