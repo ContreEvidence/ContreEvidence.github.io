@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """Audit non bloquant de fraîcheur éditoriale pour Contre-Évidence.
 
-Le script cible les pages dont l'exactitude dépend réellement de règles, barèmes,
-aides, fiscalité, crédit ou données de marché susceptibles de changer. Les contenus
-de méthode plus intemporels peuvent être suivis s'ils portent déjà une date, mais
-l'absence de dateModified n'est pas à elle seule une anomalie pour ces pages.
+Cible les pages dont l'exactitude dépend réellement de règles, barèmes, aides,
+fiscalité ou données conjoncturelles. Les contenus pédagogiques intemporels ne sont
+pas signalés uniquement parce qu'ils n'ont pas de dateModified.
 """
 from __future__ import annotations
 
@@ -33,31 +32,33 @@ STRONG_RULE_PATTERNS = re.compile(
     r"taux d.endettement|micro-entreprise|cotisations? sociales?|"
     r"assurance ch[oô]mage|droit au ch[oô]mage|indemnit[eé]s? de rupture|"
     r"pr[eê]t [àa] taux z[eé]ro|ptz|plafond r[eé]glementaire|"
-    r"d[eé]duction fiscale|abattement fiscal|plus-value immobili[eè]re)\b",
-    re.I,
-)
+    r"d[eé]duction fiscale|abattement fiscal|plus-value immobili[eè]re)\b", re.I)
 WEAK_RULE_PATTERNS = re.compile(
     r"\b(droit du travail|d[eé]mission|retraite|aide|cr[eé]dit immobilier|"
-    r"p[eé]riode d.essai|contrat de travail|cdi|cdd|pr[eê]t|cotisation)\b",
-    re.I,
-)
+    r"p[eé]riode d.essai|contrat de travail|cdi|cdd|pr[eê]t|cotisation)\b", re.I)
 NORMATIVE_PATTERNS = re.compile(
     r"\b(r[eè]gle|r[eé]glementaire|l[eé]gal|l[eé]gale|loi|plafond|seuil|"
     r"condition d.[eé]ligibilit[eé]|taux maximum|obligation|interdit|autorise|"
     r"droit [àa]|d[eé]lai l[eé]gal|indemnit[eé]|pr[eé]avis|bar[eè]me|"
-    r"exon[eé]ration|d[eé]duction|taxation)\b",
-    re.I,
-)
+    r"exon[eé]ration|d[eé]duction|taxation)\b", re.I)
+
+# Thèmes financiers : ils servent à classer, pas à eux seuls à créer une urgence.
 MARKET_PATTERNS = re.compile(
     r"\b(taux|inflation|rendement|assurance-vie|livret|pea|per|etf|march[eé]|"
-    r"prix immobilier|loyer|cr[eé]dit|emprunt|valorisation)\b",
-    re.I,
-)
+    r"prix immobilier|loyer|cr[eé]dit|emprunt|valorisation)\b", re.I)
 SENSITIVE_PATTERNS = re.compile(
-    r"\b(emploi|reconversion|salaire|immobilier|patrimoine|investissement|assurance|"
-    r"retraite|entreprendre|formation|dette|budget|transmission)\b",
-    re.I,
-)
+    r"\b(emploi|travail|reconversion|salaire|immobilier|patrimoine|investissement|"
+    r"finance|financier|assurance|retraite|entreprendre|formation|dette|budget|"
+    r"transmission)\b", re.I)
+
+# Une page financière sans date n'est signalée que si elle revendique une donnée
+# conjoncturelle ou datée. Cela évite de traiter un guide ETF ou une méthode de
+# valorisation comme périmés simplement à cause de leur thème.
+DYNAMIC_MARKET_PATTERNS = re.compile(
+    r"\b(actuel(?:le)?s?|aujourd.hui|en ce moment|derni[eè]res? donn[eé]es|"
+    r"taux (?:moyen|actuel|directeur)|inflation (?:actuelle|en france)|"
+    r"prix (?:actuel|moyen)s?|rendement (?:actuel|moyen)|"
+    r"202[5-9]|2030)\b", re.I)
 
 DATE_RE = re.compile(r'<meta\s+name=["\']dateModified["\']\s+content=["\'](\d{4}-\d{2}-\d{2})["\']', re.I)
 HREF_RE = re.compile(r'href=["\'](https?://[^"\']+)["\']', re.I)
@@ -95,9 +96,7 @@ def official_count(fragment: str) -> int:
 
 def clean_text(fragment: str) -> str:
     fragment = STRIP_BLOCKS_RE.sub(" ", fragment)
-    text = TAG_RE.sub(" ", fragment)
-    text = html_lib.unescape(text)
-    return re.sub(r"\s+", " ", text).strip()
+    return re.sub(r"\s+", " ", html_lib.unescape(TAG_RE.sub(" ", fragment))).strip()
 
 
 def main_fragment(html: str) -> str:
@@ -109,60 +108,45 @@ def main_fragment(html: str) -> str:
 
 
 def page_title(html: str, fallback: str) -> str:
-    m = TITLE_RE.search(html)
-    if not m:
-        return fallback
-    return clean_text(m.group(1))
+    match = TITLE_RE.search(html)
+    return clean_text(match.group(1)) if match else fallback
 
 
 def decision_text(html: str) -> tuple[str, str]:
     fragment = main_fragment(html)
-    title = page_title(html, "")
     headings = " ".join(clean_text(h) for h in HEADING_RE.findall(fragment))
-    structural = " ".join(part for part in (title, headings) if part)
-    body = clean_text(fragment)
-    return structural, body
+    structural = f"{page_title(html, '')} {headings}".strip()
+    return structural, clean_text(fragment)
 
 
 def classify(structural: str, body: str) -> tuple[str, int, bool]:
-    structural_strong = len(STRONG_RULE_PATTERNS.findall(structural))
-    structural_weak = len(WEAK_RULE_PATTERNS.findall(structural))
-    structural_normative = len(NORMATIVE_PATTERNS.findall(structural))
-
-    regulatory_structure = structural_strong >= 1 or (
-        structural_weak >= 1 and structural_normative >= 1
-    )
-
     body_focus = body[:10000]
-    body_strong = len(STRONG_RULE_PATTERNS.findall(body_focus))
-    body_weak = len(WEAK_RULE_PATTERNS.findall(body_focus))
-    body_normative = len(NORMATIVE_PATTERNS.findall(body_focus))
-    regulatory_density = (
-        (body_strong >= 2 and body_normative >= 2)
-        or (body_weak >= 4 and body_normative >= 3)
-    )
+    s_strong = len(STRONG_RULE_PATTERNS.findall(structural))
+    s_weak = len(WEAK_RULE_PATTERNS.findall(structural))
+    s_norm = len(NORMATIVE_PATTERNS.findall(structural))
+    b_strong = len(STRONG_RULE_PATTERNS.findall(body_focus))
+    b_weak = len(WEAK_RULE_PATTERNS.findall(body_focus))
+    b_norm = len(NORMATIVE_PATTERNS.findall(body_focus))
 
+    regulatory_structure = s_strong >= 1 or (s_weak >= 1 and s_norm >= 1)
+    regulatory_density = ((b_strong >= 3 and b_norm >= 3) or
+                          (b_weak >= 5 and b_norm >= 4))
     if regulatory_structure or regulatory_density:
         return "règles / aides / fiscalité / emploi", 120, True
 
-    # Le sujet annoncé dans le titre/intertitres prime sur des occurrences dispersées
-    # dans le corps : un dossier emploi ne devient pas « marché » parce qu'il compare
-    # plusieurs taux ou montants dans des exemples.
+    # Une mention ambiguë de « taux » dans un dossier emploi ne doit pas le transformer
+    # en page de marché. Les thèmes annoncés par le titre/intertitres ont priorité.
+    if SENSITIVE_PATTERNS.search(structural) and not DYNAMIC_MARKET_PATTERNS.search(structural):
+        return "décision sensible", 270, False
+
     structural_market = len(MARKET_PATTERNS.findall(structural))
-    structural_sensitive = len(SENSITIVE_PATTERNS.findall(structural))
-    if structural_market >= 1:
-        return "taux / marchés / immobilier", 180, False
-    if structural_sensitive >= 1:
-        return "décision sensible", 270, False
-
-    body_market = len(MARKET_PATTERNS.findall(body_focus))
-    if body_market >= 4:
+    if structural_market >= 2 or DYNAMIC_MARKET_PATTERNS.search(structural):
         return "taux / marchés / immobilier", 180, False
 
-    body_sensitive = len(SENSITIVE_PATTERNS.findall(body_focus))
-    if body_sensitive >= 4:
+    if len(SENSITIVE_PATTERNS.findall(body_focus)) >= 4:
         return "décision sensible", 270, False
-
+    if len(MARKET_PATTERNS.findall(body_focus)) >= 5:
+        return "taux / marchés / immobilier", 180, False
     return "stable", 365, False
 
 
@@ -183,14 +167,17 @@ def audit(today: date) -> list[Finding]:
         if category == "stable":
             continue
 
-        m = DATE_RE.search(html)
-        modified = m.group(1) if m else None
+        match = DATE_RE.search(html)
+        modified = match.group(1) if match else None
 
-        # Les contenus de méthode / décision générale ne sont pas périssables par
-        # nature. Sans dateModified, ils sortent donc du rapport plutôt que de créer
-        # une fausse urgence. S'ils sont datés, on peut néanmoins surveiller leur âge.
-        if category == "décision sensible" and not modified:
-            continue
+        # Sans date, les contenus de méthode et les contenus financiers de fond ne
+        # créent pas d'alerte. Une page de marché n'est exigeante que si elle contient
+        # une revendication conjoncturelle explicite.
+        if not modified:
+            if category == "décision sensible":
+                continue
+            if category == "taux / marchés / immobilier" and not DYNAMIC_MARKET_PATTERNS.search(f"{structural} {body[:6000]}"):
+                continue
 
         age = None
         reasons: list[str] = []
@@ -226,22 +213,16 @@ def audit(today: date) -> list[Finding]:
 def render_md(findings: list[Finding], today: date) -> str:
     counts = {s: sum(1 for f in findings if f.status == s) for s in ("critical", "review", "ok")}
     lines = [
-        "# Audit de fraîcheur éditoriale",
-        "",
-        f"Date : **{today.isoformat()}**",
-        "",
+        "# Audit de fraîcheur éditoriale", "", f"Date : **{today.isoformat()}**", "",
         f"- 🔴 À traiter : **{counts['critical']}**",
         f"- 🟠 À revalider : **{counts['review']}**",
-        f"- 🟢 Dans la fenêtre de fraîcheur : **{counts['ok']}**",
-        "",
-        "Le rapport cible les contenus dont l'exactitude se dégrade avec le temps. L'absence de date n'est plus considérée comme une anomalie pour les contenus de méthode intemporels.",
-        "",
+        f"- 🟢 Dans la fenêtre de fraîcheur : **{counts['ok']}**", "",
+        "Le rapport cible les contenus dont l'exactitude se dégrade réellement avec le temps. Les guides et méthodes de fond sans donnée conjoncturelle ne sont pas signalés pour la seule absence de date.", "",
     ]
     actionable = [f for f in findings if f.status != "ok"]
     if not actionable:
         lines += ["## Aucun contenu sensible à revalider", "", "Tous les contenus détectés sont dans leur fenêtre de fraîcheur."]
         return "\n".join(lines) + "\n"
-
     lines += ["## Pages à vérifier", "", "| Priorité | Page | Catégorie | Dernière mise à jour | Sources officielles | Motif |", "|---|---|---|---:|---:|---|"]
     for f in sorted(actionable, key=lambda x: (0 if x.status == "critical" else 1, -(x.age_days or 0), x.path)):
         icon = "🔴" if f.status == "critical" else "🟠"
