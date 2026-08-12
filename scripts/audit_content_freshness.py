@@ -2,9 +2,9 @@
 """Audit non bloquant de fraîcheur éditoriale pour Contre-Évidence.
 
 Le script repère les pages dont la décision dépend réellement de règles, barèmes,
-aides, fiscalité, crédit ou données susceptibles de changer. Il analyse en priorité
-le titre, les headings et le contenu principal, en excluant navigation, footer,
-éléments cachés et scripts afin de limiter les faux positifs.
+aides, fiscalité, crédit ou données susceptibles de changer. La classification
+s'appuie d'abord sur le titre et les intertitres ; le corps seul ne fait basculer
+une page en réglementaire que si la densité de vocabulaire normatif est forte.
 """
 from __future__ import annotations
 
@@ -27,7 +27,6 @@ OFFICIAL_DOMAINS = {
     "ecologie.gouv.fr", "entreprises.gouv.fr", "education.gouv.fr",
 }
 
-# Termes très discriminants : une seule occurrence dans le contenu principal peut suffire.
 STRONG_RULE_PATTERNS = re.compile(
     r"\b(service[- ]public|france travail|urssaf|imp[oô]t(?:s)?|fiscalit[eé]|bar[eè]me|"
     r"smic|code du travail|licenciement|allocation ch[oô]mage|caf|hcsf|"
@@ -37,18 +36,16 @@ STRONG_RULE_PATTERNS = re.compile(
     r"d[eé]duction fiscale|abattement fiscal|plus-value immobili[eè]re)\b",
     re.I,
 )
-
-# Termes ambigus : ils ne classent une page en réglementaire que s'ils sont répétés
-# ou accompagnés d'un vocabulaire explicitement normatif.
 WEAK_RULE_PATTERNS = re.compile(
     r"\b(droit du travail|d[eé]mission|retraite|aide|cr[eé]dit immobilier|"
     r"p[eé]riode d.essai|contrat de travail|cdi|cdd|pr[eê]t|cotisation)\b",
     re.I,
 )
 NORMATIVE_PATTERNS = re.compile(
-    r"\b(r[eè]gle|l[eé]gal|l[eé]gale|loi|plafond|seuil|condition d.[eé]ligibilit[eé]|"
-    r"taux maximum|obligation|interdit|autorise|droit [àa]|d[eé]lai l[eé]gal|"
-    r"indemnit[eé]|pr[eé]avis|bar[eè]me|exon[eé]ration|d[eé]duction|taxation)\b",
+    r"\b(r[eè]gle|r[eé]glementaire|l[eé]gal|l[eé]gale|loi|plafond|seuil|"
+    r"condition d.[eé]ligibilit[eé]|taux maximum|obligation|interdit|autorise|"
+    r"droit [àa]|d[eé]lai l[eé]gal|indemnit[eé]|pr[eé]avis|bar[eè]me|"
+    r"exon[eé]ration|d[eé]duction|taxation)\b",
     re.I,
 )
 MARKET_PATTERNS = re.compile(
@@ -91,8 +88,8 @@ def normalize_host(url: str) -> str:
     return host[4:] if host.startswith("www.") else host
 
 
-def official_count(html: str) -> int:
-    hosts = {normalize_host(url) for url in HREF_RE.findall(html)}
+def official_count(fragment: str) -> int:
+    hosts = {normalize_host(url) for url in HREF_RE.findall(fragment)}
     return sum(1 for host in hosts if any(host == d or host.endswith("." + d) for d in OFFICIAL_DOMAINS))
 
 
@@ -120,30 +117,44 @@ def page_title(html: str, fallback: str) -> str:
 
 def decision_text(html: str) -> tuple[str, str]:
     title = page_title(html, "")
-    headings = " ".join(clean_text(h) for h in HEADING_RE.findall(html))
+    headings = " ".join(clean_text(h) for h in HEADING_RE.findall(main_fragment(html)))
+    structural = " ".join(part for part in (title, headings) if part)
     body = clean_text(main_fragment(html))
-    # Le texte de décision sert à détecter le thème; le corps est plafonné pour éviter
-    # qu'une longue zone de recommandations annexes ne domine la classification.
-    focus = " ".join(part for part in (title, headings, body[:24000]) if part)
-    return focus, body
+    return structural, body
 
 
-def classify(focus: str, body: str) -> tuple[str, int, bool]:
-    strong_hits = len(STRONG_RULE_PATTERNS.findall(focus))
-    weak_hits = len(WEAK_RULE_PATTERNS.findall(focus))
-    normative_hits = len(NORMATIVE_PATTERNS.findall(focus))
+def classify(structural: str, body: str) -> tuple[str, int, bool]:
+    structural_strong = len(STRONG_RULE_PATTERNS.findall(structural))
+    structural_weak = len(WEAK_RULE_PATTERNS.findall(structural))
+    structural_normative = len(NORMATIVE_PATTERNS.findall(structural))
 
-    # Réglementaire seulement si le sujet en dépend vraiment : terme fort, ou plusieurs
-    # termes ambigus accompagnés d'un vocabulaire normatif.
-    if strong_hits >= 1 or (weak_hits >= 2 and normative_hits >= 1):
+    # Le titre/intertitres ont priorité : ils décrivent ce dont parle réellement la page.
+    regulatory_structure = structural_strong >= 1 or (
+        structural_weak >= 1 and structural_normative >= 1
+    )
+
+    # Le corps ne suffit que si les règles sont centrales, pas lorsqu'elles apparaissent
+    # dans un exemple, une source conseillée ou un contenu associé.
+    body_focus = body[:10000]
+    body_strong = len(STRONG_RULE_PATTERNS.findall(body_focus))
+    body_weak = len(WEAK_RULE_PATTERNS.findall(body_focus))
+    body_normative = len(NORMATIVE_PATTERNS.findall(body_focus))
+    regulatory_density = (
+        (body_strong >= 2 and body_normative >= 2)
+        or (body_weak >= 4 and body_normative >= 3)
+    )
+
+    if regulatory_structure or regulatory_density:
         return "règles / aides / fiscalité / emploi", 120, True
 
-    market_hits = len(MARKET_PATTERNS.findall(focus))
-    if market_hits >= 2:
+    structural_market = len(MARKET_PATTERNS.findall(structural))
+    body_market = len(MARKET_PATTERNS.findall(body_focus))
+    if structural_market >= 1 or body_market >= 4:
         return "taux / marchés / immobilier", 180, False
 
-    sensitive_hits = len(SENSITIVE_PATTERNS.findall(focus))
-    if sensitive_hits >= 2:
+    structural_sensitive = len(SENSITIVE_PATTERNS.findall(structural))
+    body_sensitive = len(SENSITIVE_PATTERNS.findall(body_focus))
+    if structural_sensitive >= 1 or body_sensitive >= 4:
         return "décision sensible", 270, False
 
     return "stable", 365, False
@@ -161,8 +172,8 @@ def audit(today: date) -> list[Finding]:
     findings: list[Finding] = []
     for path in iter_html():
         html = path.read_text(encoding="utf-8", errors="replace")
-        focus, body = decision_text(html)
-        category, threshold, needs_official = classify(focus, body)
+        structural, body = decision_text(html)
+        category, threshold, needs_official = classify(structural, body)
         if category == "stable":
             continue
 
@@ -210,7 +221,7 @@ def render_md(findings: list[Finding], today: date) -> str:
         f"- 🟠 À revalider : **{counts['review']}**",
         f"- 🟢 Dans la fenêtre de fraîcheur : **{counts['ok']}**",
         "",
-        "La détection s'appuie sur le titre, les intertitres et le contenu principal. Les mentions de navigation, footer, scripts et recommandations annexes ne doivent plus suffire à classer une page en réglementaire.",
+        "La détection privilégie désormais le titre et les intertitres. Le corps seul ne classe une page en réglementaire que lorsque plusieurs indices normatifs concordent.",
         "",
     ]
     actionable = [f for f in findings if f.status != "ok"]
