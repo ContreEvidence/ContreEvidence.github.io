@@ -1,0 +1,31 @@
+name: Editorial voice pass
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/editorial_voice_pass.py'
+      - '.github/workflows/editorial-voice-pass.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Apply targeted editorial replacements
+        run: python scripts/editorial_voice_pass.py
+      - name: Commit editorial adjustments
+        run: |
+          if git diff --quiet; then
+            echo "No changes needed"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html parcours-de-vie.html parcours-vie-professionnelle.html dossiers/decider-a-deux-travail-patrimoine.html dossiers/quitter-emploi-stable-ou-rester.html
+          git commit -m "Rebalance editorial voice toward options"
+          git push
