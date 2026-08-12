@@ -22,6 +22,13 @@
     script.dataset.ceSiteEvolution = '1';
     document.head.appendChild(script);
   }
+  if (!document.querySelector('script[data-ce-context-tools]')) {
+    const script = document.createElement('script');
+    script.defer = true;
+    script.src = new URL('context-tools.js?v=20260812-1', base).href;
+    script.dataset.ceContextTools = '1';
+    document.head.appendChild(script);
+  }
 
   // Ne jamais envoyer de télémétrie depuis les serveurs locaux utilisés en
   // développement, prévisualisation ou audit Lighthouse. Le beacon reste actif
