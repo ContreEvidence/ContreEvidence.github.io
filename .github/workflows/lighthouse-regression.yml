@@ -1,0 +1,88 @@
+name: Lighthouse regression
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 4 * * 2'
+  push:
+    branches:
+      - main
+    paths:
+      - '**/*.html'
+      - 'assets/**'
+      - '.lighthouserc.json'
+      - '.github/workflows/lighthouse-regression.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lighthouse-regression-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Lighthouse CI
+        run: npm install --global @lhci/cli@0.15.x
+
+      - name: Run Lighthouse CI
+        run: lhci autorun
+
+      - name: Summarize representative runs
+        if: always()
+        shell: python
+        run: |
+          import json
+          import os
+          from pathlib import Path
+
+          summary_path = Path(os.environ['GITHUB_STEP_SUMMARY'])
+          manifest_path = Path('lighthouse-reports/manifest.json')
+          lines = ['## Lighthouse — pages représentatives', '']
+
+          if not manifest_path.exists():
+              lines += ['Aucun rapport Lighthouse exploitable n’a été généré.']
+          else:
+              manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+              rows = [item for item in manifest if item.get('isRepresentativeRun')]
+              lines += [
+                  '| Page | Performance | Accessibilité | Bonnes pratiques | SEO |',
+                  '|---|---:|---:|---:|---:|',
+              ]
+              for item in rows:
+                  report = json.loads(Path(item['jsonPath']).read_text(encoding='utf-8'))
+                  cats = report.get('categories', {})
+                  def score(name):
+                      value = cats.get(name, {}).get('score')
+                      return '—' if value is None else f'{round(value * 100):d}'
+                  url = item.get('url', '')
+                  path = '/' + url.split('/', 3)[-1] if '/' in url[8:] else url
+                  lines.append(
+                      f"| `{path}` | {score('performance')} | {score('accessibility')} | "
+                      f"{score('best-practices')} | {score('seo')} |"
+                  )
+              lines += ['', 'Les seuils de performance sont d’abord des avertissements. Les erreurs HTTP, erreurs console et problèmes de viewport restent bloquants.']
+
+          with summary_path.open('a', encoding='utf-8') as fh:
+              fh.write('\n'.join(lines) + '\n')
+
+      - name: Upload Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-reports
+          path: lighthouse-reports/
+          if-no-files-found: warn
+          retention-days: 14
