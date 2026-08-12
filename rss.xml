@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/</link>
     <description>Nouveaux guides, dossiers et outils de Contre-Évidence : patrimoine, vie professionnelle et décisions concrètes.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Wed, 12 Aug 2026 10:05:41 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 10:07:37 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/rss.xml" rel="self" type="application/rss+xml"/>
@@ -14,6 +14,26 @@
       <title>Contre-Évidence</title>
       <link>https://contreevidence.github.io/</link>
     </image>
+    <item>
+      <title>Diagnostic du capital professionnel : forces, dépendances et options</title>
+      <link>https://contreevidence.github.io/outil-capital-professionnel.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/outil-capital-professionnel.html</guid>
+      <pubDate>Wed, 12 Aug 2026 10:06:41 GMT</pubDate>
+      <category>Outil</category>
+      <category>Vie professionnelle</category>
+      <category>Diagnostic</category>
+      <description>Faites apparaître employabilité, compétences transférables, preuves, réseau, soutenabilité, marge financière et réversibilité sans note globale.</description>
+    </item>
+    <item>
+      <title>Microscope PEA : voir les vraies concentrations de son portefeuille</title>
+      <link>https://contreevidence.github.io/outil-microscope-pea.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/outil-microscope-pea.html</guid>
+      <pubDate>Wed, 12 Aug 2026 10:05:31 GMT</pubDate>
+      <category>Outil</category>
+      <category>Patrimoine</category>
+      <category>Allocation &amp; PEA</category>
+      <description>Mesurez concentration, cœur/satellites, régions, secteurs et moteurs de risque à l’intérieur du PEA sans portefeuille modèle.</description>
+    </item>
     <item>
       <title>Simulateur : acheter ou louer si vous pouvez devoir déménager</title>
       <link>https://contreevidence.github.io/simulateur-acheter-ou-louer-mobilite.html</link>
