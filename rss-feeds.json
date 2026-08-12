@@ -1,23 +1,23 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T10:07:37.115Z",
+  "generatedAt": "2026-08-12T10:40:18.813Z",
   "main": {
     "title": "Contre-Évidence — nouveautés",
     "url": "https://contreevidence.github.io/rss.xml",
-    "count": 121
+    "count": 122
   },
   "thematic": [
     {
       "domain": "patrimoine",
       "label": "Patrimoine",
       "url": "https://contreevidence.github.io/rss-patrimoine.xml",
-      "count": 61
+      "count": 62
     },
     {
       "domain": "vie-pro",
       "label": "Vie professionnelle",
       "url": "https://contreevidence.github.io/rss-vie-pro.xml",
-      "count": 70
+      "count": 71
     }
   ]
 }
