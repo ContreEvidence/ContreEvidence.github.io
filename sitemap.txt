@@ -23,6 +23,7 @@ https://contreevidence.github.io/contact.html
 https://contreevidence.github.io/dossiers/accepter-emploi-moins-paye-vivre-mieux.html
 https://contreevidence.github.io/dossiers/accepter-emploi-plus-loin-cout-trajet.html
 https://contreevidence.github.io/dossiers/acheter-logement-sans-se-fragiliser.html
+https://contreevidence.github.io/dossiers/acheter-ou-louer-si-on-risque-demenager.html
 https://contreevidence.github.io/dossiers/acheter-sans-vider-epargne.html
 https://contreevidence.github.io/dossiers/ameliorer-processus-sans-degrader-service.html
 https://contreevidence.github.io/dossiers/apprendre-developper-competences.html
@@ -107,6 +108,7 @@ https://contreevidence.github.io/parcours-argent.html
 https://contreevidence.github.io/parcours-de-vie.html
 https://contreevidence.github.io/parcours-vie-professionnelle.html
 https://contreevidence.github.io/simulateur-80-pourcent-cout-reel.html
+https://contreevidence.github.io/simulateur-acheter-ou-louer-mobilite.html
 https://contreevidence.github.io/simulateur-acheter-ou-louer.html
 https://contreevidence.github.io/simulateur-cout-formation.html
 https://contreevidence.github.io/simulateur-cout-trajet-emploi.html
