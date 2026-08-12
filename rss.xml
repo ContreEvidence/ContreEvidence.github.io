@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/</link>
     <description>Nouveaux guides, dossiers et outils de Contre-Évidence : patrimoine, vie professionnelle et décisions concrètes.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Wed, 12 Aug 2026 07:52:15 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 08:03:16 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/rss.xml" rel="self" type="application/rss+xml"/>
@@ -14,6 +14,28 @@
       <title>Contre-Évidence</title>
       <link>https://contreevidence.github.io/</link>
     </image>
+    <item>
+      <title>Simulateur : le vrai coût d’un trajet domicile-travail</title>
+      <link>https://contreevidence.github.io/simulateur-cout-trajet-emploi.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-cout-trajet-emploi.html</guid>
+      <pubDate>Wed, 12 Aug 2026 07:57:18 GMT</pubDate>
+      <category>Outil</category>
+      <category>Patrimoine</category>
+      <category>Vie professionnelle</category>
+      <category>Mobilité &amp; emploi</category>
+      <description>Comparez deux emplois après frais de transport et temps de trajet, puis calculez les seuils de salaire cash, temps compris et décision.</description>
+    </item>
+    <item>
+      <title>Accepter un emploi plus loin : combien le trajet coûte vraiment ?</title>
+      <link>https://contreevidence.github.io/dossiers/accepter-emploi-plus-loin-cout-trajet.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/accepter-emploi-plus-loin-cout-trajet.html</guid>
+      <pubDate>Wed, 12 Aug 2026 07:55:51 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Patrimoine</category>
+      <category>Vie professionnelle</category>
+      <category>Mobilité &amp; emploi</category>
+      <description>Mesurer ce qu’il reste d’une hausse de salaire après transport et combien d’heures supplémentaires sont réellement échangées contre ce gain.</description>
+    </item>
     <item>
       <title>Simulateur : salaire minimum pour déménager pour un emploi</title>
       <link>https://contreevidence.github.io/simulateur-salaire-minimum-demenagement.html</link>
