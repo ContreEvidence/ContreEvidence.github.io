@@ -21,6 +21,7 @@ https://contreevidence.github.io/bibliotheque.html
 https://contreevidence.github.io/confidentialite.html
 https://contreevidence.github.io/contact.html
 https://contreevidence.github.io/dossiers/accepter-emploi-moins-paye-vivre-mieux.html
+https://contreevidence.github.io/dossiers/accepter-emploi-plus-loin-cout-trajet.html
 https://contreevidence.github.io/dossiers/acheter-logement-sans-se-fragiliser.html
 https://contreevidence.github.io/dossiers/acheter-sans-vider-epargne.html
 https://contreevidence.github.io/dossiers/ameliorer-processus-sans-degrader-service.html
