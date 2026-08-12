@@ -12,14 +12,6 @@
     return el;
   }
 
-  if (path.endsWith('/themes/argent.html')) {
-    const host = document.querySelector('main .container:last-of-type') || document.querySelector('main');
-    if (host && !document.querySelector('[data-ce-pea-tool-link]')) {
-      const el = card('../outil-microscope-pea.html','Zoom · PEA','Votre poche actions est-elle vraiment diversifiée ?','Le cockpit voit la poche actions globale. Le microscope PEA descend au niveau des lignes, régions, secteurs et moteurs de risque, sans portefeuille modèle.','Analyser mon PEA →');
-      el.dataset.cePeaToolLink = '1';
-      host.appendChild(el);
-    }
-  }
 
   if (path.endsWith('/parcours-vie-professionnelle.html')) {
     const host = document.querySelector('.pro-resources');

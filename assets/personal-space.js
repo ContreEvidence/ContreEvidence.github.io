@@ -145,6 +145,12 @@
   }
   function restoreFormValues(sim){
     if (!sim?.values) return;
+    const adapter=window.CE_TOOL_SCENARIO;
+    if (sim.values.__ceAdapter && adapter && typeof adapter.restore==='function' && String(adapter.id||'custom')===String(sim.values.__ceAdapter)) {
+      adapter.restore(sim.values.data);
+      toast(`Scénario « ${sim.label || sim.title} » restauré.`);
+      return;
+    }
     Object.entries(sim.values).forEach(([key,saved])=>{
       const escaped=window.CSS?.escape ? CSS.escape(key) : key.replace(/(["'\\.#:[\]()])/g,'\\$1');
       const el=document.getElementById(key) || document.querySelector(`[name="${escaped}"]`); if(!el) return;
@@ -160,7 +166,11 @@
     const html=`<form><div class="space-eyebrow">Simulation</div><h2>Enregistrer ce scénario</h2><p>Les hypothèses restent dans ce navigateur. Vous pourrez revenir exactement à ces valeurs depuis Mon espace.</p><div class="ce-space-field"><label for="ce-sim-label">Nom du scénario</label><input id="ce-sim-label" name="label" value="${escapeHtml(defaultLabel)}" maxlength="80" required></div><div class="ce-space-dialog-actions"><button type="button" class="space-btn" data-ce-cancel>Annuler</button><button class="space-btn gold" type="submit">Enregistrer</button></div></form>`;
     openDialog(html,(form,dlg)=>{
       const state=readState(), id=uid('sim');
-      const sim={id,url:cleanUrl(),title,label:String(form.get('label')||title).trim()||title,domain:pageDomain(),values:collectFormValues(),savedAt:now(),updatedAt:now()};
+      const adapter=window.CE_TOOL_SCENARIO;
+      const values=adapter && typeof adapter.serialize==='function'
+        ? {__ceAdapter:String(adapter.id||'custom'),data:adapter.serialize()}
+        : collectFormValues();
+      const sim={id,url:cleanUrl(),title,label:String(form.get('label')||title).trim()||title,domain:pageDomain(),values,savedAt:now(),updatedAt:now()};
       state.simulations[id]=sim; writeState(state); dlg.close(); toast('Scénario enregistré dans Mon espace.'); renderDashboard();
     });
   }
