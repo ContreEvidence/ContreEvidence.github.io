@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """Audit non bloquant de fraîcheur éditoriale pour Contre-Évidence.
 
-Le script repère les pages dont la décision dépend de règles, barèmes, aides,
-fiscalité, crédit ou données susceptibles de changer. Il contrôle la dateModified,
-la présence d'au moins une source officielle pour les sujets les plus sensibles et
-produit un rapport Markdown + JSON exploitable par GitHub Actions.
+Le script repère les pages dont la décision dépend réellement de règles, barèmes,
+aides, fiscalité, crédit ou données susceptibles de changer. Il analyse en priorité
+le titre, les headings et le contenu principal, en excluant navigation, footer,
+éléments cachés et scripts afin de limiter les faux positifs.
 """
 from __future__ import annotations
 
 import argparse
+import html as html_lib
 import json
 import re
 from dataclasses import asdict, dataclass
@@ -26,11 +27,28 @@ OFFICIAL_DOMAINS = {
     "ecologie.gouv.fr", "entreprises.gouv.fr", "education.gouv.fr",
 }
 
-RULE_PATTERNS = re.compile(
-    r"\b(service[- ]public|france travail|urssaf|imp[oô]t|fiscal|taxe|bar[eè]me|smic|"
-    r"droit du travail|code du travail|licenciement|d[eé]mission|ch[oô]mage|allocation|"
-    r"aide|caf|retraite|hcsf|taux d.endettement|pr[eê]t|cr[eé]dit immobilier|"
-    r"p[eé]riode d.essai|contrat de travail|cdi|cdd|micro-entreprise|cotisation)\b",
+# Termes très discriminants : une seule occurrence dans le contenu principal peut suffire.
+STRONG_RULE_PATTERNS = re.compile(
+    r"\b(service[- ]public|france travail|urssaf|imp[oô]t(?:s)?|fiscalit[eé]|bar[eè]me|"
+    r"smic|code du travail|licenciement|allocation ch[oô]mage|caf|hcsf|"
+    r"taux d.endettement|micro-entreprise|cotisations? sociales?|"
+    r"assurance ch[oô]mage|droit au ch[oô]mage|indemnit[eé]s? de rupture|"
+    r"pr[eê]t [àa] taux z[eé]ro|ptz|plafond r[eé]glementaire|"
+    r"d[eé]duction fiscale|abattement fiscal|plus-value immobili[eè]re)\b",
+    re.I,
+)
+
+# Termes ambigus : ils ne classent une page en réglementaire que s'ils sont répétés
+# ou accompagnés d'un vocabulaire explicitement normatif.
+WEAK_RULE_PATTERNS = re.compile(
+    r"\b(droit du travail|d[eé]mission|retraite|aide|cr[eé]dit immobilier|"
+    r"p[eé]riode d.essai|contrat de travail|cdi|cdd|pr[eê]t|cotisation)\b",
+    re.I,
+)
+NORMATIVE_PATTERNS = re.compile(
+    r"\b(r[eè]gle|l[eé]gal|l[eé]gale|loi|plafond|seuil|condition d.[eé]ligibilit[eé]|"
+    r"taux maximum|obligation|interdit|autorise|droit [àa]|d[eé]lai l[eé]gal|"
+    r"indemnit[eé]|pr[eé]avis|bar[eè]me|exon[eé]ration|d[eé]duction|taxation)\b",
     re.I,
 )
 MARKET_PATTERNS = re.compile(
@@ -47,6 +65,11 @@ SENSITIVE_PATTERNS = re.compile(
 DATE_RE = re.compile(r'<meta\s+name=["\']dateModified["\']\s+content=["\'](\d{4}-\d{2}-\d{2})["\']', re.I)
 HREF_RE = re.compile(r'href=["\'](https?://[^"\']+)["\']', re.I)
 TITLE_RE = re.compile(r'<title>(.*?)</title>', re.I | re.S)
+HEADING_RE = re.compile(r'<h[1-3][^>]*>(.*?)</h[1-3]>', re.I | re.S)
+MAIN_RE = re.compile(r'<main\b[^>]*>(.*?)</main>', re.I | re.S)
+ARTICLE_RE = re.compile(r'<article\b[^>]*>(.*?)</article>', re.I | re.S)
+BODY_RE = re.compile(r'<body\b[^>]*>(.*?)</body>', re.I | re.S)
+STRIP_BLOCKS_RE = re.compile(r'<(script|style|nav|footer|aside|template|noscript)\b[^>]*>.*?</\1>', re.I | re.S)
 TAG_RE = re.compile(r"<[^>]+>")
 
 
@@ -73,20 +96,56 @@ def official_count(html: str) -> int:
     return sum(1 for host in hosts if any(host == d or host.endswith("." + d) for d in OFFICIAL_DOMAINS))
 
 
+def clean_text(fragment: str) -> str:
+    fragment = STRIP_BLOCKS_RE.sub(" ", fragment)
+    text = TAG_RE.sub(" ", fragment)
+    text = html_lib.unescape(text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def main_fragment(html: str) -> str:
+    for regex in (MAIN_RE, ARTICLE_RE, BODY_RE):
+        match = regex.search(html)
+        if match:
+            return match.group(1)
+    return html
+
+
 def page_title(html: str, fallback: str) -> str:
     m = TITLE_RE.search(html)
     if not m:
         return fallback
-    return re.sub(r"\s+", " ", TAG_RE.sub("", m.group(1))).strip()
+    return clean_text(m.group(1))
 
 
-def classify(text: str) -> tuple[str, int, bool]:
-    if RULE_PATTERNS.search(text):
+def decision_text(html: str) -> tuple[str, str]:
+    title = page_title(html, "")
+    headings = " ".join(clean_text(h) for h in HEADING_RE.findall(html))
+    body = clean_text(main_fragment(html))
+    # Le texte de décision sert à détecter le thème; le corps est plafonné pour éviter
+    # qu'une longue zone de recommandations annexes ne domine la classification.
+    focus = " ".join(part for part in (title, headings, body[:24000]) if part)
+    return focus, body
+
+
+def classify(focus: str, body: str) -> tuple[str, int, bool]:
+    strong_hits = len(STRONG_RULE_PATTERNS.findall(focus))
+    weak_hits = len(WEAK_RULE_PATTERNS.findall(focus))
+    normative_hits = len(NORMATIVE_PATTERNS.findall(focus))
+
+    # Réglementaire seulement si le sujet en dépend vraiment : terme fort, ou plusieurs
+    # termes ambigus accompagnés d'un vocabulaire normatif.
+    if strong_hits >= 1 or (weak_hits >= 2 and normative_hits >= 1):
         return "règles / aides / fiscalité / emploi", 120, True
-    if MARKET_PATTERNS.search(text):
+
+    market_hits = len(MARKET_PATTERNS.findall(focus))
+    if market_hits >= 2:
         return "taux / marchés / immobilier", 180, False
-    if SENSITIVE_PATTERNS.search(text):
+
+    sensitive_hits = len(SENSITIVE_PATTERNS.findall(focus))
+    if sensitive_hits >= 2:
         return "décision sensible", 270, False
+
     return "stable", 365, False
 
 
@@ -102,8 +161,8 @@ def audit(today: date) -> list[Finding]:
     findings: list[Finding] = []
     for path in iter_html():
         html = path.read_text(encoding="utf-8", errors="replace")
-        plain = TAG_RE.sub(" ", html)
-        category, threshold, needs_official = classify(plain)
+        focus, body = decision_text(html)
+        category, threshold, needs_official = classify(focus, body)
         if category == "stable":
             continue
 
@@ -126,9 +185,9 @@ def audit(today: date) -> list[Finding]:
             reasons.append(f"mise à jour vieille de {age} j (seuil {threshold} j)")
             status = "critical" if age > threshold * 2 else "review"
 
-        sources = official_count(html)
+        sources = official_count(main_fragment(html))
         if needs_official and sources == 0:
-            reasons.append("aucune source officielle détectée sur un sujet réglementaire")
+            reasons.append("aucune source officielle détectée sur un sujet réellement réglementaire")
             status = "critical"
 
         findings.append(Finding(
@@ -151,7 +210,7 @@ def render_md(findings: list[Finding], today: date) -> str:
         f"- 🟠 À revalider : **{counts['review']}**",
         f"- 🟢 Dans la fenêtre de fraîcheur : **{counts['ok']}**",
         "",
-        "Les seuils sont volontairement plus courts pour les règles, aides, fiscalité et emploi (120 jours), puis taux/marchés/immobilier (180 jours). L'audit signale une page ; il ne remplace pas la relecture humaine des sources.",
+        "La détection s'appuie sur le titre, les intertitres et le contenu principal. Les mentions de navigation, footer, scripts et recommandations annexes ne doivent plus suffire à classer une page en réglementaire.",
         "",
     ]
     actionable = [f for f in findings if f.status != "ok"]
