@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Coût trajet travail : le vrai gain d'un emploi plus loin | Simulateur Contre-Évidence</title>
+<meta name="description" content="Calculez ce qu'un emploi plus loin vous rapporte vraiment après transport, frais liés au poste et temps de trajet. Seuil de salaire et heures supplémentaires inclus.">
+<link rel="canonical" href="https://contreevidence.github.io/simulateur-cout-trajet-emploi.html">
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/navigation.css">
+<link rel="stylesheet" href="assets/voice.css">
+<link rel="stylesheet" href="assets/pro.css">
+<link rel="stylesheet" href="assets/brand.css?v=20260808-22">
+<link rel="stylesheet" href="assets/tools.css?v=20260808-22">
+<link rel="stylesheet" href="assets/personal-space.css?v=20260810-13">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Un emploi plus loin vous rapporte-t-il vraiment plus ?">
+<meta property="og:description" content="Comparez hausse de salaire, coût du trajet et heures supplémentaires réellement cédées.">
+<meta property="og:url" content="https://contreevidence.github.io/simulateur-cout-trajet-emploi.html">
+<meta property="og:image" content="https://contreevidence.github.io/assets/og-cover-brand.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Simulateur du vrai coût d'un trajet travail">
+<meta name="twitter:description" content="Calculez le gain conservé après transport et le prix réel de vos heures de trajet supplémentaires.">
+<meta name="twitter:image" content="https://contreevidence.github.io/assets/og-cover-brand.png">
+<meta name="dateModified" content="2026-08-12">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Simulateur du vrai coût d'un trajet domicile-travail","url":"https://contreevidence.github.io/simulateur-cout-trajet-emploi.html","description":"Comparer deux emplois après coût de transport, autres frais et temps de trajet, puis calculer le salaire de bascule.","applicationCategory":"FinanceApplication","operatingSystem":"Web","isAccessibleForFree":true,"author":{"@type":"Organization","name":"Contre-Évidence","url":"https://contreevidence.github.io/"},"publisher":{"@type":"Organization","name":"Contre-Évidence","url":"https://contreevidence.github.io/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://contreevidence.github.io/"},{"@type":"ListItem","position":2,"name":"Outils","item":"https://contreevidence.github.io/bibliotheque.html?type=outil"},{"@type":"ListItem","position":3,"name":"Coût réel d'un trajet travail","item":"https://contreevidence.github.io/simulateur-cout-trajet-emploi.html"}]}</script>
+<link rel="stylesheet" href="assets/ux-retention.css?v=20260810-13">
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header id="site-header"><div class="ce-fallback-header" aria-label="Navigation principale"><a class="ce-fallback-brand" href="index.html">CONTRE-ÉVIDENCE</a><nav><a href="themes/argent.html">Patrimoine</a><a href="parcours-vie-professionnelle.html">Vie professionnelle</a><a href="hors-cadre.html">Fenêtres</a><a href="bibliotheque.html?type=outil">Outils</a><a href="bibliotheque.html">Bibliothèque</a><a href="mon-espace.html" data-ce-space-link="1">Mon espace</a></nav></div></header>
+<main id="contenu">
+<section class="article-hero"><div class="container">
+<div class="voice-signature">+250 € de salaire. Très bien. Et après le trajet, il en reste combien ?</div>
+<div class="kicker">Simulateur · Vie professionnelle × temps × mobilité</div>
+<h1>Un emploi plus loin vous rapporte-t-il vraiment plus ?</h1>
+<p>Comparez deux postes après les coûts réellement provoqués par le travail et le nombre d'heures passées en trajet. Le calculateur distingue le <strong>gain cash</strong>, le <strong>temps gagné ou perdu</strong> et le <strong>salaire minimum de bascule</strong>.</p>
+<div class="ce-update-meta"><span>Mis à jour le 12/08/2026 · Calcul local, aucune donnée transmise</span></div>
+</div></section>
+<section><div class="container tool-shell">
+<div class="tool-privacy"><div>🔒</div><div><strong>Vos montants restent sur cet appareil.</strong><span class="tool-muted"> Aucun salaire, coût ou temps de trajet n'est envoyé à Contre-Évidence.</span></div></div>
+<div class="tool-split">
+<div class="tool-panel">
+<h2 class="tool-section-title">1. Les deux emplois</h2>
+<div class="tool-grid">
+<div class="tool-field"><label for="currentIncome">Salaire net mensuel actuel</label><input id="currentIncome" type="number" min="0" step="50" value="2600"><small>Utilisez la même base des deux côtés : net avant impôt ou net après impôt.</small></div>
+<div class="tool-field"><label for="newIncome">Salaire net mensuel proposé</label><input id="newIncome" type="number" min="0" step="50" value="2850"></div>
+<div class="tool-field"><label for="currentTransport">Transport actuel restant à votre charge</label><input id="currentTransport" type="number" min="0" step="10" value="120"><small>Carburant/énergie, abonnement après remboursement, péage, parking, surcoût véhicule réellement attribuable.</small></div>
+<div class="tool-field"><label for="newTransport">Transport du nouveau poste restant à votre charge</label><input id="newTransport" type="number" min="0" step="10" value="310"></div>
+<div class="tool-field"><label for="currentOther">Autres frais mensuels liés au poste actuel</label><input id="currentOther" type="number" min="0" step="10" value="70"><small>Garde, repas, parking distinct du transport ou autre coût causé par l'organisation du travail.</small></div>
+<div class="tool-field"><label for="newOther">Autres frais mensuels du nouveau poste</label><input id="newOther" type="number" min="0" step="10" value="70"></div>
+</div>
+<h2 class="tool-section-title" style="margin-top:1.3rem">2. Temps réellement passé sur la route</h2>
+<div class="tool-grid">
+<div class="tool-field"><label for="currentMinutes">Trajet aller-retour actuel</label><input id="currentMinutes" type="number" min="0" step="5" value="35"><small>Minutes par jour sur site, aller + retour.</small></div>
+<div class="tool-field"><label for="newMinutes">Nouveau trajet aller-retour</label><input id="newMinutes" type="number" min="0" step="5" value="95"><small>Minutes par jour sur site, aller + retour.</small></div>
+<div class="tool-field"><label for="currentDays">Jours sur site par semaine aujourd'hui</label><input id="currentDays" type="number" min="0" max="7" step="0.5" value="5"><small>Le télétravail réduit ce nombre.</small></div>
+<div class="tool-field"><label for="newDays">Jours sur site par semaine avec le nouveau poste</label><input id="newDays" type="number" min="0" max="7" step="0.5" value="5"></div>
+<div class="tool-field"><label for="timeValue">Valeur personnelle d'une heure</label><input id="timeValue" type="number" min="0" step="1" value="0"><small>0 € si vous préférez garder le temps séparé plutôt que le monétiser.</small></div>
+<div class="tool-field"><label for="safetyMargin">Marge mensuelle exigée pour changer</label><input id="safetyMargin" type="number" min="0" step="25" value="0"><small>Prime personnelle pour que le changement mérite réellement d'être fait.</small></div>
+</div>
+</div>
+<aside class="tool-panel">
+<h2 class="tool-section-title">Ce qu'il reste vraiment</h2>
+<div class="tool-kpis">
+<div class="tool-kpi"><span>Hausse de salaire affichée</span><strong id="salaryDelta">—</strong></div>
+<div class="tool-kpi"><span>Surcoût mensuel lié au poste</span><strong id="costDelta">—</strong></div>
+<div class="tool-kpi"><span>Gain cash réellement conservé</span><strong id="cashGain">—</strong></div>
+</div>
+<div class="tool-kpis" style="margin-top:.75rem">
+<div class="tool-kpi"><span>Temps de trajet actuel</span><strong id="currentHours">—</strong></div>
+<div class="tool-kpi"><span>Temps nouveau trajet</span><strong id="newHours">—</strong></div>
+<div class="tool-kpi"><span>Temps gagné / perdu</span><strong id="hoursDelta">—</strong></div>
+</div>
+<div class="tool-kpis" style="margin-top:.75rem">
+<div class="tool-kpi"><span>Gain cash / heure de trajet ajoutée</span><strong id="gainPerHour">—</strong></div>
+<div class="tool-kpi"><span>Gain après valorisation du temps</span><strong id="adjustedGain">—</strong></div>
+</div>
+<div class="tool-result-note" id="diagnostic">Modifiez les hypothèses pour tester votre situation.</div>
+</aside>
+</div>
+
+<div class="tool-panel">
+<h2>Vos trois seuils de salaire</h2>
+<div class="tool-table-wrap"><table class="tool-table" style="min-width:760px"><thead><tr><th>Seuil</th><th>Salaire net mensuel minimum</th><th>Ce qu'il signifie</th></tr></thead><tbody>
+<tr><td><strong>Équilibre cash</strong></td><td id="cashThreshold">—</td><td>Le nouveau salaire compense exactement la hausse des frais.</td></tr>
+<tr><td><strong>Équilibre temps compris</strong></td><td id="timeThreshold">—</td><td>Le temps gagné ou perdu est valorisé au prix horaire que vous avez choisi.</td></tr>
+<tr><td><strong>Seuil de décision</strong></td><td id="decisionThreshold">—</td><td>Équilibre temps compris + marge mensuelle que vous exigez pour changer.</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="tool-split">
+<div class="tool-panel">
+<h2 class="tool-section-title">Lecture annuelle</h2>
+<div class="tool-kpis">
+<div class="tool-kpi"><span>Gain cash annuel</span><strong id="annualCash">—</strong></div>
+<div class="tool-kpi"><span>Heures de trajet gagnées / perdues par an</span><strong id="annualHours">—</strong></div>
+<div class="tool-kpi"><span>Équivalent journées de 8 h</span><strong id="annualDays">—</strong></div>
+</div>
+</div>
+<aside class="tool-panel">
+<h2 class="tool-section-title">Marge par rapport à votre seuil</h2>
+<div class="tool-kpis"><div class="tool-kpi"><span>Offre − seuil de décision</span><strong id="decisionMargin">—</strong></div></div>
+<div class="tool-result-note" id="marginDiagnostic">Le seuil de décision dépend de la valeur du temps et de la marge que vous avez vous-même choisies.</div>
+</aside>
+</div>
+
+<div class="tool-panel">
+<h2>Comment renseigner le coût du trajet</h2>
+<p><strong>Transports en commun :</strong> utilisez ce qui reste réellement à votre charge après le remboursement employeur confirmé. <strong>Voiture :</strong> ne comptez pas seulement le carburant si la distance supplémentaire augmente aussi péages, parking, entretien, pneus ou renouvellement du véhicule. Ne rajoutez toutefois que les coûts qui changent réellement entre les deux emplois.</p>
+<div class="warning-box"><strong>Attention :</strong> le simulateur ne calcule aucun droit au remboursement et n'applique aucun barème fiscal automatiquement. Les règles varient selon le statut, l'employeur et le mode de transport.</div>
+</div>
+
+<div class="start-here"><div><div class="kicker">Comprendre le résultat</div><h2>Un résultat négatif ne veut pas forcément dire « refuser ».</h2><p>Un poste peut acheter une progression, une qualification ou une meilleure trajectoire. Le dossier vous aide à séparer ce qui relève du niveau de vie immédiat de ce qui relève d'une option de carrière.</p></div><a class="btn btn-primary" href="dossiers/accepter-emploi-plus-loin-cout-trajet.html">Lire le dossier complet</a></div>
+</div></section>
+<section class="ce-related" data-ce-related="1" aria-label="À lire ensuite"><div class="container"><div class="kicker">À lire ensuite</div><h2>Continuez sans repartir de zéro.</h2><a class="ce-related-primary" href="dossiers/accepter-emploi-plus-loin-cout-trajet.html"><div><span class="ce-related-label">Continuer ce raisonnement</span><strong>Accepter un emploi plus loin : combien le trajet coûte vraiment ?</strong></div><span class="ce-related-arrow">→</span><p>Interprétez le gain cash, le temps perdu et les situations où un trajet long peut malgré tout être rationnel.</p></a><div class="ce-related-secondary"><a href="dossiers/demenager-pour-un-emploi-salaire-minimum.html"><div><span class="ce-related-label">Si le trajet devient trop long</span><strong>Déménager pour un emploi : quel salaire supplémentaire faut-il ?</strong></div><span>→</span></a></div></div></section>
+</main>
+<footer><div class="container foot"><span>© <span data-year></span> Contre-Évidence</span><span><a href="methode-sources.html">Méthode & sources</a> · <a href="mentions.html">Mentions</a></span></div></footer>
+<script src="assets/follow.js?v=20260810-13"></script>
+<script src="assets/personal-space.js?v=20260810-13"></script>
+<script src="assets/navigation-v3.js?v=20260810-13"></script>
+<script src="assets/related-content.js?v=20260810-13"></script>
+<script src="assets/ux-retention.js?v=20260810-13"></script>
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const n = id => Number($(id).value) || 0;
+  const euro = v => new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(v);
+  const euro1 = v => new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:1}).format(v);
+  const num1 = v => new Intl.NumberFormat('fr-FR',{maximumFractionDigits:1}).format(v);
+  const signedEuro = v => `${v >= 0 ? '+' : '−'}${euro(Math.abs(v))}`;
+  const signedHours = v => `${v > 0 ? '−' : v < 0 ? '+' : ''}${num1(Math.abs(v))} h/mois`;
+  const weeksPerMonth = 52 / 12;
+
+  function calc(){
+    const currentIncome = n('currentIncome');
+    const newIncome = n('newIncome');
+    const currentCosts = n('currentTransport') + n('currentOther');
+    const newCosts = n('newTransport') + n('newOther');
+    const salaryDelta = newIncome - currentIncome;
+    const costDelta = newCosts - currentCosts;
+    const cashGain = salaryDelta - costDelta;
+    const currentHours = n('currentMinutes') / 60 * n('currentDays') * weeksPerMonth;
+    const newHours = n('newMinutes') / 60 * n('newDays') * weeksPerMonth;
+    const hoursDelta = newHours - currentHours;
+    const timeEffect = hoursDelta * n('timeValue');
+    const cashThreshold = currentIncome + costDelta;
+    const timeThreshold = cashThreshold + timeEffect;
+    const decisionThreshold = timeThreshold + n('safetyMargin');
+    const adjustedGain = newIncome - timeThreshold;
+    const decisionMargin = newIncome - decisionThreshold;
+
+    $('salaryDelta').textContent = signedEuro(salaryDelta);
+    $('costDelta').textContent = signedEuro(costDelta);
+    $('cashGain').textContent = signedEuro(cashGain);
+    $('currentHours').textContent = `${num1(currentHours)} h/mois`;
+    $('newHours').textContent = `${num1(newHours)} h/mois`;
+    $('hoursDelta').textContent = signedHours(hoursDelta);
+    $('gainPerHour').textContent = hoursDelta > 0 ? `${euro1(cashGain / hoursDelta)}/h` : '—';
+    $('adjustedGain').textContent = signedEuro(adjustedGain);
+    $('cashThreshold').textContent = euro(cashThreshold);
+    $('timeThreshold').textContent = euro(timeThreshold);
+    $('decisionThreshold').textContent = euro(decisionThreshold);
+    $('annualCash').textContent = signedEuro(cashGain * 12);
+    const annualH = hoursDelta * 12;
+    $('annualHours').textContent = `${annualH > 0 ? '−' : annualH < 0 ? '+' : ''}${num1(Math.abs(annualH))} h/an`;
+    $('annualDays').textContent = `${annualH > 0 ? '−' : annualH < 0 ? '+' : ''}${num1(Math.abs(annualH) / 8)} jours`;
+    $('decisionMargin').textContent = signedEuro(decisionMargin);
+
+    let text;
+    if (cashGain < 0 && hoursDelta > 0) text = `Le nouveau poste laisse ${euro(Math.abs(cashGain))} de moins par mois et ajoute ${num1(hoursDelta)} h de trajet. Il doit être justifié par autre chose qu'un gain financier immédiat.`;
+    else if (cashGain >= 0 && hoursDelta > 0) text = `Après les frais, vous conservez ${euro(cashGain)} par mois contre ${num1(hoursDelta)} h de trajet supplémentaires. Cela revient à ${euro1(cashGain / hoursDelta)} par heure de trajet ajoutée avant valorisation personnelle du temps.`;
+    else if (cashGain >= 0 && hoursDelta <= 0) text = `Le nouveau poste améliore le cash de ${euro(cashGain)} par mois et vous rend ${num1(Math.abs(hoursDelta))} h de trajet : les deux dimensions vont dans le même sens.`;
+    else text = `Le nouveau poste coûte ${euro(Math.abs(cashGain))} de cash par mois mais vous rend ${num1(Math.abs(hoursDelta))} h de trajet. La décision dépend de la valeur que vous donnez à ce temps et de la trajectoire du poste.`;
+    $('diagnostic').textContent = text;
+
+    if (decisionMargin >= 0) $('marginDiagnostic').textContent = `L'offre dépasse votre seuil de décision de ${euro(decisionMargin)} par mois avec les hypothèses saisies.`;
+    else $('marginDiagnostic').textContent = `Il manque ${euro(Math.abs(decisionMargin))} par mois pour atteindre le seuil de décision que vous avez défini.`;
+  }
+
+  document.querySelectorAll('input').forEach(el => el.addEventListener('input', calc));
+  calc();
+})();
+</script>
+</body>
+</html>
