@@ -42,7 +42,6 @@ NORMATIVE_PATTERNS = re.compile(
     r"droit [àa]|d[eé]lai l[eé]gal|indemnit[eé]|pr[eé]avis|bar[eè]me|"
     r"exon[eé]ration|d[eé]duction|taxation)\b", re.I)
 
-# Thèmes financiers : ils servent à classer, pas à eux seuls à créer une urgence.
 MARKET_PATTERNS = re.compile(
     r"\b(taux|inflation|rendement|assurance-vie|livret|pea|per|etf|march[eé]|"
     r"prix immobilier|loyer|cr[eé]dit|emprunt|valorisation)\b", re.I)
@@ -51,14 +50,14 @@ SENSITIVE_PATTERNS = re.compile(
     r"finance|financier|assurance|retraite|entreprendre|formation|dette|budget|"
     r"transmission)\b", re.I)
 
-# Une page financière sans date n'est signalée que si elle revendique une donnée
-# conjoncturelle ou datée. Cela évite de traiter un guide ETF ou une méthode de
-# valorisation comme périmés simplement à cause de leur thème.
+# Signal conjoncturel seulement si le marqueur temporel est lié à une donnée qui
+# se périme réellement. Un simple « 2026 » ou « aujourd'hui » dans un récit ne suffit pas.
 DYNAMIC_MARKET_PATTERNS = re.compile(
-    r"\b(actuel(?:le)?s?|aujourd.hui|en ce moment|derni[eè]res? donn[eé]es|"
-    r"taux (?:moyen|actuel|directeur)|inflation (?:actuelle|en france)|"
-    r"prix (?:actuel|moyen)s?|rendement (?:actuel|moyen)|"
-    r"202[5-9]|2030)\b", re.I)
+    r"(?:\b(?:taux|inflation|prix immobilier|loyer|rendement|smic|bar[eè]me|livret a)\b.{0,45}"
+    r"\b(?:actuel(?:le)?s?|aujourd.hui|20(?:25|26|27|28|29))\b)|"
+    r"(?:\b(?:actuel(?:le)?s?|aujourd.hui|20(?:25|26|27|28|29))\b.{0,45}"
+    r"\b(?:taux|inflation|prix immobilier|loyer|rendement|smic|bar[eè]me|livret a)\b)|"
+    r"\bderni[eè]res? donn[eé]es\b", re.I)
 
 DATE_RE = re.compile(r'<meta\s+name=["\']dateModified["\']\s+content=["\'](\d{4}-\d{2}-\d{2})["\']', re.I)
 HREF_RE = re.compile(r'href=["\'](https?://[^"\']+)["\']', re.I)
@@ -134,8 +133,6 @@ def classify(structural: str, body: str) -> tuple[str, int, bool]:
     if regulatory_structure or regulatory_density:
         return "règles / aides / fiscalité / emploi", 120, True
 
-    # Une mention ambiguë de « taux » dans un dossier emploi ne doit pas le transformer
-    # en page de marché. Les thèmes annoncés par le titre/intertitres ont priorité.
     if SENSITIVE_PATTERNS.search(structural) and not DYNAMIC_MARKET_PATTERNS.search(structural):
         return "décision sensible", 270, False
 
@@ -170,9 +167,6 @@ def audit(today: date) -> list[Finding]:
         match = DATE_RE.search(html)
         modified = match.group(1) if match else None
 
-        # Sans date, les contenus de méthode et les contenus financiers de fond ne
-        # créent pas d'alerte. Une page de marché n'est exigeante que si elle contient
-        # une revendication conjoncturelle explicite.
         if not modified:
             if category == "décision sensible":
                 continue
