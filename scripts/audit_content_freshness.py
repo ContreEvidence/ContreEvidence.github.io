@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Audit non bloquant de fraîcheur éditoriale pour Contre-Évidence.
 
-Le script repère les pages dont la décision dépend réellement de règles, barèmes,
-aides, fiscalité, crédit ou données susceptibles de changer. La classification
-s'appuie d'abord sur le titre et les intertitres ; le corps seul ne fait basculer
-une page en réglementaire que si la densité de vocabulaire normatif est forte.
+Le script cible les pages dont l'exactitude dépend réellement de règles, barèmes,
+aides, fiscalité, crédit ou données de marché susceptibles de changer. Les contenus
+de méthode plus intemporels peuvent être suivis s'ils portent déjà une date, mais
+l'absence de dateModified n'est pas à elle seule une anomalie pour ces pages.
 """
 from __future__ import annotations
 
@@ -116,10 +116,11 @@ def page_title(html: str, fallback: str) -> str:
 
 
 def decision_text(html: str) -> tuple[str, str]:
+    fragment = main_fragment(html)
     title = page_title(html, "")
-    headings = " ".join(clean_text(h) for h in HEADING_RE.findall(main_fragment(html)))
+    headings = " ".join(clean_text(h) for h in HEADING_RE.findall(fragment))
     structural = " ".join(part for part in (title, headings) if part)
-    body = clean_text(main_fragment(html))
+    body = clean_text(fragment)
     return structural, body
 
 
@@ -128,13 +129,10 @@ def classify(structural: str, body: str) -> tuple[str, int, bool]:
     structural_weak = len(WEAK_RULE_PATTERNS.findall(structural))
     structural_normative = len(NORMATIVE_PATTERNS.findall(structural))
 
-    # Le titre/intertitres ont priorité : ils décrivent ce dont parle réellement la page.
     regulatory_structure = structural_strong >= 1 or (
         structural_weak >= 1 and structural_normative >= 1
     )
 
-    # Le corps ne suffit que si les règles sont centrales, pas lorsqu'elles apparaissent
-    # dans un exemple, une source conseillée ou un contenu associé.
     body_focus = body[:10000]
     body_strong = len(STRONG_RULE_PATTERNS.findall(body_focus))
     body_weak = len(WEAK_RULE_PATTERNS.findall(body_focus))
@@ -147,14 +145,22 @@ def classify(structural: str, body: str) -> tuple[str, int, bool]:
     if regulatory_structure or regulatory_density:
         return "règles / aides / fiscalité / emploi", 120, True
 
+    # Le sujet annoncé dans le titre/intertitres prime sur des occurrences dispersées
+    # dans le corps : un dossier emploi ne devient pas « marché » parce qu'il compare
+    # plusieurs taux ou montants dans des exemples.
     structural_market = len(MARKET_PATTERNS.findall(structural))
+    structural_sensitive = len(SENSITIVE_PATTERNS.findall(structural))
+    if structural_market >= 1:
+        return "taux / marchés / immobilier", 180, False
+    if structural_sensitive >= 1:
+        return "décision sensible", 270, False
+
     body_market = len(MARKET_PATTERNS.findall(body_focus))
-    if structural_market >= 1 or body_market >= 4:
+    if body_market >= 4:
         return "taux / marchés / immobilier", 180, False
 
-    structural_sensitive = len(SENSITIVE_PATTERNS.findall(structural))
     body_sensitive = len(SENSITIVE_PATTERNS.findall(body_focus))
-    if structural_sensitive >= 1 or body_sensitive >= 4:
+    if body_sensitive >= 4:
         return "décision sensible", 270, False
 
     return "stable", 365, False
@@ -179,6 +185,13 @@ def audit(today: date) -> list[Finding]:
 
         m = DATE_RE.search(html)
         modified = m.group(1) if m else None
+
+        # Les contenus de méthode / décision générale ne sont pas périssables par
+        # nature. Sans dateModified, ils sortent donc du rapport plutôt que de créer
+        # une fausse urgence. S'ils sont datés, on peut néanmoins surveiller leur âge.
+        if category == "décision sensible" and not modified:
+            continue
+
         age = None
         reasons: list[str] = []
         status = "ok"
@@ -221,7 +234,7 @@ def render_md(findings: list[Finding], today: date) -> str:
         f"- 🟠 À revalider : **{counts['review']}**",
         f"- 🟢 Dans la fenêtre de fraîcheur : **{counts['ok']}**",
         "",
-        "La détection privilégie désormais le titre et les intertitres. Le corps seul ne classe une page en réglementaire que lorsque plusieurs indices normatifs concordent.",
+        "Le rapport cible les contenus dont l'exactitude se dégrade avec le temps. L'absence de date n'est plus considérée comme une anomalie pour les contenus de méthode intemporels.",
         "",
     ]
     actionable = [f for f in findings if f.status != "ok"]
