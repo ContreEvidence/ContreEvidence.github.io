@@ -1,6 +1,6 @@
 name: Content freshness audit
 
-# The audit deliberately distinguishes evergreen guidance from rules/data that decay.
+# Evergreen guidance stays out of the urgent queue; rules and time-sensitive data are revalidated.
 on:
   workflow_dispatch:
   schedule:
