@@ -1,5 +1,6 @@
 name: Lighthouse regression
 
+# Representative pages are rechecked after editorial or UX changes so tone work cannot hide technical regressions.
 on:
   workflow_dispatch:
   schedule:
