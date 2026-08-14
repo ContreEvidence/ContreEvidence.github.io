@@ -53,3 +53,11 @@
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   .ce-reading-progress{display:none!important}
 }
+
+
+/* Browser-audit guard: contain wide tables on narrow screens. */
+main,.container,.prose,.tool-shell,.tool-panel{min-width:0}
+.compare-wrap,.tool-table-wrap,.table-wrap,.scroll-wrap{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:759px){
+  main table{display:block;width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+}
