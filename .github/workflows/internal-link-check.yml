@@ -1,0 +1,92 @@
+name: Internal link check
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.html"
+      - ".github/workflows/internal-link-check.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Check local HTML links and anchors
+        shell: python
+        run: |
+          from __future__ import annotations
+          from html.parser import HTMLParser
+          import pathlib
+          import sys
+          import urllib.parse
+
+          root = pathlib.Path('.').resolve()
+
+          class Parser(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.links=[]
+                  self.ids=set()
+              def handle_starttag(self, tag, attrs):
+                  d=dict(attrs)
+                  if 'id' in d and d['id']:
+                      self.ids.add(d['id'])
+                  if tag == 'a' and d.get('href'):
+                      self.links.append(d['href'])
+
+          cache={}
+          def parse(path):
+              path=path.resolve()
+              if path not in cache:
+                  p=Parser()
+                  p.feed(path.read_text(encoding='utf-8', errors='replace'))
+                  cache[path]=p
+              return cache[path]
+
+          errors=[]
+          checked=0
+          for source in root.rglob('*.html'):
+              parser=parse(source)
+              for href in parser.links:
+                  href=href.strip()
+                  if not href or href.startswith(('#','mailto:','tel:','javascript:','data:')):
+                      if href.startswith('#') and len(href)>1:
+                          anchor=urllib.parse.unquote(href[1:])
+                          if anchor not in parser.ids:
+                              errors.append(f'{source.relative_to(root)} -> missing local anchor #{anchor}')
+                      continue
+                  parsed=urllib.parse.urlsplit(href)
+                  if parsed.scheme or parsed.netloc or href.startswith('//'):
+                      continue
+                  rel=urllib.parse.unquote(parsed.path)
+                  target=(source.parent / rel).resolve() if rel else source.resolve()
+                  try:
+                      target.relative_to(root)
+                  except ValueError:
+                      errors.append(f'{source.relative_to(root)} -> escapes repository: {href}')
+                      continue
+                  if target.is_dir():
+                      target=target/'index.html'
+                  if not target.exists():
+                      errors.append(f'{source.relative_to(root)} -> missing target: {href}')
+                      continue
+                  checked += 1
+                  if parsed.fragment and target.suffix.lower()=='.html':
+                      anchor=urllib.parse.unquote(parsed.fragment)
+                      if anchor not in parse(target).ids:
+                          errors.append(f'{source.relative_to(root)} -> {target.relative_to(root)} missing anchor #{anchor}')
+
+          print(f'Internal links checked: {checked}')
+          if errors:
+              print(f'Broken internal links/anchors: {len(errors)}')
+              for error in errors[:200]:
+                  print('ERROR:', error)
+              if len(errors)>200:
+                  print(f'... and {len(errors)-200} more')
+              sys.exit(1)
+          print('No broken internal links or anchors found.')
