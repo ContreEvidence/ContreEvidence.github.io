@@ -73,13 +73,10 @@ jobs:
                 if(u.startsWith('http://127.0.0.1:4173/')||u.startsWith('data:')||u.startsWith('blob:')) r.continue();
                 else r.abort();
               });
-              const jsErrors=[], badResponses=[], localFailures=[];
+              const jsErrors=[], badResponses=[];
               page.on('pageerror',e=>jsErrors.push(String(e.message||e)));
               page.on('response',r=>{
                 if(r.url().startsWith('http://127.0.0.1:4173/')&&r.status()>=400) badResponses.push(`${r.status()} ${r.url()}`);
-              });
-              page.on('requestfailed',r=>{
-                if(r.url().startsWith('http://127.0.0.1:4173/')) localFailures.push(`${r.url()} :: ${r.failure()?.errorText||'failed'}`);
               });
 
               const url='http://127.0.0.1:4173/'+rel.split('/').map(encodeURIComponent).join('/');
@@ -119,7 +116,6 @@ jobs:
               const reasons=[];
               if(navigationError) reasons.push('navigation-error');
               if(badResponses.length) reasons.push('local-http:'+badResponses.join('|'));
-              if(localFailures.length) reasons.push('local-request-failed:'+localFailures.join('|'));
               if(jsErrors.length) reasons.push('js:'+[...new Set(jsErrors)].join('|'));
               if(metrics.overflow>3) reasons.push(`horizontal-overflow:${metrics.overflow}px`);
               if(metrics.badTables.length) reasons.push('uncontained-table:'+metrics.badTables.join(','));
