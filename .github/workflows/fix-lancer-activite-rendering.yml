@@ -1,0 +1,86 @@
+name: Fix entrepreneurship dossier rendering
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-lancer-activite-rendering.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Repair dossier template and responsive rendering
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          p = Path('dossiers/lancer-activite-sans-quitter-emploi.html')
+          s = p.read_text(encoding='utf-8')
+
+          # Align stylesheet stack with current dossiers.
+          old = '<link rel="stylesheet" href="../assets/navigation.css"><link rel="stylesheet" href="../assets/pro.css">'
+          new = '<link rel="stylesheet" href="../assets/navigation.css"><link rel="stylesheet" href="../assets/voice.css"><link rel="stylesheet" href="../assets/pro.css">'
+          if old not in s:
+              raise SystemExit('stylesheet anchor not found')
+          s = s.replace(old, new, 1)
+
+          old = '<link rel="stylesheet" href="../assets/brand.css?v=20260808-22"><link rel="canonical"'
+          new = '<link rel="stylesheet" href="../assets/brand.css?v=20260808-22"><link rel="stylesheet" href="../assets/personal-space.css?v=20260810-13"><link rel="stylesheet" href="../assets/ux-retention.css?v=20260810-13"><link rel="canonical"'
+          if old not in s:
+              raise SystemExit('brand/canonical anchor not found')
+          s = s.replace(old, new, 1)
+
+          # Keep navigation visible even before/without JS hydration.
+          old = '<header id="site-header"></header>'
+          new = '<header id="site-header"><div class="ce-fallback-header" aria-label="Navigation principale"><a class="ce-fallback-brand" href="../index.html">CONTRE-ÉVIDENCE</a><nav><a href="../themes/argent.html">Patrimoine</a><a href="../parcours-vie-professionnelle.html">Vie professionnelle</a><a href="../hors-cadre.html">Fenêtres</a><a href="../bibliotheque.html?type=outil">Outils</a><a href="../bibliotheque.html">Bibliothèque</a><a href="../mon-espace.html" data-ce-space-link="1">Mon espace</a></nav></div></header>'
+          if old not in s:
+              raise SystemExit('empty header not found')
+          s = s.replace(old, new, 1)
+
+          # All four tables were using bare browser rendering and could overflow.
+          table_count = s.count('<table>')
+          if table_count != 4:
+              raise SystemExit(f'expected 4 bare tables, found {table_count}')
+          s = s.replace('<table>', '<div class="compare-wrap"><table class="compare-table">')
+          s = s.replace('</table>', '</table></div>')
+
+          # Replace obsolete related-content markup with the current component and relevant links.
+          pattern = re.compile(r'<section class="ce-related" data-ce-related="1" aria-label="À lire ensuite">.*?</section>(?=</article>)', re.S)
+          replacement = '''<section class="ce-related" data-ce-related="1" aria-label="À lire ensuite"><div class="kicker">À lire ensuite</div><h2>Continuez sans repartir de zéro.</h2><div class="ce-related-list"><a href="../themes/entreprendre.html"><strong>Entreprendre : construire et piloter une activité viable</strong><span>→</span></a><a href="quitter-emploi-stable-ou-rester.html"><strong>Rester, préparer son départ ou partir maintenant</strong><span>→</span></a><a href="combien-epargne-avant-demissionner.html"><strong>Calculer la réserve nécessaire avant une rupture de revenu</strong><span>→</span></a></div></section>'''
+          s, n = pattern.subn(replacement, s, count=1)
+          if n != 1:
+              raise SystemExit('related-content block not found')
+
+          # Align footer and runtime scripts with current public pages.
+          old = '<footer><div class="container foot"><span>© Contre-Évidence</span><span><a href="../methode-sources.html">Méthode & sources</a></span></div></footer>'
+          new = '<footer><div class="container foot"><span>© <span data-year></span> Contre-Évidence</span><span><a href="../methode-sources.html">Méthode & sources</a> · <a href="../confidentialite.html">Confidentialité</a> · <a href="../mentions.html">Mentions</a></span></div></footer>'
+          if old not in s:
+              raise SystemExit('footer anchor not found')
+          s = s.replace(old, new, 1)
+
+          old = '<script src="../assets/navigation-v3.js?v=20260810-13"></script><script src="../assets/longform.js?v=20260810-13"></script><script src="../assets/follow.js?v=20260810-13"></script>'
+          new = '<script src="../assets/follow.js?v=20260810-13"></script><script src="../assets/personal-space.js?v=20260810-13"></script><script src="../assets/navigation-v3.js?v=20260810-13"></script><script src="../assets/orientation.js?v=20260810-13"></script><script src="../assets/longform.js?v=20260810-13"></script><script src="../assets/analytics-loader.js?v=20260810-13"></script>'
+          if old not in s:
+              raise SystemExit('script stack anchor not found')
+          s = s.replace(old, new, 1)
+
+          p.write_text(s, encoding='utf-8')
+          PY
+      - name: Commit repair
+        run: |
+          if git diff --quiet; then
+            echo "No changes needed"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dossiers/lancer-activite-sans-quitter-emploi.html
+          git commit -m "Fix entrepreneurship dossier rendering"
+          git push
