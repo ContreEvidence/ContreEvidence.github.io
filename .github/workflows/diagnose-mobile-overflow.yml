@@ -24,19 +24,12 @@ jobs:
           cat > diag.mjs <<'JS'
           import fs from 'fs'; import puppeteer from 'puppeteer-core';
           const files=[
-            'articles/contraintes-innovation.html',
-            'articles/investir-grosse-somme-dun-coup-ou-progressivement.html',
-            'dossiers/bien-immobilier-garder-vendre-transformer.html',
             'dossiers/competent-mais-invisible-travail.html',
-            'dossiers/management-relations-conflits.html',
-            'dossiers/patrimoine-marge-de-manoeuvre.html',
-            'dossiers/quitter-travail-reconversion-sans-se-fragiliser.html',
-            'dossiers/travailler-moins-vivre-mieux.html',
             'outil-capital-professionnel.html',
             'simulateur-investissement-locatif.html'
           ];
           const bins=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium']; const executablePath=bins.find(fs.existsSync);
           const b=await puppeteer.launch({executablePath,headless:'new',args:['--no-sandbox']});
-          for(const rel of files){const p=await b.newPage();await p.setViewport({width:390,height:844});await p.setRequestInterception(true);p.on('request',r=>r.url().startsWith('http://127.0.0.1:4173/')?r.continue():r.abort());await p.goto('http://127.0.0.1:4173/'+rel,{waitUntil:'domcontentloaded'});await new Promise(r=>setTimeout(r,250));const x=await p.evaluate(()=>{const vw=innerWidth;const els=[...document.querySelectorAll('body *')].map((e,i)=>{const r=e.getBoundingClientRect(),c=getComputedStyle(e);if(c.display==='none'||c.visibility==='hidden'||r.width<1||r.height<1)return null;if(r.right<=vw+3&&r.left>=-3)return null;return{tag:e.tagName.toLowerCase(),id:e.id||'',cls:String(e.className||'').slice(0,100),left:Math.round(r.left),right:Math.round(r.right),width:Math.round(r.width),scrollWidth:e.scrollWidth,clientWidth:e.clientWidth,overflowX:c.overflowX,text:(e.innerText||e.textContent||'').trim().replace(/\s+/g,' ').slice(0,90)};}).filter(Boolean);return{docWidth:document.documentElement.scrollWidth,viewport:vw,els:els.slice(-18)};});console.log(`\n## ${rel} DOC=${x.docWidth} VW=${x.viewport}`);for(const e of x.els)console.log(JSON.stringify(e));await p.close();}await b.close();
+          for(const rel of files){const p=await b.newPage();await p.setViewport({width:390,height:844});await p.setRequestInterception(true);p.on('request',r=>r.url().startsWith('http://127.0.0.1:4173/')?r.continue():r.abort());await p.goto('http://127.0.0.1:4173/'+rel,{waitUntil:'domcontentloaded'});await new Promise(r=>setTimeout(r,250));const x=await p.evaluate(()=>{const vw=innerWidth;const els=[...document.querySelectorAll('body *')].map((e,i)=>{const r=e.getBoundingClientRect(),c=getComputedStyle(e);if(c.display==='none'||c.visibility==='hidden'||r.width<1||r.height<1)return null;if(r.right<=vw+3&&r.left>=-3)return null;return{tag:e.tagName.toLowerCase(),id:e.id||'',cls:String(e.className||'').slice(0,100),left:Math.round(r.left),right:Math.round(r.right),width:Math.round(r.width),scrollWidth:e.scrollWidth,clientWidth:e.clientWidth,overflowX:c.overflowX,position:c.position,minWidth:c.minWidth,maxWidth:c.maxWidth,text:(e.innerText||e.textContent||'').trim().replace(/\s+/g,' ').slice(0,100)};}).filter(Boolean);return{docWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,viewport:vw,els:els.slice(-30)};});console.log(`\n## ${rel} DOC=${x.docWidth} BODY=${x.bodyWidth} VW=${x.viewport}`);for(const e of x.els)console.log(JSON.stringify(e));await p.close();}await b.close();
           JS
           node diag.mjs
