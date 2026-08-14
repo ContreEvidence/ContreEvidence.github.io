@@ -1,0 +1,45 @@
+name: Normalize page favicons
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/normalize-page-favicons.yml'
+permissions:
+  contents: write
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Add explicit favicon to every published HTML page that lacks one
+        shell: python
+        run: |
+          from pathlib import Path
+          import os, re
+          root=Path('.').resolve()
+          excluded={'.git','.github','scripts','editorial','publication','publications','node_modules','_site'}
+          changed=[]
+          for p in sorted(root.rglob('*.html')):
+              rel=p.relative_to(root)
+              if any(part in excluded for part in rel.parts):
+                  continue
+              s=p.read_text(encoding='utf-8',errors='replace')
+              if re.search(r'<link\b[^>]*rel=["\'][^"\']*\bicon\b[^"\']*["\']',s,re.I) or re.search(r'<link\b[^>]*rel\s*=\s*["\']icon["\']',s,re.I):
+                  continue
+              if '</head>' not in s.lower():
+                  continue
+              href=os.path.relpath(root/'assets'/'logo.png',p.parent).replace(os.sep,'/')
+              idx=s.lower().find('</head>')
+              s=s[:idx]+f'<link rel="icon" href="{href}">'+s[idx:]
+              p.write_text(s,encoding='utf-8')
+              changed.append(str(rel))
+          print(f'Added favicon to {len(changed)} page(s)')
+          for x in changed: print(x)
+      - name: Commit favicon normalization
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*.html' 'articles/*.html' 'dossiers/*.html' 'themes/*.html' || true
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Normalize favicons across published pages"
+          git push
