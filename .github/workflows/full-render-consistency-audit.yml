@@ -1,0 +1,111 @@
+name: Full render consistency audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/full-render-consistency-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Audit every HTML page for rendering/template risks
+        shell: python
+        run: |
+          from pathlib import Path
+          import re, urllib.parse, collections
+
+          root = Path('.').resolve()
+          pages = sorted(p for p in root.rglob('*.html') if '.git' not in p.parts)
+          findings = collections.defaultdict(list)
+
+          asset_ext = ('.css','.js','.png','.jpg','.jpeg','.webp','.svg','.gif','.ico','.mp4','.mp3','.webmanifest','.json','.xml')
+          attr_re = re.compile(r'''(?:href|src)\s*=\s*["']([^"']+)["']''', re.I)
+
+          def rel(p): return str(p.relative_to(root))
+          def is_content_page(r): return r.startswith(('articles/','dossiers/'))
+          def is_public_shell(r):
+              return not r.startswith(('tests/','vendor/')) and not r.endswith('404.html')
+
+          for p in pages:
+              r = rel(p)
+              s = p.read_text(encoding='utf-8', errors='replace')
+              low = s.lower()
+
+              # Basic document integrity.
+              for token, label in [('<!doctype html','missing-doctype'),('<head','missing-head'),('<body','missing-body'),('<main','missing-main')]:
+                  if token not in low: findings[label].append(r)
+              if low.count('<body') != 1: findings['body-count-not-1'].append(f'{r} ({low.count("<body")})')
+              if low.count('<main') != 1: findings['main-count-not-1'].append(f'{r} ({low.count("<main")})')
+
+              # Asset/path integrity across all HTML, not just sitemap pages.
+              for raw in attr_re.findall(s):
+                  u = raw.strip()
+                  if not u or u.startswith(('#','mailto:','tel:','javascript:','data:','http://','https://','//')) or '${' in u or '{{' in u:
+                      continue
+                  path = urllib.parse.unquote(urllib.parse.urlparse(u).path)
+                  if not path or not path.lower().endswith(asset_ext):
+                      continue
+                  target = (p.parent / path).resolve()
+                  try: target.relative_to(root)
+                  except ValueError:
+                      findings['asset-outside-repo'].append(f'{r} -> {u}')
+                      continue
+                  if not target.exists(): findings['missing-local-asset'].append(f'{r} -> {u}')
+
+              if not is_public_shell(r):
+                  continue
+
+              # Current shared shell risks.
+              if 'id="site-header"' not in s and "id='site-header'" not in s:
+                  findings['missing-site-header'].append(r)
+              if re.search(r'<header\b[^>]*id=["\']site-header["\'][^>]*>\s*</header>', s, re.I):
+                  findings['empty-site-header'].append(r)
+              if 'navigation-v3.js' not in s:
+                  findings['missing-navigation-runtime'].append(r)
+              if 'navigation.css' not in s:
+                  findings['missing-navigation-css'].append(r)
+              if 'assets/style.css' not in s and '../assets/style.css' not in s and '../../assets/style.css' not in s:
+                  findings['missing-base-style'].append(r)
+
+              # Long-form/content-page rendering risks.
+              if is_content_page(r):
+                  if 'class="prose"' in s or "class='prose'" in s:
+                      if 'longform.js' not in s:
+                          findings['content-missing-longform'].append(r)
+                  # Any table not already using one of the scroll/responsive wrappers.
+                  for m in re.finditer(r'<table\b', s, re.I):
+                      prefix = s[max(0,m.start()-220):m.start()].lower()
+                      if 'compare-wrap' not in prefix and 'table-wrap' not in prefix and 'scroll-wrap' not in prefix:
+                          findings['bare-content-table'].append(r)
+                          break
+                  if 'class="ce-related"' in s or "class='ce-related'" in s:
+                      if 'ce-related-list' not in s:
+                          findings['legacy-related-block'].append(r)
+                  if 'ce-related-primary' in s or 'ce-related-secondary' in s:
+                      findings['legacy-related-markup'].append(r)
+
+              # Footer consistency is not necessarily a rendering bug, but surfaces stale templates.
+              if '<footer' in low:
+                  if 'confidentialite.html' not in s or 'mentions.html' not in s:
+                      findings['stale-footer-shell'].append(r)
+
+          print(f'TOTAL_HTML={len(pages)}')
+          severe = {'missing-local-asset','asset-outside-repo','missing-doctype','missing-head','missing-body','missing-main','body-count-not-1','main-count-not-1','bare-content-table','legacy-related-markup'}
+          for key in sorted(findings):
+              vals = sorted(set(findings[key]))
+              print(f'\n## {key}: {len(vals)}')
+              for v in vals:
+                  print(v)
+
+          print('\nSUMMARY')
+          for key in sorted(findings): print(f'{key}={len(set(findings[key]))}')
+          severe_count = sum(len(set(findings[k])) for k in severe)
+          print(f'SEVERE_FINDINGS={severe_count}')
+          # Report only; remediation is decided after reviewing candidates.
