@@ -1,0 +1,58 @@
+name: Fix global render overflow
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-global-render-overflow.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Apply systemic render fixes
+        shell: python
+        run: |
+          from pathlib import Path
+
+          # 1. Grid/tool panels must be allowed to shrink around scrollable tables.
+          p = Path('assets/tools.css')
+          s = p.read_text(encoding='utf-8')
+          marker = '/* Browser-audit guard: wide tool content must scroll inside its panel, never widen the page. */'
+          if marker not in s:
+              s += '''\n\n/* Browser-audit guard: wide tool content must scroll inside its panel, never widen the page. */\n.tool-shell,.tool-panel,.tool-split,.tool-split>*{min-width:0}\n.tool-table-wrap{width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}\n'''
+              p.write_text(s, encoding='utf-8')
+
+          # 2. Universal mobile safety net for editorial and tool tables.
+          p = Path('assets/ux-retention.css')
+          s = p.read_text(encoding='utf-8')
+          marker = '/* Browser-audit guard: contain wide tables on narrow screens. */'
+          if marker not in s:
+              s += '''\n\n/* Browser-audit guard: contain wide tables on narrow screens. */\nmain,.container,.prose,.tool-shell,.tool-panel{min-width:0}\n.compare-wrap,.tool-table-wrap,.table-wrap,.scroll-wrap{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}\n@media(max-width:759px){\n  main table{display:block;width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}\n}\n'''
+              p.write_text(s, encoding='utf-8')
+
+          # 3. Strict-mode syntax error in the resignation runway simulator.
+          p = Path('simulateur-epargne-demission.html')
+          s = p.read_text(encoding='utf-8')
+          old = "const savings=num('savings'),protected=Math.min(savings,num('protected')),known=num('known')"
+          new = "const savings=num('savings'),protectedReserve=Math.min(savings,num('protected')),known=num('known')"
+          if old not in s:
+              raise SystemExit('Expected protected variable declaration not found')
+          s = s.replace(old, new, 1)
+          old = "const usable=Math.max(0,savings-protected-known)"
+          new = "const usable=Math.max(0,savings-protectedReserve-known)"
+          if old not in s:
+              raise SystemExit('Expected protected variable use not found')
+          s = s.replace(old, new, 1)
+          p.write_text(s, encoding='utf-8')
+      - name: Commit systemic fixes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/tools.css assets/ux-retention.css simulateur-epargne-demission.html
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Contain wide content and fix runway simulator script"
+          git push
