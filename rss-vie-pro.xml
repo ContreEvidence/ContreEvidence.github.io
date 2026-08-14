@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/</link>
     <description>Nouveaux guides, dossiers et outils Contre-Évidence consacrés à Vie professionnelle.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Fri, 14 Aug 2026 08:32:09 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 11:31:56 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/rss-vie-pro.xml" rel="self" type="application/rss+xml"/>
@@ -14,6 +14,116 @@
       <title>Contre-Évidence</title>
       <link>https://contreevidence.github.io/</link>
     </image>
+    <item>
+      <title>Trouver ses premiers clients : mesurer le tunnel plutôt que prospecter au hasard</title>
+      <link>https://contreevidence.github.io/dossiers/trouver-premiers-clients.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/trouver-premiers-clients.html</guid>
+      <pubDate>Fri, 14 Aug 2026 08:31:11 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Entrepreneuriat · Clients</category>
+      <description>Choisir les canaux, mesurer prospects, réponses, rendez-vous, devis, ventes, coût d’acquisition et récurrence pour corriger le vrai goulot.</description>
+    </item>
+    <item>
+      <title>Créer une entreprise avec peu d’argent : budget de départ, réserve et trésorerie</title>
+      <link>https://contreevidence.github.io/dossiers/creer-entreprise-avec-peu-argent.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/creer-entreprise-avec-peu-argent.html</guid>
+      <pubDate>Fri, 14 Aug 2026 08:30:40 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Entrepreneuriat · Budget</category>
+      <description>Séparer investissement initial, BFR, trésorerie professionnelle et réserve personnelle selon le type d’activité et le délai avant encaissement.</description>
+    </item>
+    <item>
+      <title>ARE, ARCE, ACRE : choisir le filet de sécurité adapté au démarrage</title>
+      <link>https://contreevidence.github.io/dossiers/are-arce-acre-creation-entreprise.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/are-arce-acre-creation-entreprise.html</guid>
+      <pubDate>Fri, 14 Aug 2026 08:30:10 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Entrepreneuriat · Aides</category>
+      <description>Comparer maintien mensuel, capital immédiat et baisse temporaire de cotisations selon besoins de trésorerie, vitesse de démarrage et scénario d’échec.</description>
+    </item>
+    <item>
+      <title>Micro, EI, EURL ou SASU : choisir selon le modèle économique</title>
+      <link>https://contreevidence.github.io/dossiers/choisir-statut-micro-ei-eurl-sasu.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/choisir-statut-micro-ei-eurl-sasu.html</guid>
+      <pubDate>Fri, 14 Aug 2026 08:29:36 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Entrepreneuriat · Statut</category>
+      <description>Comparer simplicité, charges, fiscalité, protection sociale, investissements, associés futurs et capacité à conserver du résultat dans l’activité.</description>
+    </item>
+    <item>
+      <title>Étude de marché terrain : vérifier la demande avant de construire le projet</title>
+      <link>https://contreevidence.github.io/dossiers/etude-marche-terrain.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/etude-marche-terrain.html</guid>
+      <pubDate>Fri, 14 Aug 2026 08:29:03 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Entrepreneuriat · Validation</category>
+      <description>Passer d’un marché théorique à un marché accessible avec tests de prix, comportements d’achat, concurrence, saisonnalité et critères d’abandon.</description>
+    </item>
+    <item>
+      <title>Se reconvertir sans deux ans de formation : comparer les voies courtes</title>
+      <link>https://contreevidence.github.io/dossiers/reconversion-sans-formation-longue.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/reconversion-sans-formation-longue.html</guid>
+      <pubDate>Fri, 14 Aug 2026 08:16:51 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Reconversion</category>
+      <description>Comparer candidature directe, poste passerelle, formation courte, certification, VAE et immersion selon coût, délai, preuves et débouchés.</description>
+    </item>
+    <item>
+      <title>Métiers accessibles sans diplôme : accès, rémunération, contraintes et progression</title>
+      <link>https://contreevidence.github.io/dossiers/metiers-accessibles-sans-diplome.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/metiers-accessibles-sans-diplome.html</guid>
+      <pubDate>Fri, 14 Aug 2026 08:16:20 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Métiers sans diplôme</category>
+      <description>Comparer accès réel, qualification courte, salaire d’entrée, contraintes, marché, potentiel d’évolution et possibilité de devenir indépendant.</description>
+    </item>
+    <item>
+      <title>Créer une entreprise sans diplôme : ce qui est libre, réglementé ou accessible autrement</title>
+      <link>https://contreevidence.github.io/dossiers/creer-entreprise-sans-diplome.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/creer-entreprise-sans-diplome.html</guid>
+      <pubDate>Fri, 14 Aug 2026 08:15:41 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Entrepreneuriat · Diplôme</category>
+      <description>Distinguer les activités libres des métiers réglementés et vérifier qualification, expérience, autorisation, assurance et voies d’accès alternatives.</description>
+    </item>
+    <item>
+      <title>Combien de chiffre d’affaires faut-il pour vivre de son activité ?</title>
+      <link>https://contreevidence.github.io/dossiers/combien-chiffre-affaires-pour-vivre.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/combien-chiffre-affaires-pour-vivre.html</guid>
+      <pubDate>Fri, 14 Aug 2026 08:15:11 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Entrepreneuriat · Revenu</category>
+      <description>Remonter du revenu personnel cible vers le CA nécessaire selon marge, coûts, cotisations, capacité facturable et structure d’activité.</description>
+    </item>
+    <item>
+      <title>Business plan : ce qu’il doit vraiment prouver avant de convaincre</title>
+      <link>https://contreevidence.github.io/dossiers/business-plan-utile.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/business-plan-utile.html</guid>
+      <pubDate>Fri, 14 Aug 2026 08:14:38 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Entrepreneuriat · Business plan</category>
+      <description>Relier marché, prix, capacité, marge, financement et scénarios afin de tester le projet avant de produire un document de présentation.</description>
+    </item>
+    <item>
+      <title>Prévisionnel 12 mois : clients, prix, charges et trésorerie dans trois scénarios</title>
+      <link>https://contreevidence.github.io/dossiers/previsionnel-activite-12-mois.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/previsionnel-activite-12-mois.html</guid>
+      <pubDate>Fri, 14 Aug 2026 08:13:57 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Entrepreneuriat · Prévisionnel</category>
+      <description>Construire un scénario prudent, central et favorable avec montée en charge, saisonnalité, capacité, investissements, BFR et trésorerie.</description>
+    </item>
     <item>
       <title>Décider à deux : travail, mobilité et patrimoine sans fragiliser le foyer</title>
       <link>https://contreevidence.github.io/dossiers/decider-a-deux-travail-patrimoine.html</link>
