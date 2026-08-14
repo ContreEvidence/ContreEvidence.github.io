@@ -39,12 +39,18 @@ jobs:
           table_re = re.compile(r'<table\b', re.I)
           source_re = re.compile(r'href=["\']https?://([^/"\']+)', re.I)
           word_re = re.compile(r"[A-Za-zÀ-ÖØ-öø-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÖØ-öø-ÿ0-9]+)*")
+          number_re = re.compile(r'\b\d+(?:[\s.,]\d+)?\s*(?:€|%|euros?|mois|ans?|heures?|h\b|jours?|clients?|ventes?|k€)', re.I)
+          case_re = re.compile(r'\b(?:cas|exemple|scénario|profil)\b', re.I)
+          adverse_re = re.compile(r'\b(?:stress[ -]?test|scénario adverse|scénario prudent|baisse de|perte de|red flags?|seuil d.?arrêt|critères? d.?abandon)\b', re.I)
+          reversal_re = re.compile(r'\b(?:inverse|s.?inverse|changerait la conclusion|ce qui ferait|quand .* change|réponse change|si .* alors)\b', re.I)
+          action_re = re.compile(r'\b(?:plan d.?action|protocole|checklist|à faire|étapes?|jours|questions à poser)\b', re.I)
 
           institutional = (
               'banque-france.fr','economie.gouv.fr','service-public.fr','service-public.gouv.fr',
               'legifrance.gouv.fr','amf-france.org','francetravail.fr','francecompetences.fr',
               'moncompteformation.gouv.fr','transitionspro.fr','insee.fr','urssaf.fr','impots.gouv.fr',
-              'anil.org','abe-infoservice.fr','data.gouv.fr','ecologie.gouv.fr','travail-emploi.gouv.fr'
+              'anil.org','abe-infoservice.fr','data.gouv.fr','ecologie.gouv.fr','travail-emploi.gouv.fr',
+              'bpifrance-creation.fr','vae.gouv.fr','entreprendre.service-public.fr'
           )
           primary_market = (
               'msci.com','spglobal.com','ecb.europa.eu','eurostat.ec.europa.eu'
@@ -52,6 +58,29 @@ jobs:
 
           def count_hosts(hosts, domains):
               return sum(1 for host in hosts if any(host == d or host.endswith('.'+d) for d in domains))
+
+          def depth_score(raw, visible, rel, words, tables, inst, primary, external):
+              dossier = rel.startswith('dossiers/')
+              score = 0
+              # Réponse immédiate / cadrage
+              if 'answer-box' in raw or 'voice-signature' in raw: score += 1
+              # Profondeur minimale, sans faire de la longueur un objectif en soi
+              if words >= (1100 if dossier else 800): score += 1
+              if words >= (1500 if dossier else 1200): score += 1
+              # Cas et quantification
+              if len(case_re.findall(visible)) >= (3 if dossier else 1): score += 1
+              if len(number_re.findall(visible)) >= (8 if dossier else 3): score += 1
+              if tables >= (2 if dossier else 1): score += 1
+              # Contre-scénario / robustesse
+              if adverse_re.search(visible): score += 1
+              if reversal_re.search(visible): score += 1
+              # Décision et passage à l'action
+              if 'decision-box' in raw: score += 1
+              if action_re.search(visible): score += 1
+              # Sources et suite logique
+              if inst + primary >= 1: score += 1
+              if 'ce-related' in raw: score += 1
+              return score
 
           rows = []
           for url in urls:
@@ -61,6 +90,8 @@ jobs:
               page = root / rel
               if not page.exists(): continue
               raw = page.read_text(encoding='utf-8', errors='replace')
+              if re.search(r'<meta\s+name=["\']robots["\'][^>]*noindex', raw, re.I):
+                  continue
               visible = html.unescape(tag_re.sub(' ', script_re.sub(' ', raw)))
               words = len(word_re.findall(visible))
               h2 = len(h2_re.findall(raw))
@@ -69,33 +100,50 @@ jobs:
               inst = count_hosts(hosts, institutional)
               primary = count_hosts(hosts, primary_market)
               external = len(hosts)
-              rows.append((words, rel, h2, tables, inst, primary, external))
+              cases = len(case_re.findall(visible))
+              numbers = len(number_re.findall(visible))
+              adverse = bool(adverse_re.search(visible))
+              reversal = bool(reversal_re.search(visible))
+              score = depth_score(raw, visible, rel, words, tables, inst, primary, external)
+              rows.append((score, words, rel, h2, tables, inst, primary, external, cases, numbers, adverse, reversal))
 
-          rows.sort()
-          print(f'Indexable dossiers/articles: {len(rows)}')
+          print(f'Indexable dossiers/articles audités: {len(rows)}')
+
+          by_words = sorted(rows, key=lambda x: x[1])
           print('\n20 contenus les plus courts:')
-          print('mots | h2 | tableaux | institutionnel | primaire marché | externes | fichier')
-          for words, rel, h2, tables, inst, primary, external in rows[:20]:
-              print(f'{words:4} | {h2:2} | {tables:2} | {inst:2} | {primary:2} | {external:2} | {rel}')
+          print('score | mots | h2 | tab | cas | chiffres | inst | fichier')
+          for score, words, rel, h2, tables, inst, primary, external, cases, numbers, adverse, reversal in by_words[:20]:
+              print(f'{score:2}/12 | {words:4} | {h2:2} | {tables:2} | {cases:2} | {numbers:3} | {inst+primary:2} | {rel}')
 
-          print('\nContenus sous seuil indicatif (dossier < 900 mots ; article < 700 mots):')
-          flagged = []
-          for row in rows:
-              words, rel, *_ = row
-              threshold = 900 if rel.startswith('dossiers/') else 700
-              if words < threshold: flagged.append(row)
-          if not flagged:
+          print('\nDossiers à revoir en priorité selon le standard éditorial (score < 8/12):')
+          review = [r for r in rows if r[2].startswith('dossiers/') and r[0] < 8]
+          review.sort(key=lambda x:(x[0],x[1]))
+          if not review:
               print('Aucun.')
           else:
-              for words, rel, h2, tables, inst, primary, external in flagged:
-                  print(f'{words:4} mots | {h2} h2 | {tables} tableaux | {inst} institutionnels | {primary} primaires marché | {rel}')
+              for score, words, rel, h2, tables, inst, primary, external, cases, numbers, adverse, reversal in review:
+                  missing=[]
+                  if words < 1100: missing.append('profondeur')
+                  if cases < 3: missing.append('cas')
+                  if numbers < 8: missing.append('chiffrage')
+                  if tables < 2: missing.append('comparaison')
+                  if not adverse: missing.append('stress/adverse')
+                  if not reversal: missing.append('inversion')
+                  if inst+primary == 0: missing.append('source primaire/institutionnelle')
+                  print(f'{score:2}/12 | {words:4} mots | {rel} | à vérifier: {", ".join(missing) or "structure décisionnelle"}')
 
-          print('\nContenus longs sans source institutionnelle ni primaire de marché détectée (file de revue, pas erreur):')
-          review=[]
-          for words, rel, h2, tables, inst, primary, external in rows:
+          print('\nArticles très faibles selon la même grille adaptée (score < 5/12):')
+          article_review=[r for r in rows if r[2].startswith('articles/') and r[0] < 5]
+          article_review.sort(key=lambda x:(x[0],x[1]))
+          for score, words, rel, *_ in article_review:
+              print(f'{score:2}/12 | {words:4} mots | {rel}')
+          if not article_review: print('Aucun.')
+
+          print('\nPages longues sans source institutionnelle ni primaire de marché (revue factuelle, pas erreur automatique):')
+          fact_review=[]
+          for score, words, rel, h2, tables, inst, primary, external, cases, numbers, adverse, reversal in sorted(rows, key=lambda x:x[1]):
               if words >= 1200 and inst == 0 and primary == 0:
-                  review.append((words,rel,external))
+                  fact_review.append((words,rel,external))
                   print(f'{words:4} mots | {external:2} liens externes | {rel}')
-
-          print(f'\nFile de revue longue sans source institutionnelle/primaire: {len(review)} page(s).')
-          print('Audit informatif : la longueur n’est pas un critère de classement et une page non-YMYL peut être excellente sans source institutionnelle. Le signal sert à prioriser une vérification humaine des affirmations factuelles sensibles.')
+          print(f'File de revue factuelle: {len(fact_review)} page(s).')
+          print('\nAudit informatif : le score sert à prioriser une revue humaine. Tous les sujets n’exigent pas mécaniquement le même nombre de cas ou de chiffres ; les pages de navigation et redirections noindex sont exclues.')
