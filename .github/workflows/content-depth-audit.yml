@@ -50,7 +50,7 @@ jobs:
               'legifrance.gouv.fr','amf-france.org','francetravail.fr','francecompetences.fr',
               'moncompteformation.gouv.fr','transitionspro.fr','insee.fr','urssaf.fr','impots.gouv.fr',
               'anil.org','abe-infoservice.fr','data.gouv.fr','ecologie.gouv.fr','travail-emploi.gouv.fr',
-              'bpifrance-creation.fr','vae.gouv.fr','entreprendre.service-public.fr'
+              'bpifrance-creation.fr','vae.gouv.fr','entreprendre.service-public.fr','inrs.fr'
           )
           primary_market = (
               'msci.com','spglobal.com','ecb.europa.eu','eurostat.ec.europa.eu'
