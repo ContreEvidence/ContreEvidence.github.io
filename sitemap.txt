@@ -56,6 +56,7 @@ https://contreevidence.github.io/dossiers/depenses-recurrentes-abonnements-assur
 https://contreevidence.github.io/dossiers/devenir-manager-premiere-fois.html
 https://contreevidence.github.io/dossiers/embaucher-ou-sous-traiter.html
 https://contreevidence.github.io/dossiers/emploi-chercher-accepter-negocier-evoluer.html
+https://contreevidence.github.io/dossiers/etude-marche-terrain.html
 https://contreevidence.github.io/dossiers/experience-devient-risque-recruteur.html
 https://contreevidence.github.io/dossiers/finances-allocation-portefeuille.html
 https://contreevidence.github.io/dossiers/finances-cadre-global.html
