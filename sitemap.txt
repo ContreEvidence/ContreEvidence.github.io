@@ -122,6 +122,7 @@ https://contreevidence.github.io/simulateur-acheter-ou-louer.html
 https://contreevidence.github.io/simulateur-cout-formation.html
 https://contreevidence.github.io/simulateur-cout-trajet-emploi.html
 https://contreevidence.github.io/simulateur-epargne-demission.html
+https://contreevidence.github.io/simulateur-previsionnel-activite.html
 https://contreevidence.github.io/simulateur-prix-attendre.html
 https://contreevidence.github.io/simulateur-prix-minimum-rentable.html
 https://contreevidence.github.io/simulateur-salaire-minimum-demenagement.html
