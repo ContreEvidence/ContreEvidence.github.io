@@ -82,6 +82,37 @@ Always ask:
 - Which order destroys an option?
 - Which order creates or preserves one?
 
+## Editorial review gate — mandatory
+
+The entire published corpus is being revisited under this reasoning policy. **Do not apply a substantive rewrite to an existing article or dossier until the user has explicitly approved that specific proposal.**
+
+The default review flow is one proposal at a time. Do not batch editorial approvals.
+
+For every substantive proposed change, present a validation card containing:
+
+1. page concerned;
+2. why it is being revisited;
+3. current logic or relevant excerpt;
+4. problem detected;
+5. proposed change;
+6. solution-engineering motifs activated;
+7. causal test — `If X, then Y changes because Z`;
+8. proof status;
+9. sources required where applicable;
+10. expected reader impact;
+11. risk or downside of the change.
+
+The user may answer simply:
+
+- `valide` — apply only the approved proposal, audit it, record the decision, then present the next proposal;
+- `refuse` — keep the current content and record the decision;
+- `à revoir` — change nothing and rework the same proposal;
+- `passe` — defer the proposal and move to the next one.
+
+Infrastructure, audit scripts, reports, internal method files, and purely technical fixes may be changed without editorial approval when they do not alter the substantive meaning of published content.
+
+When there is any doubt whether a change is substantive, treat it as substantive and request approval.
+
 ## Scope
 
 This reasoning policy applies across domains, including:
