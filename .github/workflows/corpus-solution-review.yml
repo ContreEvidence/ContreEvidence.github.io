@@ -6,6 +6,7 @@ on:
     paths:
       - 'dossiers/**.html'
       - 'articles/**.html'
+      - 'reports/corpus-solution-human-review.json'
       - '.github/workflows/corpus-solution-review.yml'
   workflow_dispatch:
 
@@ -29,7 +30,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           from html import unescape
-          import re
+          import re, json, subprocess
           from datetime import date
 
           roots = [Path('dossiers'), Path('articles')]
@@ -37,6 +38,14 @@ jobs:
           for root in roots:
               if root.exists():
                   files.extend(root.rglob('*.html'))
+
+          reviews_path = Path('reports/corpus-solution-human-review.json')
+          reviews = {}
+          if reviews_path.exists():
+              try:
+                  reviews = json.loads(reviews_path.read_text(encoding='utf-8')).get('pages', {})
+              except Exception:
+                  reviews = {}
 
           TAG = re.compile(r'<[^>]+>', re.S)
           SCRIPT = re.compile(r'<(script|style)\b[^>]*>.*?</\1>', re.I | re.S)
@@ -49,6 +58,9 @@ jobs:
               raw = TAG.sub(' ', raw)
               raw = unescape(raw)
               return re.sub(r'\s+', ' ', raw).strip().lower()
+
+          def blob_sha(path):
+              return subprocess.check_output(['git', 'hash-object', str(path)], text=True).strip()
 
           checks = {
               'probleme': [r'probl[eè]me', r'obstacle', r'verrou', r'goulot', r'blocage', r'contrainte', r'pi[eè]ge'],
@@ -64,6 +76,8 @@ jobs:
 
           rows = []
           excluded = 0
+          human_valid = 0
+          human_stale = 0
           for path in sorted(files):
               raw = path.read_text(encoding='utf-8', errors='ignore')
               if NOINDEX.search(raw):
@@ -71,11 +85,16 @@ jobs:
                   continue
               text = visible_text(raw)
               words = len(text.split())
-              result = {}
-              for key, patterns in checks.items():
-                  result[key] = any(re.search(p, text, re.I | re.S) for p in patterns)
+              result = {key: any(re.search(p, text, re.I | re.S) for p in patterns) for key, patterns in checks.items()}
               score = sum(result.values())
-              rows.append((score, words, str(path), result))
+              p = str(path)
+              current_sha = blob_sha(path)
+              review = reviews.get(p)
+              human_ok = bool(review and review.get('status') == 'conforme' and review.get('sha') == current_sha)
+              stale = bool(review and review.get('sha') != current_sha)
+              human_valid += int(human_ok)
+              human_stale += int(stale)
+              rows.append((score, words, p, result, human_ok, stale))
 
           rows.sort(key=lambda x: (x[0], x[1], x[2]))
           out = []
@@ -83,31 +102,44 @@ jobs:
           out.append('')
           out.append(f'Mise à jour automatique : {date.today().isoformat()}')
           out.append('')
-          out.append('Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les pages `noindex` de redirection/consolidation sont exclues. Il sert de **détecteur de profondeur de résolution**, pas de juge éditorial.')
+          out.append('Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les pages `noindex` sont exclues. Les validations humaines restent actives uniquement tant que le SHA du fichier ne change pas.')
           out.append('')
           out.append('Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.')
           out.append('')
-          out.append(f'Pages analysées : **{len(rows)}**. Pages `noindex` exclues : **{excluded}**.')
+          out.append(f'Pages analysées : **{len(rows)}**. Pages `noindex` exclues : **{excluded}**. Validations humaines actives : **{human_valid}**. Validations devenues caduques après modification : **{human_stale}**.')
           out.append('')
           out.append('## Priorité humaine')
           out.append('')
           out.append('| Score | Mots | Page | Dimensions manquantes |')
           out.append('|---:|---:|---|---|')
-          for score, words, path, result in rows:
-              if score <= 6 or words < 700:
+          priority_count = 0
+          for score, words, path, result, human_ok, stale in rows:
+              if (score <= 6 or words < 700) and not human_ok:
                   missing = ', '.join(k for k,v in result.items() if not v) or '—'
-                  out.append(f'| {score}/9 | {words} | `{path}` | {missing} |')
+                  suffix = ' · validation précédente caduque' if stale else ''
+                  out.append(f'| {score}/9 | {words} | `{path}` | {missing}{suffix} |')
+                  priority_count += 1
+          if not priority_count:
+              out.append('| — | — | — | **Aucune priorité critique non relue** |')
+          out.append('')
+          out.append('## Pages validées humainement et inchangées')
+          out.append('')
+          for score, words, path, result, human_ok, stale in rows:
+              if human_ok:
+                  note = reviews[path].get('note', '')
+                  out.append(f'- `{path}` — {score}/9 automatique — {note}')
           out.append('')
           out.append('## Corpus complet')
           out.append('')
-          out.append('| Score | Mots | Page |')
-          out.append('|---:|---:|---|')
-          for score, words, path, result in rows:
-              out.append(f'| {score}/9 | {words} | `{path}` |')
+          out.append('| Score | Mots | Revue | Page |')
+          out.append('|---:|---:|---|---|')
+          for score, words, path, result, human_ok, stale in rows:
+              status = 'humaine ✓' if human_ok else ('à revoir après changement' if stale else 'heuristique')
+              out.append(f'| {score}/9 | {words} | {status} | `{path}` |')
           out.append('')
           out.append('## Règle de reprise')
           out.append('')
-          out.append('Une page signalée n’est réécrite que si une lecture humaine identifie un gain réel : faux verrou, levier causal manquant, seuil, séquence, combinaison, scénario adverse, preuve ou condition de sortie. Aucun bloc générique ne doit être ajouté uniquement pour augmenter le score.')
+          out.append('Une page signalée n’est réécrite que si une lecture humaine identifie un gain réel : faux verrou, levier causal manquant, seuil, séquence, combinaison, scénario adverse, preuve ou condition de sortie. Une validation humaine est attachée au contenu exact du fichier : toute modification la révoque automatiquement.')
           out.append('')
           Path('reports/corpus-solution-review.md').write_text('\n'.join(out) + '\n', encoding='utf-8')
           PY
