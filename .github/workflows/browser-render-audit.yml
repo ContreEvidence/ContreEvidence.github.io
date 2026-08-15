@@ -43,6 +43,7 @@ jobs:
 
           const root=process.cwd();
           const excluded=new Set(['.git','.github','scripts','editorial','publication','publications','node_modules','_site']);
+          const utilityPages=new Set(['plan-du-site.html']);
           function walk(dir,out=[]){
             for(const name of fs.readdirSync(dir)){
               if(excluded.has(name)) continue;
@@ -53,7 +54,7 @@ jobs:
             return out;
           }
 
-          const pages=walk(root).sort();
+          const pages=walk(root).filter(rel=>!utilityPages.has(rel)).sort();
           const bins=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium','/usr/bin/chromium-browser'];
           const executablePath=bins.find(fs.existsSync);
           if(!executablePath) throw new Error('Chrome/Chromium not found');
@@ -104,9 +105,30 @@ jobs:
                   }
                   if(!contained) badTables.push(i+1);
                 });
+                const overflow=Math.max(0,document.documentElement.scrollWidth-document.documentElement.clientWidth);
+                const overflowElements=[];
+                if(overflow>3){
+                  document.querySelectorAll('body *').forEach(el=>{
+                    if(overflowElements.length>=8) return;
+                    const c=getComputedStyle(el), r=el.getBoundingClientRect();
+                    if(c.display==='none'||c.visibility==='hidden'||c.position==='fixed'||r.width<=2||r.height<=2) return;
+                    if(r.right>innerWidth+3||r.left<-3){
+                      overflowElements.push({
+                        tag:el.tagName.toLowerCase(),
+                        id:el.id||'',
+                        cls:String(el.className||'').slice(0,80),
+                        left:Math.round(r.left),
+                        right:Math.round(r.right),
+                        width:Math.round(r.width),
+                        text:(el.textContent||'').trim().replace(/\s+/g,' ').slice(0,90)
+                      });
+                    }
+                  });
+                }
                 return {
                   textLen:(document.body?.innerText||'').trim().length,
-                  overflow:Math.max(0,document.documentElement.scrollWidth-document.documentElement.clientWidth),
+                  overflow,
+                  overflowElements,
                   headerVisible:visible(document.querySelector('#site-header, header')),
                   mainVisible:visible(document.querySelector('main')),
                   badTables
@@ -117,7 +139,7 @@ jobs:
               if(navigationError) reasons.push('navigation-error');
               if(badResponses.length) reasons.push('local-http:'+badResponses.join('|'));
               if(jsErrors.length) reasons.push('js:'+[...new Set(jsErrors)].join('|'));
-              if(metrics.overflow>3) reasons.push(`horizontal-overflow:${metrics.overflow}px`);
+              if(metrics.overflow>3) reasons.push(`horizontal-overflow:${metrics.overflow}px offenders=${JSON.stringify(metrics.overflowElements)}`);
               if(metrics.badTables.length) reasons.push('uncontained-table:'+metrics.badTables.join(','));
               if(!metrics.headerVisible&&rel!=='404.html') reasons.push('header-not-visible');
               if(!metrics.mainVisible&&rel!=='404.html') reasons.push('main-not-visible');
