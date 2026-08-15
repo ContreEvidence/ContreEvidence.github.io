@@ -2,136 +2,157 @@
 
 Mise à jour : 16 août 2026
 
-## Pourquoi ce chantier existe
+## Standard éditorial
 
-Le corpus est riche et souvent correctement sourcé, mais une partie importante des dossiers atteint davantage une **profondeur d’analyse** qu’une **profondeur de résolution**.
+Le corpus doit viser une **profondeur de résolution**, pas seulement une profondeur d’analyse :
 
-Le standard est désormais :
+**promesse → obstacle précis → contraintes fixes / variables modifiables → fenêtres → conditions de possibilité → seuils et chiffrage → séquence d’exécution → scénario adverse → condition d’abandon ou de révision.**
 
-**promesse → obstacle précis → contraintes fixes / variables modifiables → fenêtres → conditions de possibilité → seuils et chiffrage → séquence d’exécution → condition d’abandon ou de révision.**
-
-Une page n’est pas terminée parce qu’elle explique correctement la règle. Elle doit répondre à la question du titre et aider le lecteur à construire ou tester une solution.
+Une page n’est pas améliorée parce qu’elle devient plus longue. Elle l’est lorsqu’elle aide mieux le lecteur à comprendre **ce qui bloque, ce qui peut changer, pourquoi un levier agit, à quel seuil la décision s’inverse et comment préserver une sortie**.
 
 ## Mode de travail
 
-Le chantier est désormais **autonome** : les améliorations substantielles sont appliquées directement lorsqu’elles apportent une vraie profondeur de résolution. Elles sont ensuite consignées dans `reports/content-review-decisions.md` et récapitulées à l’utilisateur par lot.
+Le chantier est autonome : les améliorations substantielles sont appliquées directement lorsqu’une lecture montre un gain réel. Elles sont consignées dans `reports/content-review-decisions.md` puis récapitulées à l’utilisateur.
 
-Une page déjà forte peut être auditée puis laissée intacte. Le but n’est pas de réécrire tout le texte : c’est de revisiter tout le raisonnement.
+Une page déjà forte est conservée. Aucun bloc générique n’est ajouté pour améliorer artificiellement un score.
 
-## État du chantier
+## Source de vérité du chantier
 
-Réécritures étalon ou substantielles déjà réalisées :
+Les anciennes vagues basées sur des scores 4/12, 5/12, 6/12 et 7/12 sont désormais **historiques** : plusieurs pages ont été enrichies depuis et leurs anciens scores ne décrivent plus correctement le corpus.
+
+Le pilotage courant repose sur :
+
+1. `.github/workflows/corpus-solution-review.yml` — scan transversal de tous les contenus indexables ;
+2. `reports/corpus-solution-review.md` — file automatique par dimensions manquantes ;
+3. `reports/corpus-solution-human-review.json` — mémoire des validations humaines attachées au SHA exact ;
+4. `reports/content-review-decisions.md` — journal des réécritures et décisions humaines.
+
+### Règle de mémoire
+
+Une page validée humainement reste hors de la file uniquement tant que son **blob SHA Git** reste identique. Toute modification du contenu révoque automatiquement cette validation et remet la page dans la revue.
+
+## État du passage global
+
+Premier scan propre après exclusion des pages `noindex` :
+
+- **122 contenus indexables analysés** ;
+- **79 pages `noindex` de consolidation/redirection exclues** ;
+- **11 priorités critiques** détectées par l’heuristique ;
+- **11/11 relues humainement** ;
+- **10 conservées** car déjà conformes malgré un score heuristique incomplet ;
+- **1 réécrite** : `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`.
+
+La prochaine passe porte sur les contenus intermédiaires du rapport, en commençant par ceux à forte conséquence pratique ou forte promesse.
+
+## Réécritures substantielles récentes
+
+### 16 août 2026
+
+- ✅ `dossiers/choisir-statut-micro-ei-eurl-sasu.html`
+  - forme juridique, régime micro et TVA séparés ;
+  - trajectoire de structure et déclencheurs de bascule ;
+  - suppression du faux seuil universel de frais.
+
+- ✅ `dossiers/cout-reel-voiture-achat-credit-loa-lld.html`
+  - besoin de mobilité avant financement ;
+  - coût total, liquidité, valeur de sortie ;
+  - stress tests de kilométrage et rupture anticipée.
+
+- ✅ `dossiers/location-nue-ou-meublee-comparer.html`
+  - marché et usage avant fiscalité ;
+  - seuil de surloyer meublé ;
+  - durée, DPE, rotation, temps de gestion et réversibilité.
+
+- ✅ `dossiers/gestion-pilotee-comparer-performances.html`
+  - séparation allocation / exécution / délégation ;
+  - prime de délégation ;
+  - benchmark comparable, valeur comportementale conditionnelle et règle de sortie.
+
+- ✅ `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
+  - trois poches : socle / long terme / option-usage ;
+  - prix du temps racheté ;
+  - expérimentation réversible ;
+  - stress test après utilisation ;
+  - seuils de bascule entre construire, protéger et utiliser.
+
+### Réécritures de référence déjà présentes
 
 - ✅ `dossiers/indivision-couple-separation-rachat-soulte.html`
-- ✅ `dossiers/metiers-accessibles-sans-diplome.html`
+- ✅ `dossiers/indivision-rachat-progressif-parts.html`
 - ✅ `dossiers/quitter-cdi-avec-credit-immobilier.html`
-- ✅ `dossiers/choisir-statut-micro-ei-eurl-sasu.html`
-- ✅ `dossiers/cout-reel-voiture-achat-credit-loa-lld.html`
-- ✅ `dossiers/gestion-pilotee-comparer-performances.html`
-- ✅ `dossiers/location-nue-ou-meublee-comparer.html`
+- ✅ `dossiers/changer-travail-avant-credit-immobilier.html`
+- ✅ `dossiers/metiers-accessibles-sans-diplome.html`
+- ✅ `dossiers/creer-entreprise-sans-diplome.html`
+- ✅ `dossiers/licence-universite-sans-bac-daeu-vap-vae.html`
+- ✅ `dossiers/temps-energie-qualite-vie.html`
+- ✅ `dossiers/couple-famille-argent-temps.html`
+- ✅ `dossiers/previsionnel-activite-12-mois.html`
+- ✅ `dossiers/location-courte-duree-meuble-tourisme.html`
 
-Le bloc générique « Avant de refermer ce dossier » reste supprimé : la profondeur doit être écrite dans chaque dossier, pas simulée par un encadré commun.
+## Pages relues dans la file critique et conservées
+
+Le détail et le SHA de validation sont stockés dans `reports/corpus-solution-human-review.json`.
+
+- `dossiers/trouver-premiers-clients.html`
+- `articles/competences-invisibles-preuves.html`
+- `articles/entretien-rate-ce-qui-bloque.html`
+- `dossiers/combien-chiffre-affaires-pour-vivre.html`
+- `dossiers/etre-riche-revenu-patrimoine-liberte.html`
+- `dossiers/experience-devient-risque-recruteur.html`
+- `dossiers/finances-residence-principale.html`
+- `dossiers/puis-je-me-permettre-reconversion.html`
+- `dossiers/finances-transmission-patrimoine.html`
+- `dossiers/quand-vie-change-sante-separation-revenu.html`
+
+## Pages déjà relues auparavant et conservées
+
+- `dossiers/apprendre-developper-competences.html`
+- `dossiers/audit-budget-60-minutes.html`
+- `dossiers/dependance-gros-client.html`
+- `dossiers/creer-entreprise-avec-peu-argent.html`
+- `dossiers/indivision-loyers-charges-comptes.html`
+- `dossiers/finances-retraite-decumulation.html`
+- `dossiers/passer-80-pourcent-cout-reel.html`
+- `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`
+- `dossiers/acheter-logement-sans-se-fragiliser.html`
+- `dossiers/assurer-ou-autoassurer-risques.html`
+- `dossiers/automatiser-ou-non-processus.html`
+- `dossiers/competent-mais-invisible-travail.html`
+- `dossiers/embaucher-ou-sous-traiter.html`
+- `dossiers/lancer-activite-sans-quitter-emploi.html`
+- `dossiers/liquidites-reserve-securite.html`
+- `dossiers/reconversion-sans-perte-salaire.html`
+- `dossiers/regles-responsabilites-fautes-travail.html`
+- `dossiers/ameliorer-processus-sans-degrader-service.html`
+- `dossiers/audit-copropriete-avant-achat.html`
+- `dossiers/calculer-prix-minimum-rentable.html`
+- `dossiers/immobilier-allocation-globale-patrimoine.html`
+- `dossiers/classes-actifs-allocation-patrimoine.html`
+- `dossiers/finances-difficiles-sortir-decouvert-dettes.html`
+
+Ces relectures antérieures sont documentées dans le chantier mais ne bénéficient pas encore toutes d’un snapshot SHA dans la mémoire automatisée. Elles pourront être revalidées au fil des passes du rapport global.
 
 ## Règles de chantier
 
-1. **Gel de l’expansion éditoriale** sur les domaines déjà bien couverts tant que les pages à forte promesse ci-dessous ne sont pas reprises, sauf nécessité légale, factuelle ou SEO réellement distincte.
-2. L’audit automatique `solution-engineering-audit.yml` sert de détecteur, jamais de substitut à une lecture humaine.
-3. Toute page réécrite doit viser une vraie profondeur de résolution ; le score automatique n’est qu’un signal.
-4. Une page réussie doit apporter au moins un élément difficile à obtenir par simple compilation de résultats de recherche : seuil, montage, séquence, combinaison de leviers, condition de possibilité ou démonstration d’une fausse impossibilité.
-5. Les solutions restent licites et vérifiables. « Contre-évidence » ne signifie jamais contourner illégalement une règle.
-6. Ne pas coller un bloc générique d’ingénierie partout. Le levier doit être spécifique au problème et passer le test causal.
-7. Pour les sujets sensibles, rafraîchir les sources primaires avant toute modification factuelle substantielle.
+1. Le score automatique est un détecteur, jamais une preuve de qualité.
+2. Toute page sensible modifiée doit être revérifiée contre des sources primaires à jour.
+3. Un levier doit passer le test : **« Si nous faisons X, alors Y change parce que Z. »**
+4. Absence de preuve d’impossibilité ≠ preuve de faisabilité.
+5. Ne pas confondre politique d’un acteur, règle juridique et pratique dominante.
+6. Rechercher les fenêtres temporelles, séquences, fractionnements, substitutions, combinaisons et options de sortie.
+7. Ne jamais faire dépendre une solution d’une fausse déclaration, d’une dissimulation ou d’une représentation trompeuse.
+8. Préserver un bon texte lorsqu’aucun gain causal, décisionnel ou probatoire réel n’est identifié.
 
-## Vague A — promesse forte, ancien audit 4–5/12
+## Définition de terminé pour une page
 
-- [x] `dossiers/choisir-statut-micro-ei-eurl-sasu.html` — réécrit le 16/08 : trajectoire de structure, TVA séparée du régime micro, seuils de bascule
-- [x] `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` — réécrit le 16/08 : besoin de mobilité, option de sortie, liquidité, stress tests
-- [x] `dossiers/gestion-pilotee-comparer-performances.html` — réécrit le 16/08 : valeur de délégation, benchmark, frais, règle de sortie
-- [x] `dossiers/location-nue-ou-meublee-comparer.html` — réécrit le 16/08 : architecture d’usage, seuil de surloyer, DPE, réversibilité
-- [x] `dossiers/quitter-cdi-avec-credit-immobilier.html` — réécrit
-- [x] `dossiers/temps-energie-qualite-vie.html` — réécrit précédemment
-- [~] `dossiers/apprendre-developper-competences.html` — relu le 16/08 : déjà très proche du nouveau standard, pas de réécriture artificielle
-- [~] `dossiers/audit-budget-60-minutes.html` — relu le 16/08 : structure déjà opérationnelle ; approfondissement à cibler seulement si un levier réel manque
-- [ ] `dossiers/creer-entreprise-avec-peu-argent.html`
-- [~] `dossiers/dependance-gros-client.html` — relu le 16/08 : stress test, mois de rupture et diversification causale déjà présents
-- [ ] `dossiers/finances-retraite-decumulation.html`
-- [ ] `dossiers/indivision-loyers-charges-comptes.html`
-- [x] `dossiers/metiers-accessibles-sans-diplome.html` — réécrit
-- [ ] `dossiers/passer-80-pourcent-cout-reel.html`
+Une page est considérée suffisamment profonde lorsque, compte tenu de son objectif :
 
-`[~]` signifie : page revisitée humainement, contenu conservé car déjà substantiellement conforme ; elle peut encore recevoir une amélioration ciblée plus tard.
-
-## Vague B — promesse forte, ancien audit 6/12
-
-- [ ] `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`
-- [ ] `dossiers/acheter-logement-sans-se-fragiliser.html`
-- [ ] `dossiers/assurer-ou-autoassurer-risques.html`
-- [ ] `dossiers/automatiser-ou-non-processus.html`
-- [ ] `dossiers/competent-mais-invisible-travail.html`
-- [ ] `dossiers/embaucher-ou-sous-traiter.html`
-- [ ] `dossiers/etre-riche-revenu-patrimoine-liberte.html`
-- [ ] `dossiers/lancer-activite-sans-quitter-emploi.html`
-- [ ] `dossiers/liquidites-reserve-securite.html`
-- [ ] `dossiers/reconversion-sans-perte-salaire.html`
-- [ ] `dossiers/regles-responsabilites-fautes-travail.html`
-
-## Vague C — promesse forte, ancien audit 7/12
-
-- [ ] `dossiers/ameliorer-processus-sans-degrader-service.html`
-- [ ] `dossiers/audit-copropriete-avant-achat.html`
-- [ ] `dossiers/calculer-prix-minimum-rentable.html`
-- [ ] `dossiers/combien-chiffre-affaires-pour-vivre.html`
-- [ ] `dossiers/combien-epargne-avant-demissionner.html`
-- [x] `dossiers/creer-entreprise-sans-diplome.html`
-- [ ] `dossiers/emploi-chercher-accepter-negocier-evoluer.html`
-- [ ] `dossiers/favoriser-un-enfant-succession-donation.html`
-- [ ] `dossiers/finances-residence-principale.html`
-- [ ] `dossiers/indivision-succession-heritiers-vendre-partager.html`
-- [x] `dossiers/previsionnel-activite-12-mois.html` — causalité capacité/prix corrigée précédemment
-- [ ] `dossiers/prix-attendre-finances.html`
-- [ ] `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
-- [ ] `dossiers/reconversion-sans-formation-longue.html`
-- [ ] `dossiers/rembourser-credit-ou-investir.html`
-
-## Pages faibles sans nécessairement avoir un titre « solution »
-
-- [x] `dossiers/couple-famille-argent-temps.html` — réécrit précédemment
-- [ ] `dossiers/quand-vie-change-sante-separation-revenu.html`
-- [ ] `dossiers/trouver-premiers-clients.html`
-- [ ] `dossiers/immobilier-allocation-globale-patrimoine.html`
-- [ ] `dossiers/classes-actifs-allocation-patrimoine.html`
-- [ ] `dossiers/finances-difficiles-sortir-decouvert-dettes.html`
-- et toutes les autres pages signalées par les audits.
-
-## Ordre de reprise
-
-Le classement par ancien score ne suffit pas. À score égal, priorité à :
-
-1. une promesse forte dans le titre ;
-2. un sujet à forte intention de recherche ou forte conséquence pratique ;
-3. un sujet central à l’identité Contre-Évidence ;
-4. une page vers laquelle de nombreux parcours internes convergent ;
-5. un sujet où plusieurs domaines peuvent être recombinés pour faire apparaître une solution non évidente.
-
-Prochain noyau :
-
-1. `creer-entreprise-avec-peu-argent.html` — séparer coût de lancement, besoin en fonds de roulement et runway personnel ;
-2. `indivision-loyers-charges-comptes.html` — transformer la comptabilité de l’indivision en architecture de preuve et de décision ;
-3. `finances-retraite-decumulation.html` — passer du taux de retrait à une politique conditionnelle de décumulation ;
-4. `passer-80-pourcent-cout-reel.html` — calculer le prix réel du temps libéré et les seuils où l’arbitrage s’inverse ;
-5. puis la vague B.
-
-## Définition de terminé
-
-Une case n’est cochée que si :
-
-- le titre et la promesse sont délivrés ;
-- le verrou est nommé ;
-- plusieurs fenêtres sont réellement explorées ;
-- les conditions de possibilité sont explicites ;
-- les seuils pertinents sont chiffrés ;
-- le lecteur dispose d’une séquence d’action ;
-- une condition d’abandon ou de révision existe ;
-- les affirmations sensibles sont adossées aux sources adéquates ;
-- la page passe les audits techniques ;
-- une lecture humaine conclut qu’elle apporte réellement quelque chose de difficile à trouver ailleurs.
+- la promesse du titre est délivrée ;
+- le vrai verrou est nommé ou la question est correctement décomposée ;
+- les leviers proposés agissent réellement sur ce verrou ;
+- les conditions de possibilité et dépendances sont visibles ;
+- les seuils utiles sont chiffrés quand cela a du sens ;
+- un scénario adverse est pris en compte lorsque l’enjeu le justifie ;
+- la séquence et la réversibilité sont traitées lorsque pertinentes ;
+- les affirmations sensibles disposent du niveau de preuve adapté ;
+- une lecture humaine conclut que l’ajout apporte plus qu’une compilation de résultats de recherche.
