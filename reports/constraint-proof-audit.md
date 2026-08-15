@@ -8,7 +8,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **14**
 - P1 — affirmation forte à resserrer ou vérifier : **46**
-- P2 — nécessité à examiner : **143**
+- P2 — nécessité à examiner : **142**
 - OK heuristique — source/périmètre détecté, fond restant à contrôler : **577**
 
 ## P0 — rouvrir en priorité
@@ -36,7 +36,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `fiches-metiers.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Accès Diplôme obligatoire, attendu ou contournable ?
 ### `outil-ingenierie-solutions.html`
-- **fermeture forte sans signal de preuve ni périmètre clair** — Atelier d’ingénierie de solutions : contester la contrainte | Contre-Évidence Aller au contenu CONTRE-ÉVIDENCE Patrimoine Vie professionnelle Fenêtres Outils Bibliothèque Mon espace Outil · Ingénierie de solutions Le problème paraît impossible ?
+- **fermeture forte sans signal de preuve ni périmètre clair** — Une voie ne doit pas être fermée sans preuve ; une idée non interdite ne doit pas être présentée comme faisable sans vérification positive. _[temporalité]_
 ### `themes/entreprendre.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Distinguer activité non réglementée, qualification obligatoire, agrément, assurance et simple exigence commerciale.
 
@@ -303,8 +303,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Une analyse appliquée à une entreprise ou à un marché doit être datée, sourcée et préciser ce qui invaliderait le scénario. _[temporalité]_
 ### `outil-comparer-offres-emploi.html`
 - **nécessité à requalifier ou sourcer** — « Inconnu » est une information importante : c’est souvent ce qu’il faut enquêter ou négocier avant de signer. _[temporalité]_
-### `outil-ingenierie-solutions.html`
-- **nécessité à requalifier ou sourcer** — La question à poursuivre est : qu’est-ce qui doit devenir vrai pour que la réponse change ?
 ### `parcours-de-vie.html`
 - **nécessité à requalifier ou sourcer** — C Je veux organiser ou investir mon capital Faire découler la répartition de votre argent de vos projets, de ce qui doit rester disponible, du risque acceptable et du temps dont vous disposez. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Il faut la transformer en étapes ordonnées, avec des ressources, des délais et des points de contrôle.
