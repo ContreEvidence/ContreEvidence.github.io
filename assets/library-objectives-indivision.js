@@ -33,6 +33,13 @@
       k:'objectif besoin stratégie moyen décision valeurs finalité optimiser argent travail patrimoine temps qualité vie'
     },
     {
+      d:'patrimoine',t:'guide',c:'Allocation · Situations',
+      h:'dossiers/allocation-patrimoine-selon-situation.html',
+      n:'Quelle allocation selon votre situation ? 8 exemples concrets',
+      x:'Même capital, décisions différentes : achat immobilier, revenus stables ou instables, chômage, héritage, retraite et transmission avec des allocations pédagogiques chiffrées.',
+      k:'allocation patrimoine situation portefeuille 100000 achat immobilier chômage séparation maladie revenus instables indépendant entrepreneur héritage grosse somme retraite transmission sécurité liquidités actions obligations'
+    },
+    {
       d:'patrimoine',t:'dossier',c:'Patrimoine · Richesse',
       h:'dossiers/etre-riche-revenu-patrimoine-liberte.html',
       n:'À partir de quand est-on riche ? Revenu, patrimoine ou liberté ?',
