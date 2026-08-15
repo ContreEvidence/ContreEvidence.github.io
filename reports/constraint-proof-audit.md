@@ -7,8 +7,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **13**
-- P1 — affirmation forte à resserrer ou vérifier : **48**
-- P2 — nécessité à examiner : **146**
+- P1 — affirmation forte à resserrer ou vérifier : **47**
+- P2 — nécessité à examiner : **144**
 - OK heuristique — source/périmètre détecté, fond restant à contrôler : **586**
 
 ## P0 — rouvrir en priorité
@@ -82,8 +82,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sourcée mais formulation trop absolue** — En pratique, un compte bancaire dédié n’est pas toujours juridiquement obligatoire dans toutes les indivisions, mais il rend le suivi beaucoup plus propre. _[signal-source]_
 ### `dossiers/licence-universite-sans-bac-daeu-vap-vae.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Le DAEU reste utile dans certains projets, mais il ne doit pas être transformé en étape obligatoire par défaut. _[signal-source]_
-### `dossiers/location-nue-ou-meublee-comparer.html`
-- **affirmation forte sans signal de source explicite** — Dimension Location nue Location meublée longue durée Usage type Résidence principale stable Résidence principale avec mobilier fourni Mobilier Faible investissement initial Équipement obligatoire et renouvellement Rotation Souvent plus faible Peut être plus élevée selon marché Fiscalité des loyers Revenus fonciers BIC Gestion Souvent plus simple Inventaire, mobilier, entretien supplémentaire 2. _[périmètre]_
 ### `dossiers/metiers-fonctions-organisation-entreprise.html`
 - **affirmation forte sans signal de source explicite** — À l’inverse, un manager hiérarchique ne peut pas décider seul de sujets réglementaires ou techniques qui relèvent d’autres responsabilités. _[périmètre]_
 ### `dossiers/plan-30-jours-recherche-emploi.html`
@@ -234,9 +232,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Elle doit être très liquide et peu risquée.
 - **nécessité à requalifier ou sourcer** — Une réserve doit être disponible rapidement, compréhensible et peu exposée à une perte au mauvais moment.
 ### `dossiers/location-nue-ou-meublee-comparer.html`
-- **nécessité à requalifier ou sourcer** — Il faut prévoir lit, literie, cuisine, table, sièges, rangement, luminaires et matériel d’entretien nécessaires à la qualification de meublé.
-- **nécessité à requalifier ou sourcer** — Le coût de remplacement doit être provisionné.
-- **nécessité à requalifier ou sourcer** — Le mode d’exploitation optimise un actif ; il ne doit pas faire oublier le reste du patrimoine.
+- **nécessité à requalifier ou sourcer** — Elle doit porter sur le résultat net après charges réellement supportées, fiscalité, comptabilité et coût de gestion. _[temporalité]_
 ### `dossiers/methode-analyse-complete.html`
 - **nécessité à requalifier ou sourcer** — Bull Exécution supérieure Levier opérationnel Prime maintenue Qu’est-ce qui doit réellement très bien se passer ?
 - **nécessité à requalifier ou sourcer** — Construire une conclusion falsifiable Une note d’investissement doit pouvoir être relue six mois plus tard sans réécrire l’histoire.
