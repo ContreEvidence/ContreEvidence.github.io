@@ -1,0 +1,16 @@
+{
+  "reviewed_at": "2026-08-16",
+  "rule": "A human approval is valid only while the Git blob SHA remains identical. Any content change invalidates the approval automatically.",
+  "pages": {
+    "dossiers/trouver-premiers-clients.html": {"sha": "29837957e915643a0748021affe9c939cfc88f89", "status": "conforme", "note": "Entonnoir causal, canaux alternatifs, seuils d’arrêt et changement d’offre déjà explicites."},
+    "articles/competences-invisibles-preuves.html": {"sha": "cdc64be6a4013f201888b529313621f4c4ab3e3e", "status": "conforme", "note": "Preuve comme réduction du risque, création d’expérience et test de crédibilité déjà structurés."},
+    "articles/entretien-rate-ce-qui-bloque.html": {"sha": "121a55ba0a2268de0cb5f5de94a9eb283c4b2ab8", "status": "conforme", "note": "Diagnostic de conversion, hypothèses concurrentes, retours convergents et conditions de recalibrage déjà présents."},
+    "dossiers/combien-chiffre-affaires-pour-vivre.html": {"sha": "ecb09de9f0ebcb7f42e79bac0351f086fadee8ae", "status": "conforme", "note": "Seuils, capacité, scénario adverse et inversion de conclusion déjà explicites."},
+    "dossiers/etre-riche-revenu-patrimoine-liberte.html": {"sha": "648f72764a9856fa0c1811a7b46ef7b99899f216", "status": "conforme", "note": "Page de clarification conceptuelle : plusieurs définitions et inversion selon la question déjà traitées."},
+    "dossiers/experience-devient-risque-recruteur.html": {"sha": "fa76f61cde9496a7e8b186c63d02ccf92abb860c", "status": "conforme", "note": "Risques perçus, preuves, ciblage et test de cohérence personnelle déjà structurés."},
+    "dossiers/finances-residence-principale.html": {"sha": "89bdee80210b87568b4831b77c18bccbc6c8f1f9", "status": "conforme", "note": "Durée, coûts irrécupérables, mobilité, liquidité, options et scénarios de sortie déjà traités."},
+    "dossiers/puis-je-me-permettre-reconversion.html": {"sha": "1ad192cf263278ca68066756f08f1dc2f62a58fc", "status": "conforme", "note": "Déficit mensuel, runway, scénarios adverse/central et transition progressive déjà présents."},
+    "dossiers/finances-transmission-patrimoine.html": {"sha": "82b04a6992bd5fea253a773125768b5cb012a203", "status": "conforme", "note": "Objectifs, propriété, liquidité, sécurité du donateur et coordination civile/fiscale déjà traités."},
+    "dossiers/quand-vie-change-sante-separation-revenu.html": {"sha": "7c1e0e0d680c29f25db5fc5d7c9b17ccb1f37d6a", "status": "conforme", "note": "Stabilisation, période tampon, réversibilité, séquence 30 jours et stress test déjà structurés."}
+  }
+}
