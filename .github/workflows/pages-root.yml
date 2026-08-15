@@ -16,9 +16,11 @@ permissions:
   pages: write
   id-token: write
 
+# A successful production trigger may replace an older deployment. A failed
+# generator workflow must never cancel a valid deployment already in progress.
 concurrency:
   group: pages-root
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
 
 jobs:
   deploy:
