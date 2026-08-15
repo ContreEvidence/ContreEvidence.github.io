@@ -86,6 +86,15 @@
       else prose.insertAdjacentElement('afterbegin', bridge);
     }
 
+    if (/\/dossiers\/[^/]+\.html$/.test(path) && prose && !prose.querySelector('.ce-signature-lens')) {
+      const lens = document.createElement('div');
+      lens.className = 'decision-box ce-signature-lens';
+      lens.innerHTML = `<h3>Avant de refermer ce dossier</h3><ul><li><strong>L’intuition qui peut tromper :</strong> quelle réponse paraissait évidente avant même d’avoir comparé ?</li><li><strong>La variable oubliée :</strong> quel coût, temps, risque ou dépendance n’entre pas dans le chiffre principal ?</li><li><strong>Ce qui ferait changer la réponse :</strong> quel fait ou quel seuil inverserait réellement votre choix ?</li><li><strong>Le contrôle :</strong> quand reverrez-vous cette décision, et quel indicateur regarderez-vous alors ?</li></ul>`;
+      const related = prose.querySelector(':scope > .ce-related');
+      if (related) related.insertAdjacentElement('beforebegin', lens);
+      else prose.appendChild(lens);
+    }
+
     const lifeLinks = [
       ['dossiers/finances-difficiles-sortir-decouvert-dettes.html','Je finis le mois à découvert ou les dettes commencent à s’empiler.'],
       ['dossiers/quand-vie-change-sante-separation-revenu.html','Ma santé, mon couple ou mes revenus changent brutalement.'],
@@ -108,6 +117,14 @@
     }
 
     if (/\/parcours-de-vie\.html$/.test(path) && !document.querySelector('[data-ce-life-routes="journey"]')) {
+      const buildGrid = document.querySelector('#construire .situation-grid');
+      if (buildGrid && !buildGrid.querySelector('a[href="outil-plan-30-90-jours.html"]')) {
+        const card = document.createElement('a');
+        card.className = 'situation-card';
+        card.href = 'outil-plan-30-90-jours.html';
+        card.innerHTML = '<span class="number">E</span><h3>J’ai choisi. Je veux maintenant passer à l’action</h3><p>Transformer la décision en première action, jalon à 30 jours, résultat à 90 jours et date de revue.</p>';
+        buildGrid.appendChild(card);
+      }
       const sections = [...document.querySelectorAll('main > section')];
       const before = sections.find(section => section.querySelector('.section-head .kicker')?.textContent.trim() === 'Ou entrez directement par votre terrain');
       if (before) {
