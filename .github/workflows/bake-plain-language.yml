@@ -1,0 +1,111 @@
+name: Bake plain-language editorial layer
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/bake-plain-language.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  bake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Apply plain-language copy to source HTML
+        shell: python
+        run: |
+          from pathlib import Path
+
+          def replace(path, old, new, required=True):
+              p = Path(path)
+              text = p.read_text(encoding='utf-8')
+              if old not in text:
+                  if required:
+                      raise SystemExit(f'Missing expected text in {path}: {old[:90]}')
+                  return
+              p.write_text(text.replace(old, new), encoding='utf-8')
+
+          # Accueil : langage visiteur, architecture interne inchangée.
+          replace('index.html', 'Se situer · arbitrer · construire', 'Comprendre · choisir · avancer')
+          replace('index.html', 'Partez de votre besoin, pas de la rubrique.', 'Commencez par ce que vous vivez, pas par une rubrique.')
+          replace('index.html', 'Je veux savoir où j’en suis', 'Je veux comprendre où j’en suis')
+          replace('index.html', 'J’hésite entre plusieurs options', 'Je dois faire un choix', required=False)
+          replace('index.html', 'Je sais où je veux aller', 'Je sais ce que je veux, mais pas comment y arriver', required=False)
+          replace('index.html', 'Trois situations couvrent l’essentiel des décisions.', 'Commencez par la phrase qui vous ressemble aujourd’hui.')
+          replace('index.html', '01 · Se situer', '01 · Comprendre ma situation')
+          replace('index.html', 'M’aider à poser le diagnostic →', 'M’aider à y voir clair →')
+          replace('index.html', '02 · Arbitrer', '02 · Faire un choix')
+          replace('index.html', '« Je m’interroge, j’hésite. »', '« J’hésite entre plusieurs options. »')
+          replace('index.html', 'M’aider à décider →', 'Comparer mes options →')
+          replace('index.html', '03 · Construire', '03 · Construire mon chemin')
+          replace('index.html', '« Je sais où je veux aller. »', '« Je sais ce que je veux, mais pas encore comment y arriver. »')
+          replace('index.html', 'Construire le chemin →', 'Construire mon plan →')
+
+          # Par où commencer : mêmes ancres, mots plus naturels.
+          replace('parcours-de-vie.html', 'Vous n’avez pas besoin de connaître la solution pour entrer ici.', 'Commencez par ce qui vous pose problème aujourd’hui.')
+          replace('parcours-de-vie.html', '01 · Se situer', '01 · Comprendre ma situation')
+          replace('parcours-de-vie.html', 'Poser le diagnostic →', 'M’aider à y voir clair →')
+          replace('parcours-de-vie.html', '02 · Arbitrer', '02 · Faire un choix')
+          replace('parcours-de-vie.html', 'Je m’interroge, j’hésite.', 'J’hésite entre plusieurs options.')
+          replace('parcours-de-vie.html', 'Comparer les chemins →', 'Comparer mes options →')
+          replace('parcours-de-vie.html', '03 · Construire', '03 · Construire mon chemin')
+          replace('parcours-de-vie.html', 'Je sais où je veux aller.', 'Je sais ce que je veux, mais pas encore comment y arriver.')
+          replace('parcours-de-vie.html', 'Construire le chemin →', 'Construire mon plan →')
+          replace('parcours-de-vie.html', 'Commencez par comprendre ce qui est réellement en jeu.', 'D’abord, y voir clair.')
+          replace('parcours-de-vie.html', 'Quand plusieurs options semblent défendables, rendez leurs conséquences comparables.', 'Si plusieurs options se tiennent, comparez ce qu’elles changent vraiment.')
+          replace('parcours-de-vie.html', 'Un objectif clair devient utile quand on connaît le chemin qui y mène.', 'Vous savez ce que vous voulez : transformez-le en étapes.')
+
+          # Patrimoine : ne pas confondre profondeur du sujet et jargon d’entrée.
+          replace('themes/argent.html', 'Entrez par votre situation, pas par votre âge.', 'Commencez par ce que vous devez faire maintenant.')
+          replace('themes/argent.html', '02 · Je construis', '02 · Je fais grandir mon patrimoine')
+          replace('themes/argent.html', 'Transformer mon épargne en patrimoine.', 'Faire travailler mon épargne sans me disperser.')
+          replace('themes/argent.html', 'Pour arbitrer entre immobilier, marchés financiers, crédit et diversification.', 'Pour comparer immobilier, placements, crédit et diversification.')
+          replace('themes/argent.html', '03 · Je pilote', '03 · J’organise l’ensemble')
+          replace('themes/argent.html', 'Lire l’ensemble avant d’arbitrer une ligne.', 'Voir tout mon patrimoine avant de modifier un placement.')
+          replace('themes/argent.html', 'Pour un patrimoine déjà constitué, avec plusieurs actifs, dettes, objectifs ou scénarios à comparer.', 'Quand vous avez déjà plusieurs placements, biens, dettes ou projets à faire tenir ensemble.')
+          replace('themes/argent.html', '<li>allocation globale</li><li>concentrations et liquidité</li><li>stress tests et scénarios</li><li>arbitrages et transmission</li>', '<li>répartition globale</li><li>ce qui est trop concentré et ce qui reste disponible</li><li>scénarios défavorables</li><li>choix entre placements et transmission</li>')
+
+          # Vie professionnelle : expliquer avant de nommer le concept.
+          replace('parcours-vie-professionnelle.html', 'Votre métier n’est qu’une photographie. Vos compétences, vos preuves, votre santé, vos revenus et vos options forment le capital professionnel.', 'Votre poste dit ce que vous faites aujourd’hui. Vos compétences, vos résultats, votre santé et les portes qui restent ouvertes disent où vous pouvez aller demain.')
+          replace('parcours-vie-professionnelle.html', 'Le problème du jour compte. Mais il prend un autre sens quand on voit la trajectoire : ce que votre travail construit, ce qu’il fragilise et les options qu’il vous laisse pour la suite.', 'Le problème du jour compte. Mais il faut aussi regarder ce que votre travail vous apporte aujourd’hui, ce qu’il vous coûte et les portes qu’il vous ouvre pour la suite.')
+          replace('parcours-vie-professionnelle.html', 'Deux questions différentes : où va ma trajectoire, et que dois-je résoudre maintenant ?', 'Deux questions : où en suis-je, et qu’est-ce que je dois régler maintenant ?')
+          replace('parcours-vie-professionnelle.html', '1 · Je veux situer ma trajectoire professionnelle →', '1 · Je veux comprendre où va ma vie professionnelle →')
+          replace('parcours-vie-professionnelle.html', '2 · J’ai un problème professionnel précis maintenant →', '2 · J’ai un problème précis à régler maintenant →')
+          replace('parcours-vie-professionnelle.html', 'Diagnostiquer mon capital professionnel →', 'Faire le point sur mes atouts et mes options →')
+          replace('parcours-vie-professionnelle.html', 'Les décisions professionnelles que l’on cherche quand quelque chose doit changer.', 'Choisissez la situation qui ressemble le plus à la vôtre.')
+
+          # Dossiers centraux : une première couche simple, puis la profondeur existante.
+          replace('dossiers/allocation-patrimoine-selon-situation.html', '<div class="answer-box"><h2>La réponse courte</h2>', '<div class="answer-box"><h2>En bref</h2>')
+          replace('dossiers/allocation-patrimoine-selon-situation.html', '<div class="warning-box">', '<div class="answer-box"><h2>Pour commencer simplement</h2><p>Ici, « allocation » veut simplement dire <strong>comment répartir votre argent</strong> entre ce qui doit rester disponible, ce qui finance un projet et ce qui peut être investi longtemps. Commencez par la situation qui vous ressemble ; les termes plus techniques viennent ensuite.</p></div>\n<div class="warning-box">')
+
+          replace('dossiers/trajectoire-professionnelle-selon-situation.html', '<div class="answer-box"><h2>La réponse courte</h2>', '<div class="answer-box"><h2>En bref</h2>')
+          replace('dossiers/trajectoire-professionnelle-selon-situation.html', '<div class="capital-grid">', '<div class="answer-box"><h2>Pour commencer simplement</h2><p>Vous n’avez pas besoin de raisonner en « capital professionnel ». Posez-vous d’abord quatre questions : <strong>est-ce que ce travail me fait progresser, est-ce qu’il me paie suffisamment, est-ce que je peux le tenir dans la durée, et quelles portes restent ouvertes si je veux partir ?</strong></p></div>\n<div class="capital-grid">')
+          replace('dossiers/trajectoire-professionnelle-selon-situation.html', '<strong>Optionalité</strong>', '<strong>Options disponibles</strong>')
+          replace('dossiers/trajectoire-professionnelle-selon-situation.html', 'benchmark externe', 'comparaison avec le marché')
+
+          replace('dossiers/tout-ca-pour-quoi-objectifs-besoins.html', '<div class="answer-box"><h2>La réponse courte</h2>', '<div class="answer-box"><h2>En bref</h2>')
+          replace('dossiers/tout-ca-pour-quoi-objectifs-besoins.html', '<h2>1. Le moyen qui devient silencieusement l’objectif</h2>', '<div class="answer-box"><h2>Pour commencer simplement</h2><p>Trois questions suffisent pour entrer dans ce dossier : <strong>qu’est-ce que je veux vraiment changer ? qu’est-ce que je refuse de sacrifier ? comment saurai-je que c’est suffisant ?</strong> Le reste sert à approfondir.</p></div><h2>1. Le moyen qui devient silencieusement l’objectif</h2>')
+          replace('dossiers/tout-ca-pour-quoi-objectifs-besoins.html', 'Le chiffre intervient lorsqu’il éclaire un arbitrage.', 'Le chiffre intervient lorsqu’il aide à faire un choix.')
+          replace('dossiers/tout-ca-pour-quoi-objectifs-besoins.html', 'Le stress test vérifie la robustesse.', 'Le scénario défavorable vérifie si la décision tient encore quand les choses se passent moins bien que prévu.')
+          replace('dossiers/tout-ca-pour-quoi-objectifs-besoins.html', 'regarder la réversibilité', 'regarder s’il est possible de revenir en arrière')
+
+      - name: Commit baked copy
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet; then
+            echo 'No source copy changes needed.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html parcours-de-vie.html themes/argent.html parcours-vie-professionnelle.html dossiers/allocation-patrimoine-selon-situation.html dossiers/trajectoire-professionnelle-selon-situation.html dossiers/tout-ca-pour-quoi-objectifs-besoins.html
+          git commit -m 'Vulgariser les entrées et dossiers de référence'
+          git pull --rebase origin main
+          git push
