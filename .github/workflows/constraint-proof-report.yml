@@ -1,0 +1,223 @@
+name: Constraint proof report
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.html"
+      - "CHARTE-DE-VOIX.txt"
+      - "INGENIERIE-DE-SOLUTIONS.md"
+      - ".github/workflows/constraint-proof-report.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Build constraint proof report
+        shell: python
+        run: |
+          from pathlib import Path
+          import re, html
+
+          root = Path('.')
+          excluded = {
+              '404.html','plan-du-site.html','bibliotheque.html','recherche.html',
+              'mentions.html','confidentialite.html','mon-espace.html'
+          }
+
+          pages=[]
+          for p in root.rglob('*.html'):
+              if any(part in {'.git','node_modules'} for part in p.parts):
+                  continue
+              if p.name in excluded:
+                  continue
+              raw=p.read_text(encoding='utf-8',errors='replace')
+              if re.search(r'<meta\s+name=["\']robots["\'][^>]*noindex',raw,re.I):
+                  continue
+              pages.append(p)
+
+          strip_scripts=re.compile(r'<(script|style)\b.*?</\1>',re.I|re.S)
+          strip_tags=re.compile(r'<[^>]+>')
+          external_link=re.compile(r'href=["\']https?://',re.I)
+
+          # Fermetures fortes : elles réclament une preuve particulièrement nette.
+          hard_patterns=[
+              r'\bimpossible\b',
+              r'\binterdit(?:e|s|es)?\b',
+              r'\bobligatoire(?:ment)?\b',
+              r'\bon ne peut pas\b',
+              r'\bvous ne pouvez pas\b',
+              r'\bne peut pas\b',
+              r'\baucune solution\b',
+              r'\baucune possibilité\b',
+              r'\ble seul moyen\b',
+              r'\bla seule (?:solution|voie|option)\b',
+              r'\bil faut nécessairement\b',
+              r'\bil faut impérativement\b',
+          ]
+          hard_re=re.compile('|'.join(hard_patterns),re.I)
+
+          # Généralisation d'un acteur privé ou d'un marché : souvent locale/conditionnelle.
+          actor_re=re.compile(
+              r'\b(?:les banques|les recruteurs|les employeurs|les assureurs|les notaires|le marché|les investisseurs)\b.{0,90}'
+              r'\b(?:refusent|exigent|demandent|ne financent pas|n.?acceptent pas|veulent|imposent)\b',re.I
+          )
+
+          necessity_re=re.compile(
+              r'\b(?:il faut|vous devez|doit|exige|nécessite|condition indispensable|condition nécessaire)\b',re.I
+          )
+
+          # Les mots qui réduisent correctement le périmètre d'une affirmation.
+          scope_re=re.compile(
+              r'\b(?:dans ce cas|dans cette configuration|avec ces hypothèses|à ce jour|aujourd.?hui|'
+              r'cet établissement|cette banque|ce contrat|ce texte|pour cet acte|selon|en principe|'
+              r'sous réserve|sous condition|si |lorsque|tant que|peut|pourrait|semble|à vérifier|'
+              r'dépend|conditionnel|temporaire|local)\b',re.I
+          )
+
+          time_re=re.compile(
+              r'\b(?:avant|après|jusqu.?à|à compter de|pendant|dès que|fin de|début de|'
+              r'dans \d+|\d+ jours|\d+ mois|\d+ ans|ancienneté|échéance|date|calendrier|séquence)\b',re.I
+          )
+
+          # Découpe approximative en phrases, suffisante pour une file d'audit.
+          sentence_re=re.compile(r'(?<=[.!?])\s+(?=[A-ZÀ-ÖØ-Þ0-9«])')
+
+          rows=[]
+          totals={'P0':0,'P1':0,'P2':0,'OK':0}
+
+          for p in sorted(pages):
+              raw=p.read_text(encoding='utf-8',errors='replace')
+              clean=html.unescape(strip_tags.sub(' ',strip_scripts.sub(' ',raw)))
+              clean=re.sub(r'\s+',' ',clean).strip()
+              sentences=sentence_re.split(clean)
+
+              # Repérage approximatif des positions du texte visible dans le HTML :
+              # pour la preuve, on cherche surtout si la page contient des sources et si
+              # un bloc source-note / lien officiel est présent autour du thème.
+              page_has_sources=bool(external_link.search(raw))
+              source_notes=len(re.findall(r'(?:source-note|sources?\s*:|sources? officielles)',raw,re.I))
+
+              for idx,s in enumerate(sentences):
+                  s=s.strip()
+                  if len(s)<15: continue
+                  hard=bool(hard_re.search(s))
+                  actor=bool(actor_re.search(s))
+                  necessary=bool(necessity_re.search(s))
+                  if not (hard or actor or necessary):
+                      continue
+
+                  scoped=bool(scope_re.search(s))
+                  temporal=bool(time_re.search(s))
+
+                  # Contexte voisin pour voir si la phrase suivante/précédente nuance ou source.
+                  context=' '.join(sentences[max(0,idx-1):min(len(sentences),idx+2)])
+                  contextual_scope=scoped or bool(scope_re.search(context))
+                  contextual_time=temporal or bool(time_re.search(context))
+
+                  # Preuve heuristique : sources dans la page + au moins un bloc explicite de source.
+                  # Le rapport ne certifie jamais la preuve ; il priorise la relecture.
+                  proof_signal=page_has_sources and source_notes>0
+
+                  if hard and not proof_signal and not contextual_scope:
+                      priority='P0'
+                      reason='fermeture forte sans signal de preuve ni périmètre clair'
+                  elif (hard or actor) and not proof_signal:
+                      priority='P1'
+                      reason='affirmation forte sans signal de source explicite'
+                  elif actor and not contextual_scope:
+                      priority='P1'
+                      reason='généralisation d’un acteur privé sans périmètre clair'
+                  elif hard and not contextual_scope:
+                      priority='P1'
+                      reason='fermeture forte sourcée mais formulation trop absolue'
+                  elif necessary and not contextual_scope and not proof_signal:
+                      priority='P2'
+                      reason='nécessité à requalifier ou sourcer'
+                  else:
+                      priority='OK'
+                      reason='signal de périmètre/preuve présent — vérifier le fond'
+
+                  totals[priority]+=1
+                  rows.append({
+                      'p':p.as_posix(),'priority':priority,'reason':reason,
+                      'sentence':s[:420], 'proof':proof_signal,
+                      'scope':contextual_scope,'time':contextual_time
+                  })
+
+          def order(x): return {'P0':0,'P1':1,'P2':2,'OK':3}[x['priority']]
+          rows.sort(key=lambda x:(order(x),x['p'],x['sentence']))
+
+          out=[]
+          out.append('# Rapport — contraintes à prouver ou à rouvrir')
+          out.append('')
+          out.append('Ce rapport applique la doctrine : **on ne ferme pas une voie sans preuve ; on ne présente pas non plus une piste comme faisable sans vérification positive.**')
+          out.append('')
+          out.append('Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pas une correction automatique.')
+          out.append('')
+          out.append('## Synthèse')
+          out.append('')
+          out.append(f"- P0 — fermeture forte sans preuve/périmètre suffisant : **{totals['P0']}**")
+          out.append(f"- P1 — affirmation forte à resserrer ou vérifier : **{totals['P1']}**")
+          out.append(f"- P2 — nécessité à examiner : **{totals['P2']}**")
+          out.append(f"- OK heuristique — source/périmètre détecté, fond restant à contrôler : **{totals['OK']}**")
+          out.append('')
+
+          for level,title in [('P0','P0 — rouvrir en priorité'),('P1','P1 — vérifier et resserrer'),('P2','P2 — examiner la nécessité')]:
+              out.append(f'## {title}')
+              out.append('')
+              subset=[r for r in rows if r['priority']==level]
+              if not subset:
+                  out.append('_Aucun signal._')
+                  out.append('')
+                  continue
+              current=None
+              shown=0
+              for r in subset:
+                  if shown>=250:
+                      out.append('')
+                      out.append('_Rapport tronqué à 250 signaux pour rester exploitable._')
+                      break
+                  if r['p']!=current:
+                      current=r['p']
+                      out.append(f'### `{current}`')
+                  flags=[]
+                  if r['proof']: flags.append('signal-source')
+                  if r['scope']: flags.append('périmètre')
+                  if r['time']: flags.append('temporalité')
+                  out.append(f"- **{r['reason']}** — {r['sentence']}" + (f" _[{', '.join(flags)}]_" if flags else ''))
+                  shown+=1
+              out.append('')
+
+          out.append('## Règle de relecture')
+          out.append('')
+          out.append('Pour chaque signal :')
+          out.append('1. Qui impose réellement la contrainte ?')
+          out.append('2. Quel texte, contrat, calcul ou fait le prouve ?')
+          out.append('3. La contrainte est-elle absolue, locale, temporaire, quantitative, relationnelle ou séquentielle ?')
+          out.append('4. Quel changement de date ou d’ordre des opérations peut modifier la réponse ?')
+          out.append('5. Si aucune impossibilité n’est démontrée, la voie passe en **À TESTER**, jamais directement en **VÉRIFIÉE**.')
+          out.append('6. Si une piste paraît fonctionner, quelles preuves positives manquent encore avant de la recommander ?')
+
+          Path('reports').mkdir(exist_ok=True)
+          Path('reports/constraint-proof-audit.md').write_text('\n'.join(out)+'\n',encoding='utf-8')
+
+      - name: Commit report if changed
+        run: |
+          if git diff --quiet -- reports/constraint-proof-audit.md && git ls-files --error-unmatch reports/constraint-proof-audit.md >/dev/null 2>&1; then
+            echo "Report already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/constraint-proof-audit.md
+          git commit -m "Mise à jour de l’audit des contraintes à prouver"
+          git push
