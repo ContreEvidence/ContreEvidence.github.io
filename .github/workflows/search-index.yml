@@ -15,6 +15,7 @@ on:
       - 'assets/library-work-foundations.js'
       - 'assets/library-transitions.js'
       - 'assets/library-acquisition.js'
+      - 'assets/library-objectives-indivision.js'
       - 'assets/tools-catalog.js'
       - 'scripts/generate-search-index.cjs'
       - '.github/workflows/search-index.yml'
