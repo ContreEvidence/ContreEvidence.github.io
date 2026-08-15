@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **13**
-- P1 — affirmation forte à resserrer ou vérifier : **47**
+- P1 — affirmation forte à resserrer ou vérifier : **48**
 - P2 — nécessité à examiner : **141**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **589**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **591**
 
 ## P0 — rouvrir en priorité
 
@@ -92,6 +92,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sourcée mais formulation trop absolue** — Sources officielles Service-Public.fr — discrimination et critères interdits Service-Public.fr — informations pouvant être demandées lors d’un recrutement ← Retour à Vie professionnelle À lire ensuite Continuez sans repartir de zéro. _[signal-source, temporalité]_
 - **fermeture forte sourcée mais formulation trop absolue** — Une discrimination correspond à une différence de traitement fondée sur un critère interdit par la loi. _[signal-source]_
 - **fermeture forte sourcée mais formulation trop absolue** — Une discrimination, au sens juridique, implique une différence de traitement fondée sur un critère interdit. _[signal-source]_
+### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
+- **affirmation forte sans signal de source explicite** — Ajoutez le regret inverse : « Si je conserve exactement cette stratégie pendant dix ans, qu’est-ce que j’aurai repoussé inutilement ? » Le patrimoine sert précisément à déplacer certains choix du domaine de l’impossible vers celui du possible. _[périmètre, temporalité]_
 ### `dossiers/quitter-emploi-stable-ou-rester.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Intégrer la santé et l’énergie comme contraintes dures Un salaire supérieur ne compense pas toujours une situation qui dégrade durablement la santé ou rend la vie hors travail impossible. _[signal-source]_
 ### `dossiers/quitter-travail-reconversion-sans-se-fragiliser.html`
