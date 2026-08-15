@@ -71,22 +71,6 @@
     }
   };
 
-  const plainReplacements = {
-    'trajectoire-professionnelle-selon-situation.html': [
-      [/Optionalité/g, 'Options disponibles'],
-      [/optionalité/g, 'options disponibles'],
-      [/benchmark externe/gi, 'comparaison avec le marché'],
-      [/soutenabilité réelle/gi, 'capacité à tenir dans la durée'],
-      [/transférabilité/gi, 'utilité des compétences ailleurs']
-    ],
-    'tout-ca-pour-quoi-objectifs-besoins.html': [
-      [/arbitrage/gi, 'choix'],
-      [/stress test/gi, 'scénario défavorable'],
-      [/réversibilité/gi, 'possibilité de revenir en arrière'],
-      [/robustesse/gi, 'solidité']
-    ]
-  };
-
   function injectObjectiveFirst() {
     const prose = document.querySelector('main article.prose');
     if (!prose || prose.querySelector('.ce-objective-first')) return;
@@ -101,38 +85,13 @@
     else prose.insertAdjacentElement('afterbegin', box);
   }
 
-  function replaceTextNodes(root, replacements) {
-    if (!root || !replacements?.length) return;
-    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
-      acceptNode(node) {
-        const parent = node.parentElement;
-        if (!parent || /^(SCRIPT|STYLE|CODE|PRE)$/i.test(parent.tagName)) return NodeFilter.FILTER_REJECT;
-        return NodeFilter.FILTER_ACCEPT;
-      }
-    });
-    const nodes = [];
-    while (walker.nextNode()) nodes.push(walker.currentNode);
-    nodes.forEach(node => {
-      let value = node.nodeValue;
-      replacements.forEach(([pattern,replacement]) => { value = value.replace(pattern,replacement); });
-      node.nodeValue = value;
-    });
-  }
-
   function addProgressiveReadingLayer() {
     const prose = document.querySelector('main article.prose');
     if (!prose) return;
     const file = location.pathname.split('/').pop();
-    const firstAnswer = prose.querySelector(':scope > .answer-box');
-    if (firstAnswer) {
-      const heading = firstAnswer.querySelector('h2');
-      if (heading && /réponse courte/i.test(heading.textContent)) heading.textContent = 'En bref';
-    }
-
-    if (plainReplacements[file]) replaceTextNodes(prose, plainReplacements[file]);
-
     const guide = readingGuides[file];
     if (!guide || prose.querySelector('.ce-plain-guide')) return;
+    const firstAnswer = prose.querySelector(':scope > .answer-box');
     const box = document.createElement('div');
     box.className = 'answer-box ce-plain-guide';
     box.innerHTML = `<h2>Pour commencer simplement</h2><p>${guide.text}</p><p><strong>Vous pouvez vous arrêter à l’essentiel</strong>, puis ouvrir les exemples, calculs et nuances seulement si vous en avez besoin.</p>`;
