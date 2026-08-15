@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contre-Évidence — mixte</title>
+    <link>https://contreevidence.github.io/</link>
+    <description>Nouveaux guides, dossiers et outils Contre-Évidence consacrés à mixte.</description>
+    <language>fr-FR</language>
+    <lastBuildDate>Sat, 15 Aug 2026 19:09:18 GMT</lastBuildDate>
+    <ttl>60</ttl>
+    <generator>Contre-Évidence / GitHub Actions</generator>
+    <atom:link href="https://contreevidence.github.io/rss-mixte.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://contreevidence.github.io/assets/logo.png</url>
+      <title>Contre-Évidence</title>
+      <link>https://contreevidence.github.io/</link>
+    </image>
+    <item>
+      <title>Construire un plan 30/90 jours</title>
+      <link>https://contreevidence.github.io/outil-plan-30-90-jours.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/outil-plan-30-90-jours.html</guid>
+      <pubDate>Sat, 15 Aug 2026 19:08:24 GMT</pubDate>
+      <category>Outil</category>
+      <category>mixte</category>
+      <category>Décision · Exécution</category>
+      <description>Transformer une décision en objectif, première action, jalon à 30 jours, résultat à 90 jours, indicateurs et condition de revue.</description>
+    </item>
+  </channel>
+</rss>

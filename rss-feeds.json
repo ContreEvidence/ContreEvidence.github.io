@@ -1,12 +1,18 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-15T19:08:32.142Z",
+  "generatedAt": "2026-08-15T19:09:18.110Z",
   "main": {
     "title": "Contre-Évidence — nouveautés",
     "url": "https://contreevidence.github.io/rss.xml",
-    "count": 134
+    "count": 135
   },
   "thematic": [
+    {
+      "domain": "mixte",
+      "label": "mixte",
+      "url": "https://contreevidence.github.io/rss-mixte.xml",
+      "count": 1
+    },
     {
       "domain": "patrimoine",
       "label": "Patrimoine",
