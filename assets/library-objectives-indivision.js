@@ -75,6 +75,13 @@
       k:'utiliser patrimoine arrêter optimiser assez accumulation décumulation temps liberté qualité vie travailler moins simplifier projet capital'
     },
     {
+      d:'vie-pro',t:'dossier',c:'Formation · Accès sans bac',
+      h:'dossiers/licence-universite-sans-bac-daeu-vap-vae.html',
+      n:'Licence sans bac ni DAEU : quelles voies permettent vraiment d’y arriver ?',
+      x:'Contester le parcours scolaire linéaire : validation d’accès sur acquis, VAE, formation ciblée et DAEU selon l’écart réel entre expérience, niveau visé et diplôme final.',
+      k:'licence sans bac sans daeu université VAP 85 VAE validation acquis professionnels personnels accès études supérieur reprise études diplôme expérience admission directe'
+    },
+    {
       d:'patrimoine',t:'guide',c:'Allocation · Situations',
       h:'dossiers/allocation-patrimoine-selon-situation.html',
       n:'Quelle allocation selon votre situation ? 8 exemples concrets',
