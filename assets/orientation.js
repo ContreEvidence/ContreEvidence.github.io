@@ -41,8 +41,9 @@
       }
     }
 
-    /* Ponts dossier -> outil pour les intentions les plus fortes.
-       Le bloc ajoute une action concrète sans simuler de profondeur éditoriale. */
+    /* Ponts dossier -> outil uniquement lorsqu'un outil traite réellement la question.
+       Aucun encadré générique n'est injecté pour simuler une profondeur éditoriale :
+       l'ingénierie de solutions doit exister dans le contenu source du dossier. */
     const toolMap = {
       '/dossiers/combien-epargne-avant-demissionner.html': {
         href:'../simulateur-epargne-demission.html',
@@ -73,6 +74,26 @@
         href:'../outil-plan-30-90-jours.html',
         title:'Construisez maintenant votre plan 30/90 jours',
         text:'Objectif, non-négociable, première action, jalons, mesure et condition de revue : passez du raisonnement à l’exécution.'
+      },
+      '/dossiers/indivision-couple-separation-rachat-soulte.html': {
+        href:'../outil-ingenierie-solutions.html',
+        title:'Démontez votre propre « rachat impossible »',
+        text:'Identifiez qui dit non, l’écart à fermer, les variables réellement modifiables, les voies progressives et la condition de bascule.'
+      },
+      '/dossiers/indivision-rachat-progressif-parts.html': {
+        href:'../outil-ingenierie-solutions.html',
+        title:'Testez le fractionnement avant de choisir le nombre de tranches',
+        text:'Comparez contrainte bancaire, coût des actes, seuil de droits utile, revenus et trajectoire de sortie finale.'
+      },
+      '/dossiers/creer-entreprise-sans-diplome.html': {
+        href:'../outil-ingenierie-solutions.html',
+        title:'Vérifiez si le diplôme est vraiment le verrou',
+        text:'Séparez réglementation, expérience, organisation, preuve et marché avant de financer une formation ou d’abandonner le projet.'
+      },
+      '/dossiers/metiers-accessibles-sans-diplome.html': {
+        href:'../outil-ingenierie-solutions.html',
+        title:'Contestez le filtre avant de réduire votre ambition',
+        text:'Distinguez obligation légale, filtre recruteur, compétence et prérequis scolaire puis cherchez les voies d’accès alternatives.'
       }
     };
     const tool = Object.entries(toolMap).find(([suffix]) => path.endsWith(suffix))?.[1];
