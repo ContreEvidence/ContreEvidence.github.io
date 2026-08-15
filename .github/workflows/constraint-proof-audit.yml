@@ -1,0 +1,91 @@
+name: Constraint proof audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.html"
+      - ".github/workflows/constraint-proof-audit.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 2
+
+      - name: Check changed categorical claims
+        shell: python
+        run: |
+          from pathlib import Path
+          import re, html, subprocess
+
+          try:
+              changed=set(subprocess.check_output(['git','diff','--name-only','HEAD^','HEAD'],text=True).splitlines())
+          except Exception:
+              changed=set()
+
+          pages=[Path(p) for p in changed if p.endswith('.html') and Path(p).exists()]
+          if not pages:
+              print('No changed HTML content to audit.')
+              raise SystemExit(0)
+
+          strip_scripts=re.compile(r'<(script|style)\b.*?</\1>',re.I|re.S)
+          strip_tags=re.compile(r'<[^>]+>')
+          sentence_re=re.compile(r'(?<=[.!?])\s+(?=[A-ZÀ-ÖØ-Þ0-9«])')
+
+          # Assertions that can close a reader's options if written as facts.
+          assertion_re=re.compile(
+              r'\b(?:vous ne pouvez pas|on ne peut pas|il est interdit de|est interdit(?:e)?|'
+              r'est obligatoire|sont obligatoires|doit obligatoirement|il faut obligatoirement|'
+              r'il faut nécessairement|le seul moyen|la seule (?:solution|voie|option)|'
+              r'aucune solution|aucune possibilité|ne sera jamais possible)\b',re.I
+          )
+
+          scope_re=re.compile(
+              r'\b(?:dans ce cas|dans cette configuration|avec ces hypothèses|à ce jour|aujourd.?hui|'
+              r'ce contrat|ce texte|cet établissement|cette banque|pour cet acte|selon|en principe|'
+              r'sous réserve|si |lorsque|tant que|dépend|condition|temporaire|local|à vérifier)\b',re.I
+          )
+
+          meta_re=re.compile(
+              r'\b(?:expression|formulation|phrase|question|réponse dit|éviter d.?écrire|ne pas écrire|'
+              r'mot|terme|exemple de formulation|contester|audit|doctrine)\b',re.I
+          )
+
+          failures=[]
+          for p in pages:
+              raw=p.read_text(encoding='utf-8',errors='replace')
+              if re.search(r'<meta\s+name=["\']robots["\'][^>]*noindex',raw,re.I):
+                  continue
+              text=html.unescape(strip_tags.sub(' ',strip_scripts.sub(' ',raw)))
+              text=re.sub(r'\s+',' ',text).strip()
+              sentences=sentence_re.split(text)
+              page_has_source=bool(re.search(r'href=["\']https?://',raw,re.I))
+              has_source_block=bool(re.search(r'(?:source-note|sources?\s*:|sources? officielles)',raw,re.I))
+              source_signal=page_has_source and has_source_block
+
+              for i,s in enumerate(sentences):
+                  s=s.strip()
+                  if not assertion_re.search(s):
+                      continue
+                  if meta_re.search(s):
+                      continue
+                  context=' '.join(sentences[max(0,i-1):min(len(sentences),i+2)])
+                  scoped=bool(scope_re.search(context))
+                  if not source_signal and not scoped:
+                      failures.append((p.as_posix(),s[:500],'ni source explicite ni périmètre détecté'))
+
+          if failures:
+              print('ÉCHEC — une affirmation catégorique ferme une voie sans preuve/périmètre suffisant :')
+              for p,s,r in failures:
+                  print(f'\n{p}\n- {r}\n- {s}')
+              print('\nCorriger en démontrant le verrou ou en précisant son périmètre. Ne pas simplement remplacer le mot par un synonyme plus doux.')
+              raise SystemExit(1)
+
+          print('Audit réussi : aucune nouvelle fermeture catégorique non qualifiée détectée dans les pages modifiées.')
