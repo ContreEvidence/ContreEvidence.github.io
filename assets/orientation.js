@@ -68,6 +68,11 @@
         href:'../outil-comparer-offres-emploi.html',
         title:'Mettez les deux offres sur la même base',
         text:'Revenu disponible et temps capturé sont calculés ; contrat, manager, risque, progression et inconnues restent séparés, sans faux score.'
+      },
+      '/dossiers/decision-plan-30-90-jours.html': {
+        href:'../outil-plan-30-90-jours.html',
+        title:'Construisez maintenant votre plan 30/90 jours',
+        text:'Objectif, non-négociable, première action, jalons, mesure et condition de revue : passez du raisonnement à l’exécution.'
       }
     };
     const tool = Object.entries(toolMap).find(([suffix]) => path.endsWith(suffix))?.[1];
@@ -79,6 +84,48 @@
       const answer = prose.querySelector(':scope > .answer-box, :scope > .voice-note');
       if (answer) answer.insertAdjacentElement('afterend', bridge);
       else prose.insertAdjacentElement('afterbegin', bridge);
+    }
+
+    const lifeLinks = [
+      ['dossiers/finances-difficiles-sortir-decouvert-dettes.html','Je finis le mois à découvert ou les dettes commencent à s’empiler.'],
+      ['dossiers/quand-vie-change-sante-separation-revenu.html','Ma santé, mon couple ou mes revenus changent brutalement.'],
+      ['dossiers/couple-famille-argent-temps.html','Comment répartir argent, temps et risques dans le foyer ?'],
+      ['dossiers/temps-energie-qualite-vie.html','Je gagne ou j’épargne, mais je manque surtout de temps et d’énergie.'],
+      ['dossiers/quand-arreter-optimiser-utiliser-patrimoine.html','Tout va plutôt bien : qu’est-ce que mon patrimoine doit maintenant rendre possible ?'],
+      ['outil-plan-30-90-jours.html','J’ai décidé. Comment passer concrètement à l’action ?']
+    ];
+
+    const isHome = path === '/' || /\/index\.html$/.test(path);
+    if (isHome && !document.querySelector('[data-ce-life-routes="home"]')) {
+      const sections = [...document.querySelectorAll('main > section')];
+      const before = sections.find(section => section.querySelector('.section-head .kicker')?.textContent.trim() === 'Quand quelque chose doit changer');
+      if (before) {
+        const section = document.createElement('section');
+        section.dataset.ceLifeRoutes = 'home';
+        section.innerHTML = `<div class="container"><div class="section-head"><div class="kicker">Quand la vraie vie déborde des rubriques</div><h2>Parfois, le problème n’est ni seulement financier ni seulement professionnel.</h2><p>Budget qui ne tient plus, santé, séparation, famille, manque de temps ou au contraire situation déjà solide : partez directement de ce qui change dans votre vie.</p></div><div class="question-grid">${lifeLinks.map(([href,label]) => `<a class="question-link" href="${href}"><strong>${label}</strong><span>→</span></a>`).join('')}</div></div>`;
+        before.insertAdjacentElement('beforebegin', section);
+      }
+    }
+
+    if (/\/parcours-de-vie\.html$/.test(path) && !document.querySelector('[data-ce-life-routes="journey"]')) {
+      const sections = [...document.querySelectorAll('main > section')];
+      const before = sections.find(section => section.querySelector('.section-head .kicker')?.textContent.trim() === 'Ou entrez directement par votre terrain');
+      if (before) {
+        const section = document.createElement('section');
+        section.className = 'journey-section';
+        section.dataset.ceLifeRoutes = 'journey';
+        section.innerHTML = `<div class="container"><div class="journey-intro"><div class="kicker">Situations transversales</div><h2>Votre problème ne rentre pas proprement dans une case ? C’est normal.</h2><p>Certaines décisions touchent en même temps l’argent, le travail, le logement, la santé, le couple ou le temps disponible. Commencez par la situation réelle, pas par le domaine administratif.</p></div><div class="situation-grid">${lifeLinks.map(([href,label],index) => `<a class="situation-card" href="${href}"><span class="number">${String.fromCharCode(65+index)}</span><h3>${label}</h3><p>${index===0?'Stabiliser avant de chercher à optimiser.':index===1?'Protéger les options pendant que la situation se stabilise.':index===2?'Rendre visibles les transferts d’argent, de temps et de carrière.':index===3?'Regarder ce que les chiffres faciles à mesurer oublient.':index===4?'Passer de l’accumulation à l’usage choisi de la marge créée.':'Transformer le choix en actions, jalons et date de revue.'}</p></a>`).join('')}</div></div>`;
+        before.insertAdjacentElement('beforebegin', section);
+      }
+    }
+
+    const budgetLinks = document.querySelector('.patrimoine-hub .pillar#budget .pillar-links');
+    if (budgetLinks && !budgetLinks.querySelector('[data-ce-financial-distress]')) {
+      const link = document.createElement('a');
+      link.dataset.ceFinancialDistress = '1';
+      link.href = '../dossiers/finances-difficiles-sortir-decouvert-dettes.html';
+      link.textContent = 'Si le mois ne tient plus : découvert, dettes et factures →';
+      budgetLinks.insertAdjacentElement('afterbegin', link);
     }
 
     const foundation = document.querySelector('.patrimoine-hub .foundation');
