@@ -45,3 +45,29 @@ Le principe reste symétrique : ne pas fermer une voie sans preuve ; ne pas vali
 - **Preuve :** obligations d’information sur les frais, logique du mandat et calendrier de suppression des commissions de mouvement vérifiés auprès de l’AMF.
 - **Impact :** page moins dépendante des classements temporaires et plus utile pour décider s’il faut déléguer, à quel prix et jusqu’à quand.
 - **Incertitude résiduelle :** la valeur comportementale ne doit jamais être inventée ; elle dépend de l’investisseur et de son historique réel.
+
+### 2026-08-16 — `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
+
+- **Problème corrigé :** la page formulait correctement la finalité du patrimoine mais restait trop qualitative sur le moment où l’accumulation doit céder la place à l’usage.
+- **Motifs activés :** décomposition des fonctions du capital, seuil de bascule, préservation de l’option, expérimentation réversible, coût du temps, scénario adverse.
+- **Causalité :** si une petite fraction du patrimoine supprime durablement une contrainte importante sans fragiliser le socle de sécurité ni les objectifs de long terme, son utilité peut être supérieure à celle de l’accumulation marginale.
+- **Preuve :** principes d’adéquation entre objectifs, horizon, disponibilité et risque consolidés avec les ressources pédagogiques de l’AMF ; exemples monétaires explicitement pédagogiques.
+- **Impact :** ajout d’une architecture en trois poches, d’un calcul du prix du temps racheté, d’un stress test après usage et d’une préférence pour les expérimentations réversibles.
+- **Incertitude résiduelle :** aucun seuil patrimonial universel ne déclenche automatiquement la phase d’usage ; il dépend des besoins, dépenses, risques, dettes et objectifs du foyer.
+
+## Revue humaine du rapport global — pages conservées
+
+Le rapport automatique `reports/corpus-solution-review.md` a été utilisé comme détecteur, puis chaque priorité a été relue humainement. Les pages suivantes ont été **revisitées mais laissées intactes**, car les dimensions signalées comme absentes sont en réalité déjà présentes dans le raisonnement sous une formulation que le détecteur ne reconnaissait pas suffisamment :
+
+- `dossiers/trouver-premiers-clients.html` — entonnoir causal, alternatives de canaux, seuils d’arrêt et changement d’offre déjà explicites ;
+- `articles/competences-invisibles-preuves.html` — mécanisme preuve → réduction du risque recruteur, création d’expérience et test de crédibilité déjà présents ;
+- `articles/entretien-rate-ce-qui-bloque.html` — diagnostic de conversion, hypothèses concurrentes, retours convergents et conditions de recalibrage déjà présents ;
+- `dossiers/combien-chiffre-affaires-pour-vivre.html` — seuils de rentabilité/rémunération/robustesse, capacité, stress test et inversion de conclusion déjà présents ;
+- `dossiers/etre-riche-revenu-patrimoine-liberte.html` — page de clarification conceptuelle volontairement centrée sur les différentes définitions de la richesse ;
+- `dossiers/experience-devient-risque-recruteur.html` — risques perçus, preuves, ciblage et cohérence personnelle déjà traités ;
+- `dossiers/finances-residence-principale.html` — coût irrécupérable, durée, mobilité, liquidité et scénario de sortie déjà structurés ;
+- `dossiers/puis-je-me-permettre-reconversion.html` — déficit mensuel, runway, scénarios rapide/central/adverse et transition progressive déjà présents ;
+- `dossiers/finances-transmission-patrimoine.html` — objectifs, liquidité, sécurité du donateur, propriété réelle et coordination civile/fiscale déjà traités ;
+- `dossiers/quand-vie-change-sante-separation-revenu.html` — adaptation à un choc de vie déjà structurée ; seul le vocabulaire causal explicite manquait au score heuristique.
+
+**Décision :** ne pas ajouter de texte générique pour augmenter un score. Une page est conservée lorsque la lecture humaine conclut que le mécanisme de décision est déjà suffisamment profond.
