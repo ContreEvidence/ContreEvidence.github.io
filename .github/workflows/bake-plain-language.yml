@@ -109,3 +109,5 @@ jobs:
           git commit -m 'Vulgariser les entrées et dossiers de référence'
           git pull --rebase origin main
           git push
+
+# Workflow one-shot : supprimer après exécution réussie.
