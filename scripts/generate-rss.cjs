@@ -10,6 +10,7 @@ const MAIN_FEED_NAME = 'rss.xml';
 const FEED_URL = `${BASE_URL}${MAIN_FEED_NAME}`;
 const AUTODISCOVERY = `<link rel="alternate" type="application/rss+xml" title="Contre-Évidence — nouveautés" href="${FEED_URL}"/>`;
 const KNOWN_DOMAINS = ['patrimoine', 'vie-pro', 'hors-cadre', 'ia-tech'];
+const RSS_HTML_EXCLUSIONS = new Set(['plan-du-site.html']);
 
 const context = { window: {} };
 vm.createContext(context);
@@ -119,11 +120,12 @@ function ensureFollowScript(relativePath) {
 function htmlFiles(dir = ROOT, prefix = '') {
   const out = [];
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (entry.name.startsWith('.') || entry.name === 'node_modules' || entry.name === 'publications') continue;
-    const rel = path.join(prefix, entry.name);
+    if (entry.name.startsWith('.') || entry.name === 'node_modules' || entry.name === 'publications' || entry.name === '_site') continue;
+    const rel = path.join(prefix, entry.name).replace(/\\/g, '/');
+    if (RSS_HTML_EXCLUSIONS.has(rel)) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) out.push(...htmlFiles(full, rel));
-    else if (entry.isFile() && entry.name.toLowerCase().endsWith('.html')) out.push(rel.replace(/\\/g, '/'));
+    else if (entry.isFile() && entry.name.toLowerCase().endsWith('.html')) out.push(rel);
   }
   return out;
 }
