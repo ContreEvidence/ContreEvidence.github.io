@@ -24,7 +24,7 @@ jobs:
       - name: Identify the element or pseudo-element contributing to page width
         shell: bash
         run: |
-          cat > /tmp/diag.mjs <<'JS'
+          cat > diag.mjs <<'JS'
           import fs from 'fs';
           import puppeteer from 'puppeteer-core';
           const bins=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium','/usr/bin/chromium-browser'];
@@ -60,10 +60,10 @@ jobs:
                 }
               }
             }
-            const scrollables=all.filter(el=>el.scrollWidth>el.clientWidth+2).slice(0,30).map(el=>({tag:el.tagName.toLowerCase(),id:el.id||'',cls:String(el.className||'').slice(0,100),scrollWidth:el.scrollWidth,clientWidth:el.clientWidth,overflowX:getComputedStyle(el).overflowX,text:(el.textContent||'').trim().replace(/\s+/g,' ').slice(0,80)}));
+            const scrollables=all.filter(el=>el.scrollWidth>el.clientWidth+2).slice(0,40).map(el=>({tag:el.tagName.toLowerCase(),id:el.id||'',cls:String(el.className||'').slice(0,100),scrollWidth:el.scrollWidth,clientWidth:el.clientWidth,overflowX:getComputedStyle(el).overflowX,text:(el.textContent||'').trim().replace(/\s+/g,' ').slice(0,80)}));
             return {base,contributors,pseudo,scrollables};
           });
           console.log(JSON.stringify(result,null,2));
           await browser.close();
           JS
-          node /tmp/diag.mjs
+          node diag.mjs
