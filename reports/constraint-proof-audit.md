@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **12**
-- P1 — affirmation forte à resserrer ou vérifier : **44**
+- P1 — affirmation forte à resserrer ou vérifier : **42**
 - P2 — nécessité à examiner : **142**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **583**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **579**
 
 ## P0 — rouvrir en priorité
 
@@ -90,9 +90,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sourcée mais formulation trop absolue** — Sources officielles Service-Public.fr — discrimination et critères interdits Service-Public.fr — informations pouvant être demandées lors d’un recrutement ← Retour à Vie professionnelle À lire ensuite Continuez sans repartir de zéro. _[signal-source, temporalité]_
 - **fermeture forte sourcée mais formulation trop absolue** — Une discrimination correspond à une différence de traitement fondée sur un critère interdit par la loi. _[signal-source]_
 - **fermeture forte sourcée mais formulation trop absolue** — Une discrimination, au sens juridique, implique une différence de traitement fondée sur un critère interdit. _[signal-source]_
-### `dossiers/quitter-cdi-avec-credit-immobilier.html`
-- **fermeture forte sourcée mais formulation trop absolue** — Levier Impact illustratif sur 9 mois Réduire le déficit de 300 €/mois 2 700 € Épargner 500 €/mois pendant 6 mois avant départ 3 000 € Mission transitoire rapportant 400 €/mois pendant 3 mois 1 200 € Total 6 900 € La sortie qui paraissait « impossible » n’est pas devenue gratuite : elle est devenue un problème de 6 900 € avec trois leviers identifiés. _[signal-source, temporalité]_
-- **fermeture forte sourcée mais formulation trop absolue** — Quitter son CDI avec un crédit : comment rendre la sortie possible ? | Contre-Évidence Aller au contenu CONTRE-ÉVIDENCE Patrimoine Vie professionnelle Fenêtres Outils Bibliothèque Mon espace Un crédit immobilier ne vous interdit pas de quitter un CDI. _[signal-source, temporalité]_
 ### `dossiers/quitter-emploi-stable-ou-rester.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Intégrer la santé et l’énergie comme contraintes dures Un salaire supérieur ne compense pas toujours une situation qui dégrade durablement la santé ou rend la vie hors travail impossible. _[signal-source]_
 ### `dossiers/quitter-travail-reconversion-sans-se-fragiliser.html`
