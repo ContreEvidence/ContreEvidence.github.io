@@ -1,6 +1,6 @@
 # Contre-Évidence — chantier « ingénierie de solutions »
 
-Mise à jour : 15 août 2026
+Mise à jour : 16 août 2026
 
 ## Pourquoi ce chantier existe
 
@@ -12,65 +12,56 @@ Le standard est désormais :
 
 Une page n’est pas terminée parce qu’elle explique correctement la règle. Elle doit répondre à la question du titre et aider le lecteur à construire ou tester une solution.
 
+## Mode de travail
+
+Le chantier est désormais **autonome** : les améliorations substantielles sont appliquées directement lorsqu’elles apportent une vraie profondeur de résolution. Elles sont ensuite consignées dans `reports/content-review-decisions.md` et récapitulées à l’utilisateur par lot.
+
+Une page déjà forte peut être auditée puis laissée intacte. Le but n’est pas de réécrire tout le texte : c’est de revisiter tout le raisonnement.
+
 ## État du chantier
 
-- Audit initial : **41 dossiers à forte promesse sous 8/12** en ingénierie de solutions.
-- Trois réécritures étalon réalisées :
-  - ✅ `dossiers/indivision-couple-separation-rachat-soulte.html`
-  - ✅ `dossiers/metiers-accessibles-sans-diplome.html`
-  - ✅ `dossiers/quitter-cdi-avec-credit-immobilier.html`
-- Après ces trois réécritures : **38 dossiers à forte promesse restent sous 8/12**.
-- Le bloc générique « Avant de refermer ce dossier » a été supprimé : la profondeur doit désormais être écrite dans chaque dossier, pas simulée par un encadré commun.
+Réécritures étalon ou substantielles déjà réalisées :
+
+- ✅ `dossiers/indivision-couple-separation-rachat-soulte.html`
+- ✅ `dossiers/metiers-accessibles-sans-diplome.html`
+- ✅ `dossiers/quitter-cdi-avec-credit-immobilier.html`
+- ✅ `dossiers/choisir-statut-micro-ei-eurl-sasu.html`
+- ✅ `dossiers/cout-reel-voiture-achat-credit-loa-lld.html`
+- ✅ `dossiers/gestion-pilotee-comparer-performances.html`
+- ✅ `dossiers/location-nue-ou-meublee-comparer.html`
+
+Le bloc générique « Avant de refermer ce dossier » reste supprimé : la profondeur doit être écrite dans chaque dossier, pas simulée par un encadré commun.
 
 ## Règles de chantier
 
 1. **Gel de l’expansion éditoriale** sur les domaines déjà bien couverts tant que les pages à forte promesse ci-dessous ne sont pas reprises, sauf nécessité légale, factuelle ou SEO réellement distincte.
 2. L’audit automatique `solution-engineering-audit.yml` sert de détecteur, jamais de substitut à une lecture humaine.
-3. Toute page réécrite doit viser **au moins 8/12**, mais le score n’est pas une fin en soi.
-4. Toute nouvelle page ou page substantiellement modifiée sous 7/12 est bloquée par le garde-fou automatique.
-5. Une page réussie doit apporter au moins un élément difficile à obtenir par simple compilation de résultats de recherche : seuil, montage, séquence, combinaison de leviers, condition de possibilité ou démonstration d’une fausse impossibilité.
-6. Les solutions restent licites et vérifiables. « Contre-évidence » ne signifie jamais contourner illégalement une règle.
+3. Toute page réécrite doit viser une vraie profondeur de résolution ; le score automatique n’est qu’un signal.
+4. Une page réussie doit apporter au moins un élément difficile à obtenir par simple compilation de résultats de recherche : seuil, montage, séquence, combinaison de leviers, condition de possibilité ou démonstration d’une fausse impossibilité.
+5. Les solutions restent licites et vérifiables. « Contre-évidence » ne signifie jamais contourner illégalement une règle.
+6. Ne pas coller un bloc générique d’ingénierie partout. Le levier doit être spécifique au problème et passer le test causal.
+7. Pour les sujets sensibles, rafraîchir les sources primaires avant toute modification factuelle substantielle.
 
-## Pages étalon
+## Vague A — promesse forte, ancien audit 4–5/12
 
-- ✅ `dossiers/indivision-couple-separation-rachat-soulte.html`
-  - Ancien audit : **7/12**.
-  - Réécrite le 15/08/2026 autour de l’obstacle « rachat impossible aujourd’hui ».
-  - Sortie de la file `< 8/12` après réécriture.
-  - Nouveaux éléments : déficit de rachat, cinq fenêtres, trajectoires à 3/5 ans, garantie, convention d’indivision, gestion rémunérée, usage du bien, voies sans accord, plan 90 jours, conditions d’abandon.
+- [x] `dossiers/choisir-statut-micro-ei-eurl-sasu.html` — réécrit le 16/08 : trajectoire de structure, TVA séparée du régime micro, seuils de bascule
+- [x] `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` — réécrit le 16/08 : besoin de mobilité, option de sortie, liquidité, stress tests
+- [x] `dossiers/gestion-pilotee-comparer-performances.html` — réécrit le 16/08 : valeur de délégation, benchmark, frais, règle de sortie
+- [x] `dossiers/location-nue-ou-meublee-comparer.html` — réécrit le 16/08 : architecture d’usage, seuil de surloyer, DPE, réversibilité
+- [x] `dossiers/quitter-cdi-avec-credit-immobilier.html` — réécrit
+- [x] `dossiers/temps-energie-qualite-vie.html` — réécrit précédemment
+- [~] `dossiers/apprendre-developper-competences.html` — relu le 16/08 : déjà très proche du nouveau standard, pas de réécriture artificielle
+- [~] `dossiers/audit-budget-60-minutes.html` — relu le 16/08 : structure déjà opérationnelle ; approfondissement à cibler seulement si un levier réel manque
+- [ ] `dossiers/creer-entreprise-avec-peu-argent.html`
+- [~] `dossiers/dependance-gros-client.html` — relu le 16/08 : stress test, mois de rupture et diversification causale déjà présents
+- [ ] `dossiers/finances-retraite-decumulation.html`
+- [ ] `dossiers/indivision-loyers-charges-comptes.html`
+- [x] `dossiers/metiers-accessibles-sans-diplome.html` — réécrit
+- [ ] `dossiers/passer-80-pourcent-cout-reel.html`
 
-- ✅ `dossiers/metiers-accessibles-sans-diplome.html`
-  - Ancien audit : **5/12**.
-  - Réécrite autour de cinq verrous distincts : obligation légale, filtre recruteur, compétence, prérequis scolaire, certification.
-  - Fenêtres : MRS, POE, VAP 85, VAE, poste/fonction passerelle.
-  - Sortie de la file `< 8/12` après réécriture.
+`[~]` signifie : page revisitée humainement, contenu conservé car déjà substantiellement conforme ; elle peut encore recevoir une amélioration ciblée plus tard.
 
-- ✅ `dossiers/quitter-cdi-avec-credit-immobilier.html`
-  - Ancien audit : **4/12**.
-  - Réécrite autour du déficit de transition plutôt que d’un nombre arbitraire de mois d’épargne.
-  - Fenêtres : nouvel emploi avant départ, rupture conventionnelle, démission-reconversion, congé sabbatique, préparation différée, départ immédiat chiffré.
-  - Sortie de la file `< 8/12` après réécriture.
-
-## Vague A — promesse forte, ingénierie 4–5/12
-
-À reprendre en priorité, de fond en comble.
-
-- [ ] `dossiers/choisir-statut-micro-ei-eurl-sasu.html` — 4/12
-- [ ] `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` — 4/12
-- [ ] `dossiers/gestion-pilotee-comparer-performances.html` — 4/12
-- [ ] `dossiers/location-nue-ou-meublee-comparer.html` — 4/12
-- [x] `dossiers/quitter-cdi-avec-credit-immobilier.html` — ancien 4/12, réécrit
-- [ ] `dossiers/temps-energie-qualite-vie.html` — 4/12
-- [ ] `dossiers/apprendre-developper-competences.html` — 5/12
-- [ ] `dossiers/audit-budget-60-minutes.html` — 5/12
-- [ ] `dossiers/creer-entreprise-avec-peu-argent.html` — 5/12
-- [ ] `dossiers/dependance-gros-client.html` — 5/12
-- [ ] `dossiers/finances-retraite-decumulation.html` — 5/12
-- [ ] `dossiers/indivision-loyers-charges-comptes.html` — 5/12
-- [x] `dossiers/metiers-accessibles-sans-diplome.html` — ancien 5/12, réécrit
-- [ ] `dossiers/passer-80-pourcent-cout-reel.html` — 5/12
-
-## Vague B — promesse forte, ingénierie 6/12
+## Vague B — promesse forte, ancien audit 6/12
 
 - [ ] `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`
 - [ ] `dossiers/acheter-logement-sans-se-fragiliser.html`
@@ -84,19 +75,19 @@ Une page n’est pas terminée parce qu’elle explique correctement la règle. 
 - [ ] `dossiers/reconversion-sans-perte-salaire.html`
 - [ ] `dossiers/regles-responsabilites-fautes-travail.html`
 
-## Vague C — promesse forte, ingénierie 7/12
+## Vague C — promesse forte, ancien audit 7/12
 
 - [ ] `dossiers/ameliorer-processus-sans-degrader-service.html`
 - [ ] `dossiers/audit-copropriete-avant-achat.html`
 - [ ] `dossiers/calculer-prix-minimum-rentable.html`
 - [ ] `dossiers/combien-chiffre-affaires-pour-vivre.html`
 - [ ] `dossiers/combien-epargne-avant-demissionner.html`
-- [ ] `dossiers/creer-entreprise-sans-diplome.html`
+- [x] `dossiers/creer-entreprise-sans-diplome.html`
 - [ ] `dossiers/emploi-chercher-accepter-negocier-evoluer.html`
 - [ ] `dossiers/favoriser-un-enfant-succession-donation.html`
 - [ ] `dossiers/finances-residence-principale.html`
 - [ ] `dossiers/indivision-succession-heritiers-vendre-partager.html`
-- [ ] `dossiers/previsionnel-activite-12-mois.html`
+- [x] `dossiers/previsionnel-activite-12-mois.html` — causalité capacité/prix corrigée précédemment
 - [ ] `dossiers/prix-attendre-finances.html`
 - [ ] `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
 - [ ] `dossiers/reconversion-sans-formation-longue.html`
@@ -104,19 +95,17 @@ Une page n’est pas terminée parce qu’elle explique correctement la règle. 
 
 ## Pages faibles sans nécessairement avoir un titre « solution »
 
-Elles ne doivent pas être oubliées après les trois vagues précédentes :
+- [x] `dossiers/couple-famille-argent-temps.html` — réécrit précédemment
+- [ ] `dossiers/quand-vie-change-sante-separation-revenu.html`
+- [ ] `dossiers/trouver-premiers-clients.html`
+- [ ] `dossiers/immobilier-allocation-globale-patrimoine.html`
+- [ ] `dossiers/classes-actifs-allocation-patrimoine.html`
+- [ ] `dossiers/finances-difficiles-sortir-decouvert-dettes.html`
+- et toutes les autres pages signalées par les audits.
 
-- `dossiers/couple-famille-argent-temps.html` — 3/12
-- `dossiers/quand-vie-change-sante-separation-revenu.html` — 5/12
-- `dossiers/trouver-premiers-clients.html` — 5/12
-- `dossiers/immobilier-allocation-globale-patrimoine.html` — 5/12
-- `dossiers/classes-actifs-allocation-patrimoine.html` — 5/12
-- `dossiers/finances-difficiles-sortir-decouvert-dettes.html` — 7/12
-- et toutes les autres pages signalées par l’audit.
+## Ordre de reprise
 
-## Ordre de reprise recommandé
-
-Le classement par score ne suffit pas. À score égal, priorité à :
+Le classement par ancien score ne suffit pas. À score égal, priorité à :
 
 1. une promesse forte dans le titre ;
 2. un sujet à forte intention de recherche ou forte conséquence pratique ;
@@ -124,13 +113,13 @@ Le classement par score ne suffit pas. À score égal, priorité à :
 4. une page vers laquelle de nombreux parcours internes convergent ;
 5. un sujet où plusieurs domaines peuvent être recombinés pour faire apparaître une solution non évidente.
 
-Prochaine séquence :
+Prochain noyau :
 
-1. `temps-energie-qualite-vie.html` — faire des moyens une ressource au service de la vie ;
-2. `indivision-loyers-charges-comptes.html` — prolonger le dossier étalon ;
-3. `choisir-statut-micro-ei-eurl-sasu.html` — passer du comparatif de statuts à la trajectoire de structure selon le modèle économique ;
-4. `couple-famille-argent-temps.html` — relever l’un des dossiers les plus faibles du corpus ;
-5. `location-nue-ou-meublee-comparer.html` — passer du comparatif fiscal à l’ingénierie d’usage, de rendement et de sortie.
+1. `creer-entreprise-avec-peu-argent.html` — séparer coût de lancement, besoin en fonds de roulement et runway personnel ;
+2. `indivision-loyers-charges-comptes.html` — transformer la comptabilité de l’indivision en architecture de preuve et de décision ;
+3. `finances-retraite-decumulation.html` — passer du taux de retrait à une politique conditionnelle de décumulation ;
+4. `passer-80-pourcent-cout-reel.html` — calculer le prix réel du temps libéré et les seuils où l’arbitrage s’inverse ;
+5. puis la vague B.
 
 ## Définition de terminé
 
