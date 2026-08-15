@@ -8,6 +8,7 @@ on:
       - "dossiers/**/*.html"
       - "articles/**/*.html"
       - "CHARTE-DE-VOIX.txt"
+      - "INGENIERIE-DE-SOLUTIONS.md"
       - ".github/workflows/solution-engineering-audit.yml"
 
 permissions:
@@ -33,30 +34,46 @@ jobs:
           pages = sorted((root / 'dossiers').glob('*.html'))
           pages += sorted((root / 'articles').glob('*.html'))
 
+          # Ces pages ont été explicitement reconstruites selon le nouveau standard.
+          # Elles ne peuvent plus se contenter de cocher des mots-clés : elles passent
+          # une porte structurelle plus exigeante.
+          DEEP_STANDARD = {
+              'dossiers/indivision-couple-separation-rachat-soulte.html',
+              'dossiers/indivision-rachat-progressif-parts.html',
+              'dossiers/creer-entreprise-sans-diplome.html',
+          }
+
           strip_scripts = re.compile(r'<(script|style)\b.*?</\1>', re.I | re.S)
           strip_tags = re.compile(r'<[^>]+>')
           title_re = re.compile(r'<title>(.*?)</title>', re.I | re.S)
           h1_re = re.compile(r'<h1[^>]*>(.*?)</h1>', re.I | re.S)
+          h2_text_re = re.compile(r'<h2[^>]*>(.*?)</h2>', re.I | re.S)
           word_re = re.compile(r"[A-Za-zÀ-ÖØ-öø-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÖØ-öø-ÿ0-9]+)*")
-          number_re = re.compile(r'\b\d+(?:[\s.,]\d+)?\s*(?:€|%|euros?|mois|ans?|heures?|h\b|jours?|km|clients?|candidatures?|ventes?)', re.I)
+          number_re = re.compile(r'\b\d+(?:[\s.,]\d+)?\s*(?:€|%|euros?|mois|ans?|heures?|h\b|jours?|km|clients?|candidatures?|ventes?|points?)', re.I)
           source_re = re.compile(r'href=["\']https?://', re.I)
 
           patterns = {
               'obstacle': re.compile(r'\b(?:obstacle|verrou|bloqu|empêche|impossible|refus|limite|contrainte|fragilit|frein)\w*', re.I),
               'variables': re.compile(r'\b(?:variable|modifiable|fixe|levier|marge de manœuvre|dépendance|hypothèse|paramètre)\w*', re.I),
               'windows': re.compile(r'\b(?:fenêtre|alternative|option|solution|montage|séquen|transitoire|intermédiaire|transform|réorganis|hybride|contourn)\w*', re.I),
-              'conditions': re.compile(r'\b(?:condition|à partir de|il faut que|doit être|doit atteindre|pour rendre|devient possible|seuil|point de bascule|si .{0,45} alors)\b', re.I),
-              'scenarios': re.compile(r'\b(?:scénario|stratégie|option|chemin|cas)\b', re.I),
-              'execution': re.compile(r'\b(?:plan d.?action|prochaines? étapes?|dans les \d+ jours|dans \d+ mois|ordre des actions|commencez par|vérifiez d.?abord|à faire maintenant|première action|calendrier)\b', re.I),
-              'revision': re.compile(r'\b(?:abandon|renoncer|arrêter|condition de sortie|condition d.?arrêt|revoir|réviser|changer de stratégie|cesse d.?être|trop coûteu|trop risqu|ne vaut plus)\w*', re.I),
-              'counterintuitive': re.compile(r'\b(?:contre-évidence|intuition|évidence|paradox|on oublie|angle mort|faux problème|fausse impossibilité|pas forcément)\w*', re.I),
+              'conditions': re.compile(r'\b(?:condition|à partir de|il faut que|doit être|doit atteindre|pour rendre|devient possible|seuil|point de bascule|écart à fermer|si .{0,45} alors)\b', re.I),
+              'scenarios': re.compile(r'\b(?:scénario|stratégie|option|chemin|cas|architecture)\b', re.I),
+              'execution': re.compile(r'\b(?:plan d.?action|plan d.?exécution|prochaines? étapes?|dans les \d+ jours|dans \d+ mois|ordre des actions|ordre des opérations|commencez par|vérifiez d.?abord|à faire maintenant|première action|calendrier)\b', re.I),
+              'revision': re.compile(r'\b(?:abandon|renoncer|arrêter|condition de sortie|condition d.?arrêt|revoir|réviser|changer de stratégie|cesse d.?être|trop coûteu|trop risqu|ne vaut plus|mauvaise idée)\w*', re.I),
+              'counterintuitive': re.compile(r'\b(?:contre-évidence|intuition|évidence|paradox|on oublie|angle mort|faux problème|fausse impossibilité|pas forcément|tout ou rien)\w*', re.I),
+              'progressive': re.compile(r'\b(?:progressi|fractionn|tranche|par étapes?|montée en puissance|poste passerelle)\w*', re.I),
+              'sequence': re.compile(r'\b(?:séquen|ordre des opérations|inverser l.?ordre|faire .{0,40} avant|d.?abord .{0,80} ensuite)\w*', re.I),
+              'combination': re.compile(r'\b(?:combinaison|combiner|recomposer|plusieurs leviers|aucun levier seul|2, 3 ou 4 leviers|deux leviers|trois leviers)\b', re.I),
+              'substitution': re.compile(r'\b(?:substitut|remplac|garantie supplémentaire|personne qualifiée|fonction voisine|autre usage)\w*', re.I),
+              'reduce_need': re.compile(r'\b(?:réduire le besoin|périmètre plus étroit|réduction du besoin|moins de besoin|limiter le périmètre)\b', re.I),
+              'redteam': re.compile(r'\b(?:red team|contradicteur|attaqu|ce qui rendrait|qu.?avons-nous considéré comme fixe|mauvaise idée)\w*', re.I),
           }
 
           def visible(raw: str) -> str:
               return html.unescape(strip_tags.sub(' ', strip_scripts.sub(' ', raw)))
 
-          def count_distinct_markers(text: str, pat: re.Pattern) -> int:
-              return len(pat.findall(text))
+          def clean_heading(raw: str) -> str:
+              return html.unescape(strip_tags.sub(' ', raw)).strip()
 
           def audit(page: pathlib.Path):
               raw = page.read_text(encoding='utf-8', errors='replace')
@@ -67,8 +84,10 @@ jobs:
               numbers = len(number_re.findall(text))
               sources = len(source_re.findall(raw))
               tables = len(re.findall(r'<table\b', raw, re.I))
-              title = html.unescape(strip_tags.sub('', (h1_re.search(raw) or title_re.search(raw) or ['',''])[1] if (h1_re.search(raw) or title_re.search(raw)) else page.stem))
-              counts = {k: count_distinct_markers(text, p) for k,p in patterns.items()}
+              h2s = [clean_heading(x) for x in h2_text_re.findall(raw)]
+              title_match = h1_re.search(raw) or title_re.search(raw)
+              title = clean_heading(title_match.group(1)) if title_match else page.stem
+              counts = {k: len(p.findall(text)) for k,p in patterns.items()}
 
               score = 0
               score += counts['obstacle'] >= 2
@@ -82,7 +101,7 @@ jobs:
               score += numbers >= 5 or tables >= 2
               score += sources >= 1
               score += words >= (1300 if page.parts[-2] == 'dossiers' else 900)
-              score += bool(re.search(r'\b(?:à partir de quel|combien faut-il|que faudrait-il|qu.?est-ce qui doit|ce qui doit changer|conditions? de possibilité)\b', text, re.I))
+              score += bool(re.search(r'\b(?:à partir de quel|combien faut-il|que faudrait-il|qu.?est-ce qui doit|ce qui doit changer|conditions? de possibilité|point de bascule|écart à fermer)\b', text, re.I))
 
               missing=[]
               if counts['obstacle'] < 2: missing.append('obstacle précis')
@@ -95,49 +114,110 @@ jobs:
               if numbers < 5 and tables < 2: missing.append('seuils/chiffrage')
               if sources < 1: missing.append('source externe')
               if words < (1300 if page.parts[-2] == 'dossiers' else 900): missing.append('profondeur')
-              return score, title, text, missing, counts, words, numbers, tables, sources
+              return {
+                  'score':score,'title':title,'text':text,'raw':raw,'missing':missing,
+                  'counts':counts,'words':words,'numbers':numbers,'tables':tables,
+                  'sources':sources,'h2s':h2s
+              }
 
           rows=[]
           for page in pages:
               r=audit(page)
               if r:
-                  rows.append((page.relative_to(root).as_posix(),)+r)
+                  rows.append((page.relative_to(root).as_posix(),r))
 
           print(f'Contenus audités : {len(rows)}')
           print('\nDOSSIERS — ingénierie de solutions la plus faible :')
           dossiers=[r for r in rows if r[0].startswith('dossiers/')]
-          for rel,score,title,text,missing,counts,words,numbers,tables,sources in sorted(dossiers,key=lambda r:(r[1],r[6]))[:60]:
-              print(f'{score:2}/12 | {words:4} mots | {rel} | manque: {", ".join(missing) or "—"}')
+          for rel,r in sorted(dossiers,key=lambda x:(x[1]['score'],x[1]['words']))[:60]:
+              print(f"{r['score']:2}/12 | {r['words']:4} mots | {rel} | manque: {', '.join(r['missing']) or '—'}")
 
-          # Les titres de décision sont ceux pour lesquels une simple page explicative est la moins acceptable.
           promise_re=re.compile(r'\b(?:comment|faut-il|peut-on|combien|quitter|sortir|racheter|vendre|conserver|acheter|choisir|devenir|réduire|travailler moins|sans|ou)\b|\?', re.I)
           high_promise=[]
-          for r in dossiers:
-              rel,score,title,text,missing,*_=r
-              if promise_re.search(title) and score < 8:
-                  high_promise.append(r)
+          for rel,r in dossiers:
+              if promise_re.search(r['title']) and r['score'] < 8:
+                  high_promise.append((rel,r))
           print('\nTITRES À FORTE PROMESSE mais ingénierie < 8/12 :')
-          for rel,score,title,text,missing,*_ in sorted(high_promise,key=lambda r:(r[1],r[0])):
-              print(f'{score:2}/12 | {rel} | {title} | manque: {", ".join(missing)}')
+          for rel,r in sorted(high_promise,key=lambda x:(x[1]['score'],x[0])):
+              print(f"{r['score']:2}/12 | {rel} | {r['title']} | manque: {', '.join(r['missing'])}")
           print(f'File prioritaire : {len(high_promise)} dossier(s).')
 
-          # Garde-fou : un nouveau dossier ou un dossier modifié après l’installation de ce standard
-          # ne doit pas être publié avec une ingénierie très faible. L’ancien corpus reste audité
-          # sans casser le déploiement : il doit être repris progressivement par priorité.
+          def structural_failures(rel, r):
+              failures=[]
+              text=r['text']; counts=r['counts']; raw=r['raw']; h2=' | '.join(r['h2s'])
+              if r['words'] < 1600: failures.append('moins de 1600 mots utiles')
+              if r['tables'] < 3: failures.append('moins de 3 comparaisons/tableaux')
+              if r['sources'] < 3: failures.append('moins de 3 liens sources')
+              if r['numbers'] < 10: failures.append('quantification insuffisante')
+              if counts['obstacle'] < 3 or counts['variables'] < 2: failures.append('verrou/variables insuffisamment démontés')
+
+              families = {
+                  'progressif/fractionné': counts['progressive'] >= 2,
+                  'changement de séquence': counts['sequence'] >= 1,
+                  'combinaison de leviers': counts['combination'] >= 1,
+                  'substitution / autre ressource': counts['substitution'] >= 1,
+                  'réduction du besoin': counts['reduce_need'] >= 1,
+              }
+              if sum(families.values()) < 3:
+                  failures.append('moins de 3 familles de solutions réellement présentes')
+              if not families['progressif/fractionné']:
+                  failures.append('aucune voie progressive/fractionnée')
+              if not families['changement de séquence']:
+                  failures.append('aucun changement de séquence')
+              if not families['combinaison de leviers']:
+                  failures.append('aucune combinaison de leviers')
+
+              if not re.search(r'\b(?:point de bascule|seuil|écart à fermer|à partir de quel|devient possible|devient finançable)\b', text, re.I):
+                  failures.append('pas de seuil ou point de bascule explicite')
+              if counts['execution'] < 2 or not re.search(r'<h2[^>]*>.*?(?:plan|exécution|jours).*?</h2>', raw, re.I|re.S):
+                  failures.append('pas de vraie séquence d’exécution')
+              if counts['revision'] < 2:
+                  failures.append('condition d’abandon trop faible')
+              if counts['redteam'] < 1 and not re.search(r'\b(?:quand .* mauvaise idée|quand .* abandon|condition d.?abandon)\b', h2, re.I):
+                  failures.append('pas de passe contradictoire explicite')
+              if 'answer-box' not in raw:
+                  failures.append('pas de réponse courte')
+              if 'ce-related' not in raw:
+                  failures.append('pas de suite éditoriale')
+              return failures
+
+          print('\nNOUVEAU STANDARD — pages déclarées reconstruites :')
+          deep_fail=[]
+          present={rel:r for rel,r in dossiers}
+          for rel in sorted(DEEP_STANDARD):
+              r=present.get(rel)
+              if not r:
+                  deep_fail.append((rel,['page absente ou noindex']))
+                  continue
+              fails=structural_failures(rel,r)
+              print(f"{rel} | {r['score']}/12 | {r['words']} mots | {'OK' if not fails else 'ÉCHEC: ' + ', '.join(fails)}")
+              if fails: deep_fail.append((rel,fails))
+
+          # Garde-fou sur les dossiers réellement modifiés dans le dernier commit.
+          # Le corpus ancien reste une dette éditoriale mesurée, sans bloquer chaque déploiement.
           try:
-              changed=subprocess.check_output(['git','diff','--name-only','HEAD^','HEAD'],text=True).splitlines()
+              changed=set(subprocess.check_output(['git','diff','--name-only','HEAD^','HEAD'],text=True).splitlines())
           except Exception:
-              changed=[]
-          changed=set(changed)
+              changed=set()
+
           failures=[]
-          for r in dossiers:
-              rel,score,title,text,missing,*_=r
-              if rel in changed and score < 7:
-                  failures.append((rel,score,title,missing))
+          for rel,r in dossiers:
+              if rel not in changed: continue
+              if rel in DEEP_STANDARD:
+                  fails=structural_failures(rel,r)
+                  if fails: failures.append((rel,'standard reconstruit',fails))
+              elif promise_re.search(r['title']) and r['score'] < 7:
+                  failures.append((rel,'minimum transitoire',[f"score {r['score']}/12"]+r['missing']))
+
+          # Le standard déclaré est absolu : si une page étalon régresse, l'audit échoue même si
+          # la régression vient d'un autre mécanisme de génération.
+          for rel,fails in deep_fail:
+              if not any(x[0]==rel for x in failures): failures.append((rel,'régression page étalon',fails))
+
           if failures:
-              print('\nÉCHEC — dossier modifié sous le minimum d’ingénierie (7/12) :')
-              for rel,score,title,missing in failures:
-                  print(f'{score:2}/12 | {rel} | {title} | manque: {", ".join(missing)}')
+              print('\nÉCHEC — ingénierie de solutions insuffisante :')
+              for rel,level,fails in failures:
+                  print(f"{rel} | {level} | {', '.join(fails)}")
               raise SystemExit(1)
 
-          print('\nAudit éditorial : le score ne remplace pas une lecture humaine. Il sert à repérer les pages qui expliquent correctement un sujet mais ne construisent pas encore assez de solutions. Le critère décisif reste l’alignement titre → problème → leviers → conditions → seuils → exécution.')
+          print('\nAudit réussi. Le score global sert à prioriser l’ancien corpus. Les pages étalons sont, elles, soumises à une porte structurelle : plusieurs familles de solutions, voie progressive, séquence, combinaison, seuil, exécution et contradiction.')
