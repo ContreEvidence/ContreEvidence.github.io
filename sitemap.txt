@@ -135,6 +135,7 @@ https://contreevidence.github.io/outil-capital-professionnel.html
 https://contreevidence.github.io/outil-comparer-offres-emploi.html
 https://contreevidence.github.io/outil-microscope-pea.html
 https://contreevidence.github.io/outil-pilotage-recherche-emploi.html
+https://contreevidence.github.io/outil-plan-30-90-jours.html
 https://contreevidence.github.io/parcours-argent.html
 https://contreevidence.github.io/parcours-de-vie.html
 https://contreevidence.github.io/parcours-vie-professionnelle.html
