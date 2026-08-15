@@ -243,3 +243,76 @@ transférables, actifs dormants, droits non exercés, contraintes de tiers.
 
 Règle : les informations particulières peuvent manquer ; les questions permettant de les découvrir
 ne doivent pas manquer.
+
+18. PRÉSOMPTION D’EXPLORABILITÉ
+La doctrine devient explicite : **tout est à explorer tant que l’impossibilité n’est pas démontrée**.
+
+Cela ne signifie jamais : « tout est possible ». Cela signifie :
+- ne pas fermer une voie parce qu’elle est atypique ;
+- ne pas transformer un refus individuel en règle universelle ;
+- ne pas transformer une difficulté de financement aujourd’hui en impossibilité définitive ;
+- ne pas traiter l’ordre habituel des opérations comme le seul ordre possible ;
+- ne pas confondre absence de précédent connu et impossibilité.
+
+Pour employer une formulation absolue — « impossible », « interdit », « obligatoire », « seul moyen »,
+« aucune solution » — la charge de la preuve appartient au texte qui ferme la voie.
+
+19. DEUX CHARGES DE PREUVE, PAS UNE
+Contre-Évidence doit être offensif dans l’exploration et conservateur dans l’affirmation.
+
+A. Pour fermer une voie : démontrer le verrou.
+- texte applicable ;
+- clause contractuelle ;
+- impossibilité physique ou mathématique ;
+- calcul qui ne ferme pas l’écart ;
+- condition d’un tiers impossible à satisfaire ;
+- coût ou risque rendant rationnellement la voie impropre.
+
+B. Pour recommander une voie : démontrer la faisabilité.
+- légalité ;
+- mécanique réelle ;
+- coût ;
+- conditions ;
+- tiers nécessaires ;
+- risques ;
+- séquence ;
+- scénario défavorable.
+
+Règle cardinale : **absence de preuve d’impossibilité ≠ preuve de faisabilité.**
+Une idée non réfutée reste une piste. Elle n’est pas encore une solution.
+
+20. LE TEMPS ET L’ORDRE SONT DES LEVIERS
+Une contrainte peut être vraie après une étape et exploitable juste avant. Un dossier doit donc
+chercher les fenêtres temporelles avec la même attention que les règles juridiques ou les montants.
+
+Questions obligatoires :
+- Qu’est-ce qui est vrai maintenant mais ne le sera plus bientôt ?
+- Qu’est-ce qui deviendra vrai après une date, une ancienneté, un remboursement ou un changement de statut ?
+- Quelle décision faut-il sécuriser avant de modifier la situation qui la rend possible ?
+- Quel ordre détruit une option ?
+- Quel ordre en crée une ?
+- Peut-on préparer aujourd’hui une opération qui ne sera finalisée que lorsque la condition suivante sera remplie ?
+
+Le calendrier n’est pas un décor. **C’est une variable d’ingénierie.**
+
+21. STATUT DE PREUVE DES SOLUTIONS
+Dans le travail préparatoire, chaque piste doit être classée :
+
+- **VÉRIFIÉE** : mécanisme confirmé par source primaire, texte, contrat, calcul reproductible ou fait robuste ;
+- **CONDITIONNELLE** : mécanisme réel mais dépendant d’un accord, d’un seuil ou d’une donnée identifiée ;
+- **À TESTER** : aucun verrou démontré, mais faisabilité positive encore non établie ;
+- **ÉLIMINÉE** : voie réfutée par le droit, les faits, les calculs, le risque ou le coût ;
+- **INCONNUE** : données indispensables manquantes.
+
+Ne jamais écrire une piste « À TESTER » comme si elle était « VÉRIFIÉE ».
+Ne jamais utiliser un exemple personnel réussi comme preuve qu’une voie fonctionne pour tout le monde.
+Ne jamais proposer une fausse déclaration, une dissimulation ou un montage qui dépend du fait qu’un tiers
+ignore une information qu’il est en droit d’obtenir.
+
+22. TEST FINAL RENFORCÉ
+Avant publication, poser deux questions distinctes :
+
+1. **Avons-nous fermé une voie sans preuve suffisante ?**
+2. **Avons-nous présenté comme faisable une voie que nous n’avons pas suffisamment vérifiée ?**
+
+Un « oui » à l’une de ces questions signifie que le dossier n’est pas terminé.
