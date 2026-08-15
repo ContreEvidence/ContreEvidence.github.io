@@ -1,0 +1,96 @@
+name: Solution proof audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.html"
+      - ".github/workflows/solution-proof-audit.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 2
+
+      - name: Check changed high-stakes feasibility claims
+        shell: python
+        run: |
+          from pathlib import Path
+          import re, html, subprocess
+
+          try:
+              changed=set(subprocess.check_output(['git','diff','--name-only','HEAD^','HEAD'],text=True).splitlines())
+          except Exception:
+              changed=set()
+          pages=[Path(p) for p in changed if p.endswith('.html') and Path(p).exists()]
+          if not pages:
+              print('No changed HTML content to audit.')
+              raise SystemExit(0)
+
+          strip_scripts=re.compile(r'<(script|style)\b.*?</\1>',re.I|re.S)
+          strip_tags=re.compile(r'<[^>]+>')
+          sentence_re=re.compile(r'(?<=[.!?])\s+(?=[A-ZÀ-ÖØ-Þ0-9«])')
+
+          positive_re=re.compile(
+              r'\b(?:vous pouvez obtenir|on peut obtenir|ouvre droit|donne droit|peut bénéficier|'
+              r'peut obtenir|peut être financ|peut être déduit|peut être exonér|peut être loué|'
+              r'peut être vendu|peut être racheté|peut être exercé|peut accéder directement|'
+              r'permet d.?exercer|permet d.?obtenir|permet d.?accéder|permet de bénéficier)\b',re.I
+          )
+          highstakes_re=re.compile(
+              r'\b(?:banque|crédit|prêt|emprunt|assurance|impôt|fiscal|taxe|TVA|URSSAF|ARE|allocation|'
+              r'chômage|démission|PACS|mariage|succession|donation|indivision|propriété|soulte|notaire|'
+              r'licitation|bail|location|copropriété|droit|loi|code|article|réglement|autorisation|'
+              r'diplôme|qualification|VAE|VAP|retraite|pension|licenciement|contrat de travail)\b',re.I
+          )
+          condition_re=re.compile(
+              r'\b(?:si |sous réserve|à condition|lorsque|selon|dans certains cas|dépend|à vérifier|'
+              r'après validation|avec accord|sous condition|potentiellement|dans la limite|pour ce cas|'
+              r'pour cette activité|pour ce logement|à défaut de|lorsque les conditions)\b',re.I
+          )
+          proof_re=re.compile(
+              r'\b(?:source|service-public|légifrance|legifrance|economie.gouv|impots.gouv|france travail|'
+              r'banque de france|anil|urssaf|code civil|code du travail|code de la consommation|article [LRD]\.|'
+              r'contrat|clause|attestation|délibération|règlement)\b',re.I
+          )
+          meta_re=re.compile(
+              r'\b(?:question|tester si|à tester|statut de preuve|formulation|exemple de phrase|audit|'
+              r'ne pas écrire|ce que l.?outil|ce que le simulateur|permet de voir|permet de saisir|'
+              r'permet de calculer|permet d.?exporter)\b',re.I
+          )
+
+          failures=[]
+          for p in pages:
+              raw=p.read_text(encoding='utf-8',errors='replace')
+              if re.search(r'<meta\s+name=["\']robots["\'][^>]*noindex',raw,re.I): continue
+              text=html.unescape(strip_tags.sub(' ',strip_scripts.sub(' ',raw)))
+              text=re.sub(r'\s+',' ',text).strip()
+              sentences=sentence_re.split(text)
+              page_sources=bool(re.search(r'href=["\']https?://',raw,re.I))
+              source_block=bool(re.search(r'(?:source-note|sources?\s*:|sources? officielles|source de référence)',raw,re.I))
+
+              for i,s in enumerate(sentences):
+                  if not positive_re.search(s): continue
+                  context=' '.join(sentences[max(0,i-1):min(len(sentences),i+2)])
+                  if meta_re.search(context): continue
+                  if not highstakes_re.search(context): continue
+                  conditioned=bool(condition_re.search(context))
+                  proven=bool(proof_re.search(context)) or (page_sources and source_block)
+                  if not conditioned and not proven:
+                      failures.append((p.as_posix(),s[:500]))
+
+          if failures:
+              print('ÉCHEC — une nouvelle possibilité à fort enjeu est affirmée sans preuve ni condition visible :')
+              for p,s in failures:
+                  print(f'\n{p}\n- {s}')
+              print('\nAjouter la preuve, expliciter la condition ou classer la piste À TESTER/CONDITIONNELLE. Ne pas rendre la phrase vague pour contourner le contrôle.')
+              raise SystemExit(1)
+
+          print('Audit réussi : aucune nouvelle possibilité à fort enjeu non étayée détectée dans les pages modifiées.')
