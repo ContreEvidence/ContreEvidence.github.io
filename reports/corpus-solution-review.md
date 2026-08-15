@@ -21,7 +21,6 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**.
 | 6/9 | 1489 | `dossiers/finances-residence-principale.html` | probleme, causalite, sequence |
 | 6/9 | 1596 | `dossiers/puis-je-me-permettre-reconversion.html` | probleme, causalite, sequence |
 | 6/9 | 1629 | `dossiers/finances-transmission-patrimoine.html` | causalite, options, sortie |
-| 7/9 | 688 | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | causalite, options |
 | 8/9 | 693 | `dossiers/quand-vie-change-sante-separation-revenu.html` | causalite |
 
 ## Corpus complet
@@ -37,7 +36,6 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**.
 | 6/9 | 1489 | `dossiers/finances-residence-principale.html` |
 | 6/9 | 1596 | `dossiers/puis-je-me-permettre-reconversion.html` |
 | 6/9 | 1629 | `dossiers/finances-transmission-patrimoine.html` |
-| 7/9 | 688 | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
 | 7/9 | 861 | `dossiers/decision-plan-30-90-jours.html` |
 | 7/9 | 1010 | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` |
 | 7/9 | 1064 | `articles/checklist-avant-placement-conseiller.html` |
@@ -133,6 +131,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**.
 | 9/9 | 1474 | `articles/accepter-nimporte-quel-poste-retour-emploi.html` |
 | 9/9 | 1494 | `dossiers/quitter-emploi-stable-ou-rester.html` |
 | 9/9 | 1557 | `articles/comparatif-produits-bancaires.html` |
+| 9/9 | 1570 | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
 | 9/9 | 1610 | `dossiers/travailler-moins-vivre-mieux.html` |
 | 9/9 | 1704 | `dossiers/indivision-succession-heritiers-vendre-partager.html` |
 | 9/9 | 1707 | `dossiers/ameliorer-processus-sans-degrader-service.html` |
