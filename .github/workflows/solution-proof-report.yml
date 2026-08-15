@@ -1,0 +1,171 @@
+name: Solution proof report
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.html"
+      - "CHARTE-DE-VOIX.txt"
+      - "INGENIERIE-DE-SOLUTIONS.md"
+      - ".github/workflows/solution-proof-report.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: solution-proof-report
+  cancel-in-progress: true
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Build feasibility-claim report
+        shell: python
+        run: |
+          from pathlib import Path
+          import re, html
+
+          root=Path('.')
+          excluded={'404.html','plan-du-site.html','bibliotheque.html','recherche.html','mentions.html','confidentialite.html','mon-espace.html'}
+          files=[]
+          for p in root.rglob('*.html'):
+              if any(part in {'.git','node_modules'} for part in p.parts) or p.name in excluded: continue
+              raw=p.read_text(encoding='utf-8',errors='replace')
+              if re.search(r'<meta\s+name=["\']robots["\'][^>]*noindex',raw,re.I): continue
+              files.append(p)
+
+          strip_scripts=re.compile(r'<(script|style)\b.*?</\1>',re.I|re.S)
+          strip_tags=re.compile(r'<[^>]+>')
+          sentence_re=re.compile(r'(?<=[.!?])\s+(?=[A-ZÀ-ÖØ-Þ0-9«])')
+
+          positive_re=re.compile(
+              r'\b(?:vous pouvez|on peut|il est possible de|il est possible d.|peut permettre de|'
+              r'permet de|permet d.|peut ouvrir|ouvre droit|donne droit|peut bénéficier|peut obtenir|'
+              r'peut être financ|peut être déduit|peut être exonér|peut être loué|peut être vendu|'
+              r'peut être racheté|peut être exercé|peut accéder|peut conserver|peut récupérer|'
+              r'peut demander|peut utiliser|peut choisir|peut réduire|peut éviter|peut contourner)\b',re.I
+          )
+
+          highstakes_re=re.compile(
+              r'\b(?:banque|crédit|prêt|emprunt|assurance|impôt|fiscal|taxe|TVA|URSSAF|ARE|allocation|'
+              r'chômage|démission|rupture conventionnelle|PACS|mariage|succession|donation|indivision|'
+              r'propriété|soulte|notaire|licitation|bail|location|copropriété|droit|loi|code|article|'
+              r'réglement|autorisation|interdit|permis|diplôme|qualification|VAE|VAP|santé|médecin|'
+              r'retraite|pension|licenciement|contrat de travail|non-concurrence|période d.?essai)\b',re.I
+          )
+
+          conditional_re=re.compile(
+              r'\b(?:si |sous réserve|à condition|lorsque|selon|peut|pourrait|en principe|dans certains cas|'
+              r'dépend|à vérifier|après validation|avec accord|si .* accepte|si .* autorise|sous condition|'
+              r'potentiellement|éventuellement|dans la limite|dans ce cas|pour ce logement|pour cette activité)\b',re.I
+          )
+          proof_words_re=re.compile(
+              r'\b(?:source|service-public|légifrance|legifrance|economie.gouv|impots.gouv|france travail|'
+              r'banque de france|anil|urssaf|code civil|code du travail|code de la consommation|article [LRD]\.|'
+              r'contrat|clause|simulation|calcul|attestation|délibération|règlement)\b',re.I
+          )
+          meta_re=re.compile(
+              r'\b(?:question|demandez|vérifiez si|tester si|hypothèse|exemple|peut-on|ce que le calculateur|'
+              r'outil|méthode|formulation|phrase|statut|à tester|conditionnelle)\b',re.I
+          )
+
+          rows=[]; totals={'S0':0,'S1':0,'S2':0,'OK':0}
+          for p in sorted(files):
+              raw=p.read_text(encoding='utf-8',errors='replace')
+              visible=html.unescape(strip_tags.sub(' ',strip_scripts.sub(' ',raw)))
+              visible=re.sub(r'\s+',' ',visible).strip()
+              sentences=sentence_re.split(visible)
+              has_external=bool(re.search(r'href=["\']https?://',raw,re.I))
+              has_source_block=bool(re.search(r'(?:source-note|sources?\s*:|sources? officielles|source de référence)',raw,re.I))
+              page_proof=has_external and has_source_block
+
+              for i,s in enumerate(sentences):
+                  s=s.strip()
+                  if len(s)<20 or not positive_re.search(s): continue
+                  if meta_re.search(s) and not highstakes_re.search(s): continue
+                  context=' '.join(sentences[max(0,i-1):min(len(sentences),i+2)])
+                  high=bool(highstakes_re.search(context))
+                  cond=bool(conditional_re.search(context))
+                  localproof=bool(proof_words_re.search(context)) or page_proof
+
+                  if high and not cond and not localproof:
+                      level='S0'; reason='possibilité à fort enjeu sans condition ni signal de preuve'
+                  elif high and not localproof:
+                      level='S1'; reason='possibilité à fort enjeu conditionnelle mais preuve non détectée'
+                  elif high and not cond:
+                      level='S1'; reason='possibilité à fort enjeu sourcée mais périmètre/condition peu visible'
+                  elif not high and not cond and not localproof:
+                      level='S2'; reason='possibilité générale à vérifier ou resserrer'
+                  else:
+                      level='OK'; reason='condition/périmètre ou preuve détectés — fond à contrôler'
+                  totals[level]+=1
+                  rows.append({'p':p.as_posix(),'level':level,'reason':reason,'sentence':s[:460],'high':high,'cond':cond,'proof':localproof})
+
+          order={'S0':0,'S1':1,'S2':2,'OK':3}
+          rows.sort(key=lambda r:(order[r['level']],r['p'],r['sentence']))
+          out=['# Rapport — possibilités à prouver','',
+               'Audit miroir de `constraint-proof-audit.md` : **une voie non interdite n’est pas encore une voie faisable.**','',
+               'Le scanner cherche les formulations positives (« vous pouvez », « permet de », « ouvre droit », etc.). Un signal impose une relecture humaine ; il ne prouve pas une erreur.','',
+               '## Synthèse','',
+               f"- S0 — possibilité à fort enjeu sans preuve/condition détectée : **{totals['S0']}**",
+               f"- S1 — possibilité à fort enjeu à resserrer ou vérifier : **{totals['S1']}**",
+               f"- S2 — possibilité générale à examiner : **{totals['S2']}**",
+               f"- OK heuristique — condition ou preuve détectée : **{totals['OK']}**",'']
+
+          for level,title in [('S0','S0 — vérifier avant toute recommandation'),('S1','S1 — vérifier preuve et périmètre'),('S2','S2 — examiner')]:
+              out += [f'## {title}','']
+              subset=[r for r in rows if r['level']==level]
+              if not subset:
+                  out += ['_Aucun signal._','']; continue
+              current=None; shown=0
+              for r in subset:
+                  if shown>=250:
+                      out += ['','_Rapport tronqué à 250 signaux._']; break
+                  if r['p']!=current:
+                      current=r['p']; out.append(f"### `{current}`")
+                  flags=[]
+                  if r['high']: flags.append('fort enjeu')
+                  if r['cond']: flags.append('condition détectée')
+                  if r['proof']: flags.append('preuve détectée')
+                  out.append(f"- **{r['reason']}** — {r['sentence']}" + (f" _[{', '.join(flags)}]_" if flags else ''))
+                  shown+=1
+              out.append('')
+
+          out += ['## Règle de relecture','',
+                  'Pour chaque signal :',
+                  '1. Quel mécanisme précis rend la voie possible ?',
+                  '2. Quelle source primaire, clause, calcul ou donnée le confirme ?',
+                  '3. Quel tiers doit encore accepter ?',
+                  '4. Quelles conditions ou limites réduisent le champ de la phrase ?',
+                  '5. Le mécanisme reste-t-il vrai à la date actuelle ?',
+                  '6. Quel scénario ferait échouer la voie ?',
+                  '7. Tant que ces points ne sont pas établis, classer la piste **À TESTER** ou **CONDITIONNELLE**, pas **VÉRIFIÉE**.','']
+
+          Path('reports').mkdir(exist_ok=True)
+          Path('reports/solution-proof-audit.md').write_text('\n'.join(out),encoding='utf-8')
+
+      - name: Commit report if changed
+        shell: bash
+        run: |
+          if git diff --quiet -- reports/solution-proof-audit.md && git ls-files --error-unmatch reports/solution-proof-audit.md >/dev/null 2>&1; then
+            echo "Report already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/solution-proof-audit.md
+          git commit -m "Mise à jour de l’audit des possibilités à prouver"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            echo "Concurrent update detected; retry $attempt/5"
+            sleep $((attempt*2))
+          done
+          exit 1
