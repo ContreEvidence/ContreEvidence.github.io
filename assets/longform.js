@@ -3,6 +3,73 @@
 
   const slugify = (s='') => s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,70) || 'section';
 
+  const objectiveGuides = {
+    'accepter-emploi-plus-loin-cout-trajet.html': {
+      goal:'Qu’est-ce que le nouveau poste doit réellement améliorer : revenu, carrière, stabilité, intérêt du travail ou qualité de vie ?',
+      constraint:'Quel temps de trajet, coût ou fatigue devient non négociable ?',
+      reverse:'À partir de quel salaire, télétravail ou gain de carrière votre réponse change-t-elle ?'
+    },
+    'formation-vaut-elle-le-cout.html': {
+      goal:'Quel verrou précis la formation doit-elle lever : compétence, diplôme exigé, crédibilité, réseau ou accès à un métier ?',
+      constraint:'Combien de temps, d’argent et de revenu pouvez-vous réellement sacrifier ?',
+      reverse:'Quel taux de débouché, gain salarial ou alternative plus courte ferait changer le choix ?'
+    },
+    'lancer-activite-sans-quitter-emploi.html': {
+      goal:'Cherchez-vous un complément de revenu, une preuve de marché ou une vraie sortie du salariat ?',
+      constraint:'Quel revenu minimal, quelle sécurité et quel temps personnel devez-vous préserver ?',
+      reverse:'À partir de combien de clients récurrents ou de marge mensuelle le passage à temps plein devient-il rationnel ?'
+    },
+    'acheter-ou-louer-si-on-risque-demenager.html': {
+      goal:'Cherchez-vous surtout stabilité, rendement, contrôle du logement ou flexibilité géographique ?',
+      constraint:'Quelle probabilité de déménagement et quelle perte maximale à la revente acceptez-vous ?',
+      reverse:'À partir de quelle durée de détention l’achat reprend-il l’avantage dans vos hypothèses ?'
+    },
+    'finances-cadre-global.html': {
+      goal:'À quoi le patrimoine doit-il servir : sécurité, projets, liberté de choix, retraite, transmission ou plusieurs objectifs séparés ?',
+      constraint:'Quelles réserves et concentrations ne voulez-vous jamais franchir ?',
+      reverse:'Quel événement de vie justifie réellement de réécrire la politique patrimoniale ?'
+    },
+    'finances-allocation-portefeuille.html': {
+      goal:'Quel horizon et quel usage correspondent à chaque poche du portefeuille ?',
+      constraint:'Quelle baisse maximale pouvez-vous supporter sans vendre au mauvais moment ?',
+      reverse:'Quel changement d’horizon, de revenu ou de concentration globale justifierait une autre allocation ?'
+    },
+    'finances-transmission-patrimoine.html': {
+      goal:'Que voulez-vous obtenir : protéger, aider maintenant, avantager, préserver un actif ou réduire un futur conflit ?',
+      constraint:'Quel capital devez-vous absolument conserver pour votre propre longévité et vos besoins ?',
+      reverse:'Quel changement familial, patrimonial ou de liquidité rendrait le montage actuel inadapté ?'
+    },
+    'finances-retraite-decumulation.html': {
+      goal:'Quel niveau de vie et quels projets le patrimoine doit-il financer après les pensions ?',
+      constraint:'Quelles dépenses essentielles ne doivent jamais dépendre d’une bonne année de marché ?',
+      reverse:'À partir de quel gap annuel, quelle longévité ou quelle baisse de marché faut-il réduire le risque ou les dépenses ?'
+    },
+    'gestion-pilotee-comparer-performances.html': {
+      goal:'Que doit produire la gestion pilotée : performance, simplicité, discipline, diversification ou délégation complète ?',
+      constraint:'Quels frais et quel écart au benchmark êtes-vous prêt à accepter pour ce service ?',
+      reverse:'Après combien d’années ou quel écart net de frais la solution cesse-t-elle de justifier son coût ?'
+    },
+    'cout-reel-voiture-achat-credit-loa-lld.html': {
+      goal:'La voiture doit-elle minimiser le coût, maximiser la fiabilité, préserver du cash ou répondre à un besoin d’usage particulier ?',
+      constraint:'Quel budget annuel total et quelle immobilisation de capital refusez-vous de dépasser ?',
+      reverse:'À partir de quel kilométrage, coût de financement ou durée de détention l’option choisie devient-elle moins bonne ?'
+    }
+  };
+
+  function injectObjectiveFirst() {
+    const prose = document.querySelector('main article.prose');
+    if (!prose || prose.querySelector('.ce-objective-first')) return;
+    const file = location.pathname.split('/').pop();
+    const guide = objectiveGuides[file];
+    if (!guide) return;
+    const box = document.createElement('div');
+    box.className = 'answer-box ce-objective-first';
+    box.innerHTML = `<h2>Avant de calculer : qu’essayez-vous réellement d’obtenir ?</h2><ul><li><strong>Objectif :</strong> ${guide.goal}</li><li><strong>Non-négociable :</strong> ${guide.constraint}</li><li><strong>Quand la réponse s’inverse :</strong> ${guide.reverse}</li></ul>`;
+    const firstAnswer = prose.querySelector(':scope > .answer-box');
+    if (firstAnswer) firstAnswer.insertAdjacentElement('afterend', box);
+    else prose.insertAdjacentElement('afterbegin', box);
+  }
+
   function enhanceToc(toc) {
     if (!toc || toc.dataset.ceCollapsible === '1') return;
     toc.dataset.ceCollapsible = '1';
@@ -128,6 +195,7 @@
   }
 
   const run = () => {
+    injectObjectiveFirst();
     buildArticleBodyLongform();
     document.querySelectorAll('.ce-article-toc').forEach(enhanceToc);
     enhanceMobileTables();
