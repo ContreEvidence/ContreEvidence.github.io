@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/</link>
     <description>Nouveaux guides, dossiers et outils Contre-Évidence consacrés à Vie professionnelle.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Sat, 15 Aug 2026 17:01:34 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2026 17:02:33 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/rss-vie-pro.xml" rel="self" type="application/rss+xml"/>
@@ -14,6 +14,16 @@
       <title>Contre-Évidence</title>
       <link>https://contreevidence.github.io/</link>
     </image>
+    <item>
+      <title>Quelle stratégie professionnelle selon votre situation ? 8 trajectoires concrètes</title>
+      <link>https://contreevidence.github.io/dossiers/trajectoire-professionnelle-selon-situation.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/dossiers/trajectoire-professionnelle-selon-situation.html</guid>
+      <pubDate>Sat, 15 Aug 2026 17:01:23 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Trajectoire</category>
+      <description>Situer ce qu’il faut construire, protéger ou rendre possible selon le moment : début de carrière, progression, stagnation, dépendance, santé, rupture, seconde partie de carrière ou liberté accrue.</description>
+    </item>
     <item>
       <title>Trouver ses premiers clients : mesurer le tunnel plutôt que prospecter au hasard</title>
       <link>https://contreevidence.github.io/dossiers/trouver-premiers-clients.html</link>
