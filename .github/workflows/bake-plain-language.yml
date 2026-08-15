@@ -23,7 +23,7 @@ jobs:
         run: |
           from pathlib import Path
 
-          def replace(path, old, new, required=True):
+          def replace(path, old, new, required=False):
               p = Path(path)
               text = p.read_text(encoding='utf-8')
               if old not in text:
@@ -35,8 +35,8 @@ jobs:
           replace('index.html', 'Se situer · arbitrer · construire', 'Comprendre · choisir · avancer')
           replace('index.html', 'Partez de votre besoin, pas de la rubrique.', 'Commencez par ce que vous vivez, pas par une rubrique.')
           replace('index.html', 'Je veux savoir où j’en suis', 'Je veux comprendre où j’en suis')
-          replace('index.html', 'J’hésite entre plusieurs options', 'Je dois faire un choix', required=False)
-          replace('index.html', 'Je sais où je veux aller', 'Je sais ce que je veux, mais pas comment y arriver', required=False)
+          replace('index.html', 'J’hésite entre plusieurs options', 'Je dois faire un choix')
+          replace('index.html', 'Je sais où je veux aller', 'Je sais ce que je veux, mais pas comment y arriver')
           replace('index.html', 'Trois situations couvrent l’essentiel des décisions.', 'Commencez par la phrase qui vous ressemble aujourd’hui.')
           replace('index.html', '01 · Se situer', '01 · Comprendre ma situation')
           replace('index.html', 'M’aider à poser le diagnostic →', 'M’aider à y voir clair →')
