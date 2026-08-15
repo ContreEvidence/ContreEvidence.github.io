@@ -33,6 +33,48 @@
       k:'objectif besoin stratégie moyen décision valeurs finalité optimiser argent travail patrimoine temps qualité vie'
     },
     {
+      d:'patrimoine',t:'guide',c:'Difficultés financières',
+      h:'dossiers/finances-difficiles-sortir-decouvert-dettes.html',
+      n:'Découvert, dettes, factures : reprendre le contrôle de ses finances',
+      x:'Stabiliser les dépenses essentielles, arrêter l’aggravation, cartographier les dettes, mesurer le déficit mensuel et reconstruire une première marge avant d’investir.',
+      k:'découvert dettes factures impayés crédit consommation budget crise difficultés financières fin mois surendettement point conseil budget banque de france stabiliser'
+    },
+    {
+      d:'mixte',t:'guide',c:'Décision · Exécution',
+      h:'dossiers/decision-plan-30-90-jours.html',
+      n:'Après la décision : construire un plan 30/90 jours',
+      x:'Transformer un choix en première action, jalon à 30 jours, résultat testable à 90 jours, indicateurs et condition de révision.',
+      k:'plan action 30 jours 90 jours objectif exécution décision construire trajectoire jalon indicateur revue prochaine action'
+    },
+    {
+      d:'mixte',t:'guide',c:'Transition de vie',
+      h:'dossiers/quand-vie-change-sante-separation-revenu.html',
+      n:'Quand la vie change brutalement : santé, séparation, revenu',
+      x:'Stabiliser simultanément revenu, logement, travail, foyer et patrimoine avant d’empiler des décisions irréversibles.',
+      k:'vie change santé maladie séparation perte revenu chômage aidant décès logement foyer patrimoine transition choc stabiliser'
+    },
+    {
+      d:'mixte',t:'guide',c:'Foyer · Argent & temps',
+      h:'dossiers/couple-famille-argent-temps.html',
+      n:'Couple et famille : répartir argent, temps et risques',
+      x:'Rendre visibles revenus, dépenses communes, patrimoine créé, temps non rémunéré et concessions professionnelles avant de choisir une règle de répartition.',
+      k:'couple famille argent temps dépenses communes 50 50 proportion revenus compte joint enfants carrière équité foyer épargne patrimoine'
+    },
+    {
+      d:'mixte',t:'guide',c:'Qualité de vie',
+      h:'dossiers/temps-energie-qualite-vie.html',
+      n:'Temps, énergie, qualité de vie : que cherchez-vous réellement à améliorer ?',
+      x:'Regarder argent, temps, énergie, autonomie, relations et contraintes afin que ce qui est facile à mesurer n’écrase pas ce qui compte.',
+      k:'qualité vie temps énergie autonomie relations argent travail contrainte trajet fatigue temps libre objectif vie arbitrage'
+    },
+    {
+      d:'patrimoine',t:'dossier',c:'Patrimoine · Utilisation',
+      h:'dossiers/quand-arreter-optimiser-utiliser-patrimoine.html',
+      n:'Quand arrêter d’optimiser et commencer à utiliser son patrimoine ?',
+      x:'Après construire et protéger : décider quand le patrimoine peut racheter du temps, réduire une contrainte, simplifier ou financer un projet important.',
+      k:'utiliser patrimoine arrêter optimiser assez accumulation décumulation temps liberté qualité vie travailler moins simplifier projet capital'
+    },
+    {
       d:'patrimoine',t:'guide',c:'Allocation · Situations',
       h:'dossiers/allocation-patrimoine-selon-situation.html',
       n:'Quelle allocation selon votre situation ? 8 exemples concrets',
