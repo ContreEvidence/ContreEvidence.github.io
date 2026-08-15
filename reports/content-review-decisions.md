@@ -1,17 +1,13 @@
-# Journal des décisions de revue
+# Journal des réécritures — ingénierie de solutions
 
-Mise en place : 16 août 2026
+Mise à jour : 16 août 2026
 
-Ce journal consigne les validations, refus, reports et demandes de révision du chantier éditorial Contre-Évidence.
+Le corpus Contre-Évidence est désormais repris directement selon la méthode d’ingénierie de solutions, sans validation préalable page par page.
 
-## Statuts
+Chaque réécriture substantielle doit être consignée ici avec : page, problème corrigé, motifs activés, causalité, niveau de preuve, sources sensibles, impact attendu et incertitudes résiduelles.
 
-- `VALIDE` : proposition approuvée, à appliquer puis auditer.
-- `APPLIQUEE` : proposition validée et déployée correctement.
-- `REFUSE` : proposition rejetée, texte actuel conservé.
-- `A_REVOIR` : proposition à retravailler avant toute modification.
-- `PASSE` : proposition reportée, à revoir plus tard.
+Le principe reste symétrique : ne pas fermer une voie sans preuve ; ne pas valider une solution sans preuve.
 
-## Décisions
+## Modifications
 
-_Aucune décision enregistrée pour le moment._
+_Aucune réécriture enregistrée depuis le changement de protocole._
