@@ -1,0 +1,143 @@
+name: Solution engineering audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "dossiers/**/*.html"
+      - "articles/**/*.html"
+      - "CHARTE-DE-VOIX.txt"
+      - ".github/workflows/solution-engineering-audit.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 2
+      - name: Audit solution engineering depth
+        shell: python
+        run: |
+          from __future__ import annotations
+          import html
+          import pathlib
+          import re
+          import subprocess
+
+          root = pathlib.Path('.').resolve()
+          pages = sorted((root / 'dossiers').glob('*.html'))
+          pages += sorted((root / 'articles').glob('*.html'))
+
+          strip_scripts = re.compile(r'<(script|style)\b.*?</\1>', re.I | re.S)
+          strip_tags = re.compile(r'<[^>]+>')
+          title_re = re.compile(r'<title>(.*?)</title>', re.I | re.S)
+          h1_re = re.compile(r'<h1[^>]*>(.*?)</h1>', re.I | re.S)
+          word_re = re.compile(r"[A-Za-zÀ-ÖØ-öø-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÖØ-öø-ÿ0-9]+)*")
+          number_re = re.compile(r'\b\d+(?:[\s.,]\d+)?\s*(?:€|%|euros?|mois|ans?|heures?|h\b|jours?|km|clients?|candidatures?|ventes?)', re.I)
+          source_re = re.compile(r'href=["\']https?://', re.I)
+
+          patterns = {
+              'obstacle': re.compile(r'\b(?:obstacle|verrou|bloqu|empêche|impossible|refus|limite|contrainte|fragilit|frein)\w*', re.I),
+              'variables': re.compile(r'\b(?:variable|modifiable|fixe|levier|marge de manœuvre|dépendance|hypothèse|paramètre)\w*', re.I),
+              'windows': re.compile(r'\b(?:fenêtre|alternative|option|solution|montage|séquen|transitoire|intermédiaire|transform|réorganis|hybride|contourn)\w*', re.I),
+              'conditions': re.compile(r'\b(?:condition|à partir de|il faut que|doit être|doit atteindre|pour rendre|devient possible|seuil|point de bascule|si .{0,45} alors)\b', re.I),
+              'scenarios': re.compile(r'\b(?:scénario|stratégie|option|chemin|cas)\b', re.I),
+              'execution': re.compile(r'\b(?:plan d.?action|prochaines? étapes?|dans les \d+ jours|dans \d+ mois|ordre des actions|commencez par|vérifiez d.?abord|à faire maintenant|première action|calendrier)\b', re.I),
+              'revision': re.compile(r'\b(?:abandon|renoncer|arrêter|condition de sortie|condition d.?arrêt|revoir|réviser|changer de stratégie|cesse d.?être|trop coûteu|trop risqu|ne vaut plus)\w*', re.I),
+              'counterintuitive': re.compile(r'\b(?:contre-évidence|intuition|évidence|paradox|on oublie|angle mort|faux problème|fausse impossibilité|pas forcément)\w*', re.I),
+          }
+
+          def visible(raw: str) -> str:
+              return html.unescape(strip_tags.sub(' ', strip_scripts.sub(' ', raw)))
+
+          def count_distinct_markers(text: str, pat: re.Pattern) -> int:
+              return len(pat.findall(text))
+
+          def audit(page: pathlib.Path):
+              raw = page.read_text(encoding='utf-8', errors='replace')
+              if re.search(r'<meta\s+name=["\']robots["\'][^>]*noindex', raw, re.I):
+                  return None
+              text = visible(raw)
+              words = len(word_re.findall(text))
+              numbers = len(number_re.findall(text))
+              sources = len(source_re.findall(raw))
+              tables = len(re.findall(r'<table\b', raw, re.I))
+              title = html.unescape(strip_tags.sub('', (h1_re.search(raw) or title_re.search(raw) or ['',''])[1] if (h1_re.search(raw) or title_re.search(raw)) else page.stem))
+              counts = {k: count_distinct_markers(text, p) for k,p in patterns.items()}
+
+              score = 0
+              score += counts['obstacle'] >= 2
+              score += counts['variables'] >= 2
+              score += counts['windows'] >= 4
+              score += counts['conditions'] >= 3
+              score += counts['scenarios'] >= 4
+              score += counts['execution'] >= 2
+              score += counts['revision'] >= 1
+              score += counts['counterintuitive'] >= 1
+              score += numbers >= 5 or tables >= 2
+              score += sources >= 1
+              score += words >= (1300 if page.parts[-2] == 'dossiers' else 900)
+              score += bool(re.search(r'\b(?:à partir de quel|combien faut-il|que faudrait-il|qu.?est-ce qui doit|ce qui doit changer|conditions? de possibilité)\b', text, re.I))
+
+              missing=[]
+              if counts['obstacle'] < 2: missing.append('obstacle précis')
+              if counts['variables'] < 2: missing.append('variables modifiables')
+              if counts['windows'] < 4: missing.append('plusieurs fenêtres/leviers')
+              if counts['conditions'] < 3: missing.append('conditions de possibilité')
+              if counts['scenarios'] < 4: missing.append('scénarios réellement comparés')
+              if counts['execution'] < 2: missing.append('séquence d’exécution')
+              if counts['revision'] < 1: missing.append('condition d’abandon/révision')
+              if numbers < 5 and tables < 2: missing.append('seuils/chiffrage')
+              if sources < 1: missing.append('source externe')
+              if words < (1300 if page.parts[-2] == 'dossiers' else 900): missing.append('profondeur')
+              return score, title, text, missing, counts, words, numbers, tables, sources
+
+          rows=[]
+          for page in pages:
+              r=audit(page)
+              if r:
+                  rows.append((page.relative_to(root).as_posix(),)+r)
+
+          print(f'Contenus audités : {len(rows)}')
+          print('\nDOSSIERS — ingénierie de solutions la plus faible :')
+          dossiers=[r for r in rows if r[0].startswith('dossiers/')]
+          for rel,score,title,text,missing,counts,words,numbers,tables,sources in sorted(dossiers,key=lambda r:(r[1],r[6]))[:60]:
+              print(f'{score:2}/12 | {words:4} mots | {rel} | manque: {", ".join(missing) or "—"}')
+
+          # Les titres de décision sont ceux pour lesquels une simple page explicative est la moins acceptable.
+          promise_re=re.compile(r'\b(?:comment|faut-il|peut-on|combien|quitter|sortir|racheter|vendre|conserver|acheter|choisir|devenir|réduire|travailler moins|sans|ou)\b|\?', re.I)
+          high_promise=[]
+          for r in dossiers:
+              rel,score,title,text,missing,*_=r
+              if promise_re.search(title) and score < 8:
+                  high_promise.append(r)
+          print('\nTITRES À FORTE PROMESSE mais ingénierie < 8/12 :')
+          for rel,score,title,text,missing,*_ in sorted(high_promise,key=lambda r:(r[1],r[0])):
+              print(f'{score:2}/12 | {rel} | {title} | manque: {", ".join(missing)}')
+          print(f'File prioritaire : {len(high_promise)} dossier(s).')
+
+          # Garde-fou : un nouveau dossier ou un dossier modifié après l’installation de ce standard
+          # ne doit pas être publié avec une ingénierie très faible. L’ancien corpus reste audité
+          # sans casser le déploiement : il doit être repris progressivement par priorité.
+          try:
+              changed=subprocess.check_output(['git','diff','--name-only','HEAD^','HEAD'],text=True).splitlines()
+          except Exception:
+              changed=[]
+          changed=set(changed)
+          failures=[]
+          for r in dossiers:
+              rel,score,title,text,missing,*_=r
+              if rel in changed and score < 7:
+                  failures.append((rel,score,title,missing))
+          if failures:
+              print('\nÉCHEC — dossier modifié sous le minimum d’ingénierie (7/12) :')
+              for rel,score,title,missing in failures:
+                  print(f'{score:2}/12 | {rel} | {title} | manque: {", ".join(missing)}')
+              raise SystemExit(1)
+
+          print('\nAudit éditorial : le score ne remplace pas une lecture humaine. Il sert à repérer les pages qui expliquent correctement un sujet mais ne construisent pas encore assez de solutions. Le critère décisif reste l’alignement titre → problème → leviers → conditions → seuils → exécution.')
