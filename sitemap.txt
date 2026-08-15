@@ -62,6 +62,7 @@ https://contreevidence.github.io/dossiers/emploi-chercher-accepter-negocier-evol
 https://contreevidence.github.io/dossiers/etre-riche-revenu-patrimoine-liberte.html
 https://contreevidence.github.io/dossiers/etude-marche-terrain.html
 https://contreevidence.github.io/dossiers/experience-devient-risque-recruteur.html
+https://contreevidence.github.io/dossiers/favoriser-un-enfant-succession-donation.html
 https://contreevidence.github.io/dossiers/finances-allocation-portefeuille.html
 https://contreevidence.github.io/dossiers/finances-cadre-global.html
 https://contreevidence.github.io/dossiers/finances-credit-endettement.html
@@ -91,6 +92,7 @@ https://contreevidence.github.io/dossiers/negocier-salaire-responsabilites.html
 https://contreevidence.github.io/dossiers/passer-80-pourcent-cout-reel.html
 https://contreevidence.github.io/dossiers/patrimoine-marge-de-manoeuvre.html
 https://contreevidence.github.io/dossiers/patrimoine-permet-il-travailler-moins.html
+https://contreevidence.github.io/dossiers/piloter-patrimoine-selon-taille.html
 https://contreevidence.github.io/dossiers/plan-30-jours-recherche-emploi.html
 https://contreevidence.github.io/dossiers/prejuges-biais-monde-professionnel.html
 https://contreevidence.github.io/dossiers/previsionnel-activite-12-mois.html
