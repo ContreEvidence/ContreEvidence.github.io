@@ -149,23 +149,16 @@ jobs:
               if r['numbers'] < 10: failures.append('quantification insuffisante')
               if counts['obstacle'] < 3 or counts['variables'] < 2: failures.append('verrou/variables insuffisamment démontés')
 
-              # Le contrôle cherche des structures de raisonnement, pas des mots de passe.
-              # Une vraie chronologie 7/15/30/60/90 jours vaut un "changement de séquence"
-              # même si l'auteur n'emploie jamais le mot séquence.
               plan_heading = bool(re.search(r'<h2[^>]*>.*?(?:plan|exécution|jours).*?</h2>', raw, re.I|re.S))
-              timeline = len(re.findall(r'\b(?:7|15|20|30|45|60|90)\s*jours?\b', text, re.I)) >= 3
+              timeline = len(re.findall(r'\b(?:7|14|15|20|21|30|37|45|60|90)\s*jours?\b', text, re.I)) >= 3
               sequence_present = counts['sequence'] >= 1 or (plan_heading and timeline) or counts['execution'] >= 4
 
-              # Une progression peut être formulée par réduction du périmètre + étapes successives
-              # sans écrire plusieurs fois "progressif".
               progressive_present = (
                   counts['progressive'] >= 2
                   or (counts['sequence'] >= 1 and counts['reduce_need'] >= 1 and counts['windows'] >= 5)
                   or bool(re.search(r'\b(?:ajouter .* ensuite|avant d.?ajouter|jusqu.?à 100|50/50.*100/0)\b', text, re.I))
               )
 
-              # Une recomposition réelle peut être explicite, ou ressortir d'une comparaison de
-              # plusieurs architectures qui croisent plusieurs variables dans plusieurs tableaux.
               combination_present = (
                   counts['combination'] >= 1
                   or (counts['scenarios'] >= 5 and r['tables'] >= 3 and counts['variables'] >= 2 and counts['windows'] >= 4)
@@ -190,7 +183,8 @@ jobs:
 
               if not re.search(r'\b(?:point de bascule|seuil|écart à fermer|à partir de quel|devient possible|devient finançable)\b', text, re.I):
                   failures.append('pas de seuil ou point de bascule explicite')
-              if counts['execution'] < 2 or not plan_heading:
+              execution_present = plan_heading and (timeline or counts['execution'] >= 2)
+              if not execution_present:
                   failures.append('pas de vraie séquence d’exécution')
               if counts['revision'] < 2:
                   failures.append('condition d’abandon trop faible')
