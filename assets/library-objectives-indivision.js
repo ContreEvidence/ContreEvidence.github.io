@@ -61,11 +61,11 @@
       k:'couple famille argent temps dépenses communes 50 50 proportion revenus compte joint enfants carrière équité foyer épargne patrimoine'
     },
     {
-      d:'mixte',t:'guide',c:'Qualité de vie',
+      d:'mixte',t:'guide',c:'Qualité de vie · Temps',
       h:'dossiers/temps-energie-qualite-vie.html',
-      n:'Temps, énergie, qualité de vie : que cherchez-vous réellement à améliorer ?',
-      x:'Regarder argent, temps, énergie, autonomie, relations et contraintes afin que ce qui est facile à mesurer n’écrase pas ce qui compte.',
-      k:'qualité vie temps énergie autonomie relations argent travail contrainte trajet fatigue temps libre objectif vie arbitrage'
+      n:'Manque de temps et d’énergie : comment récupérer des heures de vie ?',
+      x:'Décomposer ce qui capture les 168 heures, calculer le coût de chaque heure libérée puis recomposer trajet, logement, travail, délégation, charges fixes et organisation pour récupérer du temps réellement choisi.',
+      k:'manque temps énergie qualité vie 168 heures heure libérée coût heure trajet logement délégation travail 80 pourcent charges fixes temps choisi combinaison leviers'
     },
     {
       d:'patrimoine',t:'dossier',c:'Patrimoine · Utilisation',
