@@ -41,6 +41,7 @@ jobs:
           TAG = re.compile(r'<[^>]+>', re.S)
           SCRIPT = re.compile(r'<(script|style)\b[^>]*>.*?</\1>', re.I | re.S)
           COMMENTS = re.compile(r'<!--.*?-->', re.S)
+          NOINDEX = re.compile(r'<meta\b[^>]*name=["\']robots["\'][^>]*content=["\'][^"\']*noindex', re.I)
 
           def visible_text(raw):
               raw = SCRIPT.sub(' ', raw)
@@ -62,8 +63,12 @@ jobs:
           }
 
           rows = []
+          excluded = 0
           for path in sorted(files):
               raw = path.read_text(encoding='utf-8', errors='ignore')
+              if NOINDEX.search(raw):
+                  excluded += 1
+                  continue
               text = visible_text(raw)
               words = len(text.split())
               result = {}
@@ -78,11 +83,11 @@ jobs:
           out.append('')
           out.append(f'Mise à jour automatique : {date.today().isoformat()}')
           out.append('')
-          out.append('Cet audit couvre tous les HTML de `dossiers/` et `articles/`. Il sert de **détecteur de profondeur de résolution**, pas de juge éditorial. Une page peut être excellente avec un score imparfait ; une page peut aussi contenir les mots attendus sans véritable raisonnement.')
+          out.append('Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les pages `noindex` de redirection/consolidation sont exclues. Il sert de **détecteur de profondeur de résolution**, pas de juge éditorial.')
           out.append('')
           out.append('Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.')
           out.append('')
-          out.append(f'Pages analysées : **{len(rows)}**.')
+          out.append(f'Pages analysées : **{len(rows)}**. Pages `noindex` exclues : **{excluded}**.')
           out.append('')
           out.append('## Priorité humaine')
           out.append('')
