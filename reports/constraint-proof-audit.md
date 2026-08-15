@@ -6,10 +6,10 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 ## Synthèse
 
-- P0 — fermeture forte sans preuve/périmètre suffisant : **14**
+- P0 — fermeture forte sans preuve/périmètre suffisant : **13**
 - P1 — affirmation forte à resserrer ou vérifier : **46**
-- P2 — nécessité à examiner : **142**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **577**
+- P2 — nécessité à examiner : **143**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **578**
 
 ## P0 — rouvrir en priorité
 
@@ -31,8 +31,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sans signal de preuve ni périmètre clair** — En 2026, le cadre réglementaire est devenu plus exigeant Le ministère de l’Économie rappelle qu’au plus tard le 20 mai 2026 , l’enregistrement préalable des meublés de tourisme doit devenir obligatoire partout en France via un téléservice national.
 ### `dossiers/plan-30-jours-recherche-emploi.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Manquer un logiciel appris en trois jours n’est pas équivalent à manquer le permis obligatoire ou l’expérience réglementaire exigée.
-### `dossiers/previsionnel-activite-12-mois.html`
-- **fermeture forte sans signal de preuve ni périmètre clair** — Un prévisionnel à 25 missions est donc impossible sans hausse de prix, délégation ou productivité.
 ### `fiches-metiers.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Accès Diplôme obligatoire, attendu ou contournable ?
 ### `outil-ingenierie-solutions.html`
@@ -269,6 +267,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — La deuxième série doit changer une seule hypothèse importante Après la première série, je choisis le blocage le plus probable et je modifie une variable : ciblage, haut du CV, preuve, réseau, réponse à une objection. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Le CV doit réduire l’incertitude en vingt secondes Le haut du CV doit répondre à trois questions : quel poste ? quel niveau ? quelles preuves ?
 ### `dossiers/previsionnel-activite-12-mois.html`
+- **nécessité à requalifier ou sourcer** — C’est une règle importante du prévisionnel : un levier doit agir sur la contrainte qu’il prétend résoudre.
 - **nécessité à requalifier ou sourcer** — Le prévisionnel doit déclencher des décisions Indicateur Seuil d’alerte illustratif Action Taux de conversion < 10 % après 100 prospects qualifiés revoir cible/offre Marge contributive trop faible pour couvrir les fixes au volume réaliste prix/coûts Trésorerie < 2 mois de sorties sécuriser le cash Capacité > 85 % plusieurs mois prix, organisation, délégation Client dominant > 30-40 % du CA diversifier Ces seuils ne s _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Le scénario prudent est le plus instructif : s’il casse le projet en quelques semaines, vous avez identifié ce qu’il faut sécuriser avant de vous lancer. _[temporalité]_
 ### `dossiers/protocole-verifier-reponse-ia.html`
