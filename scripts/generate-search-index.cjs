@@ -11,6 +11,7 @@ const CATALOG_LAYERS = [
   'assets/library-work-foundations.js',
   'assets/library-transitions.js',
   'assets/library-acquisition.js',
+  'assets/library-objectives-indivision.js',
   'assets/tools-catalog.js'
 ];
 for (const rel of CATALOG_LAYERS) {
