@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **13**
 - P1 — affirmation forte à resserrer ou vérifier : **47**
-- P2 — nécessité à examiner : **144**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **586**
+- P2 — nécessité à examiner : **141**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **589**
 
 ## P0 — rouvrir en priorité
 
@@ -220,10 +220,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — La réserve minimale doit être personnelle Ne recopiez pas mécaniquement « trois à six mois ».
 ### `dossiers/finances-residence-principale.html`
 - **nécessité à requalifier ou sourcer** — Compter le logement dans l’allocation globale La résidence principale doit figurer dans les actifs bruts et dans la valeur nette après dette. _[temporalité]_
-### `dossiers/gestion-pilotee-comparer-performances.html`
-- **nécessité à requalifier ou sourcer** — 03 · Autre acteur : Ramify Une performance sur cinq ans doit être lue avec la composition du portefeuille.
-- **nécessité à requalifier ou sourcer** — Il faut aussi comparer les mêmes dates : 2024 a été très différent de 2025, et une performance cumulée sur cinq ans n’est pas une performance annuelle. _[temporalité]_
-- **nécessité à requalifier ou sourcer** — Un portefeuille dynamique ne doit pas être jugé seulement sur ses bonnes années : il faut aussi examiner la profondeur des baisses et la vitesse de récupération. _[temporalité]_
 ### `dossiers/immobilier-allocation-globale-patrimoine.html`
 - **nécessité à requalifier ou sourcer** — Il faut intégrer coût d’acquisition, financement, charges, vacance, travaux, gestion, fiscalité, temps personnel et valeur de sortie.
 - **nécessité à requalifier ou sourcer** — Le rendement doit être reconstruit Prix d’annonce, rendement brut et mensualité ne suffisent pas.
