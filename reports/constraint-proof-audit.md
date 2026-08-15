@@ -6,10 +6,10 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 ## Synthèse
 
-- P0 — fermeture forte sans preuve/périmètre suffisant : **15**
+- P0 — fermeture forte sans preuve/périmètre suffisant : **14**
 - P1 — affirmation forte à resserrer ou vérifier : **46**
 - P2 — nécessité à examiner : **143**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **576**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **577**
 
 ## P0 — rouvrir en priorité
 
@@ -35,8 +35,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sans signal de preuve ni périmètre clair** — Un prévisionnel à 25 missions est donc impossible sans hausse de prix, délégation ou productivité.
 ### `fiches-metiers.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Accès Diplôme obligatoire, attendu ou contournable ?
-### `ingenierie-de-solutions.html`
-- **fermeture forte sans signal de preuve ni périmètre clair** — Quand une réponse dit « impossible » , le travail ne consiste pas seulement à mieux accepter la limite. _[temporalité]_
 ### `outil-ingenierie-solutions.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Atelier d’ingénierie de solutions : contester la contrainte | Contre-Évidence Aller au contenu CONTRE-ÉVIDENCE Patrimoine Vie professionnelle Fenêtres Outils Bibliothèque Mon espace Outil · Ingénierie de solutions Le problème paraît impossible ?
 ### `themes/entreprendre.html`
@@ -117,9 +115,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `fiches-metiers/charge-recrutement-rh.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Droit et éthique : connaître les limites du processus et les critères interdits. _[signal-source]_
 ### `ingenierie-de-solutions.html`
-- **affirmation forte sans signal de source explicite** — Il est impossible de connaître d’avance tous les faits cachés. _[périmètre, temporalité]_
-- **affirmation forte sans signal de source explicite** — Le « non » doit être qualifié « Non » peut vouloir dire : interdit par la loi ; refusé par cet acteur ; trop cher dans cette configuration ; impossible aujourd’hui ; impossible en une seule étape ; impossible avec ce niveau de preuve ; impossible si l’on garde le même objectif intermédiaire. _[périmètre]_
-- **affirmation forte sans signal de source explicite** — Supposée « On ne peut pas faire ça » sans texte, calcul ni refus formel. _[périmètre]_
+- **affirmation forte sans signal de source explicite** — Le standard Contre-Évidence On ne prouve pas qu’une chose est impossible en ne trouvant pas de solution. _[périmètre]_
+- **affirmation forte sans signal de source explicite** — Les mots absolus ont une charge de preuve « Impossible », « obligatoire », « on ne peut pas », « le seul moyen », « aucune solution », « les banques refusent » sont des formulations légitimes seulement si leur périmètre est établi. _[périmètre]_
+- **affirmation forte sans signal de source explicite** — Préférer : « cela ne passe pas avec ces hypothèses » ; « cet établissement refuse ce dossier » ; « ce texte interdit cet acte précis » ; « la voie n’est pas finançable aujourd’hui à ce prix et avec ce revenu ». _[périmètre]_
 ### `simulateur-acheter-ou-louer-mobilite.html`
 - **affirmation forte sans signal de source explicite** — Ce que le calculateur ne peut pas savoir : le futur prix du logement, les travaux exceptionnels, votre fiscalité future, la valeur exacte d'une option de mobilité ou les clauses de votre crédit. _[périmètre]_
 
@@ -298,9 +296,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Ouvrir une fenêtre → Quand quelque chose doit changer Les décisions où travail, argent et qualité de vie se rencontrent.
 - **nécessité à requalifier ou sourcer** — Premier emploi, retour à l’emploi, reconversion, offre, contrat, salaire, management ou activité indépendante : partez de la situation qui doit réellement changer.
 ### `ingenierie-de-solutions.html`
-- **nécessité à requalifier ou sourcer** — Démonter la contrainte Chaque contrainte importante doit être interrogée jusqu’à connaître sa nature. _[temporalité]_
-- **nécessité à requalifier ou sourcer** — On mesure d’abord l’écart entre la situation actuelle et la condition nécessaire. _[temporalité]_
-- **nécessité à requalifier ou sourcer** — Une deuxième passe doit attaquer la première conclusion La première solution raisonnable n’est qu’un brouillon. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Il faut explorer, vérifier, recombiner, tester, puis seulement conclure.
+- **nécessité à requalifier ou sourcer** — Une contrainte doit être qualifiée avant d’être acceptée Type Ce que cela signifie Question Absolue Un texte, un fait matériel ou un calcul ferme réellement la voie. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Une réponse standard doit être attaquée Avant publication, la première conclusion doit subir une passe contradictoire : Qu’avons-nous considéré comme fixe sans preuve ? _[temporalité]_
 ### `marches-analyses-avancees.html`
 - **nécessité à requalifier ou sourcer** — Une analyse appliquée à une entreprise ou à un marché doit être datée, sourcée et préciser ce qui invaliderait le scénario. _[temporalité]_
 ### `outil-comparer-offres-emploi.html`
