@@ -70,14 +70,9 @@ jobs:
               for key, patterns in checks.items():
                   result[key] = any(re.search(p, text, re.I | re.S) for p in patterns)
               score = sum(result.values())
-              # Long pages do not get free depth credit; very short pages are flagged separately.
               rows.append((score, words, str(path), result))
 
           rows.sort(key=lambda x: (x[0], x[1], x[2]))
-          counts = {i: 0 for i in range(10)}
-          for score, *_ in rows:
-              counts[score] += 1
-
           out = []
           out.append('# Revue corpus — Solution Engineer')
           out.append('')
@@ -114,7 +109,7 @@ jobs:
 
       - name: Commit report if changed
         run: |
-          if git diff --quiet -- reports/corpus-solution-review.md; then
+          if [ -z "$(git status --porcelain -- reports/corpus-solution-review.md)" ]; then
             echo 'No report change.'
             exit 0
           fi
