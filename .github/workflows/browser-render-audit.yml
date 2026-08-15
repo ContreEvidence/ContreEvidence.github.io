@@ -105,7 +105,7 @@ jobs:
                   }
                   if(!contained) badTables.push(i+1);
                 });
-                const overflow=Math.max(0,document.documentElement.scrollWidth-document.documentElement.clientWidth);
+                const overflow=Math.max(0,document.documentElement.scrollWidth-window.innerWidth);
                 const overflowElements=[];
                 if(overflow>3){
                   document.querySelectorAll('body *').forEach(el=>{
@@ -177,4 +177,4 @@ jobs:
           if-no-files-found: warn
           retention-days: 7
 
-# Final full-site run after audience copy and management mobile fixes.
+# Compare page scroll width with window.innerWidth so the vertical scrollbar is not counted as horizontal overflow.
