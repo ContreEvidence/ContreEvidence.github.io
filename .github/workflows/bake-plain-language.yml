@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths:
+      - '.plain-language-trigger'
       - '.github/workflows/bake-plain-language.yml'
 
 permissions:
@@ -31,7 +32,6 @@ jobs:
                   return
               p.write_text(text.replace(old, new), encoding='utf-8')
 
-          # Accueil : langage visiteur, architecture interne inchangée.
           replace('index.html', 'Se situer · arbitrer · construire', 'Comprendre · choisir · avancer')
           replace('index.html', 'Partez de votre besoin, pas de la rubrique.', 'Commencez par ce que vous vivez, pas par une rubrique.')
           replace('index.html', 'Je veux savoir où j’en suis', 'Je veux comprendre où j’en suis')
@@ -47,7 +47,6 @@ jobs:
           replace('index.html', '« Je sais où je veux aller. »', '« Je sais ce que je veux, mais pas encore comment y arriver. »')
           replace('index.html', 'Construire le chemin →', 'Construire mon plan →')
 
-          # Par où commencer : mêmes ancres, mots plus naturels.
           replace('parcours-de-vie.html', 'Vous n’avez pas besoin de connaître la solution pour entrer ici.', 'Commencez par ce qui vous pose problème aujourd’hui.')
           replace('parcours-de-vie.html', '01 · Se situer', '01 · Comprendre ma situation')
           replace('parcours-de-vie.html', 'Poser le diagnostic →', 'M’aider à y voir clair →')
@@ -61,7 +60,6 @@ jobs:
           replace('parcours-de-vie.html', 'Quand plusieurs options semblent défendables, rendez leurs conséquences comparables.', 'Si plusieurs options se tiennent, comparez ce qu’elles changent vraiment.')
           replace('parcours-de-vie.html', 'Un objectif clair devient utile quand on connaît le chemin qui y mène.', 'Vous savez ce que vous voulez : transformez-le en étapes.')
 
-          # Patrimoine : ne pas confondre profondeur du sujet et jargon d’entrée.
           replace('themes/argent.html', 'Entrez par votre situation, pas par votre âge.', 'Commencez par ce que vous devez faire maintenant.')
           replace('themes/argent.html', '02 · Je construis', '02 · Je fais grandir mon patrimoine')
           replace('themes/argent.html', 'Transformer mon épargne en patrimoine.', 'Faire travailler mon épargne sans me disperser.')
@@ -71,7 +69,6 @@ jobs:
           replace('themes/argent.html', 'Pour un patrimoine déjà constitué, avec plusieurs actifs, dettes, objectifs ou scénarios à comparer.', 'Quand vous avez déjà plusieurs placements, biens, dettes ou projets à faire tenir ensemble.')
           replace('themes/argent.html', '<li>allocation globale</li><li>concentrations et liquidité</li><li>stress tests et scénarios</li><li>arbitrages et transmission</li>', '<li>répartition globale</li><li>ce qui est trop concentré et ce qui reste disponible</li><li>scénarios défavorables</li><li>choix entre placements et transmission</li>')
 
-          # Vie professionnelle : expliquer avant de nommer le concept.
           replace('parcours-vie-professionnelle.html', 'Votre métier n’est qu’une photographie. Vos compétences, vos preuves, votre santé, vos revenus et vos options forment le capital professionnel.', 'Votre poste dit ce que vous faites aujourd’hui. Vos compétences, vos résultats, votre santé et les portes qui restent ouvertes disent où vous pouvez aller demain.')
           replace('parcours-vie-professionnelle.html', 'Le problème du jour compte. Mais il prend un autre sens quand on voit la trajectoire : ce que votre travail construit, ce qu’il fragilise et les options qu’il vous laisse pour la suite.', 'Le problème du jour compte. Mais il faut aussi regarder ce que votre travail vous apporte aujourd’hui, ce qu’il vous coûte et les portes qu’il vous ouvre pour la suite.')
           replace('parcours-vie-professionnelle.html', 'Deux questions différentes : où va ma trajectoire, et que dois-je résoudre maintenant ?', 'Deux questions : où en suis-je, et qu’est-ce que je dois régler maintenant ?')
@@ -80,7 +77,6 @@ jobs:
           replace('parcours-vie-professionnelle.html', 'Diagnostiquer mon capital professionnel →', 'Faire le point sur mes atouts et mes options →')
           replace('parcours-vie-professionnelle.html', 'Les décisions professionnelles que l’on cherche quand quelque chose doit changer.', 'Choisissez la situation qui ressemble le plus à la vôtre.')
 
-          # Dossiers centraux : une première couche simple, puis la profondeur existante.
           replace('dossiers/allocation-patrimoine-selon-situation.html', '<div class="answer-box"><h2>La réponse courte</h2>', '<div class="answer-box"><h2>En bref</h2>')
           replace('dossiers/allocation-patrimoine-selon-situation.html', '<div class="warning-box">', '<div class="answer-box"><h2>Pour commencer simplement</h2><p>Ici, « allocation » veut simplement dire <strong>comment répartir votre argent</strong> entre ce qui doit rester disponible, ce qui finance un projet et ce qui peut être investi longtemps. Commencez par la situation qui vous ressemble ; les termes plus techniques viennent ensuite.</p></div>\n<div class="warning-box">')
 
@@ -109,5 +105,3 @@ jobs:
           git commit -m 'Vulgariser les entrées et dossiers de référence'
           git pull --rebase origin main
           git push
-
-# Workflow one-shot : supprimer après exécution réussie.
