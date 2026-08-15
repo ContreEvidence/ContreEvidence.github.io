@@ -12,6 +12,16 @@ Le standard est désormais :
 
 Une page n’est pas terminée parce qu’elle explique correctement la règle. Elle doit répondre à la question du titre et aider le lecteur à construire ou tester une solution.
 
+## État du chantier
+
+- Audit initial : **41 dossiers à forte promesse sous 8/12** en ingénierie de solutions.
+- Trois réécritures étalon réalisées :
+  - ✅ `dossiers/indivision-couple-separation-rachat-soulte.html`
+  - ✅ `dossiers/metiers-accessibles-sans-diplome.html`
+  - ✅ `dossiers/quitter-cdi-avec-credit-immobilier.html`
+- Après ces trois réécritures : **38 dossiers à forte promesse restent sous 8/12**.
+- Le bloc générique « Avant de refermer ce dossier » a été supprimé : la profondeur doit désormais être écrite dans chaque dossier, pas simulée par un encadré commun.
+
 ## Règles de chantier
 
 1. **Gel de l’expansion éditoriale** sur les domaines déjà bien couverts tant que les pages à forte promesse ci-dessous ne sont pas reprises, sauf nécessité légale, factuelle ou SEO réellement distincte.
@@ -21,13 +31,25 @@ Une page n’est pas terminée parce qu’elle explique correctement la règle. 
 5. Une page réussie doit apporter au moins un élément difficile à obtenir par simple compilation de résultats de recherche : seuil, montage, séquence, combinaison de leviers, condition de possibilité ou démonstration d’une fausse impossibilité.
 6. Les solutions restent licites et vérifiables. « Contre-évidence » ne signifie jamais contourner illégalement une règle.
 
-## Page étalon
+## Pages étalon
 
 - ✅ `dossiers/indivision-couple-separation-rachat-soulte.html`
-  - Ancien audit : **7/12**
+  - Ancien audit : **7/12**.
   - Réécrite le 15/08/2026 autour de l’obstacle « rachat impossible aujourd’hui ».
   - Sortie de la file `< 8/12` après réécriture.
   - Nouveaux éléments : déficit de rachat, cinq fenêtres, trajectoires à 3/5 ans, garantie, convention d’indivision, gestion rémunérée, usage du bien, voies sans accord, plan 90 jours, conditions d’abandon.
+
+- ✅ `dossiers/metiers-accessibles-sans-diplome.html`
+  - Ancien audit : **5/12**.
+  - Réécrite autour de cinq verrous distincts : obligation légale, filtre recruteur, compétence, prérequis scolaire, certification.
+  - Fenêtres : MRS, POE, VAP 85, VAE, poste/fonction passerelle.
+  - Sortie de la file `< 8/12` après réécriture.
+
+- ✅ `dossiers/quitter-cdi-avec-credit-immobilier.html`
+  - Ancien audit : **4/12**.
+  - Réécrite autour du déficit de transition plutôt que d’un nombre arbitraire de mois d’épargne.
+  - Fenêtres : nouvel emploi avant départ, rupture conventionnelle, démission-reconversion, congé sabbatique, préparation différée, départ immédiat chiffré.
+  - Sortie de la file `< 8/12` après réécriture.
 
 ## Vague A — promesse forte, ingénierie 4–5/12
 
@@ -37,7 +59,7 @@ Une page n’est pas terminée parce qu’elle explique correctement la règle. 
 - [ ] `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` — 4/12
 - [ ] `dossiers/gestion-pilotee-comparer-performances.html` — 4/12
 - [ ] `dossiers/location-nue-ou-meublee-comparer.html` — 4/12
-- [ ] `dossiers/quitter-cdi-avec-credit-immobilier.html` — 4/12
+- [x] `dossiers/quitter-cdi-avec-credit-immobilier.html` — ancien 4/12, réécrit
 - [ ] `dossiers/temps-energie-qualite-vie.html` — 4/12
 - [ ] `dossiers/apprendre-developper-competences.html` — 5/12
 - [ ] `dossiers/audit-budget-60-minutes.html` — 5/12
@@ -45,7 +67,7 @@ Une page n’est pas terminée parce qu’elle explique correctement la règle. 
 - [ ] `dossiers/dependance-gros-client.html` — 5/12
 - [ ] `dossiers/finances-retraite-decumulation.html` — 5/12
 - [ ] `dossiers/indivision-loyers-charges-comptes.html` — 5/12
-- [ ] `dossiers/metiers-accessibles-sans-diplome.html` — 5/12
+- [x] `dossiers/metiers-accessibles-sans-diplome.html` — ancien 5/12, réécrit
 - [ ] `dossiers/passer-80-pourcent-cout-reel.html` — 5/12
 
 ## Vague B — promesse forte, ingénierie 6/12
@@ -102,13 +124,13 @@ Le classement par score ne suffit pas. À score égal, priorité à :
 4. une page vers laquelle de nombreux parcours internes convergent ;
 5. un sujet où plusieurs domaines peuvent être recombinés pour faire apparaître une solution non évidente.
 
-Première séquence après la page étalon :
+Prochaine séquence :
 
-1. `metiers-accessibles-sans-diplome.html` — démontrer l’ingénierie de trajectoire professionnelle ;
-2. `quitter-cdi-avec-credit-immobilier.html` — croiser carrière, dette, réserve et séquence ;
-3. `temps-energie-qualite-vie.html` — faire des moyens une ressource au service de la vie ;
-4. `indivision-loyers-charges-comptes.html` — prolonger le dossier étalon ;
-5. `choisir-statut-micro-ei-eurl-sasu.html` — passer du comparatif de statuts à la trajectoire de structure selon le modèle économique.
+1. `temps-energie-qualite-vie.html` — faire des moyens une ressource au service de la vie ;
+2. `indivision-loyers-charges-comptes.html` — prolonger le dossier étalon ;
+3. `choisir-statut-micro-ei-eurl-sasu.html` — passer du comparatif de statuts à la trajectoire de structure selon le modèle économique ;
+4. `couple-famille-argent-temps.html` — relever l’un des dossiers les plus faibles du corpus ;
+5. `location-nue-ou-meublee-comparer.html` — passer du comparatif fiscal à l’ingénierie d’usage, de rendement et de sortie.
 
 ## Définition de terminé
 
