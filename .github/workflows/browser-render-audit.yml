@@ -177,4 +177,4 @@ jobs:
           if-no-files-found: warn
           retention-days: 7
 
-# Re-run after the audience-aware language pass and mobile table fix.
+# Final full-site run after audience copy and management mobile fixes.
