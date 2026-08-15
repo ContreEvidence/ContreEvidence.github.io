@@ -128,6 +128,7 @@ https://contreevidence.github.io/fiches-metiers/manager-proximite.html
 https://contreevidence.github.io/fiches-metiers/responsable-qualite.html
 https://contreevidence.github.io/fiches-metiers.html
 https://contreevidence.github.io/
+https://contreevidence.github.io/ingenierie-de-solutions.html
 https://contreevidence.github.io/marches-analyses-avancees.html
 https://contreevidence.github.io/mentions.html
 https://contreevidence.github.io/methode-sources.html
