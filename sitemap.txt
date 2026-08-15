@@ -67,6 +67,7 @@ https://contreevidence.github.io/dossiers/favoriser-un-enfant-succession-donatio
 https://contreevidence.github.io/dossiers/finances-allocation-portefeuille.html
 https://contreevidence.github.io/dossiers/finances-cadre-global.html
 https://contreevidence.github.io/dossiers/finances-credit-endettement.html
+https://contreevidence.github.io/dossiers/finances-difficiles-sortir-decouvert-dettes.html
 https://contreevidence.github.io/dossiers/finances-enveloppes-fiscalite.html
 https://contreevidence.github.io/dossiers/finances-investissement-locatif.html
 https://contreevidence.github.io/dossiers/finances-residence-principale.html
