@@ -53,9 +53,12 @@ jobs:
               r'sous réserve|si |lorsque|tant que|dépend|condition|temporaire|local|à vérifier)\b',re.I
           )
 
+          # Explicit discussion of the vocabulary itself is not a factual closure.
+          # This avoids punishing the methodology page for quoting the phrases the audit checks.
           meta_re=re.compile(
               r'\b(?:expression|formulation|phrase|question|réponse dit|éviter d.?écrire|ne pas écrire|'
-              r'mot|terme|exemple de formulation|contester|audit|doctrine)\b',re.I
+              r'mot|terme|mots? absolus|exemple de formulation|contester|audit|doctrine|charge de preuve|'
+              r'règle de relecture|doivent être utilisés|utiliser les mots|vocabulaire)\b',re.I
           )
 
           failures=[]
