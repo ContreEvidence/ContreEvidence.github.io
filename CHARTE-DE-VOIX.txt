@@ -44,7 +44,41 @@ Présenter ensuite le mécanisme et seulement après son nom technique.
 - Les anecdotes inventées.
 - Les conclusions sans objection ni limite.
 
-8. IDENTITÉ
+8. ADAPTER L’ACCÈS AU PUBLIC, PAS LA RIGUEUR
+Tous les dossiers ne s’adressent pas au même public. Le niveau de vocabulaire et la vitesse
+d’entrée dans la technique doivent donc dépendre du sujet et de la situation du lecteur.
+
+- Une page destinée à quelqu’un qui débute, cherche un premier emploi, revient vers l’emploi
+  ou découvre l’investissement doit pouvoir être comprise sans connaître notre vocabulaire.
+- Un dossier juridique, fiscal, patrimonial ou financier avancé peut employer les termes précis
+  dont il a besoin, mais leur utilité doit être comprise avant qu’ils deviennent des raccourcis.
+- Ne jamais classer le lecteur par des étiquettes générales « Débutant / Intermédiaire / Expert ».
+  Une même personne peut être très avancée dans un domaine et novice dans un autre.
+- Si une profondeur doit être signalée, décrire le contenu plutôt que la personne :
+  « En bref », « Pour commencer simplement », « Aller plus loin », « Cas détaillé »,
+  « Analyse technique » ou « Sources et hypothèses ».
+- Préférer le mot courant au jargon lorsqu’il dit exactement la même chose :
+  « faire un choix » avant « arbitrer », « argent disponible » avant « liquidité »,
+  « possibilité de revenir en arrière » avant « réversibilité », « scénario défavorable »
+  avant « stress test ».
+- Quand le terme technique est utile, expliquer d’abord l’idée puis donner son nom :
+  « ce que votre situation permet de risquer (capacité de risque) ».
+
+Règle centrale : ne jamais simplifier le raisonnement ; simplifier son accès autant que le public
+le nécessite.
+
+9. LECTURE PROGRESSIVE
+Pour les dossiers longs ou complexes, privilégier plusieurs couches :
+1. En bref — la réponse utile immédiatement.
+2. Pour commencer simplement — le mécanisme en langage courant.
+3. Cas concrets — chiffres et situations reconnaissables.
+4. Approfondissement — calculs, hypothèses, droit, fiscalité ou nuances.
+5. Sources — ce qui permet de vérifier et d’aller plus loin.
+
+Le lecteur doit pouvoir s’arrêter après la première ou la deuxième couche sans avoir reçu une
+réponse fausse ou trompeusement simplifiée.
+
+10. IDENTITÉ
 Le fil directeur reste :
 comprendre les systèmes, repérer les leviers, comparer les stratégies,
 décider, agir, mesurer et améliorer — sans prendre le fatalisme pour du réalisme.
