@@ -1,0 +1,76 @@
+name: Solution engineering report
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/solution-engineering-report.yml"
+      - "dossiers/indivision-couple-separation-rachat-soulte.html"
+      - "dossiers/indivision-rachat-progressif-parts.html"
+      - "dossiers/creer-entreprise-sans-diplome.html"
+
+permissions:
+  contents: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Build structural report
+        shell: python
+        run: |
+          from pathlib import Path
+          import re, html
+
+          paths = [
+            'dossiers/indivision-couple-separation-rachat-soulte.html',
+            'dossiers/indivision-rachat-progressif-parts.html',
+            'dossiers/creer-entreprise-sans-diplome.html',
+          ]
+          strip_scripts=re.compile(r'<(script|style)\b.*?</\1>',re.I|re.S)
+          strip_tags=re.compile(r'<[^>]+>')
+          word_re=re.compile(r"[A-Za-zÀ-ÖØ-öø-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÖØ-öø-ÿ0-9]+)*")
+          num_re=re.compile(r'\b\d+(?:[\s.,]\d+)?\s*(?:€|%|euros?|mois|ans?|heures?|h\b|jours?|km|clients?|candidatures?|ventes?|points?)',re.I)
+
+          tests = {
+            'obstacle/verrou': r'\b(?:obstacle|verrou|bloqu|impossible|refus|contrainte|frein)\w*',
+            'variables': r'\b(?:variable|modifiable|fixe|levier|paramètre|marge de manœuvre)\w*',
+            'progressif/fractionnement': r'\b(?:progressi|fractionn|tranche|par étapes?|montée en puissance|poste passerelle)\w*',
+            'séquence/ordre': r'\b(?:séquen|ordre des opérations|ordre des actions|d.?abord .{0,80} ensuite|avant de .{0,80} puis)\w*',
+            'combinaison/recomposition': r'\b(?:combinaison|combiner|recomposer|plusieurs leviers|aucun levier seul|deux leviers|trois leviers)\b',
+            'substitution': r'\b(?:substitut|remplac|garantie supplémentaire|personne qualifiée|autre usage|fonction voisine)\w*',
+            'réduction du besoin': r'\b(?:réduire le besoin|réduction du besoin|périmètre plus étroit|limiter le périmètre|moins de besoin)\b',
+            'seuil/bascule': r'\b(?:point de bascule|seuil|écart à fermer|à partir de quel|devient possible|devient finançable)\b',
+            'contradiction': r'\b(?:red team|contradicteur|attaqu|mauvaise idée|qu.?avons-nous considéré comme fixe|quand .* abandon)\w*',
+            'abandon/révision': r'\b(?:abandon|renoncer|arrêter|condition d.?abandon|condition d.?arrêt|réviser|changer de stratégie|mauvaise idée)\w*',
+          }
+
+          lines=['# Rapport — ingénierie de solutions','', 'Généré automatiquement à partir des pages étalons. Les compteurs sont des signaux, pas une note de qualité.','']
+          for p in paths:
+            raw=Path(p).read_text(encoding='utf-8',errors='replace')
+            text=html.unescape(strip_tags.sub(' ',strip_scripts.sub(' ',raw)))
+            words=len(word_re.findall(text)); nums=len(num_re.findall(text)); tables=len(re.findall(r'<table\b',raw,re.I)); sources=len(re.findall(r'href=["\']https?://',raw,re.I))
+            lines += [f'## `{p}`','',f'- Mots utiles : **{words}**',f'- Éléments chiffrés : **{nums}**',f'- Tableaux : **{tables}**',f'- Liens sources externes : **{sources}**']
+            for name,pat in tests.items():
+              count=len(re.findall(pat,text,re.I))
+              lines.append(f'- {name} : **{count}** occurrence(s)')
+            h2=[html.unescape(strip_tags.sub(' ',x)).strip() for x in re.findall(r'<h2[^>]*>(.*?)</h2>',raw,re.I|re.S)]
+            lines.append('- H2 : ' + ' · '.join(h2))
+            lines.append('')
+          Path('reports').mkdir(exist_ok=True)
+          Path('reports/solution-engineering-audit.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+      - name: Commit report if changed
+        run: |
+          if git diff --quiet -- reports/solution-engineering-audit.md && git ls-files --error-unmatch reports/solution-engineering-audit.md >/dev/null 2>&1; then
+            echo "Report already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/solution-engineering-audit.md
+          git commit -m "Mise à jour du rapport d’ingénierie de solutions"
+          git push
