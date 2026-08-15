@@ -1,0 +1,145 @@
+name: Cleanup audience-aware language
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.audience-language-trigger'
+      - '.github/workflows/cleanup-audience-language.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Remove reader level labels and simplify novice pages
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          root = Path('.')
+
+          # Visible reader-level labels are not part of the editorial model anymore.
+          for p in root.rglob('*.html'):
+              if any(part.startswith('.') for part in p.parts):
+                  continue
+              text = p.read_text(encoding='utf-8', errors='ignore')
+              original = text
+              text = re.sub(r'<span([^>]*class=["\'][^"\']*level-badge[^"\']*["\'][^>]*)>\s*Niveau\s*\d+[^<]*</span>', '', text, flags=re.I)
+              text = re.sub(r'<a[^>]+href=["\'][^"\']*bibliotheque\.html\?level=[^"\']*["\'][^>]*>.*?</a>', '', text, flags=re.I|re.S)
+              text = text.replace('Recherche par sujet, situation et niveau.', 'Recherche par sujet et situation.')
+              if text != original:
+                  p.write_text(text, encoding='utf-8')
+
+          def repl(path, pairs):
+              p = Path(path)
+              text = p.read_text(encoding='utf-8')
+              for old,new in pairs:
+                  text = text.replace(old,new)
+              p.write_text(text, encoding='utf-8')
+
+          repl('articles/accepter-nimporte-quel-poste-retour-emploi.html', [
+              ('Le dossier « Accepter un poste imparfait » couvre revenu net réel, apprentissage, valeur de CV, contraintes, coût d’opportunité et plan de sortie.', 'Le dossier « Accepter un poste imparfait » couvre revenu net réel, apprentissage, valeur de CV, contraintes, ce que le poste vous empêche de faire et la façon de préparer la suite.'),
+              ('L’urgence financière compte. Mais le vrai arbitrage oppose le revenu immédiat au temps, à l’énergie et aux options que le poste va consommer ou créer.', 'L’urgence financière compte. Mais le vrai choix oppose le revenu immédiat au temps, à l’énergie et aux possibilités que le poste va vous prendre ou vous ouvrir.'),
+              ('Commencez par votre <strong>runway financier</strong> : combien de mois pouvez-vous encore tenir sans ce poste ?', 'Commencez par votre <strong>marge financière</strong> : combien de mois pouvez-vous encore tenir sans ce poste ?'),
+              ('Un poste temporairement médiocre peut être rationnel ; un poste sans fonction ni échéance devient vite une destination par inertie.', 'Un poste temporairement médiocre peut être un choix logique ; un poste sans fonction ni échéance devient vite une destination par habitude.'),
+              ('<h2>4. Mesurer le coût d’opportunité en heures</h2>', '<h2>4. Mesurer ce que ce poste vous empêche de faire</h2>'),
+              ('Le coût d’un poste imparfait n’est pas seulement financier.', 'Le coût d’un poste imparfait n’est pas seulement financier : il faut aussi regarder le temps et l’énergie qu’il prend.'),
+              ('<h2>5. Vérifier la soutenabilité</h2>', '<h2>5. Vérifier si le rythme est tenable</h2>'),
+              ('Un poste transitoire n’a aucune valeur s’il détériore rapidement la capacité à travailler ou à chercher mieux.', 'Un poste de transition n’aide pas s’il vous épuise au point de ne plus pouvoir travailler correctement ou chercher mieux.'),
+              ('<strong>ce poste a-t-il augmenté ou réduit mes options ?</strong>', '<strong>ce poste m’a-t-il ouvert ou fermé des possibilités ?</strong>')
+          ])
+
+          repl('dossiers/plan-30-jours-recherche-emploi.html', [
+              ('Plan expert sur 30 jours pour diagnostiquer une recherche d\'emploi : segmentation des offres, signal de compétence, parcours atypique, risque perçu, conversions, réseau, entretien et analyse des résultats.', 'Plan pratique sur 30 jours pour comprendre où bloque une recherche d’emploi : offres visées, preuves de compétence, parcours atypique, réponses, entretiens, réseau et analyse des résultats.'),
+              ('Segmenter le marché, construire les preuves, rendre un parcours atypique lisible, mesurer les conversions et traiter le risque perçu en entretien.', 'Cibler les bons postes, montrer ses compétences, rendre un parcours atypique lisible, mesurer les réponses et comprendre ce qui bloque en entretien.'),
+              ('Le but n’est pas d’envoyer davantage de CV. C’est de savoir précisément si le blocage vient du marché ciblé, du signal envoyé, du risque perçu ou de la conversion en entretien.', 'Le but n’est pas d’envoyer davantage de CV. C’est de savoir si le blocage vient des postes visés, de ce que votre candidature montre, de ce qui inquiète le recruteur ou du passage à l’entretien.'),
+              ('Choisir 1 ou 2 segments de postes', 'Choisir 1 ou 2 types de postes'),
+              ('Analyser 10 offres par segment', 'Analyser 10 offres par type de poste'),
+              ('Je suis six métriques :', 'Je suis six indicateurs :'),
+              ('<td>Conversion</td>', '<td>Dernière étape</td>'),
+              ('<h2>3. Segmenter le marché avant de refaire le CV</h2>', '<h2>3. Séparer les types de postes avant de refaire le CV</h2>'),
+              ('Je construis deux segments maximum pendant 30 jours.', 'Je travaille sur deux types de postes maximum pendant 30 jours.'),
+              ('dans le segment ciblé', 'dans le type de poste ciblé'),
+              ('<strong>signaux de risque</strong>', '<strong>points qui peuvent bloquer</strong>'),
+              ('Une compétence déclarée est un signal faible. Une situation + action + résultat est un signal beaucoup plus fort.', 'Dire que l’on possède une compétence convainc peu. Une situation précise, ce que vous avez fait et le résultat obtenu convainquent beaucoup plus.'),
+              ('traitement des objections récurrentes', 'réponse aux objections qui reviennent'),
+              ('liste des risques perçus', 'liste des points qui inquiètent les recruteurs')
+          ])
+
+          repl('articles/premiere-chance-sans-experience.html', [
+              ('Réduire le risque perçu par l’employeur et choisir une première expérience qui ouvre réellement la suivante.', 'Rassurer l’employeur sur ce que vous savez faire et choisir une première expérience qui ouvre réellement la suivante.'),
+              ('Comparer les voies d’entrée quand on manque d’expérience et choisir celle qui produit le plus de capital professionnel.', 'Comparer les portes d’entrée quand on manque d’expérience et choisir celle qui apportera le plus pour la suite.'),
+              ('Il faut réduire l’incertitude de l’employeur tout en évitant une première expérience qui vous enferme.', 'Il faut rassurer l’employeur sur ce que vous saurez réellement faire, sans accepter une première expérience qui vous enferme.'),
+              ('Le bon premier poste maximise le <strong>capital professionnel futur</strong> sous vos contraintes de revenu.', 'Le bon premier poste maximise <strong>ce qu’il vous apportera pour la suite</strong> tout en respectant vos besoins de revenu.'),
+              ('L’expérience est un faisceau d’informations.', 'L’expérience donne plusieurs informations à l’employeur.'),
+              ('Le salaire immédiat n’est qu’un des rendements.', 'Le salaire immédiat n’est qu’un des bénéfices.'),
+              ('<th>Réversibilité</th>', '<th>Facilité à changer ensuite</th>'),
+              ('<h2>4. Mesurer le rendement professionnel d’une première expérience</h2>', '<h2>4. Mesurer ce qu’une première expérience vous apporte</h2>'),
+              ('évaluez cinq actifs et deux coûts.', 'évaluez cinq bénéfices et deux contraintes.'),
+              ('Soutenable sans dette ou fragilisation excessive', 'Tenable sans dette ni difficulté financière excessive'),
+              ('les compétences restent transférables', 'les compétences restent utiles ailleurs'),
+              ('<h2>5. Le seuil de bascule : quand accepter un poste imparfait ?</h2>', '<h2>5. Quand accepter un poste imparfait ?</h2>'),
+              ('Un poste imparfait devient rationnel', 'Un poste imparfait devient un choix logique'),
+              ('<h2>6. Stress test : ce qui peut rendre la bonne option mauvaise</h2>', '<h2>6. Si les choses se passent moins bien que prévu</h2>'),
+              ('<th>Scénario adverse</th>', '<th>Ce qui peut mal se passer</th>'),
+              ('capitaliser les références', 'utiliser les références obtenues'),
+              ('compétences-ponts', 'compétences utiles pour passer au poste suivant'),
+              ('<h2>8. Le protocole de décision en 30 minutes</h2>', '<h2>8. Une méthode de décision en 30 minutes</h2>'),
+              ('Stress-tester l’échec : que reste-t-il si le contrat ne débouche pas ?', 'Imaginer que cela échoue : que reste-t-il si le contrat ne débouche pas ?'),
+              ('votre plancher financier', 'votre minimum financier')
+          ])
+
+          repl('articles/retrouver-emploi-apres-interruption.html', [
+              ('Reconstruire des signaux actuels et choisir une porte de retour crédible sans se fragiliser.', 'Montrer que vous êtes prêt à reprendre aujourd’hui et choisir une porte de retour crédible sans vous fragiliser.'),
+              ('Il faut reconstruire des signaux récents, vérifier le rythme soutenable et choisir une première étape qui améliore réellement la suivante.', 'Il faut montrer des preuves récentes, vérifier que le rythme est tenable et choisir une première étape qui améliore réellement la suivante.'),
+              ('plusieurs incertitudes distinctes', 'plusieurs questions différentes chez le recruteur'),
+              ('Le critère central est : <strong>quelle option réduit le plus vite l’incertitude du marché sans créer une nouvelle fragilité ?</strong>', 'Le critère central est : <strong>quelle option rassure le plus vite les recruteurs sans créer une nouvelle fragilité ?</strong>'),
+              ('<th>Risque perçu</th>', '<th>Ce qui peut inquiéter</th>'),
+              ('<td>Rythme / disponibilité</td><td>Candidature directe + preuve récente légère</td>', '<td>Rythme / disponibilité</td><td>Candidature directe + preuve récente simple</td>'),
+              ('<th>Retour rationnel probable</th>', '<th>Retour logique probable</th>'),
+              ('<th>Réversibilité</th>', '<th>Facilité à changer ensuite</th>'),
+              ('B peut être rationnel', 'B peut être un choix logique'),
+              ('<h2>6. Tester la soutenabilité avant de signer</h2>', '<h2>6. Vérifier si le rythme est tenable avant de signer</h2>'),
+              ('résultats passés les plus transférables', 'résultats passés les plus utiles pour le poste visé'),
+              ('<h2>9. Stress test du plan de retour</h2>', '<h2>9. Et si le retour se passe moins bien que prévu ?</h2>'),
+              ('<strong>soutenabilité personnelle, plancher financier et progression de crédibilité</strong>', '<strong>rythme personnel tenable, minimum financier et crédibilité qui progresse</strong>'),
+              ('une transition plus courte ou plus réversible', 'une transition plus courte ou dont il est plus facile de sortir')
+          ])
+
+          repl('articles/construire-allocation-debutant.html', [
+              ('<h1>Construire une allocation simple quand on débute</h1><p>Une allocation répartit l’argent entre sécurité, projets et croissance selon des objectifs concrets.</p>', '<h1>Répartir son argent simplement quand on débute</h1><p>Une « allocation », c’est simplement la façon de répartir votre argent entre ce qui doit rester disponible, vos projets et le long terme.</p>'),
+              ('L’allocation est souvent présentée comme un pourcentage magique d’actions et d’obligations.', 'La répartition de l’argent est souvent présentée comme un pourcentage magique d’actions et d’obligations.'),
+              ('Une allocation commence par les besoins, pas par les produits.', 'Commencez par vos besoins, pas par les placements.'),
+              ('La part risquée dépend de l’horizon, de la stabilité financière et du comportement probable en période de baisse.', 'La part investie dépend du temps dont vous disposez, de votre sécurité financière et de votre réaction probable en période de baisse.'),
+              ('Une allocation simple, diversifiée et comprise', 'Une répartition simple, diversifiée et comprise'),
+              ('Attribuez chaque euro à un horizon avant de choisir le support.', 'Décidez d’abord quand vous aurez besoin de chaque somme, puis choisissez le placement.'),
+              ('<h2>Tester sa tolérance au risque</h2>', '<h2>Imaginer une forte baisse avant d’investir</h2>'),
+              ('Avez-vous encore assez de liquidités ?', 'Avez-vous encore assez d’argent disponible ?'),
+              ('<h2>Rééquilibrer sans s’agiter</h2>', '<h2>Revenir à la répartition prévue sans s’agiter</h2>'),
+              ('Rééquilibrer consiste à revenir au plan', 'Rééquilibrer signifie revenir à la répartition prévue'),
+              ('<strong>La capacité de risque</strong> correspond à ce que votre situation financière peut absorber sans compromettre un projet. <strong>La tolérance au risque</strong> décrit ce que vous supportez émotionnellement. <strong>Le besoin de risque</strong> désigne le rendement nécessaire pour atteindre l’objectif.', '<strong>Ce que votre situation permet de risquer</strong> (capacité de risque) correspond à la perte que vos finances peuvent absorber sans compromettre un projet. <strong>Ce que vous supportez psychologiquement</strong> (tolérance au risque) décrit votre réaction face aux baisses. <strong>Le rendement dont vous avez réellement besoin</strong> indique le niveau de risque qu’il est utile de prendre pour atteindre l’objectif.'),
+              ('La sophistication n’est utile', 'La complexité n’est utile')
+          ])
+
+      - name: Commit audience-aware cleanup
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet; then
+            echo 'Nothing to clean.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add '*.html' articles dossiers themes fiches-metiers 2>/dev/null || true
+          git commit -m 'Adapter le langage aux pages destinées aux débutants'
+          git pull --rebase origin main
+          git push
