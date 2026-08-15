@@ -134,6 +134,7 @@ https://contreevidence.github.io/mentions.html
 https://contreevidence.github.io/methode-sources.html
 https://contreevidence.github.io/outil-capital-professionnel.html
 https://contreevidence.github.io/outil-comparer-offres-emploi.html
+https://contreevidence.github.io/outil-ingenierie-solutions.html
 https://contreevidence.github.io/outil-microscope-pea.html
 https://contreevidence.github.io/outil-pilotage-recherche-emploi.html
 https://contreevidence.github.io/outil-plan-30-90-jours.html
