@@ -41,12 +41,12 @@
       }
     }
 
-    /* Ponts dossier -> outil pour les intentions d'acquisition les plus fortes.
-       Le bloc est ajouté près de la réponse courte sans remplacer le contenu éditorial. */
+    /* Ponts dossier -> outil pour les intentions les plus fortes.
+       Le bloc ajoute une action concrète sans simuler de profondeur éditoriale. */
     const toolMap = {
       '/dossiers/combien-epargne-avant-demissionner.html': {
         href:'../simulateur-epargne-demission.html',
-        title:'Calculez votre runway avec vos propres chiffres',
+        title:'Calculez votre marge avec vos propres chiffres',
         text:'Dépenses essentielles, revenus certains, réserve protégée et scénario adverse : transformez votre épargne en mois de marge.'
       },
       '/dossiers/quitter-cdi-avec-credit-immobilier.html': {
@@ -84,15 +84,6 @@
       const answer = prose.querySelector(':scope > .answer-box, :scope > .voice-note');
       if (answer) answer.insertAdjacentElement('afterend', bridge);
       else prose.insertAdjacentElement('afterbegin', bridge);
-    }
-
-    if (/\/dossiers\/[^/]+\.html$/.test(path) && prose && !prose.querySelector('.ce-signature-lens')) {
-      const lens = document.createElement('div');
-      lens.className = 'decision-box ce-signature-lens';
-      lens.innerHTML = `<h3>Avant de refermer ce dossier</h3><ul><li><strong>L’intuition qui peut tromper :</strong> quelle réponse paraissait évidente avant même d’avoir comparé ?</li><li><strong>La variable oubliée :</strong> quel coût, temps, risque ou dépendance n’entre pas dans le chiffre principal ?</li><li><strong>Ce qui ferait changer la réponse :</strong> quel fait ou quel seuil inverserait réellement votre choix ?</li><li><strong>Le contrôle :</strong> quand reverrez-vous cette décision, et quel indicateur regarderez-vous alors ?</li></ul>`;
-      const related = prose.querySelector(':scope > .ce-related');
-      if (related) related.insertAdjacentElement('beforebegin', lens);
-      else prose.appendChild(lens);
     }
 
     const lifeLinks = [
