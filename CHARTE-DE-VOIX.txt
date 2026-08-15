@@ -82,3 +82,85 @@ réponse fausse ou trompeusement simplifiée.
 Le fil directeur reste :
 comprendre les systèmes, repérer les leviers, comparer les stratégies,
 décider, agir, mesurer et améliorer — sans prendre le fatalisme pour du réalisme.
+
+11. L’INGÉNIERIE DE SOLUTIONS — LE STANDARD CONTRE-ÉVIDENCE
+Expliquer correctement une contrainte ne suffit pas. Sourcer une règle ne suffit pas. Lister des
+critères ne suffit pas. Un dossier Contre-Évidence doit chercher ce que le lecteur peut réellement
+faire avec la situation qu’il a, y compris lorsque la réponse spontanée est « impossible ».
+
+La question centrale n’est pas seulement : « quelles sont les règles ? »
+Elle devient : « qu’est-ce qui bloque, qu’est-ce qui est réellement fixe, qu’est-ce qui peut être
+modifié, et que faut-il rendre vrai pour que l’option redevienne possible ? »
+
+Tout dossier de décision important doit passer par les huit tests suivants :
+
+1. PROMESSE
+   Le contenu répond-il réellement à la question du titre ?
+   Un titre « vendre, racheter ou conserver ? » doit comparer et construire ces solutions ;
+   il ne peut pas se contenter d’expliquer le cadre juridique ou financier.
+
+2. OBSTACLE
+   Identifier le verrou concret. Pas « c’est compliqué », mais : financement insuffisant,
+   règle juridique, revenu trop faible, délai, manque de preuve, coût, compétence, dépendance,
+   capacité physique, accord d’un tiers, marché trop étroit, etc.
+
+3. FAUX IMPOSSIBLE
+   Séparer les contraintes dures des variables modifiables. Une règle de droit peut être fixe ;
+   un revenu, un calendrier, un montage, un usage du bien, une organisation, un niveau de dépense,
+   une preuve de compétence ou une séquence d’actions peuvent parfois changer.
+
+4. FENÊTRES
+   Chercher plusieurs chemins réellement différents, y compris ceux que le lecteur ne trouvera
+   pas dans la réponse standard : solution transitoire, changement de séquence, convention,
+   partage du problème, option intermédiaire, transformation d’un actif, nouvelle garantie,
+   expérimentation réversible, réduction du besoin initial, montée en puissance progressive.
+   Une « fenêtre » n’est jamais présentée comme une astuce magique : elle doit être licite,
+   réaliste et vérifiable.
+
+5. CONDITIONS DE POSSIBILITÉ
+   Pour chaque solution : qu’est-ce qui doit être vrai ? Quel revenu ? Quel accord ? Quel délai ?
+   Quelle réserve ? Quel prix ? Quelle compétence ? Quel niveau de risque ? Quel document ?
+   Quel tiers doit accepter ? Le lecteur doit voir précisément ce qui sépare aujourd’hui de demain.
+
+6. CHIFFRAGE ET SEUILS
+   Quand des nombres peuvent faire basculer le choix, les calculer. Ne pas donner seulement un
+   exemple : montrer le seuil d’équilibre, le point de bascule, le scénario défavorable et la
+   variable à laquelle la conclusion est la plus sensible.
+
+7. EXÉCUTION
+   Une solution sans séquence reste une idée. Indiquer ce qu’il faut vérifier maintenant, ce qui
+   peut être fait dans les prochains jours ou mois, dans quel ordre, et quel résultat intermédiaire
+   doit être obtenu avant de passer à l’étape suivante.
+
+8. CONDITION D’ABANDON OU DE RÉVISION
+   L’ingénierie de solutions ne consiste pas à rendre possible n’importe quoi à n’importe quel prix.
+   Dire aussi quand la fenêtre devient trop coûteuse, trop fragile, illégale, irréversible ou
+   incohérente avec l’objectif initial. Fixer ce qui ferait changer de stratégie.
+
+12. CE QU’ON DOIT TROUVER ICI ET PAS AILLEURS
+Un lecteur peut trouver ailleurs la définition d’un PACS, les règles d’un crédit, cinq conseils
+pour un CV ou les avantages d’un ETF. Contre-Évidence doit produire une valeur supplémentaire :
+
+- recomposer des règles dispersées autour d’un problème réel ;
+- faire apparaître les variables que les réponses standards traitent comme fixes ;
+- construire des solutions hybrides ou séquencées ;
+- montrer à quelles conditions elles deviennent possibles ;
+- chiffrer les seuils qui changent la décision ;
+- révéler le coût caché de la solution évidente ;
+- donner un chemin d’exécution et une condition de sortie.
+
+Test final obligatoire :
+« Après avoir lu cette page, le lecteur sait-il faire quelque chose, tester quelque chose ou
+construire une option qu’il n’aurait pas obtenue en lisant cinq résultats de recherche correctement
+sourcés ? »
+
+Si la réponse est non, le dossier n’est pas terminé.
+
+13. PAS DE CULTE DE L’IMPOSSIBLE
+Contre-Évidence ne nie pas les contraintes. Il refuse seulement de les confondre trop vite avec
+une conclusion. Une vraie impossibilité doit être démontrée. Une impossibilité provisoire doit être
+transformée en conditions à atteindre. Une mauvaise idée doit pouvoir être abandonnée après calcul.
+
+La posture est donc :
+« Ce n’est pas possible comme cela, aujourd’hui » n’est pas la fin du raisonnement.
+C’est souvent le début de l’ingénierie de solutions.
