@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **13**
-- P1 — affirmation forte à resserrer ou vérifier : **47**
-- P2 — nécessité à examiner : **149**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **582**
+- P1 — affirmation forte à resserrer ou vérifier : **48**
+- P2 — nécessité à examiner : **146**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **586**
 
 ## P0 — rouvrir en priorité
 
@@ -65,6 +65,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/competences-qualification-employabilite.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Cas n°1 — Très expérimenté, diplôme absent Offres analysées 30 Diplôme obligatoire 4 Diplôme ou expérience équivalente 18 Aucune exigence formelle 8 Expérience pertinente 10 ans Le candidat ne doit pas conclure « sans diplôme, impossible ». _[signal-source, temporalité]_
 - **fermeture forte sourcée mais formulation trop absolue** — Classer chaque exigence : obligatoire, souhaitée, négociable. _[signal-source]_
+### `dossiers/cout-reel-voiture-achat-credit-loa-lld.html`
+- **fermeture forte sourcée mais formulation trop absolue** — Il est de rendre impossible la comparaison trompeuse « 390 €/mois contre 30 000 € comptant ». _[signal-source, temporalité]_
 ### `dossiers/creer-entreprise-sans-diplome.html`
 - **fermeture forte sourcée mais formulation trop absolue** — La réponse standard oppose souvent deux cases : activité libre ou activité interdite sans diplôme. _[signal-source]_
 - **fermeture forte sourcée mais formulation trop absolue** — Réécrit le 15/08/2026 · Code de l’artisanat vérifié dans sa version 2026 En bref : démontez le « sans diplôme, impossible » Commencez par quatre questions. _[signal-source]_
@@ -182,10 +184,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Il faut les séparer puis reconstruire l’économie complète du projet.
 - **nécessité à requalifier ou sourcer** — Pour comparer achat et location, il faut donc éviter le raccourci « mensualité = loyer ».
 - **nécessité à requalifier ou sourcer** — Une hausse du prix ne doit jamais être la seule raison pour laquelle l’achat devient rentable.
-### `dossiers/cout-reel-voiture-achat-credit-loa-lld.html`
-- **nécessité à requalifier ou sourcer** — Formule Ce que vous payez Ce qu’il faut ajouter À la fin Achat comptant Prix du véhicule immédiatement.
-- **nécessité à requalifier ou sourcer** — Il faut regarder le même véhicule, le même usage, la même durée et surtout ce qu’il reste à la fin.
-- **nécessité à requalifier ou sourcer** — Vous possédez le véhicule ; sa valeur de revente doit être déduite du coût total.
 ### `dossiers/creer-entreprise-avec-peu-argent.html`
 - **nécessité à requalifier ou sourcer** — Il faut distinguer ce qui permet de commencer, ce qui permet d’encaisser un retard et ce qui permet au foyer de survivre pendant la montée en charge. _[temporalité]_
 ### `dossiers/decider-a-deux-travail-patrimoine.html`
