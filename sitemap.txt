@@ -54,6 +54,7 @@ https://contreevidence.github.io/dossiers/creer-entreprise-sans-diplome.html
 https://contreevidence.github.io/dossiers/debloquer-demarche-administrative.html
 https://contreevidence.github.io/dossiers/decider-a-deux-travail-patrimoine.html
 https://contreevidence.github.io/dossiers/decider-sans-tourner-en-rond.html
+https://contreevidence.github.io/dossiers/decision-plan-30-90-jours.html
 https://contreevidence.github.io/dossiers/demenager-pour-un-emploi-salaire-minimum.html
 https://contreevidence.github.io/dossiers/dependance-gros-client.html
 https://contreevidence.github.io/dossiers/depenses-recurrentes-abonnements-assurances.html
