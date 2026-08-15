@@ -6,10 +6,10 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 ## Synthèse
 
-- P0 — fermeture forte sans preuve/périmètre suffisant : **13**
-- P1 — affirmation forte à resserrer ou vérifier : **46**
-- P2 — nécessité à examiner : **143**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **578**
+- P0 — fermeture forte sans preuve/périmètre suffisant : **12**
+- P1 — affirmation forte à resserrer ou vérifier : **44**
+- P2 — nécessité à examiner : **142**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **583**
 
 ## P0 — rouvrir en priorité
 
@@ -27,8 +27,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sans signal de preuve ni périmètre clair** — Cette distinction est essentielle parce qu’un tableau pondéré ne doit jamais donner une bonne note à une option qui est en réalité impossible.
 ### `dossiers/etude-marche-terrain.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Leur intérêt est d’empêcher le projet de devenir impossible à contredire. _[temporalité]_
-### `dossiers/location-courte-duree-meuble-tourisme.html`
-- **fermeture forte sans signal de preuve ni périmètre clair** — En 2026, le cadre réglementaire est devenu plus exigeant Le ministère de l’Économie rappelle qu’au plus tard le 20 mai 2026 , l’enregistrement préalable des meublés de tourisme doit devenir obligatoire partout en France via un téléservice national.
 ### `dossiers/plan-30-jours-recherche-emploi.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Manquer un logiciel appris en trois jours n’est pas équivalent à manquer le permis obligatoire ou l’expérience réglementaire exigée.
 ### `fiches-metiers.html`
@@ -80,9 +78,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sourcée mais formulation trop absolue** — En pratique, un compte bancaire dédié n’est pas toujours juridiquement obligatoire dans toutes les indivisions, mais il rend le suivi beaucoup plus propre. _[signal-source]_
 ### `dossiers/licence-universite-sans-bac-daeu-vap-vae.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Le DAEU reste utile dans certains projets, mais il ne doit pas être transformé en étape obligatoire par défaut. _[signal-source]_
-### `dossiers/location-courte-duree-meuble-tourisme.html`
-- **affirmation forte sans signal de source explicite** — Les nouveaux règlements de copropriété doivent préciser si cette activité est autorisée ou interdite, et les copropriétés existantes disposent de nouvelles possibilités pour la restreindre dans certaines conditions. _[périmètre, temporalité]_
-- **affirmation forte sans signal de source explicite** — Test de robustesse Si demain la courte durée devient moins rentable ou impossible, le bien reste-t-il cohérent en meublé longue durée, location nue ou revente ? _[périmètre]_
 ### `dossiers/location-nue-ou-meublee-comparer.html`
 - **affirmation forte sans signal de source explicite** — Dimension Location nue Location meublée longue durée Usage type Résidence principale stable Résidence principale avec mobilier fourni Mobilier Faible investissement initial Équipement obligatoire et renouvellement Rotation Souvent plus faible Peut être plus élevée selon marché Fiscalité des loyers Revenus fonciers BIC Gestion Souvent plus simple Inventaire, mobilier, entretien supplémentaire 2. _[périmètre]_
 ### `dossiers/metiers-fonctions-organisation-entreprise.html`
@@ -235,8 +230,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/liquidites-reserve-securite.html`
 - **nécessité à requalifier ou sourcer** — Elle doit être très liquide et peu risquée.
 - **nécessité à requalifier ou sourcer** — Une réserve doit être disponible rapidement, compréhensible et peu exposée à une perte au mauvais moment.
-### `dossiers/location-courte-duree-meuble-tourisme.html`
-- **nécessité à requalifier ou sourcer** — Il faut multiplier le tarif réellement encaissé par le nombre de nuits effectivement vendues, puis retrancher toutes les dépenses variables et fixes. _[temporalité]_
 ### `dossiers/location-nue-ou-meublee-comparer.html`
 - **nécessité à requalifier ou sourcer** — Il faut prévoir lit, literie, cuisine, table, sièges, rangement, luminaires et matériel d’entretien nécessaires à la qualification de meublé.
 - **nécessité à requalifier ou sourcer** — Le coût de remplacement doit être provisionné.
