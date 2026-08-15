@@ -1,0 +1,131 @@
+name: Corpus Solution Engineer Review
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'dossiers/**.html'
+      - 'articles/**.html'
+      - '.github/workflows/corpus-solution-review.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: corpus-solution-review
+  cancel-in-progress: true
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Scan corpus for solution-engineering depth
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from html import unescape
+          import re
+          from datetime import date
+
+          roots = [Path('dossiers'), Path('articles')]
+          files = []
+          for root in roots:
+              if root.exists():
+                  files.extend(root.rglob('*.html'))
+
+          TAG = re.compile(r'<[^>]+>', re.S)
+          SCRIPT = re.compile(r'<(script|style)\b[^>]*>.*?</\1>', re.I | re.S)
+          COMMENTS = re.compile(r'<!--.*?-->', re.S)
+
+          def visible_text(raw):
+              raw = SCRIPT.sub(' ', raw)
+              raw = COMMENTS.sub(' ', raw)
+              raw = TAG.sub(' ', raw)
+              raw = unescape(raw)
+              return re.sub(r'\s+', ' ', raw).strip().lower()
+
+          checks = {
+              'probleme': [r'probl[eè]me', r'obstacle', r'verrou', r'goulot', r'blocage', r'contrainte', r'pi[eè]ge'],
+              'causalite': [r'parce que', r'cause', r'entra[iî]ne', r'm[eé]canisme', r'si .{0,100} alors', r'test causal', r'change parce'],
+              'options': [r'alternative', r'option', r'sc[eé]nario', r'voie', r'plan b', r'autre solution', r'hybride', r'progressi'],
+              'temps_seuil': [r'seuil', r'bascule', r'fen[eê]tre', r'horizon', r'temporaire', r'\bavant\b', r'\bapr[eè]s\b', r'\bmois\b', r'\bans?\b'],
+              'quantification': [r'\d\s?%', r'\d[\d\s.,]*\s?€', r'\d+[,.]\d+', r'formule', r'calcul', r'point mort', r'co[uû]t'],
+              'adverse': [r'stress test', r'sc[eé]nario d[eé]grad', r'choc', r'mauvaise nouvelle', r'risque', r'fragile', r'perte'],
+              'sequence': [r'\b[eé]tape', r'\bplan\b', r'\bordre\b', r's[eé]quence', r'30 jours', r'90 jours', r'commence', r'puis'],
+              'sortie': [r'r[eé]versib', r'sortie', r'abandon', r'renonc', r'revenir', r'arr[eê]t', r'cesser', r'quand .* changer'],
+              'preuve': [r'source', r'r[eé]f[eé]rence', r'v[eé]rifi', r'officiel', r'hypoth[eè]se', r'p[eé]dagogique', r'ne prouve pas', r'condition'],
+          }
+
+          rows = []
+          for path in sorted(files):
+              raw = path.read_text(encoding='utf-8', errors='ignore')
+              text = visible_text(raw)
+              words = len(text.split())
+              result = {}
+              for key, patterns in checks.items():
+                  result[key] = any(re.search(p, text, re.I | re.S) for p in patterns)
+              score = sum(result.values())
+              # Long pages do not get free depth credit; very short pages are flagged separately.
+              rows.append((score, words, str(path), result))
+
+          rows.sort(key=lambda x: (x[0], x[1], x[2]))
+          counts = {i: 0 for i in range(10)}
+          for score, *_ in rows:
+              counts[score] += 1
+
+          out = []
+          out.append('# Revue corpus — Solution Engineer')
+          out.append('')
+          out.append(f'Mise à jour automatique : {date.today().isoformat()}')
+          out.append('')
+          out.append('Cet audit couvre tous les HTML de `dossiers/` et `articles/`. Il sert de **détecteur de profondeur de résolution**, pas de juge éditorial. Une page peut être excellente avec un score imparfait ; une page peut aussi contenir les mots attendus sans véritable raisonnement.')
+          out.append('')
+          out.append('Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.')
+          out.append('')
+          out.append(f'Pages analysées : **{len(rows)}**.')
+          out.append('')
+          out.append('## Priorité humaine')
+          out.append('')
+          out.append('| Score | Mots | Page | Dimensions manquantes |')
+          out.append('|---:|---:|---|---|')
+          for score, words, path, result in rows:
+              if score <= 6 or words < 700:
+                  missing = ', '.join(k for k,v in result.items() if not v) or '—'
+                  out.append(f'| {score}/9 | {words} | `{path}` | {missing} |')
+          out.append('')
+          out.append('## Corpus complet')
+          out.append('')
+          out.append('| Score | Mots | Page |')
+          out.append('|---:|---:|---|')
+          for score, words, path, result in rows:
+              out.append(f'| {score}/9 | {words} | `{path}` |')
+          out.append('')
+          out.append('## Règle de reprise')
+          out.append('')
+          out.append('Une page signalée n’est réécrite que si une lecture humaine identifie un gain réel : faux verrou, levier causal manquant, seuil, séquence, combinaison, scénario adverse, preuve ou condition de sortie. Aucun bloc générique ne doit être ajouté uniquement pour augmenter le score.')
+          out.append('')
+          Path('reports/corpus-solution-review.md').write_text('\n'.join(out) + '\n', encoding='utf-8')
+          PY
+
+      - name: Commit report if changed
+        run: |
+          if git diff --quiet -- reports/corpus-solution-review.md; then
+            echo 'No report change.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/corpus-solution-review.md
+          git commit -m 'Update corpus Solution Engineer review'
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main || { git rebase --abort; sleep 2; continue; }
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((i * 2))
+          done
+          exit 1
