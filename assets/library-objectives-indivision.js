@@ -12,6 +12,18 @@
     k:'richesse liberté patrimoine marge manoeuvre runway liquidité dettes sécurité choix temps reconversion travailler moins'
   });
 
+  patch('dossiers/finances-transmission-patrimoine.html', {
+    k:'transmission patrimoine succession enfants donation assurance vie réserve quotité disponible indivision liquidité favoriser enfant'
+  });
+
+  patch('dossiers/finances-retraite-decumulation.html', {
+    k:'retraite décumulation patrimoine âge cycle vie revenus retraits pension longévité allocation liquidité transmission'
+  });
+
+  patch('dossiers/finances-cadre-global.html', {
+    k:'politique patrimoniale allocation taille patrimoine complexité objectif réserve concentration diversification gouvernance'
+  });
+
   const additions = [
     {
       d:'mixte',t:'dossier',c:'Décision · Objectifs',
@@ -19,6 +31,34 @@
       n:'Tout ça pour quoi ? Objectifs, besoins et décisions',
       x:'Distinguer besoin, objectif et moyen avant d’optimiser argent, travail, patrimoine ou temps ; identifier aussi ce que l’on refuse de sacrifier.',
       k:'objectif besoin stratégie moyen décision valeurs finalité optimiser argent travail patrimoine temps qualité vie'
+    },
+    {
+      d:'patrimoine',t:'dossier',c:'Patrimoine · Richesse',
+      h:'dossiers/etre-riche-revenu-patrimoine-liberte.html',
+      n:'À partir de quand est-on riche ? Revenu, patrimoine ou liberté ?',
+      x:'Distinguer revenu, patrimoine net, capital mobilisable, position statistique et liberté réelle avec les repères Insee 2024.',
+      k:'riche richesse seuil riche revenu niveau vie patrimoine net million top 10 top 5 top 1 liberté financière aisés insee'
+    },
+    {
+      d:'patrimoine',t:'dossier',c:'Patrimoine · Pilotage',
+      h:'dossiers/piloter-patrimoine-selon-taille.html',
+      n:'Comment piloter un patrimoine selon sa taille ?',
+      x:'Les priorités changent avec l’échelle : construire, sécuriser, allouer, limiter la concentration, coordonner fiscalité, transmission et gouvernance.',
+      k:'taille patrimoine 100000 500000 million 3 millions banque privée gestion patrimoine allocation complexité gouvernance transmission diversification'
+    },
+    {
+      d:'patrimoine',t:'dossier',c:'Patrimoine · Cycle de vie',
+      h:'dossiers/patrimoine-selon-age-construire-utiliser.html',
+      n:'Comment piloter son patrimoine selon l’âge ? Construire, protéger puis utiliser',
+      x:'Ce qui change réellement de 25 à 75 ans : capital humain, dette, immobilier, horizon, retraite, décumulation, simplification et transmission.',
+      k:'patrimoine âge 30 ans 40 ans 50 ans 60 ans 70 ans cycle vie allocation retraite décumulation épargne transmission'
+    },
+    {
+      d:'patrimoine',t:'dossier',c:'Transmission · Enfants',
+      h:'dossiers/favoriser-un-enfant-succession-donation.html',
+      n:'Peut-on favoriser un enfant dans une succession ?',
+      x:'Réserve héréditaire, quotité disponible, donation hors part, donation-partage, assurance-vie et pacte successoral pour organiser une transmission inégalitaire.',
+      k:'favoriser enfant succession avantager enfant fidèle donation hors part successorale réserve héréditaire quotité disponible assurance vie RAAR pacte successoral'
     },
     {
       d:'patrimoine',t:'dossier',c:'Immobilier · Indivision',
