@@ -46,6 +46,10 @@ jobs:
           replace('index.html', '03 · Construire', '03 · Construire mon chemin')
           replace('index.html', '« Je sais où je veux aller. »', '« Je sais ce que je veux, mais pas encore comment y arriver. »')
           replace('index.html', 'Construire le chemin →', 'Construire mon plan →')
+          replace('index.html', '<title>Contre-Évidence — Se situer, arbitrer, construire ses décisions de vie</title>', '<title>Contre-Évidence — Comprendre sa situation, faire un choix, avancer</title>')
+          replace('index.html', 'Partir de votre besoin : comprendre où vous en êtes, arbitrer entre plusieurs options ou construire le chemin vers un objectif clair.', 'Partir de votre besoin : comprendre où vous en êtes, comparer vos options ou construire le chemin vers un objectif clair.')
+          replace('index.html', 'Comprendre où vous en êtes, arbitrer entre plusieurs options ou construire le chemin vers un objectif clair.', 'Comprendre où vous en êtes, comparer plusieurs options ou construire le chemin vers un objectif clair.')
+          replace('index.html', 'Un diagnostic fait apparaître un arbitrage ; un arbitrage clarifie parfois l’objectif', 'Comprendre la situation fait apparaître un choix ; ce choix clarifie parfois l’objectif')
 
           replace('parcours-de-vie.html', 'Vous n’avez pas besoin de connaître la solution pour entrer ici.', 'Commencez par ce qui vous pose problème aujourd’hui.')
           replace('parcours-de-vie.html', '01 · Se situer', '01 · Comprendre ma situation')
@@ -59,6 +63,8 @@ jobs:
           replace('parcours-de-vie.html', 'Commencez par comprendre ce qui est réellement en jeu.', 'D’abord, y voir clair.')
           replace('parcours-de-vie.html', 'Quand plusieurs options semblent défendables, rendez leurs conséquences comparables.', 'Si plusieurs options se tiennent, comparez ce qu’elles changent vraiment.')
           replace('parcours-de-vie.html', 'Un objectif clair devient utile quand on connaît le chemin qui y mène.', 'Vous savez ce que vous voulez : transformez-le en étapes.')
+          replace('parcours-de-vie.html', '<title>Par où commencer ? Se situer, arbitrer, construire | Contre-Évidence</title>', '<title>Par où commencer ? Comprendre, choisir, avancer | Contre-Évidence</title>')
+          replace('parcours-de-vie.html', 'Commencez par votre état de décision : comprendre où vous en êtes, comparer plusieurs options ou construire le chemin vers un objectif clair.', 'Commencez par votre besoin : comprendre votre situation, comparer plusieurs options ou construire le chemin vers un objectif clair.')
 
           replace('themes/argent.html', 'Entrez par votre situation, pas par votre âge.', 'Commencez par ce que vous devez faire maintenant.')
           replace('themes/argent.html', '02 · Je construis', '02 · Je fais grandir mon patrimoine')
@@ -78,15 +84,21 @@ jobs:
           replace('parcours-vie-professionnelle.html', 'Les décisions professionnelles que l’on cherche quand quelque chose doit changer.', 'Choisissez la situation qui ressemble le plus à la vôtre.')
 
           replace('dossiers/allocation-patrimoine-selon-situation.html', '<div class="answer-box"><h2>La réponse courte</h2>', '<div class="answer-box"><h2>En bref</h2>')
-          replace('dossiers/allocation-patrimoine-selon-situation.html', '<div class="warning-box">', '<div class="answer-box"><h2>Pour commencer simplement</h2><p>Ici, « allocation » veut simplement dire <strong>comment répartir votre argent</strong> entre ce qui doit rester disponible, ce qui finance un projet et ce qui peut être investi longtemps. Commencez par la situation qui vous ressemble ; les termes plus techniques viennent ensuite.</p></div>\n<div class="warning-box">')
+          replace('dossiers/allocation-patrimoine-selon-situation.html', '<div class="answer-box"><h2>Pour commencer simplement</h2>', '<div class="answer-box ce-plain-guide"><h2>Pour commencer simplement</h2>')
+          replace('dossiers/allocation-patrimoine-selon-situation.html', '<div class="warning-box">', '<div class="answer-box ce-plain-guide"><h2>Pour commencer simplement</h2><p>Ici, « allocation » veut simplement dire <strong>comment répartir votre argent</strong> entre ce qui doit rester disponible, ce qui finance un projet et ce qui peut être investi longtemps. Commencez par la situation qui vous ressemble ; les termes plus techniques viennent ensuite.</p></div>\n<div class="warning-box">')
 
           replace('dossiers/trajectoire-professionnelle-selon-situation.html', '<div class="answer-box"><h2>La réponse courte</h2>', '<div class="answer-box"><h2>En bref</h2>')
-          replace('dossiers/trajectoire-professionnelle-selon-situation.html', '<div class="capital-grid">', '<div class="answer-box"><h2>Pour commencer simplement</h2><p>Vous n’avez pas besoin de raisonner en « capital professionnel ». Posez-vous d’abord quatre questions : <strong>est-ce que ce travail me fait progresser, est-ce qu’il me paie suffisamment, est-ce que je peux le tenir dans la durée, et quelles portes restent ouvertes si je veux partir ?</strong></p></div>\n<div class="capital-grid">')
+          replace('dossiers/trajectoire-professionnelle-selon-situation.html', '<div class="answer-box"><h2>Pour commencer simplement</h2>', '<div class="answer-box ce-plain-guide"><h2>Pour commencer simplement</h2>')
+          replace('dossiers/trajectoire-professionnelle-selon-situation.html', '<div class="capital-grid">', '<div class="answer-box ce-plain-guide"><h2>Pour commencer simplement</h2><p>Vous n’avez pas besoin de raisonner en « capital professionnel ». Posez-vous d’abord quatre questions : <strong>est-ce que ce travail me fait progresser, est-ce qu’il me paie suffisamment, est-ce que je peux le tenir dans la durée, et quelles portes restent ouvertes si je veux partir ?</strong></p></div>\n<div class="capital-grid">')
           replace('dossiers/trajectoire-professionnelle-selon-situation.html', '<strong>Optionalité</strong>', '<strong>Options disponibles</strong>')
           replace('dossiers/trajectoire-professionnelle-selon-situation.html', 'benchmark externe', 'comparaison avec le marché')
+          replace('dossiers/trajectoire-professionnelle-selon-situation.html', 'retrouver de l’optionalité', 'garder plusieurs options ouvertes')
+          replace('dossiers/trajectoire-professionnelle-selon-situation.html', 'justifient un comparaison avec le marché', 'justifient une comparaison avec le marché')
+          replace('dossiers/trajectoire-professionnelle-selon-situation.html', '<th>Priorité rationnelle</th>', '<th>Priorité logique</th>')
 
           replace('dossiers/tout-ca-pour-quoi-objectifs-besoins.html', '<div class="answer-box"><h2>La réponse courte</h2>', '<div class="answer-box"><h2>En bref</h2>')
-          replace('dossiers/tout-ca-pour-quoi-objectifs-besoins.html', '<h2>1. Le moyen qui devient silencieusement l’objectif</h2>', '<div class="answer-box"><h2>Pour commencer simplement</h2><p>Trois questions suffisent pour entrer dans ce dossier : <strong>qu’est-ce que je veux vraiment changer ? qu’est-ce que je refuse de sacrifier ? comment saurai-je que c’est suffisant ?</strong> Le reste sert à approfondir.</p></div><h2>1. Le moyen qui devient silencieusement l’objectif</h2>')
+          replace('dossiers/tout-ca-pour-quoi-objectifs-besoins.html', '<div class="answer-box"><h2>Pour commencer simplement</h2>', '<div class="answer-box ce-plain-guide"><h2>Pour commencer simplement</h2>')
+          replace('dossiers/tout-ca-pour-quoi-objectifs-besoins.html', '<h2>1. Le moyen qui devient silencieusement l’objectif</h2>', '<div class="answer-box ce-plain-guide"><h2>Pour commencer simplement</h2><p>Trois questions suffisent pour entrer dans ce dossier : <strong>qu’est-ce que je veux vraiment changer ? qu’est-ce que je refuse de sacrifier ? comment saurai-je que c’est suffisant ?</strong> Le reste sert à approfondir.</p></div><h2>1. Le moyen qui devient silencieusement l’objectif</h2>')
           replace('dossiers/tout-ca-pour-quoi-objectifs-besoins.html', 'Le chiffre intervient lorsqu’il éclaire un arbitrage.', 'Le chiffre intervient lorsqu’il aide à faire un choix.')
           replace('dossiers/tout-ca-pour-quoi-objectifs-besoins.html', 'Le stress test vérifie la robustesse.', 'Le scénario défavorable vérifie si la décision tient encore quand les choses se passent moins bien que prévu.')
           replace('dossiers/tout-ca-pour-quoi-objectifs-besoins.html', 'regarder la réversibilité', 'regarder s’il est possible de revenir en arrière')
@@ -102,6 +114,6 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add index.html parcours-de-vie.html themes/argent.html parcours-vie-professionnelle.html dossiers/allocation-patrimoine-selon-situation.html dossiers/trajectoire-professionnelle-selon-situation.html dossiers/tout-ca-pour-quoi-objectifs-besoins.html
-          git commit -m 'Vulgariser les entrées et dossiers de référence'
+          git commit -m 'Affiner la vulgarisation des entrées et dossiers de référence'
           git pull --rebase origin main
           git push
