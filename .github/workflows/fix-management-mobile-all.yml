@@ -1,0 +1,40 @@
+name: Fix all management case tables on mobile
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-management-mobile-all.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Mark all two-column case tables as compact
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path('dossiers/management-relations-conflits.html')
+          text = p.read_text(encoding='utf-8')
+          text = text.replace('<table class="compare-table"><tbody>', '<table class="compare-table ce-compact-kv"><tbody>')
+          p.write_text(text, encoding='utf-8')
+      - name: Commit fix
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- dossiers/management-relations-conflits.html; then
+            echo 'Already fixed.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add dossiers/management-relations-conflits.html
+          git commit -m 'Adapter tous les tableaux de cas management au mobile'
+          git pull --rebase origin main
+          git push
