@@ -119,9 +119,16 @@
     {
       d:'patrimoine',t:'dossier',c:'Immobilier · Couple',
       h:'dossiers/indivision-couple-separation-rachat-soulte.html',
-      n:'Indivision après séparation : vendre, racheter la part ou rester indivis ?',
-      x:'Acte d’acquisition, apport, remboursements, créances, soulte, désolidarisation bancaire, occupation et scénarios de maintien temporaire.',
-      k:'séparation couple indivision rachat soulte quote part apport prêt immobilier désolidarisation banque concubin pacs logement'
+      n:'Indivision après séparation : racheter maintenant ou rendre le rachat possible ?',
+      x:'Identifier le verrou réel du rachat, déplacer dette, apport, garanties, temps, revenus et convention pour construire le point où la sortie devient finançable.',
+      k:'séparation couple indivision rachat soulte quote part apport prêt immobilier désolidarisation banque concubin pacs logement ingénierie solution'
+    },
+    {
+      d:'patrimoine',t:'dossier',c:'Immobilier · Indivision',
+      h:'dossiers/indivision-rachat-progressif-parts.html',
+      n:'Rachat progressif : acheter une partie des droits puis monter jusqu’à 100 % ?',
+      x:'Licitation partielle, quotes-parts 50/50 puis 60/40, loyers, prêt, fiscalité et taille optimale des tranches pour fractionner un rachat trop lourd à financer d’un coup.',
+      k:'indivision rachat progressif parts quote-part licitation partielle 10 pourcent 20 pourcent soulte fractionnement propriété loyers prêt concubin séparation'
     },
     {
       d:'patrimoine',t:'dossier',c:'Transmission · Indivision',
