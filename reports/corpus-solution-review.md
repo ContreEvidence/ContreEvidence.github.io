@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **106**. Validations devenues caduques après modification : **17**.
+Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **105**. Validations devenues caduques après modification : **18**.
 
 ## Priorité humaine
 
@@ -19,6 +19,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | Page | SHA relu | SHA courant |
 |---|---|---|
 | `dossiers/metiers-fonctions-organisation-entreprise.html` | `b9100c518af815d5e3d410b6184e23e03d065471` | `d1ad766d8bb16ec3e4e166eea84be714d760711e` |
+| `dossiers/quand-vie-change-sante-separation-revenu.html` | `7c1e0e0d680c29f25db5fc5d7c9b17ccb1f37d6a` | `1487618f513ec93eafa2bc48959f9c83f74bcc57` |
 | `dossiers/business-plan-utile.html` | `e905253a4ba67437152d5227dcdd9dd464886d32` | `d67ecb168823cccfc96f3a853f21e902602d46bb` |
 | `dossiers/apprendre-developper-competences.html` | `487f02e927355afd164e889a7c53b7d4e0e6ff65` | `3272d614977166149cab861080f1216a5458a5c2` |
 | `dossiers/patrimoine-marge-de-manoeuvre.html` | `3e2dd7332b7c2063c63dbad30055168a61266868` | `50b975f0203803c81a54e764c76094e85630be34` |
@@ -67,7 +68,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/debloquer-demarche-administrative.html` — 7/9 automatique — Fait à prouver, preuves équivalentes, typologie du blocage, changement de niveau, trace écrite et voies de recours conditionnelles déjà structurés.
 - `dossiers/patrimoine-selon-age-construire-utiliser.html` — 7/9 automatique — Âge traité comme proxy d’événements et d’horizons, transitions de phase, exceptions et conditions d’inversion déjà explicites.
 - `dossiers/demenager-pour-un-emploi-salaire-minimum.html` — 7/9 automatique — Salaire net de bascule, coûts de transition, prix du temps, aides conditionnelles et valeur d’option de la mobilité déjà traités.
-- `dossiers/quand-vie-change-sante-separation-revenu.html` — 8/9 automatique — Stabilisation, période tampon, réversibilité, séquence 30 jours et stress test déjà structurés.
 - `dossiers/immobilier-allocation-globale-patrimoine.html` — 8/9 automatique — Immobilier replacé dans l’allocation totale avec dette, concentration, liquidité et risques corrélés déjà structurés.
 - `dossiers/etude-marche-terrain.html` — 8/9 automatique — Preuve payante, marché accessible, CAC/LTV, saisonnalité, test terrain et critères de pivot/abandon déjà explicites.
 - `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` — 8/9 automatique — Deux systèmes de vie comparés : flux, temps capturé, robustesse, trajectoire, scénarios, seuil de bascule et options C/D déjà présents.
@@ -179,7 +179,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 7/9 | 1578 | humaine ✓ | `dossiers/patrimoine-selon-age-construire-utiliser.html` |
 | 7/9 | 1726 | à revoir après changement | `dossiers/metiers-fonctions-organisation-entreprise.html` |
 | 7/9 | 2401 | humaine ✓ | `dossiers/demenager-pour-un-emploi-salaire-minimum.html` |
-| 8/9 | 693 | humaine ✓ | `dossiers/quand-vie-change-sante-separation-revenu.html` |
 | 8/9 | 1008 | humaine ✓ | `dossiers/immobilier-allocation-globale-patrimoine.html` |
 | 8/9 | 1074 | humaine ✓ | `dossiers/etude-marche-terrain.html` |
 | 8/9 | 1090 | humaine ✓ | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` |
@@ -207,6 +206,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1477 | humaine ✓ | `articles/competences-invisibles-preuves.html` |
 | 8/9 | 1490 | humaine ✓ | `dossiers/temps-energie-qualite-vie.html` |
 | 8/9 | 1554 | humaine ✓ | `dossiers/indivision-loyers-charges-comptes.html` |
+| 8/9 | 1591 | à revoir après changement | `dossiers/quand-vie-change-sante-separation-revenu.html` |
 | 8/9 | 1599 | humaine ✓ | `dossiers/comparer-deux-offres-emploi.html` |
 | 8/9 | 1690 | à revoir après changement | `dossiers/business-plan-utile.html` |
 | 8/9 | 1712 | humaine ✓ | `articles/frais-fiscalite-rendement-net.html` |
