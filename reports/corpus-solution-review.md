@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **100**. Validations devenues caduques après modification : **23**.
+Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **99**. Validations devenues caduques après modification : **24**.
 
 ## Priorité humaine
 
@@ -27,6 +27,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/patrimoine-marge-de-manoeuvre.html` | `3e2dd7332b7c2063c63dbad30055168a61266868` | `50b975f0203803c81a54e764c76094e85630be34` |
 | `dossiers/capacite-refuser-travail-rentabilite.html` | `aace252f32a1faf81cf6e0a4665e9b60e694129e` | `91ebe0bb0dc7e77c7a5a042210a2f54a7e04570e` |
 | `articles/sans-diplome-chemins-alternatifs.html` | `d5f6867f38969bb89ca16df2bfdbd7ed2fed77ca` | `2a7cd63ced34759f03482dd0381857c50af183b0` |
+| `dossiers/location-courte-duree-meuble-tourisme.html` | `ddaf6bc36e2171b5e249a161fb66926f963ea4d2` | `67506904bc390ceac39951eb725bdb4625fe5b54` |
 | `dossiers/previsionnel-activite-12-mois.html` | `ec3ebe88a9923f6802788dd5fb1a65c113e220ae` | `f35cb5ed9159e68ac5caa6ea95ae5742ab5b7b8e` |
 | `articles/tester-metier-avant-investir.html` | `2d26e84a1aec867f3f795a7fe5076e5514259709` | `f0869a70482faef780134015edccb92309295c47` |
 | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` | `f1faf0bbb75b36b784e38e370c13eb49654a622f` | `cd3b8d01fbf0c7fffab2c109fcca1a2b0ecbae7b` |
@@ -99,7 +100,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/indivision-loyers-charges-comptes.html` — 8/9 automatique — Flux de loyers, charges, preuves comptables, comptes entre indivisaires et architecture de décision déjà structurés lors de la revue antérieure.
 - `dossiers/comparer-deux-offres-emploi.html` — 8/9 automatique — Non-négociables avant score, package réel, temps capturé, contrat, risque organisationnel, capital professionnel, scénarios et option C déjà structurés.
 - `articles/frais-fiscalite-rendement-net.html` — 8/9 automatique — Réécriture du 16/08 : frais fournisseurs actualisés, point mort de migration, coût ponctuel du changement et valeur des options perdues ajoutés.
-- `dossiers/location-courte-duree-meuble-tourisme.html` — 8/9 automatique — Réécriture juridique de référence : registration, plafonds, changement d’usage, copropriété, DPE, fiscalité, alternatives licites et fallback déjà structurés.
 - `dossiers/finances-allocation-portefeuille.html` — 8/9 automatique — Fonctions avant pourcentages, capacité versus tolérance au risque, moteurs communs, budget de risque, séquence, stress tests et politique écrite déjà structurés.
 - `dossiers/decider-sans-tourner-en-rond.html` — 8/9 automatique — Contraintes versus préférences, valeur de l’information, coût d’erreur, réversibilité, sunk cost, contradiction, pré-mortem et décision falsifiable déjà structurés.
 - `dossiers/plan-30-jours-recherche-emploi.html` — 8/9 automatique — Entonnoir mesurable, deux séries comparables, une hypothèse de blocage à la fois, preuves, débrief et règles de continuation/repositionnement déjà structurés.
@@ -211,11 +211,11 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1712 | humaine ✓ | `articles/frais-fiscalite-rendement-net.html` |
 | 8/9 | 1714 | à revoir après changement | `dossiers/apprendre-developper-competences.html` |
 | 8/9 | 1742 | à revoir après changement | `dossiers/patrimoine-marge-de-manoeuvre.html` |
-| 8/9 | 1754 | humaine ✓ | `dossiers/location-courte-duree-meuble-tourisme.html` |
 | 8/9 | 1771 | à revoir après changement | `dossiers/capacite-refuser-travail-rentabilite.html` |
 | 8/9 | 1782 | à revoir après changement | `articles/sans-diplome-chemins-alternatifs.html` |
 | 8/9 | 1788 | humaine ✓ | `dossiers/finances-allocation-portefeuille.html` |
 | 8/9 | 1799 | humaine ✓ | `dossiers/decider-sans-tourner-en-rond.html` |
+| 8/9 | 1842 | à revoir après changement | `dossiers/location-courte-duree-meuble-tourisme.html` |
 | 8/9 | 2036 | à revoir après changement | `dossiers/previsionnel-activite-12-mois.html` |
 | 8/9 | 2123 | humaine ✓ | `dossiers/plan-30-jours-recherche-emploi.html` |
 | 8/9 | 2183 | à revoir après changement | `articles/tester-metier-avant-investir.html` |
