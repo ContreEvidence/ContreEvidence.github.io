@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **102**. Validations devenues caduques après modification : **20**.
+Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **122**. Validations devenues caduques après modification : **0**.
 
 ## Priorité humaine
 
@@ -16,28 +16,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 
 ## Validations devenues caduques
 
-| Page | SHA relu | SHA courant |
-|---|---|---|
-| `articles/clients-interesses-personne-nachete.html` | `0c3980a564acd531c9ea4a50f8cf3a78c6585586` | `d1c27c49f015873e1efdb0b95230274d18688c46` |
-| `articles/competences-transferables.html` | `03e2569466515161bb47694e37b38b26bd22ecfa` | `54a32e6988ad07816c8b18fc454c4de0eda4a129` |
-| `dossiers/depenses-recurrentes-abonnements-assurances.html` | `5a7b60c96000f3b74bb18a708fabc95cf756416a` | `7ab68ff16885592aa5a53bcbf88bea40f0d60230` |
-| `articles/retrouver-emploi-apres-interruption.html` | `708b42c4e407bd5603074c5caef7a6aa92a6bd23` | `abbaae628730e9314acfe90444f7185a18cf1072` |
-| `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` | `4e8862606033153493eeb0eaa89fb3a44e81b792` | `e2f86bc90e46fa8a5193b88ddba15dbc7f5ac5ed` |
-| `dossiers/gestion-pilotee-comparer-performances.html` | `eb985dfb620cda7a9bd12c97cb5265532cebc5c1` | `39455bdc8b582a298dc3429c7e65e8e51b498d35` |
-| `dossiers/finances-investissement-locatif.html` | `9dc77dabd455cd9c40d30a4a38135cb0d07f20ac` | `2c09f9a2b80c1ef004f4c07f5941dcf88894a1e3` |
-| `dossiers/devenir-manager-premiere-fois.html` | `4396d38dcf1045d774f62761486885af18a97600` | `5b37be7ac97ba89e23e4f31456f90008c7ec49e5` |
-| `dossiers/decider-a-deux-travail-patrimoine.html` | `ffb94ada2a33e2de13e30818bebdef884aefbe21` | `ba14b77f52087dfb20b0813df082369592184e8e` |
-| `dossiers/valeur-option-bien-immobilier.html` | `a021ecc787671e6c04cbf9d26c70263a7c3e713d` | `b94854c103aca7c9b4122013ef8300098bb166d4` |
-| `articles/accepter-nimporte-quel-poste-retour-emploi.html` | `76bb61790bf99848bd0de67f731aad6d7b79f3eb` | `27d74310369168d6bfc5db8c22d2b4ee679c7705` |
-| `dossiers/quitter-emploi-stable-ou-rester.html` | `a75eefe462647633957c51bffd944724cbcb4fd2` | `e6fb490461c91b774628d9affbfd71f0fa38b70d` |
-| `articles/comparatif-produits-bancaires.html` | `723b88e7cacdf722e3540b15003eab5e79c0750f` | `f766c96540debfe1ce8ef1d2c7e38770df01b3f3` |
-| `dossiers/travailler-moins-vivre-mieux.html` | `0be57567b1269a98ac362a447ade90f77c56c8f7` | `eb67bcfbe9b9b1bdaf4c4e402946defb38068247` |
-| `dossiers/indivision-succession-heritiers-vendre-partager.html` | `010dad54397a59c46767cfc93228f5430b469b70` | `edf2c7b8270a9c257c28c282fda78fa8a71dd0c9` |
-| `articles/travailler-beaucoup-gagner-peu-prix.html` | `c4112f1499656465f66b7da63e9a31a06eefcc0b` | `53df5406709273e5dedfe3ae2a2085c3913bb872` |
-| `dossiers/finances-enveloppes-fiscalite.html` | `6b507b9d029f336c2e82313f40373987f6d5a9da` | `465e5a96cac235489cd54df12555dc85c8f66542` |
-| `dossiers/formation-vaut-elle-le-cout.html` | `88fc8d7f1b3d9b32a11ed4f8443d623980ea27c6` | `601b970cd42683723682946ad1b8add7c7aa48db` |
-| `dossiers/bien-immobilier-garder-vendre-transformer.html` | `99902199baa27e6717f64dd2f77c7a163739be81` | `851bc30ba2290f512e60911db8fbd24966b8a95f` |
-| `dossiers/trajectoire-professionnelle-selon-situation.html` | `3cd37045575657127ce242fec86748af924c2c00` | `340b3c58bd6809606aac38282afac472924ee2b1` |
+Aucune.
 
 ## Pages validées humainement et inchangées
 
@@ -125,19 +104,39 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/methode-analyse-complete.html` — 8/9 automatique — Question d’investissement, benchmark, fondamental, valorisation, technique, sizing, scénario adverse et condition d’invalidation déjà structurés.
 - `dossiers/metiers-accessibles-sans-diplome.html` — 8/9 automatique — Réécriture de référence : métiers classés par verrous réels, preuves, voies d’accès et conditions de substitution au diplôme déjà structurés.
 - `dossiers/inflation-comprendre-histoire-pouvoir-achat.html` — 8/9 automatique — Page explicative longue : mécanismes, histoire, rendement réel, dette et implications patrimoniales sont reliés ; sa fonction n’exige pas d’ajouter artificiellement un plan de décision générique.
+- `articles/clients-interesses-personne-nachete.html` — 9/9 automatique — Intérêt distingué de l’achat, entonnoir de conversion, hypothèses concurrentes, tests de paiement et critères de pivot déjà structurés.
+- `articles/competences-transferables.html` — 9/9 automatique — Compétence traduite par problème résolu, preuve, contexte cible et écart restant ; transfert testé plutôt que supposé.
 - `dossiers/passer-80-pourcent-cout-reel.html` — 9/9 automatique — Coût réel du temps libéré, impact sur marge du foyer, effets différés et réversibilité déjà traités lors de la revue antérieure.
+- `dossiers/depenses-recurrentes-abonnements-assurances.html` — 9/9 automatique — Coût annuel, doublons, besoin réel, renégociation/substitution/suppression et seuils de conservation déjà structurés.
+- `articles/retrouver-emploi-apres-interruption.html` — 9/9 automatique — Interruption transformée en information vérifiable, preuves récentes, marchés tests, poste passerelle et critères de recalibrage déjà structurés.
 - `dossiers/finances-retraite-decumulation.html` — 9/9 automatique — Gap retraite, risque de séquence, poches par fonction, garde-fous de retrait, longévité, stress tests et revue annuelle déjà structurés.
 - `dossiers/regles-responsabilites-fautes-travail.html` — 9/9 automatique — Erreur, négligence, insuffisance et faute décomposées ; qualification conditionnelle et conséquences distinguées, avec sources adaptées déjà présentes.
 - `dossiers/liquidites-reserve-securite.html` — 9/9 automatique — Réserve calibrée par risques et charges plutôt que par règle universelle ; liquidité et marge d’option déjà traitées.
+- `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` — 9/9 automatique — Réécriture de référence : besoin de mobilité avant financement, coût total, liquidité, sortie et stress tests.
+- `dossiers/gestion-pilotee-comparer-performances.html` — 9/9 automatique — Réécriture de référence : allocation/exécution/délégation séparées, benchmark comparable, valeur comportementale conditionnelle et règle de sortie.
+- `dossiers/finances-investissement-locatif.html` — 9/9 automatique — Rendement net, cash-flow, vacance, travaux, fiscalité, financement, stress tests et scénarios de sortie déjà structurés.
+- `dossiers/devenir-manager-premiere-fois.html` — 9/9 automatique — Rôle, délégation, seuils d’escalade, information, rituels, erreurs de contrôle et critères d’ajustement déjà structurés.
+- `dossiers/decider-a-deux-travail-patrimoine.html` — 9/9 automatique — Transferts de risque et de temps entre personnes rendus visibles, scénarios symétriques, règles temporaires et révision déjà structurés.
+- `dossiers/valeur-option-bien-immobilier.html` — 9/9 automatique — Option immobilière distinguée de faisabilité prouvée, valeur conditionnelle, coûts d’activation et scénarios de sortie déjà structurés.
 - `dossiers/embaucher-ou-sous-traiter.html` — 9/9 automatique — Coût complet, capacité, flexibilité, contrôle, seuil de charge et scénarios embauche/sous-traitance/hybride déjà structurés.
+- `articles/accepter-nimporte-quel-poste-retour-emploi.html` — 9/9 automatique — Premier poste lu comme achat de preuve et d’options, avec coût d’enfermement, seuil de sortie et alternatives déjà structurés.
+- `dossiers/quitter-emploi-stable-ou-rester.html` — 9/9 automatique — Coût de rester versus coût de partir, options intermédiaires, runway, scénarios et conditions d’inversion déjà structurés.
+- `articles/comparatif-produits-bancaires.html` — 9/9 automatique — Produits classés par fonction de l’argent, horizon, disponibilité et coût d’indisponibilité plutôt que par taux isolé.
 - `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` — 9/9 automatique — Réécriture du 16/08 : socle/long terme/option-usage, prix du temps, expérimentation réversible et stress test après usage.
+- `dossiers/travailler-moins-vivre-mieux.html` — 9/9 automatique — Temps libéré, revenu sacrifié, effets secondaires, alternatives graduelles, test temporaire et seuils de soutenabilité déjà structurés.
 - `dossiers/automatiser-ou-non-processus.html` — 9/9 automatique — Réécriture du 16/08 : supprimer/simplifier/standardiser avant automatisation, assistance partielle, rollback et condition d’abandon.
+- `dossiers/indivision-succession-heritiers-vendre-partager.html` — 9/9 automatique — Droits, usages, liquidité, soultes, vente, partage, convention et scénarios de blocage déjà distingués et structurés.
 - `dossiers/ameliorer-processus-sans-degrader-service.html` — 9/9 automatique — Processus, indicateurs, incitations, goulots et garde-fous qualité déjà structurés ; pas de réécriture artificielle lors de la revue antérieure.
+- `articles/travailler-beaucoup-gagner-peu-prix.html` — 9/9 automatique — Temps contraint, prix, marge, densité, panier, périmètre et refus de missions reliés causalement au revenu réel.
 - `dossiers/calculer-prix-minimum-rentable.html` — 9/9 automatique — Coût complet, temps non facturé, capacité, marge et seuil de prix/volume déjà structurés.
 - `dossiers/prejuges-biais-monde-professionnel.html` — 9/9 automatique — Réécriture du 16/08 : diagnostic signal/gatekeeper/discrimination, test causal, substitution d’acteur et seuil de sortie du registre de persuasion.
+- `dossiers/finances-enveloppes-fiscalite.html` — 9/9 automatique — Enveloppe séparée de l’actif, disponibilité, fiscalité, frais, horizon et sortie comparés avant optimisation locale.
 - `dossiers/couple-famille-argent-temps.html` — 9/9 automatique — Réécriture de référence : contributions, temps, sacrifices de carrière, propriété, règles temporaires et simulations déjà structurés.
+- `dossiers/formation-vaut-elle-le-cout.html` — 9/9 automatique — Formation traitée comme un levier seulement après identification du verrou ; coût complet, revenu de sortie, alternatives et abandon déjà structurés.
 - `dossiers/creer-entreprise-sans-diplome.html` — 9/9 automatique — Réécriture de référence : fondateur/exécutant, activité réglementée, expérience, personne qualifiée, périmètre libre et voies alternatives déjà structurés.
 - `dossiers/quitter-cdi-avec-credit-immobilier.html` — 9/9 automatique — Réécriture de référence : dette existante versus nouveau financement, fenêtres temporelles, séquençage, réserve et déclarations exactes déjà structurés.
+- `dossiers/bien-immobilier-garder-vendre-transformer.html` — 9/9 automatique — Valeur actuelle, capital alternatif, rendement d’usage, transformation, coût d’opportunité, scénarios et sortie déjà structurés.
+- `dossiers/trajectoire-professionnelle-selon-situation.html` — 9/9 automatique — Trajectoire pilotée par capital professionnel, contraintes, horizons, fenêtres et événements déclencheurs plutôt que par parcours linéaire.
 - `dossiers/indivision-immobiliere-sortir-sans-subir.html` — 9/9 automatique — Propriété, dette, créances, occupation et stratégie de sortie séparées ; négociation, convention, rachat, vente et preuve déjà structurés.
 - `dossiers/changer-travail-avant-credit-immobilier.html` — 9/9 automatique — Financement bancaire, période d’essai, mobilité, réserve et ordre des opérations traités comme variables distinctes avec scénarios d’inversion.
 - `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` — 9/9 automatique — Objectif diplôme séparé du moyen d’accès ; VAP, VAE, DAEU et voies institutionnelles comparées avec conditions et séquence.
@@ -232,39 +231,39 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 2320 | humaine ✓ | `dossiers/methode-analyse-complete.html` |
 | 8/9 | 2533 | humaine ✓ | `dossiers/metiers-accessibles-sans-diplome.html` |
 | 8/9 | 2722 | humaine ✓ | `dossiers/inflation-comprendre-histoire-pouvoir-achat.html` |
-| 9/9 | 1038 | à revoir après changement | `articles/clients-interesses-personne-nachete.html` |
-| 9/9 | 1188 | à revoir après changement | `articles/competences-transferables.html` |
+| 9/9 | 1038 | humaine ✓ | `articles/clients-interesses-personne-nachete.html` |
+| 9/9 | 1188 | humaine ✓ | `articles/competences-transferables.html` |
 | 9/9 | 1193 | humaine ✓ | `dossiers/passer-80-pourcent-cout-reel.html` |
-| 9/9 | 1215 | à revoir après changement | `dossiers/depenses-recurrentes-abonnements-assurances.html` |
-| 9/9 | 1277 | à revoir après changement | `articles/retrouver-emploi-apres-interruption.html` |
+| 9/9 | 1215 | humaine ✓ | `dossiers/depenses-recurrentes-abonnements-assurances.html` |
+| 9/9 | 1277 | humaine ✓ | `articles/retrouver-emploi-apres-interruption.html` |
 | 9/9 | 1297 | humaine ✓ | `dossiers/finances-retraite-decumulation.html` |
 | 9/9 | 1314 | humaine ✓ | `dossiers/regles-responsabilites-fautes-travail.html` |
 | 9/9 | 1315 | humaine ✓ | `dossiers/liquidites-reserve-securite.html` |
-| 9/9 | 1323 | à revoir après changement | `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` |
-| 9/9 | 1324 | à revoir après changement | `dossiers/gestion-pilotee-comparer-performances.html` |
-| 9/9 | 1392 | à revoir après changement | `dossiers/finances-investissement-locatif.html` |
-| 9/9 | 1405 | à revoir après changement | `dossiers/devenir-manager-premiere-fois.html` |
-| 9/9 | 1419 | à revoir après changement | `dossiers/decider-a-deux-travail-patrimoine.html` |
-| 9/9 | 1439 | à revoir après changement | `dossiers/valeur-option-bien-immobilier.html` |
+| 9/9 | 1323 | humaine ✓ | `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` |
+| 9/9 | 1324 | humaine ✓ | `dossiers/gestion-pilotee-comparer-performances.html` |
+| 9/9 | 1392 | humaine ✓ | `dossiers/finances-investissement-locatif.html` |
+| 9/9 | 1405 | humaine ✓ | `dossiers/devenir-manager-premiere-fois.html` |
+| 9/9 | 1419 | humaine ✓ | `dossiers/decider-a-deux-travail-patrimoine.html` |
+| 9/9 | 1439 | humaine ✓ | `dossiers/valeur-option-bien-immobilier.html` |
 | 9/9 | 1469 | humaine ✓ | `dossiers/embaucher-ou-sous-traiter.html` |
-| 9/9 | 1474 | à revoir après changement | `articles/accepter-nimporte-quel-poste-retour-emploi.html` |
-| 9/9 | 1494 | à revoir après changement | `dossiers/quitter-emploi-stable-ou-rester.html` |
-| 9/9 | 1557 | à revoir après changement | `articles/comparatif-produits-bancaires.html` |
+| 9/9 | 1474 | humaine ✓ | `articles/accepter-nimporte-quel-poste-retour-emploi.html` |
+| 9/9 | 1494 | humaine ✓ | `dossiers/quitter-emploi-stable-ou-rester.html` |
+| 9/9 | 1557 | humaine ✓ | `articles/comparatif-produits-bancaires.html` |
 | 9/9 | 1570 | humaine ✓ | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
-| 9/9 | 1610 | à revoir après changement | `dossiers/travailler-moins-vivre-mieux.html` |
+| 9/9 | 1610 | humaine ✓ | `dossiers/travailler-moins-vivre-mieux.html` |
 | 9/9 | 1615 | humaine ✓ | `dossiers/automatiser-ou-non-processus.html` |
-| 9/9 | 1704 | à revoir après changement | `dossiers/indivision-succession-heritiers-vendre-partager.html` |
+| 9/9 | 1704 | humaine ✓ | `dossiers/indivision-succession-heritiers-vendre-partager.html` |
 | 9/9 | 1707 | humaine ✓ | `dossiers/ameliorer-processus-sans-degrader-service.html` |
-| 9/9 | 1760 | à revoir après changement | `articles/travailler-beaucoup-gagner-peu-prix.html` |
+| 9/9 | 1760 | humaine ✓ | `articles/travailler-beaucoup-gagner-peu-prix.html` |
 | 9/9 | 1777 | humaine ✓ | `dossiers/calculer-prix-minimum-rentable.html` |
 | 9/9 | 1791 | humaine ✓ | `dossiers/prejuges-biais-monde-professionnel.html` |
-| 9/9 | 1894 | à revoir après changement | `dossiers/finances-enveloppes-fiscalite.html` |
+| 9/9 | 1894 | humaine ✓ | `dossiers/finances-enveloppes-fiscalite.html` |
 | 9/9 | 1923 | humaine ✓ | `dossiers/couple-famille-argent-temps.html` |
-| 9/9 | 1995 | à revoir après changement | `dossiers/formation-vaut-elle-le-cout.html` |
+| 9/9 | 1995 | humaine ✓ | `dossiers/formation-vaut-elle-le-cout.html` |
 | 9/9 | 2013 | humaine ✓ | `dossiers/creer-entreprise-sans-diplome.html` |
 | 9/9 | 2015 | humaine ✓ | `dossiers/quitter-cdi-avec-credit-immobilier.html` |
-| 9/9 | 2018 | à revoir après changement | `dossiers/bien-immobilier-garder-vendre-transformer.html` |
-| 9/9 | 2071 | à revoir après changement | `dossiers/trajectoire-professionnelle-selon-situation.html` |
+| 9/9 | 2018 | humaine ✓ | `dossiers/bien-immobilier-garder-vendre-transformer.html` |
+| 9/9 | 2071 | humaine ✓ | `dossiers/trajectoire-professionnelle-selon-situation.html` |
 | 9/9 | 2215 | humaine ✓ | `dossiers/indivision-immobiliere-sortir-sans-subir.html` |
 | 9/9 | 2472 | humaine ✓ | `dossiers/changer-travail-avant-credit-immobilier.html` |
 | 9/9 | 2694 | humaine ✓ | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` |
