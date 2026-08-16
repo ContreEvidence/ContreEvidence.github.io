@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
-- P1 — affirmation forte à resserrer ou vérifier : **60**
+- P1 — affirmation forte à resserrer ou vérifier : **63**
 - P2 — nécessité à examiner : **145**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **824**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **829**
 
 ## P0 — rouvrir en priorité
 
@@ -102,6 +102,10 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/indivision-couple-separation-rachat-soulte.html`
 - **fermeture forte sourcée mais formulation trop absolue** — D’abord : qu’est-ce qui rend le rachat « impossible » ? _[signal-source]_
 - **fermeture forte sourcée mais formulation trop absolue** — Le mot impossible mélange souvent plusieurs problèmes. _[signal-source]_
+### `dossiers/location-courte-duree-meuble-tourisme.html`
+- **fermeture forte sourcée mais formulation trop absolue** — Contre-Évidence La location courte durée n’est ni « interdite » ni « plus rentable » par nature. _[signal-source, temporalité]_
+- **fermeture forte sourcée mais formulation trop absolue** — Fractionner ne permet jamais de « tester » une exploitation interdite. _[signal-source]_
+- **fermeture forte sourcée mais formulation trop absolue** — Régime réel obligatoire en indivision Le net après charges/comptabilité reste-t-il suffisant ? _[signal-source, temporalité]_
 ### `dossiers/patrimoine-permet-il-travailler-moins.html`
 - **fermeture forte sourcée mais formulation trop absolue** — C’est celui qui vous permet de refuser une heure, un jour ou une contrainte que votre salaire rendait auparavant obligatoire. _[signal-source]_
 ### `dossiers/plan-30-jours-recherche-emploi.html`
