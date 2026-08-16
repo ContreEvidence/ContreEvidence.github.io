@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **86**. Validations devenues caduques après modification : **37**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **85**. Validations devenues caduques après modification : **38**.
 
 ## Priorité humaine
 
@@ -42,6 +42,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/reconversion-sans-perte-salaire.html` | `128613ebf08c799823434c76e96f628ec6102a5a` | `a3bf47dce0da390a93742f2dcbac9dc557d188e8` |
 | `dossiers/patrimoine-permet-il-travailler-moins.html` | `c006f7a8de0d55c219f89748ad39053e8afecbec` | `343adf2f660396f9265ddab15531d93005090ae6` |
 | `dossiers/sante-travail-equilibre-vie-pro-perso.html` | `9075afe1528f2f4c763aa2ee6146d95a22ade56b` | `e0c5f4d97e9b96ce87e1cf00e611cddcbe349312` |
+| `dossiers/acheter-ou-louer-si-on-risque-demenager.html` | `d6585d192caf10f10a45195559ae0365fe70cf46` | `3de65eabd7e80f44678e288675cdf8a9b998c4b2` |
 | `dossiers/travailler-moins-vivre-mieux.html` | `eb67bcfbe9b9b1bdaf4c4e402946defb38068247` | `a36678cca70ced0efdd0b0b48e961df0b67e870c` |
 | `articles/retrouver-emploi-apres-interruption.html` | `abbaae628730e9314acfe90444f7185a18cf1072` | `184c63bafd29cadff71972e8e8dba04dbd97122a` |
 | `articles/checklist-avant-placement-conseiller.html` | `f0a354fedc6ee6b64f0235804b495c6a4701a872` | `561b9eb3d62a2ba88f0b48c12b4c1b36fe54d5a7` |
@@ -79,7 +80,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/cout-complet-achat-immobilier.html` — 7/9 automatique — Capital initial, coût d’opportunité, détention, copropriété, liquidité, revente et stress tests multidimensionnels déjà traités.
 - `dossiers/classes-actifs-allocation-patrimoine.html` — 7/9 automatique — Page de cartographie : séparation classe/véhicule/enveloppe, rôles, liquidité et agrégation par moteurs de risque déjà suffisamment explicites pour sa fonction.
 - `dossiers/location-nue-ou-meublee-comparer.html` — 7/9 automatique — Réécriture récente : usage, surloyer-seuil, rotation, DPE, fiscalité conditionnelle et réversibilité déjà au standard.
-- `dossiers/acheter-ou-louer-si-on-risque-demenager.html` — 7/9 automatique — Seuil personnel de détention, scénarios de revente, valeur de la flexibilité et location comme option conditionnelle déjà structurés.
 - `dossiers/debloquer-demarche-administrative.html` — 7/9 automatique — Fait à prouver, preuves équivalentes, typologie du blocage, changement de niveau, trace écrite et voies de recours conditionnelles déjà structurés.
 - `dossiers/patrimoine-selon-age-construire-utiliser.html` — 7/9 automatique — Âge traité comme proxy d’événements et d’horizons, transitions de phase, exceptions et conditions d’inversion déjà explicites.
 - `dossiers/demenager-pour-un-emploi-salaire-minimum.html` — 7/9 automatique — Salaire net de bascule, coûts de transition, prix du temps, aides conditionnelles et valeur d’option de la mobilité déjà traités.
@@ -170,7 +170,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 7/9 | 1462 | humaine ✓ | `dossiers/cout-complet-achat-immobilier.html` |
 | 7/9 | 1463 | humaine ✓ | `dossiers/classes-actifs-allocation-patrimoine.html` |
 | 7/9 | 1486 | humaine ✓ | `dossiers/location-nue-ou-meublee-comparer.html` |
-| 7/9 | 1487 | humaine ✓ | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` |
 | 7/9 | 1546 | humaine ✓ | `dossiers/debloquer-demarche-administrative.html` |
 | 7/9 | 1578 | humaine ✓ | `dossiers/patrimoine-selon-age-construire-utiliser.html` |
 | 7/9 | 1726 | à revoir après changement | `dossiers/metiers-fonctions-organisation-entreprise.html` |
@@ -251,6 +250,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1893 | à revoir après changement | `dossiers/patrimoine-permet-il-travailler-moins.html` |
 | 9/9 | 1894 | humaine ✓ | `dossiers/finances-enveloppes-fiscalite.html` |
 | 9/9 | 1901 | à revoir après changement | `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
+| 9/9 | 1911 | à revoir après changement | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` |
 | 9/9 | 1919 | à revoir après changement | `dossiers/travailler-moins-vivre-mieux.html` |
 | 9/9 | 1923 | humaine ✓ | `dossiers/couple-famille-argent-temps.html` |
 | 9/9 | 1944 | à revoir après changement | `articles/retrouver-emploi-apres-interruption.html` |
