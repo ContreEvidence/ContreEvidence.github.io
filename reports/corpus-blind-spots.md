@@ -48,7 +48,6 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/comparer-strategies-immobilieres.html` | attendre / statu quo, transfert de risque, condition de renversement |
 | 9 | 9/15 | entrepreneuriat / activité | `dossiers/dependance-gros-client.html` | acteur/gatekeeper, attendre / statu quo, condition de renversement |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/depenses-recurrentes-abonnements-assurances.html` | effets de second ordre, condition de renversement, valeur d’option / irréversibilité |
-| 9 | 9/15 | emploi / carrière / qualification | `dossiers/devenir-manager-premiere-fois.html` | acteur/gatekeeper, substitution, condition de renversement |
 | 9 | 9/15 | immobilier / crédit / indivision | `dossiers/finances-credit-endettement.html` | acteur/gatekeeper, effets de second ordre, condition de renversement |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/immobilier-allocation-globale-patrimoine.html` | attendre / statu quo, transfert de risque, condition de renversement |
 | 9 | 9/15 | immobilier / crédit / indivision | `dossiers/location-nue-ou-meublee-comparer.html` | acteur/gatekeeper, fractionnement, effets de second ordre |
@@ -62,12 +61,13 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 9 | 10/15 | entrepreneuriat / activité | `dossiers/etude-marche-terrain.html` | substitution, fractionnement, attendre / statu quo |
 | 9 | 10/15 | patrimoine / investissement / retraite | `dossiers/finances-allocation-portefeuille.html` | attendre / statu quo, condition de renversement, valeur d’option / irréversibilité |
 | 9 | 10/15 | patrimoine / investissement / retraite | `dossiers/finances-enveloppes-fiscalite.html` | attendre / statu quo, transfert de risque, condition de renversement |
+| 9 | 10/15 | patrimoine / investissement / retraite | `dossiers/finances-retraite-decumulation.html` | attendre / statu quo, effets de second ordre, condition de renversement |
 
 ## Lecture par cluster
 
 ### emploi / carrière / qualification
 
-Pages : **35**. Angles le plus souvent non détectés : **transfert de risque** (25), **substitution** (23), **valeur d’option / irréversibilité** (21), **attendre / statu quo** (18), **effets de second ordre** (17), **objectif réel / substitution du moyen** (16), **condition de renversement** (15).
+Pages : **35**. Angles le plus souvent non détectés : **transfert de risque** (25), **substitution** (22), **valeur d’option / irréversibilité** (21), **attendre / statu quo** (18), **effets de second ordre** (17), **objectif réel / substitution du moyen** (16), **condition de renversement** (15).
 
 ### entrepreneuriat / activité
 
