@@ -7,8 +7,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **30**
-- S2 — possibilité générale à examiner : **14**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **33**
+- S2 — possibilité générale à examiner : **16**
 - OK heuristique — condition ou preuve détectée : **152**
 
 ## S0 — vérifier avant toute recommandation
@@ -32,6 +32,10 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Le simulateur permet d’isoler l’effet des frais et de tester vos propres hypothèses sans présumer d’un rendement futur. _[fort enjeu, preuve détectée]_
 ### `articles/grosse-entree-argent-que-faire.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Il vous permet d’isoler le capital réellement disponible, de saisir votre patrimoine existant, de répartir la nouvelle somme et de voir comment concentration, liquidité et scénario de baisse évoluent. → Structurer l’allocation d’un héritage ou d’une grosse somme Sources officielles et repères FGDR — Garantie des dépôts AMF — Définir son objectif d’épargne ← Retour à Investissement À lire ensuite Continuez sans repartir de zéro. _[fort enjeu, preuve détectée]_
+### `articles/retrouver-emploi-apres-interruption.html`
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — La réponse dépend moins du nombre d’années « hors marché » que de ce qui a changé pendant l’interruption, de ce que le recruteur doit encore croire, du revenu dont vous avez besoin et de la preuve la plus rapide que vous pouvez produire aujourd’hui . _[fort enjeu, condition détectée]_
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Sans diplôme : ne créez pas un nouveau détour si l’expérience est déjà suffisante Après une longue interruption, on peut être tenté de « sécuriser » le retour par un diplôme supplémentaire. _[fort enjeu, condition détectée]_
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Test Le poste cible est-il compatible non seulement avec ce que vous savez faire, mais avec ce que vous pouvez durablement supporter ? _[fort enjeu, condition détectée]_
 ### `contact.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Vous pouvez demander une source, signaler une erreur, proposer une situation à analyser ou exercer un droit de réponse. _[fort enjeu, preuve détectée]_
 ### `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`
@@ -86,6 +90,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 
 ## S2 — examiner
 
+### `articles/retrouver-emploi-apres-interruption.html`
+- **possibilité générale à vérifier ou resserrer** — Le gatekeeper veut savoir ce que cette expérience vous permet de faire dans son organisation .
+- **possibilité générale à vérifier ou resserrer** — Le runway ne dicte pas le choix, mais il fixe combien de temps vous pouvez exiger une meilleure porte.
 ### `articles/travailler-beaucoup-gagner-peu-prix.html`
 - **possibilité générale à vérifier ou resserrer** — Puis divisez ce besoin par le nombre d’heures que vous pouvez réellement facturer , pas par toutes les heures travaillées.
 ### `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`
