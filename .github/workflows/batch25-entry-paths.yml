@@ -18,65 +18,65 @@ jobs:
         with:
           fetch-depth: 0
       - name: Add entry paths and savings setup
-        shell: bash
+        shell: python
         run: |
-          python - <<'PY'
           from pathlib import Path
 
           def replace_once(path, old, new):
               p = Path(path)
-              text = p.read_text(encoding='utf-8')
+              text = p.read_text(encoding="utf-8")
               if old not in text:
-                  raise SystemExit(f'Anchor not found in {path}: {old[:120]}')
+                  raise SystemExit(f"Anchor not found in {path}")
               if text.count(old) != 1:
-                  raise SystemExit(f'Anchor not unique in {path}: {text.count(old)} matches')
-              p.write_text(text.replace(old, new, 1), encoding='utf-8')
+                  raise SystemExit(f"Anchor not unique in {path}: {text.count(old)} matches")
+              p.write_text(text.replace(old, new, 1), encoding="utf-8")
 
-          savings = Path('articles/construire-epargne-de-zero.html')
-          s = savings.read_text(encoding='utf-8')
-          anchor = '<p>Une page qui répond seulement « automatisez 10 % du salaire » ne répond qu\'au premier profil.</p>\n<h2>2. Si le mois est négatif, le rendement de l\'épargne est secondaire</h2>'
-          insert = '''<p>Une page qui répond seulement « automatisez 10 % du salaire » ne répond qu'au premier profil.</p>
-<h2>1 bis. Les sept premiers jours : installer le système avant de chercher le rendement</h2>
-<p>Quand on veut « commencer à épargner », le risque est de passer deux semaines à comparer des livrets, des applications ou des pourcentages sans avoir créé le mécanisme qui produit réellement l'épargne. Pendant la première semaine, cherchez seulement à rendre le flux visible, séparé et répétable.</p>
-<div class="compare-wrap"><table class="compare-table"><thead><tr><th>Jour</th><th>Action</th><th>Livrable</th></tr></thead><tbody><tr><td>1</td><td>Regarder 60 à 90 jours de mouvements bancaires sans essayer de tout classer.</td><td>Revenus réels, charges fixes et ordre de grandeur de l'excédent.</td></tr><tr><td>2</td><td>Lister les dépenses annuelles ou irrégulières déjà prévisibles.</td><td>Provision mensuelle à ne pas confondre avec l'épargne.</td></tr><tr><td>3</td><td>Choisir le premier incident banal que vous voulez pouvoir absorber sans découvert.</td><td>Premier seuil concret : 100 €, 300 €, 500 € ou un autre montant cohérent avec votre vie.</td></tr><tr><td>4</td><td>Créer une poche séparée, facilement accessible et sans risque pour ce premier coussin.</td><td>Un endroit où l'argent de sécurité ne se mélange plus au compte courant.</td></tr><tr><td>5</td><td>Programmer un virement inférieur à l'excédent que vous avez réellement observé.</td><td>Premier automatisme soutenable, même modeste.</td></tr><tr><td>6</td><td>Décider ce que vous ferez des rentrées irrégulières : prime, remboursement, vente, cadeau.</td><td>Une règle simple plutôt qu'une décision à refaire à chaque fois.</td></tr><tr><td>7</td><td>Écrire ce qui autorise un retrait du coussin et ce qui relève en réalité d'une provision ou d'un projet.</td><td>Une règle de sortie qui évite de vider l'épargne pour une dépense prévisible.</td></tr></tbody></table></div>
-<div class="decision-box"><h3>Le système minimum viable</h3><p><strong>Un compte de fonctionnement + une poche de sécurité/provision + un virement automatique + une revue mensuelle.</strong> Vous n'avez pas besoin d'un portefeuille d'investissement pour commencer. Vous avez besoin que les premiers euros restent disponibles assez longtemps pour casser le cycle « imprévu → découvert → retour à zéro ».</p></div>
-<p>Si le jour 1 montre que le mois est structurellement négatif, ne forcez pas le virement automatique : passez directement au diagnostic du déficit ci-dessous. Le bon premier pas peut être de supprimer 80 € de déficit plutôt que d'épargner artificiellement 20 €.</p>
-<h2>2. Si le mois est négatif, le rendement de l'épargne est secondaire</h2>'''
+          savings = Path("articles/construire-epargne-de-zero.html")
+          s = savings.read_text(encoding="utf-8")
+          anchor = """<p>Une page qui répond seulement « automatisez 10 % du salaire » ne répond qu'au premier profil.</p>
+          <h2>2. Si le mois est négatif, le rendement de l'épargne est secondaire</h2>"""
+          insert = """<p>Une page qui répond seulement « automatisez 10 % du salaire » ne répond qu'au premier profil.</p>
+          <h2>1 bis. Les sept premiers jours : installer le système avant de chercher le rendement</h2>
+          <p>Quand on veut « commencer à épargner », le risque est de passer deux semaines à comparer des livrets, des applications ou des pourcentages sans avoir créé le mécanisme qui produit réellement l'épargne. Pendant la première semaine, cherchez seulement à rendre le flux visible, séparé et répétable.</p>
+          <div class="compare-wrap"><table class="compare-table"><thead><tr><th>Jour</th><th>Action</th><th>Livrable</th></tr></thead><tbody><tr><td>1</td><td>Regarder 60 à 90 jours de mouvements bancaires sans essayer de tout classer.</td><td>Revenus réels, charges fixes et ordre de grandeur de l'excédent.</td></tr><tr><td>2</td><td>Lister les dépenses annuelles ou irrégulières déjà prévisibles.</td><td>Provision mensuelle à ne pas confondre avec l'épargne.</td></tr><tr><td>3</td><td>Choisir le premier incident banal que vous voulez pouvoir absorber sans découvert.</td><td>Premier seuil concret : 100 €, 300 €, 500 € ou un autre montant cohérent avec votre vie.</td></tr><tr><td>4</td><td>Créer une poche séparée, facilement accessible et sans risque pour ce premier coussin.</td><td>Un endroit où l'argent de sécurité ne se mélange plus au compte courant.</td></tr><tr><td>5</td><td>Programmer un virement inférieur à l'excédent que vous avez réellement observé.</td><td>Premier automatisme soutenable, même modeste.</td></tr><tr><td>6</td><td>Décider ce que vous ferez des rentrées irrégulières : prime, remboursement, vente, cadeau.</td><td>Une règle simple plutôt qu'une décision à refaire à chaque fois.</td></tr><tr><td>7</td><td>Écrire ce qui autorise un retrait du coussin et ce qui relève en réalité d'une provision ou d'un projet.</td><td>Une règle de sortie qui évite de vider l'épargne pour une dépense prévisible.</td></tr></tbody></table></div>
+          <div class="decision-box"><h3>Le système minimum viable</h3><p><strong>Un compte de fonctionnement + une poche de sécurité/provision + un virement automatique + une revue mensuelle.</strong> Vous n'avez pas besoin d'un portefeuille d'investissement pour commencer. Vous avez besoin que les premiers euros restent disponibles assez longtemps pour casser le cycle « imprévu → découvert → retour à zéro ».</p></div>
+          <p>Si le jour 1 montre que le mois est structurellement négatif, ne forcez pas le virement automatique : passez directement au diagnostic du déficit ci-dessous. Le bon premier pas peut être de supprimer 80 € de déficit plutôt que d'épargner artificiellement 20 €.</p>
+          <h2>2. Si le mois est négatif, le rendement de l'épargne est secondaire</h2>"""
           if anchor not in s:
-              raise SystemExit('Savings anchor not found')
-          s = s.replace(anchor, insert, 1)
-          savings.write_text(s, encoding='utf-8')
+              raise SystemExit("Savings anchor not found")
+          savings.write_text(s.replace(anchor, insert, 1), encoding="utf-8")
 
           replace_once(
-              'themes/argent.html',
+              "themes/argent.html",
               '<div class="pillar-links"><a href="../dossiers/prix-attendre-finances.html">Commencer : combien coûte le fait de remettre ses finances à plus tard ? →</a>',
               '<div class="pillar-links"><a href="../articles/construire-epargne-de-zero.html">Commencer : construire sa première épargne à partir de zéro →</a><a href="../dossiers/prix-attendre-finances.html">Comprendre : combien coûte le fait de remettre ses finances à plus tard ? →</a>'
           )
           replace_once(
-              'themes/argent.html',
+              "themes/argent.html",
               '<div class="pillar-links"><a href="../dossiers/finances-retraite-decumulation.html">Dossier : retraite et décumulation →</a>',
               '<div class="pillar-links"><a href="../dossiers/preparer-retraite-droits-epargne-logement.html">Commencer : préparer sa retraite 5, 10, 20 ou 30 ans avant →</a><a href="../dossiers/finances-retraite-decumulation.html">Retraite proche : transformer le patrimoine en revenus →</a>'
           )
-          replace_once('themes/argent.html', '<meta name="dateModified" content="2026-08-15"/>', '<meta name="dateModified" content="2026-08-16"/>')
+          replace_once("themes/argent.html", '<meta name="dateModified" content="2026-08-15"/>', '<meta name="dateModified" content="2026-08-16"/>')
 
           old_card = '<div class="situation-grid"><a class="situation-card" href="dossiers/plan-30-jours-recherche-emploi.html"><div class="kicker">Je cherche un emploi</div><strong>Ma recherche n’aboutit pas.</strong><p>Repérer l’étape où agir entre ciblage, candidature, réponse, entretien et offre avant de recommencer à zéro.</p><span>Diagnostiquer ma recherche →</span></a>'
           new_card = '<div class="situation-grid"><a class="situation-card" href="dossiers/preparer-candidature-avant-postuler.html"><div class="kicker">Je commence ma recherche</div><strong>Je veux préparer mes premières candidatures.</strong><p>Choisir une cible, lire les offres comme des données, construire les preuves et un CV de base avant d’envoyer au hasard.</p><span>Préparer ma candidature →</span></a><a class="situation-card" href="dossiers/plan-30-jours-recherche-emploi.html"><div class="kicker">Ma recherche est lancée</div><strong>Elle n’aboutit pas assez.</strong><p>Repérer l’étape où agir entre ciblage, candidature, réponse, entretien et offre avant de recommencer à zéro.</p><span>Diagnostiquer ma recherche →</span></a>'
-          replace_once('parcours-vie-professionnelle.html', old_card, new_card)
-          replace_once('parcours-vie-professionnelle.html', '<meta name="dateModified" content="2026-08-15"/>', '<meta name="dateModified" content="2026-08-16"/>')
+          replace_once("parcours-vie-professionnelle.html", old_card, new_card)
+          replace_once("parcours-vie-professionnelle.html", '<meta name="dateModified" content="2026-08-15"/>', '<meta name="dateModified" content="2026-08-16"/>')
 
-          sitemap = Path('sitemap.xml')
-          x = sitemap.read_text(encoding='utf-8')
+          sitemap = Path("sitemap.xml")
+          x = sitemap.read_text(encoding="utf-8")
           entries = [
               '  <url><loc>https://contreevidence.github.io/dossiers/preparer-candidature-avant-postuler.html</loc><lastmod>2026-08-16</lastmod></url>\n',
               '  <url><loc>https://contreevidence.github.io/dossiers/preparer-retraite-droits-epargne-logement.html</loc><lastmod>2026-08-16</lastmod></url>\n',
           ]
           for entry in entries:
-              loc = entry.split('<loc>',1)[1].split('</loc>',1)[0]
+              loc = entry.split("<loc>", 1)[1].split("</loc>", 1)[0]
               if loc not in x:
-                  x = x.replace('</urlset>', entry + '</urlset>')
-          sitemap.write_text(x, encoding='utf-8')
-          PY
-
+                  x = x.replace("</urlset>", entry + "</urlset>")
+          sitemap.write_text(x, encoding="utf-8")
+      - name: Commit and push
+        shell: bash
+        run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add articles/construire-epargne-de-zero.html themes/argent.html parcours-vie-professionnelle.html sitemap.xml
