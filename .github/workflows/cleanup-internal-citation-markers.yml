@@ -1,0 +1,52 @@
+name: Cleanup internal citation markers
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/cleanup-internal-citation-markers.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Remove assistant/UI tokens from public HTML
+        shell: python
+        run: |
+          from __future__ import annotations
+          import pathlib
+          import re
+
+          root = pathlib.Path('.').resolve()
+          token_re = re.compile('\ue200[^\ue201]*\ue201')
+          changed = []
+
+          for page in root.rglob('*.html'):
+              if any(part in {'.git', 'node_modules', 'publications'} for part in page.parts):
+                  continue
+              text = page.read_text(encoding='utf-8', errors='replace')
+              cleaned = token_re.sub('', text)
+              if cleaned != text:
+                  page.write_text(cleaned, encoding='utf-8')
+                  changed.append(str(page.relative_to(root)))
+
+          print(f'{len(changed)} page(s) nettoyée(s).')
+          for rel in changed:
+              print(rel)
+      - name: Commit cleanup when needed
+        shell: bash
+        run: |
+          if git diff --quiet -- '*.html'; then
+            echo "Aucun marqueur à nettoyer."
+            exit 0
+          fi
+          git config user.name "contre-evidence-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -u -- ':(glob)**/*.html'
+          git commit -m "Clean internal citation markers from public pages"
+          git push
