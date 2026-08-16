@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **75**. Validations devenues caduques après modification : **48**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **74**. Validations devenues caduques après modification : **49**.
 
 ## Priorité humaine
 
@@ -35,6 +35,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/devenir-manager-premiere-fois.html` | `5b37be7ac97ba89e23e4f31456f90008c7ec49e5` | `20a9d53327c6b914612bb9737b5f6c5eecd266cd` |
 | `dossiers/decider-a-deux-travail-patrimoine.html` | `ba14b77f52087dfb20b0813df082369592184e8e` | `1971f8f7829d71996d0f7c3d06f20360bd7cbab2` |
 | `dossiers/previsionnel-activite-12-mois.html` | `ec3ebe88a9923f6802788dd5fb1a65c113e220ae` | `f35cb5ed9159e68ac5caa6ea95ae5742ab5b7b8e` |
+| `dossiers/rembourser-credit-ou-investir.html` | `8748815b96435f7255f99965085fa55714c7334d` | `cd5f8143cad3394b08ea758e6663ad78438b118b` |
 | `dossiers/formation-vaut-elle-le-cout.html` | `601b970cd42683723682946ad1b8add7c7aa48db` | `7095c6d4c8f39406ac8311886e179d2bfcb7f0f7` |
 | `dossiers/acheter-sans-vider-epargne.html` | `8376bdcffd1c79dbcedf6b11fff240a1c8b4e6c0` | `8d8370eb96292e65df63ea37427ff9251ab4a96b` |
 | `articles/tester-metier-avant-investir.html` | `2d26e84a1aec867f3f795a7fe5076e5514259709` | `f0869a70482faef780134015edccb92309295c47` |
@@ -75,7 +76,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/experience-devient-risque-recruteur.html` — 6/9 automatique — Risques perçus, preuves, ciblage et test de cohérence personnelle déjà structurés.
 - `dossiers/puis-je-me-permettre-reconversion.html` — 6/9 automatique — Déficit mensuel, runway, scénarios adverse/central et transition progressive déjà présents.
 - `articles/50-candidatures-zero-reponse.html` — 7/9 automatique — Localisation de la rupture, séries comparables, tests A/B, scénarios de diagnostic et règles de changement de stratégie déjà explicites.
-- `dossiers/rembourser-credit-ou-investir.html` — 7/9 automatique — Rendement certain de la dette versus rendement incertain, liquidité, dette globale, scénarios 100/0-hybride et règle de décision déjà traités.
 - `dossiers/decision-plan-30-90-jours.html` — 7/9 automatique — Revue angles morts : dépendances externes, contrôle/influence/dépendance, voie parallèle, attente bornée et séquence de préservation d’option ajoutées.
 - `dossiers/competences-qualification-employabilite.html` — 7/9 automatique — Séparation compétence/qualification/preuve, verrou légal versus recrutement, test sur 30 offres et voies alternatives déjà structurés.
 - `dossiers/garages-parkings-locaux-commerciaux.html` — 7/9 automatique — Vacance extrême, reconversion du local, financement, concentration, critères d’inversion et sortie avant entrée déjà structurés.
@@ -155,7 +155,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 6/9 | 1485 | humaine ✓ | `dossiers/experience-devient-risque-recruteur.html` |
 | 6/9 | 1596 | humaine ✓ | `dossiers/puis-je-me-permettre-reconversion.html` |
 | 7/9 | 1157 | humaine ✓ | `articles/50-candidatures-zero-reponse.html` |
-| 7/9 | 1244 | humaine ✓ | `dossiers/rembourser-credit-ou-investir.html` |
 | 7/9 | 1253 | humaine ✓ | `dossiers/decision-plan-30-90-jours.html` |
 | 7/9 | 1285 | humaine ✓ | `dossiers/competences-qualification-employabilite.html` |
 | 7/9 | 1303 | humaine ✓ | `dossiers/garages-parkings-locaux-commerciaux.html` |
@@ -211,6 +210,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1899 | à revoir après changement | `dossiers/devenir-manager-premiere-fois.html` |
 | 8/9 | 1976 | à revoir après changement | `dossiers/decider-a-deux-travail-patrimoine.html` |
 | 8/9 | 2036 | à revoir après changement | `dossiers/previsionnel-activite-12-mois.html` |
+| 8/9 | 2045 | à revoir après changement | `dossiers/rembourser-credit-ou-investir.html` |
 | 8/9 | 2123 | à revoir après changement | `dossiers/formation-vaut-elle-le-cout.html` |
 | 8/9 | 2123 | humaine ✓ | `dossiers/plan-30-jours-recherche-emploi.html` |
 | 8/9 | 2146 | à revoir après changement | `dossiers/acheter-sans-vider-epargne.html` |
