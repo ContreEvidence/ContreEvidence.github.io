@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **14**
 - P1 — affirmation forte à resserrer ou vérifier : **49**
-- P2 — nécessité à examiner : **147**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **605**
+- P2 — nécessité à examiner : **145**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **609**
 
 ## P0 — rouvrir en priorité
 
@@ -230,9 +230,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Il faut intégrer coût d’acquisition, financement, charges, vacance, travaux, gestion, fiscalité, temps personnel et valeur de sortie.
 - **nécessité à requalifier ou sourcer** — Le rendement doit être reconstruit Prix d’annonce, rendement brut et mensualité ne suffisent pas.
 - **nécessité à requalifier ou sourcer** — Le stress test doit précéder le scénario favorable Testez au moins deux mauvaises nouvelles simultanées : baisse de revenu + travaux, vacance + hausse de charges, revente anticipée + prix stagnant.
-### `dossiers/liquidites-reserve-securite.html`
-- **nécessité à requalifier ou sourcer** — Elle doit être très liquide et peu risquée.
-- **nécessité à requalifier ou sourcer** — Une réserve doit être disponible rapidement, compréhensible et peu exposée à une perte au mauvais moment.
 ### `dossiers/location-nue-ou-meublee-comparer.html`
 - **nécessité à requalifier ou sourcer** — Elle doit porter sur le résultat net après charges réellement supportées, fiscalité, comptabilité et coût de gestion. _[temporalité]_
 ### `dossiers/methode-analyse-complete.html`
