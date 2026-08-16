@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **15**
-- P1 — affirmation forte à resserrer ou vérifier : **54**
-- P2 — nécessité à examiner : **145**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **660**
+- P1 — affirmation forte à resserrer ou vérifier : **55**
+- P2 — nécessité à examiner : **146**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **663**
 
 ## P0 — rouvrir en priorité
 
@@ -105,6 +105,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sourcée mais formulation trop absolue** — Sources officielles vérifiées le 16/08/2026 Service-Public.fr — discrimination et critères interdits Service-Public.fr — informations pouvant être demandées lors d’un recrutement Défenseur des droits — discrimination : information, orientation et accompagnement ← Retour à Vie professionnelle À lire ensuite Continuez sans repartir de zéro. _[signal-source, temporalité]_
 - **fermeture forte sourcée mais formulation trop absolue** — Une discrimination correspond à une différence de traitement fondée sur un critère interdit par la loi. _[signal-source]_
 - **fermeture forte sourcée mais formulation trop absolue** — Une discrimination, au sens juridique, implique une différence de traitement fondée sur un critère interdit. _[signal-source]_
+### `dossiers/previsionnel-activite-12-mois.html`
+- **affirmation forte sans signal de source explicite** — Ajoutez la colonne que les tableurs oublient : « qui doit dire oui ? » Hypothèse Gatekeeper Risque 45 jours de délai fournisseur fournisseur la trésorerie se dégrade s’il exige comptant. acompte de 30 % client le BFR augmente si le marché refuse. prêt de 30 000 € banque / financeur l’investissement ne peut pas être traité comme acquis. sous-traitance disponible prestataire capacité théorique sans solution opérationne _[périmètre, temporalité]_
 ### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
 - **affirmation forte sans signal de source explicite** — Ajoutez le regret inverse : « Si je conserve exactement cette stratégie pendant dix ans, qu’est-ce que j’aurai repoussé inutilement ? » Le patrimoine sert précisément à déplacer certains choix du domaine de l’impossible vers celui du possible. _[périmètre, temporalité]_
 ### `dossiers/quitter-emploi-stable-ou-rester.html`
@@ -268,9 +270,10 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — La deuxième série doit changer une seule hypothèse importante Après la première série, je choisis le blocage le plus probable et je modifie une variable : ciblage, haut du CV, preuve, réseau, réponse à une objection. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Le CV doit réduire l’incertitude en vingt secondes Le haut du CV doit répondre à trois questions : quel poste ? quel niveau ? quelles preuves ?
 ### `dossiers/previsionnel-activite-12-mois.html`
-- **nécessité à requalifier ou sourcer** — C’est une règle importante du prévisionnel : un levier doit agir sur la contrainte qu’il prétend résoudre.
-- **nécessité à requalifier ou sourcer** — Le prévisionnel doit déclencher des décisions Indicateur Seuil d’alerte illustratif Action Taux de conversion < 10 % après 100 prospects qualifiés revoir cible/offre Marge contributive trop faible pour couvrir les fixes au volume réaliste prix/coûts Trésorerie < 2 mois de sorties sécuriser le cash Capacité > 85 % plusieurs mois prix, organisation, délégation Client dominant > 30-40 % du CA diversifier Ces seuils ne s _[temporalité]_
-- **nécessité à requalifier ou sourcer** — Le scénario prudent est le plus instructif : s’il casse le projet en quelques semaines, vous avez identifié ce qu’il faut sécuriser avant de vous lancer. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Bpifrance recommande également un plan de trésorerie glissant sur douze mois avec un scénario prudent : le prévisionnel doit donc devenir un document vivant, révisé par les encaissements et dépenses réels. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — C’est un test : quelles hypothèses doivent être vraies pour que le projet tienne, qui doit coopérer pour qu’elles deviennent vraies , et que se passe-t-il quand la croissance elle-même crée une nouvelle contrainte ? _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Le prévisionnel doit déclencher des décisions, pas constater après coup Indicateur Seuil illustratif Action Taux de conversion < 10 % après 100 prospects qualifiés revoir cible/offre avant d’augmenter l’acquisition. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Le scénario favorable doit donc répondre à deux questions : pouvons-nous produire ? pouvons-nous financer la croissance ? _[temporalité]_
 ### `dossiers/protocole-verifier-reponse-ia.html`
 - **nécessité à requalifier ou sourcer** — Plus le dommage possible est élevé, plus la validation humaine doit être forte.
 - **nécessité à requalifier ou sourcer** — Pour une décision juridique, médicale ou financière importante, le seuil de preuve doit être beaucoup plus élevé.
