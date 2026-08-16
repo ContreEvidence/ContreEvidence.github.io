@@ -37,7 +37,6 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 9 | 10/15 | immobilier / crédit / indivision | `dossiers/indivision-succession-heritiers-vendre-partager.html` | acteur/gatekeeper, valeur d’option / irréversibilité, condition de renversement |
 | 9 | 11/15 | entrepreneuriat / activité | `dossiers/couple-famille-argent-temps.html` | acteur/gatekeeper, substitution, attendre / statu quo |
 | 9 | 11/15 | immobilier / crédit / indivision | `dossiers/indivision-immobiliere-sortir-sans-subir.html` | effets de second ordre, valeur d’option / irréversibilité, condition de renversement |
-| 9 | 11/15 | entrepreneuriat / activité | `dossiers/lancer-activite-sans-quitter-emploi.html` | acteur/gatekeeper, substitution, attendre / statu quo |
 | 9 | 11/15 | patrimoine / investissement / retraite | `dossiers/piloter-patrimoine-selon-taille.html` | attendre / statu quo, transfert de risque, valeur d’option / irréversibilité |
 | 9 | 11/15 | immobilier / crédit / indivision | `dossiers/separation-logement-achete-a-deux.html` | acteur/gatekeeper, effets de second ordre, condition de renversement |
 | 9 | 11/15 | patrimoine / investissement / retraite | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` | effets de second ordre, transfert de risque, condition de renversement |
@@ -54,6 +53,7 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 6 | 10/15 | emploi / carrière / qualification | `dossiers/emploi-chercher-accepter-negocier-evoluer.html` | substitution, objectif réel / substitution du moyen |
 | 6 | 10/15 | emploi / carrière / qualification | `dossiers/formation-vaut-elle-le-cout.html` | substitution, objectif réel / substitution du moyen |
 | 6 | 10/15 | immobilier / crédit / indivision | `dossiers/garages-parkings-locaux-commerciaux.html` | acteur/gatekeeper, condition de renversement |
+| 6 | 10/15 | entrepreneuriat / activité | `dossiers/lancer-activite-sans-quitter-emploi.html` | substitution, condition de renversement |
 | 6 | 10/15 | entrepreneuriat / activité | `dossiers/methode-analyse-complete.html` | acteur/gatekeeper, substitution |
 | 6 | 10/15 | emploi / carrière / qualification | `dossiers/quitter-emploi-stable-ou-rester.html` | objectif réel / substitution du moyen, condition de renversement |
 | 6 | 11/15 | patrimoine / investissement / retraite | `articles/checklist-avant-placement-conseiller.html` | transfert de risque, condition de renversement |
@@ -71,7 +71,7 @@ Pages : **40**. Angles le plus souvent non détectés : **transfert de risque** 
 
 ### entrepreneuriat / activité
 
-Pages : **24**. Angles le plus souvent non détectés : **valeur d’option / irréversibilité** (13), **objectif réel / substitution du moyen** (12), **transfert de risque** (12), **acteur/gatekeeper** (10), **condition de renversement** (10), **attendre / statu quo** (8), **substitution** (8).
+Pages : **24**. Angles le plus souvent non détectés : **valeur d’option / irréversibilité** (14), **transfert de risque** (13), **objectif réel / substitution du moyen** (12), **condition de renversement** (11), **acteur/gatekeeper** (9), **substitution** (8), **attendre / statu quo** (7).
 
 ### immobilier / crédit / indivision
 
