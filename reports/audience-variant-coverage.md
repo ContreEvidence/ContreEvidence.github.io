@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **19**.
+Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **17**.
 
 ## Priorités de relecture
 
@@ -16,13 +16,11 @@ Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses
 | 21 | NON_READY | couple / logement / séparation | `dossiers/acheter-sans-vider-epargne.html` | SCI, mariage, PACS |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | indivision directe, mariage, PACS |
 | 15 | NON_READY | reconversion / trajectoire pro | `dossiers/combien-epargne-avant-demissionner.html` | salarié, sans diplôme |
-| 15 | NON_READY | reconversion / trajectoire pro | `dossiers/decider-a-deux-travail-patrimoine.html` | demandeur emploi, sans diplôme |
 | 15 | NON_READY | budget / dettes | `dossiers/patrimoine-marge-de-manoeuvre.html` | revenu stable / variable, charges compressibles / non |
 | 14 | NON_READY | achat immobilier / crédit | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` | CDD / temporaire, indépendant |
 | 14 | NON_READY | entrepreneuriat | `dossiers/combien-chiffre-affaires-pour-vivre.html` | micro / EI / société, activité réglementée |
 | 14 | NON_READY | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 10 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/changer-travail-avant-credit-immobilier.html` | santé / inaptitude, sans diplôme |
-| 10 | NON_READY | couple / logement / séparation | `dossiers/decider-a-deux-travail-patrimoine.html` | SCI |
 | 10 | NON_READY | investissement locatif | `dossiers/finances-investissement-locatif.html` | SCI |
 | 10 | NON_READY | transmission / succession | `dossiers/finances-transmission-patrimoine.html` | SCI / parts |
 | 8 | NON_READY | achat immobilier / crédit | `dossiers/acheter-logement-sans-se-fragiliser.html` | CDD / temporaire |
@@ -47,6 +45,8 @@ Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/audit-budget-60-minutes.html` | — |
 | 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/creer-entreprise-avec-peu-argent.html` | — |
 | 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/creer-entreprise-sans-diplome.html` | — |
+| 0 | COVERED_OR_NARROW | couple / logement / séparation | `dossiers/decider-a-deux-travail-patrimoine.html` | — |
+| 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/decider-a-deux-travail-patrimoine.html` | — |
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | — |
 | 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/formation-vaut-elle-le-cout.html` | — |
 | 0 | COVERED_OR_NARROW | travailler moins / qualité de vie | `dossiers/patrimoine-permet-il-travailler-moins.html` | — |
@@ -116,21 +116,6 @@ Promesse : **combien d’épargne avant de démissionner ? calcul, runway et exe
 | senior / âge | MANQUANTE |
 | revenu / runway | TRAITEE |
 
-### `dossiers/decider-a-deux-travail-patrimoine.html` — reconversion / trajectoire pro
-
-Promesse : **décider à deux : travail, mobilité et patrimoine sans fragiliser le foyer | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| salarié | TRAITEE |
-| demandeur emploi | MANQUANTE |
-| public | MANQUANTE |
-| indépendant | TRAITEE |
-| santé / inaptitude | MENTIONNEE |
-| sans diplôme | MANQUANTE |
-| senior / âge | MANQUANTE |
-| revenu / runway | TRAITEE |
-
 ### `dossiers/patrimoine-marge-de-manoeuvre.html` — budget / dettes
 
 Promesse : **patrimoine et marge de manœuvre : combien de liberté vos actifs donnent-ils ? | contre-évidence**
@@ -187,21 +172,6 @@ Promesse : **quitter son cdi avec un crédit : séquencer emploi, financement et
 | sans diplôme | MANQUANTE |
 | senior / âge | MANQUANTE |
 | revenu / runway | TRAITEE |
-
-### `dossiers/decider-a-deux-travail-patrimoine.html` — couple / logement / séparation
-
-Promesse : **décider à deux : travail, mobilité et patrimoine sans fragiliser le foyer | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| indivision directe | MENTIONNEE |
-| SCI | MANQUANTE |
-| mariage | MENTIONNEE |
-| PACS | MENTIONNEE |
-| concubinage | MANQUANTE |
-| tontine | MANQUANTE |
-| propriété ≠ financement | TRAITEE |
-| sorties multiples | TRAITEE |
 
 ### `dossiers/finances-investissement-locatif.html` — investissement locatif
 
@@ -339,7 +309,7 @@ Promesse : **créer une entreprise avec peu d’argent : budget de départ réal
 
 ### couple / logement / séparation
 
-Pages détectées : **5**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **tontine** (4), **SCI** (3), **concubinage** (3), **PACS** (2), **mariage** (2), **indivision directe** (1).
+Pages détectées : **5**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **tontine** (4), **PACS** (2), **SCI** (2), **concubinage** (2), **mariage** (2), **indivision directe** (1).
 
 ### achat immobilier / crédit
 
@@ -355,7 +325,7 @@ Pages détectées : **1**. Promesses larges `NON_READY` : **1**. Variantes le pl
 
 ### reconversion / trajectoire pro
 
-Pages détectées : **12**. Promesses larges `NON_READY` : **6**. Variantes le plus souvent non détectées : **public** (10), **senior / âge** (9), **indépendant** (7), **sans diplôme** (6), **santé / inaptitude** (3), **revenu / runway** (2).
+Pages détectées : **12**. Promesses larges `NON_READY` : **5**. Variantes le plus souvent non détectées : **public** (9), **senior / âge** (8), **indépendant** (7), **sans diplôme** (5), **santé / inaptitude** (3), **revenu / runway** (2).
 
 ### entrepreneuriat
 
