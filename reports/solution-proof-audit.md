@@ -7,9 +7,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **28**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **27**
 - S2 — possibilité générale à examiner : **15**
-- OK heuristique — condition ou preuve détectée : **156**
+- OK heuristique — condition ou preuve détectée : **155**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -58,8 +58,6 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Il permet de passer du salaire brut au coût total employeur. _[fort enjeu, preuve détectée]_
 ### `dossiers/finances-credit-endettement.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Le coût total permet de voir ce que masque une mensualité réduite par une durée plus longue. _[fort enjeu, preuve détectée]_
-### `dossiers/finances-enveloppes-fiscalite.html`
-- **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Je la choisirais parce qu’elle permet de détenir les bons actifs, au bon coût, avec la bonne liquidité et une fiscalité cohérente avec l’usage réel. ← Investissement · Allocation patrimoniale → À lire ensuite Continuez sans repartir de zéro. _[fort enjeu, preuve détectée]_
 ### `dossiers/finances-residence-principale.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Si elle permet d’accepter dans deux ans une mobilité procurant +500 €/mois sans revente contrainte, le prix de l’option devient mesurable . _[fort enjeu, condition détectée]_
 ### `dossiers/metiers-accessibles-sans-diplome.html`
