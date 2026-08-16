@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **71**. Validations devenues caduques après modification : **0**.
+Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **74**. Validations devenues caduques après modification : **0**.
 
 ## Priorité humaine
 
@@ -70,6 +70,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/competent-mais-invisible-travail.html` — 8/9 automatique — Valeur créée transformée en preuves observables, visibilité auprès des décideurs et alternatives à l’attente d’une reconnaissance spontanée déjà structurées.
 - `dossiers/capacite-refuser-travail-rentabilite.html` — 8/9 automatique — Capacité vendable, marge par heure contrainte, prix/délai/périmètre/délégation, stress test d’embauche et conditions de refus déjà structurés.
 - `dossiers/tresorerie-bfr-entreprise.html` — 8/9 automatique — Cycle de cash, BFR, coût du délai client, prévision 13 semaines, réserve minimale et leviers de cycle déjà structurés.
+- `articles/grosse-entree-argent-que-faire.html` — 8/9 automatique — Capital réellement disponible, poches, délai adaptable, dette sans automatisme, allocation globale et séquence 0–90 jours déjà structurés.
 - `dossiers/prix-attendre-finances.html` — 8/9 automatique — Coûts certains versus opportunité, cas où attendre protège, scénario symétrique d’action trop rapide et seuil de décision déjà présents.
 - `dossiers/piloter-patrimoine-selon-taille.html` — 8/9 automatique — Montant distingué de la complexité, risque dominant par phase, budget de complexité, seuil de recours au conseil et contre-exemples déjà structurés.
 - `dossiers/dependance-gros-client.html` — 8/9 automatique — Concentration, rupture du client principal, mois de survie, diversification causale et plan de réduction de dépendance déjà structurés.
@@ -78,6 +79,8 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/favoriser-un-enfant-succession-donation.html` — 8/9 automatique — Intention réelle décomposée, réserve/quotité, outils alternatifs, liquidité du partage, stress tests et protocole notarial déjà structurés.
 - `dossiers/indivision-loyers-charges-comptes.html` — 8/9 automatique — Flux de loyers, charges, preuves comptables, comptes entre indivisaires et architecture de décision déjà structurés lors de la revue antérieure.
 - `dossiers/audit-budget-60-minutes.html` — 8/9 automatique — Audit déjà opérationnel : masses budgétaires, anomalies, priorisation et actions concrètes ; pas de gain causal identifié lors de la revue antérieure.
+- `articles/frais-fiscalite-rendement-net.html` — 8/9 automatique — Réécriture du 16/08 : frais fournisseurs actualisés, point mort de migration, coût ponctuel du changement et valeur des options perdues ajoutés.
+- `dossiers/finances-allocation-portefeuille.html` — 8/9 automatique — Fonctions avant pourcentages, capacité versus tolérance au risque, moteurs communs, budget de risque, séquence, stress tests et politique écrite déjà structurés.
 - `dossiers/passer-80-pourcent-cout-reel.html` — 9/9 automatique — Coût réel du temps libéré, impact sur marge du foyer, effets différés et réversibilité déjà traités lors de la revue antérieure.
 - `dossiers/finances-retraite-decumulation.html` — 9/9 automatique — Gap retraite, risque de séquence, poches par fonction, garde-fous de retrait, longévité, stress tests et revue annuelle déjà structurés.
 - `dossiers/regles-responsabilites-fautes-travail.html` — 9/9 automatique — Erreur, négligence, insuffisance et faute décomposées ; qualification conditionnelle et conséquences distinguées, avec sources adaptées déjà présentes.
@@ -149,7 +152,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1345 | humaine ✓ | `dossiers/capacite-refuser-travail-rentabilite.html` |
 | 8/9 | 1351 | humaine ✓ | `dossiers/tresorerie-bfr-entreprise.html` |
 | 8/9 | 1352 | heuristique | `articles/construire-epargne-de-zero.html` |
-| 8/9 | 1360 | heuristique | `articles/grosse-entree-argent-que-faire.html` |
+| 8/9 | 1360 | humaine ✓ | `articles/grosse-entree-argent-que-faire.html` |
 | 8/9 | 1360 | heuristique | `dossiers/quitter-travail-reconversion-sans-se-fragiliser.html` |
 | 8/9 | 1364 | heuristique | `articles/premiere-chance-sans-experience.html` |
 | 8/9 | 1369 | heuristique | `dossiers/management-relations-conflits.html` |
@@ -167,9 +170,9 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1554 | humaine ✓ | `dossiers/indivision-loyers-charges-comptes.html` |
 | 8/9 | 1599 | heuristique | `dossiers/comparer-deux-offres-emploi.html` |
 | 8/9 | 1652 | humaine ✓ | `dossiers/audit-budget-60-minutes.html` |
-| 8/9 | 1712 | heuristique | `articles/frais-fiscalite-rendement-net.html` |
+| 8/9 | 1712 | humaine ✓ | `articles/frais-fiscalite-rendement-net.html` |
 | 8/9 | 1754 | heuristique | `dossiers/location-courte-duree-meuble-tourisme.html` |
-| 8/9 | 1788 | heuristique | `dossiers/finances-allocation-portefeuille.html` |
+| 8/9 | 1788 | humaine ✓ | `dossiers/finances-allocation-portefeuille.html` |
 | 8/9 | 1799 | heuristique | `dossiers/decider-sans-tourner-en-rond.html` |
 | 8/9 | 2123 | heuristique | `dossiers/plan-30-jours-recherche-emploi.html` |
 | 8/9 | 2197 | heuristique | `dossiers/allocation-patrimoine-selon-situation.html` |
