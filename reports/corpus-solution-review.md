@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **22**. Validations devenues caduques après modification : **0**.
+Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **36**. Validations devenues caduques après modification : **0**.
 
 ## Priorité humaine
 
@@ -27,16 +27,30 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/finances-transmission-patrimoine.html` — 6/9 automatique — Objectifs, propriété, liquidité, sécurité du donateur et coordination civile/fiscale déjà traités.
 - `dossiers/decision-plan-30-90-jours.html` — 7/9 automatique — Action 7 jours, jalon 30 jours, résultat 90 jours, indicateur/contre-indicateur et règles préécrites de révision déjà présents.
 - `dossiers/finances-difficiles-sortir-decouvert-dettes.html` — 7/9 automatique — Déficit structurel, priorisation, leviers de flux, accompagnement, plan 7/30/90 jours et retour conditionnel à l’épargne déjà structurés.
+- `articles/checklist-avant-placement-conseiller.html` — 7/9 automatique — Chaîne de preuves indépendante, vérification du bénéficiaire, scénario de perte, arrêt sous pression et contrôle croisé déjà structurés.
+- `articles/50-candidatures-zero-reponse.html` — 7/9 automatique — Localisation de la rupture, séries comparables, tests A/B, scénarios de diagnostic et règles de changement de stratégie déjà explicites.
 - `dossiers/rembourser-credit-ou-investir.html` — 7/9 automatique — Rendement certain de la dette versus rendement incertain, liquidité, dette globale, scénarios 100/0-hybride et règle de décision déjà traités.
+- `articles/choisir-etf-mondial-debutant.html` — 7/9 automatique — Exposition avant produit, concentration, chevauchement, enveloppe, risque et séquence de sélection déjà structurés pour une page de choix d’ETF.
+- `dossiers/apprendre-developper-competences.html` — 7/9 automatique — Situation cible, modalités alternatives, autonomie progressive, stress test, seuil de formation et condition d’inversion déjà structurés.
 - `dossiers/contrat-travail-clauses-verifier-avant-signer.html` — 7/9 automatique — Clauses lues comme options, matrice probabilité × impact × réversibilité, scénarios adverses et négociation avant signature déjà présents.
 - `dossiers/patrimoine-permet-il-travailler-moins.html` — 7/9 automatique — Coût net du temps libéré, runway, trois seuils de liberté, stress test et réversibilité déjà structurés.
+- `dossiers/competences-qualification-employabilite.html` — 7/9 automatique — Séparation compétence/qualification/preuve, verrou légal versus recrutement, test sur 30 offres et voies alternatives déjà structurés.
+- `dossiers/finances-cadre-global.html` — 7/9 automatique — Objectifs par horizon, réserve personnelle, allocation en zones, plafonds, stress tests et événements autorisant une révision déjà explicites.
 - `dossiers/garages-parkings-locaux-commerciaux.html` — 7/9 automatique — Vacance extrême, reconversion du local, financement, concentration, critères d’inversion et sortie avant entrée déjà structurés.
 - `dossiers/finances-credit-endettement.html` — 7/9 automatique — Fonction de la dette, coût complet, levier, liquidité, stress combiné et options futures détruites par la mensualité déjà explicites.
 - `dossiers/assurer-ou-autoassurer-risques.html` — 7/9 automatique — Gravité, capacité d’absorption, inventaire des couvertures, franchise comme partage du risque et matrice fréquence/gravité déjà traités.
 - `dossiers/patrimoine-marge-de-manoeuvre.html` — 7/9 automatique — Runway de décision, trois niveaux de liquidité, scénarios de transition, stress test et seuil minimal de marge déjà structurés.
 - `dossiers/acheter-sans-vider-epargne.html` — 7/9 automatique — Arbitrage marginal par tranche d’apport, mois de sécurité, stress test et valeur d’option de la liquidité déjà explicites.
+- `dossiers/questions-poser-avant-prise-de-poste.html` — 7/9 automatique — Questions conçues pour réduire l’incertitude, croisement d’interlocuteurs, moyens versus responsabilités et matrice importance × inconnue déjà présents.
 - `dossiers/accepter-emploi-plus-loin-cout-trajet.html` — 7/9 automatique — Gain net, coût du temps, trois seuils, option de carrière, télétravail et déménagement comme architectures alternatives déjà traités.
+- `articles/investir-grosse-somme-dun-coup-ou-progressivement.html` — 7/9 automatique — Risque d’attente versus timing, stratégie hybride, calendrier mécanique, date de fin et motifs légitimes d’interruption déjà explicites.
+- `dossiers/cout-complet-achat-immobilier.html` — 7/9 automatique — Capital initial, coût d’opportunité, détention, copropriété, liquidité, revente et stress tests multidimensionnels déjà traités.
 - `dossiers/classes-actifs-allocation-patrimoine.html` — 7/9 automatique — Page de cartographie : séparation classe/véhicule/enveloppe, rôles, liquidité et agrégation par moteurs de risque déjà suffisamment explicites pour sa fonction.
+- `dossiers/location-nue-ou-meublee-comparer.html` — 7/9 automatique — Réécriture récente : usage, surloyer-seuil, rotation, DPE, fiscalité conditionnelle et réversibilité déjà au standard.
+- `dossiers/acheter-ou-louer-si-on-risque-demenager.html` — 7/9 automatique — Seuil personnel de détention, scénarios de revente, valeur de la flexibilité et location comme option conditionnelle déjà structurés.
+- `dossiers/debloquer-demarche-administrative.html` — 7/9 automatique — Fait à prouver, preuves équivalentes, typologie du blocage, changement de niveau, trace écrite et voies de recours conditionnelles déjà structurés.
+- `dossiers/patrimoine-selon-age-construire-utiliser.html` — 7/9 automatique — Âge traité comme proxy d’événements et d’horizons, transitions de phase, exceptions et conditions d’inversion déjà explicites.
+- `dossiers/demenager-pour-un-emploi-salaire-minimum.html` — 7/9 automatique — Salaire net de bascule, coûts de transition, prix du temps, aides conditionnelles et valeur d’option de la mobilité déjà traités.
 - `dossiers/quand-vie-change-sante-separation-revenu.html` — 8/9 automatique — Stabilisation, période tampon, réversibilité, séquence 30 jours et stress test déjà structurés.
 
 ## Corpus complet
@@ -54,30 +68,30 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 6/9 | 1629 | humaine ✓ | `dossiers/finances-transmission-patrimoine.html` |
 | 7/9 | 861 | humaine ✓ | `dossiers/decision-plan-30-90-jours.html` |
 | 7/9 | 1010 | humaine ✓ | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` |
-| 7/9 | 1064 | heuristique | `articles/checklist-avant-placement-conseiller.html` |
-| 7/9 | 1157 | heuristique | `articles/50-candidatures-zero-reponse.html` |
+| 7/9 | 1064 | humaine ✓ | `articles/checklist-avant-placement-conseiller.html` |
+| 7/9 | 1157 | humaine ✓ | `articles/50-candidatures-zero-reponse.html` |
 | 7/9 | 1244 | humaine ✓ | `dossiers/rembourser-credit-ou-investir.html` |
-| 7/9 | 1247 | heuristique | `articles/choisir-etf-mondial-debutant.html` |
-| 7/9 | 1248 | heuristique | `dossiers/apprendre-developper-competences.html` |
+| 7/9 | 1247 | humaine ✓ | `articles/choisir-etf-mondial-debutant.html` |
+| 7/9 | 1248 | humaine ✓ | `dossiers/apprendre-developper-competences.html` |
 | 7/9 | 1268 | humaine ✓ | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` |
 | 7/9 | 1270 | humaine ✓ | `dossiers/patrimoine-permet-il-travailler-moins.html` |
-| 7/9 | 1285 | heuristique | `dossiers/competences-qualification-employabilite.html` |
-| 7/9 | 1301 | heuristique | `dossiers/finances-cadre-global.html` |
+| 7/9 | 1285 | humaine ✓ | `dossiers/competences-qualification-employabilite.html` |
+| 7/9 | 1301 | humaine ✓ | `dossiers/finances-cadre-global.html` |
 | 7/9 | 1303 | humaine ✓ | `dossiers/garages-parkings-locaux-commerciaux.html` |
 | 7/9 | 1344 | humaine ✓ | `dossiers/finances-credit-endettement.html` |
 | 7/9 | 1390 | humaine ✓ | `dossiers/assurer-ou-autoassurer-risques.html` |
 | 7/9 | 1390 | humaine ✓ | `dossiers/patrimoine-marge-de-manoeuvre.html` |
 | 7/9 | 1407 | humaine ✓ | `dossiers/acheter-sans-vider-epargne.html` |
-| 7/9 | 1408 | heuristique | `dossiers/questions-poser-avant-prise-de-poste.html` |
+| 7/9 | 1408 | humaine ✓ | `dossiers/questions-poser-avant-prise-de-poste.html` |
 | 7/9 | 1410 | humaine ✓ | `dossiers/accepter-emploi-plus-loin-cout-trajet.html` |
-| 7/9 | 1455 | heuristique | `articles/investir-grosse-somme-dun-coup-ou-progressivement.html` |
-| 7/9 | 1462 | heuristique | `dossiers/cout-complet-achat-immobilier.html` |
+| 7/9 | 1455 | humaine ✓ | `articles/investir-grosse-somme-dun-coup-ou-progressivement.html` |
+| 7/9 | 1462 | humaine ✓ | `dossiers/cout-complet-achat-immobilier.html` |
 | 7/9 | 1463 | humaine ✓ | `dossiers/classes-actifs-allocation-patrimoine.html` |
-| 7/9 | 1486 | heuristique | `dossiers/location-nue-ou-meublee-comparer.html` |
-| 7/9 | 1487 | heuristique | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` |
-| 7/9 | 1546 | heuristique | `dossiers/debloquer-demarche-administrative.html` |
-| 7/9 | 1578 | heuristique | `dossiers/patrimoine-selon-age-construire-utiliser.html` |
-| 7/9 | 2401 | heuristique | `dossiers/demenager-pour-un-emploi-salaire-minimum.html` |
+| 7/9 | 1486 | humaine ✓ | `dossiers/location-nue-ou-meublee-comparer.html` |
+| 7/9 | 1487 | humaine ✓ | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` |
+| 7/9 | 1546 | humaine ✓ | `dossiers/debloquer-demarche-administrative.html` |
+| 7/9 | 1578 | humaine ✓ | `dossiers/patrimoine-selon-age-construire-utiliser.html` |
+| 7/9 | 2401 | humaine ✓ | `dossiers/demenager-pour-un-emploi-salaire-minimum.html` |
 | 8/9 | 693 | humaine ✓ | `dossiers/quand-vie-change-sante-separation-revenu.html` |
 | 8/9 | 1008 | heuristique | `dossiers/immobilier-allocation-globale-patrimoine.html` |
 | 8/9 | 1074 | heuristique | `dossiers/etude-marche-terrain.html` |
