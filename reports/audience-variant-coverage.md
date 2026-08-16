@@ -14,7 +14,6 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 |---:|---|---|---|---|
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/devenir-manager-premiere-fois.html` | demandeur emploi, santé / inaptitude, sans diplôme, revenu / runway |
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | salarié, santé / inaptitude, sans diplôme, revenu / runway |
-| 21 | NON_READY | reconversion / trajectoire pro | `articles/competences-transferables.html` | demandeur emploi, santé / inaptitude, sans diplôme |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/acheter-sans-vider-epargne.html` | SCI, mariage, PACS |
 | 21 | NON_READY | travailler moins / qualité de vie | `dossiers/patrimoine-permet-il-travailler-moins.html` | salarié privé, public, indépendant |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | indivision directe, mariage, PACS |
@@ -35,6 +34,7 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 | 8 | NON_READY | achat immobilier / crédit | `dossiers/finances-residence-principale.html` | CDD / temporaire |
 | 8 | NON_READY | entrepreneuriat | `dossiers/formation-vaut-elle-le-cout.html` | micro / EI / société |
 | 8 | NON_READY | reconversion / trajectoire pro | `dossiers/trajectoire-professionnelle-selon-situation.html` | sans diplôme |
+| 7 | NON_READY | reconversion / trajectoire pro | `articles/competences-transferables.html` | revenu / runway |
 | 7 | NON_READY | entrepreneuriat | `dossiers/are-arce-acre-creation-entreprise.html` | activité réglementée |
 | 5 | ROUTE_FIRST | achat immobilier / crédit | `dossiers/changer-travail-avant-credit-immobilier.html` | indépendant |
 | 5 | ROUTE_FIRST | achat immobilier / crédit | `dossiers/indivision-couple-separation-rachat-soulte.html` | indépendant |
@@ -86,21 +86,6 @@ Promesse : **métier, poste, fonction, service : comprendre l’entreprise — c
 | sans diplôme | MANQUANTE |
 | senior / âge | MANQUANTE |
 | revenu / runway | MANQUANTE |
-
-### `articles/competences-transferables.html` — reconversion / trajectoire pro
-
-Promesse : **changer de métier sans repartir de zéro : compétences transférables | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| salarié | TRAITEE |
-| demandeur emploi | MANQUANTE |
-| public | MANQUANTE |
-| indépendant | MANQUANTE |
-| santé / inaptitude | MANQUANTE |
-| sans diplôme | MANQUANTE |
-| senior / âge | MANQUANTE |
-| revenu / runway | ROUTEE |
 
 ### `dossiers/acheter-sans-vider-epargne.html` — couple / logement / séparation
 
@@ -381,6 +366,21 @@ Promesse : **quelle stratégie professionnelle selon votre situation ? 8 traject
 | senior / âge | TRAITEE |
 | revenu / runway | TRAITEE |
 
+### `articles/competences-transferables.html` — reconversion / trajectoire pro
+
+Promesse : **changer de métier sans repartir de zéro : compétences transférables | contre-évidence**
+
+| Variante | Signal automatique |
+|---|---|
+| salarié | TRAITEE |
+| demandeur emploi | TRAITEE |
+| public | MENTIONNEE |
+| indépendant | TRAITEE |
+| santé / inaptitude | TRAITEE |
+| sans diplôme | TRAITEE |
+| senior / âge | MANQUANTE |
+| revenu / runway | MANQUANTE |
+
 ### `dossiers/are-arce-acre-creation-entreprise.html` — entrepreneuriat
 
 Promesse : **are, arce, acre : choisir pour créer son entreprise en 2026 | contre-évidence**
@@ -415,7 +415,7 @@ Pages détectées : **1**. Promesses larges `NON_READY` : **1**. Variantes le pl
 
 ### reconversion / trajectoire pro
 
-Pages détectées : **13**. Promesses larges `NON_READY` : **7**. Variantes le plus souvent non détectées : **public** (12), **senior / âge** (10), **indépendant** (9), **sans diplôme** (8), **santé / inaptitude** (5), **demandeur emploi** (3).
+Pages détectées : **13**. Promesses larges `NON_READY` : **7**. Variantes le plus souvent non détectées : **public** (11), **senior / âge** (10), **indépendant** (8), **sans diplôme** (7), **santé / inaptitude** (4), **revenu / runway** (3).
 
 ### entrepreneuriat
 
