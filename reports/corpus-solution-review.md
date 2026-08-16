@@ -14,6 +14,31 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 |---:|---:|---|---|
 | — | — | — | **Aucune priorité critique non relue** |
 
+## Validations devenues caduques
+
+| Page | SHA relu | SHA courant |
+|---|---|---|
+| `articles/clients-interesses-personne-nachete.html` | `0c3980a564acd531c9ea4a50f8cf3a78c6585586` | `d1c27c49f015873e1efdb0b95230274d18688c46` |
+| `articles/competences-transferables.html` | `03e2569466515161bb47694e37b38b26bd22ecfa` | `54a32e6988ad07816c8b18fc454c4de0eda4a129` |
+| `dossiers/depenses-recurrentes-abonnements-assurances.html` | `5a7b60c96000f3b74bb18a708fabc95cf756416a` | `7ab68ff16885592aa5a53bcbf88bea40f0d60230` |
+| `articles/retrouver-emploi-apres-interruption.html` | `708b42c4e407bd5603074c5caef7a6aa92a6bd23` | `abbaae628730e9314acfe90444f7185a18cf1072` |
+| `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` | `4e8862606033153493eeb0eaa89fb3a44e81b792` | `e2f86bc90e46fa8a5193b88ddba15dbc7f5ac5ed` |
+| `dossiers/gestion-pilotee-comparer-performances.html` | `eb985dfb620cda7a9bd12c97cb5265532cebc5c1` | `39455bdc8b582a298dc3429c7e65e8e51b498d35` |
+| `dossiers/finances-investissement-locatif.html` | `9dc77dabd455cd9c40d30a4a38135cb0d07f20ac` | `2c09f9a2b80c1ef004f4c07f5941dcf88894a1e3` |
+| `dossiers/devenir-manager-premiere-fois.html` | `4396d38dcf1045d774f62761486885af18a97600` | `5b37be7ac97ba89e23e4f31456f90008c7ec49e5` |
+| `dossiers/decider-a-deux-travail-patrimoine.html` | `ffb94ada2a33e2de13e30818bebdef884aefbe21` | `ba14b77f52087dfb20b0813df082369592184e8e` |
+| `dossiers/valeur-option-bien-immobilier.html` | `a021ecc787671e6c04cbf9d26c70263a7c3e713d` | `b94854c103aca7c9b4122013ef8300098bb166d4` |
+| `articles/accepter-nimporte-quel-poste-retour-emploi.html` | `76bb61790bf99848bd0de67f731aad6d7b79f3eb` | `27d74310369168d6bfc5db8c22d2b4ee679c7705` |
+| `dossiers/quitter-emploi-stable-ou-rester.html` | `a75eefe462647633957c51bffd944724cbcb4fd2` | `e6fb490461c91b774628d9affbfd71f0fa38b70d` |
+| `articles/comparatif-produits-bancaires.html` | `723b88e7cacdf722e3540b15003eab5e79c0750f` | `f766c96540debfe1ce8ef1d2c7e38770df01b3f3` |
+| `dossiers/travailler-moins-vivre-mieux.html` | `0be57567b1269a98ac362a447ade90f77c56c8f7` | `eb67bcfbe9b9b1bdaf4c4e402946defb38068247` |
+| `dossiers/indivision-succession-heritiers-vendre-partager.html` | `010dad54397a59c46767cfc93228f5430b469b70` | `edf2c7b8270a9c257c28c282fda78fa8a71dd0c9` |
+| `articles/travailler-beaucoup-gagner-peu-prix.html` | `c4112f1499656465f66b7da63e9a31a06eefcc0b` | `53df5406709273e5dedfe3ae2a2085c3913bb872` |
+| `dossiers/finances-enveloppes-fiscalite.html` | `6b507b9d029f336c2e82313f40373987f6d5a9da` | `465e5a96cac235489cd54df12555dc85c8f66542` |
+| `dossiers/formation-vaut-elle-le-cout.html` | `88fc8d7f1b3d9b32a11ed4f8443d623980ea27c6` | `601b970cd42683723682946ad1b8add7c7aa48db` |
+| `dossiers/bien-immobilier-garder-vendre-transformer.html` | `99902199baa27e6717f64dd2f77c7a163739be81` | `851bc30ba2290f512e60911db8fbd24966b8a95f` |
+| `dossiers/trajectoire-professionnelle-selon-situation.html` | `3cd37045575657127ce242fec86748af924c2c00` | `340b3c58bd6809606aac38282afac472924ee2b1` |
+
 ## Pages validées humainement et inchangées
 
 - `dossiers/trouver-premiers-clients.html` — 6/9 automatique — Entonnoir causal, canaux alternatifs, seuils d’arrêt et changement d’offre déjà explicites.
