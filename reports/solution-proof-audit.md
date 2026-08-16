@@ -9,7 +9,7 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
 - S1 — possibilité à fort enjeu à resserrer ou vérifier : **37**
 - S2 — possibilité générale à examiner : **14**
-- OK heuristique — condition ou preuve détectée : **155**
+- OK heuristique — condition ou preuve détectée : **156**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -79,7 +79,7 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Quand commencer à utiliser devient rationnel le socle reste intact après la dépense ; les objectifs futurs importants restent robustes dans un scénario adverse ; la transmission voulue est déjà couverte ou n’est pas prioritaire ; le capital supplémentaire améliore peu la sécurité ; une contrainte importante peut être supprimée pour une fraction raisonnable du patrimoine ; l’usage est particulièrement dépendant du temps, de l’âge ou de la santé ; une versio _[fort enjeu, condition détectée]_
 ### `dossiers/rembourser-credit-ou-investir.html`
-- **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Exemple simplifié Un remboursement de 20 000 € permet d’économiser 3 200 € d’intérêts et 600 € d’assurance sur la durée restante, mais coûte 300 € de frais. _[fort enjeu, preuve détectée]_
+- **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Pour un crédit immobilier, vous pouvez demander une estimation chiffrée des frais du remboursement anticipé ; pour les contrats conclus après le 1er juillet 2016, cette estimation est gratuite. _[fort enjeu, preuve détectée]_
 ### `dossiers/tout-ca-pour-quoi-objectifs-besoins.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Ce que l’on dit vouloir Ce que l’on peut chercher derrière Conséquence 500 000 € de patrimoine Sécurité, retraite, transmission, liberté de choix La bonne allocation dépend de la fonction du capital. _[fort enjeu, condition détectée]_
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Toute optimisation transfère quelque chose On optimise… On peut transférer le coût vers… le rendement la liquidité, la volatilité ou le risque de perte. le salaire le temps, le trajet, la santé ou la disponibilité familiale. la sécurité la croissance, l’apprentissage ou la liberté d’expérimenter. la vitesse la réversibilité et le droit à l’erreur. le confort présent les ressources du futur soi ou des proches. _[fort enjeu, condition détectée]_
