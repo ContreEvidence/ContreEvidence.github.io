@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
 - P1 — affirmation forte à resserrer ou vérifier : **54**
-- P2 — nécessité à examiner : **146**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **677**
+- P2 — nécessité à examiner : **144**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **681**
 
 ## P0 — rouvrir en priorité
 
@@ -174,9 +174,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/automatiser-ou-non-processus.html`
 - **nécessité à requalifier ou sourcer** — Avant « automatiser ou non » : la tâche doit-elle encore exister ? _[temporalité]_
 - **nécessité à requalifier ou sourcer** — C'est pourquoi le nombre réel d'exécutions doit être mesuré avant de choisir l'outil. _[temporalité]_
-### `dossiers/business-plan-utile.html`
-- **nécessité à requalifier ou sourcer** — Le business plan doit donc financer le cycle d’exploitation, pas seulement l’achat de matériel. _[temporalité]_
-- **nécessité à requalifier ou sourcer** — Test d’abandon : le business plan doit aussi pouvoir dire non Avant de lancer, fixez des critères qui obligent à revoir le projet : moins de 5 ventes après 100 prospects qualifiés, prix acceptable inférieur au prix rentable, besoin de trésorerie supérieur aux ressources mobilisables, capacité maximale inférieure au volume nécessaire, ou dépendance à un client sans solution de remplacement. _[temporalité]_
 ### `dossiers/calculer-prix-minimum-rentable.html`
 - **nécessité à requalifier ou sourcer** — Calculer le point mort Le point mort indique combien il faut vendre pour couvrir la structure avant rémunération supplémentaire. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Exemple complet Votre activité doit produire 66,70 € de marge contributive par heure vendue.
