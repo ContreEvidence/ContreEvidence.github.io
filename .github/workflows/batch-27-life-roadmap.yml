@@ -1,0 +1,79 @@
+name: Batch 27 life roadmap
+
+on:
+  push:
+    paths:
+      - '.github/workflows/batch-27-life-roadmap.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Build integrated life roadmap
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          def replace_once(text, old, new, label):
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f"{label}: expected 1 anchor, found {count}")
+              return text.replace(old, new, 1)
+
+          path = Path('parcours-de-vie.html')
+          text = path.read_text(encoding='utf-8')
+          css_anchor = '</style><meta property="og:type" content="website"/>'
+          css = '''.roadmap-section{background:#f7f5ef}.roadmap-head{max-width:930px;margin-bottom:1.1rem}.roadmap-head h2{margin:.25rem 0 .55rem;font-size:clamp(2rem,4vw,3.15rem);letter-spacing:-.04em;line-height:1}.roadmap-head p{color:#59646d;line-height:1.65}.roadmap-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem}.roadmap-stage{padding:1.15rem 1.2rem;border:1px solid rgba(16,24,32,.12);border-radius:16px;background:#fff}.roadmap-stage .age{font-size:.72rem;font-weight:900;letter-spacing:.11em;text-transform:uppercase;color:#76591c}.roadmap-stage h3{margin:.38rem 0 .65rem;font-size:1.3rem}.roadmap-stage p{margin:.32rem 0;color:#4f5a62;line-height:1.52}.roadmap-stage p strong{color:#101820}.roadmap-stage .signal{margin-top:.8rem;padding-top:.7rem;border-top:1px solid rgba(16,24,32,.1);font-size:.88rem}.roadmap-rules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;margin-top:1rem}.roadmap-rule{padding:1rem;border-left:3px solid #d4ab56;background:#fff}.roadmap-rule strong{display:block;margin-bottom:.25rem}.roadmap-rule span{color:#59646d;line-height:1.48;font-size:.92rem}.roadmap-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.1rem}@media(max-width:850px){.roadmap-grid,.roadmap-rules{grid-template-columns:1fr}}'''
+          text = replace_once(text, css_anchor, css + css_anchor, 'roadmap css')
+          text = text.replace('<meta name="dateModified" content="2026-08-15"/>','<meta name="dateModified" content="2026-08-16"/>',1)
+          text = text.replace('Vous ne savez pas où vous en êtes, vous hésitez ou votre objectif est clair ? Choisissez votre point de départ et avancez vers les dossiers et outils adaptés.','Vous ne savez pas où vous en êtes, vous hésitez ou vous voulez voir la suite ? Situez-vous aujourd’hui, puis utilisez une feuille de route qui relie vie professionnelle, épargne, patrimoine et retraite.',1)
+          section_anchor = '<section class="journey-section" id="se-situer">'
+          roadmap = '''<section class="journey-section roadmap-section" id="feuille-route"><div class="container"><div class="roadmap-head"><div class="kicker">Feuille de route · Vie professionnelle × Patrimoine</div><h2>Votre âge donne un repère. Votre situation décide de l’ordre.</h2><p>Il n’existe pas de patrimoine « normal » à 30, 40 ou 55 ans, pas plus qu’une carrière qui devrait suivre le même calendrier pour tous. Mais les priorités changent avec le temps : au début, il faut surtout fabriquer des compétences, des preuves et une première marge financière ; plus tard, il faut éviter la concentration, protéger ce qui a été construit, préparer les transitions puis organiser l’usage du capital. <strong>Utilisez la tranche qui ressemble à votre situation, même si votre âge est différent.</strong></p></div><div class="roadmap-grid"><article class="roadmap-stage"><div class="age">Environ 18–25 ans · Poser les fondations</div><h3>Devenir autonome sans fermer trop tôt les portes.</h3><p><strong>Vie professionnelle :</strong> transformer le potentiel en compétences observables, premières réalisations, références et capacité à être recruté ailleurs.</p><p><strong>Patrimoine :</strong> sortir du déficit récurrent, éviter les dettes coûteuses, créer une première réserve puis automatiser une petite épargne avant de chercher la performance.</p><p class="signal"><strong>Signal de passage :</strong> un imprévu ordinaire ne remet plus tout à zéro et votre travail commence à produire des preuves réutilisables.</p></article><article class="roadmap-stage"><div class="age">Environ 25–35 ans · Accélérer sans se verrouiller</div><h3>Faire monter revenus, compétences et capital tout en gardant de la mobilité.</h3><p><strong>Vie professionnelle :</strong> augmenter la valeur de marché, choisir les expériences qui élargissent le champ des postes accessibles et construire un réseau hors de l’employeur actuel.</p><p><strong>Patrimoine :</strong> dimensionner la réserve à la stabilité réelle des revenus, commencer l’investissement long terme et traiter le logement comme un choix qui peut aussi réduire la mobilité.</p><p class="signal"><strong>Signal de passage :</strong> vous pouvez absorber une transition professionnelle raisonnable sans devoir vendre un placement ou accepter immédiatement le premier poste disponible.</p></article><article class="roadmap-stage"><div class="age">Environ 35–45 ans · Consolider et diversifier</div><h3>Éviter que les succès de la première phase deviennent des dépendances.</h3><p><strong>Vie professionnelle :</strong> choisir entre expertise, management, entrepreneuriat ou progression adjacente ; rendre les responsabilités visibles et transférables.</p><p><strong>Patrimoine :</strong> surveiller dette, poids de la résidence principale, protection du foyer, concentration immobilière ou boursière et épargne dédiée aux projets futurs.</p><p class="signal"><strong>Signal de passage :</strong> la perte d’un seul revenu, client, employeur ou actif important ne détruit pas simultanément tout le plan familial.</p></article><article class="roadmap-stage"><div class="age">Environ 45–55 ans · Transformer l’expérience en options</div><h3>Ne pas confondre ancienneté, sécurité et liberté.</h3><p><strong>Vie professionnelle :</strong> tester la valeur externe de l’expérience, réduire la dépendance à un poste devenu trop spécifique et intégrer davantage santé, temps et soutenabilité dans les choix.</p><p><strong>Patrimoine :</strong> vérifier les droits futurs, mesurer l’écart à financer à la retraite, réduire les concentrations accidentelles et regarder la date d’extinction des dettes.</p><p class="signal"><strong>Signal de passage :</strong> une évolution ou une rupture de carrière reste possible sans mettre en danger les objectifs essentiels du foyer.</p></article><article class="roadmap-stage"><div class="age">Environ 55–65 ans · Préparer la bascule</div><h3>Organiser le passage du revenu du travail vers plusieurs sources de revenu.</h3><p><strong>Vie professionnelle :</strong> décider du bon niveau d’intensité, préparer une seconde activité, une sortie progressive ou une dernière phase de carrière qui valorise davantage l’expérience que l’endurance.</p><p><strong>Patrimoine :</strong> comparer plusieurs dates de départ, préparer la liquidité, tester le revenu après pensions, anticiper les gros travaux, le logement, la protection du conjoint et la future décumulation.</p><p class="signal"><strong>Signal de passage :</strong> le plan reste acceptable avec un départ décalé, une baisse de marché ou une dépense importante non prévue.</p></article><article class="roadmap-stage"><div class="age">Environ 65 ans et plus · Utiliser, simplifier, transmettre</div><h3>Faire servir le patrimoine à la vie au lieu de continuer à l’optimiser par réflexe.</h3><p><strong>Vie professionnelle :</strong> si le travail continue, il peut devenir un choix de revenu, de lien, de transmission ou de sens plutôt qu’une obligation d’accumulation.</p><p><strong>Patrimoine :</strong> sécuriser les besoins proches, conserver de la croissance lorsque l’horizon le justifie, simplifier ce qui devient difficile à gérer et distinguer capital nécessaire de capital réellement transmissible.</p><p class="signal"><strong>Point de contrôle :</strong> le conjoint ou les proches pourraient comprendre l’architecture, et une dépense de longévité ou de dépendance ne rend pas la transmission prévue irréaliste.</p></article></div><div class="roadmap-rules"><div class="roadmap-rule"><strong>Vous pensez être « en retard » ?</strong><span>Ne sautez pas les fondations pour rattraper un âge théorique. Une réserve insuffisante ne devient pas moins importante parce que vous avez 48 ans.</span></div><div class="roadmap-rule"><strong>Vous êtes « en avance » ?</strong><span>N’imitez pas mécaniquement une personne plus âgée. Un patrimoine élevé à 32 ans crée surtout des questions de concentration, d’objectifs et d’options.</span></div><div class="roadmap-rule"><strong>Votre vie change ?</strong><span>Enfant, séparation, chômage, maladie, héritage, création d’entreprise, achat immobilier ou déménagement peuvent vous faire revenir d’une phase sur un axe sans revenir en arrière sur les autres.</span></div></div><div class="journey-note"><strong>Les deux trajectoires se financent mutuellement.</strong>Une réserve financière peut acheter le temps nécessaire à une reconversion ; une progression professionnelle peut accélérer l’épargne ; un achat immobilier peut réduire une mobilité utile ; une activité entrepreneuriale déjà risquée peut justifier un patrimoine financier plus diversifié. La feuille de route sert précisément à éviter d’optimiser un domaine en fragilisant l’autre.</div><div class="roadmap-actions"><a class="btn btn-primary" href="dossiers/patrimoine-selon-age-construire-utiliser.html">Voir la trajectoire patrimoniale détaillée →</a><a class="btn btn-ghost" href="dossiers/trajectoire-professionnelle-selon-situation.html">Voir la trajectoire professionnelle détaillée →</a><a class="btn btn-ghost" href="dossiers/quand-vie-change-sante-separation-revenu.html">Recalculer après un événement de vie →</a></div></div></section>'''
+          text = replace_once(text, section_anchor, roadmap + section_anchor, 'roadmap section')
+          path.write_text(text, encoding='utf-8')
+
+          path = Path('themes/argent.html')
+          text = path.read_text(encoding='utf-8')
+          old = '<div class="maturity-note">Vous pouvez passer d’un chemin à l’autre à tout moment. Le site ne déduit aucun « niveau » à partir de vos données.</div></div><div class="pillar-grid" id="construction">'
+          new = '<div class="maturity-note">Vous pouvez passer d’un chemin à l’autre à tout moment. Le site ne déduit aucun « niveau » à partir de vos données.</div><p style="margin:.8rem 0 0"><a href="../parcours-de-vie.html#feuille-route"><strong>→ Voir la feuille de route qui relie âge, vie professionnelle, épargne, patrimoine et retraite</strong></a></p></div><div class="pillar-grid" id="construction">'
+          text = replace_once(text, old, new, 'patrimoine hub roadmap link')
+          path.write_text(text, encoding='utf-8')
+
+          path = Path('parcours-vie-professionnelle.html')
+          text = path.read_text(encoding='utf-8')
+          old = '<div class="pro-actions"><a class="btn btn-primary" href="outil-capital-professionnel.html">Faire le point sur mes atouts et mes options →</a>'
+          new = '<div class="pro-actions"><a class="btn btn-primary" href="outil-capital-professionnel.html">Faire le point sur mes atouts et mes options →</a><a class="btn btn-ghost" href="parcours-de-vie.html#feuille-route">Voir ma place dans la feuille de route vie pro × patrimoine →</a>'
+          text = replace_once(text, old, new, 'professional hub roadmap link')
+          path.write_text(text, encoding='utf-8')
+
+          path = Path('dossiers/patrimoine-selon-age-construire-utiliser.html')
+          text = path.read_text(encoding='utf-8')
+          old = '</div><h2>1. Ce que montrent réellement les données françaises</h2>'
+          new = '</div><p><a href="../parcours-de-vie.html#feuille-route"><strong>→ Situer cette trajectoire patrimoniale dans la feuille de route complète vie professionnelle × patrimoine</strong></a></p><h2>1. Ce que montrent réellement les données françaises</h2>'
+          text = replace_once(text, old, new, 'patrimoine dossier crosslink')
+          path.write_text(text, encoding='utf-8')
+
+          path = Path('dossiers/trajectoire-professionnelle-selon-situation.html')
+          text = path.read_text(encoding='utf-8')
+          old = '</div><h2>1. Premier emploi : construire des preuves avant d’optimiser le titre</h2>'
+          new = '</div><p><a href="../parcours-de-vie.html#feuille-route"><strong>→ Situer cette trajectoire professionnelle dans la feuille de route complète vie professionnelle × patrimoine</strong></a></p><h2>1. Premier emploi : construire des preuves avant d’optimiser le titre</h2>'
+          text = replace_once(text, old, new, 'professional dossier crosslink')
+          path.write_text(text, encoding='utf-8')
+          PY
+      - name: Commit roadmap changes
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add parcours-de-vie.html themes/argent.html parcours-vie-professionnelle.html dossiers/patrimoine-selon-age-construire-utiliser.html dossiers/trajectoire-professionnelle-selon-situation.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Connect career and wealth life-stage roadmap"
+          git pull --rebase origin main
+          git push origin HEAD:main
