@@ -8,7 +8,7 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
 - S1 — possibilité à fort enjeu à resserrer ou vérifier : **36**
-- S2 — possibilité générale à examiner : **14**
+- S2 — possibilité générale à examiner : **15**
 - OK heuristique — condition ou preuve détectée : **159**
 
 ## S0 — vérifier avant toute recommandation
@@ -94,6 +94,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 
 ## S2 — examiner
 
+### `articles/entretien-rate-ce-qui-bloque.html`
+- **possibilité générale à vérifier ou resserrer** — Une preuve réduit un risque ; elle ne doit pas seulement « impressionner » Préparez 6 à 10 preuves que vous pouvez réutiliser : conflit, priorité, résultat, erreur, initiative, client, équipe, changement, apprentissage, situation difficile.
 ### `articles/retrouver-emploi-apres-interruption.html`
 - **possibilité générale à vérifier ou resserrer** — Le gatekeeper veut savoir ce que cette expérience vous permet de faire dans son organisation .
 - **possibilité générale à vérifier ou resserrer** — Le runway ne dicte pas le choix, mais il fixe combien de temps vous pouvez exiger une meilleure porte.
