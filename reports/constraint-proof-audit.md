@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **14**
 - P1 — affirmation forte à resserrer ou vérifier : **54**
-- P2 — nécessité à examiner : **146**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **677**
+- P2 — nécessité à examiner : **141**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **688**
 
 ## P0 — rouvrir en priorité
 
@@ -256,12 +256,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/metiers-fonctions-organisation-entreprise.html`
 - **nécessité à requalifier ou sourcer** — Il faut comparer périmètre, décisions et conséquences des erreurs .
 - **nécessité à requalifier ou sourcer** — Le travail réel : six questions Quel résultat doit exister à la fin de la semaine ? _[temporalité]_
-### `dossiers/patrimoine-marge-de-manoeuvre.html`
-- **nécessité à requalifier ou sourcer** — Il faut isoler les dépenses imprévues et les projets déjà engagés. _[temporalité]_
-- **nécessité à requalifier ou sourcer** — Mais consommer 20 000 € reste un coût : la décision doit créer suffisamment de valeur professionnelle ou de qualité de vie.
-- **nécessité à requalifier ou sourcer** — Réserve Déficit mensuel Runway 12 000 € 500 € 24 mois 12 000 € 1 000 € 12 mois 12 000 € 1 500 € 8 mois Ce runway ne doit pas consommer toute l’épargne de sécurité. _[temporalité]_
-- **nécessité à requalifier ou sourcer** — Trois niveaux de liquidité Poche Exemples Usage dans une transition Immédiate compte, livrets, monétaire imprévus, déficit mensuel Mobilisable placements liquides mais exposés au marché possible, avec risque de vendre au mauvais moment Peu liquide immobilier, non coté, certains actifs vente lente, coûts et incertitude L’AMF rappelle que l’épargne de précaution doit rester disponible et que l’horizon de placement doit
-- **nécessité à requalifier ou sourcer** — Une transition professionnelle rapproche soudainement certains besoins : une poche que l’on pensait « long terme » ne doit pas être mobilisée sans recalculer ses objectifs.
 ### `dossiers/plan-30-jours-recherche-emploi.html`
 - **nécessité à requalifier ou sourcer** — La deuxième série doit changer une seule hypothèse importante Après la première série, je choisis le blocage le plus probable et je modifie une variable : ciblage, haut du CV, preuve, réseau, réponse à une objection. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Le CV doit réduire l’incertitude en vingt secondes Le haut du CV doit répondre à trois questions : quel poste ? quel niveau ? quelles preuves ?
