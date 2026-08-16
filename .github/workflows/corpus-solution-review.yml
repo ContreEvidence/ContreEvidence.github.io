@@ -39,8 +39,6 @@ jobs:
               if root.exists():
                   files.extend(root.rglob('*.html'))
 
-          # Human reviews are append-only by batch. The historical base file remains
-          # supported; later batch files override an older entry for the same page.
           review_files = []
           base_review = Path('reports/corpus-solution-human-review.json')
           if base_review.exists():
@@ -98,11 +96,12 @@ jobs:
               p = str(path)
               current_sha = blob_sha(path)
               review = reviews.get(p)
-              human_ok = bool(review and review.get('status') == 'conforme' and review.get('sha') == current_sha)
-              stale = bool(review and review.get('sha') != current_sha)
+              reviewed_sha = review.get('sha', '') if review else ''
+              human_ok = bool(review and review.get('status') == 'conforme' and reviewed_sha == current_sha)
+              stale = bool(review and reviewed_sha != current_sha)
               human_valid += int(human_ok)
               human_stale += int(stale)
-              rows.append((score, words, p, result, human_ok, stale))
+              rows.append((score, words, p, result, human_ok, stale, current_sha, reviewed_sha))
 
           rows.sort(key=lambda x: (x[0], x[1], x[2]))
           out = []
@@ -121,7 +120,7 @@ jobs:
           out.append('| Score | Mots | Page | Dimensions manquantes |')
           out.append('|---:|---:|---|---|')
           priority_count = 0
-          for score, words, path, result, human_ok, stale in rows:
+          for score, words, path, result, human_ok, stale, current_sha, reviewed_sha in rows:
               if (score <= 6 or words < 700) and not human_ok:
                   missing = ', '.join(k for k,v in result.items() if not v) or '—'
                   suffix = ' · validation précédente caduque' if stale else ''
@@ -130,9 +129,20 @@ jobs:
           if not priority_count:
               out.append('| — | — | — | **Aucune priorité critique non relue** |')
           out.append('')
+          out.append('## Validations devenues caduques')
+          out.append('')
+          stale_rows = [row for row in rows if row[5]]
+          if stale_rows:
+              out.append('| Page | SHA relu | SHA courant |')
+              out.append('|---|---|---|')
+              for score, words, path, result, human_ok, stale, current_sha, reviewed_sha in stale_rows:
+                  out.append(f'| `{path}` | `{reviewed_sha}` | `{current_sha}` |')
+          else:
+              out.append('Aucune.')
+          out.append('')
           out.append('## Pages validées humainement et inchangées')
           out.append('')
-          for score, words, path, result, human_ok, stale in rows:
+          for score, words, path, result, human_ok, stale, current_sha, reviewed_sha in rows:
               if human_ok:
                   note = reviews[path].get('note', '')
                   out.append(f'- `{path}` — {score}/9 automatique — {note}')
@@ -141,7 +151,7 @@ jobs:
           out.append('')
           out.append('| Score | Mots | Revue | Page |')
           out.append('|---:|---:|---|---|')
-          for score, words, path, result, human_ok, stale in rows:
+          for score, words, path, result, human_ok, stale, current_sha, reviewed_sha in rows:
               status = 'humaine ✓' if human_ok else ('à revoir après changement' if stale else 'heuristique')
               out.append(f'| {score}/9 | {words} | {status} | `{path}` |')
           out.append('')
