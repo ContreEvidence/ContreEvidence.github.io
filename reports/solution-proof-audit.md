@@ -7,7 +7,7 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **4**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **33**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **32**
 - S2 — possibilité générale à examiner : **15**
 - OK heuristique — condition ou preuve détectée : **162**
 
@@ -85,8 +85,6 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — D Je veux faire le point sur mes atouts professionnels Voir ce que vous savez faire, ce qui dépend de votre poste actuel, ce que vous pouvez réutiliser ailleurs et vos possibilités de progression. _[fort enjeu, condition détectée]_
 ### `simulateur-80-pourcent-cout-reel.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Le simulateur vous laisse donc saisir le revenu net réellement pertinent pour votre cas , puis se concentre sur l’arbitrage que vous pouvez mesurer proprement : revenu disponible, coûts évités, épargne et temps récupéré. _[fort enjeu, condition détectée]_
-### `themes/argent.html`
-- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Faire son premier investissement sans brûler les étapes → Comprendre les grandes classes d’actifs → Comprendre et choisir un ETF diversifié → Comprendre PEA, assurance-vie, CTO et PER → Comprendre frais, fiscalité et rendement net → Vérifier un placement ou un conseiller avant de signer → Entrer dans le parcours Investir son capital → Couche 03 Renforcer & diversifier Les bases tiennent et l’investissement est compris : on peut augmenter les montants, répa _[fort enjeu, condition détectée]_
 
 ## S2 — examiner
 
