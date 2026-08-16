@@ -8,8 +8,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
 - S1 — possibilité à fort enjeu à resserrer ou vérifier : **30**
-- S2 — possibilité générale à examiner : **16**
-- OK heuristique — condition ou preuve détectée : **158**
+- S2 — possibilité générale à examiner : **15**
+- OK heuristique — condition ou preuve détectée : **156**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -89,8 +89,6 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ### `articles/retrouver-emploi-apres-interruption.html`
 - **possibilité générale à vérifier ou resserrer** — Le gatekeeper veut savoir ce que cette expérience vous permet de faire dans son organisation .
 - **possibilité générale à vérifier ou resserrer** — Le runway ne dicte pas le choix, mais il fixe combien de temps vous pouvez exiger une meilleure porte.
-### `articles/travailler-beaucoup-gagner-peu-prix.html`
-- **possibilité générale à vérifier ou resserrer** — Puis divisez ce besoin par le nombre d’heures que vous pouvez réellement facturer , pas par toutes les heures travaillées.
 ### `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`
 - **possibilité générale à vérifier ou resserrer** — Ne payez pas avec le salaire un problème que vous pouvez résoudre avec une autre variable.
 ### `dossiers/ameliorer-processus-sans-degrader-service.html`
