@@ -6,9 +6,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 ## Synthèse
 
-- P0 — fermeture forte sans preuve/périmètre suffisant : **16**
-- P1 — affirmation forte à resserrer ou vérifier : **53**
-- P2 — nécessité à examiner : **144**
+- P0 — fermeture forte sans preuve/périmètre suffisant : **14**
+- P1 — affirmation forte à resserrer ou vérifier : **54**
+- P2 — nécessité à examiner : **146**
 - OK heuristique — source/périmètre détecté, fond restant à contrôler : **677**
 
 ## P0 — rouvrir en priorité
@@ -17,9 +17,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sans signal de preuve ni périmètre clair** — Changer simultanément cible, offre, prix et message : impossible de savoir ce qui a marché.
 ### `articles/competences-transferables.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Construire une matrice de transfert exploitable Exigence cible Poids dans 20 offres Expérience source Profondeur Distance de contexte Preuve Écart restant Action la moins coûteuse Coordonner une équipe 17/20 Planning + suivi + imprévus Forte Moyenne Exemple + recommandation Outil de planification cible Pratique guidée Analyser des indicateurs 14/20 Suivi d’activité Moyenne Moyenne Tableau réel Reporting avancé Projet _[temporalité]_
-### `dossiers/apprendre-developper-competences.html`
-- **fermeture forte sans signal de preuve ni périmètre clair** — Ce qui fait inverser la méthode d’apprentissage On privilégierait… Mais si… Alors… autoformation activité réglementée parcours reconnu obligatoire pratique immédiate erreur dangereuse simulation/encadrement d’abord formation longue écart très ciblé parcours court tutorat fort autonomie déjà démontrée contrôle plus léger certification marché valorise surtout les preuves projet/expérience peuvent primer 13.
-- **fermeture forte sans signal de preuve ni périmètre clair** — Les signes d’un mauvais dispositif de formation objectifs formulés uniquement en thèmes de cours ; aucune situation de travail décrite ; évaluation surtout basée sur la mémoire alors que le métier exige de décider ; pratique très tardive ; feedback générique ; aucun critère d’autonomie ; promesse d’emploi sans débouchés documentés ; pas de distinction entre compétence obligatoire, certification attendue et simple ava
 ### `dossiers/audit-budget-60-minutes.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Tester une architecture plus soutenable plutôt qu’un effort impossible à tenir.
 ### `dossiers/combien-chiffre-affaires-pour-vivre.html`
@@ -59,9 +56,10 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `articles/premiere-chance-sans-experience.html`
 - **affirmation forte sans signal de source explicite** — C peut être supérieur professionnellement et pourtant impossible financièrement. _[périmètre]_
 ### `dossiers/apprendre-developper-competences.html`
-- **affirmation forte sans signal de source explicite** — La conclusion s’inverse si le diplôme est obligatoire ou si le marché refuse largement les candidats sans ce signal. _[périmètre, temporalité]_
-- **affirmation forte sans signal de source explicite** — Objet Exemple Mode dominant Connaissance règle, norme, principe lecture/cours + vérification Geste réglage, manipulation démonstration + répétition Décision prioriser, diagnostiquer cas + pratique + débrief Relation négocier, recadrer mise en situation + feedback Coordination piloter plusieurs acteurs expérience progressive + tutorat Qualification réglementée activité soumise à titre/habilitation parcours reconnu obl _[périmètre]_
-- **affirmation forte sans signal de source explicite** — Seuil de décision avant de financer une formation Écrivez ce que la formation doit rendre possible : « passer de 3 offres accessibles sur 30 à 20 sur 30 », « obtenir une habilitation obligatoire », « produire trois preuves employables », « réduire le taux d’erreur sous 5 % ». _[périmètre, temporalité]_
+- **affirmation forte sans signal de source explicite** — La preuve est asymétrique Il peut être facile de montrer qu’un candidat ne possède pas un titre obligatoire : il suffit de constater son absence. _[périmètre]_
+- **affirmation forte sans signal de source explicite** — Seuil de décision avant de financer une formation Écrivez ce qu’elle doit rendre possible : « passer de 3 offres accessibles sur 30 à 20 », « obtenir l’habilitation obligatoire », « réussir le test technique », « produire trois projets vérifiables ». _[périmètre, temporalité]_
+- **affirmation forte sans signal de source explicite** — Substituez le mode d’apprentissage au lieu d’allonger automatiquement la formation Écart réel Substitution à tester connaissance ciblée module court / lecture guidée plutôt que cursus complet. manque de pratique projet, mission ou simulation plutôt qu’heures théoriques supplémentaires. manque de feedback tuteur, pair expert ou revue de travail plutôt qu’un nouveau cours. manque de preuve portfolio, test, mission, cer _[périmètre]_
+- **affirmation forte sans signal de source explicite** — Tester le gatekeeper avant d’investir lourd Quand c’est possible, cherchez une petite preuve de marché avant une formation longue : analyser 30 offres et noter les filtres réellement utilisés ; demander à plusieurs recruteurs quels signaux déclenchent un entretien ; tenter un projet, un test ou une mission limitée ; faire évaluer un portfolio par quelqu’un qui recrute réellement ; vérifier si la certification demandé _[périmètre, temporalité]_
 ### `dossiers/assurer-ou-autoassurer-risques.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Vérifier ce qui est déjà couvert Avant d’acheter une nouvelle garantie, inventorie : régime obligatoire, mutuelle, prévoyance employeur, assurance emprunteur, multirisque habitation, carte bancaire, contrat automobile, garanties professionnelles éventuelles. _[signal-source, temporalité]_
 ### `dossiers/audit-budget-60-minutes.html`
@@ -164,6 +162,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Le document doit permettre à une personne compétente de savoir quoi faire dans le cas normal et quand demander une décision.
 - **nécessité à requalifier ou sourcer** — Le pilote doit durer assez longtemps pour voir apparaître les conséquences indirectes : reprises, réclamations, erreurs détectées tardivement, charge déplacée ou contournements.
 - **nécessité à requalifier ou sourcer** — Partir du problème réel, pas de l’irritant le plus visible Une équipe se plaint qu’une demande doit être validée trois fois.
+### `dossiers/apprendre-developper-competences.html`
+- **nécessité à requalifier ou sourcer** — Ce qui fait inverser la méthode d’apprentissage On privilégierait… Mais si… Alors… autoformation titre réglementaire requis parcours reconnu. pratique immédiate erreur dangereuse simulation / encadrement d’abord. formation longue écart très ciblé parcours court. certification gatekeeper valorise surtout les réalisations construire preuve et expérience. portfolio filtre automatique ou réglementaire exige un diplôme ob
+- **nécessité à requalifier ou sourcer** — Le niveau de preuve doit donc correspondre à la décision que le gatekeeper doit prendre.
 ### `dossiers/audit-budget-60-minutes.html`
 - **nécessité à requalifier ou sourcer** — À la fin de l’heure, vous devez avoir une photographie suffisamment fiable pour prendre trois décisions. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — À la minute 60, vous devez pouvoir écrire Revenu courant : ___ € · Fixes : ___ € · Vie courante + prévisible : ___ € · Excédent réel : ___ € · Trois décisions : 1. ___ 2. ___ 3. ___ Avant de commencer : prenez plusieurs mois, pas un seul Un mois isolé trompe facilement. _[temporalité]_
