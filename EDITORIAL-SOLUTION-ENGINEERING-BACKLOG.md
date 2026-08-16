@@ -4,30 +4,30 @@ Mise à jour : 16 août 2026
 
 ## Statut du chantier
 
-**Le chantier de profondeur est rouvert.**
+**Le chantier de profondeur est rouvert et fonctionne en revue autonome.**
 
-Le snapshot courant comporte **122 contenus indexables** ayant reçu une revue structurelle interne attachée à leur SHA. Cette revue vérifie principalement la présence de dimensions classiques de résolution : problème, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie et preuve.
+Le snapshot courant comporte plus de 120 contenus indexables ayant reçu une revue structurelle interne attachée à leur SHA. Cette revue vérifie principalement la présence de dimensions classiques de résolution : problème, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie et preuve.
 
 Elle ne doit plus être interprétée comme :
 
 - une preuve que le contenu est suffisamment profond ;
 - une preuve qu’aucun angle mort ne subsiste ;
 - une validation éditoriale de l’utilisateur ;
-- une autorisation de réécriture autonome.
+- une exemption de nouvelle revue lorsque le contenu, le droit, le marché ou la promesse évoluent.
 
-Les anciennes mentions « 122/122 validations humaines », « chantier terminé » ou « maintenance continue seulement » sont donc **requalifiées comme revues structurelles héritées**.
+Les anciennes mentions « validations humaines », « chantier terminé » ou « maintenance continue seulement » sont donc **requalifiées comme revues structurelles héritées**.
 
 ## Pourquoi la revue est rouverte
 
-Une page peut satisfaire les neuf dimensions structurelles et rester insuffisante si elle ne cherche pas ce qui se trouve hors de la formulation initiale du problème.
+Une page peut satisfaire les dimensions structurelles et rester insuffisante si elle ne cherche pas ce qui se trouve hors de la formulation initiale du problème.
 
-Le nouveau standard ajoute une recherche active de :
+Le standard courant ajoute une recherche active de :
 
 - changement d’acteur ou de gatekeeper ;
 - substitution de preuve, garantie, ressource, usage, marché ou contrat ;
 - fenêtres temporelles ;
 - ordre des opérations ;
-- fractionnement et achat/transition progressive ;
+- fractionnement et transition progressive ;
 - combinaison de petits leviers ;
 - valeur de l’attente et du statu quo ;
 - effets de second ordre ;
@@ -57,36 +57,38 @@ Une page n’est pas améliorée parce qu’elle devient plus longue. Elle l’e
 - comment la solution peut échouer dans l’exécution ;
 - comment sortir ou réviser si le scénario se dégrade.
 
-## Règle d’approbation éditoriale
+## Gouvernance éditoriale actuelle
 
-Les réécritures substantielles ne sont plus appliquées en lots autonomes.
+La source de vérité est `AGENTS.md` : **le mode courant est autonome**. L’utilisateur a autorisé l’application directe des améliorations substantielles justifiées sur le corpus et ne souhaite pas de validation page par page.
 
-Le flux obligatoire est désormais :
+Flux courant :
 
-1. identifier un angle mort ou un gain de profondeur réel ;
-2. préparer **une seule proposition active** ;
-3. présenter la carte de validation ;
-4. attendre `valide`, `refuse`, `à revoir` ou `passe` ;
-5. n’appliquer que la proposition validée ;
-6. auditer et consigner la décision ;
-7. présenter ensuite la proposition suivante.
+1. lire humainement la page et son cluster proche ;
+2. utiliser les scores automatiques uniquement comme détecteurs ;
+3. identifier un angle mort ou un gain de couverture qui change réellement décision, coût, risque, séquence, preuve ou options ;
+4. vérifier les affirmations sensibles sur sources primaires à jour ;
+5. appliquer directement la correction lorsqu’elle est matériellement utile ;
+6. préserver la page lorsqu’un signal est faux positif ou sans effet décisionnel ;
+7. journaliser aussi bien les réécritures que les décisions de conservation ;
+8. rendre compte du lot au terme de la passe.
 
-Les modifications d’infrastructure, d’audit, de méthode interne et les corrections purement techniques restent possibles sans validation lorsqu’elles ne changent pas le sens du contenu publié.
+Une instruction explicite ultérieure de l’utilisateur demandant à nouveau une validation unitaire remplacerait ce mode.
+
+Les modifications d’infrastructure, d’audit, de méthode interne et les corrections purement techniques restent possibles de façon autonome lorsqu’elles ne changent pas le sens du contenu publié.
 
 ## Source de vérité
 
 Le pilotage repose sur :
 
-1. `AGENTS.md` — doctrine et gate éditorial actuel ;
+1. `AGENTS.md` — doctrine et gouvernance éditoriale courantes ;
 2. `.github/workflows/corpus-solution-review.yml` — scan structurel des contenus indexables ;
 3. `reports/corpus-solution-review.md` — état du scan structurel ;
 4. `reports/corpus-solution-human-review*.json` — mémoire historique de revues internes attachées au SHA, **pas validation utilisateur** ;
-5. `reports/corpus-blind-spots.md` — file de reprise selon le nouveau standard d’angles morts ;
-6. `reports/content-review-decisions.md` — décisions explicites de validation/refus/report/révision.
+5. `reports/corpus-blind-spots.md` — file de reprise selon le standard d’angles morts ;
+6. `reports/audience-variant-coverage.md` — couverture des variantes d’audience ;
+7. `reports/content-review-decisions.md` — décisions explicites de réécriture, routage, conservation, vérification ou report.
 
-## Réécritures substantielles déjà réalisées avant le gate actuel
-
-Ces réécritures constituent des travaux historiques à **revisiter et valider**, pas des exemptions définitives :
+## Réécritures substantielles historiques à revisiter si nécessaire
 
 - `dossiers/choisir-statut-micro-ei-eurl-sasu.html`
 - `dossiers/cout-reel-voiture-achat-credit-loa-lld.html`
@@ -109,6 +111,8 @@ Ces réécritures constituent des travaux historiques à **revisiter et valider*
 - `dossiers/previsionnel-activite-12-mois.html`
 - `dossiers/location-courte-duree-meuble-tourisme.html`
 
+Ces travaux ne sont ni invalidés ni sanctuarisés : ils sont relus selon le même standard si un nouvel angle mort, une nouvelle variante d’audience ou une évolution factuelle le justifie.
+
 ## Définition de « suffisamment profond »
 
 Une page est suffisamment profonde seulement lorsque, compte tenu de sa fonction :
@@ -127,13 +131,12 @@ Une page est suffisamment profonde seulement lorsque, compte tenu de sa fonction
 - la réversibilité et la valeur des options sont traitées ;
 - la condition de renversement de la conclusion est explicite ;
 - les affirmations sensibles disposent du niveau de preuve adapté ;
-- l’ajout apporte plus qu’une compilation de résultats de recherche ;
-- la proposition éditoriale a été explicitement validée par l’utilisateur avant déploiement.
+- l’ajout apporte plus qu’une compilation de résultats de recherche.
 
 ## Règles permanentes
 
 1. Le score automatique est un détecteur, jamais une preuve de qualité.
-2. Une revue structurelle héritée n’est pas une validation éditoriale utilisateur.
+2. Une revue structurelle héritée n’est pas une validation éditoriale finale.
 3. Toute affirmation sensible modifiée doit être revérifiée contre des sources primaires à jour.
 4. Un levier doit passer le test : **« Si nous faisons X, alors Y change parce que Z. »**
 5. Absence de preuve d’impossibilité ≠ preuve de faisabilité.
@@ -145,7 +148,7 @@ Une page est suffisamment profonde seulement lorsque, compte tenu de sa fonction
 
 ## Prochaine logique de travail
 
-Le chantier est piloté par une **cartographie d’angles morts**, puis par validation unitaire.
+Le chantier est piloté par la **cartographie d’angles morts et la couverture des situations**, avec traitement autonome par priorité réelle.
 
 Ordre de priorité :
 
