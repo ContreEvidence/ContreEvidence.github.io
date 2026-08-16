@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **49**. Validations devenues caduques après modification : **74**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **48**. Validations devenues caduques après modification : **75**.
 
 ## Priorité humaine
 
@@ -66,6 +66,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/questions-poser-avant-prise-de-poste.html` | `946bd319f17d8bcf3b9c099f5f0b7a6cb7932c18` | `df65a9d9055ff6caf08a59556f680c35526ef907` |
 | `dossiers/trouver-premiers-clients.html` | `29837957e915643a0748021affe9c939cfc88f89` | `ae45cbcb2ec0e20e7b6bb613b59fb4efde5fe54c` |
 | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` | `f1faf0bbb75b36b784e38e370c13eb49654a622f` | `cd3b8d01fbf0c7fffab2c109fcca1a2b0ecbae7b` |
+| `dossiers/indivision-immobiliere-sortir-sans-subir.html` | `7050814d0158c4069612a710f31ed7aeb6fee26e` | `310a90c224f30fff2f202930c0925123f700edde` |
 | `dossiers/reconversion-sans-perte-salaire.html` | `128613ebf08c799823434c76e96f628ec6102a5a` | `a3bf47dce0da390a93742f2dcbac9dc557d188e8` |
 | `dossiers/patrimoine-permet-il-travailler-moins.html` | `c006f7a8de0d55c219f89748ad39053e8afecbec` | `343adf2f660396f9265ddab15531d93005090ae6` |
 | `dossiers/sante-travail-equilibre-vie-pro-perso.html` | `9075afe1528f2f4c763aa2ee6146d95a22ade56b` | `e0c5f4d97e9b96ce87e1cf00e611cddcbe349312` |
@@ -142,7 +143,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/couple-famille-argent-temps.html` — 9/9 automatique — Réécriture de référence : contributions, temps, sacrifices de carrière, propriété, règles temporaires et simulations déjà structurés.
 - `dossiers/creer-entreprise-sans-diplome.html` — 9/9 automatique — Réécriture de référence : fondateur/exécutant, activité réglementée, expérience, personne qualifiée, périmètre libre et voies alternatives déjà structurés.
 - `dossiers/quitter-cdi-avec-credit-immobilier.html` — 9/9 automatique — Réécriture de référence : dette existante versus nouveau financement, fenêtres temporelles, séquençage, réserve et déclarations exactes déjà structurés.
-- `dossiers/indivision-immobiliere-sortir-sans-subir.html` — 9/9 automatique — Propriété, dette, créances, occupation et stratégie de sortie séparées ; négociation, convention, rachat, vente et preuve déjà structurés.
 - `dossiers/indivision-rachat-progressif-parts.html` — 9/9 automatique — Fractionnement du rachat, courbe de propriété, dette bancaire distincte, valorisation, friction et alternatives en moins de tranches déjà structurés.
 - `dossiers/indivision-couple-separation-rachat-soulte.html` — 9/9 automatique — Réécriture de référence : refus bancaire actuel non confondu avec vente obligatoire, propriété/dette/créances séparées, fenêtres 1–5 ans et rachat futur simulés.
 
@@ -242,6 +242,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1718 | à revoir après changement | `dossiers/trouver-premiers-clients.html` |
 | 9/9 | 1733 | à revoir après changement | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` |
 | 9/9 | 1791 | humaine ✓ | `dossiers/prejuges-biais-monde-professionnel.html` |
+| 9/9 | 1794 | à revoir après changement | `dossiers/indivision-immobiliere-sortir-sans-subir.html` |
 | 9/9 | 1849 | à revoir après changement | `dossiers/reconversion-sans-perte-salaire.html` |
 | 9/9 | 1893 | à revoir après changement | `dossiers/patrimoine-permet-il-travailler-moins.html` |
 | 9/9 | 1901 | à revoir après changement | `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
@@ -259,7 +260,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 2180 | à revoir après changement | `dossiers/finances-investissement-locatif.html` |
 | 9/9 | 2183 | à revoir après changement | `dossiers/indivision-succession-heritiers-vendre-partager.html` |
 | 9/9 | 2201 | à revoir après changement | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` |
-| 9/9 | 2215 | humaine ✓ | `dossiers/indivision-immobiliere-sortir-sans-subir.html` |
 | 9/9 | 2251 | à revoir après changement | `dossiers/decision-plan-30-90-jours.html` |
 | 9/9 | 2272 | à revoir après changement | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` |
 | 9/9 | 2298 | à revoir après changement | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` |
