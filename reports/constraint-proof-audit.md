@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
 - P1 — affirmation forte à resserrer ou vérifier : **69**
-- P2 — nécessité à examiner : **155**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **911**
+- P2 — nécessité à examiner : **156**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **915**
 
 ## P0 — rouvrir en priorité
 
@@ -346,6 +346,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — 5 · Horizon Quel objectif doit être avancé, retardé, fractionné ou abandonné pendant les 90 prochains jours ? _[temporalité]_
 - **nécessité à requalifier ou sourcer** — C Je veux organiser ou investir mon capital Faire découler la répartition de votre argent de vos projets, de ce qui doit rester disponible, du risque acceptable et du temps dont vous disposez. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Il faut la transformer en étapes ordonnées, avec des ressources, des délais et des points de contrôle.
+- **nécessité à requalifier ou sourcer** — Il faut préparer les poches de liquidité et l’ordre d’utilisation du Livret/monétaire, de l’assurance-vie, du PEA et du PER, en cohérence avec pensions, fiscalité, logement et risque de marché.
 ### `parcours-pilotage-professionnel.html`
 - **nécessité à requalifier ou sourcer** — Le bon signal « Une capacité auparavant invisible est désormais prouvée et reconnue par un acteur extérieur. » Signaux de trajectoire Ce qui doit déclencher une action.
 - **nécessité à requalifier ou sourcer** — Tester le marché → 04 · Revue Qu'est-ce qui doit changer dans les 90 prochains jours ? _[temporalité]_
