@@ -20,7 +20,6 @@ Pages indexables analysées : **124**. Pages `noindex` exclues : **79**.
 | 12 | 8/15 | patrimoine / investissement / retraite | `dossiers/rembourser-credit-ou-investir.html` | attendre / statu quo, transfert de risque, condition de renversement, valeur d’option / irréversibilité |
 | 12 | 9/15 | emploi / carrière / qualification | `articles/accepter-nimporte-quel-poste-retour-emploi.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen, condition de renversement |
 | 12 | 9/15 | patrimoine / investissement / retraite | `articles/construire-epargne-de-zero.html` | attendre / statu quo, transfert de risque, condition de renversement, valeur d’option / irréversibilité |
-| 12 | 9/15 | entrepreneuriat / activité | `dossiers/are-arce-acre-creation-entreprise.html` | acteur/gatekeeper, substitution, attendre / statu quo, condition de renversement |
 | 12 | 9/15 | patrimoine / investissement / retraite | `dossiers/bien-immobilier-garder-vendre-transformer.html` | attendre / statu quo, transfert de risque, condition de renversement, fenêtre temporelle |
 | 12 | 9/15 | entrepreneuriat / activité | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | acteur/gatekeeper, substitution, effets de second ordre, condition de renversement |
 | 12 | 9/15 | patrimoine / investissement / retraite | `dossiers/finances-transmission-patrimoine.html` | attendre / statu quo, transfert de risque, condition de renversement, valeur d’option / irréversibilité |
@@ -62,6 +61,7 @@ Pages indexables analysées : **124**. Pages `noindex` exclues : **79**.
 | 9 | 10/15 | emploi / carrière / qualification | `articles/retrouver-emploi-apres-interruption.html` | acteur/gatekeeper, substitution, condition de renversement |
 | 9 | 10/15 | entrepreneuriat / activité | `articles/travailler-beaucoup-gagner-peu-prix.html` | acteur/gatekeeper, combinaison de leviers, attendre / statu quo |
 | 9 | 10/15 | entrepreneuriat / activité | `dossiers/allocation-patrimoine-selon-situation.html` | acteur/gatekeeper, substitution, attendre / statu quo |
+| 9 | 10/15 | entrepreneuriat / activité | `dossiers/are-arce-acre-creation-entreprise.html` | substitution, effets de second ordre, attendre / statu quo |
 
 ## Lecture par cluster
 
@@ -71,7 +71,7 @@ Pages : **35**. Angles le plus souvent non détectés : **transfert de risque** 
 
 ### entrepreneuriat / activité
 
-Pages : **26**. Angles le plus souvent non détectés : **acteur/gatekeeper** (15), **valeur d’option / irréversibilité** (15), **attendre / statu quo** (14), **substitution** (14), **transfert de risque** (13), **objectif réel / substitution du moyen** (11), **condition de renversement** (11).
+Pages : **26**. Angles le plus souvent non détectés : **valeur d’option / irréversibilité** (15), **acteur/gatekeeper** (14), **attendre / statu quo** (14), **substitution** (14), **transfert de risque** (13), **objectif réel / substitution du moyen** (11), **condition de renversement** (10).
 
 ### immobilier / crédit / indivision
 
