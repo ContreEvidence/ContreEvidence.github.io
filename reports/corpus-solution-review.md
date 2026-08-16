@@ -20,7 +20,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 |---|---|---|
 | `dossiers/indivision-loyers-charges-comptes.html` | `17a2f1637380da7fdce685ccf909e3eeb3d5523a` | `58e167161f9837e65d22f8c8ead933f1bada5b48` |
 | `dossiers/metiers-fonctions-organisation-entreprise.html` | `b9100c518af815d5e3d410b6184e23e03d065471` | `d1ad766d8bb16ec3e4e166eea84be714d760711e` |
-| `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | `7dbb9a5b999cc3cf143d8f63841135ec93581ac3` | `f0d1ee0fa1fbfc89b5bf7e1b2d324b8680b0d5b8` |
 | `dossiers/acheter-logement-sans-se-fragiliser.html` | `917027c5225fc0464db739ffa51972e38f4655f6` | `6c7f375c0b74b45666efb0fbff2aac1f530c03ba` |
 | `dossiers/finances-residence-principale.html` | `89bdee80210b87568b4831b77c18bccbc6c8f1f9` | `4b05edd96e80db6ba39a4d61c824d1fc766e3489` |
 | `dossiers/calculer-prix-minimum-rentable.html` | `1597bb81c5cba87c2e493fff0aa8a3bc640ac438` | `9625f1c2b342c3a6765072aa31ffb8c7c846fef2` |
@@ -62,6 +61,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` | `73804a97a74df735855ceb5291c6ce824e36da56` | `a982b4a256d31aa630435af2265c34c7134f8570` |
 | `dossiers/decision-plan-30-90-jours.html` | `c7bd8f5cd0a197ead2e0ebe3d947f0cacbc0d46c` | `450681d85699873f6a7322980d21c36d1cc38467` |
 | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` | `aab16c4e6601ab8b9d42fc4230e4e668cbc1d540` | `97fa9c117bef460b3c2679212f70d819f9872519` |
+| `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | `7dbb9a5b999cc3cf143d8f63841135ec93581ac3` | `160a66e65a40e3015317d8a6ea03589c02c19b68` |
 | `dossiers/finances-credit-endettement.html` | `0e7bf55b72e7d5d6a9b9df85ce1bd14c87f48715` | `d8d560cf2c838d289fa7b93c5cb7a0661987c11d` |
 | `articles/comparatif-produits-bancaires.html` | `f766c96540debfe1ce8ef1d2c7e38770df01b3f3` | `ac036634513c533460b7d5f49dcb8afc4914e497` |
 | `dossiers/finances-transmission-patrimoine.html` | `82b04a6992bd5fea253a773125768b5cb012a203` | `15070334cd5a3c650db719531dc521c35f00a76d` |
@@ -170,7 +170,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 7/9 | 2401 | humaine ✓ | `dossiers/demenager-pour-un-emploi-salaire-minimum.html` |
 | 8/9 | 1008 | humaine ✓ | `dossiers/immobilier-allocation-globale-patrimoine.html` |
 | 8/9 | 1074 | humaine ✓ | `dossiers/etude-marche-terrain.html` |
-| 8/9 | 1098 | à revoir après changement | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` |
 | 8/9 | 1124 | à revoir après changement | `dossiers/acheter-logement-sans-se-fragiliser.html` |
 | 8/9 | 1194 | humaine ✓ | `dossiers/comparer-strategies-immobilieres.html` |
 | 8/9 | 1200 | à revoir après changement | `dossiers/finances-residence-principale.html` |
@@ -262,6 +261,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 2215 | humaine ✓ | `dossiers/indivision-immobiliere-sortir-sans-subir.html` |
 | 9/9 | 2251 | à revoir après changement | `dossiers/decision-plan-30-90-jours.html` |
 | 9/9 | 2272 | à revoir après changement | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` |
+| 9/9 | 2298 | à revoir après changement | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` |
 | 9/9 | 2315 | à revoir après changement | `dossiers/finances-credit-endettement.html` |
 | 9/9 | 2347 | à revoir après changement | `articles/comparatif-produits-bancaires.html` |
 | 9/9 | 2381 | à revoir après changement | `dossiers/finances-transmission-patrimoine.html` |
