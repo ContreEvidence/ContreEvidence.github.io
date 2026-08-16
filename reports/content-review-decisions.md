@@ -84,6 +84,55 @@ Les décisions SHA-liées sont enregistrées dans `reports/corpus-blind-spot-hum
 - **Impact lecteur attendu :** transformer le prévisionnel en système de preuves, de dépendances et de déclencheurs : savoir quoi tester avant d’embaucher, louer, acheter ou quitter une source de revenu stable.
 - **Incertitude résiduelle :** les seuils d’alerte restent illustratifs et doivent être recalibrés selon secteur, saisonnalité, pouvoir de négociation, statut, fiscalité et besoins personnels.
 
+#### `dossiers/favoriser-un-enfant-succession-donation.html` — `REWRITE` + `VERIFY`
+
+- **Signal initial :** priorité heuristique 16 ; angles signalés sur attente, transfert de risque, hétérogénéité, renversement et irréversibilité.
+- **Lecture humaine :** signal confirmé. Le dossier expliquait bien réserve, quotité disponible et outils successoraux, mais ne distinguait pas assez l’objectif d’avantager un enfant du risque de dessaisir trop tôt le parent.
+- **Correction :** comparaison testament révocable / donation immédiate et en principe irrévocable ; stress test de sécurité du parent ; démembrement avec réserve d’usufruit comme substitution partielle ; conditions de la donation-partage et de l’article 1078 ; RAAR ; assurance-vie ; familles recomposées, conjoint, actifs indivisibles et liquidité ; conditions de report ou de renversement.
+- **Causalité :** une donation peut atteindre l’objectif de transmission tout en transférant une part de la sécurité financière du parent au donataire. Si l’objectif est seulement d’organiser une préférence future, un outil révocable peut préserver davantage d’options ; si l’aide doit être immédiate, le coût d’attendre peut au contraire dominer.
+- **Preuve :** règles revérifiées sur Code civil (réserve/quotité, art. 894, 895, 1078, 929 et suivants), Code des assurances L132-13 et Service-Public pour donation-partage et démembrement.
+- **Impact lecteur attendu :** passer de « combien puis-je donner en plus ? » à « quel outil atteint l’objectif sans créer une irréversibilité ou un transfert de risque mal absorbé ? ».
+- **Incertitude résiduelle :** conjoint, régime matrimonial, donations antérieures, fiscalité, international, vulnérabilité d’un héritier et composition des actifs exigent une analyse notariale du cas concret.
+
+#### `dossiers/reconversion-sans-perte-salaire.html` — `REWRITE` + `VERIFY`
+
+- **Signal initial :** priorité heuristique 16 ; attente, second ordre, transfert de risque, renversement et optionnalité insuffisamment visibles.
+- **Lecture humaine :** signal confirmé mais la page traitait déjà correctement le coût économique et plusieurs voies progressives. Le manque réel était le risque déplacé hors du seul salaire mensuel.
+- **Correction :** séparation revenu immédiat / revenu futur / capital / temps-santé ; gatekeepers PTP et ARE-F ; coût d’opportunité patrimonial ; coût du statu quo ; attente seulement avec déclencheur ; test du métier avant formation lourde ; surcharge des transitions progressives ; stress tests combinés ; effets post-reconversion et conditions de renversement.
+- **Causalité :** maintenir le salaire peut simplement transférer le coût vers l’épargne, la fatigue ou le salaire futur. Une attente devient productive uniquement si elle améliore une ressource, obtient une décision ou apporte une preuve qui peut changer le plan.
+- **Preuve :** règles PTP et ARE-F revérifiées sur Service-Public, Transitions Pro et France Travail ; absence d’automaticité du financement explicitement conservée.
+- **Impact lecteur attendu :** comparer des architectures de transition selon le risque total supporté par le foyer plutôt que selon le seul revenu du mois.
+- **Incertitude résiduelle :** droits, rémunération de formation, situation contractuelle, besoins du foyer, marché du travail et salaire de sortie doivent être vérifiés pour chaque personne.
+
+#### `dossiers/sante-travail-equilibre-vie-pro-perso.html` — `REWRITE` + `VERIFY`
+
+- **Signal initial :** première priorité restante ; acteur/gatekeeper, substitution, fractionnement, attente et renversement étaient peu détectés.
+- **Lecture humaine :** signal confirmé. Le dossier évaluait bien la soutenabilité mais proposait encore insuffisamment de branches entre « tenir » et « quitter ».
+- **Correction :** distinction métier/poste/organisation/temps/lieu ; identification du décideur pertinent ; visite de santé au travail à la demande ; possibilité de propositions d’aménagement du poste ou du temps par le médecin du travail ; fractionnement du problème ; attente conditionnelle ; risque transféré par le statu quo ; combinaisons de petits leviers et critères de sortie.
+- **Causalité :** si l’exposition est produite par une tâche, un horaire ou une organisation modifiable, une transformation ciblée peut réduire le risque à moindre coût qu’une reconversion complète. Si l’exposition persiste ou s’aggrave, la valeur de cette branche disparaît.
+- **Preuve :** obligations de prévention revérifiées sur L4121-1 et L4121-2 ; visite à la demande sur R4624-34 ; propositions d’aménagement sur L4624-3 ; prévention organisationnelle des RPS recoupée sur INRS.
+- **Impact lecteur attendu :** passer d’un diagnostic global sur « le travail » à un arbre d’action : exposition → niveau concerné → gatekeeper → test → durée → critère d’échec.
+- **Incertitude résiduelle :** aucune page éditoriale ne peut fixer un seuil médical de maintien ou de départ ; diagnostic, danger et compatibilité du poste relèvent des professionnels et dispositifs compétents.
+
+#### `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` — `REWRITE`
+
+- **Signal initial :** priorité heuristique 15 ; attente, second ordre, transfert de risque, renversement et optionnalité manquaient au détecteur.
+- **Lecture humaine :** page déjà forte sur besoin → objectif → moyen ; réécriture limitée aux dimensions réellement différenciantes.
+- **Correction :** ajout du risque transféré par toute optimisation, effets de second ordre, temps comme variable de décision, valeur d’une étape intermédiaire, options futures détruites ou préservées et test explicite de renversement.
+- **Causalité :** une stratégie peut améliorer parfaitement un indicateur tout en détruisant le besoin initial par ses effets de second ordre. Nommer l’option fermée et le coût transféré empêche l’optimisation locale de masquer la dégradation globale.
+- **Impact lecteur attendu :** donner au corpus une doctrine commune : ce qu’une stratégie améliore, ce qu’elle sacrifie, ce qu’elle rend plus difficile et ce qui la ferait réviser.
+- **Incertitude résiduelle :** finalités et préférences restent personnelles ; le dossier structure l’arbitrage sans imposer de fonction d’utilité universelle.
+
+#### `dossiers/business-plan-utile.html` — `REWRITE` + `VERIFY`
+
+- **Signal initial :** priorité heuristique 15 ; acteur/gatekeeper, substitution, fractionnement, attente et renversement insuffisamment visibles.
+- **Lecture humaine :** le dossier avait déjà un bon test d’abandon ; le manque réel concernait l’ordre des preuves avant les engagements et la pluralité des gatekeepers.
+- **Correction :** clients, banque, fournisseurs, bailleur et compétences critiques comme gatekeepers distincts ; hypothèse → acteur → preuve ; MVP et tests fractionnés ; preuves préalables aux coûts fixes ; scénario d’apprentissage ; attente pour information précise ; substitutions avant besoin de capital supplémentaire ; conditions de renversement.
+- **Causalité :** une banque peut financer un projet que le marché ne veut pas ; le client est donc un gatekeeper en amont. Plus un engagement est difficile à défaire, plus la preuve commerciale ou opérationnelle qui le précède doit être forte.
+- **Preuve :** méthode business plan, validation marché, MVP, prêt bancaire et plan de financement revérifiés sur Bpifrance Création.
+- **Impact lecteur attendu :** transformer le business plan d’un document de conviction en séquence de preuves qui autorisent — ou interdisent — les engagements suivants.
+- **Incertitude résiduelle :** un MVP n’est pertinent que lorsqu’un test réduit réellement l’incertitude ; certains projets réglementés, industriels ou fortement capitalistiques exigent des engagements préalables plus lourds.
+
 ## Campagne couverture des situations — 16 août 2026
 
 Une nouvelle dimension est ouverte après constat qu’une page peut être profonde sur son cas central tout en étant trop étroite pour l’audience attirée par sa promesse.
