@@ -7,7 +7,7 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **38**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **37**
 - S2 — possibilité générale à examiner : **14**
 - OK heuristique — condition ou preuve détectée : **155**
 
@@ -58,8 +58,6 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Santé / inaptitude : le management peut réduire le terrain… ou cumuler deux métiers Une évolution vers l’encadrement est parfois envisagée pour réduire une contrainte physique. _[fort enjeu, condition détectée]_
 ### `dossiers/embaucher-ou-sous-traiter.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Il permet de passer du salaire brut au coût total employeur. _[fort enjeu, preuve détectée]_
-### `dossiers/finances-cadre-global.html`
-- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Stress test avant d’adopter la politique Une allocation cible n’a de sens que si vous pouvez supporter son mauvais scénario. _[fort enjeu, condition détectée]_
 ### `dossiers/finances-credit-endettement.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Le coût total permet de voir ce que masque une mensualité réduite par une durée plus longue. _[fort enjeu, preuve détectée]_
 ### `dossiers/finances-enveloppes-fiscalite.html`
