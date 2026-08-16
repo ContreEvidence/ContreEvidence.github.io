@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **51**. Validations devenues caduques après modification : **72**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **50**. Validations devenues caduques après modification : **73**.
 
 ## Priorité humaine
 
@@ -59,6 +59,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/location-courte-duree-meuble-tourisme.html` | `ddaf6bc36e2171b5e249a161fb66926f963ea4d2` | `2959b70d729c737f2c037f540d7240da12770b7e` |
 | `dossiers/changer-travail-avant-credit-immobilier.html` | `8b7e88c9c93261fc35ebcb3a4fd5052430befe79` | `82bec88878cee4c35920b82ddd48e71012134651` |
 | `dossiers/trajectoire-professionnelle-selon-situation.html` | `340b3c58bd6809606aac38282afac472924ee2b1` | `c507f380db4a0bcb57571cb0d12d2625ced63d5c` |
+| `dossiers/finances-allocation-portefeuille.html` | `625ccbd17f7ecb7384ea9fb54c0ea57508261285` | `8ffa0f7ed6a743bdd65e43b4d3d7d02c59296126` |
 | `dossiers/finances-retraite-decumulation.html` | `eb117acf36b33c889691233c186e3837ef1177a7` | `edaf6e7b18596ed64fb1dad48011ef44ba0cc4d7` |
 | `dossiers/accepter-emploi-plus-loin-cout-trajet.html` | `90f2105cbfe1502d24237ff42c2304dec9fd12f7` | `723a94bf1bb087cd6c06680ecaf4bd18c5df15a4` |
 | `dossiers/passer-80-pourcent-cout-reel.html` | `47f382b81052f8abfae4795bae4f6bd07d13f005` | `59c19c7de50b40082ee9083b16a13421da9475ce` |
@@ -121,7 +122,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `articles/competences-invisibles-preuves.html` — 8/9 automatique — Revue angles morts : distingue preuve insuffisante et filtre local via le test même preuve/autre acteur, avec condition de renversement.
 - `dossiers/comparer-deux-offres-emploi.html` — 8/9 automatique — Non-négociables avant score, package réel, temps capturé, contrat, risque organisationnel, capital professionnel, scénarios et option C déjà structurés.
 - `articles/frais-fiscalite-rendement-net.html` — 8/9 automatique — Réécriture du 16/08 : frais fournisseurs actualisés, point mort de migration, coût ponctuel du changement et valeur des options perdues ajoutés.
-- `dossiers/finances-allocation-portefeuille.html` — 8/9 automatique — Fonctions avant pourcentages, capacité versus tolérance au risque, moteurs communs, budget de risque, séquence, stress tests et politique écrite déjà structurés.
 - `dossiers/decider-sans-tourner-en-rond.html` — 8/9 automatique — Contraintes versus préférences, valeur de l’information, coût d’erreur, réversibilité, sunk cost, contradiction, pré-mortem et décision falsifiable déjà structurés.
 - `dossiers/plan-30-jours-recherche-emploi.html` — 8/9 automatique — Entonnoir mesurable, deux séries comparables, une hypothèse de blocage à la fois, preuves, débrief et règles de continuation/repositionnement déjà structurés.
 - `dossiers/allocation-patrimoine-selon-situation.html` — 8/9 automatique — Allocation pilotée par fonction, horizon, stabilité des revenus et capacité de perte ; huit situations avec déclencheurs explicites de réallocation déjà structurées.
@@ -201,7 +201,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1756 | à revoir après changement | `dossiers/audit-copropriete-avant-achat.html` |
 | 8/9 | 1771 | à revoir après changement | `dossiers/capacite-refuser-travail-rentabilite.html` |
 | 8/9 | 1782 | à revoir après changement | `articles/sans-diplome-chemins-alternatifs.html` |
-| 8/9 | 1788 | humaine ✓ | `dossiers/finances-allocation-portefeuille.html` |
 | 8/9 | 1799 | humaine ✓ | `dossiers/decider-sans-tourner-en-rond.html` |
 | 8/9 | 1874 | à revoir après changement | `dossiers/creer-entreprise-avec-peu-argent.html` |
 | 8/9 | 1879 | à revoir après changement | `dossiers/bien-immobilier-garder-vendre-transformer.html` |
@@ -226,6 +225,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 2791 | à revoir après changement | `dossiers/changer-travail-avant-credit-immobilier.html` |
 | 9/9 | 1215 | humaine ✓ | `dossiers/depenses-recurrentes-abonnements-assurances.html` |
 | 9/9 | 1259 | à revoir après changement | `dossiers/trajectoire-professionnelle-selon-situation.html` |
+| 9/9 | 1292 | à revoir après changement | `dossiers/finances-allocation-portefeuille.html` |
 | 9/9 | 1323 | humaine ✓ | `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` |
 | 9/9 | 1324 | humaine ✓ | `dossiers/gestion-pilotee-comparer-performances.html` |
 | 9/9 | 1439 | humaine ✓ | `dossiers/valeur-option-bien-immobilier.html` |
