@@ -200,7 +200,7 @@ Promesse : **are, arce, acre : choisir pour créer son entreprise en 2026 | cont
 | Variante | Signal automatique |
 |---|---|
 | activité principale / complément | TRAITEE |
-| micro / EI / société | ROUTEE |
+| micro / EI / société | TRAITEE |
 | activité réglementée | MANQUANTE |
 | chômage / aides | TRAITEE |
 | TVA | MANQUANTE |
