@@ -47,10 +47,16 @@ jobs:
               r'aucune solution|aucune possibilité|ne sera jamais possible)\b',re.I
           )
 
+          # A categorical-looking phrase is acceptable when its scope is explicit.
+          # The detector must recognize temporal/operational qualifiers as well as
+          # legal or actor-specific qualifiers: "ne peut pas être réduit rapidement
+          # sans décision lourde" is not a claim of absolute impossibility.
           scope_re=re.compile(
               r'\b(?:dans ce cas|dans cette configuration|avec ces hypothèses|à ce jour|aujourd.?hui|'
               r'ce contrat|ce texte|cet établissement|cette banque|pour cet acte|selon|en principe|'
-              r'sous réserve|si |lorsque|tant que|dépend|condition|temporaire|local|à vérifier)\b',re.I
+              r'sous réserve|si |lorsque|tant que|dépend|condition|temporaire|local|à vérifier|'
+              r'rapidement|à court terme|à long terme|sans décision lourde|dans l.immédiat|'
+              r'à cette étape|dans ce périmètre)\b',re.I
           )
 
           # Explicit discussion of the vocabulary itself is not a factual closure.
