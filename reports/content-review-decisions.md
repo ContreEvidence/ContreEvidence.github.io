@@ -34,6 +34,16 @@ Les décisions SHA-liées sont enregistrées dans `reports/corpus-blind-spot-hum
 - **Impact lecteur attendu :** passer d’une checklist de conformité à une véritable décision de pré-signature : signer, faire préciser, substituer/négocier ou ne pas signer en l’état.
 - **Incertitude résiduelle :** la négociabilité effective dépend de l’employeur, de la convention collective, des accords applicables, du poste et du pouvoir réel de l’interlocuteur ; le dossier n’en fait pas une promesse de résultat.
 
+#### `dossiers/combien-chiffre-affaires-pour-vivre.html` — `REWRITE` + `VERIFY`
+
+- **Signal initial :** nouvelle première priorité de la cartographie après correction du dossier contrat de travail ; manque heuristique sur acteur/gatekeeper, substitution, fractionnement, second ordre et valeur de l’attente.
+- **Lecture humaine :** signal confirmé. La page calculait correctement seuils, marges et cas adverses, mais restait trop proche d’un modèle « CA cible → volume nécessaire ». Elle identifiait insuffisamment le verrou qui empêche réellement d’atteindre ce volume.
+- **Correction :** ajout d’une carte des cinq verrous (demande, prix/marge, capacité, trésorerie, dépendance), substitutions d’architecture, progression fractionnée vers le revenu principal, gatekeepers économiques, marches de coûts, capacité de refus et valeur informationnelle de l’attente.
+- **Causalité :** si la capacité maximale est inférieure au nombre de ventes nécessaire, davantage de prospection ne peut pas résoudre le problème ; il faut modifier prix, panier, densité, process ou architecture. Si un seul acteur contrôle le flux, la robustesse dépend aussi du temps de survie après sa disparition, pas seulement de la marge moyenne.
+- **Preuve :** définition et formule du seuil de rentabilité revérifiées sur Bpifrance Création ; les taux sociaux et fiscaux restent volontairement hors du calcul générique et doivent être simulés séparément selon le statut.
+- **Impact lecteur attendu :** passer de « combien de CA ? » à « quel modèle économique rend ce revenu atteignable, répétable et refusable ? ».
+- **Incertitude résiduelle :** les exemples restent pédagogiques ; la fiscalité, les prélèvements, la TVA, les aides, les obligations de statut et les besoins du foyer sont propres au cas concret.
+
 ## Campagne couverture des situations — 16 août 2026
 
 Une nouvelle dimension est ouverte après constat qu’une page peut être profonde sur son cas central tout en étant trop étroite pour l’audience attirée par sa promesse.
