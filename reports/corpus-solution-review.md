@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **64**. Validations devenues caduques après modification : **59**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **63**. Validations devenues caduques après modification : **60**.
 
 ## Priorité humaine
 
@@ -48,6 +48,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/changer-travail-avant-credit-immobilier.html` | `8b7e88c9c93261fc35ebcb3a4fd5052430befe79` | `82bec88878cee4c35920b82ddd48e71012134651` |
 | `dossiers/trajectoire-professionnelle-selon-situation.html` | `340b3c58bd6809606aac38282afac472924ee2b1` | `c507f380db4a0bcb57571cb0d12d2625ced63d5c` |
 | `dossiers/are-arce-acre-creation-entreprise.html` | `96944742e60f24751b001857871095f3ae55ce94` | `0a11bc2495d5e98ee3d769a581debaa5f66f4032` |
+| `dossiers/accepter-emploi-plus-loin-cout-trajet.html` | `90f2105cbfe1502d24237ff42c2304dec9fd12f7` | `723a94bf1bb087cd6c06680ecaf4bd18c5df15a4` |
 | `dossiers/trouver-premiers-clients.html` | `29837957e915643a0748021affe9c939cfc88f89` | `ae45cbcb2ec0e20e7b6bb613b59fb4efde5fe54c` |
 | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` | `f1faf0bbb75b36b784e38e370c13eb49654a622f` | `cd3b8d01fbf0c7fffab2c109fcca1a2b0ecbae7b` |
 | `dossiers/reconversion-sans-perte-salaire.html` | `128613ebf08c799823434c76e96f628ec6102a5a` | `a3bf47dce0da390a93742f2dcbac9dc557d188e8` |
@@ -86,7 +87,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/competences-qualification-employabilite.html` — 7/9 automatique — Séparation compétence/qualification/preuve, verrou légal versus recrutement, test sur 30 offres et voies alternatives déjà structurés.
 - `dossiers/garages-parkings-locaux-commerciaux.html` — 7/9 automatique — Vacance extrême, reconversion du local, financement, concentration, critères d’inversion et sortie avant entrée déjà structurés.
 - `dossiers/questions-poser-avant-prise-de-poste.html` — 7/9 automatique — Questions conçues pour réduire l’incertitude, croisement d’interlocuteurs, moyens versus responsabilités et matrice importance × inconnue déjà présents.
-- `dossiers/accepter-emploi-plus-loin-cout-trajet.html` — 7/9 automatique — Gain net, coût du temps, trois seuils, option de carrière, télétravail et déménagement comme architectures alternatives déjà traités.
 - `articles/investir-grosse-somme-dun-coup-ou-progressivement.html` — 7/9 automatique — Risque d’attente versus timing, stratégie hybride, calendrier mécanique, date de fin et motifs légitimes d’interruption déjà explicites.
 - `dossiers/cout-complet-achat-immobilier.html` — 7/9 automatique — Capital initial, coût d’opportunité, détention, copropriété, liquidité, revente et stress tests multidimensionnels déjà traités.
 - `dossiers/classes-actifs-allocation-patrimoine.html` — 7/9 automatique — Page de cartographie : séparation classe/véhicule/enveloppe, rôles, liquidité et agrégation par moteurs de risque déjà suffisamment explicites pour sa fonction.
@@ -156,7 +156,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 7/9 | 1285 | humaine ✓ | `dossiers/competences-qualification-employabilite.html` |
 | 7/9 | 1303 | humaine ✓ | `dossiers/garages-parkings-locaux-commerciaux.html` |
 | 7/9 | 1408 | humaine ✓ | `dossiers/questions-poser-avant-prise-de-poste.html` |
-| 7/9 | 1410 | humaine ✓ | `dossiers/accepter-emploi-plus-loin-cout-trajet.html` |
 | 7/9 | 1455 | humaine ✓ | `articles/investir-grosse-somme-dun-coup-ou-progressivement.html` |
 | 7/9 | 1462 | humaine ✓ | `dossiers/cout-complet-achat-immobilier.html` |
 | 7/9 | 1463 | humaine ✓ | `dossiers/classes-actifs-allocation-patrimoine.html` |
@@ -234,6 +233,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1494 | humaine ✓ | `dossiers/quitter-emploi-stable-ou-rester.html` |
 | 9/9 | 1563 | heuristique | `dossiers/separation-logement-achete-a-deux.html` |
 | 9/9 | 1615 | humaine ✓ | `dossiers/automatiser-ou-non-processus.html` |
+| 9/9 | 1656 | à revoir après changement | `dossiers/accepter-emploi-plus-loin-cout-trajet.html` |
 | 9/9 | 1707 | humaine ✓ | `dossiers/ameliorer-processus-sans-degrader-service.html` |
 | 9/9 | 1718 | à revoir après changement | `dossiers/trouver-premiers-clients.html` |
 | 9/9 | 1733 | à revoir après changement | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` |
