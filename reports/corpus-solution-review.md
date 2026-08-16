@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **120**. Validations devenues caduques après modification : **2**.
+Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **119**. Validations devenues caduques après modification : **3**.
 
 ## Priorité humaine
 
@@ -20,6 +20,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 |---|---|---|
 | `dossiers/decision-plan-30-90-jours.html` | `bbaaeeb8eb455d09d2f350f771cbb35631f71e17` | `c7bd8f5cd0a197ead2e0ebe3d947f0cacbc0d46c` |
 | `articles/clients-interesses-personne-nachete.html` | `d1c27c49f015873e1efdb0b95230274d18688c46` | `36393db1ca7c359beb075a4b3fe0e25fa86ee8bb` |
+| `dossiers/creer-entreprise-avec-peu-argent.html` | `c33927e54db0adede8026a6125f2848b70abf6b4` | `99fb67ac5498b3634df87e18d728af131d32c06e` |
 
 ## Pages validées humainement et inchangées
 
@@ -65,7 +66,6 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/business-plan-utile.html` — 8/9 automatique — Capacité, BFR, trois scénarios, trajectoire à trois ans et critères explicites d’abandon rendent le plan falsifiable.
 - `articles/sans-diplome-chemins-alternatifs.html` — 8/9 automatique — Verrou légal versus filtre RH versus préférence, 20–30 offres, VAE/certification/poste passerelle/diplôme complet, coût total, stress tests et option de sortie déjà structurés.
 - `dossiers/acheter-logement-sans-se-fragiliser.html` — 8/9 automatique — Apport, liquidité résiduelle, mensualité soutenable, stress tests et options de sortie déjà au niveau attendu lors de la revue antérieure.
-- `dossiers/creer-entreprise-avec-peu-argent.html` — 8/9 automatique — Coût de lancement distingué du besoin économique complet, BFR/runway et tests à faible capital déjà traités.
 - `dossiers/comparer-strategies-immobilieres.html` — 8/9 automatique — Même capital, revenu net, temps de gestion, vacance propre à chaque usage, option de repli et allocation patrimoniale globale déjà structurés.
 - `dossiers/are-arce-acre-creation-entreprise.html` — 8/9 automatique — Filet mensuel versus capital, besoin de financement réel, échec à M6, BFR, ACRE temporaire et questions à France Travail déjà structurés ; règles 2026 revérifiées le 16/08.
 - `dossiers/metiers-fonctions-organisation-entreprise.html` — 8/9 automatique — Fonctions lues par flux, décisions, interfaces et criticité ; transferts de compétences et test organisationnel déjà structurés.
@@ -191,7 +191,6 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1116 | humaine ✓ | `dossiers/business-plan-utile.html` |
 | 8/9 | 1170 | humaine ✓ | `articles/sans-diplome-chemins-alternatifs.html` |
 | 8/9 | 1185 | humaine ✓ | `dossiers/acheter-logement-sans-se-fragiliser.html` |
-| 8/9 | 1189 | humaine ✓ | `dossiers/creer-entreprise-avec-peu-argent.html` |
 | 8/9 | 1194 | humaine ✓ | `dossiers/comparer-strategies-immobilieres.html` |
 | 8/9 | 1201 | humaine ✓ | `dossiers/are-arce-acre-creation-entreprise.html` |
 | 8/9 | 1208 | humaine ✓ | `dossiers/metiers-fonctions-organisation-entreprise.html` |
@@ -248,6 +247,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1450 | à revoir après changement | `articles/clients-interesses-personne-nachete.html` |
 | 9/9 | 1469 | humaine ✓ | `dossiers/embaucher-ou-sous-traiter.html` |
 | 9/9 | 1474 | humaine ✓ | `articles/accepter-nimporte-quel-poste-retour-emploi.html` |
+| 9/9 | 1474 | à revoir après changement | `dossiers/creer-entreprise-avec-peu-argent.html` |
 | 9/9 | 1494 | humaine ✓ | `dossiers/quitter-emploi-stable-ou-rester.html` |
 | 9/9 | 1557 | humaine ✓ | `articles/comparatif-produits-bancaires.html` |
 | 9/9 | 1570 | humaine ✓ | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
