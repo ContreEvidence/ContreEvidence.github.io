@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **128**. Pages `noindex` exclues : **80**. Validations humaines actives : **42**. Validations devenues caduques après modification : **81**.
+Pages analysées : **129**. Pages `noindex` exclues : **80**. Validations humaines actives : **42**. Validations devenues caduques après modification : **81**.
 
 ## Priorité humaine
 
@@ -84,13 +84,13 @@ Pages analysées : **128**. Pages `noindex` exclues : **80**. Validations humain
 | `dossiers/finances-investissement-locatif.html` | `2c09f9a2b80c1ef004f4c07f5941dcf88894a1e3` | `98ddfae8c33b7d2e8cf18dbdaf56180f8c8b5e96` |
 | `dossiers/indivision-succession-heritiers-vendre-partager.html` | `edf2c7b8270a9c257c28c282fda78fa8a71dd0c9` | `ebb86a9c091deb6ccb2747e9acba6335bd66d818` |
 | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` | `73804a97a74df735855ceb5291c6ce824e36da56` | `a982b4a256d31aa630435af2265c34c7134f8570` |
-| `dossiers/patrimoine-selon-age-construire-utiliser.html` | `5de90833ce46e346e0e9e3c3877994fbbca9921c` | `d4aee1ef03b5649cbda4f1f81a48b94a9f31b91b` |
 | `dossiers/decision-plan-30-90-jours.html` | `c7bd8f5cd0a197ead2e0ebe3d947f0cacbc0d46c` | `450681d85699873f6a7322980d21c36d1cc38467` |
 | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` | `aab16c4e6601ab8b9d42fc4230e4e668cbc1d540` | `97fa9c117bef460b3c2679212f70d819f9872519` |
 | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | `7dbb9a5b999cc3cf143d8f63841135ec93581ac3` | `160a66e65a40e3015317d8a6ea03589c02c19b68` |
-| `articles/construire-epargne-de-zero.html` | `a528b4cc9c82d8c7d6b737144fceb7adc70bd100` | `fe37115c6e47987e4509ffd266c4e3a9266c9527` |
 | `dossiers/finances-credit-endettement.html` | `0e7bf55b72e7d5d6a9b9df85ce1bd14c87f48715` | `d8d560cf2c838d289fa7b93c5cb7a0661987c11d` |
+| `articles/construire-epargne-de-zero.html` | `a528b4cc9c82d8c7d6b737144fceb7adc70bd100` | `afa848569393911123b1166dfdc9daa81721a20f` |
 | `articles/comparatif-produits-bancaires.html` | `f766c96540debfe1ce8ef1d2c7e38770df01b3f3` | `ac036634513c533460b7d5f49dcb8afc4914e497` |
+| `dossiers/patrimoine-selon-age-construire-utiliser.html` | `5de90833ce46e346e0e9e3c3877994fbbca9921c` | `4197bc9524cbbf26f3d546dc4d448f93c85d4487` |
 | `dossiers/finances-transmission-patrimoine.html` | `82b04a6992bd5fea253a773125768b5cb012a203` | `b0d640f7a1e93de925f2f261e300b5cba6457787` |
 | `dossiers/comparer-deux-offres-emploi.html` | `3ff2b7f7af69505d49005ced8661971e69e02c2d` | `d117b47683b6b788c73ff7985facab6e0f742d0d` |
 | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | `9b46d98a92fde3c92c7d0ba563bbece7cb3ce9ad` | `bac921cbe2446cc20f220d80e11bede4856b9672` |
@@ -164,6 +164,7 @@ Pages analysées : **128**. Pages `noindex` exclues : **80**. Validations humain
 | 7/9 | 1546 | humaine ✓ | `dossiers/debloquer-demarche-administrative.html` |
 | 7/9 | 1726 | à revoir après changement | `dossiers/metiers-fonctions-organisation-entreprise.html` |
 | 7/9 | 1841 | à revoir après changement | `dossiers/regles-responsabilites-fautes-travail.html` |
+| 7/9 | 1989 | heuristique | `dossiers/seuils-maturite-patrimoniale.html` |
 | 7/9 | 2018 | à revoir après changement | `dossiers/are-arce-acre-creation-entreprise.html` |
 | 7/9 | 2401 | humaine ✓ | `dossiers/demenager-pour-un-emploi-salaire-minimum.html` |
 | 7/9 | 2458 | à revoir après changement | `dossiers/experience-devient-risque-recruteur.html` |
@@ -260,13 +261,13 @@ Pages analysées : **128**. Pages `noindex` exclues : **80**. Validations humain
 | 9/9 | 2176 | à revoir après changement | `dossiers/finances-investissement-locatif.html` |
 | 9/9 | 2183 | à revoir après changement | `dossiers/indivision-succession-heritiers-vendre-partager.html` |
 | 9/9 | 2201 | à revoir après changement | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` |
-| 9/9 | 2219 | à revoir après changement | `dossiers/patrimoine-selon-age-construire-utiliser.html` |
 | 9/9 | 2251 | à revoir après changement | `dossiers/decision-plan-30-90-jours.html` |
 | 9/9 | 2272 | à revoir après changement | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` |
 | 9/9 | 2298 | à revoir après changement | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` |
-| 9/9 | 2307 | à revoir après changement | `articles/construire-epargne-de-zero.html` |
 | 9/9 | 2315 | à revoir après changement | `dossiers/finances-credit-endettement.html` |
+| 9/9 | 2325 | à revoir après changement | `articles/construire-epargne-de-zero.html` |
 | 9/9 | 2347 | à revoir après changement | `articles/comparatif-produits-bancaires.html` |
+| 9/9 | 2357 | à revoir après changement | `dossiers/patrimoine-selon-age-construire-utiliser.html` |
 | 9/9 | 2390 | à revoir après changement | `dossiers/finances-transmission-patrimoine.html` |
 | 9/9 | 2444 | à revoir après changement | `dossiers/comparer-deux-offres-emploi.html` |
 | 9/9 | 2462 | à revoir après changement | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
