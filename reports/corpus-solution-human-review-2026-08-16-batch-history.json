@@ -1,0 +1,24 @@
+{
+  "reviewed_at": "2026-08-16",
+  "batch": "historical human reviews converted to exact-SHA memory",
+  "rule": "These pages were already human-reviewed and kept. This batch only attaches that prior decision to the exact current Git blob; any later content change invalidates it.",
+  "pages": {
+    "dossiers/audit-budget-60-minutes.html": {"sha": "3587adb70b6b9b4777145d36bcf3bedf645521a3", "status": "conforme", "note": "Audit déjà opérationnel : masses budgétaires, anomalies, priorisation et actions concrètes ; pas de gain causal identifié lors de la revue antérieure."},
+    "dossiers/dependance-gros-client.html": {"sha": "aff1498bfed0cdae7eb745a22fc9815b7c5ef260", "status": "conforme", "note": "Concentration, rupture du client principal, mois de survie, diversification causale et plan de réduction de dépendance déjà structurés."},
+    "dossiers/creer-entreprise-avec-peu-argent.html": {"sha": "c33927e54db0adede8026a6125f2848b70abf6b4", "status": "conforme", "note": "Coût de lancement distingué du besoin économique complet, BFR/runway et tests à faible capital déjà traités."},
+    "dossiers/indivision-loyers-charges-comptes.html": {"sha": "17a2f1637380da7fdce685ccf909e3eeb3d5523a", "status": "conforme", "note": "Flux de loyers, charges, preuves comptables, comptes entre indivisaires et architecture de décision déjà structurés lors de la revue antérieure."},
+    "dossiers/finances-retraite-decumulation.html": {"sha": "eb117acf36b33c889691233c186e3837ef1177a7", "status": "conforme", "note": "Gap retraite, risque de séquence, poches par fonction, garde-fous de retrait, longévité, stress tests et revue annuelle déjà structurés."},
+    "dossiers/passer-80-pourcent-cout-reel.html": {"sha": "47f382b81052f8abfae4795bae4f6bd07d13f005", "status": "conforme", "note": "Coût réel du temps libéré, impact sur marge du foyer, effets différés et réversibilité déjà traités lors de la revue antérieure."},
+    "dossiers/lancer-activite-sans-quitter-emploi.html": {"sha": "2f63b913b35de4a4dd8f3a6fed4d1b93b6a2761a", "status": "conforme", "note": "Lancement parallèle, contraintes à vérifier, seuils de bascule et séquençage avant abandon du revenu salarié déjà structurés."},
+    "dossiers/acheter-logement-sans-se-fragiliser.html": {"sha": "917027c5225fc0464db739ffa51972e38f4655f6", "status": "conforme", "note": "Apport, liquidité résiduelle, mensualité soutenable, stress tests et options de sortie déjà au niveau attendu lors de la revue antérieure."},
+    "dossiers/competent-mais-invisible-travail.html": {"sha": "c3a2113df9ecbabc57c47ea983eafb88022b0fdd", "status": "conforme", "note": "Valeur créée transformée en preuves observables, visibilité auprès des décideurs et alternatives à l’attente d’une reconnaissance spontanée déjà structurées."},
+    "dossiers/embaucher-ou-sous-traiter.html": {"sha": "3e2a1ada5ac4604fe7c317123ca1d17e130e8954", "status": "conforme", "note": "Coût complet, capacité, flexibilité, contrôle, seuil de charge et scénarios embauche/sous-traitance/hybride déjà structurés."},
+    "dossiers/liquidites-reserve-securite.html": {"sha": "b65acd49706bbca7200e5e912d5ebed532d48d79", "status": "conforme", "note": "Réserve calibrée par risques et charges plutôt que par règle universelle ; liquidité et marge d’option déjà traitées."},
+    "dossiers/reconversion-sans-perte-salaire.html": {"sha": "128613ebf08c799823434c76e96f628ec6102a5a", "status": "conforme", "note": "Maintien de revenu, manque à gagner, transition progressive, dispositifs conditionnels et solutions passerelles déjà structurés."},
+    "dossiers/regles-responsabilites-fautes-travail.html": {"sha": "8d0c5f5cbcba540922996705b1dcc2807513c62a", "status": "conforme", "note": "Erreur, négligence, insuffisance et faute décomposées ; qualification conditionnelle et conséquences distinguées, avec sources adaptées déjà présentes."},
+    "dossiers/ameliorer-processus-sans-degrader-service.html": {"sha": "43bd9c064ce5da2c61200268b8a559c7c726ba40", "status": "conforme", "note": "Processus, indicateurs, incitations, goulots et garde-fous qualité déjà structurés ; pas de réécriture artificielle lors de la revue antérieure."},
+    "dossiers/audit-copropriete-avant-achat.html": {"sha": "a0970b0fbb708617d937df0d3e62a49740a7a1b5", "status": "conforme", "note": "Documents, charges, travaux, gouvernance, scénarios de choc et signaux de renoncement déjà structurés."},
+    "dossiers/calculer-prix-minimum-rentable.html": {"sha": "1597bb81c5cba87c2e493fff0aa8a3bc640ac438", "status": "conforme", "note": "Coût complet, temps non facturé, capacité, marge et seuil de prix/volume déjà structurés."},
+    "dossiers/immobilier-allocation-globale-patrimoine.html": {"sha": "5efc7a75224680022c77aeaadaab037db1a3de52", "status": "conforme", "note": "Immobilier replacé dans l’allocation totale avec dette, concentration, liquidité et risques corrélés déjà structurés."}
+  }
+}
