@@ -17,6 +17,7 @@ on:
 permissions:
   contents: read
 
+# This job is also the regression guard for accidental assistant/UI citation tokens.
 jobs:
   check-indexable-pages:
     runs-on: ubuntu-latest
