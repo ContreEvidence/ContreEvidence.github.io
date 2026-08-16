@@ -7,9 +7,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **7**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **33**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **34**
 - S2 — possibilité générale à examiner : **16**
-- OK heuristique — condition ou preuve détectée : **155**
+- OK heuristique — condition ou preuve détectée : **156**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -52,6 +52,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Cas A — Service léger : moins de 1 000 € peut suffire pour tester Matériel 350 € Assurance / outils 250 € Communication initiale 150 € Marge imprévus 250 € Budget lancement 1 000 € Si le service peut être vendu avant d’acheter davantage de matériel, le risque financier reste faible. _[fort enjeu, condition détectée]_
 ### `dossiers/decider-a-deux-travail-patrimoine.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Le transfert de risque est souvent invisible Une démission peut réduire le revenu de A mais augmenter la dépendance du foyer au revenu de B. _[fort enjeu, condition détectée]_
+### `dossiers/devenir-manager-premiere-fois.html`
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Santé / inaptitude : le management peut réduire le terrain… ou cumuler deux métiers Une évolution vers l’encadrement est parfois envisagée pour réduire une contrainte physique. _[fort enjeu, condition détectée]_
 ### `dossiers/embaucher-ou-sous-traiter.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Il permet de passer du salaire brut au coût total employeur. _[fort enjeu, preuve détectée]_
 ### `dossiers/finances-cadre-global.html`
