@@ -7,9 +7,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **8**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **27**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **28**
 - S2 — possibilité générale à examiner : **12**
-- OK heuristique — condition ou preuve détectée : **144**
+- OK heuristique — condition ou preuve détectée : **143**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -72,6 +72,7 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Exemple simplifié Un remboursement de 20 000 € permet d’économiser 3 200 € d’intérêts et 600 € d’assurance sur la durée restante, mais coûte 300 € de frais. _[fort enjeu, preuve détectée]_
 ### `dossiers/tout-ca-pour-quoi-objectifs-besoins.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Ce que l’on dit vouloir Ce que l’on peut chercher derrière Conséquence 500 000 € de patrimoine Sécurité, retraite, transmission, liberté de choix La bonne allocation dépend de la fonction du capital. _[fort enjeu, condition détectée]_
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Toute optimisation transfère quelque chose On optimise… On peut transférer le coût vers… le rendement la liquidité, la volatilité ou le risque de perte. le salaire le temps, le trajet, la santé ou la disponibilité familiale. la sécurité la croissance, l’apprentissage ou la liberté d’expérimenter. la vitesse la réversibilité et le droit à l’erreur. le confort présent les ressources du futur soi ou des proches. _[fort enjeu, condition détectée]_
 ### `dossiers/tresorerie-bfr-entreprise.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Une vue sur 13 semaines permet de voir les creux. _[fort enjeu, preuve détectée]_
 ### `dossiers/valeur-option-bien-immobilier.html`
