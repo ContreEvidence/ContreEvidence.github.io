@@ -22,6 +22,18 @@ La revue de profondeur a ajouté une seconde couche au contrôle structurel hist
 
 Les décisions SHA-liées sont enregistrées dans `reports/corpus-blind-spot-human-review-2026-08-16.json` et les rapports associés.
 
+### Reprise autonome après cartographie
+
+#### `dossiers/contrat-travail-clauses-verifier-avant-signer.html` — `REWRITE` + `VERIFY`
+
+- **Signal initial :** première priorité de `reports/corpus-blind-spots.md`, avec manque heuristique sur substitution, fractionnement, combinaison de leviers, second ordre, statu quo et condition de renversement.
+- **Lecture humaine :** signal confirmé en partie. La page était déjà solide sur l’inventaire des clauses et le stress test, mais raisonnait trop souvent comme si chaque clause devait être acceptée, refusée ou négociée isolément.
+- **Correction :** ajout d’une logique de substitution contractuelle, identification du vrai gatekeeper, combinaison des risques, valeur du délai avant signature, quatre sorties de décision et condition explicite de renversement.
+- **Causalité :** si le lecteur distingue règle non modifiable, modèle standard, interlocuteur sans pouvoir et variable réellement négociable, il peut tester davantage d’architectures sans confondre refus initial et impossibilité. Si plusieurs clauses activent le même scénario adverse, l’analyse combinée révèle un risque invisible clause par clause.
+- **Preuve :** cadre des informations remises au salarié revérifié sur Code du travail L1221-5-1 et R1221-34 à R1221-41 ; période d’essai et non-concurrence recoupées sur les fiches officielles Service-Public liées dans le dossier.
+- **Impact lecteur attendu :** passer d’une checklist de conformité à une véritable décision de pré-signature : signer, faire préciser, substituer/négocier ou ne pas signer en l’état.
+- **Incertitude résiduelle :** la négociabilité effective dépend de l’employeur, de la convention collective, des accords applicables, du poste et du pouvoir réel de l’interlocuteur ; le dossier n’en fait pas une promesse de résultat.
+
 ## Campagne couverture des situations — 16 août 2026
 
 Une nouvelle dimension est ouverte après constat qu’une page peut être profonde sur son cas central tout en étant trop étroite pour l’audience attirée par sa promesse.
