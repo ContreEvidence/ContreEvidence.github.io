@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **101**. Validations devenues caduques après modification : **22**.
+Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **100**. Validations devenues caduques après modification : **23**.
 
 ## Priorité humaine
 
@@ -19,6 +19,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | Page | SHA relu | SHA courant |
 |---|---|---|
 | `dossiers/metiers-fonctions-organisation-entreprise.html` | `b9100c518af815d5e3d410b6184e23e03d065471` | `d1ad766d8bb16ec3e4e166eea84be714d760711e` |
+| `dossiers/calculer-prix-minimum-rentable.html` | `1597bb81c5cba87c2e493fff0aa8a3bc640ac438` | `9625f1c2b342c3a6765072aa31ffb8c7c846fef2` |
 | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` | `e782289f8d68aab912acdd201a649e7782204756` | `959ef22860e5b38b622378e56ec4a2de9123e610` |
 | `dossiers/quand-vie-change-sante-separation-revenu.html` | `7c1e0e0d680c29f25db5fc5d7c9b17ccb1f37d6a` | `1487618f513ec93eafa2bc48959f9c83f74bcc57` |
 | `dossiers/business-plan-utile.html` | `e905253a4ba67437152d5227dcdd9dd464886d32` | `d67ecb168823cccfc96f3a853f21e902602d46bb` |
@@ -129,7 +130,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/indivision-succession-heritiers-vendre-partager.html` — 9/9 automatique — Droits, usages, liquidité, soultes, vente, partage, convention et scénarios de blocage déjà distingués et structurés.
 - `dossiers/ameliorer-processus-sans-degrader-service.html` — 9/9 automatique — Processus, indicateurs, incitations, goulots et garde-fous qualité déjà structurés ; pas de réécriture artificielle lors de la revue antérieure.
 - `articles/travailler-beaucoup-gagner-peu-prix.html` — 9/9 automatique — Temps contraint, prix, marge, densité, panier, périmètre et refus de missions reliés causalement au revenu réel.
-- `dossiers/calculer-prix-minimum-rentable.html` — 9/9 automatique — Coût complet, temps non facturé, capacité, marge et seuil de prix/volume déjà structurés.
 - `dossiers/liquidites-reserve-securite.html` — 9/9 automatique — Revue angles morts : fiabilité, délai et corrélation des ressources de secours ; distinction perte finale/liquidité immédiate.
 - `dossiers/prejuges-biais-monde-professionnel.html` — 9/9 automatique — Réécriture du 16/08 : diagnostic signal/gatekeeper/discrimination, test causal, substitution d’acteur et seuil de sortie du registre de persuasion.
 - `dossiers/finances-enveloppes-fiscalite.html` — 9/9 automatique — Enveloppe séparée de l’actif, disponibilité, fiscalité, frais, horizon et sortie comparés avant optimisation locale.
@@ -186,6 +186,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1227 | humaine ✓ | `dossiers/protocole-verifier-reponse-ia.html` |
 | 8/9 | 1286 | humaine ✓ | `dossiers/reconversion-sans-formation-longue.html` |
 | 8/9 | 1317 | humaine ✓ | `dossiers/emploi-chercher-accepter-negocier-evoluer.html` |
+| 8/9 | 1334 | à revoir après changement | `dossiers/calculer-prix-minimum-rentable.html` |
 | 8/9 | 1337 | humaine ✓ | `dossiers/competent-mais-invisible-travail.html` |
 | 8/9 | 1344 | à revoir après changement | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` |
 | 8/9 | 1351 | humaine ✓ | `dossiers/tresorerie-bfr-entreprise.html` |
@@ -247,7 +248,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1707 | humaine ✓ | `dossiers/ameliorer-processus-sans-degrader-service.html` |
 | 9/9 | 1733 | à revoir après changement | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` |
 | 9/9 | 1760 | humaine ✓ | `articles/travailler-beaucoup-gagner-peu-prix.html` |
-| 9/9 | 1777 | humaine ✓ | `dossiers/calculer-prix-minimum-rentable.html` |
 | 9/9 | 1783 | humaine ✓ | `dossiers/liquidites-reserve-securite.html` |
 | 9/9 | 1791 | humaine ✓ | `dossiers/prejuges-biais-monde-professionnel.html` |
 | 9/9 | 1849 | à revoir après changement | `dossiers/reconversion-sans-perte-salaire.html` |
