@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **40**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **24**.
+Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **24**.
 
 ## Priorités de relecture
 
@@ -15,7 +15,6 @@ Pages/familles détectées : **40**. Pages `noindex` exclues : **79**. Promesses
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/devenir-manager-premiere-fois.html` | demandeur emploi, santé / inaptitude, sans diplôme, revenu / runway |
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | salarié, santé / inaptitude, sans diplôme, revenu / runway |
 | 22 | NON_READY | reconversion / trajectoire pro | `articles/retrouver-emploi-apres-interruption.html` | salarié, demandeur emploi, sans diplôme |
-| 22 | NON_READY | reconversion / trajectoire pro | `dossiers/formation-vaut-elle-le-cout.html` | salarié, demandeur emploi, santé / inaptitude |
 | 21 | NON_READY | reconversion / trajectoire pro | `articles/competences-transferables.html` | demandeur emploi, santé / inaptitude, sans diplôme |
 | 21 | NON_READY | travailler moins / qualité de vie | `dossiers/patrimoine-permet-il-travailler-moins.html` | salarié privé, public, indépendant |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | indivision directe, mariage, PACS |
@@ -35,6 +34,7 @@ Pages/familles détectées : **40**. Pages `noindex` exclues : **79**. Promesses
 | 10 | NON_READY | transmission / succession | `dossiers/finances-transmission-patrimoine.html` | SCI / parts |
 | 8 | NON_READY | achat immobilier / crédit | `dossiers/acheter-logement-sans-se-fragiliser.html` | CDD / temporaire |
 | 8 | NON_READY | achat immobilier / crédit | `dossiers/finances-residence-principale.html` | CDD / temporaire |
+| 8 | NON_READY | entrepreneuriat | `dossiers/formation-vaut-elle-le-cout.html` | micro / EI / société |
 | 8 | NON_READY | reconversion / trajectoire pro | `dossiers/trajectoire-professionnelle-selon-situation.html` | sans diplôme |
 | 7 | NON_READY | entrepreneuriat | `dossiers/are-arce-acre-creation-entreprise.html` | activité réglementée |
 | 5 | ROUTE_FIRST | achat immobilier / crédit | `dossiers/changer-travail-avant-credit-immobilier.html` | indépendant |
@@ -50,6 +50,7 @@ Pages/familles détectées : **40**. Pages `noindex` exclues : **79**. Promesses
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/audit-budget-60-minutes.html` | — |
 | 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/creer-entreprise-sans-diplome.html` | — |
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | — |
+| 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/formation-vaut-elle-le-cout.html` | — |
 | 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/reconversion-sans-perte-salaire.html` | — |
 | 0 | COVERED_OR_NARROW | couple / logement / séparation | `dossiers/separation-logement-achete-a-deux.html` | — |
 
@@ -97,21 +98,6 @@ Promesse : **retrouver un emploi après une longue interruption : reconstruire s
 | indépendant | MANQUANTE |
 | santé / inaptitude | MENTIONNEE |
 | sans diplôme | MANQUANTE |
-| senior / âge | MANQUANTE |
-| revenu / runway | TRAITEE |
-
-### `dossiers/formation-vaut-elle-le-cout.html` — reconversion / trajectoire pro
-
-Promesse : **choisir une formation pour une reconversion : coût, rncp et débouchés | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| salarié | MANQUANTE |
-| demandeur emploi | MANQUANTE |
-| public | MANQUANTE |
-| indépendant | MANQUANTE |
-| santé / inaptitude | MANQUANTE |
-| sans diplôme | MENTIONNEE |
 | senior / âge | MANQUANTE |
 | revenu / runway | TRAITEE |
 
@@ -380,6 +366,20 @@ Promesse : **acheter ou louer sa résidence principale : durée, mobilité et co
 | apport / liquidité | TRAITEE |
 | dette existante | TRAITEE |
 
+### `dossiers/formation-vaut-elle-le-cout.html` — entrepreneuriat
+
+Promesse : **choisir une formation pour une reconversion : coût, rncp et débouchés | contre-évidence**
+
+| Variante | Signal automatique |
+|---|---|
+| activité principale / complément | MENTIONNEE |
+| micro / EI / société | MANQUANTE |
+| activité réglementée | TRAITEE |
+| chômage / aides | TRAITEE |
+| TVA | MANQUANTE |
+| financement / BFR | TRAITEE |
+| associés | MANQUANTE |
+
 ### `dossiers/trajectoire-professionnelle-selon-situation.html` — reconversion / trajectoire pro
 
 Promesse : **quelle stratégie professionnelle selon votre situation ? 8 trajectoires concrètes | contre-évidence**
@@ -429,11 +429,11 @@ Pages détectées : **1**. Promesses larges `NON_READY` : **1**. Variantes le pl
 
 ### reconversion / trajectoire pro
 
-Pages détectées : **13**. Promesses larges `NON_READY` : **9**. Variantes le plus souvent non détectées : **public** (13), **senior / âge** (12), **indépendant** (11), **sans diplôme** (9), **santé / inaptitude** (6), **demandeur emploi** (5).
+Pages détectées : **13**. Promesses larges `NON_READY` : **8**. Variantes le plus souvent non détectées : **public** (12), **senior / âge** (11), **indépendant** (10), **sans diplôme** (9), **santé / inaptitude** (5), **demandeur emploi** (4).
 
 ### entrepreneuriat
 
-Pages détectées : **5**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **TVA** (4), **activité réglementée** (4), **associés** (4), **micro / EI / société** (2).
+Pages détectées : **6**. Promesses larges `NON_READY` : **4**. Variantes le plus souvent non détectées : **TVA** (5), **associés** (5), **activité réglementée** (4), **micro / EI / société** (3).
 
 ### budget / dettes
 
