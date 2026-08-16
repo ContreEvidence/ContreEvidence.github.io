@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **69**. Validations devenues caduques après modification : **54**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **68**. Validations devenues caduques après modification : **55**.
 
 ## Priorité humaine
 
@@ -32,6 +32,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/capacite-refuser-travail-rentabilite.html` | `aace252f32a1faf81cf6e0a4665e9b60e694129e` | `91ebe0bb0dc7e77c7a5a042210a2f54a7e04570e` |
 | `articles/sans-diplome-chemins-alternatifs.html` | `d5f6867f38969bb89ca16df2bfdbd7ed2fed77ca` | `2a7cd63ced34759f03482dd0381857c50af183b0` |
 | `dossiers/creer-entreprise-avec-peu-argent.html` | `99fb67ac5498b3634df87e18d728af131d32c06e` | `e761b606c01252b83ba6bc6dd6209e1c98e8023d` |
+| `dossiers/bien-immobilier-garder-vendre-transformer.html` | `851bc30ba2290f512e60911db8fbd24966b8a95f` | `f284772d45fc5d642ba0ba589b3b8cafdbbe4b73` |
 | `dossiers/devenir-manager-premiere-fois.html` | `5b37be7ac97ba89e23e4f31456f90008c7ec49e5` | `20a9d53327c6b914612bb9737b5f6c5eecd266cd` |
 | `articles/construire-epargne-de-zero.html` | `a528b4cc9c82d8c7d6b737144fceb7adc70bd100` | `f48bf6af11c6cb13c903ec0029517ae0b4281ea7` |
 | `dossiers/decider-a-deux-travail-patrimoine.html` | `ba14b77f52087dfb20b0813df082369592184e8e` | `1971f8f7829d71996d0f7c3d06f20360bd7cbab2` |
@@ -140,7 +141,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/audit-budget-60-minutes.html` — 9/9 automatique — Revue angles morts : seuil où les économies réalistes deviennent mathématiquement insuffisantes et bascule vers déficit structurel.
 - `dossiers/creer-entreprise-sans-diplome.html` — 9/9 automatique — Réécriture de référence : fondateur/exécutant, activité réglementée, expérience, personne qualifiée, périmètre libre et voies alternatives déjà structurés.
 - `dossiers/quitter-cdi-avec-credit-immobilier.html` — 9/9 automatique — Réécriture de référence : dette existante versus nouveau financement, fenêtres temporelles, séquençage, réserve et déclarations exactes déjà structurés.
-- `dossiers/bien-immobilier-garder-vendre-transformer.html` — 9/9 automatique — Valeur actuelle, capital alternatif, rendement d’usage, transformation, coût d’opportunité, scénarios et sortie déjà structurés.
 - `dossiers/indivision-immobiliere-sortir-sans-subir.html` — 9/9 automatique — Propriété, dette, créances, occupation et stratégie de sortie séparées ; négociation, convention, rachat, vente et preuve déjà structurés.
 - `dossiers/indivision-rachat-progressif-parts.html` — 9/9 automatique — Fractionnement du rachat, courbe de propriété, dette bancaire distincte, valorisation, friction et alternatives en moins de tranches déjà structurés.
 - `dossiers/indivision-couple-separation-rachat-soulte.html` — 9/9 automatique — Réécriture de référence : refus bancaire actuel non confondu avec vente obligatoire, propriété/dette/créances séparées, fenêtres 1–5 ans et rachat futur simulés.
@@ -203,6 +203,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1788 | humaine ✓ | `dossiers/finances-allocation-portefeuille.html` |
 | 8/9 | 1799 | humaine ✓ | `dossiers/decider-sans-tourner-en-rond.html` |
 | 8/9 | 1874 | à revoir après changement | `dossiers/creer-entreprise-avec-peu-argent.html` |
+| 8/9 | 1879 | à revoir après changement | `dossiers/bien-immobilier-garder-vendre-transformer.html` |
 | 8/9 | 1899 | à revoir après changement | `dossiers/devenir-manager-premiere-fois.html` |
 | 8/9 | 1956 | à revoir après changement | `articles/construire-epargne-de-zero.html` |
 | 8/9 | 1976 | à revoir après changement | `dossiers/decider-a-deux-travail-patrimoine.html` |
@@ -252,7 +253,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1980 | à revoir après changement | `articles/checklist-avant-placement-conseiller.html` |
 | 9/9 | 2013 | humaine ✓ | `dossiers/creer-entreprise-sans-diplome.html` |
 | 9/9 | 2015 | humaine ✓ | `dossiers/quitter-cdi-avec-credit-immobilier.html` |
-| 9/9 | 2018 | humaine ✓ | `dossiers/bien-immobilier-garder-vendre-transformer.html` |
 | 9/9 | 2050 | à revoir après changement | `articles/choisir-etf-mondial-debutant.html` |
 | 9/9 | 2108 | à revoir après changement | `dossiers/temps-energie-qualite-vie.html` |
 | 9/9 | 2167 | à revoir après changement | `dossiers/favoriser-un-enfant-succession-donation.html` |
