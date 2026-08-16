@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
-- P1 — affirmation forte à resserrer ou vérifier : **66**
+- P1 — affirmation forte à resserrer ou vérifier : **67**
 - P2 — nécessité à examiner : **153**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **867**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **872**
 
 ## P0 — rouvrir en priorité
 
@@ -104,6 +104,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/indivision-immobiliere-sortir-sans-subir.html`
 - **affirmation forte sans signal de source explicite** — Les notaires rappellent aussi qu’une banque peut refuser la désolidarisation si la personne qui garde le bien ne peut pas assumer seule le crédit. citeturn912379search3turn912379search9 Conséquence : un montage patrimonial peut être juridiquement possible et rester économiquement inutilisable si la dette ne peut pas être réorganisée. _[périmètre]_
 - **affirmation forte sans signal de source explicite** — Rachat progressif : quand le tout-ou-rien est financièrement impossible Un indivisaire peut céder tout ou partie de ses droits. _[périmètre, temporalité]_
+### `dossiers/lancer-activite-sans-quitter-emploi.html`
+- **fermeture forte sourcée mais formulation trop absolue** — Activité déjà créée avant nouvel emploi Nouveau contrat/statut + règles de cumul Le nouvel emploi rend-il le maintien impossible ou soumis à autorisation ? _[signal-source, temporalité]_
 ### `dossiers/location-courte-duree-meuble-tourisme.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Contre-Évidence La location courte durée n’est ni « interdite » ni « plus rentable » par nature. _[signal-source, temporalité]_
 - **fermeture forte sourcée mais formulation trop absolue** — Fractionner ne permet jamais de « tester » une exploitation interdite. _[signal-source]_
