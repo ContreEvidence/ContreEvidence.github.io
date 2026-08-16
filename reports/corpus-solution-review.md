@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **116**. Validations devenues caduques après modification : **6**.
+Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **122**. Validations devenues caduques après modification : **0**.
 
 ## Priorité humaine
 
@@ -16,14 +16,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 
 ## Validations devenues caduques
 
-| Page | SHA relu | SHA courant |
-|---|---|---|
-| `dossiers/decision-plan-30-90-jours.html` | `bbaaeeb8eb455d09d2f350f771cbb35631f71e17` | `c7bd8f5cd0a197ead2e0ebe3d947f0cacbc0d46c` |
-| `articles/competences-invisibles-preuves.html` | `cdc64be6a4013f201888b529313621f4c4ab3e3e` | `1894940607caec4067fd8609603f3e5ebe4233f2` |
-| `articles/clients-interesses-personne-nachete.html` | `d1c27c49f015873e1efdb0b95230274d18688c46` | `36393db1ca7c359beb075a4b3fe0e25fa86ee8bb` |
-| `dossiers/creer-entreprise-avec-peu-argent.html` | `c33927e54db0adede8026a6125f2848b70abf6b4` | `99fb67ac5498b3634df87e18d728af131d32c06e` |
-| `dossiers/liquidites-reserve-securite.html` | `b65acd49706bbca7200e5e912d5ebed532d48d79` | `ae88ad8ae7c6981800827b83825e37da0c51d1c5` |
-| `dossiers/audit-budget-60-minutes.html` | `3587adb70b6b9b4777145d36bcf3bedf645521a3` | `8de2b2164b0d8d56823db98de8e87e9fbf70bef8` |
+Aucune.
 
 ## Pages validées humainement et inchangées
 
@@ -41,6 +34,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/rembourser-credit-ou-investir.html` — 7/9 automatique — Rendement certain de la dette versus rendement incertain, liquidité, dette globale, scénarios 100/0-hybride et règle de décision déjà traités.
 - `articles/choisir-etf-mondial-debutant.html` — 7/9 automatique — Exposition avant produit, concentration, chevauchement, enveloppe, risque et séquence de sélection déjà structurés pour une page de choix d’ETF.
 - `dossiers/apprendre-developper-competences.html` — 7/9 automatique — Situation cible, modalités alternatives, autonomie progressive, stress test, seuil de formation et condition d’inversion déjà structurés.
+- `dossiers/decision-plan-30-90-jours.html` — 7/9 automatique — Revue angles morts : dépendances externes, contrôle/influence/dépendance, voie parallèle, attente bornée et séquence de préservation d’option ajoutées.
 - `dossiers/contrat-travail-clauses-verifier-avant-signer.html` — 7/9 automatique — Clauses lues comme options, matrice probabilité × impact × réversibilité, scénarios adverses et négociation avant signature déjà présents.
 - `dossiers/patrimoine-permet-il-travailler-moins.html` — 7/9 automatique — Coût net du temps libéré, runway, trois seuils de liberté, stress test et réversibilité déjà structurés.
 - `dossiers/competences-qualification-employabilite.html` — 7/9 automatique — Séparation compétence/qualification/preuve, verrou légal versus recrutement, test sur 30 offres et voies alternatives déjà structurés.
@@ -94,6 +88,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/lancer-activite-sans-quitter-emploi.html` — 8/9 automatique — Lancement parallèle, contraintes à vérifier, seuils de bascule et séquençage avant abandon du revenu salarié déjà structurés.
 - `dossiers/audit-copropriete-avant-achat.html` — 8/9 automatique — Documents, charges, travaux, gouvernance, scénarios de choc et signaux de renoncement déjà structurés.
 - `dossiers/negocier-salaire-responsabilites.html` — 8/9 automatique — Poste réel versus surcharge, package complet, BATNA, coût de rester, contreparties alternatives, horizon et seuil de mobilité externe déjà structurés.
+- `articles/competences-invisibles-preuves.html` — 8/9 automatique — Revue angles morts : distingue preuve insuffisante et filtre local via le test même preuve/autre acteur, avec condition de renversement.
 - `dossiers/temps-energie-qualite-vie.html` — 8/9 automatique — Réécriture de référence : temps et énergie traités comme ressources, coût horaire du temps racheté, combinaisons de leviers et seuils d’usage déjà structurés.
 - `dossiers/favoriser-un-enfant-succession-donation.html` — 8/9 automatique — Intention réelle décomposée, réserve/quotité, outils alternatifs, liquidité du partage, stress tests et protocole notarial déjà structurés.
 - `dossiers/indivision-loyers-charges-comptes.html` — 8/9 automatique — Flux de loyers, charges, preuves comptables, comptes entre indivisaires et architecture de décision déjà structurés lors de la revue antérieure.
@@ -119,8 +114,10 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/devenir-manager-premiere-fois.html` — 9/9 automatique — Rôle, délégation, seuils d’escalade, information, rituels, erreurs de contrôle et critères d’ajustement déjà structurés.
 - `dossiers/decider-a-deux-travail-patrimoine.html` — 9/9 automatique — Transferts de risque et de temps entre personnes rendus visibles, scénarios symétriques, règles temporaires et révision déjà structurés.
 - `dossiers/valeur-option-bien-immobilier.html` — 9/9 automatique — Option immobilière distinguée de faisabilité prouvée, valeur conditionnelle, coûts d’activation et scénarios de sortie déjà structurés.
+- `articles/clients-interesses-personne-nachete.html` — 9/9 automatique — Revue angles morts : utilisateur/payeur/décideur, coût de changement, fenêtre de décision et architecture de transaction intégrés.
 - `dossiers/embaucher-ou-sous-traiter.html` — 9/9 automatique — Coût complet, capacité, flexibilité, contrôle, seuil de charge et scénarios embauche/sous-traitance/hybride déjà structurés.
 - `articles/accepter-nimporte-quel-poste-retour-emploi.html` — 9/9 automatique — Premier poste lu comme achat de preuve et d’options, avec coût d’enfermement, seuil de sortie et alternatives déjà structurés.
+- `dossiers/creer-entreprise-avec-peu-argent.html` — 9/9 automatique — Revue angles morts : coût du faible capital déplacé vers temps fondateur, fiabilité, qualité et maintenance rendu explicite.
 - `dossiers/quitter-emploi-stable-ou-rester.html` — 9/9 automatique — Coût de rester versus coût de partir, options intermédiaires, runway, scénarios et conditions d’inversion déjà structurés.
 - `articles/comparatif-produits-bancaires.html` — 9/9 automatique — Produits classés par fonction de l’argent, horizon, disponibilité et coût d’indisponibilité plutôt que par taux isolé.
 - `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` — 9/9 automatique — Réécriture du 16/08 : socle/long terme/option-usage, prix du temps, expérimentation réversible et stress test après usage.
@@ -130,9 +127,11 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/ameliorer-processus-sans-degrader-service.html` — 9/9 automatique — Processus, indicateurs, incitations, goulots et garde-fous qualité déjà structurés ; pas de réécriture artificielle lors de la revue antérieure.
 - `articles/travailler-beaucoup-gagner-peu-prix.html` — 9/9 automatique — Temps contraint, prix, marge, densité, panier, périmètre et refus de missions reliés causalement au revenu réel.
 - `dossiers/calculer-prix-minimum-rentable.html` — 9/9 automatique — Coût complet, temps non facturé, capacité, marge et seuil de prix/volume déjà structurés.
+- `dossiers/liquidites-reserve-securite.html` — 9/9 automatique — Revue angles morts : fiabilité, délai et corrélation des ressources de secours ; distinction perte finale/liquidité immédiate.
 - `dossiers/prejuges-biais-monde-professionnel.html` — 9/9 automatique — Réécriture du 16/08 : diagnostic signal/gatekeeper/discrimination, test causal, substitution d’acteur et seuil de sortie du registre de persuasion.
 - `dossiers/finances-enveloppes-fiscalite.html` — 9/9 automatique — Enveloppe séparée de l’actif, disponibilité, fiscalité, frais, horizon et sortie comparés avant optimisation locale.
 - `dossiers/couple-famille-argent-temps.html` — 9/9 automatique — Réécriture de référence : contributions, temps, sacrifices de carrière, propriété, règles temporaires et simulations déjà structurés.
+- `dossiers/audit-budget-60-minutes.html` — 9/9 automatique — Revue angles morts : seuil où les économies réalistes deviennent mathématiquement insuffisantes et bascule vers déficit structurel.
 - `dossiers/formation-vaut-elle-le-cout.html` — 9/9 automatique — Formation traitée comme un levier seulement après identification du verrou ; coût complet, revenu de sortie, alternatives et abandon déjà structurés.
 - `dossiers/creer-entreprise-sans-diplome.html` — 9/9 automatique — Réécriture de référence : fondateur/exécutant, activité réglementée, expérience, personne qualifiée, périmètre libre et voies alternatives déjà structurés.
 - `dossiers/quitter-cdi-avec-credit-immobilier.html` — 9/9 automatique — Réécriture de référence : dette existante versus nouveau financement, fenêtres temporelles, séquençage, réserve et déclarations exactes déjà structurés.
@@ -162,7 +161,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 7/9 | 1244 | humaine ✓ | `dossiers/rembourser-credit-ou-investir.html` |
 | 7/9 | 1247 | humaine ✓ | `articles/choisir-etf-mondial-debutant.html` |
 | 7/9 | 1248 | humaine ✓ | `dossiers/apprendre-developper-competences.html` |
-| 7/9 | 1253 | à revoir après changement | `dossiers/decision-plan-30-90-jours.html` |
+| 7/9 | 1253 | humaine ✓ | `dossiers/decision-plan-30-90-jours.html` |
 | 7/9 | 1268 | humaine ✓ | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` |
 | 7/9 | 1270 | humaine ✓ | `dossiers/patrimoine-permet-il-travailler-moins.html` |
 | 7/9 | 1285 | humaine ✓ | `dossiers/competences-qualification-employabilite.html` |
@@ -216,7 +215,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1425 | humaine ✓ | `dossiers/lancer-activite-sans-quitter-emploi.html` |
 | 8/9 | 1435 | humaine ✓ | `dossiers/audit-copropriete-avant-achat.html` |
 | 8/9 | 1435 | humaine ✓ | `dossiers/negocier-salaire-responsabilites.html` |
-| 8/9 | 1477 | à revoir après changement | `articles/competences-invisibles-preuves.html` |
+| 8/9 | 1477 | humaine ✓ | `articles/competences-invisibles-preuves.html` |
 | 8/9 | 1490 | humaine ✓ | `dossiers/temps-energie-qualite-vie.html` |
 | 8/9 | 1549 | humaine ✓ | `dossiers/favoriser-un-enfant-succession-donation.html` |
 | 8/9 | 1554 | humaine ✓ | `dossiers/indivision-loyers-charges-comptes.html` |
@@ -242,10 +241,10 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1405 | humaine ✓ | `dossiers/devenir-manager-premiere-fois.html` |
 | 9/9 | 1419 | humaine ✓ | `dossiers/decider-a-deux-travail-patrimoine.html` |
 | 9/9 | 1439 | humaine ✓ | `dossiers/valeur-option-bien-immobilier.html` |
-| 9/9 | 1450 | à revoir après changement | `articles/clients-interesses-personne-nachete.html` |
+| 9/9 | 1450 | humaine ✓ | `articles/clients-interesses-personne-nachete.html` |
 | 9/9 | 1469 | humaine ✓ | `dossiers/embaucher-ou-sous-traiter.html` |
 | 9/9 | 1474 | humaine ✓ | `articles/accepter-nimporte-quel-poste-retour-emploi.html` |
-| 9/9 | 1474 | à revoir après changement | `dossiers/creer-entreprise-avec-peu-argent.html` |
+| 9/9 | 1474 | humaine ✓ | `dossiers/creer-entreprise-avec-peu-argent.html` |
 | 9/9 | 1494 | humaine ✓ | `dossiers/quitter-emploi-stable-ou-rester.html` |
 | 9/9 | 1557 | humaine ✓ | `articles/comparatif-produits-bancaires.html` |
 | 9/9 | 1570 | humaine ✓ | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
@@ -255,11 +254,11 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1707 | humaine ✓ | `dossiers/ameliorer-processus-sans-degrader-service.html` |
 | 9/9 | 1760 | humaine ✓ | `articles/travailler-beaucoup-gagner-peu-prix.html` |
 | 9/9 | 1777 | humaine ✓ | `dossiers/calculer-prix-minimum-rentable.html` |
-| 9/9 | 1783 | à revoir après changement | `dossiers/liquidites-reserve-securite.html` |
+| 9/9 | 1783 | humaine ✓ | `dossiers/liquidites-reserve-securite.html` |
 | 9/9 | 1791 | humaine ✓ | `dossiers/prejuges-biais-monde-professionnel.html` |
 | 9/9 | 1894 | humaine ✓ | `dossiers/finances-enveloppes-fiscalite.html` |
 | 9/9 | 1923 | humaine ✓ | `dossiers/couple-famille-argent-temps.html` |
-| 9/9 | 1965 | à revoir après changement | `dossiers/audit-budget-60-minutes.html` |
+| 9/9 | 1965 | humaine ✓ | `dossiers/audit-budget-60-minutes.html` |
 | 9/9 | 1995 | humaine ✓ | `dossiers/formation-vaut-elle-le-cout.html` |
 | 9/9 | 2013 | humaine ✓ | `dossiers/creer-entreprise-sans-diplome.html` |
 | 9/9 | 2015 | humaine ✓ | `dossiers/quitter-cdi-avec-credit-immobilier.html` |
