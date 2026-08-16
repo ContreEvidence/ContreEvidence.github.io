@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **117**. Validations devenues caduques après modification : **5**.
+Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **116**. Validations devenues caduques après modification : **6**.
 
 ## Priorité humaine
 
@@ -23,6 +23,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | `articles/clients-interesses-personne-nachete.html` | `d1c27c49f015873e1efdb0b95230274d18688c46` | `36393db1ca7c359beb075a4b3fe0e25fa86ee8bb` |
 | `dossiers/creer-entreprise-avec-peu-argent.html` | `c33927e54db0adede8026a6125f2848b70abf6b4` | `99fb67ac5498b3634df87e18d728af131d32c06e` |
 | `dossiers/liquidites-reserve-securite.html` | `b65acd49706bbca7200e5e912d5ebed532d48d79` | `ae88ad8ae7c6981800827b83825e37da0c51d1c5` |
+| `dossiers/audit-budget-60-minutes.html` | `3587adb70b6b9b4777145d36bcf3bedf645521a3` | `8de2b2164b0d8d56823db98de8e87e9fbf70bef8` |
 
 ## Pages validées humainement et inchangées
 
@@ -97,7 +98,6 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/favoriser-un-enfant-succession-donation.html` — 8/9 automatique — Intention réelle décomposée, réserve/quotité, outils alternatifs, liquidité du partage, stress tests et protocole notarial déjà structurés.
 - `dossiers/indivision-loyers-charges-comptes.html` — 8/9 automatique — Flux de loyers, charges, preuves comptables, comptes entre indivisaires et architecture de décision déjà structurés lors de la revue antérieure.
 - `dossiers/comparer-deux-offres-emploi.html` — 8/9 automatique — Non-négociables avant score, package réel, temps capturé, contrat, risque organisationnel, capital professionnel, scénarios et option C déjà structurés.
-- `dossiers/audit-budget-60-minutes.html` — 8/9 automatique — Audit déjà opérationnel : masses budgétaires, anomalies, priorisation et actions concrètes ; pas de gain causal identifié lors de la revue antérieure.
 - `articles/frais-fiscalite-rendement-net.html` — 8/9 automatique — Réécriture du 16/08 : frais fournisseurs actualisés, point mort de migration, coût ponctuel du changement et valeur des options perdues ajoutés.
 - `dossiers/location-courte-duree-meuble-tourisme.html` — 8/9 automatique — Réécriture juridique de référence : registration, plafonds, changement d’usage, copropriété, DPE, fiscalité, alternatives licites et fallback déjà structurés.
 - `dossiers/finances-allocation-portefeuille.html` — 8/9 automatique — Fonctions avant pourcentages, capacité versus tolérance au risque, moteurs communs, budget de risque, séquence, stress tests et politique écrite déjà structurés.
@@ -221,7 +221,6 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1549 | humaine ✓ | `dossiers/favoriser-un-enfant-succession-donation.html` |
 | 8/9 | 1554 | humaine ✓ | `dossiers/indivision-loyers-charges-comptes.html` |
 | 8/9 | 1599 | humaine ✓ | `dossiers/comparer-deux-offres-emploi.html` |
-| 8/9 | 1652 | humaine ✓ | `dossiers/audit-budget-60-minutes.html` |
 | 8/9 | 1712 | humaine ✓ | `articles/frais-fiscalite-rendement-net.html` |
 | 8/9 | 1754 | humaine ✓ | `dossiers/location-courte-duree-meuble-tourisme.html` |
 | 8/9 | 1788 | humaine ✓ | `dossiers/finances-allocation-portefeuille.html` |
@@ -260,6 +259,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1791 | humaine ✓ | `dossiers/prejuges-biais-monde-professionnel.html` |
 | 9/9 | 1894 | humaine ✓ | `dossiers/finances-enveloppes-fiscalite.html` |
 | 9/9 | 1923 | humaine ✓ | `dossiers/couple-famille-argent-temps.html` |
+| 9/9 | 1965 | à revoir après changement | `dossiers/audit-budget-60-minutes.html` |
 | 9/9 | 1995 | humaine ✓ | `dossiers/formation-vaut-elle-le-cout.html` |
 | 9/9 | 2013 | humaine ✓ | `dossiers/creer-entreprise-sans-diplome.html` |
 | 9/9 | 2015 | humaine ✓ | `dossiers/quitter-cdi-avec-credit-immobilier.html` |
