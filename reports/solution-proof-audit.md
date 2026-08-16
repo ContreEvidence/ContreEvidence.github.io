@@ -7,9 +7,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **8**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **28**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **29**
 - S2 — possibilité générale à examiner : **12**
-- OK heuristique — condition ou preuve détectée : **148**
+- OK heuristique — condition ou preuve détectée : **149**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -30,6 +30,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 
 ## S1 — vérifier preuve et périmètre
 
+### `articles/choisir-etf-mondial-debutant.html`
+- **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Il ne remplace pas votre allocation, mais il permet de vérifier que le produit réel correspond à ce que vous pensez acheter. _[fort enjeu, preuve détectée]_
 ### `articles/frais-fiscalite-rendement-net.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Le simulateur permet d’isoler l’effet des frais et de tester vos propres hypothèses sans présumer d’un rendement futur. _[fort enjeu, preuve détectée]_
 ### `articles/grosse-entree-argent-que-faire.html`
