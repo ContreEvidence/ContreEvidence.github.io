@@ -6,9 +6,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 
 ## Synthèse
 
-- S0 — possibilité à fort enjeu sans preuve/condition détectée : **5**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **31**
-- S2 — possibilité générale à examiner : **16**
+- S0 — possibilité à fort enjeu sans preuve/condition détectée : **4**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **33**
+- S2 — possibilité générale à examiner : **15**
 - OK heuristique — condition ou preuve détectée : **162**
 
 ## S0 — vérifier avant toute recommandation
@@ -20,7 +20,6 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ### `simulateur-epargne-demission.html`
 - **possibilité à fort enjeu sans condition ni signal de preuve** — Ce que vous pouvez réellement mobiliser Épargne liquide disponible Comptes et placements que vous êtes réellement prêt à utiliser pendant la transition. _[fort enjeu]_
 ### `themes/argent.html`
-- **possibilité à fort enjeu sans condition ni signal de preuve** — Le cockpit permet de photographier cette allocation, puis les dossiers expliquent les arbitrages qu’elle fait apparaître. _[fort enjeu]_
 - **possibilité à fort enjeu sans condition ni signal de preuve** — Patrimoine : budget, épargne, immobilier et investissement | Contre-Évidence Aller au contenu CONTRE-ÉVIDENCE Patrimoine Vie professionnelle Fenêtres Outils Bibliothèque Mon espace Vous pouvez commencer avec votre premier budget ou piloter déjà plusieurs actifs. _[fort enjeu]_
 
 ## S1 — vérifier preuve et périmètre
@@ -80,10 +79,14 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Cas n°2 — Louer une partie pour absorber une baisse de revenu Mensualité logement 1 450 € Baisse temporaire de revenu foyer -800 €/mois Pièce/espace potentiellement louable 450 €/mois brut Coût d’aménagement 3 000 € Temps brut pour couvrir le coût ≈ 7 mois L’option ne compense pas entièrement le choc de revenu, mais peut réduire la pression. _[fort enjeu, condition détectée]_
 ### `outil-microscope-pea.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Patrimoine déjà très immobilier Le financier peut diversifier le reste Un foyer déjà très exposé à la pierre peut utiliser sa poche financière pour obtenir des moteurs économiques différents plutôt que multiplier encore les véhicules immobiliers. _[fort enjeu, condition détectée]_
+### `parcours-argent.html`
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Vérifier si mon capital est réellement investissable → Préparer mon premier investissement → Comprendre les grandes classes d’actifs → Comprendre un ETF diversifié → Choisir entre PEA, assurance-vie, CTO et PER → Mesurer frais et rendement net → 02 · Renforcer Augmenter et diversifier sans empiler au hasard Quand les mécanismes sont compris et le plan supporte une baisse, on peut augmenter les versements, répartir les risques et contrôler l’allocation glob _[fort enjeu, condition détectée]_
 ### `parcours-de-vie.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — D Je veux faire le point sur mes atouts professionnels Voir ce que vous savez faire, ce qui dépend de votre poste actuel, ce que vous pouvez réutiliser ailleurs et vos possibilités de progression. _[fort enjeu, condition détectée]_
 ### `simulateur-80-pourcent-cout-reel.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Le simulateur vous laisse donc saisir le revenu net réellement pertinent pour votre cas , puis se concentre sur l’arbitrage que vous pouvez mesurer proprement : revenu disponible, coûts évités, épargne et temps récupéré. _[fort enjeu, condition détectée]_
+### `themes/argent.html`
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Faire son premier investissement sans brûler les étapes → Comprendre les grandes classes d’actifs → Comprendre et choisir un ETF diversifié → Comprendre PEA, assurance-vie, CTO et PER → Comprendre frais, fiscalité et rendement net → Vérifier un placement ou un conseiller avant de signer → Entrer dans le parcours Investir son capital → Couche 03 Renforcer & diversifier Les bases tiennent et l’investissement est compris : on peut augmenter les montants, répa _[fort enjeu, condition détectée]_
 
 ## S2 — examiner
 
@@ -115,8 +118,6 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité générale à vérifier ou resserrer** — Pour aller plus loin, vous pouvez aussi renseigner les principaux sous-jacents d’un ETF sous la forme Nom:poids% , séparés par des points-virgules.
 ### `outil-pilotage-recherche-emploi.html`
 - **possibilité générale à vérifier ou resserrer** — Vous pouvez exporter votre suivi en CSV.
-### `themes/argent.html`
-- **possibilité générale à vérifier ou resserrer** — Quand vous avez déjà plusieurs placements, biens, dettes ou projets à faire tenir ensemble. répartition globale ce qui est trop concentré et ce qui reste disponible scénarios défavorables choix entre placements et transmission Ouvrir le cockpit patrimonial → Vous pouvez passer d’un chemin à l’autre à tout moment.
 
 ## Règle de relecture
 
