@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **15**
-- P1 — affirmation forte à resserrer ou vérifier : **63**
-- P2 — nécessité à examiner : **148**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **873**
+- P1 — affirmation forte à resserrer ou vérifier : **64**
+- P2 — nécessité à examiner : **150**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **870**
 
 ## P0 — rouvrir en priorité
 
@@ -89,6 +89,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sourcée mais formulation trop absolue** — Réécrit le 15/08/2026 · Code de l’artisanat vérifié dans sa version 2026 En bref : démontez le « sans diplôme, impossible » Commencez par quatre questions. _[signal-source]_
 ### `dossiers/decider-sans-tourner-en-rond.html`
 - **affirmation forte sans signal de source explicite** — Si une donnée ne peut pas changer le choix, elle n’a probablement pas besoin d’être dans le tableau. _[périmètre]_
+### `dossiers/finances-allocation-portefeuille.html`
+- **affirmation forte sans signal de source explicite** — Un même euro ne peut pas être simultanément un apport immobilier dans deux ans et un capital actions capable de subir une baisse sévère sans conséquence. _[périmètre]_
 ### `dossiers/finances-credit-endettement.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Refinancement plus cher Une dette courte devient-elle impossible à renouveler ? _[signal-source, temporalité]_
 ### `dossiers/formation-vaut-elle-le-cout.html`
@@ -242,6 +244,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/etude-marche-terrain.html`
 - **nécessité à requalifier ou sourcer** — Le niveau de preuve doit être proportionné à ce que vous allez engager ensuite.
 - **nécessité à requalifier ou sourcer** — Étude de marché : tester la demande avant de créer | Contre-Évidence Une étude de marché ne doit pas seulement pouvoir tuer votre idée. _[temporalité]_
+### `dossiers/finances-allocation-portefeuille.html`
+- **nécessité à requalifier ou sourcer** — Le drawdown se mesure sur le patrimoine utile Une perte de 20 % exige +25 % pour revenir au point de départ ; −40 % exige environ +66,7 % ; −50 % exige +100 %. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Plus une position devient grosse, plus la recherche de preuves contraires doit être explicite.
 ### `dossiers/immobilier-allocation-globale-patrimoine.html`
 - **nécessité à requalifier ou sourcer** — Il faut intégrer coût d’acquisition, financement, charges, vacance, travaux, gestion, fiscalité, temps personnel et valeur de sortie.
 - **nécessité à requalifier ou sourcer** — Le rendement doit être reconstruit Prix d’annonce, rendement brut et mensualité ne suffisent pas.
