@@ -23,7 +23,6 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 9 | 8/15 | immobilier / crédit / indivision | `dossiers/acheter-logement-sans-se-fragiliser.html` | fractionnement, effets de second ordre, condition de renversement |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/competences-qualification-employabilite.html` | substitution, objectif réel / substitution du moyen, condition de renversement |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/experience-devient-risque-recruteur.html` | acteur/gatekeeper, substitution, condition de renversement |
-| 9 | 8/15 | patrimoine / investissement / retraite | `dossiers/passer-80-pourcent-cout-reel.html` | attendre / statu quo, transfert de risque, condition de renversement |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/plan-30-jours-recherche-emploi.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen |
 | 9 | 9/15 | emploi / carrière / qualification | `articles/premiere-chance-sans-experience.html` | acteur/gatekeeper, objectif réel / substitution du moyen, asymétrie de preuve |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/audit-budget-60-minutes.html` | effets de second ordre, transfert de risque, valeur d’option / irréversibilité |
@@ -62,12 +61,13 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 6 | 10/15 | patrimoine / investissement / retraite | `articles/construire-epargne-de-zero.html` | condition de renversement, valeur d’option / irréversibilité |
 | 6 | 10/15 | emploi / carrière / qualification | `dossiers/emploi-chercher-accepter-negocier-evoluer.html` | substitution, objectif réel / substitution du moyen |
 | 6 | 10/15 | emploi / carrière / qualification | `dossiers/formation-vaut-elle-le-cout.html` | substitution, objectif réel / substitution du moyen |
+| 6 | 10/15 | immobilier / crédit / indivision | `dossiers/garages-parkings-locaux-commerciaux.html` | acteur/gatekeeper, condition de renversement |
 
 ## Lecture par cluster
 
 ### emploi / carrière / qualification
 
-Pages : **39**. Angles le plus souvent non détectés : **transfert de risque** (25), **valeur d’option / irréversibilité** (22), **effets de second ordre** (19), **substitution** (17), **attendre / statu quo** (15), **objectif réel / substitution du moyen** (15), **fractionnement** (13).
+Pages : **40**. Angles le plus souvent non détectés : **transfert de risque** (26), **valeur d’option / irréversibilité** (22), **effets de second ordre** (19), **substitution** (17), **attendre / statu quo** (15), **objectif réel / substitution du moyen** (15), **fractionnement** (13).
 
 ### entrepreneuriat / activité
 
@@ -79,7 +79,7 @@ Pages : **24**. Angles le plus souvent non détectés : **objectif réel / subst
 
 ### patrimoine / investissement / retraite
 
-Pages : **38**. Angles le plus souvent non détectés : **substitution** (30), **condition de renversement** (25), **objectif réel / substitution du moyen** (24), **transfert de risque** (24), **acteur/gatekeeper** (17), **attendre / statu quo** (17), **valeur d’option / irréversibilité** (8).
+Pages : **37**. Angles le plus souvent non détectés : **substitution** (29), **condition de renversement** (24), **objectif réel / substitution du moyen** (23), **transfert de risque** (23), **acteur/gatekeeper** (16), **attendre / statu quo** (16), **valeur d’option / irréversibilité** (8).
 
 ## Règle de reprise éditoriale
 
