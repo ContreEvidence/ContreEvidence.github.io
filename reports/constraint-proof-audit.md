@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **14**
-- P1 — affirmation forte à resserrer ou vérifier : **54**
-- P2 — nécessité à examiner : **141**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **687**
+- P1 — affirmation forte à resserrer ou vérifier : **53**
+- P2 — nécessité à examiner : **139**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **689**
 
 ## P0 — rouvrir en priorité
 
@@ -93,8 +93,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/indivision-loyers-charges-comptes.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Cela n’interdit pas de convenir d’une organisation différente. _[signal-source]_
 - **fermeture forte sourcée mais formulation trop absolue** — En pratique, un compte bancaire dédié n’est pas toujours juridiquement obligatoire dans toutes les indivisions, mais il rend le suivi beaucoup plus propre. _[signal-source]_
-### `dossiers/metiers-fonctions-organisation-entreprise.html`
-- **affirmation forte sans signal de source explicite** — À l’inverse, un manager hiérarchique ne peut pas décider seul de sujets réglementaires ou techniques qui relèvent d’autres responsabilités. _[périmètre]_
 ### `dossiers/plan-30-jours-recherche-emploi.html`
 - **affirmation forte sans signal de source explicite** — Si tout change en même temps, impossible de savoir ce qui a amélioré le résultat. _[périmètre, temporalité]_
 ### `dossiers/prejuges-biais-monde-professionnel.html`
@@ -253,9 +251,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Une position doit tenir compte de la perte plausible, de la corrélation avec le reste du portefeuille, de la liquidité et de la possibilité que plusieurs thèses échouent en même temps.
 - **nécessité à requalifier ou sourcer** — Valorisation : partir de ce que le prix exige déjà Un multiple élevé n’est pas automatiquement cher, et un multiple bas n’est pas automatiquement bon marché.
 - **nécessité à requalifier ou sourcer** — Évaluer l’avantage concurrentiel Un moat crédible doit laisser des traces : marges supérieures, rétention, pouvoir de prix, coûts de changement, réseau, échelle, coûts unitaires, technologie difficile à reproduire ou réglementation.
-### `dossiers/metiers-fonctions-organisation-entreprise.html`
-- **nécessité à requalifier ou sourcer** — Il faut comparer périmètre, décisions et conséquences des erreurs .
-- **nécessité à requalifier ou sourcer** — Le travail réel : six questions Quel résultat doit exister à la fin de la semaine ? _[temporalité]_
 ### `dossiers/plan-30-jours-recherche-emploi.html`
 - **nécessité à requalifier ou sourcer** — La deuxième série doit changer une seule hypothèse importante Après la première série, je choisis le blocage le plus probable et je modifie une variable : ciblage, haut du CV, preuve, réseau, réponse à une objection. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Le CV doit réduire l’incertitude en vingt secondes Le haut du CV doit répondre à trois questions : quel poste ? quel niveau ? quelles preuves ?
