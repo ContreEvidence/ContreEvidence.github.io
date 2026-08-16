@@ -6,9 +6,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 ## Synthèse
 
-- P0 — fermeture forte sans preuve/périmètre suffisant : **13**
+- P0 — fermeture forte sans preuve/périmètre suffisant : **14**
 - P1 — affirmation forte à resserrer ou vérifier : **48**
-- P2 — nécessité à examiner : **142**
+- P2 — nécessité à examiner : **144**
 - OK heuristique — source/périmètre détecté, fond restant à contrôler : **595**
 
 ## P0 — rouvrir en priorité
@@ -35,6 +35,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sans signal de preuve ni périmètre clair** — Cadre éditorial renforcé le 15 août 2026 Les deux charges de preuve Pour fermer une voie : montrer précisément ce qui la rend impossible, interdite ou incohérente.
 ### `outil-ingenierie-solutions.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Une voie ne doit pas être fermée sans preuve ; une idée non interdite ne doit pas être présentée comme faisable sans vérification positive. _[temporalité]_
+### `outils.html`
+- **fermeture forte sans signal de preuve ni périmètre clair** — L'atelier d'ingénierie de solutions part du verrou, cherche ce qui est réellement impossible, puis construit les pistes à tester.
 ### `themes/entreprendre.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Distinguer activité non réglementée, qualification obligatoire, agrément, assurance et simple exigence commerciale.
 
@@ -301,6 +303,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Une contrainte doit être qualifiée Type Question Absolue Quel texte, fait physique ou calcul ferme réellement la voie ?
 ### `outil-comparer-offres-emploi.html`
 - **nécessité à requalifier ou sourcer** — « Inconnu » est une information importante : c’est souvent ce qu’il faut enquêter ou négocier avant de signer. _[temporalité]_
+### `outils.html`
+- **nécessité à requalifier ou sourcer** — Calculer → 04 · Tester un scénario Une décision robuste doit survivre à autre chose que l'hypothèse centrale.
+- **nécessité à requalifier ou sourcer** — Outils : diagnostiquer, comparer, calculer et décider | Contre-Évidence Aller au contenu Outils Commencez par ce que vous devez faire avec votre situation.
 ### `parcours-de-vie.html`
 - **nécessité à requalifier ou sourcer** — C Je veux organiser ou investir mon capital Faire découler la répartition de votre argent de vos projets, de ce qui doit rester disponible, du risque acceptable et du temps dont vous disposez. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Il faut la transformer en étapes ordonnées, avec des ressources, des délais et des points de contrôle.
