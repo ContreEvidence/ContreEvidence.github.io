@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **118**. Validations devenues caduques après modification : **4**.
+Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **117**. Validations devenues caduques après modification : **5**.
 
 ## Priorité humaine
 
@@ -22,6 +22,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | `articles/competences-invisibles-preuves.html` | `cdc64be6a4013f201888b529313621f4c4ab3e3e` | `1894940607caec4067fd8609603f3e5ebe4233f2` |
 | `articles/clients-interesses-personne-nachete.html` | `d1c27c49f015873e1efdb0b95230274d18688c46` | `36393db1ca7c359beb075a4b3fe0e25fa86ee8bb` |
 | `dossiers/creer-entreprise-avec-peu-argent.html` | `c33927e54db0adede8026a6125f2848b70abf6b4` | `99fb67ac5498b3634df87e18d728af131d32c06e` |
+| `dossiers/liquidites-reserve-securite.html` | `b65acd49706bbca7200e5e912d5ebed532d48d79` | `ae88ad8ae7c6981800827b83825e37da0c51d1c5` |
 
 ## Pages validées humainement et inchangées
 
@@ -112,7 +113,6 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 - `articles/retrouver-emploi-apres-interruption.html` — 9/9 automatique — Interruption transformée en information vérifiable, preuves récentes, marchés tests, poste passerelle et critères de recalibrage déjà structurés.
 - `dossiers/finances-retraite-decumulation.html` — 9/9 automatique — Gap retraite, risque de séquence, poches par fonction, garde-fous de retrait, longévité, stress tests et revue annuelle déjà structurés.
 - `dossiers/regles-responsabilites-fautes-travail.html` — 9/9 automatique — Erreur, négligence, insuffisance et faute décomposées ; qualification conditionnelle et conséquences distinguées, avec sources adaptées déjà présentes.
-- `dossiers/liquidites-reserve-securite.html` — 9/9 automatique — Réserve calibrée par risques et charges plutôt que par règle universelle ; liquidité et marge d’option déjà traitées.
 - `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` — 9/9 automatique — Réécriture de référence : besoin de mobilité avant financement, coût total, liquidité, sortie et stress tests.
 - `dossiers/gestion-pilotee-comparer-performances.html` — 9/9 automatique — Réécriture de référence : allocation/exécution/délégation séparées, benchmark comparable, valeur comportementale conditionnelle et règle de sortie.
 - `dossiers/finances-investissement-locatif.html` — 9/9 automatique — Rendement net, cash-flow, vacance, travaux, fiscalité, financement, stress tests et scénarios de sortie déjà structurés.
@@ -237,7 +237,6 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1277 | humaine ✓ | `articles/retrouver-emploi-apres-interruption.html` |
 | 9/9 | 1297 | humaine ✓ | `dossiers/finances-retraite-decumulation.html` |
 | 9/9 | 1314 | humaine ✓ | `dossiers/regles-responsabilites-fautes-travail.html` |
-| 9/9 | 1315 | humaine ✓ | `dossiers/liquidites-reserve-securite.html` |
 | 9/9 | 1323 | humaine ✓ | `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` |
 | 9/9 | 1324 | humaine ✓ | `dossiers/gestion-pilotee-comparer-performances.html` |
 | 9/9 | 1392 | humaine ✓ | `dossiers/finances-investissement-locatif.html` |
@@ -257,6 +256,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1707 | humaine ✓ | `dossiers/ameliorer-processus-sans-degrader-service.html` |
 | 9/9 | 1760 | humaine ✓ | `articles/travailler-beaucoup-gagner-peu-prix.html` |
 | 9/9 | 1777 | humaine ✓ | `dossiers/calculer-prix-minimum-rentable.html` |
+| 9/9 | 1783 | à revoir après changement | `dossiers/liquidites-reserve-securite.html` |
 | 9/9 | 1791 | humaine ✓ | `dossiers/prejuges-biais-monde-professionnel.html` |
 | 9/9 | 1894 | humaine ✓ | `dossiers/finances-enveloppes-fiscalite.html` |
 | 9/9 | 1923 | humaine ✓ | `dossiers/couple-famille-argent-temps.html` |
