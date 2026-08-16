@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **24**.
+Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **23**.
 
 ## Priorités de relecture
 
@@ -14,7 +14,6 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 |---:|---|---|---|---|
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/devenir-manager-premiere-fois.html` | demandeur emploi, santé / inaptitude, sans diplôme, revenu / runway |
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | salarié, santé / inaptitude, sans diplôme, revenu / runway |
-| 22 | NON_READY | reconversion / trajectoire pro | `articles/retrouver-emploi-apres-interruption.html` | salarié, demandeur emploi, sans diplôme |
 | 21 | NON_READY | reconversion / trajectoire pro | `articles/competences-transferables.html` | demandeur emploi, santé / inaptitude, sans diplôme |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/acheter-sans-vider-epargne.html` | SCI, mariage, PACS |
 | 21 | NON_READY | travailler moins / qualité de vie | `dossiers/patrimoine-permet-il-travailler-moins.html` | salarié privé, public, indépendant |
@@ -42,6 +41,7 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 | 5 | ROUTE_FIRST | couple / logement / séparation | `dossiers/indivision-couple-separation-rachat-soulte.html` | SCI |
 | 5 | ROUTE_FIRST | travailler moins / qualité de vie | `dossiers/passer-80-pourcent-cout-reel.html` | indépendant |
 | 4 | ROUTE_FIRST | entrepreneuriat | `dossiers/lancer-activite-sans-quitter-emploi.html` | activité réglementée |
+| 2 | COVERED_OR_NARROW | reconversion / trajectoire pro | `articles/retrouver-emploi-apres-interruption.html` | — |
 | 2 | COVERED_OR_NARROW | budget / dettes | `dossiers/puis-je-me-permettre-reconversion.html` | — |
 | 2 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/puis-je-me-permettre-reconversion.html` | — |
 | 1 | COVERED_OR_NARROW | budget / dettes | `articles/construire-epargne-de-zero.html` | — |
@@ -86,21 +86,6 @@ Promesse : **métier, poste, fonction, service : comprendre l’entreprise — c
 | sans diplôme | MANQUANTE |
 | senior / âge | MANQUANTE |
 | revenu / runway | MANQUANTE |
-
-### `articles/retrouver-emploi-apres-interruption.html` — reconversion / trajectoire pro
-
-Promesse : **retrouver un emploi après une longue interruption : reconstruire sa crédibilité — contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| salarié | MANQUANTE |
-| demandeur emploi | MANQUANTE |
-| public | MANQUANTE |
-| indépendant | MANQUANTE |
-| santé / inaptitude | MENTIONNEE |
-| sans diplôme | MANQUANTE |
-| senior / âge | MANQUANTE |
-| revenu / runway | TRAITEE |
 
 ### `articles/competences-transferables.html` — reconversion / trajectoire pro
 
@@ -430,7 +415,7 @@ Pages détectées : **1**. Promesses larges `NON_READY` : **1**. Variantes le pl
 
 ### reconversion / trajectoire pro
 
-Pages détectées : **13**. Promesses larges `NON_READY` : **8**. Variantes le plus souvent non détectées : **public** (12), **senior / âge** (11), **indépendant** (10), **sans diplôme** (9), **santé / inaptitude** (5), **demandeur emploi** (4).
+Pages détectées : **13**. Promesses larges `NON_READY` : **7**. Variantes le plus souvent non détectées : **public** (12), **senior / âge** (10), **indépendant** (9), **sans diplôme** (8), **santé / inaptitude** (5), **demandeur emploi** (3).
 
 ### entrepreneuriat
 
