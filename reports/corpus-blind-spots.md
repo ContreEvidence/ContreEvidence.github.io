@@ -4,11 +4,11 @@ Mise à jour automatique : 2026-08-16
 
 Cet audit complète — il ne remplace pas — la revue structurelle. Il cherche des **familles de raisonnement susceptibles de changer la décision** mais souvent absentes d’un contenu pourtant correct : acteur, substitution, fenêtre temporelle, ordre, fractionnement, combinaison, statu quo, second ordre, transfert de risque, friction, hétérogénéité, renversement, objectif réel, optionnalité et asymétrie de preuve.
 
-Un motif absent n’est **pas** automatiquement un défaut : la file sert à provoquer une lecture humaine. Inversement, la présence d’un mot ne prouve pas que l’angle est bien traité.
+Un motif absent n’est **pas** automatiquement un défaut : la file sert à provoquer une lecture humaine. Inversement, la présence d’un mot ne prouve pas que l’angle est bien traité. Les décisions humaines SHA-liées sont enregistrées séparément dans `reports/corpus-blind-spot-human-review-*.json`.
 
 Pages indexables analysées : **122**. Pages `noindex` exclues : **79**.
 
-## Priorité de reprise
+## Priorité heuristique
 
 | Priorité | Couverture | Cluster | Page | Angles critiques non détectés |
 |---:|---:|---|---|---|
@@ -83,9 +83,9 @@ Pages : **40**. Angles le plus souvent non détectés : **substitution** (33), *
 
 ## Règle de reprise éditoriale
 
-1. Lire humainement la page prioritaire et le cluster autour d’elle.
-2. Ne retenir que les angles qui peuvent réellement changer le choix, le coût, le risque, la séquence ou les options disponibles.
-3. Préparer **une seule proposition éditoriale active**.
-4. Ne rien modifier dans le contenu publié avant validation explicite de l’utilisateur.
-5. Après validation : appliquer, sourcer si nécessaire, auditer, journaliser, puis seulement passer à la proposition suivante.
+1. Lire humainement la page prioritaire et son cluster proche.
+2. Ne retenir que les angles qui changent réellement le choix, le coût, le risque, la séquence, les options ou la charge de preuve.
+3. Si le manque est réel, réécrire directement et journaliser la causalité ; si le signal est un faux positif, conserver le texte et enregistrer la décision humaine.
+4. Les affirmations sensibles sont revérifiées sur des sources primaires à jour avant toute modification factuelle.
+5. L’heuristique reste un détecteur : une décision humaine attachée au SHA exact prime jusqu’à modification du contenu.
 
