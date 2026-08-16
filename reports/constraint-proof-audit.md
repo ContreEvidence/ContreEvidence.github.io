@@ -6,10 +6,10 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 ## Synthèse
 
-- P0 — fermeture forte sans preuve/périmètre suffisant : **16**
-- P1 — affirmation forte à resserrer ou vérifier : **69**
-- P2 — nécessité à examiner : **156**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **919**
+- P0 — fermeture forte sans preuve/périmètre suffisant : **17**
+- P1 — affirmation forte à resserrer ou vérifier : **72**
+- P2 — nécessité à examiner : **160**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **923**
 
 ## P0 — rouvrir en priorité
 
@@ -27,6 +27,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sans signal de preuve ni périmètre clair** — Rachat progressif Deuxième étape impossible dans trois ans.
 ### `dossiers/plan-30-jours-recherche-emploi.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Manquer un logiciel appris en trois jours n’est pas équivalent à manquer le permis obligatoire ou l’expérience réglementaire exigée.
+### `dossiers/premier-salaire-18-ans-chez-parents.html`
+- **fermeture forte sans signal de preuve ni périmètre clair** — Ce n’est pas un pourcentage obligatoire.
 ### `dossiers/quand-vie-change-sante-separation-revenu.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Accepter un emploi de transition ses contraintes rendent impossible le rôle d’aidant ou la santé actuelle. _[temporalité]_
 ### `dossiers/tout-ca-pour-quoi-objectifs-besoins.html`
@@ -121,6 +123,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sourcée mais formulation trop absolue** — Sources officielles vérifiées le 16/08/2026 Service-Public.fr — discrimination et critères interdits Service-Public.fr — informations pouvant être demandées lors d’un recrutement Défenseur des droits — discrimination : information, orientation et accompagnement ← Retour à Vie professionnelle À lire ensuite Continuez sans repartir de zéro. _[signal-source, temporalité]_
 - **fermeture forte sourcée mais formulation trop absolue** — Une discrimination correspond à une différence de traitement fondée sur un critère interdit par la loi. _[signal-source]_
 - **fermeture forte sourcée mais formulation trop absolue** — Une discrimination, au sens juridique, implique une différence de traitement fondée sur un critère interdit. _[signal-source]_
+### `dossiers/premier-salaire-18-ans-chez-parents.html`
+- **affirmation forte sans signal de source explicite** — PER : pas une marche obligatoire à 18 ans. _[périmètre, temporalité]_
+- **affirmation forte sans signal de source explicite** — Un majeur encore fiscalement à charge de ses parents ne peut pas en détenir. _[périmètre]_
 ### `dossiers/preparer-candidature-avant-postuler.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Diplôme Obligatoire juridiquement, filtre RH, ou simple préférence ? _[signal-source]_
 ### `dossiers/previsionnel-activite-12-mois.html`
@@ -155,6 +160,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **affirmation forte sans signal de source explicite** — Mais la symétrie est obligatoire : une voie non interdite n’est pas encore une voie faisable. _[périmètre]_
 - **affirmation forte sans signal de source explicite** — Un mot comme « impossible » peut décrire une impossibilité mathématique, une hypothèse à contester ou simplement une question dans un tableau. _[périmètre]_
 - **affirmation forte sans signal de source explicite** — Une disposition annoncée « pour 2026 » ne peut pas rester présentée comme future après son entrée en vigueur. _[périmètre, temporalité]_
+### `parcours-de-vie.html`
+- **affirmation forte sans signal de source explicite** — Le LEP n’est possible que si vous avez votre propre imposition et remplissez ses conditions ; un jeune encore rattaché fiscalement à ses parents ne peut pas en détenir. _[périmètre]_
 ### `simulateur-acheter-ou-louer-mobilite.html`
 - **affirmation forte sans signal de source explicite** — Ce que le calculateur ne peut pas savoir : le futur prix du logement, les travaux exceptionnels, votre fiscalité future, la valeur exacte d'une option de mobilité ou les clauses de votre crédit. _[périmètre]_
 
@@ -282,6 +289,11 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/plan-30-jours-recherche-emploi.html`
 - **nécessité à requalifier ou sourcer** — La deuxième série doit changer une seule hypothèse importante Après la première série, je choisis le blocage le plus probable et je modifie une variable : ciblage, haut du CV, preuve, réseau, réponse à une objection. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Le CV doit réduire l’incertitude en vingt secondes Le haut du CV doit répondre à trois questions : quel poste ? quel niveau ? quelles preuves ?
+### `dossiers/premier-salaire-18-ans-chez-parents.html`
+- **nécessité à requalifier ou sourcer** — Cet argent ne doit pas dépendre de la Bourse. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — L’argent est destiné à la retraite et la contrainte de liquidité doit avoir une vraie contrepartie. → Comprendre PEA, assurance-vie, CTO et PER sans jargon 6. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Ne rien dépenser par peur de mal faire : un plan durable doit aussi prévoir de profiter du revenu gagné.
+- **nécessité à requalifier ou sourcer** — Parce qu’au début la priorité est de savoir ce que chaque euro doit faire .
 ### `dossiers/previsionnel-activite-12-mois.html`
 - **nécessité à requalifier ou sourcer** — Bpifrance recommande également un plan de trésorerie glissant sur douze mois avec un scénario prudent : le prévisionnel doit donc devenir un document vivant, révisé par les encaissements et dépenses réels. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — C’est un test : quelles hypothèses doivent être vraies pour que le projet tienne, qui doit coopérer pour qu’elles deviennent vraies , et que se passe-t-il quand la croissance elle-même crée une nouvelle contrainte ? _[temporalité]_
