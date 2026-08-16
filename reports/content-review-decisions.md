@@ -64,6 +64,15 @@ Le principe reste symétrique : ne pas fermer une voie sans preuve ; ne pas vali
 - **Impact :** ajout d’une bifurcation en trois diagnostics — signal mal interprété / filtre propre à un gatekeeper / traitement potentiellement discriminatoire —, d’un test « même preuve, autre acteur » et d’une condition explicite pour cesser d’essayer de convaincre le même système.
 - **Incertitude résiduelle :** le dossier ne qualifie pas juridiquement un cas individuel ; lorsqu’un traitement potentiellement discriminatoire est en cause, la qualification et les recours dépendent des faits et du cadre applicable.
 
+### 2026-08-16 — `dossiers/automatiser-ou-non-processus.html`
+
+- **Problème corrigé :** la page répondait bien à « automatiser ou non » une tâche existante, mais acceptait encore trop vite l’existence et la forme actuelle du processus comme données fixes.
+- **Motifs activés :** réduction du besoin, suppression de l’étape, simplification, standardisation, automatisation partielle, préservation d’une voie manuelle, rollback, condition d’abandon.
+- **Causalité :** supprimer ou simplifier une étape agit directement sur son coût parce que le nombre d’exécutions ou la complexité disparaît ; automatiser n’est rationnel qu’après cette réduction, lorsqu’un volume stable reste à traiter. Un rollback préserve l’option de sortie si maintenance, exceptions ou dépendance détruisent le gain attendu.
+- **Preuve :** ajout méthodologique fondé sur les coûts et tests déjà chiffrés dans la page ; aucun nouveau seuil universel ni fait réglementaire n’est introduit.
+- **Impact :** nouvelle séquence `supprimer → simplifier → standardiser → assister → automatiser`, test causal avant choix de l’outil, procédure de retour en arrière et kill switch avant généralisation.
+- **Incertitude résiduelle :** les seuils de maintenance, d’exception ou de panne doivent être définis selon la criticité et l’économie du processus ; la page refuse d’inventer un seuil générique.
+
 ## Revue humaine du rapport global — pages conservées
 
 Le rapport automatique `reports/corpus-solution-review.md` a été utilisé comme détecteur, puis chaque priorité a été relue humainement. Les pages suivantes ont été **revisitées mais laissées intactes**, car les dimensions signalées comme absentes sont en réalité déjà présentes dans le raisonnement sous une formulation que le détecteur ne reconnaissait pas suffisamment :
