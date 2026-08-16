@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **80**. Validations devenues caduques après modification : **43**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **79**. Validations devenues caduques après modification : **44**.
 
 ## Priorité humaine
 
@@ -59,6 +59,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/finances-transmission-patrimoine.html` | `82b04a6992bd5fea253a773125768b5cb012a203` | `15070334cd5a3c650db719531dc521c35f00a76d` |
 | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | `9b46d98a92fde3c92c7d0ba563bbece7cb3ce9ad` | `bac921cbe2446cc20f220d80e11bede4856b9672` |
 | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` | `b8ca6053a594bbee33797f2d2c4dce8b4854e67b` | `c6e5736d0811426bfb0bfd40ac588e3c6c3945cf` |
+| `dossiers/liquidites-reserve-securite.html` | `ae88ad8ae7c6981800827b83825e37da0c51d1c5` | `a74e6236fdfeceb5bdb3917909629bf7e0528dc3` |
 | `dossiers/combien-chiffre-affaires-pour-vivre.html` | `ecb09de9f0ebcb7f42e79bac0351f086fadee8ae` | `0dfc9a1d1e4eb8bb68983008c839fd244620a987` |
 | `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` | `0dde3d3af6dc5214b42e2e86c59d2ef2677de259` | `49a26a95921f5be5635c8609812eef122250a076` |
 
@@ -132,7 +133,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/indivision-succession-heritiers-vendre-partager.html` — 9/9 automatique — Droits, usages, liquidité, soultes, vente, partage, convention et scénarios de blocage déjà distingués et structurés.
 - `dossiers/ameliorer-processus-sans-degrader-service.html` — 9/9 automatique — Processus, indicateurs, incitations, goulots et garde-fous qualité déjà structurés ; pas de réécriture artificielle lors de la revue antérieure.
 - `articles/travailler-beaucoup-gagner-peu-prix.html` — 9/9 automatique — Temps contraint, prix, marge, densité, panier, périmètre et refus de missions reliés causalement au revenu réel.
-- `dossiers/liquidites-reserve-securite.html` — 9/9 automatique — Revue angles morts : fiabilité, délai et corrélation des ressources de secours ; distinction perte finale/liquidité immédiate.
 - `dossiers/prejuges-biais-monde-professionnel.html` — 9/9 automatique — Réécriture du 16/08 : diagnostic signal/gatekeeper/discrimination, test causal, substitution d’acteur et seuil de sortie du registre de persuasion.
 - `dossiers/finances-enveloppes-fiscalite.html` — 9/9 automatique — Enveloppe séparée de l’actif, disponibilité, fiscalité, frais, horizon et sortie comparés avant optimisation locale.
 - `dossiers/couple-famille-argent-temps.html` — 9/9 automatique — Réécriture de référence : contributions, temps, sacrifices de carrière, propriété, règles temporaires et simulations déjà structurés.
@@ -243,7 +243,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1707 | humaine ✓ | `dossiers/ameliorer-processus-sans-degrader-service.html` |
 | 9/9 | 1733 | à revoir après changement | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` |
 | 9/9 | 1760 | humaine ✓ | `articles/travailler-beaucoup-gagner-peu-prix.html` |
-| 9/9 | 1783 | humaine ✓ | `dossiers/liquidites-reserve-securite.html` |
 | 9/9 | 1791 | humaine ✓ | `dossiers/prejuges-biais-monde-professionnel.html` |
 | 9/9 | 1849 | à revoir après changement | `dossiers/reconversion-sans-perte-salaire.html` |
 | 9/9 | 1893 | à revoir après changement | `dossiers/patrimoine-permet-il-travailler-moins.html` |
@@ -270,6 +269,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 2462 | à revoir après changement | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
 | 9/9 | 2472 | humaine ✓ | `dossiers/changer-travail-avant-credit-immobilier.html` |
 | 9/9 | 2581 | à revoir après changement | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` |
+| 9/9 | 2675 | à revoir après changement | `dossiers/liquidites-reserve-securite.html` |
 | 9/9 | 2742 | à revoir après changement | `dossiers/combien-chiffre-affaires-pour-vivre.html` |
 | 9/9 | 3065 | humaine ✓ | `dossiers/indivision-rachat-progressif-parts.html` |
 | 9/9 | 3821 | humaine ✓ | `dossiers/indivision-couple-separation-rachat-soulte.html` |
