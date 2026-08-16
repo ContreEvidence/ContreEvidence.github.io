@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **97**. Validations devenues caduques après modification : **26**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **97**. Validations devenues caduques après modification : **26**.
 
 ## Priorité humaine
 
@@ -220,6 +220,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 2183 | à revoir après changement | `articles/tester-metier-avant-investir.html` |
 | 8/9 | 2197 | humaine ✓ | `dossiers/allocation-patrimoine-selon-situation.html` |
 | 8/9 | 2320 | humaine ✓ | `dossiers/methode-analyse-complete.html` |
+| 8/9 | 2498 | heuristique | `dossiers/vendre-bien-a-sa-sci-refinancement-patrimoine.html` |
 | 8/9 | 2533 | humaine ✓ | `dossiers/metiers-accessibles-sans-diplome.html` |
 | 8/9 | 2722 | humaine ✓ | `dossiers/inflation-comprendre-histoire-pouvoir-achat.html` |
 | 9/9 | 1188 | humaine ✓ | `articles/competences-transferables.html` |
