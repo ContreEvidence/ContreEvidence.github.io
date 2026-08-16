@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **123**. Pages `noindex` exclues : **79**. Validations humaines actives : **122**. Validations devenues caduques après modification : **0**.
+Pages analysées : **123**. Pages `noindex` exclues : **79**. Validations humaines actives : **123**. Validations devenues caduques après modification : **0**.
 
 ## Priorité humaine
 
@@ -142,6 +142,7 @@ Aucune.
 - `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` — 9/9 automatique — Objectif diplôme séparé du moyen d’accès ; VAP, VAE, DAEU et voies institutionnelles comparées avec conditions et séquence.
 - `dossiers/indivision-rachat-progressif-parts.html` — 9/9 automatique — Fractionnement du rachat, courbe de propriété, dette bancaire distincte, valorisation, friction et alternatives en moins de tranches déjà structurés.
 - `dossiers/indivision-couple-separation-rachat-soulte.html` — 9/9 automatique — Réécriture de référence : refus bancaire actuel non confondu avec vente obligatoire, propriété/dette/créances séparées, fenêtres 1–5 ans et rachat futur simulés.
+- `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` — 9/9 automatique — Deep lifecycle treatment: objective, ownership structure, governance, financing, liability, IR/IS, furnished rental, separation, transfer, withdrawal, death, valuation, exit and reversal conditions. Primary official sources checked 2026-08-16.
 
 ## Corpus complet
 
@@ -269,7 +270,7 @@ Aucune.
 | 9/9 | 2694 | humaine ✓ | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` |
 | 9/9 | 3065 | humaine ✓ | `dossiers/indivision-rachat-progressif-parts.html` |
 | 9/9 | 3821 | humaine ✓ | `dossiers/indivision-couple-separation-rachat-soulte.html` |
-| 9/9 | 4276 | heuristique | `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` |
+| 9/9 | 4276 | humaine ✓ | `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` |
 
 ## Règle de reprise
 
