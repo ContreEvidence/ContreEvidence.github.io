@@ -17,7 +17,6 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 | 28 | NON_READY | transmission / succession | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | mariage / conjoint, PACS / concubin, enfants / famille recomposée, SCI / parts |
 | 28 | NON_READY | travailler moins / qualité de vie | `dossiers/temps-energie-qualite-vie.html` | salarié privé, public, indépendant, retraite / protection |
 | 22 | NON_READY | reconversion / trajectoire pro | `articles/retrouver-emploi-apres-interruption.html` | salarié, demandeur emploi, sans diplôme |
-| 22 | NON_READY | entrepreneuriat | `dossiers/combien-chiffre-affaires-pour-vivre.html` | micro / EI / société, activité réglementée, chômage / aides |
 | 22 | NON_READY | reconversion / trajectoire pro | `dossiers/formation-vaut-elle-le-cout.html` | salarié, demandeur emploi, santé / inaptitude |
 | 22 | NON_READY | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | santé / inaptitude, sans diplôme, revenu / runway |
 | 22 | NON_READY | travailler moins / qualité de vie | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | salarié privé, public, indépendant |
@@ -29,6 +28,7 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 | 15 | NON_READY | budget / dettes | `dossiers/creer-entreprise-avec-peu-argent.html` | déficit temporaire / structurel, dette / surendettement |
 | 15 | NON_READY | reconversion / trajectoire pro | `dossiers/decider-a-deux-travail-patrimoine.html` | demandeur emploi, sans diplôme |
 | 14 | NON_READY | achat immobilier / crédit | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` | CDD / temporaire, indépendant |
+| 14 | NON_READY | entrepreneuriat | `dossiers/combien-chiffre-affaires-pour-vivre.html` | micro / EI / société, activité réglementée |
 | 14 | NON_READY | entrepreneuriat | `dossiers/creer-entreprise-avec-peu-argent.html` | micro / EI / société, activité réglementée |
 | 14 | NON_READY | budget / dettes | `dossiers/patrimoine-marge-de-manoeuvre.html` | déficit temporaire / structurel, revenu stable / variable |
 | 14 | NON_READY | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
@@ -132,20 +132,6 @@ Promesse : **retrouver un emploi après une longue interruption : reconstruire s
 | sans diplôme | MANQUANTE |
 | senior / âge | MANQUANTE |
 | revenu / runway | TRAITEE |
-
-### `dossiers/combien-chiffre-affaires-pour-vivre.html` — entrepreneuriat
-
-Promesse : **combien de chiffre d’affaires faut-il pour en vivre ? | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| activité principale / complément | MENTIONNEE |
-| micro / EI / société | MANQUANTE |
-| activité réglementée | MANQUANTE |
-| chômage / aides | MANQUANTE |
-| TVA | MENTIONNEE |
-| financement / BFR | TRAITEE |
-| associés | MANQUANTE |
 
 ### `dossiers/formation-vaut-elle-le-cout.html` — reconversion / trajectoire pro
 
@@ -309,6 +295,20 @@ Promesse : **acheter ou louer si vous risquez de déménager bientôt ? | contre
 | mobilité / changement emploi | TRAITEE |
 | apport / liquidité | TRAITEE |
 | dette existante | MANQUANTE |
+
+### `dossiers/combien-chiffre-affaires-pour-vivre.html` — entrepreneuriat
+
+Promesse : **combien de chiffre d’affaires faut-il pour en vivre ? | contre-évidence**
+
+| Variante | Signal automatique |
+|---|---|
+| activité principale / complément | TRAITEE |
+| micro / EI / société | MANQUANTE |
+| activité réglementée | MANQUANTE |
+| chômage / aides | TRAITEE |
+| TVA | MENTIONNEE |
+| financement / BFR | TRAITEE |
+| associés | MENTIONNEE |
 
 ### `dossiers/creer-entreprise-avec-peu-argent.html` — entrepreneuriat
 
@@ -481,7 +481,7 @@ Pages détectées : **14**. Promesses larges `NON_READY` : **10**. Variantes le 
 
 ### entrepreneuriat
 
-Pages détectées : **5**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **associés** (5), **TVA** (4), **activité réglementée** (4), **micro / EI / société** (2), **chômage / aides** (1).
+Pages détectées : **5**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **TVA** (4), **activité réglementée** (4), **associés** (4), **micro / EI / société** (2).
 
 ### budget / dettes
 
