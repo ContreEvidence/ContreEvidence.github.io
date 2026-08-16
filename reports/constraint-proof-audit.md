@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **15**
-- P1 — affirmation forte à resserrer ou vérifier : **54**
+- P1 — affirmation forte à resserrer ou vérifier : **56**
 - P2 — nécessité à examiner : **139**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **701**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **707**
 
 ## P0 — rouvrir en priorité
 
@@ -59,6 +59,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sourcée mais formulation trop absolue** — 90 jours : un protocole adaptable, pas un délai obligatoire Le découpage ci-dessous sert à ralentir les décisions irréversibles et à séparer les étapes. _[signal-source, temporalité]_
 ### `articles/premiere-chance-sans-experience.html`
 - **affirmation forte sans signal de source explicite** — C peut être supérieur professionnellement et pourtant impossible financièrement. _[périmètre]_
+### `articles/sans-diplome-chemins-alternatifs.html`
+- **fermeture forte sourcée mais formulation trop absolue** — Contournement du diplôme le titre est légalement obligatoire ou réellement dominant dans presque toutes les cibles obtenir la qualification ou changer de fonction. _[signal-source]_
+- **fermeture forte sourcée mais formulation trop absolue** — Exemple : même métier cible, trois stratégies Une personne vise une fonction dont le diplôme n’est pas légalement obligatoire mais revient dans 70 % des offres analysées. _[signal-source, temporalité]_
 ### `dossiers/apprendre-developper-competences.html`
 - **affirmation forte sans signal de source explicite** — La preuve est asymétrique Il peut être facile de montrer qu’un candidat ne possède pas un titre obligatoire : il suffit de constater son absence. _[périmètre]_
 - **affirmation forte sans signal de source explicite** — Seuil de décision avant de financer une formation Écrivez ce qu’elle doit rendre possible : « passer de 3 offres accessibles sur 30 à 20 », « obtenir l’habilitation obligatoire », « réussir le test technique », « produire trois projets vérifiables ». _[périmètre, temporalité]_
