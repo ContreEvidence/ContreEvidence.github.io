@@ -7,7 +7,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **17**
-- P1 — affirmation forte à resserrer ou vérifier : **72**
+- P1 — affirmation forte à resserrer ou vérifier : **73**
 - P2 — nécessité à examiner : **160**
 - OK heuristique — source/périmètre détecté, fond restant à contrôler : **923**
 
@@ -164,6 +164,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **affirmation forte sans signal de source explicite** — Le LEP n’est possible que si vous avez votre propre imposition et remplissez ses conditions ; un jeune encore rattaché fiscalement à ses parents ne peut pas en détenir. _[périmètre]_
 ### `simulateur-acheter-ou-louer-mobilite.html`
 - **affirmation forte sans signal de source explicite** — Ce que le calculateur ne peut pas savoir : le futur prix du logement, les travaux exceptionnels, votre fiscalité future, la valeur exacte d'une option de mobilité ou les clauses de votre crédit. _[périmètre]_
+### `themes/argent.html`
+- **affirmation forte sans signal de source explicite** — Commencer : investir ses premiers 100, 500 ou 1 000 € → J’investis déjà : 8 allocations selon la situation → Comprendre les grandes classes d’actifs → Construire une allocation patrimoniale → Choisir un ETF diversifié → Mesurer frais, fiscalité et rendement net → Comprendre inflation et pouvoir d’achat → Rembourser un crédit ou investir ? → Analyser concentration et chevauchements dans mon PEA → Entrer dans Investiss _[périmètre, temporalité]_
 
 ## P2 — examiner la nécessité
 
