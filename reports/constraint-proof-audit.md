@@ -6,10 +6,10 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 ## Synthèse
 
-- P0 — fermeture forte sans preuve/périmètre suffisant : **17**
-- P1 — affirmation forte à resserrer ou vérifier : **61**
-- P2 — nécessité à examiner : **149**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **772**
+- P0 — fermeture forte sans preuve/périmètre suffisant : **16**
+- P1 — affirmation forte à resserrer ou vérifier : **60**
+- P2 — nécessité à examiner : **146**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **787**
 
 ## P0 — rouvrir en priorité
 
@@ -19,8 +19,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sans signal de preuve ni périmètre clair** — Sans diplôme : distinguer compétence réelle et filtre d’accès Vous pouvez maîtriser 90 % du travail et rester bloqué par un diplôme obligatoire ou un filtre RH. _[temporalité]_
 ### `dossiers/audit-budget-60-minutes.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Tester une architecture plus soutenable plutôt qu’un effort impossible à tenir.
-### `dossiers/combien-chiffre-affaires-pour-vivre.html`
-- **fermeture forte sans signal de preuve ni périmètre clair** — Quand le CA cible est impossible, remplacez l’architecture plutôt que d’optimiser à l’infini Architecture actuelle Substitution à tester Ce que cela change Petites missions ponctuelles Forfait récurrent Réduit le coût commercial et augmente la visibilité.
 ### `dossiers/contrat-travail-clauses-verifier-avant-signer.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Exclusivité Non Oui Quel projet futur devient impossible ?
 ### `dossiers/decider-sans-tourner-en-rond.html`
@@ -77,8 +75,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/audit-budget-60-minutes.html`
 - **affirmation forte sans signal de source explicite** — Le problème n’est donc plus « je dois mieux surveiller mes dépenses » : la structure du budget ne peut pas s’équilibrer par ce seul levier . _[périmètre]_
 - **affirmation forte sans signal de source explicite** — Les dépenses incompressibles : celles qu’on ne peut pas réduire rapidement sans décision lourde. _[périmètre, temporalité]_
-### `dossiers/combien-chiffre-affaires-pour-vivre.html`
-- **affirmation forte sans signal de source explicite** — Si vous ne pouvez pas nommer Y — nombre de ventes, marge unitaire, capacité ou fréquence d’achat — le levier est encore une intuition. _[périmètre]_
 ### `dossiers/comparer-deux-offres-emploi.html`
 - **affirmation forte sans signal de source explicite** — Une offre notée 86/100 reste mauvaise si elle viole votre seule contrainte absolue : revenu sous le plancher du foyer, horaires incompatibles, mobilité impossible, risque santé, trajet intenable ou clause contractuelle inacceptable. _[périmètre, temporalité]_
 ### `dossiers/comparer-strategies-immobilieres.html`
@@ -206,10 +202,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Elle ne doit pas disparaître du bilan simplement parce qu’elle n’a pas de cours quotidien.
 - **nécessité à requalifier ou sourcer** — Son rôle éventuel doit donc être jugé autrement : diversification, comportement dans certains régimes de marché, liquidité et coût de détention.
 - **nécessité à requalifier ou sourcer** — Une allocation complète ne signifie pas posséder de tout Le bon tableau de bord doit montrer toutes les grandes classes possibles sans suggérer qu’elles sont toutes nécessaires.
-### `dossiers/combien-chiffre-affaires-pour-vivre.html`
-- **nécessité à requalifier ou sourcer** — Avec 20 jours ouvrés, 9 facturés représentent déjà 45 % du temps ; le reste doit couvrir prospection, préparation, administratif, formation et congés. _[temporalité]_
-- **nécessité à requalifier ou sourcer** — Il faut produire au moins 2 300 € après coûts et prélèvements. _[temporalité]_
-- **nécessité à requalifier ou sourcer** — La bonne est : après coûts, temps non facturé, réserves, dépendances et prélèvements, combien reste-t-il durablement pour le foyer — et qu’est-ce qui doit être vrai pour que ce niveau tienne ? _[temporalité]_
 ### `dossiers/comparer-strategies-immobilieres.html`
 - **nécessité à requalifier ou sourcer** — Il faut raisonner en recettes annuelles encaissées après taux d’occupation, commissions, ménage, linge, énergie, consommables, maintenance et gestion. _[temporalité]_
 ### `dossiers/cout-complet-achat-immobilier.html`
