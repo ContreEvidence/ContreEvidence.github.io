@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
-- P1 — affirmation forte à resserrer ou vérifier : **63**
+- P1 — affirmation forte à resserrer ou vérifier : **64**
 - P2 — nécessité à examiner : **151**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **840**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **847**
 
 ## P0 — rouvrir en priorité
 
@@ -118,6 +118,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sourcée mais formulation trop absolue** — Une discrimination, au sens juridique, implique une différence de traitement fondée sur un critère interdit. _[signal-source]_
 ### `dossiers/previsionnel-activite-12-mois.html`
 - **affirmation forte sans signal de source explicite** — Ajoutez la colonne que les tableurs oublient : « qui doit dire oui ? » Hypothèse Gatekeeper Risque 45 jours de délai fournisseur fournisseur la trésorerie se dégrade s’il exige comptant. acompte de 30 % client le BFR augmente si le marché refuse. prêt de 30 000 € banque / financeur l’investissement ne peut pas être traité comme acquis. sous-traitance disponible prestataire capacité théorique sans solution opérationne _[périmètre, temporalité]_
+### `dossiers/puis-je-me-permettre-reconversion.html`
+- **généralisation d’un acteur privé sans périmètre clair** — Ce qui fait renverser la conclusion On pensait… Mais si… Alors… « Il faut une formation de 12 mois » les recruteurs demandent surtout une preuve pratique voie courte / mission / certification ciblée. _[signal-source, temporalité]_
 ### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
 - **affirmation forte sans signal de source explicite** — Trois poches plutôt qu’un seul patrimoine Poche Mission Interdit implicite Socle sécurité, dépenses proches, gros risques ne pas la consommer pour améliorer marginalement le confort. _[périmètre]_
 - **affirmation forte sans signal de source explicite** — Utiliser trop tard Qu’est-ce que l’âge, la santé, la famille ou le temps rendront impossible plus tard ? _[périmètre]_
