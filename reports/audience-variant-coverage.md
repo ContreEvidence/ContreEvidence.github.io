@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **45**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **12**.
+Pages/familles détectées : **46**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **13**.
 
 ## Priorités de relecture
 
@@ -23,6 +23,7 @@ Pages/familles détectées : **45**. Pages `noindex` exclues : **79**. Promesses
 | 8 | NON_READY | entrepreneuriat | `dossiers/formation-vaut-elle-le-cout.html` | micro / EI / société |
 | 7 | NON_READY | reconversion / trajectoire pro | `articles/competences-transferables.html` | revenu / runway |
 | 7 | NON_READY | entrepreneuriat | `dossiers/are-arce-acre-creation-entreprise.html` | activité réglementée |
+| 7 | NON_READY | investissement locatif | `dossiers/comparer-strategies-immobilieres.html` | SCI |
 | 7 | NON_READY | budget / dettes | `dossiers/creer-entreprise-avec-peu-argent.html` | revenu stable / variable |
 | 7 | NON_READY | budget / dettes | `dossiers/patrimoine-marge-de-manoeuvre.html` | déficit temporaire / structurel |
 | 5 | ROUTE_FIRST | achat immobilier / crédit | `dossiers/indivision-couple-separation-rachat-soulte.html` | indépendant |
@@ -206,6 +207,21 @@ Promesse : **are, arce, acre : choisir pour créer son entreprise en 2026 | cont
 | financement / BFR | TRAITEE |
 | associés | MANQUANTE |
 
+### `dossiers/comparer-strategies-immobilieres.html` — investissement locatif
+
+Promesse : **comparer les stratégies immobilières : usage, capital, revenu et sortie | contre-évidence**
+
+| Variante | Signal automatique |
+|---|---|
+| détention directe | MANQUANTE |
+| SCI | MANQUANTE |
+| location nue | TRAITEE |
+| location meublée | TRAITEE |
+| courte durée | TRAITEE |
+| IR / IS | MANQUANTE |
+| crédit / cash | TRAITEE |
+| gestion | TRAITEE |
+
 ### `dossiers/creer-entreprise-avec-peu-argent.html` — budget / dettes
 
 Promesse : **créer une entreprise avec peu d’argent : budget de départ réaliste | contre-évidence**
@@ -244,7 +260,7 @@ Pages détectées : **5**. Promesses larges `NON_READY` : **0**. Variantes le pl
 
 ### investissement locatif
 
-Pages détectées : **1**. Promesses larges `NON_READY` : **0**. Variantes le plus souvent non détectées : aucune dans la grille automatique.
+Pages détectées : **2**. Promesses larges `NON_READY` : **1**. Variantes le plus souvent non détectées : **IR / IS** (1), **SCI** (1), **détention directe** (1).
 
 ### transmission / succession
 
