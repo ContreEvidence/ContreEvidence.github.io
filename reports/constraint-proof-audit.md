@@ -189,7 +189,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Pour comparer achat et location, il faut donc éviter le raccourci « mensualité = loyer ».
 - **nécessité à requalifier ou sourcer** — Une hausse du prix ne doit jamais être la seule raison pour laquelle l’achat devient rentable.
 ### `dossiers/creer-entreprise-avec-peu-argent.html`
-- **nécessité à requalifier ou sourcer** — Il faut distinguer ce qui permet de commencer, ce qui permet d’encaisser un retard et ce qui permet au foyer de survivre pendant la montée en charge. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Il faut distinguer ce qui permet de commencer, ce qui permet d’encaisser un retard, ce qui permet au foyer de survivre pendant la montée en charge — et ce que l’on paie en temps quand on économise du cash. _[temporalité]_
 ### `dossiers/decider-a-deux-travail-patrimoine.html`
 - **nécessité à requalifier ou sourcer** — Le scénario doit donc intégrer le risque propre à B : contrat, santé, secteur, mobilité et assurance/prévoyance.
 ### `dossiers/decider-sans-tourner-en-rond.html`
