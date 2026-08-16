@@ -12,14 +12,14 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 
 | Score | Mots | Page | Dimensions manquantes |
 |---:|---:|---|---|
-| 6/9 | 1449 | `dossiers/dependance-gros-client.html` | probleme, causalite, sortie · validation précédente caduque |
+| 6/9 | 1463 | `dossiers/dependance-gros-client.html` | probleme, causalite, sortie · validation précédente caduque |
 | 6/9 | 2785 | `dossiers/indivision-loyers-charges-comptes.html` | probleme, causalite, options · validation précédente caduque |
 
 ## Validations devenues caduques
 
 | Page | SHA relu | SHA courant |
 |---|---|---|
-| `dossiers/dependance-gros-client.html` | `aff1498bfed0cdae7eb745a22fc9815b7c5ef260` | `63a5b3d2462665749296e8ca3c0953454cee725f` |
+| `dossiers/dependance-gros-client.html` | `aff1498bfed0cdae7eb745a22fc9815b7c5ef260` | `bdbca2d0a06cf686a0fc4786708fd14489f953e1` |
 | `dossiers/indivision-loyers-charges-comptes.html` | `17a2f1637380da7fdce685ccf909e3eeb3d5523a` | `58e167161f9837e65d22f8c8ead933f1bada5b48` |
 | `dossiers/comparer-strategies-immobilieres.html` | `06acc378800acfdcbb52e5992f3067d5b16a0b72` | `c67bf5147a80d76880553802d97ac8e805724bc1` |
 | `dossiers/etude-marche-terrain.html` | `d7865b294ff9c7d2ee08a0265097e17bc1061c3c` | `f90b72113ee549aa64fd58cceb44980f67e77160` |
@@ -151,7 +151,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | Score | Mots | Revue | Page |
 |---:|---:|---|---|
 | 6/9 | 1353 | humaine ✓ | `dossiers/etre-riche-revenu-patrimoine-liberte.html` |
-| 6/9 | 1449 | à revoir après changement | `dossiers/dependance-gros-client.html` |
+| 6/9 | 1463 | à revoir après changement | `dossiers/dependance-gros-client.html` |
 | 6/9 | 1485 | humaine ✓ | `dossiers/experience-devient-risque-recruteur.html` |
 | 6/9 | 2785 | à revoir après changement | `dossiers/indivision-loyers-charges-comptes.html` |
 | 7/9 | 1157 | humaine ✓ | `articles/50-candidatures-zero-reponse.html` |
