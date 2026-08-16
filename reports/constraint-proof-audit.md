@@ -8,7 +8,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **14**
 - P1 — affirmation forte à resserrer ou vérifier : **48**
-- P2 — nécessité à examiner : **144**
+- P2 — nécessité à examiner : **145**
 - OK heuristique — source/périmètre détecté, fond restant à contrôler : **599**
 
 ## P0 — rouvrir en priorité
@@ -311,6 +311,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Il faut la transformer en étapes ordonnées, avec des ressources, des délais et des points de contrôle.
 ### `simulateur-cout-formation.html`
 - **nécessité à requalifier ou sourcer** — Non Partiellement Oui, par immersion / pratique / mission Quel verrou précis la formation doit-elle lever ? _[temporalité]_
+### `simulateur-decumulation-patrimoine.html`
+- **nécessité à requalifier ou sourcer** — L'AMF rappelle qu'un rendement supérieur implique davantage de risque, que le rendement réel doit tenir compte de l'inflation et que le risque doit être adapté à l'horizon de placement.
 ### `simulateur-epargne-demission.html`
 - **nécessité à requalifier ou sourcer** — Ce que le foyer doit financer chaque mois Dépenses essentielles mensuelles Logement, alimentation, transport, assurances, crédits et charges indispensables. _[temporalité]_
 ### `simulateur-prix-attendre.html`
