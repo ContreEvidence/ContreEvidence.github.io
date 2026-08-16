@@ -9,7 +9,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - P0 — fermeture forte sans preuve/périmètre suffisant : **15**
 - P1 — affirmation forte à resserrer ou vérifier : **59**
 - P2 — nécessité à examiner : **140**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **749**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **750**
 
 ## P0 — rouvrir en priorité
 
@@ -156,9 +156,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Mais il faut lui fixer une condition de sortie. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Une preuve doit répondre au risque précis, pas simplement remplir le CV.
 ### `articles/retrouver-emploi-apres-interruption.html`
-- **nécessité à requalifier ou sourcer** — Il faut montrer des preuves récentes, vérifier que le rythme est tenable et choisir une première étape qui améliore réellement la suivante. _[temporalité]_
-- **nécessité à requalifier ou sourcer** — L’explication de l’interruption doit être courte, stable et factuelle.
-- **nécessité à requalifier ou sourcer** — Une reprise réussie doit produire du récent : résultats, référence, compétences à jour et nouvelles options.
+- **nécessité à requalifier ou sourcer** — Elle ne doit pas devenir le sujet principal du CV.
+- **nécessité à requalifier ou sourcer** — Le retour doit surtout produire une preuve convaincante du présent. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — L’interruption doit être expliquée de façon stable, factuelle et proportionnée.
 ### `articles/travailler-beaucoup-gagner-peu-prix.html`
 - **nécessité à requalifier ou sourcer** — Additionnez vos coûts fixes professionnels, la rémunération que l’activité doit permettre, les prélèvements sociaux et fiscaux qui dépendent de votre statut lorsqu’ils ne sont pas déjà intégrés, et une marge de sécurité.
 - **nécessité à requalifier ou sourcer** — Le prix facturé doit ensuite couvrir cette contribution plus les coûts variables liés à la prestation .
