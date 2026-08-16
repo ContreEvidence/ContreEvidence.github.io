@@ -6,7 +6,7 @@ on:
     paths:
       - 'dossiers/**.html'
       - 'articles/**.html'
-      - 'reports/corpus-solution-human-review.json'
+      - 'reports/corpus-solution-human-review*.json'
       - '.github/workflows/corpus-solution-review.yml'
   workflow_dispatch:
 
@@ -39,13 +39,21 @@ jobs:
               if root.exists():
                   files.extend(root.rglob('*.html'))
 
-          reviews_path = Path('reports/corpus-solution-human-review.json')
+          # Human reviews are append-only by batch. The historical base file remains
+          # supported; later batch files override an older entry for the same page.
+          review_files = []
+          base_review = Path('reports/corpus-solution-human-review.json')
+          if base_review.exists():
+              review_files.append(base_review)
+          review_files.extend(sorted(Path('reports').glob('corpus-solution-human-review-*.json')))
+
           reviews = {}
-          if reviews_path.exists():
+          for reviews_path in review_files:
               try:
-                  reviews = json.loads(reviews_path.read_text(encoding='utf-8')).get('pages', {})
-              except Exception:
-                  reviews = {}
+                  payload = json.loads(reviews_path.read_text(encoding='utf-8'))
+                  reviews.update(payload.get('pages', {}))
+              except Exception as exc:
+                  print(f'Ignoring invalid review file {reviews_path}: {exc}')
 
           TAG = re.compile(r'<[^>]+>', re.S)
           SCRIPT = re.compile(r'<(script|style)\b[^>]*>.*?</\1>', re.I | re.S)
