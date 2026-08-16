@@ -232,7 +232,7 @@ Promesse : **créer une entreprise avec peu d’argent : budget de départ réal
 | revenu stable / variable | MANQUANTE |
 | solo / couple | TRAITEE |
 | logement propriétaire / locataire | MENTIONNEE |
-| dette / surendettement | TRAITEE |
+| dette / surendettement | ROUTEE |
 | charges compressibles / non | TRAITEE |
 
 ### `dossiers/patrimoine-marge-de-manoeuvre.html` — budget / dettes
