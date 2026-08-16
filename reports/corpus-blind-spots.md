@@ -13,7 +13,6 @@ Pages indexables analysées : **124**. Pages `noindex` exclues : **79**.
 | Priorité | Couverture | Cluster | Page | Angles critiques non détectés |
 |---:|---:|---|---|---|
 | 16 | 7/15 | patrimoine / investissement / retraite | `dossiers/favoriser-un-enfant-succession-donation.html` | attendre / statu quo, transfert de risque, hétérogénéité / cas local, condition de renversement, valeur d’option / irréversibilité |
-| 16 | 7/15 | entrepreneuriat / activité | `dossiers/previsionnel-activite-12-mois.html` | acteur/gatekeeper, substitution, combinaison de leviers, effets de second ordre, attendre / statu quo |
 | 16 | 7/15 | patrimoine / investissement / retraite | `dossiers/reconversion-sans-perte-salaire.html` | attendre / statu quo, effets de second ordre, transfert de risque, condition de renversement, valeur d’option / irréversibilité |
 | 16 | 7/15 | entrepreneuriat / activité | `dossiers/sante-travail-equilibre-vie-pro-perso.html` | acteur/gatekeeper, substitution, fractionnement, attendre / statu quo, condition de renversement |
 | 15 | 8/15 | patrimoine / investissement / retraite | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` | attendre / statu quo, effets de second ordre, transfert de risque, condition de renversement, valeur d’option / irréversibilité |
@@ -62,6 +61,7 @@ Pages indexables analysées : **124**. Pages `noindex` exclues : **79**.
 | 9 | 9/15 | emploi / carrière / qualification | `articles/premiere-chance-sans-experience.html` | acteur/gatekeeper, objectif réel / substitution du moyen, asymétrie de preuve |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/audit-budget-60-minutes.html` | effets de second ordre, transfert de risque, valeur d’option / irréversibilité |
 | 9 | 9/15 | immobilier / crédit / indivision | `dossiers/audit-copropriete-avant-achat.html` | acteur/gatekeeper, valeur d’option / irréversibilité, condition de renversement |
+| 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/automatiser-ou-non-processus.html` | attendre / statu quo, transfert de risque, hétérogénéité / cas local |
 
 ## Lecture par cluster
 
@@ -71,7 +71,7 @@ Pages : **32**. Angles le plus souvent non détectés : **transfert de risque** 
 
 ### entrepreneuriat / activité
 
-Pages : **26**. Angles le plus souvent non détectés : **acteur/gatekeeper** (19), **attendre / statu quo** (18), **valeur d’option / irréversibilité** (18), **substitution** (17), **objectif réel / substitution du moyen** (13), **transfert de risque** (13), **condition de renversement** (11).
+Pages : **26**. Angles le plus souvent non détectés : **acteur/gatekeeper** (18), **attendre / statu quo** (17), **substitution** (17), **valeur d’option / irréversibilité** (17), **objectif réel / substitution du moyen** (13), **transfert de risque** (13), **condition de renversement** (12).
 
 ### immobilier / crédit / indivision
 
