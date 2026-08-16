@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **78**. Validations devenues caduques après modification : **45**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **77**. Validations devenues caduques après modification : **46**.
 
 ## Priorité humaine
 
@@ -62,6 +62,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` | `b8ca6053a594bbee33797f2d2c4dce8b4854e67b` | `c6e5736d0811426bfb0bfd40ac588e3c6c3945cf` |
 | `dossiers/liquidites-reserve-securite.html` | `ae88ad8ae7c6981800827b83825e37da0c51d1c5` | `a74e6236fdfeceb5bdb3917909629bf7e0528dc3` |
 | `dossiers/combien-chiffre-affaires-pour-vivre.html` | `ecb09de9f0ebcb7f42e79bac0351f086fadee8ae` | `0dfc9a1d1e4eb8bb68983008c839fd244620a987` |
+| `dossiers/assurer-ou-autoassurer-risques.html` | `6bd9c11fce81a3115d0115986a602f1e4fb2753e` | `fdb5e3151d07b23ddc499f78adf060c37f630529` |
 | `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` | `0dde3d3af6dc5214b42e2e86c59d2ef2677de259` | `49a26a95921f5be5635c8609812eef122250a076` |
 
 ## Pages validées humainement et inchangées
@@ -77,7 +78,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/competences-qualification-employabilite.html` — 7/9 automatique — Séparation compétence/qualification/preuve, verrou légal versus recrutement, test sur 30 offres et voies alternatives déjà structurés.
 - `dossiers/finances-cadre-global.html` — 7/9 automatique — Objectifs par horizon, réserve personnelle, allocation en zones, plafonds, stress tests et événements autorisant une révision déjà explicites.
 - `dossiers/garages-parkings-locaux-commerciaux.html` — 7/9 automatique — Vacance extrême, reconversion du local, financement, concentration, critères d’inversion et sortie avant entrée déjà structurés.
-- `dossiers/assurer-ou-autoassurer-risques.html` — 7/9 automatique — Gravité, capacité d’absorption, inventaire des couvertures, franchise comme partage du risque et matrice fréquence/gravité déjà traités.
 - `dossiers/questions-poser-avant-prise-de-poste.html` — 7/9 automatique — Questions conçues pour réduire l’incertitude, croisement d’interlocuteurs, moyens versus responsabilités et matrice importance × inconnue déjà présents.
 - `dossiers/accepter-emploi-plus-loin-cout-trajet.html` — 7/9 automatique — Gain net, coût du temps, trois seuils, option de carrière, télétravail et déménagement comme architectures alternatives déjà traités.
 - `articles/investir-grosse-somme-dun-coup-ou-progressivement.html` — 7/9 automatique — Risque d’attente versus timing, stratégie hybride, calendrier mécanique, date de fin et motifs légitimes d’interruption déjà explicites.
@@ -160,7 +160,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 7/9 | 1285 | humaine ✓ | `dossiers/competences-qualification-employabilite.html` |
 | 7/9 | 1301 | humaine ✓ | `dossiers/finances-cadre-global.html` |
 | 7/9 | 1303 | humaine ✓ | `dossiers/garages-parkings-locaux-commerciaux.html` |
-| 7/9 | 1390 | humaine ✓ | `dossiers/assurer-ou-autoassurer-risques.html` |
 | 7/9 | 1408 | humaine ✓ | `dossiers/questions-poser-avant-prise-de-poste.html` |
 | 7/9 | 1410 | humaine ✓ | `dossiers/accepter-emploi-plus-loin-cout-trajet.html` |
 | 7/9 | 1455 | humaine ✓ | `articles/investir-grosse-somme-dun-coup-ou-progressivement.html` |
@@ -271,6 +270,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 2581 | à revoir après changement | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` |
 | 9/9 | 2675 | à revoir après changement | `dossiers/liquidites-reserve-securite.html` |
 | 9/9 | 2742 | à revoir après changement | `dossiers/combien-chiffre-affaires-pour-vivre.html` |
+| 9/9 | 2961 | à revoir après changement | `dossiers/assurer-ou-autoassurer-risques.html` |
 | 9/9 | 3065 | humaine ✓ | `dossiers/indivision-rachat-progressif-parts.html` |
 | 9/9 | 3821 | humaine ✓ | `dossiers/indivision-couple-separation-rachat-soulte.html` |
 | 9/9 | 4276 | à revoir après changement | `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` |
