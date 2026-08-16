@@ -36,7 +36,6 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 9 | 10/15 | entrepreneuriat / activité | `dossiers/allocation-patrimoine-selon-situation.html` | acteur/gatekeeper, substitution, attendre / statu quo |
 | 9 | 10/15 | immobilier / crédit / indivision | `dossiers/indivision-succession-heritiers-vendre-partager.html` | acteur/gatekeeper, valeur d’option / irréversibilité, condition de renversement |
 | 9 | 11/15 | entrepreneuriat / activité | `dossiers/couple-famille-argent-temps.html` | acteur/gatekeeper, substitution, attendre / statu quo |
-| 9 | 11/15 | entrepreneuriat / activité | `dossiers/creer-entreprise-avec-peu-argent.html` | fractionnement, attendre / statu quo, condition de renversement |
 | 9 | 11/15 | immobilier / crédit / indivision | `dossiers/indivision-immobiliere-sortir-sans-subir.html` | effets de second ordre, valeur d’option / irréversibilité, condition de renversement |
 | 9 | 11/15 | entrepreneuriat / activité | `dossiers/lancer-activite-sans-quitter-emploi.html` | acteur/gatekeeper, substitution, attendre / statu quo |
 | 9 | 11/15 | patrimoine / investissement / retraite | `dossiers/piloter-patrimoine-selon-taille.html` | attendre / statu quo, transfert de risque, valeur d’option / irréversibilité |
@@ -62,6 +61,7 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 6 | 11/15 | patrimoine / investissement / retraite | `articles/investir-grosse-somme-dun-coup-ou-progressivement.html` | condition de renversement, valeur d’option / irréversibilité |
 | 6 | 11/15 | entrepreneuriat / activité | `dossiers/ameliorer-processus-sans-degrader-service.html` | acteur/gatekeeper, attendre / statu quo |
 | 6 | 11/15 | immobilier / crédit / indivision | `dossiers/audit-copropriete-avant-achat.html` | acteur/gatekeeper, effets de second ordre |
+| 6 | 11/15 | emploi / carrière / qualification | `dossiers/competent-mais-invisible-travail.html` | substitution, fenêtre temporelle |
 
 ## Lecture par cluster
 
@@ -71,7 +71,7 @@ Pages : **40**. Angles le plus souvent non détectés : **transfert de risque** 
 
 ### entrepreneuriat / activité
 
-Pages : **24**. Angles le plus souvent non détectés : **valeur d’option / irréversibilité** (13), **objectif réel / substitution du moyen** (12), **transfert de risque** (12), **acteur/gatekeeper** (10), **condition de renversement** (10), **attendre / statu quo** (9), **substitution** (8).
+Pages : **24**. Angles le plus souvent non détectés : **valeur d’option / irréversibilité** (13), **objectif réel / substitution du moyen** (12), **transfert de risque** (12), **acteur/gatekeeper** (10), **condition de renversement** (10), **attendre / statu quo** (8), **substitution** (8).
 
 ### immobilier / crédit / indivision
 
