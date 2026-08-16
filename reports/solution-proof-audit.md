@@ -7,9 +7,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **36**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **37**
 - S2 — possibilité générale à examiner : **14**
-- OK heuristique — condition ou preuve détectée : **153**
+- OK heuristique — condition ou preuve détectée : **152**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -62,6 +62,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Stress test avant d’adopter la politique Une allocation cible n’a de sens que si vous pouvez supporter son mauvais scénario. _[fort enjeu, condition détectée]_
 ### `dossiers/finances-enveloppes-fiscalite.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Je la choisirais parce qu’elle permet de détenir les bons actifs, au bon coût, avec la bonne liquidité et une fiscalité cohérente avec l’usage réel. ← Investissement · Allocation patrimoniale → À lire ensuite Continuez sans repartir de zéro. _[fort enjeu, preuve détectée]_
+### `dossiers/finances-residence-principale.html`
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Si elle permet d’accepter dans deux ans une mobilité procurant +500 €/mois sans revente contrainte, le prix de l’option devient mesurable . _[fort enjeu, condition détectée]_
 ### `dossiers/finances-retraite-decumulation.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Croissance Capital dont l’horizon long permet de conserver une exposition aux actifs risqués. _[fort enjeu, preuve détectée]_
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Vérifier les droits avant de simuler le patrimoine Le portail officiel Info Retraite permet de vérifier la carrière enregistrée et d’estimer l’âge et le montant de la retraite à partir des droits connus par les différents régimes. _[fort enjeu, preuve détectée]_
