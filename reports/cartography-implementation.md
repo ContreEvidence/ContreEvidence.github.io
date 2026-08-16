@@ -11,6 +11,7 @@ Références :
 | Priorité | Trou cartographique | État | Mise en œuvre |
 |---|---|---|---|
 | P0 | Outil → résultat → interprétation → prochaine décision | **MIS EN ŒUVRE** | `assets/decision-next.js` ajoute des sorties contextualisées aux outils/simulateurs existants ; les nouveaux simulateurs possèdent aussi leurs sorties natives. |
+| P0 | Ressaisir les mêmes données au moteur suivant | **PREMIÈRE MISE EN ŒUVRE** | `assets/tool-handoff.js` transmet uniquement dans `sessionStorage`, jamais dans l’URL. Premières chaînes : audit financier → réserve ; capacité d’emprunt → parcours achat ; 80 % → Temps · Argent · Liberté ; décumulation → Temps · Argent · Liberté. |
 | P0 | Les outils restent une catégorie trop large | **MIS EN ŒUVRE** | `outils.html` organise les moteurs par fonction : diagnostiquer, comparer, calculer un seuil, tester un scénario, construire un plan, piloter. |
 | P0 | Parcours achat immobilier dispersé | **MIS EN ŒUVRE** | `parcours-achat-immobilier.html` : capacité → coût complet → réserve → mobilité → décision. |
 | P0 | Temps / argent / qualité de vie dispersés | **MIS EN ŒUVRE** | `parcours-temps-argent-liberte.html` relie travail, trajet, 80 %, patrimoine, temps et condition de retour. |
@@ -26,9 +27,11 @@ Références :
 1. **Outils** devient une destination autonome dans la navigation, et non un simple filtre de Bibliothèque.
 2. Les situations transversales disposent de parcours dédiés au lieu d’être renvoyées vers un domaine unique.
 3. Les résultats des outils commencent à ouvrir une **prochaine décision** plutôt qu’à constituer une fin de parcours.
-4. Deux clusters éditoriaux mûrs ont produit de nouveaux moteurs interactifs : **indivision** et **décumulation**.
-5. Vie professionnelle acquiert une boucle longitudinale comparable dans son principe au pilotage patrimonial, sans dupliquer `Mon espace`.
-6. La Bibliothèque et le hub Outils reposent désormais sur le même inventaire réel des moteurs disponibles.
+4. Certaines transitions conservent désormais localement le contexte du moteur précédent : le visiteur n’est plus obligé de repartir de zéro, sans que les montants passent dans l’URL.
+5. Deux clusters éditoriaux mûrs ont produit de nouveaux moteurs interactifs : **indivision** et **décumulation**.
+6. Vie professionnelle acquiert une boucle longitudinale comparable dans son principe au pilotage patrimonial, sans dupliquer `Mon espace`.
+7. La Bibliothèque et le hub Outils reposent désormais sur le même inventaire réel des moteurs disponibles.
+8. L’accueil montre explicitement la nouvelle architecture : parcours, outils par fonction et porte de secours pour une situation bloquée.
 
 ## Règle de poursuite
 
@@ -44,11 +47,11 @@ Le prochain développement ne doit pas être choisi parce qu’un sujet est int�
 
 ### 1. Continuité entre outils
 
-La couche « Et maintenant ? » existe. Il faut maintenant vérifier si certaines sorties pourraient **transmettre directement quelques données** au moteur suivant sans compte utilisateur, plutôt que demander une nouvelle saisie.
+Le mécanisme de transmission locale existe maintenant. L’étendre uniquement lorsque les champs ont **la même signification économique**, ou lorsqu’une valeur est présentée comme simple contexte. Ne jamais préremplir silencieusement une variable différente sous prétexte qu’elle est proche.
 
 ### 2. Page d’accueil
 
-L’accueil doit montrer assez vite que Contre-Évidence n’est plus seulement composé de dossiers. Mesurer si les nouvelles portes « Outils », « parcours transversaux » et « situation bloquée » sont suffisamment visibles avant de modifier encore le hero.
+La nouvelle architecture est désormais visible sans lire un changelog : parcours achat, Temps · Argent · Liberté, 30 outils/simulateurs et porte « situation bloquée ». La prochaine étape doit être guidée par l’usage plutôt que par une nouvelle couche de texte.
 
 ### 3. Entrepreneuriat longitudinal
 
