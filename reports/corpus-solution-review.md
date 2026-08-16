@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **79**. Validations devenues caduques après modification : **44**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **78**. Validations devenues caduques après modification : **45**.
 
 ## Priorité humaine
 
@@ -55,6 +55,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/finances-investissement-locatif.html` | `2c09f9a2b80c1ef004f4c07f5941dcf88894a1e3` | `cb6ee4bf8b4ee8e265659aecd7e082bf93f2ff45` |
 | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` | `73804a97a74df735855ceb5291c6ce824e36da56` | `a982b4a256d31aa630435af2265c34c7134f8570` |
 | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` | `aab16c4e6601ab8b9d42fc4230e4e668cbc1d540` | `97fa9c117bef460b3c2679212f70d819f9872519` |
+| `dossiers/finances-credit-endettement.html` | `0e7bf55b72e7d5d6a9b9df85ce1bd14c87f48715` | `d8d560cf2c838d289fa7b93c5cb7a0661987c11d` |
 | `articles/comparatif-produits-bancaires.html` | `f766c96540debfe1ce8ef1d2c7e38770df01b3f3` | `ac036634513c533460b7d5f49dcb8afc4914e497` |
 | `dossiers/finances-transmission-patrimoine.html` | `82b04a6992bd5fea253a773125768b5cb012a203` | `15070334cd5a3c650db719531dc521c35f00a76d` |
 | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | `9b46d98a92fde3c92c7d0ba563bbece7cb3ce9ad` | `bac921cbe2446cc20f220d80e11bede4856b9672` |
@@ -76,7 +77,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/competences-qualification-employabilite.html` — 7/9 automatique — Séparation compétence/qualification/preuve, verrou légal versus recrutement, test sur 30 offres et voies alternatives déjà structurés.
 - `dossiers/finances-cadre-global.html` — 7/9 automatique — Objectifs par horizon, réserve personnelle, allocation en zones, plafonds, stress tests et événements autorisant une révision déjà explicites.
 - `dossiers/garages-parkings-locaux-commerciaux.html` — 7/9 automatique — Vacance extrême, reconversion du local, financement, concentration, critères d’inversion et sortie avant entrée déjà structurés.
-- `dossiers/finances-credit-endettement.html` — 7/9 automatique — Fonction de la dette, coût complet, levier, liquidité, stress combiné et options futures détruites par la mensualité déjà explicites.
 - `dossiers/assurer-ou-autoassurer-risques.html` — 7/9 automatique — Gravité, capacité d’absorption, inventaire des couvertures, franchise comme partage du risque et matrice fréquence/gravité déjà traités.
 - `dossiers/questions-poser-avant-prise-de-poste.html` — 7/9 automatique — Questions conçues pour réduire l’incertitude, croisement d’interlocuteurs, moyens versus responsabilités et matrice importance × inconnue déjà présents.
 - `dossiers/accepter-emploi-plus-loin-cout-trajet.html` — 7/9 automatique — Gain net, coût du temps, trois seuils, option de carrière, télétravail et déménagement comme architectures alternatives déjà traités.
@@ -160,7 +160,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 7/9 | 1285 | humaine ✓ | `dossiers/competences-qualification-employabilite.html` |
 | 7/9 | 1301 | humaine ✓ | `dossiers/finances-cadre-global.html` |
 | 7/9 | 1303 | humaine ✓ | `dossiers/garages-parkings-locaux-commerciaux.html` |
-| 7/9 | 1344 | humaine ✓ | `dossiers/finances-credit-endettement.html` |
 | 7/9 | 1390 | humaine ✓ | `dossiers/assurer-ou-autoassurer-risques.html` |
 | 7/9 | 1408 | humaine ✓ | `dossiers/questions-poser-avant-prise-de-poste.html` |
 | 7/9 | 1410 | humaine ✓ | `dossiers/accepter-emploi-plus-loin-cout-trajet.html` |
@@ -264,6 +263,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 2201 | à revoir après changement | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` |
 | 9/9 | 2215 | humaine ✓ | `dossiers/indivision-immobiliere-sortir-sans-subir.html` |
 | 9/9 | 2272 | à revoir après changement | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` |
+| 9/9 | 2315 | à revoir après changement | `dossiers/finances-credit-endettement.html` |
 | 9/9 | 2347 | à revoir après changement | `articles/comparatif-produits-bancaires.html` |
 | 9/9 | 2381 | à revoir après changement | `dossiers/finances-transmission-patrimoine.html` |
 | 9/9 | 2462 | à revoir après changement | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
