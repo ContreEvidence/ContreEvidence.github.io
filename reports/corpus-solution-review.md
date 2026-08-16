@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **42**. Validations devenues caduques après modification : **0**.
+Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **48**. Validations devenues caduques après modification : **0**.
 
 ## Priorité humaine
 
@@ -53,10 +53,16 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/demenager-pour-un-emploi-salaire-minimum.html` — 7/9 automatique — Salaire net de bascule, coûts de transition, prix du temps, aides conditionnelles et valeur d’option de la mobilité déjà traités.
 - `dossiers/quand-vie-change-sante-separation-revenu.html` — 8/9 automatique — Stabilisation, période tampon, réversibilité, séquence 30 jours et stress test déjà structurés.
 - `dossiers/etude-marche-terrain.html` — 8/9 automatique — Preuve payante, marché accessible, CAC/LTV, saisonnalité, test terrain et critères de pivot/abandon déjà explicites.
+- `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` — 8/9 automatique — Deux systèmes de vie comparés : flux, temps capturé, robustesse, trajectoire, scénarios, seuil de bascule et options C/D déjà présents.
 - `dossiers/business-plan-utile.html` — 8/9 automatique — Capacité, BFR, trois scénarios, trajectoire à trois ans et critères explicites d’abandon rendent le plan falsifiable.
+- `dossiers/metiers-fonctions-organisation-entreprise.html` — 8/9 automatique — Fonctions lues par flux, décisions, interfaces et criticité ; transferts de compétences et test organisationnel déjà structurés.
 - `dossiers/protocole-verifier-reponse-ia.html` — 8/9 automatique — Hiérarchie de preuve, temporalité, contre-preuve, hypothèse d’inversion et seuil d’arrêt de vérification déjà structurés.
 - `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` — 8/9 automatique — Besoin/objectifs/moyens séparés, non-négociables, options concurrentes, scénario adverse et seuil de changement déjà structurés.
+- `dossiers/sante-travail-equilibre-vie-pro-perso.html` — 8/9 automatique — Soutenabilité analysée par risques, charge, récupération, trajet et options de modification du travail avant abandon du métier.
+- `dossiers/reconversion-sans-formation-longue.html` — 8/9 automatique — Verrou dominant, VAE/certification/poste passerelle/candidature directe, coût complet, seuils et conditions d’inversion déjà structurés.
+- `dossiers/emploi-chercher-accepter-negocier-evoluer.html` — 8/9 automatique — Entonnoir emploi, diagnostic par étape, alternatives, plancher de négociation, scénario rester/préparer/partir et options futures déjà traités.
 - `dossiers/prix-attendre-finances.html` — 8/9 automatique — Coûts certains versus opportunité, cas où attendre protège, scénario symétrique d’action trop rapide et seuil de décision déjà présents.
+- `dossiers/automatiser-ou-non-processus.html` — 9/9 automatique — Réécriture du 16/08 : supprimer/simplifier/standardiser avant automatisation, assistance partielle, rollback et condition d’abandon.
 - `dossiers/prejuges-biais-monde-professionnel.html` — 9/9 automatique — Réécriture du 16/08 : diagnostic signal/gatekeeper/discrimination, test causal, substitution d’acteur et seuil de sortie du registre de persuasion.
 
 ## Corpus complet
@@ -102,21 +108,21 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1008 | heuristique | `dossiers/immobilier-allocation-globale-patrimoine.html` |
 | 8/9 | 1074 | humaine ✓ | `dossiers/etude-marche-terrain.html` |
 | 8/9 | 1077 | heuristique | `dossiers/reconversion-sans-perte-salaire.html` |
-| 8/9 | 1090 | heuristique | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` |
+| 8/9 | 1090 | humaine ✓ | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` |
 | 8/9 | 1116 | humaine ✓ | `dossiers/business-plan-utile.html` |
 | 8/9 | 1170 | heuristique | `articles/sans-diplome-chemins-alternatifs.html` |
 | 8/9 | 1185 | heuristique | `dossiers/acheter-logement-sans-se-fragiliser.html` |
 | 8/9 | 1189 | heuristique | `dossiers/creer-entreprise-avec-peu-argent.html` |
 | 8/9 | 1194 | heuristique | `dossiers/comparer-strategies-immobilieres.html` |
 | 8/9 | 1201 | heuristique | `dossiers/are-arce-acre-creation-entreprise.html` |
-| 8/9 | 1208 | heuristique | `dossiers/metiers-fonctions-organisation-entreprise.html` |
+| 8/9 | 1208 | humaine ✓ | `dossiers/metiers-fonctions-organisation-entreprise.html` |
 | 8/9 | 1227 | humaine ✓ | `dossiers/protocole-verifier-reponse-ia.html` |
 | 8/9 | 1229 | heuristique | `dossiers/previsionnel-activite-12-mois.html` |
 | 8/9 | 1229 | humaine ✓ | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` |
 | 8/9 | 1280 | heuristique | `articles/frais-fiscalite-rendement-net.html` |
-| 8/9 | 1281 | heuristique | `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
-| 8/9 | 1286 | heuristique | `dossiers/reconversion-sans-formation-longue.html` |
-| 8/9 | 1317 | heuristique | `dossiers/emploi-chercher-accepter-negocier-evoluer.html` |
+| 8/9 | 1281 | humaine ✓ | `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
+| 8/9 | 1286 | humaine ✓ | `dossiers/reconversion-sans-formation-longue.html` |
+| 8/9 | 1317 | humaine ✓ | `dossiers/emploi-chercher-accepter-negocier-evoluer.html` |
 | 8/9 | 1337 | heuristique | `dossiers/competent-mais-invisible-travail.html` |
 | 8/9 | 1345 | heuristique | `dossiers/capacite-refuser-travail-rentabilite.html` |
 | 8/9 | 1351 | heuristique | `dossiers/tresorerie-bfr-entreprise.html` |
@@ -167,7 +173,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1557 | heuristique | `articles/comparatif-produits-bancaires.html` |
 | 9/9 | 1570 | heuristique | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
 | 9/9 | 1610 | heuristique | `dossiers/travailler-moins-vivre-mieux.html` |
-| 9/9 | 1615 | heuristique | `dossiers/automatiser-ou-non-processus.html` |
+| 9/9 | 1615 | humaine ✓ | `dossiers/automatiser-ou-non-processus.html` |
 | 9/9 | 1704 | heuristique | `dossiers/indivision-succession-heritiers-vendre-partager.html` |
 | 9/9 | 1707 | heuristique | `dossiers/ameliorer-processus-sans-degrader-service.html` |
 | 9/9 | 1760 | heuristique | `articles/travailler-beaucoup-gagner-peu-prix.html` |
