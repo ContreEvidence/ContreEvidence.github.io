@@ -6,15 +6,13 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 
 ## Synthèse
 
-- S0 — possibilité à fort enjeu sans preuve/condition détectée : **8**
+- S0 — possibilité à fort enjeu sans preuve/condition détectée : **7**
 - S1 — possibilité à fort enjeu à resserrer ou vérifier : **29**
 - S2 — possibilité générale à examiner : **13**
-- OK heuristique — condition ou preuve détectée : **148**
+- OK heuristique — condition ou preuve détectée : **149**
 
 ## S0 — vérifier avant toute recommandation
 
-### `dossiers/calculer-prix-minimum-rentable.html`
-- **possibilité à fort enjeu sans condition ni signal de preuve** — Séparer coûts fixes et coûts variables Coûts fixes Coûts variables Assurance, logiciel, téléphone, comptabilité, véhicule, local Produits, fournitures, sous-traitance, péage, consommables Existent même avec peu de clients Augmentent avec le volume Cette distinction permet de savoir ce qu’une prestation apporte réellement pour payer la structure. _[fort enjeu]_
 ### `dossiers/creer-entreprise-avec-peu-argent.html`
 - **possibilité à fort enjeu sans condition ni signal de preuve** — Il faut distinguer ce qui permet de commencer, ce qui permet d’encaisser un retard, ce qui permet au foyer de survivre pendant la montée en charge — et ce que l’on paie en temps quand on économise du cash. _[fort enjeu]_
 ### `dossiers/finances-difficiles-sortir-decouvert-dettes.html`
