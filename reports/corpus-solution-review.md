@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **71**. Validations devenues caduques après modification : **52**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **70**. Validations devenues caduques après modification : **53**.
 
 ## Priorité humaine
 
@@ -25,6 +25,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/finances-residence-principale.html` | `89bdee80210b87568b4831b77c18bccbc6c8f1f9` | `4b05edd96e80db6ba39a4d61c824d1fc766e3489` |
 | `dossiers/calculer-prix-minimum-rentable.html` | `1597bb81c5cba87c2e493fff0aa8a3bc640ac438` | `9625f1c2b342c3a6765072aa31ffb8c7c846fef2` |
 | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` | `e782289f8d68aab912acdd201a649e7782204756` | `959ef22860e5b38b622378e56ec4a2de9123e610` |
+| `articles/accepter-nimporte-quel-poste-retour-emploi.html` | `27d74310369168d6bfc5db8c22d2b4ee679c7705` | `7cab1f949fbc95e018bdee353a9773b86d8e031e` |
 | `dossiers/quand-vie-change-sante-separation-revenu.html` | `7c1e0e0d680c29f25db5fc5d7c9b17ccb1f37d6a` | `1487618f513ec93eafa2bc48959f9c83f74bcc57` |
 | `articles/competences-transferables.html` | `54a32e6988ad07816c8b18fc454c4de0eda4a129` | `343bc34e46dc1da22921da8845122da86db8a759` |
 | `dossiers/business-plan-utile.html` | `e905253a4ba67437152d5227dcdd9dd464886d32` | `d67ecb168823cccfc96f3a853f21e902602d46bb` |
@@ -128,7 +129,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/valeur-option-bien-immobilier.html` — 9/9 automatique — Option immobilière distinguée de faisabilité prouvée, valeur conditionnelle, coûts d’activation et scénarios de sortie déjà structurés.
 - `articles/clients-interesses-personne-nachete.html` — 9/9 automatique — Revue angles morts : utilisateur/payeur/décideur, coût de changement, fenêtre de décision et architecture de transaction intégrés.
 - `dossiers/embaucher-ou-sous-traiter.html` — 9/9 automatique — Coût complet, capacité, flexibilité, contrôle, seuil de charge et scénarios embauche/sous-traitance/hybride déjà structurés.
-- `articles/accepter-nimporte-quel-poste-retour-emploi.html` — 9/9 automatique — Premier poste lu comme achat de preuve et d’options, avec coût d’enfermement, seuil de sortie et alternatives déjà structurés.
 - `dossiers/quitter-emploi-stable-ou-rester.html` — 9/9 automatique — Coût de rester versus coût de partir, options intermédiaires, runway, scénarios et conditions d’inversion déjà structurés.
 - `dossiers/automatiser-ou-non-processus.html` — 9/9 automatique — Réécriture du 16/08 : supprimer/simplifier/standardiser avant automatisation, assistance partielle, rollback et condition d’abandon.
 - `dossiers/indivision-succession-heritiers-vendre-partager.html` — 9/9 automatique — Droits, usages, liquidité, soultes, vente, partage, convention et scénarios de blocage déjà distingués et structurés.
@@ -192,6 +192,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1425 | humaine ✓ | `dossiers/lancer-activite-sans-quitter-emploi.html` |
 | 8/9 | 1435 | humaine ✓ | `dossiers/audit-copropriete-avant-achat.html` |
 | 8/9 | 1435 | humaine ✓ | `dossiers/negocier-salaire-responsabilites.html` |
+| 8/9 | 1448 | à revoir après changement | `articles/accepter-nimporte-quel-poste-retour-emploi.html` |
 | 8/9 | 1477 | humaine ✓ | `articles/competences-invisibles-preuves.html` |
 | 8/9 | 1591 | à revoir après changement | `dossiers/quand-vie-change-sante-separation-revenu.html` |
 | 8/9 | 1599 | humaine ✓ | `dossiers/comparer-deux-offres-emploi.html` |
@@ -232,7 +233,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1439 | humaine ✓ | `dossiers/valeur-option-bien-immobilier.html` |
 | 9/9 | 1450 | humaine ✓ | `articles/clients-interesses-personne-nachete.html` |
 | 9/9 | 1469 | humaine ✓ | `dossiers/embaucher-ou-sous-traiter.html` |
-| 9/9 | 1474 | humaine ✓ | `articles/accepter-nimporte-quel-poste-retour-emploi.html` |
 | 9/9 | 1494 | humaine ✓ | `dossiers/quitter-emploi-stable-ou-rester.html` |
 | 9/9 | 1563 | heuristique | `dossiers/separation-logement-achete-a-deux.html` |
 | 9/9 | 1615 | humaine ✓ | `dossiers/automatiser-ou-non-processus.html` |
