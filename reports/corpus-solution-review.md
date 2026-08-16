@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **114**. Validations devenues caduques après modification : **9**.
+Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **113**. Validations devenues caduques après modification : **10**.
 
 ## Priorité humaine
 
@@ -21,6 +21,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/capacite-refuser-travail-rentabilite.html` | `aace252f32a1faf81cf6e0a4665e9b60e694129e` | `91ebe0bb0dc7e77c7a5a042210a2f54a7e04570e` |
 | `dossiers/previsionnel-activite-12-mois.html` | `ec3ebe88a9923f6802788dd5fb1a65c113e220ae` | `f35cb5ed9159e68ac5caa6ea95ae5742ab5b7b8e` |
 | `dossiers/reconversion-sans-perte-salaire.html` | `128613ebf08c799823434c76e96f628ec6102a5a` | `a3bf47dce0da390a93742f2dcbac9dc557d188e8` |
+| `dossiers/sante-travail-equilibre-vie-pro-perso.html` | `9075afe1528f2f4c763aa2ee6146d95a22ade56b` | `e0c5f4d97e9b96ce87e1cf00e611cddcbe349312` |
 | `articles/checklist-avant-placement-conseiller.html` | `f0a354fedc6ee6b64f0235804b495c6a4701a872` | `561b9eb3d62a2ba88f0b48c12b4c1b36fe54d5a7` |
 | `dossiers/combien-chiffre-affaires-pour-vivre.html` | `ecb09de9f0ebcb7f42e79bac0351f086fadee8ae` | `6eb83e080e90da9965354053c9da5e0f41fe5c49` |
 | `dossiers/favoriser-un-enfant-succession-donation.html` | `87dc0927f5033751ed022b19eef2ce82ff2ba453` | `a82d032edac0c37906b42c8f11b37678be5e5b55` |
@@ -73,7 +74,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/metiers-fonctions-organisation-entreprise.html` — 8/9 automatique — Fonctions lues par flux, décisions, interfaces et criticité ; transferts de compétences et test organisationnel déjà structurés.
 - `dossiers/protocole-verifier-reponse-ia.html` — 8/9 automatique — Hiérarchie de preuve, temporalité, contre-preuve, hypothèse d’inversion et seuil d’arrêt de vérification déjà structurés.
 - `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` — 8/9 automatique — Besoin/objectifs/moyens séparés, non-négociables, options concurrentes, scénario adverse et seuil de changement déjà structurés.
-- `dossiers/sante-travail-equilibre-vie-pro-perso.html` — 8/9 automatique — Soutenabilité analysée par risques, charge, récupération, trajet et options de modification du travail avant abandon du métier.
 - `dossiers/reconversion-sans-formation-longue.html` — 8/9 automatique — Verrou dominant, VAE/certification/poste passerelle/candidature directe, coût complet, seuils et conditions d’inversion déjà structurés.
 - `dossiers/emploi-chercher-accepter-negocier-evoluer.html` — 8/9 automatique — Entonnoir emploi, diagnostic par étape, alternatives, plancher de négociation, scénario rester/préparer/partir et options futures déjà traités.
 - `dossiers/competent-mais-invisible-travail.html` — 8/9 automatique — Valeur créée transformée en preuves observables, visibilité auprès des décideurs et alternatives à l’attente d’une reconnaissance spontanée déjà structurées.
@@ -192,7 +192,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1208 | humaine ✓ | `dossiers/metiers-fonctions-organisation-entreprise.html` |
 | 8/9 | 1227 | humaine ✓ | `dossiers/protocole-verifier-reponse-ia.html` |
 | 8/9 | 1229 | humaine ✓ | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` |
-| 8/9 | 1281 | humaine ✓ | `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
 | 8/9 | 1286 | humaine ✓ | `dossiers/reconversion-sans-formation-longue.html` |
 | 8/9 | 1317 | humaine ✓ | `dossiers/emploi-chercher-accepter-negocier-evoluer.html` |
 | 8/9 | 1337 | humaine ✓ | `dossiers/competent-mais-invisible-travail.html` |
@@ -255,6 +254,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1791 | humaine ✓ | `dossiers/prejuges-biais-monde-professionnel.html` |
 | 9/9 | 1849 | à revoir après changement | `dossiers/reconversion-sans-perte-salaire.html` |
 | 9/9 | 1894 | humaine ✓ | `dossiers/finances-enveloppes-fiscalite.html` |
+| 9/9 | 1901 | à revoir après changement | `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
 | 9/9 | 1923 | humaine ✓ | `dossiers/couple-famille-argent-temps.html` |
 | 9/9 | 1965 | humaine ✓ | `dossiers/audit-budget-60-minutes.html` |
 | 9/9 | 1980 | à revoir après changement | `articles/checklist-avant-placement-conseiller.html` |
