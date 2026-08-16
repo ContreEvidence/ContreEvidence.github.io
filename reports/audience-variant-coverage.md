@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **45**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **13**.
+Pages/familles détectées : **45**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **12**.
 
 ## Priorités de relecture
 
@@ -17,7 +17,6 @@ Pages/familles détectées : **45**. Pages `noindex` exclues : **79**. Promesses
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | salarié, santé / inaptitude, sans diplôme, revenu / runway |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/acheter-sans-vider-epargne.html` | SCI, mariage, PACS |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | indivision directe, mariage, PACS |
-| 15 | NON_READY | reconversion / trajectoire pro | `dossiers/combien-epargne-avant-demissionner.html` | salarié, sans diplôme |
 | 14 | NON_READY | couple / logement / séparation | `dossiers/patrimoine-marge-de-manoeuvre.html` | mariage, PACS |
 | 14 | NON_READY | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 9 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/changer-travail-avant-credit-immobilier.html` | santé / inaptitude, sans diplôme |
@@ -44,6 +43,7 @@ Pages/familles détectées : **45**. Pages `noindex` exclues : **79**. Promesses
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/audit-budget-60-minutes.html` | — |
 | 0 | COVERED_OR_NARROW | achat immobilier / crédit | `dossiers/changer-travail-avant-credit-immobilier.html` | — |
 | 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/combien-chiffre-affaires-pour-vivre.html` | — |
+| 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/combien-epargne-avant-demissionner.html` | — |
 | 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/creer-entreprise-avec-peu-argent.html` | — |
 | 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/creer-entreprise-sans-diplome.html` | — |
 | 0 | COVERED_OR_NARROW | couple / logement / séparation | `dossiers/decider-a-deux-travail-patrimoine.html` | — |
@@ -134,21 +134,6 @@ Promesse : **quand arrêter d’optimiser et commencer à utiliser son patrimoin
 | tontine | MANQUANTE |
 | propriété ≠ financement | TRAITEE |
 | sorties multiples | TRAITEE |
-
-### `dossiers/combien-epargne-avant-demissionner.html` — reconversion / trajectoire pro
-
-Promesse : **combien d’épargne avant de démissionner ? calcul, runway et exemples | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| salarié | MANQUANTE |
-| demandeur emploi | TRAITEE |
-| public | MANQUANTE |
-| indépendant | MANQUANTE |
-| santé / inaptitude | MENTIONNEE |
-| sans diplôme | MANQUANTE |
-| senior / âge | MANQUANTE |
-| revenu / runway | TRAITEE |
 
 ### `dossiers/patrimoine-marge-de-manoeuvre.html` — couple / logement / séparation
 
@@ -269,7 +254,7 @@ Pages détectées : **1**. Promesses larges `NON_READY` : **0**. Variantes le pl
 
 ### reconversion / trajectoire pro
 
-Pages détectées : **11**. Promesses larges `NON_READY` : **4**. Variantes le plus souvent non détectées : **senior / âge** (8), **public** (7), **indépendant** (6), **sans diplôme** (4), **santé / inaptitude** (3), **revenu / runway** (2).
+Pages détectées : **11**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **senior / âge** (7), **public** (6), **indépendant** (5), **sans diplôme** (3), **santé / inaptitude** (3), **revenu / runway** (2).
 
 ### entrepreneuriat
 
