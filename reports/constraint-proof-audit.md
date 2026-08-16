@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
-- P1 — affirmation forte à resserrer ou vérifier : **64**
+- P1 — affirmation forte à resserrer ou vérifier : **63**
 - P2 — nécessité à examiner : **148**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **824**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **829**
 
 ## P0 — rouvrir en priorité
 
@@ -56,8 +56,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `articles/competences-invisibles-preuves.html`
 - **affirmation forte sans signal de source explicite** — Diplôme / certification Dépend du métier Très fort s’il est obligatoire ; plus faible s’il ne prouve pas la pratique. _[périmètre]_
 - **affirmation forte sans signal de source explicite** — Test Observation Diagnostic à privilégier Même preuve auprès de plusieurs employeurs comparables Elle n’ouvre presque jamais la porte preuve, ciblage ou niveau de poste à retravailler Même preuve, autre recruteur ou autre canal Elle devient crédible filtre local ou canal initial à remettre en cause Même preuve sur une fonction voisine Elle est fortement valorisée le marché cible initial valorise peut-être mal cette c _[périmètre, temporalité]_
-### `articles/construire-epargne-de-zero.html`
-- **fermeture forte sourcée mais formulation trop absolue** — Automatiser sans rendre le budget impossible Programmez les virements juste après l’arrivée du revenu principal. _[signal-source, temporalité]_
 ### `articles/grosse-entree-argent-que-faire.html`
 - **fermeture forte sourcée mais formulation trop absolue** — 90 jours : un protocole adaptable, pas un délai obligatoire Le découpage ci-dessous sert à ralentir les décisions irréversibles et à séparer les étapes. _[signal-source, temporalité]_
 ### `articles/premiere-chance-sans-experience.html`
