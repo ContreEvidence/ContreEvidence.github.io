@@ -73,6 +73,15 @@ Le principe reste symétrique : ne pas fermer une voie sans preuve ; ne pas vali
 - **Impact :** nouvelle séquence `supprimer → simplifier → standardiser → assister → automatiser`, test causal avant choix de l’outil, procédure de retour en arrière et kill switch avant généralisation.
 - **Incertitude résiduelle :** les seuils de maintenance, d’exception ou de panne doivent être définis selon la criticité et l’économie du processus ; la page refuse d’inventer un seuil générique.
 
+### 2026-08-16 — `articles/frais-fiscalite-rendement-net.html`
+
+- **Problème corrigé :** la page montrait bien l’effet composé des frais, mais ne disait pas quand une économie annuelle justifie réellement de quitter une architecture existante. La décomposition des frais Nalo affichée dans l’article avait en outre évolué depuis la dernière vérification.
+- **Motifs activés :** coût d’opportunité, seuil de bascule, préservation d’option, décomposition coût récurrent / coût ponctuel, comparaison à fonction et risque constants.
+- **Causalité :** une baisse de frais améliore le résultat futur parce qu’elle réduit une fuite récurrente ; mais une migration ne crée de valeur que lorsque l’économie cumulée dépasse le coût du changement et les fonctions réellement perdues.
+- **Preuve :** tarifs Yomoni, Nalo et Ramify revérifiés sur leurs sites officiels le 16/08/2026. La structure Nalo sur unités de compte est désormais présentée comme 0,90 % de mandat + 0,50 % assureur, auxquels s’ajoutent environ 0,25 % de frais ETF moyens ; le total indicatif de la poche UC reste proche de 1,65 %.
+- **Impact :** ajout de la formule `économie annuelle ≈ capital × écart de frais`, du `point mort de migration ≈ coût ponctuel / économie annuelle`, d’un exemple chiffré et d’une matrice des options susceptibles d’être sacrifiées par une optimisation locale.
+- **Incertitude résiduelle :** le point mort simplifié n’est pas une valorisation exacte : capital, frais et fiscalité évoluent, et certains coûts fiscaux sont différés plutôt que définitivement perdus. Les caractéristiques de transfert doivent être vérifiées pour l’enveloppe concrète.
+
 ## Revue humaine du rapport global — pages conservées
 
 Le rapport automatique `reports/corpus-solution-review.md` a été utilisé comme détecteur, puis chaque priorité a été relue humainement. Les pages suivantes ont été **revisitées mais laissées intactes**, car les dimensions signalées comme absentes sont en réalité déjà présentes dans le raisonnement sous une formulation que le détecteur ne reconnaissait pas suffisamment :
