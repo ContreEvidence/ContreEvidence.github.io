@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
-- P1 — affirmation forte à resserrer ou vérifier : **66**
+- P1 — affirmation forte à resserrer ou vérifier : **65**
 - P2 — nécessité à examiner : **157**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **855**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **858**
 
 ## P0 — rouvrir en priorité
 
@@ -132,8 +132,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sourcée mais formulation trop absolue** — Un crédit immobilier change la contrainte Une dette immobilière augmente le niveau de revenu nécessaire mais ne rend pas le changement impossible. _[signal-source, temporalité]_
 ### `dossiers/reconversion-sans-formation-longue.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Cas E — Candidature directe : la formation ne sert qu’à rassurer Offres analysées 30 Diplôme obligatoire 0 Diplôme « souhaité » 9 Expérience équivalente acceptée 21 Compétences transférables déjà prouvées fortes Ici, payer une formation longue avant d’avoir envoyé des candidatures ciblées serait prématuré. _[signal-source, temporalité]_
-### `dossiers/regles-responsabilites-fautes-travail.html`
-- **fermeture forte sourcée mais formulation trop absolue** — Le règlement intérieur, lorsqu’il est obligatoire et en vigueur, fixe notamment les règles générales et permanentes de discipline ainsi que la nature et l’échelle des sanctions. _[signal-source]_
 ### `dossiers/trajectoire-professionnelle-selon-situation.html`
 - **affirmation forte sans signal de source explicite** — Analysez une vingtaine d’offres de la cible : Ce que vous observez Stratégie qualification légalement obligatoire obtenir la voie reconnue nécessaire. diplôme demandé mais expérience équivalente souvent acceptée preuves + candidatures ciblées + VAE/certification si utile. expérience et résultats dominent ne pas créer un détour scolaire inutile. aucune expérience récente créer d’abord une preuve terrain. _[périmètre, temporalité]_
 ### `dossiers/valeur-option-bien-immobilier.html`
