@@ -55,13 +55,13 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 9 | 9/15 | immobilier / crédit / indivision | `dossiers/location-nue-ou-meublee-comparer.html` | acteur/gatekeeper, fractionnement, effets de second ordre |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/protocole-verifier-reponse-ia.html` | attendre / statu quo, effets de second ordre, transfert de risque |
 | 9 | 9/15 | emploi / carrière / qualification | `dossiers/questions-poser-avant-prise-de-poste.html` | acteur/gatekeeper, substitution, condition de renversement |
-| 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/temps-energie-qualite-vie.html` | attendre / statu quo, transfert de risque, valeur d’option / irréversibilité |
 | 9 | 10/15 | patrimoine / investissement / retraite | `articles/frais-fiscalite-rendement-net.html` | attendre / statu quo, effets de second ordre, transfert de risque |
 | 9 | 10/15 | patrimoine / investissement / retraite | `articles/grosse-entree-argent-que-faire.html` | attendre / statu quo, transfert de risque, condition de renversement |
 | 9 | 10/15 | emploi / carrière / qualification | `articles/retrouver-emploi-apres-interruption.html` | acteur/gatekeeper, substitution, condition de renversement |
 | 9 | 10/15 | entrepreneuriat / activité | `articles/travailler-beaucoup-gagner-peu-prix.html` | acteur/gatekeeper, combinaison de leviers, attendre / statu quo |
 | 9 | 10/15 | entrepreneuriat / activité | `dossiers/allocation-patrimoine-selon-situation.html` | acteur/gatekeeper, substitution, attendre / statu quo |
 | 9 | 10/15 | entrepreneuriat / activité | `dossiers/are-arce-acre-creation-entreprise.html` | substitution, effets de second ordre, attendre / statu quo |
+| 9 | 10/15 | entrepreneuriat / activité | `dossiers/etude-marche-terrain.html` | substitution, fractionnement, attendre / statu quo |
 
 ## Lecture par cluster
 
@@ -79,7 +79,7 @@ Pages : **25**. Angles le plus souvent non détectés : **acteur/gatekeeper** (1
 
 ### patrimoine / investissement / retraite
 
-Pages : **39**. Angles le plus souvent non détectés : **substitution** (32), **objectif réel / substitution du moyen** (28), **transfert de risque** (28), **condition de renversement** (26), **acteur/gatekeeper** (22), **attendre / statu quo** (22), **valeur d’option / irréversibilité** (13).
+Pages : **39**. Angles le plus souvent non détectés : **substitution** (32), **objectif réel / substitution du moyen** (27), **transfert de risque** (27), **condition de renversement** (26), **attendre / statu quo** (22), **acteur/gatekeeper** (21), **valeur d’option / irréversibilité** (12).
 
 ## Règle de reprise éditoriale
 
