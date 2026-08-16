@@ -1,0 +1,238 @@
+name: Corpus Blind Spot Review
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'dossiers/**.html'
+      - 'articles/**.html'
+      - '.github/workflows/corpus-blind-spots.yml'
+      - 'AGENTS.md'
+      - 'EDITORIAL-SOLUTION-ENGINEERING-BACKLOG.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: corpus-blind-spots
+  cancel-in-progress: true
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Scan corpus for blind spots
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from html import unescape
+          import re
+          from datetime import date
+
+          roots = [Path('dossiers'), Path('articles')]
+          files = []
+          for root in roots:
+              if root.exists():
+                  files.extend(root.rglob('*.html'))
+
+          TAG = re.compile(r'<[^>]+>', re.S)
+          SCRIPT = re.compile(r'<(script|style)\b[^>]*>.*?</\1>', re.I | re.S)
+          COMMENTS = re.compile(r'<!--.*?-->', re.S)
+          NOINDEX = re.compile(r'<meta\b[^>]*name=["\']robots["\'][^>]*content=["\'][^"\']*noindex', re.I)
+
+          def visible_text(raw):
+              raw = SCRIPT.sub(' ', raw)
+              raw = COMMENTS.sub(' ', raw)
+              raw = TAG.sub(' ', raw)
+              raw = unescape(raw)
+              return re.sub(r'\s+', ' ', raw).strip().lower()
+
+          checks = {
+              'acteur_gatekeeper': [
+                  r'autre (banque|employeur|recruteur|acteur|interlocuteur|acheteur|vendeur|march[eé]|courtier|administration|organisme|client)',
+                  r'gatekeeper', r'interm[eé]diaire', r'contrepartie', r'd[eé]cideur', r'changer d.actor', r'multipli(?:er|ez) les interlocuteurs'
+              ],
+              'substitution': [
+                  r'substitut', r'remplacer', r'autre preuve', r'autre garantie', r'autre ressource', r'autre usage', r'autre march[eé]', r'autre contrat',
+                  r'preuve [eé]quivalente', r'alternative fonctionnelle'
+              ],
+              'fenetre_temporelle': [
+                  r'fen[eê]tre', r'avant de', r'avant que', r'tant que', r'jusqu.[aà]', r'pendant que', r'cesse d.[eê]tre', r'devient possible', r'dans \d+ mois', r'[eé]ch[eé]ance'
+              ],
+              'ordre_operations': [
+                  r'ordre des op[eé]rations', r'dans cet ordre', r'avant .* puis', r's[eé]quence', r'commencer par', r'd.abord', r'ensuite', r'ne .* pas .* avant'
+              ],
+              'fractionnement': [
+                  r'fraction', r'progressif', r'par [eé]tapes', r'en plusieurs fois', r'partiel', r'une partie', r'tranche', r'lot', r'phase 1', r'phase 2'
+              ],
+              'combinaison': [
+                  r'combiner', r'combinaison', r'cumuler', r'cumul', r'ensemble de leviers', r'plusieurs leviers', r'panach', r'hybride', r'\+.*\+'
+              ],
+              'attente_statu_quo': [
+                  r'ne rien faire', r'attendre', r'statu quo', r'co[uû]t d.attendre', r'valeur de l.attente', r'option d.attendre', r'co[uû]t de rester', r'conserver temporairement'
+              ],
+              'second_ordre': [
+                  r'effet de second ordre', r'en contrepartie', r'cr[eé]e .* risque', r'nouveau risque', r'corr[eé]l', r'concentration', r'd[eé]pendance', r'verrouillage', r'lock.?in', r'maintenance', r'charge de travail', r'co[uû]t futur'
+              ],
+              'transfert_risque': [
+                  r'transfert de risque', r'qui supporte', r'qui paie', r'risque .* support[eé]', r'reporter .* risque', r'd[eé]placer .* risque', r'future charge', r'contrepartie supporte'
+              ],
+              'friction_execution': [
+                  r'accord de', r'autorisation', r'validation', r'd[eé]lai', r'dossier', r'justificatif', r'document', r'notaire', r'banque', r'employeur', r'administration', r'copropri[eé]t[eé]', r'vote', r'd[eé]pend de', r'mise en œuvre', r'ex[eé]cution'
+              ],
+              'heterogeneite': [
+                  r'selon (le|la|les|votre)', r'cela d[eé]pend', r'cas par cas', r'variable selon', r'en fonction de', r'local', r'commune', r'contrat', r'statut', r'convention', r'march[eé] local', r'profil'
+              ],
+              'renversement': [
+                  r'la conclusion .* change', r's.invers', r'condition d.inversion', r'condition de sortie', r'quand .* renoncer', r'si .* alors .* changer', r'seuil de bascule', r'kill switch', r'crit[eè]re d.abandon', r'retour en arri[eè]re'
+              ],
+              'objectif_substitution': [
+                  r'vrai besoin', r'objectif r[eé]el', r'besoin r[eé]el', r'le probl[eè]me n.est pas', r'plut[oô]t que', r'autre moyen', r'fonction recherch[eé]e', r'ce que vous cherchez vraiment'
+              ],
+              'valeur_option': [
+                  r'valeur d.option', r'optionnalit[eé]', r'pr[eé]server .* option', r'garder .* ouvert', r'r[eé]versib', r'irr[eé]versib', r'flexibilit[eé]', r'porte ouverte', r'option future'
+              ],
+              'asymetrie_preuve': [
+                  r'preuve d.impossibilit[eé]', r'preuve de faisabilit[eé]', r'ne prouve pas', r'conditionnel', r'[aà] tester', r'v[eé]rifi[eé]', r'hypoth[eè]se', r'absence de preuve', r'charge de la preuve'
+              ],
+          }
+
+          cluster_rules = {
+              'immobilier / crédit / indivision': {
+                  'match': [r'immobilier', r'indivision', r'cr[eé]dit', r'emprunt', r'logement', r'copropri', r'soulte', r'achat immobilier', r'location'],
+                  'critical': ['acteur_gatekeeper','fenetre_temporelle','ordre_operations','fractionnement','second_ordre','friction_execution','valeur_option','renversement']
+              },
+              'emploi / carrière / qualification': {
+                  'match': [r'emploi', r'travail', r'reconversion', r'recruteur', r'candidature', r'dipl[oô]me', r'qualification', r'salaire', r'prise de poste', r'manager'],
+                  'critical': ['acteur_gatekeeper','substitution','fenetre_temporelle','ordre_operations','objectif_substitution','asymetrie_preuve','renversement']
+              },
+              'entrepreneuriat / activité': {
+                  'match': [r'entreprise', r'activit[eé]', r'client', r'chiffre d.affaires', r'tr[eé]sorerie', r'bfr', r'prix', r'marge', r'freelance', r'micro', r'sasu', r'eurl'],
+                  'critical': ['acteur_gatekeeper','substitution','fractionnement','combinaison','friction_execution','second_ordre','attente_statu_quo','renversement']
+              },
+              'patrimoine / investissement / retraite': {
+                  'match': [r'patrimoine', r'invest', r'etf', r'allocation', r'retraite', r'assurance.vie', r'pea', r'placement', r'capital'],
+                  'critical': ['attente_statu_quo','second_ordre','transfert_risque','heterogeneite','renversement','valeur_option','fenetre_temporelle']
+              },
+          }
+
+          def classify(text, path):
+              hay = path.lower() + ' ' + text[:7000]
+              scores = []
+              for name, rule in cluster_rules.items():
+                  score = sum(bool(re.search(p, hay, re.I)) for p in rule['match'])
+                  scores.append((score, name))
+              best_score, best_name = max(scores)
+              return best_name if best_score else 'transversal / autre'
+
+          rows = []
+          excluded = 0
+          for path in sorted(files):
+              raw = path.read_text(encoding='utf-8', errors='ignore')
+              if NOINDEX.search(raw):
+                  excluded += 1
+                  continue
+              text = visible_text(raw)
+              found = {k:any(re.search(p,text,re.I|re.S) for p in pats) for k,pats in checks.items()}
+              cluster = classify(text, str(path))
+              critical = cluster_rules.get(cluster, {}).get('critical', [])
+              missing_critical = [k for k in critical if not found[k]]
+              missing_all = [k for k,v in found.items() if not v]
+              coverage = sum(found.values())
+              # Priority is intentionally driven by decision-changing blind spots,
+              # not by page length or generic completeness.
+              priority = len(missing_critical) * 3 + max(0, 8 - coverage)
+              rows.append({
+                  'path':str(path), 'cluster':cluster, 'coverage':coverage,
+                  'missing_critical':missing_critical, 'missing_all':missing_all,
+                  'priority':priority
+              })
+
+          rows.sort(key=lambda r:(-r['priority'], r['coverage'], r['path']))
+          labels = {
+              'acteur_gatekeeper':'acteur/gatekeeper',
+              'substitution':'substitution',
+              'fenetre_temporelle':'fenêtre temporelle',
+              'ordre_operations':'ordre des opérations',
+              'fractionnement':'fractionnement',
+              'combinaison':'combinaison de leviers',
+              'attente_statu_quo':'attendre / statu quo',
+              'second_ordre':'effets de second ordre',
+              'transfert_risque':'transfert de risque',
+              'friction_execution':'friction d’exécution',
+              'heterogeneite':'hétérogénéité / cas local',
+              'renversement':'condition de renversement',
+              'objectif_substitution':'objectif réel / substitution du moyen',
+              'valeur_option':'valeur d’option / irréversibilité',
+              'asymetrie_preuve':'asymétrie de preuve',
+          }
+
+          out = []
+          out.append('# Cartographie des angles morts du corpus')
+          out.append('')
+          out.append(f'Mise à jour automatique : {date.today().isoformat()}')
+          out.append('')
+          out.append('Cet audit complète — il ne remplace pas — la revue structurelle. Il cherche des **familles de raisonnement susceptibles de changer la décision** mais souvent absentes d’un contenu pourtant correct : acteur, substitution, fenêtre temporelle, ordre, fractionnement, combinaison, statu quo, second ordre, transfert de risque, friction, hétérogénéité, renversement, objectif réel, optionnalité et asymétrie de preuve.')
+          out.append('')
+          out.append('Un motif absent n’est **pas** automatiquement un défaut : la file sert à provoquer une lecture humaine. Inversement, la présence d’un mot ne prouve pas que l’angle est bien traité.')
+          out.append('')
+          out.append(f'Pages indexables analysées : **{len(rows)}**. Pages `noindex` exclues : **{excluded}**.')
+          out.append('')
+
+          out.append('## Priorité de reprise')
+          out.append('')
+          out.append('| Priorité | Couverture | Cluster | Page | Angles critiques non détectés |')
+          out.append('|---:|---:|---|---|---|')
+          for r in rows[:50]:
+              miss = ', '.join(labels[k] for k in r['missing_critical']) or '—'
+              out.append(f"| {r['priority']} | {r['coverage']}/15 | {r['cluster']} | `{r['path']}` | {miss} |")
+
+          out.append('')
+          out.append('## Lecture par cluster')
+          out.append('')
+          clusters = sorted(set(r['cluster'] for r in rows))
+          for cluster in clusters:
+              subset = [r for r in rows if r['cluster']==cluster]
+              out.append(f'### {cluster}')
+              out.append('')
+              counts = {k:0 for k in checks}
+              for r in subset:
+                  for k in r['missing_all']:
+                      counts[k]+=1
+              top = sorted(counts.items(), key=lambda kv:(-kv[1],kv[0]))[:7]
+              out.append(f"Pages : **{len(subset)}**. Angles le plus souvent non détectés : " + ', '.join(f"**{labels[k]}** ({v})" for k,v in top if v) + '.')
+              out.append('')
+
+          out.append('## Règle de reprise éditoriale')
+          out.append('')
+          out.append('1. Lire humainement la page prioritaire et le cluster autour d’elle.')
+          out.append('2. Ne retenir que les angles qui peuvent réellement changer le choix, le coût, le risque, la séquence ou les options disponibles.')
+          out.append('3. Préparer **une seule proposition éditoriale active**.')
+          out.append('4. Ne rien modifier dans le contenu publié avant validation explicite de l’utilisateur.')
+          out.append('5. Après validation : appliquer, sourcer si nécessaire, auditer, journaliser, puis seulement passer à la proposition suivante.')
+          out.append('')
+          Path('reports/corpus-blind-spots.md').write_text('\n'.join(out)+'\n', encoding='utf-8')
+          PY
+
+      - name: Commit report if changed
+        run: |
+          if [ -z "$(git status --porcelain -- reports/corpus-blind-spots.md)" ]; then
+            echo 'No report change.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/corpus-blind-spots.md
+          git commit -m 'Update corpus blind-spot review'
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main || { git rebase --abort; sleep 2; continue; }
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((i * 2))
+          done
+          exit 1
