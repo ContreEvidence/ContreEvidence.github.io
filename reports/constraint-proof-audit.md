@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **15**
-- P1 — affirmation forte à resserrer ou vérifier : **64**
-- P2 — nécessité à examiner : **147**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **869**
+- P1 — affirmation forte à resserrer ou vérifier : **63**
+- P2 — nécessité à examiner : **148**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **870**
 
 ## P0 — rouvrir en priorité
 
@@ -75,8 +75,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sourcée mais formulation trop absolue** — Pour un locataire, l'assurance des risques locatifs est obligatoire ; en copropriété, le propriétaire doit au minimum être couvert pour sa responsabilité civile. _[signal-source]_
 ### `dossiers/comparer-deux-offres-emploi.html`
 - **affirmation forte sans signal de source explicite** — Une offre notée 86/100 reste mauvaise si elle viole votre seule contrainte absolue : revenu sous le plancher du foyer, horaires incompatibles, mobilité impossible, risque santé, trajet intenable ou clause contractuelle inacceptable. _[périmètre, temporalité]_
-### `dossiers/comparer-strategies-immobilieres.html`
-- **affirmation forte sans signal de source explicite** — Quel scénario alternatif si la stratégie devient impossible ? _[périmètre]_
 ### `dossiers/competences-qualification-employabilite.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Cas n°1 — Très expérimenté, diplôme absent Offres analysées 30 Diplôme obligatoire 4 Diplôme ou expérience équivalente 18 Aucune exigence formelle 8 Expérience pertinente 10 ans Le candidat ne doit pas conclure « sans diplôme, impossible ». _[signal-source, temporalité]_
 - **fermeture forte sourcée mais formulation trop absolue** — Classer chaque exigence : obligatoire, souhaitée, négociable. _[signal-source]_
@@ -209,7 +207,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Son rôle éventuel doit donc être jugé autrement : diversification, comportement dans certains régimes de marché, liquidité et coût de détention.
 - **nécessité à requalifier ou sourcer** — Une allocation complète ne signifie pas posséder de tout Le bon tableau de bord doit montrer toutes les grandes classes possibles sans suggérer qu’elles sont toutes nécessaires.
 ### `dossiers/comparer-strategies-immobilieres.html`
-- **nécessité à requalifier ou sourcer** — Il faut raisonner en recettes annuelles encaissées après taux d’occupation, commissions, ménage, linge, énergie, consommables, maintenance et gestion. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Ce capital doit être comparé à ce qu’il aurait permis ailleurs : réserve, portefeuille financier, projet professionnel, remboursement de dette ou consommation.
+- **nécessité à requalifier ou sourcer** — Comparer les stratégies immobilières : usage, capital, revenu et sortie | Contre-Évidence Aller au contenu Avant de choisir entre nu, meublé ou courte durée, demandez d’abord ce que l’immobilier doit faire dans votre vie et dans votre patrimoine. _[temporalité]_
 ### `dossiers/cout-complet-achat-immobilier.html`
 - **nécessité à requalifier ou sourcer** — Il faut les séparer puis reconstruire l’économie complète du projet.
 - **nécessité à requalifier ou sourcer** — Pour comparer achat et location, il faut donc éviter le raccourci « mensualité = loyer ».
