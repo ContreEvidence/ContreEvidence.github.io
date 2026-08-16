@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **15**
-- P1 — affirmation forte à resserrer ou vérifier : **53**
+- P1 — affirmation forte à resserrer ou vérifier : **54**
 - P2 — nécessité à examiner : **139**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **693**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **698**
 
 ## P0 — rouvrir en priorité
 
@@ -48,6 +48,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 ### `articles/50-candidatures-zero-reponse.html`
 - **affirmation forte sans signal de source explicite** — Si votre zone, salaire minimal, horaires, diplôme obligatoire ou disponibilité éliminent l’essentiel des offres, une optimisation du CV ne crée pas artificiellement de postes. _[périmètre]_
+### `articles/choisir-etf-mondial-debutant.html`
+- **fermeture forte sourcée mais formulation trop absolue** — Attendre avant d’investir aucune variable patrimoniale ne doit changer et l’attente repose seulement sur une prévision de marché revenir à la règle d’allocation choisie plutôt qu’à une certitude impossible. _[signal-source, temporalité]_
 ### `articles/competences-invisibles-preuves.html`
 - **affirmation forte sans signal de source explicite** — Diplôme / certification Dépend du métier Très fort s’il est obligatoire ; plus faible s’il ne prouve pas la pratique. _[périmètre]_
 - **affirmation forte sans signal de source explicite** — Test Observation Diagnostic à privilégier Même preuve auprès de plusieurs employeurs comparables Elle n’ouvre presque jamais la porte preuve, ciblage ou niveau de poste à retravailler Même preuve, autre recruteur ou autre canal Elle devient crédible filtre local ou canal initial à remettre en cause Même preuve sur une fonction voisine Elle est fortement valorisée le marché cible initial valorise peut-être mal cette c _[périmètre, temporalité]_
