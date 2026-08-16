@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **65**. Validations devenues caduques après modification : **0**.
+Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **71**. Validations devenues caduques après modification : **0**.
 
 ## Priorité humaine
 
@@ -59,6 +59,8 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/business-plan-utile.html` — 8/9 automatique — Capacité, BFR, trois scénarios, trajectoire à trois ans et critères explicites d’abandon rendent le plan falsifiable.
 - `dossiers/acheter-logement-sans-se-fragiliser.html` — 8/9 automatique — Apport, liquidité résiduelle, mensualité soutenable, stress tests et options de sortie déjà au niveau attendu lors de la revue antérieure.
 - `dossiers/creer-entreprise-avec-peu-argent.html` — 8/9 automatique — Coût de lancement distingué du besoin économique complet, BFR/runway et tests à faible capital déjà traités.
+- `dossiers/comparer-strategies-immobilieres.html` — 8/9 automatique — Même capital, revenu net, temps de gestion, vacance propre à chaque usage, option de repli et allocation patrimoniale globale déjà structurés.
+- `dossiers/are-arce-acre-creation-entreprise.html` — 8/9 automatique — Filet mensuel versus capital, besoin de financement réel, échec à M6, BFR, ACRE temporaire et questions à France Travail déjà structurés ; règles 2026 revérifiées le 16/08.
 - `dossiers/metiers-fonctions-organisation-entreprise.html` — 8/9 automatique — Fonctions lues par flux, décisions, interfaces et criticité ; transferts de compétences et test organisationnel déjà structurés.
 - `dossiers/protocole-verifier-reponse-ia.html` — 8/9 automatique — Hiérarchie de preuve, temporalité, contre-preuve, hypothèse d’inversion et seuil d’arrêt de vérification déjà structurés.
 - `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` — 8/9 automatique — Besoin/objectifs/moyens séparés, non-négociables, options concurrentes, scénario adverse et seuil de changement déjà structurés.
@@ -66,10 +68,14 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/reconversion-sans-formation-longue.html` — 8/9 automatique — Verrou dominant, VAE/certification/poste passerelle/candidature directe, coût complet, seuils et conditions d’inversion déjà structurés.
 - `dossiers/emploi-chercher-accepter-negocier-evoluer.html` — 8/9 automatique — Entonnoir emploi, diagnostic par étape, alternatives, plancher de négociation, scénario rester/préparer/partir et options futures déjà traités.
 - `dossiers/competent-mais-invisible-travail.html` — 8/9 automatique — Valeur créée transformée en preuves observables, visibilité auprès des décideurs et alternatives à l’attente d’une reconnaissance spontanée déjà structurées.
+- `dossiers/capacite-refuser-travail-rentabilite.html` — 8/9 automatique — Capacité vendable, marge par heure contrainte, prix/délai/périmètre/délégation, stress test d’embauche et conditions de refus déjà structurés.
+- `dossiers/tresorerie-bfr-entreprise.html` — 8/9 automatique — Cycle de cash, BFR, coût du délai client, prévision 13 semaines, réserve minimale et leviers de cycle déjà structurés.
 - `dossiers/prix-attendre-finances.html` — 8/9 automatique — Coûts certains versus opportunité, cas où attendre protège, scénario symétrique d’action trop rapide et seuil de décision déjà présents.
+- `dossiers/piloter-patrimoine-selon-taille.html` — 8/9 automatique — Montant distingué de la complexité, risque dominant par phase, budget de complexité, seuil de recours au conseil et contre-exemples déjà structurés.
 - `dossiers/dependance-gros-client.html` — 8/9 automatique — Concentration, rupture du client principal, mois de survie, diversification causale et plan de réduction de dépendance déjà structurés.
 - `dossiers/lancer-activite-sans-quitter-emploi.html` — 8/9 automatique — Lancement parallèle, contraintes à vérifier, seuils de bascule et séquençage avant abandon du revenu salarié déjà structurés.
 - `dossiers/audit-copropriete-avant-achat.html` — 8/9 automatique — Documents, charges, travaux, gouvernance, scénarios de choc et signaux de renoncement déjà structurés.
+- `dossiers/favoriser-un-enfant-succession-donation.html` — 8/9 automatique — Intention réelle décomposée, réserve/quotité, outils alternatifs, liquidité du partage, stress tests et protocole notarial déjà structurés.
 - `dossiers/indivision-loyers-charges-comptes.html` — 8/9 automatique — Flux de loyers, charges, preuves comptables, comptes entre indivisaires et architecture de décision déjà structurés lors de la revue antérieure.
 - `dossiers/audit-budget-60-minutes.html` — 8/9 automatique — Audit déjà opérationnel : masses budgétaires, anomalies, priorisation et actions concrètes ; pas de gain causal identifié lors de la revue antérieure.
 - `dossiers/passer-80-pourcent-cout-reel.html` — 9/9 automatique — Coût réel du temps libéré, impact sur marge du foyer, effets différés et réversibilité déjà traités lors de la revue antérieure.
@@ -130,8 +136,8 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1170 | heuristique | `articles/sans-diplome-chemins-alternatifs.html` |
 | 8/9 | 1185 | humaine ✓ | `dossiers/acheter-logement-sans-se-fragiliser.html` |
 | 8/9 | 1189 | humaine ✓ | `dossiers/creer-entreprise-avec-peu-argent.html` |
-| 8/9 | 1194 | heuristique | `dossiers/comparer-strategies-immobilieres.html` |
-| 8/9 | 1201 | heuristique | `dossiers/are-arce-acre-creation-entreprise.html` |
+| 8/9 | 1194 | humaine ✓ | `dossiers/comparer-strategies-immobilieres.html` |
+| 8/9 | 1201 | humaine ✓ | `dossiers/are-arce-acre-creation-entreprise.html` |
 | 8/9 | 1208 | humaine ✓ | `dossiers/metiers-fonctions-organisation-entreprise.html` |
 | 8/9 | 1227 | humaine ✓ | `dossiers/protocole-verifier-reponse-ia.html` |
 | 8/9 | 1229 | heuristique | `dossiers/previsionnel-activite-12-mois.html` |
@@ -141,8 +147,8 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1286 | humaine ✓ | `dossiers/reconversion-sans-formation-longue.html` |
 | 8/9 | 1317 | humaine ✓ | `dossiers/emploi-chercher-accepter-negocier-evoluer.html` |
 | 8/9 | 1337 | humaine ✓ | `dossiers/competent-mais-invisible-travail.html` |
-| 8/9 | 1345 | heuristique | `dossiers/capacite-refuser-travail-rentabilite.html` |
-| 8/9 | 1351 | heuristique | `dossiers/tresorerie-bfr-entreprise.html` |
+| 8/9 | 1345 | humaine ✓ | `dossiers/capacite-refuser-travail-rentabilite.html` |
+| 8/9 | 1351 | humaine ✓ | `dossiers/tresorerie-bfr-entreprise.html` |
 | 8/9 | 1352 | heuristique | `articles/construire-epargne-de-zero.html` |
 | 8/9 | 1360 | heuristique | `articles/grosse-entree-argent-que-faire.html` |
 | 8/9 | 1360 | heuristique | `dossiers/quitter-travail-reconversion-sans-se-fragiliser.html` |
@@ -151,14 +157,14 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1390 | humaine ✓ | `dossiers/prix-attendre-finances.html` |
 | 8/9 | 1405 | heuristique | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` |
 | 8/9 | 1410 | heuristique | `dossiers/combien-epargne-avant-demissionner.html` |
-| 8/9 | 1411 | heuristique | `dossiers/piloter-patrimoine-selon-taille.html` |
+| 8/9 | 1411 | humaine ✓ | `dossiers/piloter-patrimoine-selon-taille.html` |
 | 8/9 | 1414 | humaine ✓ | `dossiers/dependance-gros-client.html` |
 | 8/9 | 1421 | heuristique | `articles/tester-metier-avant-investir.html` |
 | 8/9 | 1425 | humaine ✓ | `dossiers/lancer-activite-sans-quitter-emploi.html` |
 | 8/9 | 1435 | humaine ✓ | `dossiers/audit-copropriete-avant-achat.html` |
 | 8/9 | 1435 | heuristique | `dossiers/negocier-salaire-responsabilites.html` |
 | 8/9 | 1490 | heuristique | `dossiers/temps-energie-qualite-vie.html` |
-| 8/9 | 1549 | heuristique | `dossiers/favoriser-un-enfant-succession-donation.html` |
+| 8/9 | 1549 | humaine ✓ | `dossiers/favoriser-un-enfant-succession-donation.html` |
 | 8/9 | 1554 | humaine ✓ | `dossiers/indivision-loyers-charges-comptes.html` |
 | 8/9 | 1599 | heuristique | `dossiers/comparer-deux-offres-emploi.html` |
 | 8/9 | 1652 | humaine ✓ | `dossiers/audit-budget-60-minutes.html` |
