@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **68**. Validations devenues caduques après modification : **55**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **67**. Validations devenues caduques après modification : **56**.
 
 ## Priorité humaine
 
@@ -47,6 +47,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/changer-travail-avant-credit-immobilier.html` | `8b7e88c9c93261fc35ebcb3a4fd5052430befe79` | `82bec88878cee4c35920b82ddd48e71012134651` |
 | `dossiers/trajectoire-professionnelle-selon-situation.html` | `340b3c58bd6809606aac38282afac472924ee2b1` | `c507f380db4a0bcb57571cb0d12d2625ced63d5c` |
 | `dossiers/are-arce-acre-creation-entreprise.html` | `96944742e60f24751b001857871095f3ae55ce94` | `0a11bc2495d5e98ee3d769a581debaa5f66f4032` |
+| `dossiers/trouver-premiers-clients.html` | `29837957e915643a0748021affe9c939cfc88f89` | `ae45cbcb2ec0e20e7b6bb613b59fb4efde5fe54c` |
 | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` | `f1faf0bbb75b36b784e38e370c13eb49654a622f` | `cd3b8d01fbf0c7fffab2c109fcca1a2b0ecbae7b` |
 | `dossiers/reconversion-sans-perte-salaire.html` | `128613ebf08c799823434c76e96f628ec6102a5a` | `a3bf47dce0da390a93742f2dcbac9dc557d188e8` |
 | `dossiers/patrimoine-permet-il-travailler-moins.html` | `c006f7a8de0d55c219f89748ad39053e8afecbec` | `343adf2f660396f9265ddab15531d93005090ae6` |
@@ -76,7 +77,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 
 ## Pages validées humainement et inchangées
 
-- `dossiers/trouver-premiers-clients.html` — 6/9 automatique — Entonnoir causal, canaux alternatifs, seuils d’arrêt et changement d’offre déjà explicites.
 - `articles/entretien-rate-ce-qui-bloque.html` — 6/9 automatique — Diagnostic de conversion, hypothèses concurrentes, retours convergents et conditions de recalibrage déjà présents.
 - `dossiers/etre-riche-revenu-patrimoine-liberte.html` — 6/9 automatique — Page de clarification conceptuelle : plusieurs définitions et inversion selon la question déjà traitées.
 - `dossiers/experience-devient-risque-recruteur.html` — 6/9 automatique — Risques perçus, preuves, ciblage et test de cohérence personnelle déjà structurés.
@@ -149,7 +149,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 
 | Score | Mots | Revue | Page |
 |---:|---:|---|---|
-| 6/9 | 1019 | humaine ✓ | `dossiers/trouver-premiers-clients.html` |
 | 6/9 | 1115 | humaine ✓ | `articles/entretien-rate-ce-qui-bloque.html` |
 | 6/9 | 1353 | humaine ✓ | `dossiers/etre-riche-revenu-patrimoine-liberte.html` |
 | 6/9 | 1485 | humaine ✓ | `dossiers/experience-devient-risque-recruteur.html` |
@@ -238,6 +237,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1615 | humaine ✓ | `dossiers/automatiser-ou-non-processus.html` |
 | 9/9 | 1704 | humaine ✓ | `dossiers/indivision-succession-heritiers-vendre-partager.html` |
 | 9/9 | 1707 | humaine ✓ | `dossiers/ameliorer-processus-sans-degrader-service.html` |
+| 9/9 | 1718 | à revoir après changement | `dossiers/trouver-premiers-clients.html` |
 | 9/9 | 1733 | à revoir après changement | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` |
 | 9/9 | 1760 | humaine ✓ | `articles/travailler-beaucoup-gagner-peu-prix.html` |
 | 9/9 | 1791 | humaine ✓ | `dossiers/prejuges-biais-monde-professionnel.html` |
