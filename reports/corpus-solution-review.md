@@ -6,18 +6,19 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **72**. Validations devenues caduques après modification : **51**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **71**. Validations devenues caduques après modification : **52**.
 
 ## Priorité humaine
 
 | Score | Mots | Page | Dimensions manquantes |
 |---:|---:|---|---|
-| — | — | — | **Aucune priorité critique non relue** |
+| 6/9 | 2785 | `dossiers/indivision-loyers-charges-comptes.html` | probleme, causalite, options · validation précédente caduque |
 
 ## Validations devenues caduques
 
 | Page | SHA relu | SHA courant |
 |---|---|---|
+| `dossiers/indivision-loyers-charges-comptes.html` | `17a2f1637380da7fdce685ccf909e3eeb3d5523a` | `58e167161f9837e65d22f8c8ead933f1bada5b48` |
 | `dossiers/metiers-fonctions-organisation-entreprise.html` | `b9100c518af815d5e3d410b6184e23e03d065471` | `d1ad766d8bb16ec3e4e166eea84be714d760711e` |
 | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | `7dbb9a5b999cc3cf143d8f63841135ec93581ac3` | `f0d1ee0fa1fbfc89b5bf7e1b2d324b8680b0d5b8` |
 | `dossiers/acheter-logement-sans-se-fragiliser.html` | `917027c5225fc0464db739ffa51972e38f4655f6` | `6c7f375c0b74b45666efb0fbff2aac1f530c03ba` |
@@ -109,7 +110,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/audit-copropriete-avant-achat.html` — 8/9 automatique — Documents, charges, travaux, gouvernance, scénarios de choc et signaux de renoncement déjà structurés.
 - `dossiers/negocier-salaire-responsabilites.html` — 8/9 automatique — Poste réel versus surcharge, package complet, BATNA, coût de rester, contreparties alternatives, horizon et seuil de mobilité externe déjà structurés.
 - `articles/competences-invisibles-preuves.html` — 8/9 automatique — Revue angles morts : distingue preuve insuffisante et filtre local via le test même preuve/autre acteur, avec condition de renversement.
-- `dossiers/indivision-loyers-charges-comptes.html` — 8/9 automatique — Flux de loyers, charges, preuves comptables, comptes entre indivisaires et architecture de décision déjà structurés lors de la revue antérieure.
 - `dossiers/comparer-deux-offres-emploi.html` — 8/9 automatique — Non-négociables avant score, package réel, temps capturé, contrat, risque organisationnel, capital professionnel, scénarios et option C déjà structurés.
 - `articles/frais-fiscalite-rendement-net.html` — 8/9 automatique — Réécriture du 16/08 : frais fournisseurs actualisés, point mort de migration, coût ponctuel du changement et valeur des options perdues ajoutés.
 - `dossiers/finances-allocation-portefeuille.html` — 8/9 automatique — Fonctions avant pourcentages, capacité versus tolérance au risque, moteurs communs, budget de risque, séquence, stress tests et politique écrite déjà structurés.
@@ -154,6 +154,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 6/9 | 1353 | humaine ✓ | `dossiers/etre-riche-revenu-patrimoine-liberte.html` |
 | 6/9 | 1485 | humaine ✓ | `dossiers/experience-devient-risque-recruteur.html` |
 | 6/9 | 1596 | humaine ✓ | `dossiers/puis-je-me-permettre-reconversion.html` |
+| 6/9 | 2785 | à revoir après changement | `dossiers/indivision-loyers-charges-comptes.html` |
 | 7/9 | 1157 | humaine ✓ | `articles/50-candidatures-zero-reponse.html` |
 | 7/9 | 1285 | humaine ✓ | `dossiers/competences-qualification-employabilite.html` |
 | 7/9 | 1303 | humaine ✓ | `dossiers/garages-parkings-locaux-commerciaux.html` |
@@ -192,7 +193,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1435 | humaine ✓ | `dossiers/audit-copropriete-avant-achat.html` |
 | 8/9 | 1435 | humaine ✓ | `dossiers/negocier-salaire-responsabilites.html` |
 | 8/9 | 1477 | humaine ✓ | `articles/competences-invisibles-preuves.html` |
-| 8/9 | 1554 | humaine ✓ | `dossiers/indivision-loyers-charges-comptes.html` |
 | 8/9 | 1591 | à revoir après changement | `dossiers/quand-vie-change-sante-separation-revenu.html` |
 | 8/9 | 1599 | humaine ✓ | `dossiers/comparer-deux-offres-emploi.html` |
 | 8/9 | 1671 | à revoir après changement | `articles/competences-transferables.html` |
