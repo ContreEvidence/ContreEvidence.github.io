@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **113**. Validations devenues caduques après modification : **10**.
+Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **112**. Validations devenues caduques après modification : **11**.
 
 ## Priorité humaine
 
@@ -20,6 +20,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 |---|---|---|
 | `dossiers/capacite-refuser-travail-rentabilite.html` | `aace252f32a1faf81cf6e0a4665e9b60e694129e` | `91ebe0bb0dc7e77c7a5a042210a2f54a7e04570e` |
 | `dossiers/previsionnel-activite-12-mois.html` | `ec3ebe88a9923f6802788dd5fb1a65c113e220ae` | `f35cb5ed9159e68ac5caa6ea95ae5742ab5b7b8e` |
+| `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` | `f1faf0bbb75b36b784e38e370c13eb49654a622f` | `cd3b8d01fbf0c7fffab2c109fcca1a2b0ecbae7b` |
 | `dossiers/reconversion-sans-perte-salaire.html` | `128613ebf08c799823434c76e96f628ec6102a5a` | `a3bf47dce0da390a93742f2dcbac9dc557d188e8` |
 | `dossiers/sante-travail-equilibre-vie-pro-perso.html` | `9075afe1528f2f4c763aa2ee6146d95a22ade56b` | `e0c5f4d97e9b96ce87e1cf00e611cddcbe349312` |
 | `articles/checklist-avant-placement-conseiller.html` | `f0a354fedc6ee6b64f0235804b495c6a4701a872` | `561b9eb3d62a2ba88f0b48c12b4c1b36fe54d5a7` |
@@ -73,7 +74,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/are-arce-acre-creation-entreprise.html` — 8/9 automatique — Filet mensuel versus capital, besoin de financement réel, échec à M6, BFR, ACRE temporaire et questions à France Travail déjà structurés ; règles 2026 revérifiées le 16/08.
 - `dossiers/metiers-fonctions-organisation-entreprise.html` — 8/9 automatique — Fonctions lues par flux, décisions, interfaces et criticité ; transferts de compétences et test organisationnel déjà structurés.
 - `dossiers/protocole-verifier-reponse-ia.html` — 8/9 automatique — Hiérarchie de preuve, temporalité, contre-preuve, hypothèse d’inversion et seuil d’arrêt de vérification déjà structurés.
-- `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` — 8/9 automatique — Besoin/objectifs/moyens séparés, non-négociables, options concurrentes, scénario adverse et seuil de changement déjà structurés.
 - `dossiers/reconversion-sans-formation-longue.html` — 8/9 automatique — Verrou dominant, VAE/certification/poste passerelle/candidature directe, coût complet, seuils et conditions d’inversion déjà structurés.
 - `dossiers/emploi-chercher-accepter-negocier-evoluer.html` — 8/9 automatique — Entonnoir emploi, diagnostic par étape, alternatives, plancher de négociation, scénario rester/préparer/partir et options futures déjà traités.
 - `dossiers/competent-mais-invisible-travail.html` — 8/9 automatique — Valeur créée transformée en preuves observables, visibilité auprès des décideurs et alternatives à l’attente d’une reconnaissance spontanée déjà structurées.
@@ -191,7 +191,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1201 | humaine ✓ | `dossiers/are-arce-acre-creation-entreprise.html` |
 | 8/9 | 1208 | humaine ✓ | `dossiers/metiers-fonctions-organisation-entreprise.html` |
 | 8/9 | 1227 | humaine ✓ | `dossiers/protocole-verifier-reponse-ia.html` |
-| 8/9 | 1229 | humaine ✓ | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` |
 | 8/9 | 1286 | humaine ✓ | `dossiers/reconversion-sans-formation-longue.html` |
 | 8/9 | 1317 | humaine ✓ | `dossiers/emploi-chercher-accepter-negocier-evoluer.html` |
 | 8/9 | 1337 | humaine ✓ | `dossiers/competent-mais-invisible-travail.html` |
@@ -248,6 +247,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1615 | humaine ✓ | `dossiers/automatiser-ou-non-processus.html` |
 | 9/9 | 1704 | humaine ✓ | `dossiers/indivision-succession-heritiers-vendre-partager.html` |
 | 9/9 | 1707 | humaine ✓ | `dossiers/ameliorer-processus-sans-degrader-service.html` |
+| 9/9 | 1733 | à revoir après changement | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` |
 | 9/9 | 1760 | humaine ✓ | `articles/travailler-beaucoup-gagner-peu-prix.html` |
 | 9/9 | 1777 | humaine ✓ | `dossiers/calculer-prix-minimum-rentable.html` |
 | 9/9 | 1783 | humaine ✓ | `dossiers/liquidites-reserve-securite.html` |
