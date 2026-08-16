@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
-- P1 — affirmation forte à resserrer ou vérifier : **60**
+- P1 — affirmation forte à resserrer ou vérifier : **61**
 - P2 — nécessité à examiner : **146**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **794**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **796**
 
 ## P0 — rouvrir en priorité
 
@@ -93,6 +93,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sourcée mais formulation trop absolue** — Réécrit le 15/08/2026 · Code de l’artisanat vérifié dans sa version 2026 En bref : démontez le « sans diplôme, impossible » Commencez par quatre questions. _[signal-source]_
 ### `dossiers/decider-sans-tourner-en-rond.html`
 - **affirmation forte sans signal de source explicite** — Si une donnée ne peut pas changer le choix, elle n’a probablement pas besoin d’être dans le tableau. _[périmètre]_
+### `dossiers/finances-credit-endettement.html`
+- **fermeture forte sourcée mais formulation trop absolue** — Refinancement plus cher Une dette courte devient-elle impossible à renouveler ? _[signal-source, temporalité]_
 ### `dossiers/formation-vaut-elle-le-cout.html`
 - **fermeture forte sourcée mais formulation trop absolue** — CPF 2026 : financement ne signifie pas coût nul Depuis le 1er avril 2026 , la participation financière obligatoire est fixée à 150 € pour les titulaires concernés, avec des exceptions prévues par les règles du dispositif. _[signal-source]_
 - **fermeture forte sourcée mais formulation trop absolue** — Verrou La formation aide si… Alternative possible Qualification obligatoire elle donne le titre ou l’habilitation exigée. autre voie reconnue plus courte. _[signal-source]_
