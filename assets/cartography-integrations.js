@@ -75,6 +75,22 @@
         frame.insertAdjacentElement('afterend', block);
       }
     }
+
+    const isHome = path === '/' || path.endsWith('/index.html');
+    if (isHome && !document.querySelector('[data-ce-product-shift]')) {
+      document.querySelectorAll('a[href="bibliotheque.html?type=outil"]').forEach(a => {
+        a.href = 'outils.html';
+        if (/voir tous les outils/i.test(a.textContent)) a.textContent = 'Choisir un outil';
+      });
+
+      const essentials = document.querySelector('section.home-essentials');
+      if (essentials) {
+        const section = document.createElement('section');
+        section.dataset.ceProductShift = '1';
+        section.innerHTML = `<div class="container"><div class="section-head"><div class="kicker">Comprendre ne suffit pas toujours</div><h2>Le dossier explique. Le parcours et l’outil vous font avancer.</h2><p>Contre-Évidence relie désormais davantage les contenus aux calculs, aux scénarios et à la prochaine décision utile.</p></div><div class="need-grid"><a class="need-card" href="parcours-achat-immobilier.html"><span class="need-step">Parcours · Immobilier</span><h3>Acheter sans se fragiliser</h3><p>Capacité → coût complet → réserve → mobilité → décision. Les briques sont remises dans l’ordre où elles doivent être utilisées.</p><span class="need-action">Suivre le parcours →</span></a><a class="need-card is-decision" href="parcours-temps-argent-liberte.html"><span class="need-step">Parcours · Qualité de vie</span><h3>Temps · Argent · Liberté</h3><p>Comparer salaire, trajet, temps récupéré et patrimoine pour mesurer ce qu’une vie moins contrainte coûte réellement.</p><span class="need-action">Comparer les leviers →</span></a><a class="need-card is-goal" href="outils.html"><span class="need-step">30 outils & simulateurs</span><h3>Diagnostiquer, comparer, calculer, tester, piloter.</h3><p>Choisissez l’outil par fonction plutôt que de parcourir une longue liste de calculateurs.</p><span class="need-action">Choisir le bon moteur →</span></a></div><div class="home-library-cta"><div><strong>Votre situation ne rentre dans aucune case ?</strong><p>Partez du verrou réel : l’atelier d’ingénierie de solutions cherche les voies possibles avant de conclure que la porte est fermée.</p></div><a class="btn btn-ghost" href="outil-ingenierie-solutions.html">Ouvrir l’atelier</a></div></div>`;
+        essentials.insertAdjacentElement('beforebegin', section);
+      }
+    }
   };
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run, {once:true});
