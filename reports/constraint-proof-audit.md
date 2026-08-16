@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **17**
 - P1 — affirmation forte à resserrer ou vérifier : **72**
-- P2 — nécessité à examiner : **160**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **923**
+- P2 — nécessité à examiner : **159**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **925**
 
 ## P0 — rouvrir en priorité
 
@@ -375,7 +375,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Votre économie mensuelle Contribution mensuelle que l’activité doit couvrir Revenu visé + charges fixes + frais structurels + autres besoins que votre activité doit financer. _[temporalité]_
 ### `themes/argent.html`
 - **nécessité à requalifier ou sourcer** — Budget, premiers euros, réserve et projets proches : le socle doit tenir avant toute prise de risque. comprendre mes flux mettre de côté régulièrement constituer une réserve utile identifier le capital vraiment disponible Poser les bases → 02 · Apprendre à investir Comprendre avant d’augmenter les montants. _[temporalité]_
-- **nécessité à requalifier ou sourcer** — La Bibliothèque rassemble les guides et dossiers ; les outils restent accessibles séparément quand une décision doit être testée avec vos propres chiffres.
 ### `themes/entreprendre.html`
 - **nécessité à requalifier ou sourcer** — Guide prévisionnel 12 mois → Simulateur 12 mois → Business plan Qu’est-ce qu’un business plan doit réellement prouver ? _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Le statut doit servir le modèle, pas le remplacer.
