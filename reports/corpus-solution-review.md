@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **102**. Validations devenues caduques après modification : **21**.
+Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **101**. Validations devenues caduques après modification : **22**.
 
 ## Priorité humaine
 
@@ -19,6 +19,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | Page | SHA relu | SHA courant |
 |---|---|---|
 | `dossiers/metiers-fonctions-organisation-entreprise.html` | `b9100c518af815d5e3d410b6184e23e03d065471` | `d1ad766d8bb16ec3e4e166eea84be714d760711e` |
+| `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` | `e782289f8d68aab912acdd201a649e7782204756` | `959ef22860e5b38b622378e56ec4a2de9123e610` |
 | `dossiers/quand-vie-change-sante-separation-revenu.html` | `7c1e0e0d680c29f25db5fc5d7c9b17ccb1f37d6a` | `1487618f513ec93eafa2bc48959f9c83f74bcc57` |
 | `dossiers/business-plan-utile.html` | `e905253a4ba67437152d5227dcdd9dd464886d32` | `d67ecb168823cccfc96f3a853f21e902602d46bb` |
 | `dossiers/apprendre-developper-competences.html` | `487f02e927355afd164e889a7c53b7d4e0e6ff65` | `3272d614977166149cab861080f1216a5458a5c2` |
@@ -72,7 +73,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/demenager-pour-un-emploi-salaire-minimum.html` — 7/9 automatique — Salaire net de bascule, coûts de transition, prix du temps, aides conditionnelles et valeur d’option de la mobilité déjà traités.
 - `dossiers/immobilier-allocation-globale-patrimoine.html` — 8/9 automatique — Immobilier replacé dans l’allocation totale avec dette, concentration, liquidité et risques corrélés déjà structurés.
 - `dossiers/etude-marche-terrain.html` — 8/9 automatique — Preuve payante, marché accessible, CAC/LTV, saisonnalité, test terrain et critères de pivot/abandon déjà explicites.
-- `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` — 8/9 automatique — Deux systèmes de vie comparés : flux, temps capturé, robustesse, trajectoire, scénarios, seuil de bascule et options C/D déjà présents.
 - `dossiers/acheter-logement-sans-se-fragiliser.html` — 8/9 automatique — Apport, liquidité résiduelle, mensualité soutenable, stress tests et options de sortie déjà au niveau attendu lors de la revue antérieure.
 - `dossiers/comparer-strategies-immobilieres.html` — 8/9 automatique — Même capital, revenu net, temps de gestion, vacance propre à chaque usage, option de repli et allocation patrimoniale globale déjà structurés.
 - `dossiers/are-arce-acre-creation-entreprise.html` — 8/9 automatique — Filet mensuel versus capital, besoin de financement réel, échec à M6, BFR, ACRE temporaire et questions à France Travail déjà structurés ; règles 2026 revérifiées le 16/08.
@@ -180,7 +180,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 7/9 | 2401 | humaine ✓ | `dossiers/demenager-pour-un-emploi-salaire-minimum.html` |
 | 8/9 | 1008 | humaine ✓ | `dossiers/immobilier-allocation-globale-patrimoine.html` |
 | 8/9 | 1074 | humaine ✓ | `dossiers/etude-marche-terrain.html` |
-| 8/9 | 1090 | humaine ✓ | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` |
 | 8/9 | 1185 | humaine ✓ | `dossiers/acheter-logement-sans-se-fragiliser.html` |
 | 8/9 | 1194 | humaine ✓ | `dossiers/comparer-strategies-immobilieres.html` |
 | 8/9 | 1201 | humaine ✓ | `dossiers/are-arce-acre-creation-entreprise.html` |
@@ -188,6 +187,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1286 | humaine ✓ | `dossiers/reconversion-sans-formation-longue.html` |
 | 8/9 | 1317 | humaine ✓ | `dossiers/emploi-chercher-accepter-negocier-evoluer.html` |
 | 8/9 | 1337 | humaine ✓ | `dossiers/competent-mais-invisible-travail.html` |
+| 8/9 | 1344 | à revoir après changement | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` |
 | 8/9 | 1351 | humaine ✓ | `dossiers/tresorerie-bfr-entreprise.html` |
 | 8/9 | 1352 | humaine ✓ | `articles/construire-epargne-de-zero.html` |
 | 8/9 | 1360 | humaine ✓ | `articles/grosse-entree-argent-que-faire.html` |
