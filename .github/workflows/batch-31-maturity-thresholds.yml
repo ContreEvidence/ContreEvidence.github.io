@@ -1,0 +1,78 @@
+name: Batch 31 maturity thresholds
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Publish maturity thresholds and connect the roadmap
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          detail = Path('dossiers/seuils-maturite-patrimoniale.html')
+          d = detail.read_text(encoding='utf-8')
+          robots = '<meta name="robots" content="noindex,nofollow">\n'
+          assert d.count(robots) == 1
+          d = d.replace(robots, '', 1)
+          detail.write_text(d, encoding='utf-8')
+
+          roadmap = Path('parcours-de-vie.html')
+          text = roadmap.read_text(encoding='utf-8')
+          css_anchor = '.roadmap-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.1rem}'
+          css_extra = '.maturity-section{background:#fff}.maturity-head{max-width:920px;margin-bottom:1rem}.maturity-head h2{margin:.25rem 0 .55rem;font-size:clamp(2rem,4vw,3.05rem);letter-spacing:-.04em;line-height:1}.maturity-head p{color:#59646d;line-height:1.65}.maturity-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}.maturity-card{padding:1rem 1.05rem;border:1px solid rgba(16,24,32,.12);border-radius:15px;background:#faf8f2}.maturity-card small{font-size:.7rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:#76591c}.maturity-card strong{display:block;margin:.35rem 0}.maturity-card span{display:block;color:#59646d;line-height:1.48;font-size:.91rem}.maturity-formula{margin-top:1rem;padding:1rem 1.1rem;background:#101820;color:#fff;border-radius:15px}.maturity-formula strong{color:#e8c979}.maturity-formula p{margin:.35rem 0 0;color:#d7dfe3;line-height:1.55}.maturity-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1rem}@media(max-width:850px){.maturity-grid{grid-template-columns:1fr}}'
+          assert text.count(css_anchor) == 1
+          text = text.replace(css_anchor, css_anchor + css_extra, 1)
+          anchor = '</section><section class="journey-section annual-section" id="revue-annuelle">'
+          block = '</section><section class="journey-section maturity-section" id="seuils-patrimoine"><div class="container"><div class="maturity-head"><div class="kicker">Seuils de maturité patrimoniale</div><h2>Ne demandez pas « combien devrais-je avoir à mon âge ? ». Demandez ce que votre capital sait déjà faire.</h2><p>L’âge donne le contexte ; les seuils ci-dessous indiquent la fonction réellement acquise. <strong>On peut être au niveau 2 à 50 ans ou au niveau 5 à 32 ans.</strong> L’objectif n’est pas de monter le plus vite possible : c’est d’éviter de construire un étage qui oblige à démonter celui d’en dessous au premier choc.</p></div><div class="maturity-grid"><div class="maturity-card"><small>0 · Stabiliser</small><strong>Le mois cesse de détruire le précédent.</strong><span>Pas de déficit récurrent ; les dépenses annuelles commencent à être provisionnées. Le seuil est d’abord un flux positif, pas un capital.</span></div><div class="maturity-card"><small>1 · Premier coussin</small><strong>Environ 500 à 1 000 €.</strong><span>Ou le coût d’un incident banal plausible. Cette somme casse le cycle « petite panne → découvert ou crédit ».</span></div><div class="maturity-card"><small>2 · Sécurité</small><strong>Plusieurs mois de dépenses essentielles.</strong><span>Repère à adapter : environ 2–3 mois pour un foyer très stable, 3–6 mois avec un revenu principal, davantage si les revenus sont variables ou fragiles.</span></div><div class="maturity-card"><small>3 · Investissable</small><strong>Réserve + projets proches déjà financés.</strong><span>Le surplus au-delà de ces fonctions peut enfin accepter un horizon long. Le premier investissement peut alors être petit sans être prématuré.</span></div><div class="maturity-card"><small>4 · Structurer</small><strong>Le capital devient assez important pour que les erreurs d’allocation comptent.</strong><span>Vers 20–50 k€ financiers, la revue des frais, enveloppes et concentrations devient souvent utile ; au-delà de 100 k€ ou avec beaucoup d’immobilier, la coordination mérite un vrai pilotage.</span></div><div class="maturity-card"><small>5–6 · Options puis autonomie</small><strong>Comptez en mois de vie puis en % de dépenses couvertes.</strong><span>6–12 mois de runway changent déjà le pouvoir de décision ; ensuite mesurez 25 %, 50 %, 75 % puis 100 % des dépenses potentiellement financées par le patrimoine.</span></div></div><div class="maturity-formula"><strong>Le calcul à retenir.</strong><p><b>Capital investissable = liquidités − réserve cible − projets proches − dettes prioritaires.</b> Puis : <b>runway = capital accessible ÷ dépenses essentielles annuelles.</b> Ces deux nombres sont souvent plus utiles que votre patrimoine brut.</p></div><div class="maturity-actions"><a class="btn btn-primary" href="dossiers/seuils-maturite-patrimoniale.html">Calculer mon vrai niveau patrimonial →</a><a class="btn btn-ghost" href="articles/construire-epargne-de-zero.html">Je pars de zéro →</a><a class="btn btn-ghost" href="dossiers/patrimoine-marge-de-manoeuvre.html">Mesurer ma marge de manœuvre →</a></div></div></section><section class="journey-section annual-section" id="revue-annuelle">'
+          assert text.count(anchor) == 1
+          text = text.replace(anchor, block, 1)
+          roadmap.write_text(text, encoding='utf-8')
+
+          age = Path('dossiers/patrimoine-selon-age-construire-utiliser.html')
+          age_text = age.read_text(encoding='utf-8')
+          age_anchor = '<h2>15. Le standard Contre-Évidence</h2>'
+          age_block = '<h2>15. L’âge ne suffit pas : ajoutez votre niveau de maturité patrimoniale</h2><p>Deux personnes du même âge peuvent être à des étapes totalement différentes. Pour savoir ce qui vient réellement ensuite, ajoutez cinq mesures à l’âge : <strong>marge mensuelle, mois de réserve, capital réellement investissable, runway en années de dépenses et pourcentage des dépenses que le patrimoine pourrait financer.</strong></p><div class="decision-box"><h3>Exemple</h3><p>À 45 ans, posséder 80 000 € ne signifie pas automatiquement « diversifier davantage ». Si 50 000 € financent un apport prévu, 15 000 € la réserve et 10 000 € des travaux proches, le capital long terme n’est que 5 000 €. La bonne étape est déterminée par la fonction de l’argent, pas par le montant brut.</p></div><p><a href="seuils-maturite-patrimoniale.html"><strong>→ Calculer son niveau : 500 €, 1 000 €, mois de réserve, capital investissable, runway et autonomie partielle</strong></a></p><h2>16. Le standard Contre-Évidence</h2>'
+          assert age_text.count(age_anchor) == 1
+          age_text = age_text.replace(age_anchor, age_block, 1)
+          age.write_text(age_text, encoding='utf-8')
+
+          zero = Path('articles/construire-epargne-de-zero.html')
+          z = zero.read_text(encoding='utf-8')
+          z_anchor = '<div class="answer-box"><h2>La carte en six étapes</h2>'
+          z_link = '<p><a href="../dossiers/seuils-maturite-patrimoniale.html"><strong>→ Voir toute l’échelle : du premier 100 € à la marge de manœuvre puis à l’autonomie partielle</strong></a></p>'
+          assert z.count(z_anchor) == 1
+          z = z.replace(z_anchor, z_link + z_anchor, 1)
+          zero.write_text(z, encoding='utf-8')
+
+          sitemap = Path('sitemap.xml')
+          sm = sitemap.read_text(encoding='utf-8')
+          entry = '  <url><loc>https://contreevidence.github.io/dossiers/seuils-maturite-patrimoniale.html</loc><lastmod>2026-08-16</lastmod></url>\n'
+          assert 'dossiers/seuils-maturite-patrimoniale.html' not in sm
+          assert sm.count('</urlset>') == 1
+          sm = sm.replace('</urlset>', entry + '</urlset>', 1)
+          sitemap.write_text(sm, encoding='utf-8')
+
+          report = Path('reports/content-review-decisions-2026-08-16-batch-31.md')
+          report.write_text('# Revue éditoriale autonome — lot 31 — 16 août 2026\n\n## Déficit traité\nAprès l’ajout des outils financiers par phase, il manquait encore un moyen pour un débutant de savoir **quand** il est réellement prêt à passer à l’étape suivante. Les âges et les montants bruts ne suffisent pas.\n\n## Décisions\n- **CREATE — `dossiers/seuils-maturite-patrimoniale.html`** : échelle complète par fonctions, euros, mois de dépenses, capital investissable, runway et couverture des dépenses.\n- **REWRITE ciblé — `parcours-de-vie.html`** : nouvelle section indépendante de l’âge avec niveaux de maturité et formules simples.\n- **LINK/BRIDGE — `dossiers/patrimoine-selon-age-construire-utiliser.html`** : relie désormais cycle de vie et niveau de maturité réel.\n- **LINK — `articles/construire-epargne-de-zero.html`** : continuité depuis les premiers 100/1 000 € vers la suite.\n- **INDEX — `sitemap.xml`** : nouvelle page ajoutée.\n\n## Doctrine ajoutée\n1. Un seuil patrimonial utile décrit une fonction acquise, pas un classement social.\n2. Mélanger patrimoine brut, réserve, apport immobilier et capital long terme donne de faux signaux.\n3. Les premiers seuils se lisent en euros ; ensuite les ratios personnels deviennent plus utiles : mois de dépenses, runway, taux de couverture.\n4. La bonne condition de passage est que la fonction précédente reste financée après la nouvelle décision.\n5. Les montants 20–50 k€ et 100 k€ sont uniquement des déclencheurs de revue de complexité, jamais des objectifs ou normes d’âge.\n', encoding='utf-8')
+          PY
+      - name: Commit batch 31
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dossiers/seuils-maturite-patrimoniale.html parcours-de-vie.html dossiers/patrimoine-selon-age-construire-utiliser.html articles/construire-epargne-de-zero.html sitemap.xml reports/content-review-decisions-2026-08-16-batch-31.md
+          git diff --cached --check
+          git commit -m "Add patrimonial maturity thresholds"
+          git push
