@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **15**
-- P1 — affirmation forte à resserrer ou vérifier : **63**
-- P2 — nécessité à examiner : **152**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **866**
+- P1 — affirmation forte à resserrer ou vérifier : **64**
+- P2 — nécessité à examiner : **149**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **865**
 
 ## P0 — rouvrir en priorité
 
@@ -61,6 +61,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `articles/sans-diplome-chemins-alternatifs.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Contournement du diplôme le titre est légalement obligatoire ou réellement dominant dans presque toutes les cibles obtenir la qualification ou changer de fonction. _[signal-source]_
 - **fermeture forte sourcée mais formulation trop absolue** — Exemple : même métier cible, trois stratégies Une personne vise une fonction dont le diplôme n’est pas légalement obligatoire mais revient dans 70 % des offres analysées. _[signal-source, temporalité]_
+### `articles/travailler-beaucoup-gagner-peu-prix.html`
+- **affirmation forte sans signal de source explicite** — Ce calcul ne fixe pas automatiquement le prix de marché ; il indique le niveau sous lequel votre architecture actuelle ne peut pas atteindre votre objectif. _[périmètre]_
 ### `dossiers/acheter-sans-vider-epargne.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Projet voiture impossible à différer : 4 000 €. _[signal-source, temporalité]_
 ### `dossiers/apprendre-developper-competences.html`
@@ -180,10 +182,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Elle ne doit pas devenir le sujet principal du CV.
 - **nécessité à requalifier ou sourcer** — Le retour doit surtout produire une preuve convaincante du présent. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — L’interruption doit être expliquée de façon stable, factuelle et proportionnée.
-### `articles/travailler-beaucoup-gagner-peu-prix.html`
-- **nécessité à requalifier ou sourcer** — Additionnez vos coûts fixes professionnels, la rémunération que l’activité doit permettre, les prélèvements sociaux et fiscaux qui dépendent de votre statut lorsqu’ils ne sont pas déjà intégrés, et une marge de sécurité.
-- **nécessité à requalifier ou sourcer** — Le prix facturé doit ensuite couvrir cette contribution plus les coûts variables liés à la prestation .
-- **nécessité à requalifier ou sourcer** — Mais elle nécessite 30 minutes d’aller-retour, 15 minutes de préparation, 10 minutes de messages et 5 minutes de facturation.
 ### `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`
 - **nécessité à requalifier ou sourcer** — Ce qui doit faire renverser la décision Conclusion provisoire Observation nouvelle Révision Accepter B pour le temps les horaires réels restent aussi capturants que A le bénéfice acheté disparaît.
 - **nécessité à requalifier ou sourcer** — Commencez par ce que la baisse de salaire doit acheter Motif annoncé Besoin réel Substitution à tester avant de baisser le salaire « Je veux vivre mieux » moins de trajet / horaires plus prévisibles télétravail, autre site, horaires, poste voisin. _[temporalité]_
