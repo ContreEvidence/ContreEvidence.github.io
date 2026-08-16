@@ -142,7 +142,6 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1227 | humaine ✓ | `dossiers/protocole-verifier-reponse-ia.html` |
 | 8/9 | 1229 | heuristique | `dossiers/previsionnel-activite-12-mois.html` |
 | 8/9 | 1229 | humaine ✓ | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` |
-| 8/9 | 1280 | heuristique | `articles/frais-fiscalite-rendement-net.html` |
 | 8/9 | 1281 | humaine ✓ | `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
 | 8/9 | 1286 | humaine ✓ | `dossiers/reconversion-sans-formation-longue.html` |
 | 8/9 | 1317 | humaine ✓ | `dossiers/emploi-chercher-accepter-negocier-evoluer.html` |
@@ -168,6 +167,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1554 | humaine ✓ | `dossiers/indivision-loyers-charges-comptes.html` |
 | 8/9 | 1599 | heuristique | `dossiers/comparer-deux-offres-emploi.html` |
 | 8/9 | 1652 | humaine ✓ | `dossiers/audit-budget-60-minutes.html` |
+| 8/9 | 1712 | heuristique | `articles/frais-fiscalite-rendement-net.html` |
 | 8/9 | 1754 | heuristique | `dossiers/location-courte-duree-meuble-tourisme.html` |
 | 8/9 | 1788 | heuristique | `dossiers/finances-allocation-portefeuille.html` |
 | 8/9 | 1799 | heuristique | `dossiers/decider-sans-tourner-en-rond.html` |
