@@ -122,6 +122,7 @@ https://contreevidence.github.io/dossiers/rembourser-credit-ou-investir.html
 https://contreevidence.github.io/dossiers/sante-travail-equilibre-vie-pro-perso.html
 https://contreevidence.github.io/dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html
 https://contreevidence.github.io/dossiers/separation-logement-achete-a-deux.html
+https://contreevidence.github.io/dossiers/seuils-maturite-patrimoniale.html
 https://contreevidence.github.io/dossiers/temps-energie-qualite-vie.html
 https://contreevidence.github.io/dossiers/tout-ca-pour-quoi-objectifs-besoins.html
 https://contreevidence.github.io/dossiers/trajectoire-professionnelle-selon-situation.html
