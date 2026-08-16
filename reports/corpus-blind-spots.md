@@ -79,7 +79,7 @@ Pages : **25**. Angles le plus souvent non détectés : **acteur/gatekeeper** (1
 
 ### patrimoine / investissement / retraite
 
-Pages : **39**. Angles le plus souvent non détectés : **substitution** (32), **objectif réel / substitution du moyen** (29), **transfert de risque** (27), **condition de renversement** (25), **acteur/gatekeeper** (23), **attendre / statu quo** (22), **valeur d’option / irréversibilité** (13).
+Pages : **39**. Angles le plus souvent non détectés : **substitution** (32), **objectif réel / substitution du moyen** (28), **transfert de risque** (28), **condition de renversement** (26), **acteur/gatekeeper** (22), **attendre / statu quo** (22), **valeur d’option / irréversibilité** (13).
 
 ## Règle de reprise éditoriale
 
