@@ -29,8 +29,8 @@ Pages/familles détectées : **46**. Pages `noindex` exclues : **79**. Promesses
 | 5 | ROUTE_FIRST | achat immobilier / crédit | `dossiers/indivision-couple-separation-rachat-soulte.html` | indépendant |
 | 5 | ROUTE_FIRST | couple / logement / séparation | `dossiers/indivision-couple-separation-rachat-soulte.html` | SCI |
 | 5 | ROUTE_FIRST | travailler moins / qualité de vie | `dossiers/passer-80-pourcent-cout-reel.html` | indépendant |
-| 4 | ROUTE_FIRST | entrepreneuriat | `dossiers/lancer-activite-sans-quitter-emploi.html` | activité réglementée |
 | 2 | COVERED_OR_NARROW | reconversion / trajectoire pro | `articles/retrouver-emploi-apres-interruption.html` | — |
+| 2 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/lancer-activite-sans-quitter-emploi.html` | — |
 | 1 | COVERED_OR_NARROW | budget / dettes | `articles/construire-epargne-de-zero.html` | — |
 | 1 | COVERED_OR_NARROW | budget / dettes | `dossiers/decision-plan-30-90-jours.html` | — |
 | 1 | COVERED_OR_NARROW | budget / dettes | `dossiers/finances-cadre-global.html` | — |
@@ -272,7 +272,7 @@ Pages détectées : **11**. Promesses larges `NON_READY` : **3**. Variantes le p
 
 ### entrepreneuriat
 
-Pages détectées : **6**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **TVA** (4), **associés** (4), **activité réglementée** (2), **micro / EI / société** (1).
+Pages détectées : **6**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **TVA** (4), **associés** (4), **activité réglementée** (1), **micro / EI / société** (1).
 
 ### budget / dettes
 
