@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **98**. Validations devenues caduques après modification : **25**.
+Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **97**. Validations devenues caduques après modification : **26**.
 
 ## Priorité humaine
 
@@ -31,6 +31,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/location-courte-duree-meuble-tourisme.html` | `ddaf6bc36e2171b5e249a161fb66926f963ea4d2` | `67506904bc390ceac39951eb725bdb4625fe5b54` |
 | `dossiers/previsionnel-activite-12-mois.html` | `ec3ebe88a9923f6802788dd5fb1a65c113e220ae` | `f35cb5ed9159e68ac5caa6ea95ae5742ab5b7b8e` |
 | `articles/tester-metier-avant-investir.html` | `2d26e84a1aec867f3f795a7fe5076e5514259709` | `f0869a70482faef780134015edccb92309295c47` |
+| `dossiers/are-arce-acre-creation-entreprise.html` | `96944742e60f24751b001857871095f3ae55ce94` | `0a11bc2495d5e98ee3d769a581debaa5f66f4032` |
 | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` | `f1faf0bbb75b36b784e38e370c13eb49654a622f` | `cd3b8d01fbf0c7fffab2c109fcca1a2b0ecbae7b` |
 | `dossiers/reconversion-sans-perte-salaire.html` | `128613ebf08c799823434c76e96f628ec6102a5a` | `a3bf47dce0da390a93742f2dcbac9dc557d188e8` |
 | `dossiers/sante-travail-equilibre-vie-pro-perso.html` | `9075afe1528f2f4c763aa2ee6146d95a22ade56b` | `e0c5f4d97e9b96ce87e1cf00e611cddcbe349312` |
@@ -77,7 +78,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/etude-marche-terrain.html` — 8/9 automatique — Preuve payante, marché accessible, CAC/LTV, saisonnalité, test terrain et critères de pivot/abandon déjà explicites.
 - `dossiers/acheter-logement-sans-se-fragiliser.html` — 8/9 automatique — Apport, liquidité résiduelle, mensualité soutenable, stress tests et options de sortie déjà au niveau attendu lors de la revue antérieure.
 - `dossiers/comparer-strategies-immobilieres.html` — 8/9 automatique — Même capital, revenu net, temps de gestion, vacance propre à chaque usage, option de repli et allocation patrimoniale globale déjà structurés.
-- `dossiers/are-arce-acre-creation-entreprise.html` — 8/9 automatique — Filet mensuel versus capital, besoin de financement réel, échec à M6, BFR, ACRE temporaire et questions à France Travail déjà structurés ; règles 2026 revérifiées le 16/08.
 - `dossiers/protocole-verifier-reponse-ia.html` — 8/9 automatique — Hiérarchie de preuve, temporalité, contre-preuve, hypothèse d’inversion et seuil d’arrêt de vérification déjà structurés.
 - `dossiers/reconversion-sans-formation-longue.html` — 8/9 automatique — Verrou dominant, VAE/certification/poste passerelle/candidature directe, coût complet, seuils et conditions d’inversion déjà structurés.
 - `dossiers/emploi-chercher-accepter-negocier-evoluer.html` — 8/9 automatique — Entonnoir emploi, diagnostic par étape, alternatives, plancher de négociation, scénario rester/préparer/partir et options futures déjà traités.
@@ -182,7 +182,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1098 | à revoir après changement | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` |
 | 8/9 | 1185 | humaine ✓ | `dossiers/acheter-logement-sans-se-fragiliser.html` |
 | 8/9 | 1194 | humaine ✓ | `dossiers/comparer-strategies-immobilieres.html` |
-| 8/9 | 1201 | humaine ✓ | `dossiers/are-arce-acre-creation-entreprise.html` |
 | 8/9 | 1227 | humaine ✓ | `dossiers/protocole-verifier-reponse-ia.html` |
 | 8/9 | 1286 | humaine ✓ | `dossiers/reconversion-sans-formation-longue.html` |
 | 8/9 | 1317 | humaine ✓ | `dossiers/emploi-chercher-accepter-negocier-evoluer.html` |
@@ -231,6 +230,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1314 | humaine ✓ | `dossiers/regles-responsabilites-fautes-travail.html` |
 | 9/9 | 1323 | humaine ✓ | `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` |
 | 9/9 | 1324 | humaine ✓ | `dossiers/gestion-pilotee-comparer-performances.html` |
+| 9/9 | 1346 | à revoir après changement | `dossiers/are-arce-acre-creation-entreprise.html` |
 | 9/9 | 1392 | humaine ✓ | `dossiers/finances-investissement-locatif.html` |
 | 9/9 | 1405 | humaine ✓ | `dossiers/devenir-manager-premiere-fois.html` |
 | 9/9 | 1419 | humaine ✓ | `dossiers/decider-a-deux-travail-patrimoine.html` |
