@@ -6,13 +6,15 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 
 ## Synthèse
 
-- S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
+- S0 — possibilité à fort enjeu sans preuve/condition détectée : **7**
 - S1 — possibilité à fort enjeu à resserrer ou vérifier : **33**
 - S2 — possibilité générale à examiner : **16**
-- OK heuristique — condition ou preuve détectée : **152**
+- OK heuristique — condition ou preuve détectée : **153**
 
 ## S0 — vérifier avant toute recommandation
 
+### `articles/competences-transferables.html`
+- **possibilité à fort enjeu sans condition ni signal de preuve** — Sans diplôme : distinguer compétence réelle et filtre d’accès Vous pouvez maîtriser 90 % du travail et rester bloqué par un diplôme obligatoire ou un filtre RH. _[fort enjeu]_
 ### `dossiers/creer-entreprise-avec-peu-argent.html`
 - **possibilité à fort enjeu sans condition ni signal de preuve** — Il faut distinguer ce qui permet de commencer, ce qui permet d’encaisser un retard, ce qui permet au foyer de survivre pendant la montée en charge — et ce que l’on paie en temps quand on économise du cash. _[fort enjeu]_
 ### `parcours-vie-professionnelle.html`
