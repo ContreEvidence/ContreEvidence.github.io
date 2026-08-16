@@ -104,7 +104,6 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1077 | heuristique | `dossiers/reconversion-sans-perte-salaire.html` |
 | 8/9 | 1090 | heuristique | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` |
 | 8/9 | 1116 | humaine ✓ | `dossiers/business-plan-utile.html` |
-| 8/9 | 1164 | heuristique | `dossiers/automatiser-ou-non-processus.html` |
 | 8/9 | 1170 | heuristique | `articles/sans-diplome-chemins-alternatifs.html` |
 | 8/9 | 1185 | heuristique | `dossiers/acheter-logement-sans-se-fragiliser.html` |
 | 8/9 | 1189 | heuristique | `dossiers/creer-entreprise-avec-peu-argent.html` |
@@ -168,6 +167,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1557 | heuristique | `articles/comparatif-produits-bancaires.html` |
 | 9/9 | 1570 | heuristique | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
 | 9/9 | 1610 | heuristique | `dossiers/travailler-moins-vivre-mieux.html` |
+| 9/9 | 1615 | heuristique | `dossiers/automatiser-ou-non-processus.html` |
 | 9/9 | 1704 | heuristique | `dossiers/indivision-succession-heritiers-vendre-partager.html` |
 | 9/9 | 1707 | heuristique | `dossiers/ameliorer-processus-sans-degrader-service.html` |
 | 9/9 | 1760 | heuristique | `articles/travailler-beaucoup-gagner-peu-prix.html` |
