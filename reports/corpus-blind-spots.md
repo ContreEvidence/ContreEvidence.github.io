@@ -15,7 +15,6 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 15 | 10/15 | entrepreneuriat / activité | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` | substitution, fractionnement, effets de second ordre, attendre / statu quo, condition de renversement |
 | 13 | 7/15 | emploi / carrière / qualification | `articles/competences-transferables.html` | substitution, objectif réel / substitution du moyen, asymétrie de preuve, condition de renversement |
 | 12 | 8/15 | entrepreneuriat / activité | `dossiers/creer-entreprise-sans-diplome.html` | acteur/gatekeeper, effets de second ordre, attendre / statu quo, condition de renversement |
-| 12 | 8/15 | immobilier / crédit / indivision | `dossiers/location-courte-duree-meuble-tourisme.html` | acteur/gatekeeper, fractionnement, effets de second ordre, condition de renversement |
 | 12 | 9/15 | emploi / carrière / qualification | `articles/accepter-nimporte-quel-poste-retour-emploi.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen, condition de renversement |
 | 12 | 9/15 | patrimoine / investissement / retraite | `articles/construire-epargne-de-zero.html` | attendre / statu quo, transfert de risque, condition de renversement, valeur d’option / irréversibilité |
 | 12 | 9/15 | patrimoine / investissement / retraite | `dossiers/bien-immobilier-garder-vendre-transformer.html` | attendre / statu quo, transfert de risque, condition de renversement, fenêtre temporelle |
@@ -62,6 +61,7 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 9 | 10/15 | entrepreneuriat / activité | `dossiers/tresorerie-bfr-entreprise.html` | acteur/gatekeeper, substitution, attendre / statu quo |
 | 9 | 11/15 | entrepreneuriat / activité | `dossiers/couple-famille-argent-temps.html` | acteur/gatekeeper, substitution, attendre / statu quo |
 | 9 | 11/15 | entrepreneuriat / activité | `dossiers/creer-entreprise-avec-peu-argent.html` | fractionnement, attendre / statu quo, condition de renversement |
+| 9 | 11/15 | entrepreneuriat / activité | `dossiers/lancer-activite-sans-quitter-emploi.html` | acteur/gatekeeper, substitution, attendre / statu quo |
 
 ## Lecture par cluster
 
@@ -75,7 +75,7 @@ Pages : **26**. Angles le plus souvent non détectés : **attendre / statu quo**
 
 ### immobilier / crédit / indivision
 
-Pages : **21**. Angles le plus souvent non détectés : **acteur/gatekeeper** (13), **objectif réel / substitution du moyen** (13), **substitution** (13), **condition de renversement** (12), **attendre / statu quo** (11), **transfert de risque** (11), **effets de second ordre** (9).
+Pages : **21**. Angles le plus souvent non détectés : **objectif réel / substitution du moyen** (14), **substitution** (13), **acteur/gatekeeper** (12), **attendre / statu quo** (11), **condition de renversement** (11), **transfert de risque** (11), **effets de second ordre** (8).
 
 ### patrimoine / investissement / retraite
 
