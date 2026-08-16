@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **23**.
+Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **22**.
 
 ## Priorités de relecture
 
@@ -15,7 +15,6 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/devenir-manager-premiere-fois.html` | demandeur emploi, santé / inaptitude, sans diplôme, revenu / runway |
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | salarié, santé / inaptitude, sans diplôme, revenu / runway |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/acheter-sans-vider-epargne.html` | SCI, mariage, PACS |
-| 21 | NON_READY | travailler moins / qualité de vie | `dossiers/patrimoine-permet-il-travailler-moins.html` | salarié privé, public, indépendant |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | indivision directe, mariage, PACS |
 | 21 | NON_READY | travailler moins / qualité de vie | `dossiers/travailler-moins-vivre-mieux.html` | public, indépendant |
 | 15 | NON_READY | reconversion / trajectoire pro | `dossiers/combien-epargne-avant-demissionner.html` | salarié, sans diplôme |
@@ -52,6 +51,7 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 | 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/creer-entreprise-sans-diplome.html` | — |
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | — |
 | 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/formation-vaut-elle-le-cout.html` | — |
+| 0 | COVERED_OR_NARROW | travailler moins / qualité de vie | `dossiers/patrimoine-permet-il-travailler-moins.html` | — |
 | 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/reconversion-sans-perte-salaire.html` | — |
 | 0 | COVERED_OR_NARROW | couple / logement / séparation | `dossiers/separation-logement-achete-a-deux.html` | — |
 
@@ -101,21 +101,6 @@ Promesse : **combien d’épargne garder après un achat immobilier ? apport et 
 | tontine | MANQUANTE |
 | propriété ≠ financement | TRAITEE |
 | sorties multiples | ROUTEE |
-
-### `dossiers/patrimoine-permet-il-travailler-moins.html` — travailler moins / qualité de vie
-
-Promesse : **travailler moins grâce à son patrimoine : combien faut-il ? | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| salarié privé | MANQUANTE |
-| public | MANQUANTE |
-| indépendant | MANQUANTE |
-| 80% / quatre jours | TRAITEE |
-| télétravail / autre levier | MANQUANTE |
-| solo / couple | TRAITEE |
-| retraite / protection | TRAITEE |
-| temps réellement libéré | TRAITEE |
 
 ### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` — couple / logement / séparation
 
@@ -427,7 +412,7 @@ Pages détectées : **6**. Promesses larges `NON_READY` : **2**. Variantes le pl
 
 ### travailler moins / qualité de vie
 
-Pages détectées : **4**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **indépendant** (3), **public** (2), **salarié privé** (1), **télétravail / autre levier** (1).
+Pages détectées : **4**. Promesses larges `NON_READY` : **1**. Variantes le plus souvent non détectées : **indépendant** (2), **public** (1).
 
 ## Règle éditoriale
 
