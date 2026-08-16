@@ -13,11 +13,11 @@ Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses
 | Priorité | Gate | Famille | Page | Variantes critiques non détectées |
 |---:|---|---|---|---|
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/devenir-manager-premiere-fois.html` | demandeur emploi, santé / inaptitude, sans diplôme, revenu / runway |
+| 28 | NON_READY | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | salarié, santé / inaptitude, sans diplôme, revenu / runway |
 | 28 | NON_READY | transmission / succession | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | mariage / conjoint, PACS / concubin, enfants / famille recomposée, SCI / parts |
 | 28 | NON_READY | travailler moins / qualité de vie | `dossiers/temps-energie-qualite-vie.html` | salarié privé, public, indépendant, retraite / protection |
 | 22 | NON_READY | reconversion / trajectoire pro | `articles/retrouver-emploi-apres-interruption.html` | salarié, demandeur emploi, sans diplôme |
 | 22 | NON_READY | reconversion / trajectoire pro | `dossiers/formation-vaut-elle-le-cout.html` | salarié, demandeur emploi, santé / inaptitude |
-| 22 | NON_READY | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | santé / inaptitude, sans diplôme, revenu / runway |
 | 22 | NON_READY | travailler moins / qualité de vie | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | salarié privé, public, indépendant |
 | 21 | NON_READY | reconversion / trajectoire pro | `articles/competences-transferables.html` | demandeur emploi, santé / inaptitude, sans diplôme |
 | 21 | NON_READY | travailler moins / qualité de vie | `dossiers/patrimoine-permet-il-travailler-moins.html` | salarié privé, public, indépendant |
@@ -64,6 +64,21 @@ Promesse : **devenir manager pour la première fois : changer de métier sans de
 |---|---|
 | salarié | TRAITEE |
 | demandeur emploi | MANQUANTE |
+| public | MANQUANTE |
+| indépendant | MANQUANTE |
+| santé / inaptitude | MANQUANTE |
+| sans diplôme | MANQUANTE |
+| senior / âge | MANQUANTE |
+| revenu / runway | MANQUANTE |
+
+### `dossiers/metiers-fonctions-organisation-entreprise.html` — reconversion / trajectoire pro
+
+Promesse : **métier, poste, fonction, service : comprendre l’entreprise — contre-évidence**
+
+| Variante | Signal automatique |
+|---|---|
+| salarié | MANQUANTE |
+| demandeur emploi | TRAITEE |
 | public | MANQUANTE |
 | indépendant | MANQUANTE |
 | santé / inaptitude | MANQUANTE |
@@ -131,21 +146,6 @@ Promesse : **choisir une formation pour une reconversion : coût, rncp et débou
 | sans diplôme | MENTIONNEE |
 | senior / âge | MANQUANTE |
 | revenu / runway | TRAITEE |
-
-### `dossiers/metiers-fonctions-organisation-entreprise.html` — reconversion / trajectoire pro
-
-Promesse : **métier, poste, fonction, service : comprendre l’entreprise — contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| salarié | MENTIONNEE |
-| demandeur emploi | TRAITEE |
-| public | MANQUANTE |
-| indépendant | MANQUANTE |
-| santé / inaptitude | MANQUANTE |
-| sans diplôme | MANQUANTE |
-| senior / âge | MANQUANTE |
-| revenu / runway | MANQUANTE |
 
 ### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` — travailler moins / qualité de vie
 
