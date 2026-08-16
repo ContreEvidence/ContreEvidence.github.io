@@ -51,7 +51,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `articles/checklist-avant-placement-conseiller.html` | `f0a354fedc6ee6b64f0235804b495c6a4701a872` | `561b9eb3d62a2ba88f0b48c12b4c1b36fe54d5a7` |
 | `articles/choisir-etf-mondial-debutant.html` | `51eb14e0e0798b03354f58360105a9a851af5bf0` | `8ca0d60ea3471345eb449e0e878724f000c1c24f` |
 | `dossiers/temps-energie-qualite-vie.html` | `870bee99dfb0325a0253f9000e2414580b1b8e3c` | `942d12394fd23a3f0a04c8b4587a445061cba7f8` |
-| `dossiers/combien-chiffre-affaires-pour-vivre.html` | `ecb09de9f0ebcb7f42e79bac0351f086fadee8ae` | `6eb83e080e90da9965354053c9da5e0f41fe5c49` |
 | `dossiers/favoriser-un-enfant-succession-donation.html` | `87dc0927f5033751ed022b19eef2ce82ff2ba453` | `a82d032edac0c37906b42c8f11b37678be5e5b55` |
 | `dossiers/finances-investissement-locatif.html` | `2c09f9a2b80c1ef004f4c07f5941dcf88894a1e3` | `cb6ee4bf8b4ee8e265659aecd7e082bf93f2ff45` |
 | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` | `73804a97a74df735855ceb5291c6ce824e36da56` | `a982b4a256d31aa630435af2265c34c7134f8570` |
@@ -60,6 +59,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/finances-transmission-patrimoine.html` | `82b04a6992bd5fea253a773125768b5cb012a203` | `15070334cd5a3c650db719531dc521c35f00a76d` |
 | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | `9b46d98a92fde3c92c7d0ba563bbece7cb3ce9ad` | `bac921cbe2446cc20f220d80e11bede4856b9672` |
 | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` | `b8ca6053a594bbee33797f2d2c4dce8b4854e67b` | `c6e5736d0811426bfb0bfd40ac588e3c6c3945cf` |
+| `dossiers/combien-chiffre-affaires-pour-vivre.html` | `ecb09de9f0ebcb7f42e79bac0351f086fadee8ae` | `0dfc9a1d1e4eb8bb68983008c839fd244620a987` |
 | `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` | `0dde3d3af6dc5214b42e2e86c59d2ef2677de259` | `49a26a95921f5be5635c8609812eef122250a076` |
 
 ## Pages validées humainement et inchangées
@@ -260,7 +260,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 2018 | humaine ✓ | `dossiers/bien-immobilier-garder-vendre-transformer.html` |
 | 9/9 | 2050 | à revoir après changement | `articles/choisir-etf-mondial-debutant.html` |
 | 9/9 | 2108 | à revoir après changement | `dossiers/temps-energie-qualite-vie.html` |
-| 9/9 | 2141 | à revoir après changement | `dossiers/combien-chiffre-affaires-pour-vivre.html` |
 | 9/9 | 2167 | à revoir après changement | `dossiers/favoriser-un-enfant-succession-donation.html` |
 | 9/9 | 2180 | à revoir après changement | `dossiers/finances-investissement-locatif.html` |
 | 9/9 | 2201 | à revoir après changement | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` |
@@ -271,6 +270,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 2462 | à revoir après changement | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
 | 9/9 | 2472 | humaine ✓ | `dossiers/changer-travail-avant-credit-immobilier.html` |
 | 9/9 | 2581 | à revoir après changement | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` |
+| 9/9 | 2742 | à revoir après changement | `dossiers/combien-chiffre-affaires-pour-vivre.html` |
 | 9/9 | 3065 | humaine ✓ | `dossiers/indivision-rachat-progressif-parts.html` |
 | 9/9 | 3821 | humaine ✓ | `dossiers/indivision-couple-separation-rachat-soulte.html` |
 | 9/9 | 4276 | à revoir après changement | `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` |
