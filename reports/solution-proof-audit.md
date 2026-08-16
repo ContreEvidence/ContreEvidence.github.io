@@ -7,9 +7,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **33**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **36**
 - S2 — possibilité générale à examiner : **14**
-- OK heuristique — condition ou preuve détectée : **160**
+- OK heuristique — condition ou preuve détectée : **157**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -40,6 +40,10 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Vous pouvez demander une source, signaler une erreur, proposer une situation à analyser ou exercer un droit de réponse. _[fort enjeu, preuve détectée]_
 ### `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Plus les charges fixes sont élevées, plus ce transfert peut réduire la capacité à absorber une panne, une période d’essai rompue ou un autre projet. _[fort enjeu, condition détectée]_
+### `dossiers/acheter-ou-louer-si-on-risque-demenager.html`
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Option de repli n°1 : garder et louer Conserver le bien peut éviter de vendre au mauvais moment, mais vous devenez bailleur. _[fort enjeu, condition détectée]_
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Si cette flexibilité permet d’accepter dans deux ans un poste procurant 500 € net de plus mensuellement sans vente contrainte, sa valeur peut dépasser ce surcoût. _[fort enjeu, condition détectée]_
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Vous pouvez réduire la rigidité de l’achat : ticket d’entrée plus faible ; bien plus facilement relouable ; emplacement plus liquide ; apport plus faible pour conserver une réserve ; bien dont plusieurs usages restent possibles. _[fort enjeu, condition détectée]_
 ### `dossiers/audit-budget-60-minutes.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Les dépenses fixes dépassent ce qu’on peut supporter avec un revenu légèrement plus faible. _[fort enjeu, condition détectée]_
 ### `dossiers/business-plan-utile.html`
