@@ -6,7 +6,7 @@ Cet audit complète — il ne remplace pas — la revue structurelle. Il cherche
 
 Un motif absent n’est **pas** automatiquement un défaut : la file sert à provoquer une lecture humaine. Inversement, la présence d’un mot ne prouve pas que l’angle est bien traité. Les décisions humaines SHA-liées sont enregistrées séparément dans `reports/corpus-blind-spot-human-review-*.json`.
 
-Pages indexables analysées : **126**. Pages `noindex` exclues : **79**.
+Pages indexables analysées : **127**. Pages `noindex` exclues : **79**.
 
 ## Priorité heuristique
 
@@ -23,6 +23,7 @@ Pages indexables analysées : **126**. Pages `noindex` exclues : **79**.
 | 9 | 8/15 | immobilier / crédit / indivision | `dossiers/acheter-logement-sans-se-fragiliser.html` | fractionnement, effets de second ordre, condition de renversement |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/competences-qualification-employabilite.html` | substitution, objectif réel / substitution du moyen, condition de renversement |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/plan-30-jours-recherche-emploi.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen |
+| 9 | 8/15 | emploi / carrière / qualification | `dossiers/preparer-candidature-avant-postuler.html` | acteur/gatekeeper, substitution, condition de renversement |
 | 9 | 9/15 | emploi / carrière / qualification | `articles/premiere-chance-sans-experience.html` | acteur/gatekeeper, objectif réel / substitution du moyen, asymétrie de preuve |
 | 9 | 9/15 | immobilier / crédit / indivision | `dossiers/audit-budget-60-minutes.html` | acteur/gatekeeper, fenêtre temporelle, condition de renversement |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/automatiser-ou-non-processus.html` | attendre / statu quo, transfert de risque, hétérogénéité / cas local |
@@ -61,13 +62,12 @@ Pages indexables analysées : **126**. Pages `noindex` exclues : **79**.
 | 6 | 11/15 | entrepreneuriat / activité | `dossiers/ameliorer-processus-sans-degrader-service.html` | acteur/gatekeeper, attendre / statu quo |
 | 6 | 11/15 | immobilier / crédit / indivision | `dossiers/audit-copropriete-avant-achat.html` | acteur/gatekeeper, effets de second ordre |
 | 6 | 11/15 | emploi / carrière / qualification | `dossiers/competent-mais-invisible-travail.html` | substitution, fenêtre temporelle |
-| 6 | 11/15 | emploi / carrière / qualification | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` | objectif réel / substitution du moyen, condition de renversement |
 
 ## Lecture par cluster
 
 ### emploi / carrière / qualification
 
-Pages : **40**. Angles le plus souvent non détectés : **transfert de risque** (26), **valeur d’option / irréversibilité** (22), **effets de second ordre** (19), **objectif réel / substitution du moyen** (16), **substitution** (16), **attendre / statu quo** (14), **fractionnement** (13).
+Pages : **41**. Angles le plus souvent non détectés : **transfert de risque** (27), **valeur d’option / irréversibilité** (23), **effets de second ordre** (20), **substitution** (17), **objectif réel / substitution du moyen** (16), **attendre / statu quo** (15), **fractionnement** (13).
 
 ### entrepreneuriat / activité
 
