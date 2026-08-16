@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **121**. Validations devenues caduques après modification : **2**.
+Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **119**. Validations devenues caduques après modification : **4**.
 
 ## Priorité humaine
 
@@ -18,8 +18,10 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 
 | Page | SHA relu | SHA courant |
 |---|---|---|
+| `dossiers/capacite-refuser-travail-rentabilite.html` | `aace252f32a1faf81cf6e0a4665e9b60e694129e` | `91ebe0bb0dc7e77c7a5a042210a2f54a7e04570e` |
 | `dossiers/combien-chiffre-affaires-pour-vivre.html` | `ecb09de9f0ebcb7f42e79bac0351f086fadee8ae` | `6eb83e080e90da9965354053c9da5e0f41fe5c49` |
 | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` | `73804a97a74df735855ceb5291c6ce824e36da56` | `a982b4a256d31aa630435af2265c34c7134f8570` |
+| `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` | `0dde3d3af6dc5214b42e2e86c59d2ef2677de259` | `49a26a95921f5be5635c8609812eef122250a076` |
 
 ## Pages validées humainement et inchangées
 
@@ -73,7 +75,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/reconversion-sans-formation-longue.html` — 8/9 automatique — Verrou dominant, VAE/certification/poste passerelle/candidature directe, coût complet, seuils et conditions d’inversion déjà structurés.
 - `dossiers/emploi-chercher-accepter-negocier-evoluer.html` — 8/9 automatique — Entonnoir emploi, diagnostic par étape, alternatives, plancher de négociation, scénario rester/préparer/partir et options futures déjà traités.
 - `dossiers/competent-mais-invisible-travail.html` — 8/9 automatique — Valeur créée transformée en preuves observables, visibilité auprès des décideurs et alternatives à l’attente d’une reconnaissance spontanée déjà structurées.
-- `dossiers/capacite-refuser-travail-rentabilite.html` — 8/9 automatique — Capacité vendable, marge par heure contrainte, prix/délai/périmètre/délégation, stress test d’embauche et conditions de refus déjà structurés.
 - `dossiers/tresorerie-bfr-entreprise.html` — 8/9 automatique — Cycle de cash, BFR, coût du délai client, prévision 13 semaines, réserve minimale et leviers de cycle déjà structurés.
 - `articles/construire-epargne-de-zero.html` — 8/9 automatique — Ordre excédent → dette → réserve → projets → investissement, dettes classées par danger, réserve selon fragilité et test d’investissabilité déjà structurés.
 - `articles/grosse-entree-argent-que-faire.html` — 8/9 automatique — Capital réellement disponible, poches, délai adaptable, dette sans automatisme, allocation globale et séquence 0–90 jours déjà structurés.
@@ -143,7 +144,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` — 9/9 automatique — Objectif diplôme séparé du moyen d’accès ; VAP, VAE, DAEU et voies institutionnelles comparées avec conditions et séquence.
 - `dossiers/indivision-rachat-progressif-parts.html` — 9/9 automatique — Fractionnement du rachat, courbe de propriété, dette bancaire distincte, valorisation, friction et alternatives en moins de tranches déjà structurés.
 - `dossiers/indivision-couple-separation-rachat-soulte.html` — 9/9 automatique — Réécriture de référence : refus bancaire actuel non confondu avec vente obligatoire, propriété/dette/créances séparées, fenêtres 1–5 ans et rachat futur simulés.
-- `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` — 9/9 automatique — Deep lifecycle treatment: objective, ownership structure, governance, financing, liability, IR/IS, furnished rental, separation, transfer, withdrawal, death, valuation, exit and reversal conditions. Primary official sources checked 2026-08-16.
 
 ## Corpus complet
 
@@ -199,7 +199,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1286 | humaine ✓ | `dossiers/reconversion-sans-formation-longue.html` |
 | 8/9 | 1317 | humaine ✓ | `dossiers/emploi-chercher-accepter-negocier-evoluer.html` |
 | 8/9 | 1337 | humaine ✓ | `dossiers/competent-mais-invisible-travail.html` |
-| 8/9 | 1345 | humaine ✓ | `dossiers/capacite-refuser-travail-rentabilite.html` |
 | 8/9 | 1351 | humaine ✓ | `dossiers/tresorerie-bfr-entreprise.html` |
 | 8/9 | 1352 | humaine ✓ | `articles/construire-epargne-de-zero.html` |
 | 8/9 | 1360 | humaine ✓ | `articles/grosse-entree-argent-que-faire.html` |
@@ -222,6 +221,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1599 | humaine ✓ | `dossiers/comparer-deux-offres-emploi.html` |
 | 8/9 | 1712 | humaine ✓ | `articles/frais-fiscalite-rendement-net.html` |
 | 8/9 | 1754 | humaine ✓ | `dossiers/location-courte-duree-meuble-tourisme.html` |
+| 8/9 | 1771 | à revoir après changement | `dossiers/capacite-refuser-travail-rentabilite.html` |
 | 8/9 | 1788 | humaine ✓ | `dossiers/finances-allocation-portefeuille.html` |
 | 8/9 | 1799 | humaine ✓ | `dossiers/decider-sans-tourner-en-rond.html` |
 | 8/9 | 2123 | humaine ✓ | `dossiers/plan-30-jours-recherche-emploi.html` |
@@ -272,7 +272,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 2694 | humaine ✓ | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` |
 | 9/9 | 3065 | humaine ✓ | `dossiers/indivision-rachat-progressif-parts.html` |
 | 9/9 | 3821 | humaine ✓ | `dossiers/indivision-couple-separation-rachat-soulte.html` |
-| 9/9 | 4276 | humaine ✓ | `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` |
+| 9/9 | 4276 | à revoir après changement | `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` |
 
 ## Règle de reprise
 
