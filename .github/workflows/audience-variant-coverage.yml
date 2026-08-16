@@ -23,238 +23,123 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Scan broad promises against reasonable audience variants
+        with: {fetch-depth: 0}
+      - name: Scan visible promises against reasonable audience variants
         run: |
           python - <<'PY'
           from pathlib import Path
           from html import unescape
-          import re
           from datetime import date
+          import re
 
-          roots = [Path('dossiers'), Path('articles')]
-          TAG = re.compile(r'<[^>]+>', re.S)
-          SCRIPT = re.compile(r'<(script|style)\b[^>]*>.*?</\1>', re.I | re.S)
-          COMMENTS = re.compile(r'<!--.*?-->', re.S)
-          NOINDEX = re.compile(r'<meta\b[^>]*name=["\']robots["\'][^>]*content=["\'][^"\']*noindex', re.I)
-          TITLE = re.compile(r'<title>(.*?)</title>', re.I | re.S)
-          H1 = re.compile(r'<h1\b[^>]*>(.*?)</h1>', re.I | re.S)
-          DESC = re.compile(r'<meta\b[^>]*name=["\']description["\'][^>]*content=["\']([^"\']*)', re.I | re.S)
-          ANCHOR = re.compile(r'<a\b[^>]*href=["\']([^"\']+)["\'][^>]*>(.*?)</a>', re.I | re.S)
-
+          TAG=re.compile(r'<[^>]+>',re.S); SCRIPT=re.compile(r'<(script|style)\b[^>]*>.*?</\1>',re.I|re.S); COMMENTS=re.compile(r'<!--.*?-->',re.S)
+          NOINDEX=re.compile(r'<meta\b[^>]*name=["\']robots["\'][^>]*content=["\'][^"\']*noindex',re.I)
+          TITLE=re.compile(r'<title>(.*?)</title>',re.I|re.S); H1=re.compile(r'<h1\b[^>]*>(.*?)</h1>',re.I|re.S)
+          DESC=re.compile(r'<meta\b[^>]*name=["\']description["\'][^>]*content=["\']([^"\']*)',re.I|re.S)
+          ANCHOR=re.compile(r'<a\b[^>]*href=["\']([^"\']+)["\'][^>]*>(.*?)</a>',re.I|re.S)
           def clean(s):
-              s = SCRIPT.sub(' ', s or '')
-              s = COMMENTS.sub(' ', s)
-              s = TAG.sub(' ', s)
-              return re.sub(r'\s+', ' ', unescape(s)).strip().lower()
+              s=SCRIPT.sub(' ',s or ''); s=COMMENTS.sub(' ',s); s=TAG.sub(' ',s)
+              return re.sub(r'\s+',' ',unescape(s)).strip().lower()
+          def ext(rx,raw):
+              m=rx.search(raw); return clean(m.group(1)) if m else ''
+          def hit(patterns,text): return any(re.search(p,text,re.I) for p in patterns)
 
-          def extract(rx, raw):
-              m = rx.search(raw)
-              return clean(m.group(1)) if m else ''
-
-          # Each family is activated by a broad promise. Narrow technical pages are not
-          # forced to become encyclopedic; the audit targets pages whose title/H1/meta
-          # can reasonably attract several materially different architectures.
-          families = {
-            'couple / logement / séparation': {
-              'broad': [r'achet(?:er|é).*à deux', r'couple.*(?:logement|immobilier|patrimoine)', r'séparation.*(?:logement|immobilier|bien|maison|appartement)', r'que devient.*(?:logement|bien)', r'décider à deux'],
-              'narrow': [r'\bindivision\b', r'\bsci\b', r'\btontine\b'],
-              'variants': {
-                'indivision directe':[r'indivision'], 'SCI':[r'\bsci\b', r'société civile immobili'],
-                'mariage':[r'mari'], 'PACS':[r'\bpacs\b', r'partenaire'], 'concubinage':[r'concubin', r'union libre'],
-                'tontine':[r'tontin'], 'propriété ≠ financement':[r'propriét.*financ', r'finance.*propriét', r'co.?emprunt', r'un seul propriétaire'],
-                'sorties multiples':[r'vend', r'rachat', r'lou', r'maintien', r'sortie']
-              },
-              'critical':['indivision directe','SCI','mariage','PACS','propriété ≠ financement']
-            },
-            'achat immobilier / crédit': {
-              'broad':[r'acheter.*(?:logement|immobilier|résidence)', r'crédit immobilier', r'capacité d.emprunt', r'devenir propriétaire'],
-              'narrow':[r'avant ou après', r'avec.*cdd', r'indépendant', r'investissement locatif'],
-              'variants': {
-                'achat seul / à deux':[r'seul', r'couple', r'à deux', r'co.?emprunt'],
-                'CDI / stabilité':[r'\bcdi\b', r'stable'], 'CDD / temporaire':[r'\bcdd\b', r'contractuel', r'intérim'],
-                'indépendant':[r'indépendant', r'entrepreneur', r'non salari'], 'public':[r'fonction publique', r'agent public', r'contractuel public'],
-                'mobilité / changement emploi':[r'mobilité', r'changer de travail', r'changement d.emploi', r'période d.essai'],
-                'apport / liquidité':[r'apport', r'liquidité', r'réserve'], 'dette existante':[r'dette', r'crédit.*cours', r'endettement']
-              },
-              'critical':['achat seul / à deux','CDI / stabilité','CDD / temporaire','indépendant','apport / liquidité']
-            },
-            'investissement locatif': {
-              'broad':[r'investissement locatif', r'investir.*immobilier', r'louer.*(?:bien|logement)', r'rendement.*locatif'],
-              'narrow':[r'location nue ou meublée', r'courte durée', r'\bsci\b'],
-              'variants': {
-                'détention directe':[r'en direct', r'personne physique'], 'SCI':[r'\bsci\b', r'société civile immobili'],
-                'location nue':[r'location nue', r'location vide', r'revenus fonciers'], 'location meublée':[r'meubl'],
-                'courte durée':[r'courte durée', r'touris'], 'IR / IS':[r'impôt sur le revenu', r'\bir\b', r'impôt sur les sociétés', r'\bis\b'],
-                'crédit / cash':[r'crédit', r'emprunt', r'cash', r'comptant'], 'gestion':[r'gestion', r'agence', r'temps personnel']
-              },
-              'critical':['SCI','location nue','location meublée','crédit / cash']
-            },
-            'transmission / succession': {
-              'broad':[r'transmission.*patrimoine', r'préparer.*succession', r'succession.*(?:patrimoine|immobilier)', r'transmettre.*(?:patrimoine|immobilier)'],
-              'narrow':[r'favoriser un enfant', r'indivision successorale'],
-              'variants': {
-                'mariage / conjoint':[r'conjoint', r'mari'], 'PACS / concubin':[r'pacs', r'concubin'],
-                'enfants / famille recomposée':[r'enfant', r'recompos'], 'sans enfant':[r'sans enfant', r'absence d.enfant'],
-                'immobilier direct':[r'immeuble', r'immobilier'], 'SCI / parts':[r'\bsci\b', r'parts sociales'],
-                'donation':[r'donation'], 'succession':[r'succession', r'décès'], 'liquidité / partage':[r'liquid', r'partage', r'indivision']
-              },
-              'critical':['mariage / conjoint','PACS / concubin','enfants / famille recomposée','SCI / parts','liquidité / partage']
-            },
-            'reconversion / trajectoire pro': {
-              'broad':[r'reconversion', r'changer de métier', r'changer de travail', r'retour.*emploi', r'trajectoire professionnelle'],
-              'narrow':[r'sans perte de salaire', r'après interruption', r'sans diplôme'],
-              'variants': {
-                'salarié':[r'salari'], 'demandeur emploi':[r'chômage', r'demandeur d.emploi', r'france travail'],
-                'public':[r'agent public', r'fonction publique', r'contractuel public'], 'indépendant':[r'indépendant', r'entrepreneur'],
-                'santé / inaptitude':[r'santé', r'inaptitude', r'handicap'], 'sans diplôme':[r'sans diplôme', r'vae', r'vap'],
-                'senior / âge':[r'senior', r'50 ans', r'âge'], 'revenu / runway':[r'revenu', r'épargne', r'runway', r'indemnisation']
-              },
-              'critical':['salarié','demandeur emploi','santé / inaptitude','sans diplôme','revenu / runway']
-            },
-            'entrepreneuriat': {
-              'broad':[r'créer.*entreprise', r'lancer.*activité', r'entreprendre', r'vivre de son activité', r'choisir.*statut'],
-              'narrow':[r'micro.*ei.*eurl.*sasu', r'sans diplôme', r'sans quitter.*emploi'],
-              'variants': {
-                'activité principale / complément':[r'complément', r'principal', r'parallèle', r'sans quitter'],
-                'micro / EI / société':[r'micro', r'\bei\b', r'eurl', r'sasu', r'société'], 'activité réglementée':[r'réglement', r'diplôme', r'qualification'],
-                'chômage / aides':[r'are', r'arce', r'acre', r'chômage'], 'TVA':[r'\btva\b'],
-                'financement / BFR':[r'financ', r'bfr', r'trésorerie'], 'associés':[r'associé', r'solo']
-              },
-              'critical':['activité principale / complément','micro / EI / société','activité réglementée','chômage / aides','financement / BFR']
-            },
-            'budget / dettes': {
-              'broad':[r'budget', r'dettes', r'découvert', r'difficultés financières', r'où part.*argent'],
-              'narrow':[r'audit.*60', r'surendettement'],
-              'variants': {
-                'déficit temporaire / structurel':[r'temporaire', r'structurel'], 'revenu stable / variable':[r'stable', r'variable', r'irrégulier'],
-                'solo / couple':[r'couple', r'foyer', r'seul'], 'logement propriétaire / locataire':[r'propriétaire', r'locataire', r'loyer', r'crédit immobilier'],
-                'dette / surendettement':[r'dette', r'surendett'], 'charges compressibles / non':[r'incompress', r'réduire', r'économie']
-              },
-              'critical':['déficit temporaire / structurel','revenu stable / variable','dette / surendettement','charges compressibles / non']
-            },
-            'travailler moins / qualité de vie': {
-              'broad':[r'travailler moins', r'80 ?%', r'80 pourcent', r'qualité de vie.*travail', r'récupérer.*temps'],
-              'narrow':[r'passer.*80'],
-              'variants': {
-                'salarié privé':[r'salarié', r'employeur'], 'public':[r'fonction publique', r'agent public'], 'indépendant':[r'indépendant', r'entrepreneur'],
-                '80% / quatre jours':[r'80', r'quatre jours', r'4 jours'], 'télétravail / autre levier':[r'télétravail', r'trajet', r'changer de poste'],
-                'solo / couple':[r'couple', r'foyer', r'seul'], 'retraite / protection':[r'retraite', r'protection sociale'],
-                'temps réellement libéré':[r'charge comprim', r'temps libéré', r'heures récup']
-              },
-              'critical':['salarié privé','public','indépendant','retraite / protection','temps réellement libéré']
-            }
+          F={
+          'couple / logement / séparation':{
+            'b':[r'achet(?:er|é).*à deux',r'couple.*(?:logement|immobilier|patrimoine)',r'séparation.*(?:logement|immobilier|bien|maison|appartement)',r'que devient.*(?:logement|bien)',r'décider à deux'],
+            'n':[r'\bindivision\b',r'\bsci\b',r'\btontine\b'],
+            'v':{'indivision directe':[r'indivision'],'SCI':[r'\bsci\b',r'société civile immobili'],'mariage':[r'mari'],'PACS':[r'\bpacs\b',r'partenaire'],'concubinage':[r'concubin',r'union libre'],'tontine':[r'tontin'],'propriété ≠ financement':[r'propriét.*financ',r'finance.*propriét',r'co.?emprunt',r'un seul propriétaire'],'sorties multiples':[r'vend',r'rachat',r'lou',r'maintien',r'sortie']},
+            'c':['indivision directe','SCI','mariage','PACS','propriété ≠ financement']},
+          'achat immobilier / crédit':{
+            'b':[r'acheter.*(?:logement|immobilier|résidence)',r'crédit immobilier',r'capacité d.emprunt',r'devenir propriétaire'],
+            'n':[r'avant ou après',r'avec.*cdd',r'indépendant',r'investissement locatif',r'\bsci\b',r'indivision'],
+            'v':{'achat seul / à deux':[r'seul',r'couple',r'à deux',r'co.?emprunt'],'CDI / stabilité':[r'\bcdi\b',r'stable'],'CDD / temporaire':[r'\bcdd\b',r'contractuel',r'intérim'],'indépendant':[r'indépendant',r'entrepreneur',r'non salari'],'public':[r'fonction publique',r'agent public',r'contractuel public'],'mobilité / changement emploi':[r'mobilité',r'changer de travail',r'changement d.emploi',r'période d.essai'],'apport / liquidité':[r'apport',r'liquidité',r'réserve'],'dette existante':[r'dette',r'crédit.*cours',r'endettement']},
+            'c':['achat seul / à deux','CDI / stabilité','CDD / temporaire','indépendant','apport / liquidité']},
+          'investissement locatif':{
+            'b':[r'investissement locatif',r'investir.*immobilier',r'rendement.*locatif'],
+            'n':[r'location nue ou meublée',r'courte durée',r'\bsci\b',r'résidence principale',r'indivision'],
+            'v':{'détention directe':[r'en direct',r'personne physique'],'SCI':[r'\bsci\b',r'société civile immobili'],'location nue':[r'location nue',r'location vide',r'revenus fonciers'],'location meublée':[r'meubl'],'courte durée':[r'courte durée',r'touris'],'IR / IS':[r'impôt sur le revenu',r'\bir\b',r'impôt sur les sociétés',r'\bis\b'],'crédit / cash':[r'crédit',r'emprunt',r'cash',r'comptant'],'gestion':[r'gestion',r'agence',r'temps personnel']},
+            'c':['SCI','location nue','location meublée','crédit / cash']},
+          'transmission / succession':{
+            'b':[r'transmission.*patrimoine',r'préparer.*succession',r'succession.*(?:patrimoine|immobilier)',r'transmettre.*(?:patrimoine|immobilier)'],
+            'n':[r'favoriser un enfant',r'indivision successorale',r'\bsci\b'],
+            'v':{'mariage / conjoint':[r'conjoint',r'mari'],'PACS / concubin':[r'pacs',r'concubin'],'enfants / famille recomposée':[r'enfant',r'recompos'],'sans enfant':[r'sans enfant',r'absence d.enfant'],'immobilier direct':[r'immeuble',r'immobilier'],'SCI / parts':[r'\bsci\b',r'parts sociales'],'donation':[r'donation'],'succession':[r'succession',r'décès'],'liquidité / partage':[r'liquid',r'partage',r'indivision']},
+            'c':['mariage / conjoint','PACS / concubin','enfants / famille recomposée','SCI / parts','liquidité / partage']},
+          'reconversion / trajectoire pro':{
+            'b':[r'reconversion',r'changer de métier',r'changer de travail',r'retour.*emploi',r'trajectoire professionnelle'],
+            'n':[r'sans perte de salaire',r'après interruption',r'sans diplôme',r'avant.*crédit immobilier'],
+            'v':{'salarié':[r'salari'],'demandeur emploi':[r'chômage',r'demandeur d.emploi',r'france travail'],'public':[r'agent public',r'fonction publique',r'contractuel public'],'indépendant':[r'indépendant',r'entrepreneur'],'santé / inaptitude':[r'santé',r'inaptitude',r'handicap'],'sans diplôme':[r'sans diplôme',r'vae',r'vap'],'senior / âge':[r'senior',r'50 ans',r'âge'],'revenu / runway':[r'revenu',r'épargne',r'runway',r'indemnisation']},
+            'c':['salarié','demandeur emploi','santé / inaptitude','sans diplôme','revenu / runway']},
+          'entrepreneuriat':{
+            'b':[r'créer.*entreprise',r'lancer.*activité',r'entreprendre',r'vivre de son activité',r'choisir.*statut'],
+            'n':[r'micro.*ei.*eurl.*sasu',r'sans diplôme',r'sans quitter.*emploi'],
+            'v':{'activité principale / complément':[r'complément',r'principal',r'parallèle',r'sans quitter'],'micro / EI / société':[r'micro',r'\bei\b',r'eurl',r'sasu',r'société'],'activité réglementée':[r'réglement',r'diplôme',r'qualification'],'chômage / aides':[r'are',r'arce',r'acre',r'chômage'],'TVA':[r'\btva\b'],'financement / BFR':[r'financ',r'bfr',r'trésorerie'],'associés':[r'associé',r'solo']},
+            'c':['activité principale / complément','micro / EI / société','activité réglementée','chômage / aides','financement / BFR']},
+          'budget / dettes':{
+            'b':[r'budget',r'dettes',r'découvert',r'difficultés financières',r'où part.*argent'],
+            'n':[r'audit.*60',r'surendettement'],
+            'v':{'déficit temporaire / structurel':[r'temporaire',r'structurel'],'revenu stable / variable':[r'stable',r'variable',r'irrégulier'],'solo / couple':[r'couple',r'foyer',r'seul'],'logement propriétaire / locataire':[r'propriétaire',r'locataire',r'loyer',r'crédit immobilier'],'dette / surendettement':[r'dette',r'surendett'],'charges compressibles / non':[r'incompress',r'réduire',r'économie']},
+            'c':['déficit temporaire / structurel','revenu stable / variable','dette / surendettement','charges compressibles / non']},
+          'travailler moins / qualité de vie':{
+            'b':[r'travailler moins',r'80 ?%',r'80 pourcent',r'qualité de vie.*travail',r'récupérer.*temps'],
+            'n':[r'passer.*80'],
+            'v':{'salarié privé':[r'salarié',r'employeur'],'public':[r'fonction publique',r'agent public'],'indépendant':[r'indépendant',r'entrepreneur'],'80% / quatre jours':[r'80',r'quatre jours',r'4 jours'],'télétravail / autre levier':[r'télétravail',r'trajet',r'changer de poste'],'solo / couple':[r'couple',r'foyer',r'seul'],'retraite / protection':[r'retraite',r'protection sociale'],'temps réellement libéré':[r'charge comprim',r'temps libéré',r'heures récup']},
+            'c':['salarié privé','public','indépendant','retraite / protection','temps réellement libéré']}
           }
 
-          def hits(patterns, text):
-              return any(re.search(p, text, re.I) for p in patterns)
+          rows=[]; excluded=0
+          for root in (Path('dossiers'),Path('articles')):
+            if not root.exists(): continue
+            for path in sorted(root.rglob('*.html')):
+              raw=path.read_text(encoding='utf-8',errors='ignore')
+              if NOINDEX.search(raw): excluded+=1; continue
+              text=clean(raw); title=ext(TITLE,raw); h1=ext(H1,raw); desc=ext(DESC,raw)
+              # Classification is based only on the visible acquisition promise.
+              promise=' '.join([title,h1,desc])
+              links=' '.join(clean(h+' '+a) for h,a in ANCHOR.findall(raw))
+              for family,r in F.items():
+                bh=sum(bool(re.search(p,promise,re.I)) for p in r['b'])
+                if not bh: continue
+                narrow=hit(r['n'],' '.join([title,h1]))
+                st={}
+                for variant,pats in r['v'].items():
+                  linked=hit(pats,links); count=sum(len(re.findall(p,text,re.I)) for p in pats)
+                  st[variant]='TRAITEE' if count>=2 else ('ROUTEE' if linked else ('MENTIONNEE' if count==1 else 'MANQUANTE'))
+                missing=[v for v in r['c'] if st.get(v)=='MANQUANTE']; weak=[v for v in r['c'] if st.get(v) in ('MANQUANTE','MENTIONNEE')]
+                breadth=1 if narrow else min(3,1+bh); priority=breadth*len(missing)*3+len(weak)
+                gate='NON_READY' if (not narrow and missing) else ('ROUTE_FIRST' if missing else 'COVERED_OR_NARROW')
+                rows.append(dict(path=str(path),family=family,title=title or h1,narrow=narrow,priority=priority,gate=gate,missing=missing,statuses=st))
 
-          rows=[]
-          excluded=0
-          for root in roots:
-              if not root.exists(): continue
-              for path in sorted(root.rglob('*.html')):
-                  raw=path.read_text(encoding='utf-8', errors='ignore')
-                  if NOINDEX.search(raw): excluded += 1; continue
-                  text=clean(raw)
-                  title=extract(TITLE, raw); h1=extract(H1, raw); desc=extract(DESC, raw)
-                  promise=' '.join([title,h1,desc, text[:1200]])
-                  links=' '.join(clean(href+' '+anchor) for href,anchor in ANCHOR.findall(raw))
-                  for family,rule in families.items():
-                      broad_hits=sum(bool(re.search(p,promise,re.I)) for p in rule['broad'])
-                      if not broad_hits: continue
-                      narrow=hits(rule.get('narrow',[]), ' '.join([title,h1]))
-                      statuses={}
-                      for variant,pats in rule['variants'].items():
-                          link_hit=hits(pats,links)
-                          body_count=sum(len(re.findall(p,text,re.I)) for p in pats)
-                          if body_count >= 2: status='TRAITEE'
-                          elif link_hit: status='ROUTEE'
-                          elif body_count == 1: status='MENTIONNEE'
-                          else: status='MANQUANTE'
-                          statuses[variant]=status
-                      missing=[v for v in rule['critical'] if statuses.get(v)=='MANQUANTE']
-                      weak=[v for v in rule['critical'] if statuses.get(v) in ('MANQUANTE','MENTIONNEE')]
-                      breadth=1 if narrow else min(3,1+broad_hits)
-                      priority=breadth*len(missing)*3 + len(weak)
-                      gate='NON_READY' if (not narrow and missing) else ('ROUTE_FIRST' if missing else 'COVERED_OR_NARROW')
-                      rows.append({'path':str(path),'family':family,'breadth':breadth,'narrow':narrow,'priority':priority,'gate':gate,'missing':missing,'weak':weak,'statuses':statuses,'title':title or h1})
-
-          rows.sort(key=lambda r:(-r['priority'], r['path']))
-          nonready=[r for r in rows if r['gate']=='NON_READY']
-          route=[r for r in rows if r['gate']=='ROUTE_FIRST']
-
-          out=[]
-          out.append('# Audit de couverture des situations')
-          out.append('')
-          out.append(f'Mise à jour automatique : {date.today().isoformat()}')
-          out.append('')
-          out.append('Cet audit cherche les **variantes raisonnablement attirées par la promesse d’une page** mais non reconnues dans son contenu ou son routage. Il complète l’audit des angles morts : ici, le problème n’est pas un raisonnement absent *dans le cas*, mais un **cas voisin qui peut être invisible**.')
-          out.append('')
-          out.append('Le score est heuristique. Une occurrence lexicale ne prouve pas un traitement suffisant ; une absence lexicale ne prouve pas un défaut. La sortie `NON_READY` signifie uniquement : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**.')
-          out.append('')
-          out.append(f'Pages/familles détectées : **{len(rows)}**. Pages `noindex` exclues : **{excluded}**. Promesses larges à relire avant acquisition : **{len(nonready)}**.')
-          out.append('')
-          out.append('## Priorités de relecture')
-          out.append('')
-          out.append('| Priorité | Gate | Famille | Page | Variantes critiques non détectées |')
-          out.append('|---:|---|---|---|---|')
-          for r in rows[:60]:
-              miss=', '.join(r['missing']) or '—'
-              out.append(f"| {r['priority']} | {r['gate']} | {r['family']} | `{r['path']}` | {miss} |")
-          out.append('')
-          out.append('## Détail des promesses larges `NON_READY`')
-          out.append('')
-          for r in nonready[:40]:
-              out.append(f"### `{r['path']}` — {r['family']}")
-              out.append('')
-              out.append(f"Promesse : **{r['title']}**")
-              out.append('')
-              out.append('| Variante | Signal automatique |')
-              out.append('|---|---|')
-              for v,s in r['statuses'].items(): out.append(f'| {v} | {s} |')
-              out.append('')
-          out.append('## Lecture par famille')
-          out.append('')
-          for family in families:
-              subset=[r for r in rows if r['family']==family]
-              if not subset: continue
-              counts={v:0 for v in families[family]['variants']}
-              for r in subset:
-                  for v,s in r['statuses'].items():
-                      if s=='MANQUANTE': counts[v]+=1
-              top=sorted(counts.items(), key=lambda kv:(-kv[1],kv[0]))[:6]
-              out.append(f"### {family}")
-              out.append('')
-              out.append(f"Pages détectées : **{len(subset)}**. Promesses larges `NON_READY` : **{sum(r['gate']=='NON_READY' for r in subset)}**. Variantes le plus souvent non détectées : " + ', '.join(f'**{k}** ({v})' for k,v in top if v) + '.')
-              out.append('')
-          out.append('## Règle éditoriale')
-          out.append('')
-          out.append('1. Relire d’abord la **promesse** de la page, pas seulement son corps.')
-          out.append('2. Lister les variantes qui changent matériellement le droit, le calcul, le risque, la séquence ou la sortie.')
-          out.append('3. Pour chaque variante importante : `TRAITEE`, `ROUTEE`, `HORS_PERIMETRE_EXPLICITE` ou `MANQUANTE`.')
-          out.append('4. Corriger en priorité par un **aiguillage précis** lorsque développer la variante sur la même page diluerait la réponse centrale.')
-          out.append('5. Avant une publication d’acquisition, auditer aussi son accroche : elle peut être plus large que la page cible.')
-          out.append('')
-          Path('reports/audience-variant-coverage.md').write_text('\n'.join(out)+'\n', encoding='utf-8')
+          rows.sort(key=lambda r:(-r['priority'],r['path'],r['family'])); nonready=[r for r in rows if r['gate']=='NON_READY']
+          o=['# Audit de couverture des situations','',f'Mise à jour automatique : {date.today().isoformat()}','',
+             'Cet audit cherche les **variantes raisonnablement attirées par la promesse visible d’une page** mais non reconnues dans son contenu ou son routage. La famille est déterminée uniquement par le title, le H1 et la meta description — jamais par un exemple rencontré plus loin dans le texte.','',
+             'Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.','',
+             f'Pages/familles détectées : **{len(rows)}**. Pages `noindex` exclues : **{excluded}**. Promesses larges à relire avant acquisition : **{len(nonready)}**.','',
+             '## Priorités de relecture','', '| Priorité | Gate | Famille | Page | Variantes critiques non détectées |','|---:|---|---|---|---|']
+          for r in rows[:70]: o.append(f"| {r['priority']} | {r['gate']} | {r['family']} | `{r['path']}` | {', '.join(r['missing']) or '—'} |")
+          o += ['','## Détail des promesses larges `NON_READY`','']
+          for r in nonready[:45]:
+            o += [f"### `{r['path']}` — {r['family']}",'',f"Promesse : **{r['title']}**",'','| Variante | Signal automatique |','|---|---|']
+            o += [f'| {v} | {s} |' for v,s in r['statuses'].items()]; o.append('')
+          o += ['## Lecture par famille','']
+          for family,rules in F.items():
+            sub=[r for r in rows if r['family']==family]
+            if not sub: continue
+            counts={v:sum(x['statuses'].get(v)=='MANQUANTE' for x in sub) for v in rules['v']}
+            top=[(k,v) for k,v in sorted(counts.items(),key=lambda kv:(-kv[1],kv[0])) if v][:6]
+            o += [f'### {family}','',f"Pages détectées : **{len(sub)}**. Promesses larges `NON_READY` : **{sum(x['gate']=='NON_READY' for x in sub)}**. Variantes le plus souvent non détectées : "+(', '.join(f'**{k}** ({v})' for k,v in top) or 'aucune dans la grille automatique')+'.','']
+          o += ['## Règle éditoriale','','1. Relire la promesse avant le corps du texte.','2. Lister seulement les variantes qui changent matériellement droit, calcul, risque, séquence ou sortie.','3. Classer chaque variante : `TRAITEE`, `ROUTEE`, `HORS_PERIMETRE_EXPLICITE` ou `MANQUANTE`.','4. Préférer un aiguillage précis à une réécriture encyclopédique.','5. Auditer séparément l’accroche sociale ou SEO : elle peut être plus large que la page cible.','']
+          Path('reports/audience-variant-coverage.md').write_text('\n'.join(o),encoding='utf-8')
           PY
-
       - name: Commit report if changed
         run: |
-          if [ -z "$(git status --porcelain -- reports/audience-variant-coverage.md)" ]; then
-            echo 'No report change.'
-            exit 0
-          fi
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add reports/audience-variant-coverage.md
-          git commit -m 'Update audience variant coverage audit'
+          if [ -z "$(git status --porcelain -- reports/audience-variant-coverage.md)" ]; then exit 0; fi
+          git config user.name 'github-actions[bot]'; git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/audience-variant-coverage.md; git commit -m 'Update audience variant coverage audit'
           for i in 1 2 3 4 5; do
             git fetch origin main
             git rebase origin/main || { git rebase --abort; sleep 2; continue; }
-            if git push origin HEAD:main; then exit 0; fi
-            sleep $((i * 2))
+            git push origin HEAD:main && exit 0
+            sleep $((i*2))
           done
           exit 1
