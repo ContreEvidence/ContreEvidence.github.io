@@ -151,6 +151,7 @@ https://contreevidence.github.io/simulateur-acheter-ou-louer-mobilite.html
 https://contreevidence.github.io/simulateur-acheter-ou-louer.html
 https://contreevidence.github.io/simulateur-cout-formation.html
 https://contreevidence.github.io/simulateur-cout-trajet-emploi.html
+https://contreevidence.github.io/simulateur-decumulation-patrimoine.html
 https://contreevidence.github.io/simulateur-epargne-demission.html
 https://contreevidence.github.io/simulateur-previsionnel-activite.html
 https://contreevidence.github.io/simulateur-prix-attendre.html
