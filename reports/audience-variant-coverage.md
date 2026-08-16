@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **18**.
+Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **17**.
 
 ## Priorités de relecture
 
@@ -21,7 +21,6 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 | 14 | NON_READY | couple / logement / séparation | `dossiers/patrimoine-marge-de-manoeuvre.html` | mariage, PACS |
 | 14 | NON_READY | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 10 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/changer-travail-avant-credit-immobilier.html` | santé / inaptitude, sans diplôme |
-| 10 | NON_READY | investissement locatif | `dossiers/finances-investissement-locatif.html` | SCI |
 | 10 | NON_READY | transmission / succession | `dossiers/finances-transmission-patrimoine.html` | SCI / parts |
 | 8 | NON_READY | achat immobilier / crédit | `dossiers/acheter-logement-sans-se-fragiliser.html` | CDD / temporaire |
 | 8 | NON_READY | achat immobilier / crédit | `dossiers/finances-residence-principale.html` | CDD / temporaire |
@@ -40,6 +39,7 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 | 2 | COVERED_OR_NARROW | budget / dettes | `dossiers/puis-je-me-permettre-reconversion.html` | — |
 | 2 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/puis-je-me-permettre-reconversion.html` | — |
 | 1 | COVERED_OR_NARROW | budget / dettes | `articles/construire-epargne-de-zero.html` | — |
+| 1 | COVERED_OR_NARROW | investissement locatif | `dossiers/finances-investissement-locatif.html` | — |
 | 1 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/reconversion-sans-formation-longue.html` | — |
 | 1 | COVERED_OR_NARROW | travailler moins / qualité de vie | `dossiers/temps-energie-qualite-vie.html` | — |
 | 0 | COVERED_OR_NARROW | achat immobilier / crédit | `dossiers/acheter-sans-vider-epargne.html` | — |
@@ -175,21 +175,6 @@ Promesse : **quitter son cdi avec un crédit : séquencer emploi, financement et
 | sans diplôme | MANQUANTE |
 | senior / âge | MANQUANTE |
 | revenu / runway | TRAITEE |
-
-### `dossiers/finances-investissement-locatif.html` — investissement locatif
-
-Promesse : **investissement locatif : rendement, cash-flow et risques — contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| détention directe | MANQUANTE |
-| SCI | MANQUANTE |
-| location nue | ROUTEE |
-| location meublée | ROUTEE |
-| courte durée | MANQUANTE |
-| IR / IS | MANQUANTE |
-| crédit / cash | TRAITEE |
-| gestion | TRAITEE |
 
 ### `dossiers/finances-transmission-patrimoine.html` — transmission / succession
 
@@ -333,7 +318,7 @@ Pages détectées : **5**. Promesses larges `NON_READY` : **2**. Variantes le pl
 
 ### investissement locatif
 
-Pages détectées : **1**. Promesses larges `NON_READY` : **1**. Variantes le plus souvent non détectées : **IR / IS** (1), **SCI** (1), **courte durée** (1), **détention directe** (1).
+Pages détectées : **1**. Promesses larges `NON_READY` : **0**. Variantes le plus souvent non détectées : aucune dans la grille automatique.
 
 ### transmission / succession
 
