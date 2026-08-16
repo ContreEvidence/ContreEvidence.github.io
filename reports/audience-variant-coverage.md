@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **24**.
+Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **24**.
 
 ## Priorités de relecture
 
@@ -16,10 +16,10 @@ Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | salarié, santé / inaptitude, sans diplôme, revenu / runway |
 | 22 | NON_READY | reconversion / trajectoire pro | `articles/retrouver-emploi-apres-interruption.html` | salarié, demandeur emploi, sans diplôme |
 | 21 | NON_READY | reconversion / trajectoire pro | `articles/competences-transferables.html` | demandeur emploi, santé / inaptitude, sans diplôme |
+| 21 | NON_READY | couple / logement / séparation | `dossiers/acheter-sans-vider-epargne.html` | SCI, mariage, PACS |
 | 21 | NON_READY | travailler moins / qualité de vie | `dossiers/patrimoine-permet-il-travailler-moins.html` | salarié privé, public, indépendant |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | indivision directe, mariage, PACS |
 | 21 | NON_READY | travailler moins / qualité de vie | `dossiers/travailler-moins-vivre-mieux.html` | public, indépendant |
-| 15 | NON_READY | achat immobilier / crédit | `dossiers/acheter-sans-vider-epargne.html` | achat seul / à deux, CDD / temporaire |
 | 15 | NON_READY | reconversion / trajectoire pro | `dossiers/combien-epargne-avant-demissionner.html` | salarié, sans diplôme |
 | 15 | NON_READY | budget / dettes | `dossiers/creer-entreprise-avec-peu-argent.html` | déficit temporaire / structurel, dette / surendettement |
 | 15 | NON_READY | reconversion / trajectoire pro | `dossiers/decider-a-deux-travail-patrimoine.html` | demandeur emploi, sans diplôme |
@@ -47,6 +47,7 @@ Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses
 | 1 | COVERED_OR_NARROW | budget / dettes | `articles/construire-epargne-de-zero.html` | — |
 | 1 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/reconversion-sans-formation-longue.html` | — |
 | 1 | COVERED_OR_NARROW | travailler moins / qualité de vie | `dossiers/temps-energie-qualite-vie.html` | — |
+| 0 | COVERED_OR_NARROW | achat immobilier / crédit | `dossiers/acheter-sans-vider-epargne.html` | — |
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/audit-budget-60-minutes.html` | — |
 | 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/creer-entreprise-sans-diplome.html` | — |
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | — |
@@ -116,6 +117,21 @@ Promesse : **changer de métier sans repartir de zéro : compétences transféra
 | senior / âge | MANQUANTE |
 | revenu / runway | ROUTEE |
 
+### `dossiers/acheter-sans-vider-epargne.html` — couple / logement / séparation
+
+Promesse : **combien d’épargne garder après un achat immobilier ? apport et réserve | contre-évidence**
+
+| Variante | Signal automatique |
+|---|---|
+| indivision directe | ROUTEE |
+| SCI | MANQUANTE |
+| mariage | MANQUANTE |
+| PACS | MANQUANTE |
+| concubinage | MANQUANTE |
+| tontine | MANQUANTE |
+| propriété ≠ financement | TRAITEE |
+| sorties multiples | ROUTEE |
+
 ### `dossiers/patrimoine-permet-il-travailler-moins.html` — travailler moins / qualité de vie
 
 Promesse : **travailler moins grâce à son patrimoine : combien faut-il ? | contre-évidence**
@@ -160,21 +176,6 @@ Promesse : **travailler moins pour vivre mieux : salaire, temps, santé et patri
 | solo / couple | TRAITEE |
 | retraite / protection | TRAITEE |
 | temps réellement libéré | TRAITEE |
-
-### `dossiers/acheter-sans-vider-epargne.html` — achat immobilier / crédit
-
-Promesse : **combien d’épargne garder après un achat immobilier ? apport et réserve | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| achat seul / à deux | MANQUANTE |
-| CDI / stabilité | TRAITEE |
-| CDD / temporaire | MANQUANTE |
-| indépendant | MENTIONNEE |
-| public | MANQUANTE |
-| mobilité / changement emploi | TRAITEE |
-| apport / liquidité | TRAITEE |
-| dette existante | TRAITEE |
 
 ### `dossiers/combien-epargne-avant-demissionner.html` — reconversion / trajectoire pro
 
@@ -413,11 +414,11 @@ Promesse : **are, arce, acre : choisir pour créer son entreprise en 2026 | cont
 
 ### couple / logement / séparation
 
-Pages détectées : **4**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **tontine** (3), **SCI** (2), **concubinage** (2), **PACS** (1), **indivision directe** (1), **mariage** (1).
+Pages détectées : **5**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **tontine** (4), **SCI** (3), **concubinage** (3), **PACS** (2), **mariage** (2), **indivision directe** (1).
 
 ### achat immobilier / crédit
 
-Pages détectées : **6**. Promesses larges `NON_READY` : **4**. Variantes le plus souvent non détectées : **public** (6), **CDD / temporaire** (4), **indépendant** (3), **achat seul / à deux** (1), **dette existante** (1), **mobilité / changement emploi** (1).
+Pages détectées : **6**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **public** (5), **CDD / temporaire** (3), **indépendant** (3), **dette existante** (1), **mobilité / changement emploi** (1).
 
 ### investissement locatif
 
