@@ -12,11 +12,11 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 
 | Priorité | Gate | Famille | Page | Variantes critiques non détectées |
 |---:|---|---|---|---|
+| 28 | NON_READY | couple / logement / séparation | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` | indivision directe, SCI, mariage, PACS |
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | salarié, santé / inaptitude, sans diplôme, revenu / runway |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/acheter-sans-vider-epargne.html` | SCI, mariage, PACS |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | indivision directe, mariage, PACS |
 | 15 | NON_READY | reconversion / trajectoire pro | `dossiers/combien-epargne-avant-demissionner.html` | salarié, sans diplôme |
-| 14 | NON_READY | achat immobilier / crédit | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` | CDD / temporaire, indépendant |
 | 14 | NON_READY | entrepreneuriat | `dossiers/combien-chiffre-affaires-pour-vivre.html` | micro / EI / société, activité réglementée |
 | 14 | NON_READY | couple / logement / séparation | `dossiers/patrimoine-marge-de-manoeuvre.html` | mariage, PACS |
 | 14 | NON_READY | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
@@ -56,6 +56,21 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 | 0 | COVERED_OR_NARROW | travailler moins / qualité de vie | `dossiers/travailler-moins-vivre-mieux.html` | — |
 
 ## Détail des promesses larges `NON_READY`
+
+### `dossiers/acheter-ou-louer-si-on-risque-demenager.html` — couple / logement / séparation
+
+Promesse : **acheter ou louer si vous risquez de déménager bientôt ? | contre-évidence**
+
+| Variante | Signal automatique |
+|---|---|
+| indivision directe | MANQUANTE |
+| SCI | MANQUANTE |
+| mariage | MANQUANTE |
+| PACS | MANQUANTE |
+| concubinage | MANQUANTE |
+| tontine | MANQUANTE |
+| propriété ≠ financement | TRAITEE |
+| sorties multiples | TRAITEE |
 
 ### `dossiers/metiers-fonctions-organisation-entreprise.html` — reconversion / trajectoire pro
 
@@ -116,21 +131,6 @@ Promesse : **combien d’épargne avant de démissionner ? calcul, runway et exe
 | sans diplôme | MANQUANTE |
 | senior / âge | MANQUANTE |
 | revenu / runway | TRAITEE |
-
-### `dossiers/acheter-ou-louer-si-on-risque-demenager.html` — achat immobilier / crédit
-
-Promesse : **acheter ou louer si vous risquez de déménager bientôt ? | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| achat seul / à deux | TRAITEE |
-| CDI / stabilité | TRAITEE |
-| CDD / temporaire | MANQUANTE |
-| indépendant | MANQUANTE |
-| public | MANQUANTE |
-| mobilité / changement emploi | TRAITEE |
-| apport / liquidité | TRAITEE |
-| dette existante | MANQUANTE |
 
 ### `dossiers/combien-chiffre-affaires-pour-vivre.html` — entrepreneuriat
 
@@ -325,11 +325,11 @@ Promesse : **patrimoine et marge de manœuvre : combien de liberté vos actifs d
 
 ### couple / logement / séparation
 
-Pages détectées : **6**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **tontine** (5), **PACS** (3), **concubinage** (3), **mariage** (3), **SCI** (2), **indivision directe** (1).
+Pages détectées : **7**. Promesses larges `NON_READY` : **4**. Variantes le plus souvent non détectées : **tontine** (6), **PACS** (4), **concubinage** (4), **mariage** (4), **SCI** (3), **indivision directe** (2).
 
 ### achat immobilier / crédit
 
-Pages détectées : **6**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **public** (5), **CDD / temporaire** (3), **indépendant** (3), **dette existante** (1), **mobilité / changement emploi** (1).
+Pages détectées : **5**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **public** (4), **CDD / temporaire** (2), **indépendant** (2), **mobilité / changement emploi** (1).
 
 ### investissement locatif
 
