@@ -9,7 +9,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - P0 — fermeture forte sans preuve/périmètre suffisant : **13**
 - P1 — affirmation forte à resserrer ou vérifier : **48**
 - P2 — nécessité à examiner : **141**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **591**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **593**
 
 ## P0 — rouvrir en priorité
 
@@ -89,7 +89,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/prejuges-biais-monde-professionnel.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Certains sont utiles, d’autres trompeurs, et certains peuvent basculer dans une discrimination interdite. _[signal-source]_
 - **fermeture forte sourcée mais formulation trop absolue** — Comme il est impossible d’observer immédiatement toutes les compétences, on utilise des signaux : intitulé de poste, école, ancienneté, réputation d’une entreprise, recommandations, façon de présenter une expérience. _[signal-source, temporalité]_
-- **fermeture forte sourcée mais formulation trop absolue** — Sources officielles Service-Public.fr — discrimination et critères interdits Service-Public.fr — informations pouvant être demandées lors d’un recrutement ← Retour à Vie professionnelle À lire ensuite Continuez sans repartir de zéro. _[signal-source, temporalité]_
+- **fermeture forte sourcée mais formulation trop absolue** — Sources officielles vérifiées le 16/08/2026 Service-Public.fr — discrimination et critères interdits Service-Public.fr — informations pouvant être demandées lors d’un recrutement Défenseur des droits — discrimination : information, orientation et accompagnement ← Retour à Vie professionnelle À lire ensuite Continuez sans repartir de zéro. _[signal-source, temporalité]_
 - **fermeture forte sourcée mais formulation trop absolue** — Une discrimination correspond à une différence de traitement fondée sur un critère interdit par la loi. _[signal-source]_
 - **fermeture forte sourcée mais formulation trop absolue** — Une discrimination, au sens juridique, implique une différence de traitement fondée sur un critère interdit. _[signal-source]_
 ### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
