@@ -6,10 +6,10 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 ## Synthèse
 
-- P0 — fermeture forte sans preuve/périmètre suffisant : **15**
-- P1 — affirmation forte à resserrer ou vérifier : **60**
+- P0 — fermeture forte sans preuve/périmètre suffisant : **17**
+- P1 — affirmation forte à resserrer ou vérifier : **61**
 - P2 — nécessité à examiner : **149**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **777**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **772**
 
 ## P0 — rouvrir en priorité
 
@@ -33,6 +33,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sans signal de preuve ni périmètre clair** — Accepter un emploi de transition ses contraintes rendent impossible le rôle d’aidant ou la santé actuelle. _[temporalité]_
 ### `dossiers/tout-ca-pour-quoi-objectifs-besoins.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Et l’optionnalité oblige à regarder ce qu’une décision rend ensuite difficile ou impossible.
+### `dossiers/trajectoire-professionnelle-selon-situation.html`
+- **fermeture forte sans signal de preuve ni périmètre clair** — Le problème n’est pas « impossible sans bac » : il faut choisir les employeurs et produire les preuves qui réduisent le risque perçu . → Comparer diplôme, VAE, certification, alternance et accès direct 3.
+- **fermeture forte sans signal de preuve ni périmètre clair** — Sans diplôme → accès supérieur gatekeeper quel obstacle est vraiment obligatoire ?
 ### `fiches-metiers.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Accès Diplôme obligatoire, attendu ou contournable ?
 ### `methode-sources.html`
@@ -126,6 +129,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sourcée mais formulation trop absolue** — Cas E — Candidature directe : la formation ne sert qu’à rassurer Offres analysées 30 Diplôme obligatoire 0 Diplôme « souhaité » 9 Expérience équivalente acceptée 21 Compétences transférables déjà prouvées fortes Ici, payer une formation longue avant d’avoir envoyé des candidatures ciblées serait prématuré. _[signal-source, temporalité]_
 ### `dossiers/regles-responsabilites-fautes-travail.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Le règlement intérieur, lorsqu’il est obligatoire et en vigueur, fixe notamment les règles générales et permanentes de discipline ainsi que la nature et l’échelle des sanctions. _[signal-source]_
+### `dossiers/trajectoire-professionnelle-selon-situation.html`
+- **affirmation forte sans signal de source explicite** — Analysez une vingtaine d’offres de la cible : Ce que vous observez Stratégie qualification légalement obligatoire obtenir la voie reconnue nécessaire. diplôme demandé mais expérience équivalente souvent acceptée preuves + candidatures ciblées + VAE/certification si utile. expérience et résultats dominent ne pas créer un détour scolaire inutile. aucune expérience récente créer d’abord une preuve terrain. _[périmètre, temporalité]_
 ### `dossiers/valeur-option-bien-immobilier.html`
 - **affirmation forte sans signal de source explicite** — Stress test : si l’option principale devient impossible Vous achetez 20 000 € plus cher un logement parce que vous pensez pouvoir le diviser. _[périmètre, temporalité]_
 ### `fiches-metiers/charge-recrutement-rh.html`
@@ -295,7 +300,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Il doit rendre visibles les conséquences, les arbitrages et les conditions de renversement pour que chacun choisisse en fonction de ses objectifs réels.
 - **nécessité à requalifier ou sourcer** — Le protocole Écrire ce qui doit réellement changer.
 ### `dossiers/trajectoire-professionnelle-selon-situation.html`
-- **nécessité à requalifier ou sourcer** — C’est : qu’est-ce qui doit devenir plus solide ou plus libre dans ma situation au cours des 12 à 24 prochains mois ?
+- **nécessité à requalifier ou sourcer** — Santé → nouvelle fonction soutenabilité quelle contrainte doit disparaître ? _[temporalité]_
 ### `dossiers/trouver-premiers-clients.html`
 - **nécessité à requalifier ou sourcer** — Il faut examiner le prix, la confiance, l’offre, le délai, le devis et le décalage entre la promesse de départ et la proposition réelle.
 - **nécessité à requalifier ou sourcer** — Un message de prospection doit ouvrir une conversation Structure utile : contexte précis → problème observé → proposition courte → question simple . _[temporalité]_
