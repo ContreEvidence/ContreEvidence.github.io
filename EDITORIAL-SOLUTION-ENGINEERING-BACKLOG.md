@@ -24,25 +24,26 @@ Le pilotage courant repose sur :
 
 1. `.github/workflows/corpus-solution-review.yml` — scan transversal de tous les contenus indexables ;
 2. `reports/corpus-solution-review.md` — file automatique par dimensions manquantes ;
-3. `reports/corpus-solution-human-review.json` — mémoire des validations humaines attachées au SHA exact ;
+3. `reports/corpus-solution-human-review.json` + `reports/corpus-solution-human-review-*.json` — mémoire append-only des validations humaines attachées au SHA exact ;
 4. `reports/content-review-decisions.md` — journal des réécritures et décisions humaines.
 
 ### Règle de mémoire
 
 Une page validée humainement reste hors de la file uniquement tant que son **blob SHA Git** reste identique. Toute modification du contenu révoque automatiquement cette validation et remet la page dans la revue.
 
+Les nouvelles validations sont enregistrées par lots append-only. Le workflow fusionne le fichier historique et les lots successifs ; un lot plus récent peut remplacer l’entrée d’une même page après réécriture. Cette architecture évite de réécrire un gros registre à chaque passe.
+
 ## État du passage global
 
-Premier scan propre après exclusion des pages `noindex` :
+État confirmé par le rapport du 16 août 2026 :
 
 - **122 contenus indexables analysés** ;
 - **79 pages `noindex` de consolidation/redirection exclues** ;
-- **11 priorités critiques** détectées par l’heuristique ;
-- **11/11 relues humainement** ;
-- **10 conservées** car déjà conformes malgré un score heuristique incomplet ;
-- **1 réécrite** : `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`.
+- **48 validations humaines actives** ;
+- **0 validation caduque** ;
+- **aucune priorité critique non relue**.
 
-La prochaine passe porte sur les contenus intermédiaires du rapport, en commençant par ceux à forte conséquence pratique ou forte promesse.
+Le niveau 6/9 critique et le niveau 7/9 ont été absorbés par revue humaine. La passe 8/9 est en cours : elle privilégie les pages à forte promesse et les pages conceptuelles où un raisonnement peut encore rester descriptif sans déboucher sur une architecture d’action.
 
 ## Réécritures substantielles récentes
 
@@ -75,6 +76,18 @@ La prochaine passe porte sur les contenus intermédiaires du rapport, en commen�
   - stress test après utilisation ;
   - seuils de bascule entre construire, protéger et utiliser.
 
+- ✅ `dossiers/prejuges-biais-monde-professionnel.html`
+  - séparation signal mal interprété / gatekeeper local / traitement potentiellement discriminatoire ;
+  - test « même preuve, autre acteur » ;
+  - substitution d’acteur plutôt que modification infinie du profil ;
+  - seuil de sortie du registre de persuasion vers la conservation des faits et l’orientation adaptée.
+
+- ✅ `dossiers/automatiser-ou-non-processus.html`
+  - nouvelle séquence supprimer → simplifier → standardiser → assister → automatiser ;
+  - test causal avant choix d’outil ;
+  - procédure manuelle de secours et rollback ;
+  - kill switch si maintenance, exceptions, dépendance ou baisse de volume détruisent le ROI.
+
 ### Réécritures de référence déjà présentes
 
 - ✅ `dossiers/indivision-couple-separation-rachat-soulte.html`
@@ -89,48 +102,11 @@ La prochaine passe porte sur les contenus intermédiaires du rapport, en commen�
 - ✅ `dossiers/previsionnel-activite-12-mois.html`
 - ✅ `dossiers/location-courte-duree-meuble-tourisme.html`
 
-## Pages relues dans la file critique et conservées
+## Revue humaine mémorisée
 
-Le détail et le SHA de validation sont stockés dans `reports/corpus-solution-human-review.json`.
+Le détail et le SHA exact de chaque validation figurent dans le registre historique et les lots `reports/corpus-solution-human-review-*.json`.
 
-- `dossiers/trouver-premiers-clients.html`
-- `articles/competences-invisibles-preuves.html`
-- `articles/entretien-rate-ce-qui-bloque.html`
-- `dossiers/combien-chiffre-affaires-pour-vivre.html`
-- `dossiers/etre-riche-revenu-patrimoine-liberte.html`
-- `dossiers/experience-devient-risque-recruteur.html`
-- `dossiers/finances-residence-principale.html`
-- `dossiers/puis-je-me-permettre-reconversion.html`
-- `dossiers/finances-transmission-patrimoine.html`
-- `dossiers/quand-vie-change-sante-separation-revenu.html`
-
-## Pages déjà relues auparavant et conservées
-
-- `dossiers/apprendre-developper-competences.html`
-- `dossiers/audit-budget-60-minutes.html`
-- `dossiers/dependance-gros-client.html`
-- `dossiers/creer-entreprise-avec-peu-argent.html`
-- `dossiers/indivision-loyers-charges-comptes.html`
-- `dossiers/finances-retraite-decumulation.html`
-- `dossiers/passer-80-pourcent-cout-reel.html`
-- `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`
-- `dossiers/acheter-logement-sans-se-fragiliser.html`
-- `dossiers/assurer-ou-autoassurer-risques.html`
-- `dossiers/automatiser-ou-non-processus.html`
-- `dossiers/competent-mais-invisible-travail.html`
-- `dossiers/embaucher-ou-sous-traiter.html`
-- `dossiers/lancer-activite-sans-quitter-emploi.html`
-- `dossiers/liquidites-reserve-securite.html`
-- `dossiers/reconversion-sans-perte-salaire.html`
-- `dossiers/regles-responsabilites-fautes-travail.html`
-- `dossiers/ameliorer-processus-sans-degrader-service.html`
-- `dossiers/audit-copropriete-avant-achat.html`
-- `dossiers/calculer-prix-minimum-rentable.html`
-- `dossiers/immobilier-allocation-globale-patrimoine.html`
-- `dossiers/classes-actifs-allocation-patrimoine.html`
-- `dossiers/finances-difficiles-sortir-decouvert-dettes.html`
-
-Ces relectures antérieures sont documentées dans le chantier mais ne bénéficient pas encore toutes d’un snapshot SHA dans la mémoire automatisée. Elles pourront être revalidées au fil des passes du rapport global.
+Le rapport automatique est la source de vérité pour savoir si une validation reste active. Une liste statique de pages relues n’est donc plus maintenue ici : elle deviendrait obsolète dès qu’un fichier change.
 
 ## Règles de chantier
 
@@ -142,6 +118,7 @@ Ces relectures antérieures sont documentées dans le chantier mais ne bénéfic
 6. Rechercher les fenêtres temporelles, séquences, fractionnements, substitutions, combinaisons et options de sortie.
 7. Ne jamais faire dépendre une solution d’une fausse déclaration, d’une dissimulation ou d’une représentation trompeuse.
 8. Préserver un bon texte lorsqu’aucun gain causal, décisionnel ou probatoire réel n’est identifié.
+9. Lorsque le registre humain grossit, préférer des lots append-only plutôt qu’une réécriture monolithique qui augmente le risque de conflit.
 
 ## Définition de terminé pour une page
 
