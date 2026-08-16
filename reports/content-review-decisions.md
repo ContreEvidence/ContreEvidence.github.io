@@ -55,6 +55,15 @@ Le principe reste symétrique : ne pas fermer une voie sans preuve ; ne pas vali
 - **Impact :** ajout d’une architecture en trois poches, d’un calcul du prix du temps racheté, d’un stress test après usage et d’une préférence pour les expérimentations réversibles.
 - **Incertitude résiduelle :** aucun seuil patrimonial universel ne déclenche automatiquement la phase d’usage ; il dépend des besoins, dépenses, risques, dettes et objectifs du foyer.
 
+### 2026-08-16 — `dossiers/prejuges-biais-monde-professionnel.html`
+
+- **Problème corrigé :** la page expliquait correctement les biais et les moyens de rendre une compétence plus lisible, mais risquait encore de laisser croire que toute friction professionnelle devait être résolue en améliorant le signal du candidat.
+- **Motifs activés :** décomposition du blocage, substitution d’acteur, test causal, preuve équivalente, seuil de sortie, changement de domaine de solution.
+- **Causalité :** une preuve plus forte peut réduire une incertitude professionnelle parce qu’elle agit sur le risque perçu ; elle ne peut pas rendre légitime un traitement discriminatoire. Si le même profil franchit l’étape chez des acteurs comparables mais bloque localement, changer de gatekeeper peut être plus rationnel que modifier indéfiniment le profil.
+- **Preuve :** cadre discrimination/recrutement revérifié le 16/08/2026 auprès de Service-Public ; rôle d’information et d’orientation du Défenseur des droits revérifié sur son site officiel.
+- **Impact :** ajout d’une bifurcation en trois diagnostics — signal mal interprété / filtre propre à un gatekeeper / traitement potentiellement discriminatoire —, d’un test « même preuve, autre acteur » et d’une condition explicite pour cesser d’essayer de convaincre le même système.
+- **Incertitude résiduelle :** le dossier ne qualifie pas juridiquement un cas individuel ; lorsqu’un traitement potentiellement discriminatoire est en cause, la qualification et les recours dépendent des faits et du cadre applicable.
+
 ## Revue humaine du rapport global — pages conservées
 
 Le rapport automatique `reports/corpus-solution-review.md` a été utilisé comme détecteur, puis chaque priorité a été relue humainement. Les pages suivantes ont été **revisitées mais laissées intactes**, car les dimensions signalées comme absentes sont en réalité déjà présentes dans le raisonnement sous une formulation que le détecteur ne reconnaissait pas suffisamment :
