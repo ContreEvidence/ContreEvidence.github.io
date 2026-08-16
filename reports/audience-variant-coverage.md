@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **45**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **12**.
+Pages/familles détectées : **46**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **12**.
 
 ## Priorités de relecture
 
@@ -33,6 +33,7 @@ Pages/familles détectées : **45**. Pages `noindex` exclues : **79**. Promesses
 | 2 | COVERED_OR_NARROW | budget / dettes | `dossiers/puis-je-me-permettre-reconversion.html` | — |
 | 2 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/puis-je-me-permettre-reconversion.html` | — |
 | 1 | COVERED_OR_NARROW | budget / dettes | `articles/construire-epargne-de-zero.html` | — |
+| 1 | COVERED_OR_NARROW | budget / dettes | `dossiers/decision-plan-30-90-jours.html` | — |
 | 1 | COVERED_OR_NARROW | budget / dettes | `dossiers/finances-cadre-global.html` | — |
 | 1 | COVERED_OR_NARROW | investissement locatif | `dossiers/finances-investissement-locatif.html` | — |
 | 1 | COVERED_OR_NARROW | budget / dettes | `dossiers/liquidites-reserve-securite.html` | — |
@@ -262,7 +263,7 @@ Pages détectées : **6**. Promesses larges `NON_READY` : **2**. Variantes le pl
 
 ### budget / dettes
 
-Pages détectées : **9**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **logement propriétaire / locataire** (2), **déficit temporaire / structurel** (1), **revenu stable / variable** (1).
+Pages détectées : **10**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **logement propriétaire / locataire** (3), **déficit temporaire / structurel** (1), **revenu stable / variable** (1).
 
 ### travailler moins / qualité de vie
 
