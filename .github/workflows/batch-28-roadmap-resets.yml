@@ -9,62 +9,35 @@ permissions:
   contents: write
 
 jobs:
-  patch:
+  patch-home:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Add roadmap recalculation layer
+      - name: Surface roadmap from homepage
         shell: bash
         run: |
           python - <<'PY'
           from pathlib import Path
 
-          def replace_once(text, old, new, label):
-              count = text.count(old)
-              if count != 1:
-                  raise SystemExit(f"{label}: expected 1 anchor, found {count}")
-              return text.replace(old, new, 1)
-
-          path = Path('parcours-de-vie.html')
-          text = path.read_text(encoding='utf-8')
-          css_anchor = '@media(max-width:850px){.roadmap-grid,.roadmap-rules{grid-template-columns:1fr}}</style>'
-          css = '''.reset-section{background:#101820;color:#fff}.reset-head{max-width:920px;margin-bottom:1.1rem}.reset-head h2{margin:.25rem 0 .55rem;font-size:clamp(2rem,4vw,3.05rem);letter-spacing:-.04em;line-height:1}.reset-head p{color:#d7dfe3;line-height:1.65}.reset-protocol{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.65rem;margin:1rem 0 1.15rem}.reset-step{padding:.9rem;border:1px solid rgba(255,255,255,.13);border-radius:14px;background:rgba(255,255,255,.055)}.reset-step b{display:block;color:#e8c979;margin-bottom:.3rem}.reset-step span{font-size:.88rem;line-height:1.45;color:#d7dfe3}.reset-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}.reset-card{display:block;padding:1.05rem 1.1rem;border:1px solid rgba(232,201,121,.25);border-radius:15px;background:#17232b;color:#fff;text-decoration:none}.reset-card:hover,.reset-card:focus-visible{border-color:#e8c979;outline:none}.reset-card small{display:block;color:#e8c979;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.35rem}.reset-card strong{display:block;font-size:1.08rem;margin-bottom:.35rem}.reset-card span{display:block;color:#cfd8dd;line-height:1.48;font-size:.92rem}.reset-note{margin-top:1rem;padding:1rem 1.1rem;border-left:3px solid #e8c979;background:rgba(255,255,255,.055);color:#d7dfe3}.reset-note strong{color:#fff}.reset-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1rem}.reset-actions .btn-ghost{color:#fff;border-color:rgba(255,255,255,.35)}@media(max-width:900px){.reset-protocol{grid-template-columns:1fr 1fr}.reset-grid{grid-template-columns:1fr}}@media(max-width:560px){.reset-protocol{grid-template-columns:1fr}}'''
-          text = replace_once(text, css_anchor, css + css_anchor, 'reset css')
-          section_anchor = '<section class="journey-section" id="se-situer">'
-          section = '''<section class="journey-section reset-section" id="recalculer"><div class="container"><div class="reset-head"><div class="kicker">Quand la trajectoire change</div><h2>Un anniversaire donne un repère. Un événement peut changer les priorités demain matin.</h2><p>Une naissance, un achat, une promotion, une séparation ou un héritage ne vous fait pas repartir de zéro. En revanche, l’événement peut modifier plusieurs variables à la fois : revenu, temps, mobilité, personnes à protéger, dette, liquidité, employabilité ou horizon. <strong>Ne refaites pas tout le plan : recalculez d’abord ce que l’événement a réellement déplacé.</strong></p></div><div class="reset-protocol"><div class="reset-step"><b>1 · Flux</b><span>Quel revenu, quelle dépense ou quelle capacité d’épargne change réellement ?</span></div><div class="reset-step"><b>2 · Temps & travail</b><span>Quelles heures, contraintes, compétences ou options professionnelles disparaissent ou apparaissent ?</span></div><div class="reset-step"><b>3 · Sécurité</b><span>La réserve, les assurances, la protection du foyer et la liquidité sont-elles encore dimensionnées ?</span></div><div class="reset-step"><b>4 · Engagements</b><span>Dette, logement, propriété, bénéficiaires ou obligations sont-ils devenus plus difficiles à modifier ?</span></div><div class="reset-step"><b>5 · Horizon</b><span>Quel objectif doit être avancé, retardé, fractionné ou abandonné pendant les 90 prochains jours ?</span></div></div><div class="reset-grid"><a class="reset-card" href="dossiers/couple-famille-argent-temps.html"><small>Mise en couple · enfant · famille</small><strong>Recalculer argent, temps et autonomie de chacun.</strong><span>Le budget peut rester presque inchangé alors qu’une carrière, une capacité d’épargne ou une dépendance se déplace fortement.</span></a><a class="reset-card" href="dossiers/acheter-logement-sans-se-fragiliser.html"><small>Achat immobilier · déménagement</small><strong>Recalculer liquidité, mobilité et capacité à absorber une transition.</strong><span>Un logement peut améliorer la vie tout en transformant une partie de l’épargne et de la mobilité en engagement long.</span></a><a class="reset-card" href="dossiers/questions-poser-avant-prise-de-poste.html"><small>Nouveau poste · promotion</small><strong>Recalculer revenu réel, temps capturé et capital professionnel.</strong><span>Le nouveau salaire n’est qu’une ligne : mandat, horaires, mobilité, compétences acquises et prochaine porte comptent aussi.</span></a><a class="reset-card" href="dossiers/devenir-manager-premiere-fois.html"><small>Premières responsabilités</small><strong>Changer de métier avant de chercher seulement à “monter”.</strong><span>Le passage à l’encadrement modifie la façon de produire de la valeur, la charge, les preuves futures et parfois la rémunération réelle du temps.</span></a><a class="reset-card" href="dossiers/lancer-activite-sans-quitter-emploi.html"><small>Création d’activité</small><strong>Séparer risque professionnel et sécurité personnelle.</strong><span>Fixez le capital, le temps et la date de preuve que le foyer accepte de consacrer au test avant que le projet devienne une dépendance.</span></a><a class="reset-card" href="dossiers/quand-vie-change-sante-separation-revenu.html"><small>Chômage · santé · séparation</small><strong>Passer temporairement de l’optimisation à la protection des options.</strong><span>Réduire l’irréversibilité, préserver le cash et la capacité de rebond peut devenir prioritaire sur le rendement ou la progression.</span></a><a class="reset-card" href="articles/grosse-entree-argent-que-faire.html"><small>Héritage · vente · grosse rentrée d’argent</small><strong>Ralentir avant de transformer un événement en allocation définitive.</strong><span>Le premier enjeu est de sécuriser, clarifier les objectifs et fractionner les décisions, pas de replacer immédiatement tout le capital.</span></a><a class="reset-card" href="dossiers/preparer-retraite-droits-epargne-logement.html"><small>Retraite qui approche</small><strong>Faire converger carrière, droits, dette, logement et capital.</strong><span>La bascule ne commence pas le jour du départ : elle se prépare lorsque les décisions encore réversibles peuvent modifier le revenu futur.</span></a></div><div class="reset-note"><strong>Le réflexe Contre-Évidence :</strong> après un événement important, ne demandez pas seulement « quel produit ou quelle démarche faut-il maintenant ? ». Demandez d’abord <strong>quelle hypothèse de mon ancien plan vient de devenir fausse</strong>. C’est cette réponse qui détermine la branche suivante.</div><div class="reset-actions"><a class="btn btn-primary" href="dossiers/decision-plan-30-90-jours.html">Transformer le changement en plan 30/90 jours →</a><a class="btn btn-ghost" href="dossiers/decider-a-deux-travail-patrimoine.html">Recalculer une décision à deux →</a><a class="btn btn-ghost" href="dossiers/finances-transmission-patrimoine.html">Réexaminer protection & transmission →</a></div></div></section>'''
-          text = replace_once(text, section_anchor, section + section_anchor, 'reset section')
-          path.write_text(text, encoding='utf-8')
-
-          backlinks = [
-              ('dossiers/quand-vie-change-sante-separation-revenu.html', '<article class="prose', '<p><a href="../parcours-de-vie.html#recalculer"><strong>→ Replacer ce changement dans la feuille de route vie professionnelle × patrimoine</strong></a></p>'),
-              ('dossiers/couple-famille-argent-temps.html', '<article class="prose', '<p><a href="../parcours-de-vie.html#recalculer"><strong>→ Recalculer la feuille de route après un changement de couple ou de famille</strong></a></p>'),
-              ('dossiers/devenir-manager-premiere-fois.html', '<article class="prose', '<p><a href="../parcours-de-vie.html#recalculer"><strong>→ Situer cette première prise de responsabilités dans la trajectoire professionnelle × patrimoniale</strong></a></p>'),
-              ('dossiers/finances-transmission-patrimoine.html', '<article class="prose', '<p><a href="../parcours-de-vie.html#recalculer"><strong>→ Revoir protection et transmission quand la situation familiale ou patrimoniale change</strong></a></p>'),
-          ]
-          for filename, article_anchor, backlink in backlinks:
-              p = Path(filename)
-              t = p.read_text(encoding='utf-8')
-              pos = t.find(article_anchor)
-              if pos < 0:
-                  raise SystemExit(f'{filename}: article anchor missing')
-              start = t.find('>', pos)
-              if start < 0:
-                  raise SystemExit(f'{filename}: article tag close missing')
-              insertion = start + 1
-              if backlink in t:
-                  raise SystemExit(f'{filename}: backlink already exists')
-              t = t[:insertion] + backlink + t[insertion:]
-              p.write_text(t, encoding='utf-8')
+          p = Path('index.html')
+          t = p.read_text(encoding='utf-8')
+          old = '<div class="home-principle"><strong>Le principe</strong><span>Le besoin d’abord. Le domaine ensuite. Les chiffres lorsqu’ils éclairent la décision, les biais lorsqu’ils peuvent la fausser, et les hypothèses clairement séparées des faits.</span></div>'
+          new = old + '<div class="home-principle"><strong>Vous voulez voir plus loin ?</strong><span>La <a href="parcours-de-vie.html#feuille-route"><strong>feuille de route vie professionnelle × patrimoine</strong></a> montre comment les priorités évoluent avec les étapes de vie — et comment un enfant, un achat, une promotion, une séparation, un héritage ou la retraite peuvent obliger à recalculer le plan.</span></div>'
+          if t.count(old) != 1:
+              raise SystemExit(f'homepage principle anchor: expected 1, found {t.count(old)}')
+          t = t.replace(old, new, 1)
+          t = t.replace('<meta name="dateModified" content="2026-08-15"/>','<meta name="dateModified" content="2026-08-16"/>',1)
+          p.write_text(t, encoding='utf-8')
           PY
-      - name: Commit roadmap reset changes
+      - name: Commit homepage roadmap route
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add parcours-de-vie.html dossiers/quand-vie-change-sante-separation-revenu.html dossiers/couple-famille-argent-temps.html dossiers/devenir-manager-premiere-fois.html dossiers/finances-transmission-patrimoine.html
+          git add index.html
           git diff --cached --quiet && exit 0
-          git commit -m "Add life-event recalculation layer to roadmap"
+          git commit -m "Surface life roadmap from homepage"
           git pull --rebase origin main
           git push origin HEAD:main
