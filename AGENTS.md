@@ -10,6 +10,7 @@ Canonical sources:
 - `MOTIFS-INGENIERIE-DE-SOLUTIONS.md`
 - `INGENIERIE-DE-SOLUTIONS.md`
 - `CHARTE-DE-VOIX.txt`
+- `AUDIT-COUVERTURE-SITUATIONS.md`
 
 ## Core rule
 
@@ -106,20 +107,61 @@ For material decisions, inspect when relevant:
 
 Do not add generic paragraphs to tick these boxes. A blind spot matters only if it can change the decision, the sequence, the cost, the risk or the set of available options.
 
+## Audience variant coverage — mandatory before acquisition
+
+Depth has two axes:
+
+1. **vertical depth** — how far the page reasons inside the case it chose;
+2. **coverage depth** — how well the promise recognizes materially different cases that it can reasonably attract.
+
+A page can be excellent on axis 1 and still be a poor acquisition destination on axis 2.
+
+Before publishing or promoting a broad promise, identify the main variants of audience for which the law, calculation, risk, sequence or exit would materially differ. For each important variant, assign one of four states:
+
+- `TRAITEE` — the page answers it with sufficient depth;
+- `ROUTEE` — the page recognizes it and sends the reader to the right dossier, tool or branch;
+- `HORS_PERIMETRE_EXPLICITE` — the page makes clear that the case differs and states what must be checked next;
+- `MANQUANTE` — the visitor can arrive legitimately but is neither recognized nor routed.
+
+A narrow technical promise does **not** need to treat every neighboring case. A broad acquisition promise does.
+
+When relevant, test variants across:
+
+- legal/ownership architecture;
+- household structure;
+- employment status;
+- income structure;
+- financing structure;
+- tax or regulatory regime;
+- time/phase of the decision;
+- underlying objective;
+- geography/local rules;
+- shock or conflict state;
+- actor/gatekeeper;
+- experience/sophistication level.
+
+The preferred fix is often an **explicit router**, not an encyclopedic rewrite. Do not dilute a strong page merely to mention every possible case.
+
+Before any social or SEO acquisition push, additionally audit the **actual hook**, because the hook may be broader than the destination page. No acquisition claim should imply universal coverage when the site silently assumes one architecture.
+
+Canonical method: `AUDIT-COUVERTURE-SITUATIONS.md`.
+Automated detector: `.github/workflows/audience-variant-coverage.yml`.
+
 ## Editorial review mode — autonomous
 
 The user has explicitly authorized autonomous application of substantive improvements across the corpus and does **not** want page-by-page approval requests.
 
-For the blind-spot/depth campaign:
+For the blind-spot/depth and audience-coverage campaigns:
 
 1. read the page and its closest cluster context;
-2. use automated blind-spot scores only as prompts for human review;
-3. apply a rewrite directly only when an omitted angle materially changes the decision, cost, risk, sequence, available options or proof burden;
-4. preserve the page unchanged when the missing motif is irrelevant or already covered semantically;
-5. never add generic depth veneer or boilerplate;
-6. refresh sensitive current claims from primary sources before changing high-stakes content;
-7. log every substantive change and every deliberate preservation decision in the review report;
-8. report the complete batch to the user after the autonomous pass.
+2. use automated scores only as prompts for human review;
+3. apply a rewrite directly only when an omitted angle or unrecognized audience variant materially changes the decision, cost, risk, sequence, available options or proof burden;
+4. prefer a precise router when the neighboring case belongs on another page;
+5. preserve the page unchanged when the missing motif or variant is irrelevant, already covered semantically, or explicitly outside a narrow promise;
+6. never add generic depth veneer or boilerplate;
+7. refresh sensitive current claims from primary sources before changing high-stakes content;
+8. log every substantive change and every deliberate preservation decision in the relevant review report;
+9. report the complete batch to the user after the autonomous pass.
 
 The user can challenge, refine or revert any item after the report. A later explicit instruction to require approval again overrides this mode.
 
@@ -127,9 +169,9 @@ Infrastructure, audit scripts, reports, internal method files and purely technic
 
 ## Review memory semantics
 
-Automated scores and prior internal corpus reviews are **diagnostic evidence only**. They are not equivalent to final editorial quality and must never be interpreted as proof that a page has no blind spot.
+Automated scores and prior internal corpus reviews are **diagnostic evidence only**. They are not equivalent to final editorial quality and must never be interpreted as proof that a page has no blind spot or no audience-coverage gap.
 
-A prior internal review may establish that a page already contains structural elements. It does not prove that the page has no missing solution family, no better sequencing and no second-order effect worth surfacing.
+A prior internal review may establish that a page already contains structural elements. It does not prove that the page has no missing solution family, no better sequencing, no second-order effect, and no legitimate neighboring case worth routing.
 
 During an autonomous pass, the current human reread and logged decision supersede the older structural label for the reviewed dimension.
 
@@ -137,9 +179,9 @@ During an autonomous pass, the current human reread and logged decision supersed
 
 For every substantive content change:
 
-1. record the page in `reports/content-review-decisions.md` or the dedicated blind-spot report;
+1. record the page in `reports/content-review-decisions.md` or the dedicated blind-spot / audience-coverage report;
 2. state the problem corrected;
-3. state the motifs activated;
+3. state the motifs or audience variants activated;
 4. state the causal mechanism;
 5. state the proof status and sensitive sources where applicable;
 6. state the expected reader impact and residual uncertainty.
@@ -152,7 +194,7 @@ Generic blocks pasted across many pages do not count as solution engineering. Th
 
 This reasoning policy applies across domains, including:
 
-- property and indivision;
+- property, SCI and indivision;
 - credit and banking;
 - career and employment;
 - entrepreneurship;
@@ -160,7 +202,7 @@ This reasoning policy applies across domains, including:
 - personal finance and investing;
 - contracts and administrative rights;
 - time, health, quality of life, and family decisions;
-- product and editorial decisions for Contre-Évidence.
+- product, acquisition and editorial decisions for Contre-Évidence.
 
 Domain expertise changes. The reasoning policy does not.
 
