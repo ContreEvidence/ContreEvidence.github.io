@@ -1,0 +1,36 @@
+{
+  "reviewed_at": "2026-08-16",
+  "rule": "Blind-spot rewrites were human-reviewed after modification. This file re-seals the structural Solution Engineer validation on the exact current Git blob SHA; any later content change invalidates it.",
+  "pages": {
+    "dossiers/decision-plan-30-90-jours.html": {
+      "sha": "c7bd8f5cd0a197ead2e0ebe3d947f0cacbc0d46c",
+      "status": "conforme",
+      "note": "Revue angles morts : dépendances externes, contrôle/influence/dépendance, voie parallèle, attente bornée et séquence de préservation d’option ajoutées."
+    },
+    "articles/competences-invisibles-preuves.html": {
+      "sha": "1894940607caec4067fd8609603f3e5ebe4233f2",
+      "status": "conforme",
+      "note": "Revue angles morts : distingue preuve insuffisante et filtre local via le test même preuve/autre acteur, avec condition de renversement."
+    },
+    "articles/clients-interesses-personne-nachete.html": {
+      "sha": "36393db1ca7c359beb075a4b3fe0e25fa86ee8bb",
+      "status": "conforme",
+      "note": "Revue angles morts : utilisateur/payeur/décideur, coût de changement, fenêtre de décision et architecture de transaction intégrés."
+    },
+    "dossiers/creer-entreprise-avec-peu-argent.html": {
+      "sha": "99fb67ac5498b3634df87e18d728af131d32c06e",
+      "status": "conforme",
+      "note": "Revue angles morts : coût du faible capital déplacé vers temps fondateur, fiabilité, qualité et maintenance rendu explicite."
+    },
+    "dossiers/liquidites-reserve-securite.html": {
+      "sha": "ae88ad8ae7c6981800827b83825e37da0c51d1c5",
+      "status": "conforme",
+      "note": "Revue angles morts : fiabilité, délai et corrélation des ressources de secours ; distinction perte finale/liquidité immédiate."
+    },
+    "dossiers/audit-budget-60-minutes.html": {
+      "sha": "8de2b2164b0d8d56823db98de8e87e9fbf70bef8",
+      "status": "conforme",
+      "note": "Revue angles morts : seuil où les économies réalistes deviennent mathématiquement insuffisantes et bascule vers déficit structurel."
+    }
+  }
+}
