@@ -16,7 +16,7 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ### `dossiers/calculer-prix-minimum-rentable.html`
 - **possibilité à fort enjeu sans condition ni signal de preuve** — Séparer coûts fixes et coûts variables Coûts fixes Coûts variables Assurance, logiciel, téléphone, comptabilité, véhicule, local Produits, fournitures, sous-traitance, péage, consommables Existent même avec peu de clients Augmentent avec le volume Cette distinction permet de savoir ce qu’une prestation apporte réellement pour payer la structure. _[fort enjeu]_
 ### `dossiers/creer-entreprise-avec-peu-argent.html`
-- **possibilité à fort enjeu sans condition ni signal de preuve** — Il faut distinguer ce qui permet de commencer, ce qui permet d’encaisser un retard et ce qui permet au foyer de survivre pendant la montée en charge. _[fort enjeu]_
+- **possibilité à fort enjeu sans condition ni signal de preuve** — Il faut distinguer ce qui permet de commencer, ce qui permet d’encaisser un retard, ce qui permet au foyer de survivre pendant la montée en charge — et ce que l’on paie en temps quand on économise du cash. _[fort enjeu]_
 ### `dossiers/finances-difficiles-sortir-decouvert-dettes.html`
 - **possibilité à fort enjeu sans condition ni signal de preuve** — Une seule carte permet de voir le montant, le flux mensuel et les urgences réelles. _[fort enjeu]_
 ### `parcours-vie-professionnelle.html`
