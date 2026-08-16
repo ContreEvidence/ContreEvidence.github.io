@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
 - P1 — affirmation forte à resserrer ou vérifier : **62**
-- P2 — nécessité à examiner : **146**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **802**
+- P2 — nécessité à examiner : **145**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **812**
 
 ## P0 — rouvrir en priorité
 
@@ -247,8 +247,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — L’étude de marché doit donc regarder la valeur du client dans le temps , pas seulement le premier achat.
 - **nécessité à requalifier ou sourcer** — L’étude doit donc regarder concentration, cycle de vente, décideurs et durée de renouvellement.
 - **nécessité à requalifier ou sourcer** — Transformer le terrain en hypothèse de CA Une hypothèse de CA doit être reconstruite : prospects atteignables × conversion × panier × fréquence .
-### `dossiers/finances-cadre-global.html`
-- **nécessité à requalifier ou sourcer** — La réserve minimale doit être personnelle Ne recopiez pas mécaniquement « trois à six mois ».
 ### `dossiers/immobilier-allocation-globale-patrimoine.html`
 - **nécessité à requalifier ou sourcer** — Il faut intégrer coût d’acquisition, financement, charges, vacance, travaux, gestion, fiscalité, temps personnel et valeur de sortie.
 - **nécessité à requalifier ou sourcer** — Le rendement doit être reconstruit Prix d’annonce, rendement brut et mensualité ne suffisent pas.
