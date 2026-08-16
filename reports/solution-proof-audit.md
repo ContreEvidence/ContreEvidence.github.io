@@ -7,9 +7,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **37**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **38**
 - S2 — possibilité générale à examiner : **14**
-- OK heuristique — condition ou preuve détectée : **148**
+- OK heuristique — condition ou preuve détectée : **149**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -60,6 +60,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Il permet de passer du salaire brut au coût total employeur. _[fort enjeu, preuve détectée]_
 ### `dossiers/finances-cadre-global.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Stress test avant d’adopter la politique Une allocation cible n’a de sens que si vous pouvez supporter son mauvais scénario. _[fort enjeu, condition détectée]_
+### `dossiers/finances-credit-endettement.html`
+- **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Le coût total permet de voir ce que masque une mensualité réduite par une durée plus longue. _[fort enjeu, preuve détectée]_
 ### `dossiers/finances-enveloppes-fiscalite.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Je la choisirais parce qu’elle permet de détenir les bons actifs, au bon coût, avec la bonne liquidité et une fiscalité cohérente avec l’usage réel. ← Investissement · Allocation patrimoniale → À lire ensuite Continuez sans repartir de zéro. _[fort enjeu, preuve détectée]_
 ### `dossiers/finances-residence-principale.html`
