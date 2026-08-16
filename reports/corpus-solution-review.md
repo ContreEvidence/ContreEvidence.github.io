@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **118**. Validations devenues caduques après modification : **5**.
+Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **117**. Validations devenues caduques après modification : **6**.
 
 ## Priorité humaine
 
@@ -22,6 +22,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | `articles/checklist-avant-placement-conseiller.html` | `f0a354fedc6ee6b64f0235804b495c6a4701a872` | `561b9eb3d62a2ba88f0b48c12b4c1b36fe54d5a7` |
 | `dossiers/combien-chiffre-affaires-pour-vivre.html` | `ecb09de9f0ebcb7f42e79bac0351f086fadee8ae` | `6eb83e080e90da9965354053c9da5e0f41fe5c49` |
 | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` | `73804a97a74df735855ceb5291c6ce824e36da56` | `a982b4a256d31aa630435af2265c34c7134f8570` |
+| `dossiers/choisir-statut-micro-ei-eurl-sasu.html` | `b8ca6053a594bbee33797f2d2c4dce8b4854e67b` | `c6e5736d0811426bfb0bfd40ac588e3c6c3945cf` |
 | `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` | `0dde3d3af6dc5214b42e2e86c59d2ef2677de259` | `49a26a95921f5be5635c8609812eef122250a076` |
 
 ## Pages validées humainement et inchangées
@@ -82,7 +83,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 - `articles/premiere-chance-sans-experience.html` — 8/9 automatique — Première expérience lue comme achat de preuve, réseau et option suivante ; coût d’enfermement, condition de sortie et scénario dégradé déjà traités.
 - `dossiers/management-relations-conflits.html` — 8/9 automatique — Réglages de management, seuil d’autonomie, goulot de validation, droits de décision, causes structurelles du conflit, escalade et stress test déjà structurés.
 - `dossiers/prix-attendre-finances.html` — 8/9 automatique — Coûts certains versus opportunité, cas où attendre protège, scénario symétrique d’action trop rapide et seuil de décision déjà présents.
-- `dossiers/choisir-statut-micro-ei-eurl-sasu.html` — 8/9 automatique — Réécriture de référence du 16/08 : forme juridique, régime micro et TVA séparés, trajectoire de structure et déclencheurs de bascule.
 - `dossiers/combien-epargne-avant-demissionner.html` — 8/9 automatique — Runway par déficit réel, qualité de la liquidité, droits seulement après vérification, trois scénarios, valeur de l’information et seuils de départ/renoncement déjà structurés.
 - `dossiers/piloter-patrimoine-selon-taille.html` — 8/9 automatique — Montant distingué de la complexité, risque dominant par phase, budget de complexité, seuil de recours au conseil et contre-exemples déjà structurés.
 - `dossiers/dependance-gros-client.html` — 8/9 automatique — Concentration, rupture du client principal, mois de survie, diversification causale et plan de réduction de dépendance déjà structurés.
@@ -205,7 +205,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1364 | humaine ✓ | `articles/premiere-chance-sans-experience.html` |
 | 8/9 | 1369 | humaine ✓ | `dossiers/management-relations-conflits.html` |
 | 8/9 | 1390 | humaine ✓ | `dossiers/prix-attendre-finances.html` |
-| 8/9 | 1405 | humaine ✓ | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` |
 | 8/9 | 1410 | humaine ✓ | `dossiers/combien-epargne-avant-demissionner.html` |
 | 8/9 | 1411 | humaine ✓ | `dossiers/piloter-patrimoine-selon-taille.html` |
 | 8/9 | 1414 | humaine ✓ | `dossiers/dependance-gros-client.html` |
@@ -269,6 +268,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 2201 | à revoir après changement | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` |
 | 9/9 | 2215 | humaine ✓ | `dossiers/indivision-immobiliere-sortir-sans-subir.html` |
 | 9/9 | 2472 | humaine ✓ | `dossiers/changer-travail-avant-credit-immobilier.html` |
+| 9/9 | 2581 | à revoir après changement | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` |
 | 9/9 | 2694 | humaine ✓ | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` |
 | 9/9 | 3065 | humaine ✓ | `dossiers/indivision-rachat-progressif-parts.html` |
 | 9/9 | 3821 | humaine ✓ | `dossiers/indivision-couple-separation-rachat-soulte.html` |
