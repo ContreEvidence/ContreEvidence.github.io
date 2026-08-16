@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **119**. Validations devenues caduques après modification : **4**.
+Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **118**. Validations devenues caduques après modification : **5**.
 
 ## Priorité humaine
 
@@ -19,6 +19,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | Page | SHA relu | SHA courant |
 |---|---|---|
 | `dossiers/capacite-refuser-travail-rentabilite.html` | `aace252f32a1faf81cf6e0a4665e9b60e694129e` | `91ebe0bb0dc7e77c7a5a042210a2f54a7e04570e` |
+| `articles/checklist-avant-placement-conseiller.html` | `f0a354fedc6ee6b64f0235804b495c6a4701a872` | `561b9eb3d62a2ba88f0b48c12b4c1b36fe54d5a7` |
 | `dossiers/combien-chiffre-affaires-pour-vivre.html` | `ecb09de9f0ebcb7f42e79bac0351f086fadee8ae` | `6eb83e080e90da9965354053c9da5e0f41fe5c49` |
 | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` | `73804a97a74df735855ceb5291c6ce824e36da56` | `a982b4a256d31aa630435af2265c34c7134f8570` |
 | `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` | `0dde3d3af6dc5214b42e2e86c59d2ef2677de259` | `49a26a95921f5be5635c8609812eef122250a076` |
@@ -33,7 +34,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/puis-je-me-permettre-reconversion.html` — 6/9 automatique — Déficit mensuel, runway, scénarios adverse/central et transition progressive déjà présents.
 - `dossiers/finances-transmission-patrimoine.html` — 6/9 automatique — Objectifs, propriété, liquidité, sécurité du donateur et coordination civile/fiscale déjà traités.
 - `dossiers/finances-difficiles-sortir-decouvert-dettes.html` — 7/9 automatique — Déficit structurel, priorisation, leviers de flux, accompagnement, plan 7/30/90 jours et retour conditionnel à l’épargne déjà structurés.
-- `articles/checklist-avant-placement-conseiller.html` — 7/9 automatique — Chaîne de preuves indépendante, vérification du bénéficiaire, scénario de perte, arrêt sous pression et contrôle croisé déjà structurés.
 - `articles/50-candidatures-zero-reponse.html` — 7/9 automatique — Localisation de la rupture, séries comparables, tests A/B, scénarios de diagnostic et règles de changement de stratégie déjà explicites.
 - `dossiers/rembourser-credit-ou-investir.html` — 7/9 automatique — Rendement certain de la dette versus rendement incertain, liquidité, dette globale, scénarios 100/0-hybride et règle de décision déjà traités.
 - `articles/choisir-etf-mondial-debutant.html` — 7/9 automatique — Exposition avant produit, concentration, chevauchement, enveloppe, risque et séquence de sélection déjà structurés pour une page de choix d’ETF.
@@ -157,7 +157,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 6/9 | 1596 | humaine ✓ | `dossiers/puis-je-me-permettre-reconversion.html` |
 | 6/9 | 1629 | humaine ✓ | `dossiers/finances-transmission-patrimoine.html` |
 | 7/9 | 1010 | humaine ✓ | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` |
-| 7/9 | 1064 | humaine ✓ | `articles/checklist-avant-placement-conseiller.html` |
 | 7/9 | 1157 | humaine ✓ | `articles/50-candidatures-zero-reponse.html` |
 | 7/9 | 1244 | humaine ✓ | `dossiers/rembourser-credit-ou-investir.html` |
 | 7/9 | 1247 | humaine ✓ | `articles/choisir-etf-mondial-debutant.html` |
@@ -260,6 +259,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1894 | humaine ✓ | `dossiers/finances-enveloppes-fiscalite.html` |
 | 9/9 | 1923 | humaine ✓ | `dossiers/couple-famille-argent-temps.html` |
 | 9/9 | 1965 | humaine ✓ | `dossiers/audit-budget-60-minutes.html` |
+| 9/9 | 1980 | à revoir après changement | `articles/checklist-avant-placement-conseiller.html` |
 | 9/9 | 1995 | humaine ✓ | `dossiers/formation-vaut-elle-le-cout.html` |
 | 9/9 | 2013 | humaine ✓ | `dossiers/creer-entreprise-sans-diplome.html` |
 | 9/9 | 2015 | humaine ✓ | `dossiers/quitter-cdi-avec-credit-immobilier.html` |
