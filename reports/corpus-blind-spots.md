@@ -6,7 +6,7 @@ Cet audit complète — il ne remplace pas — la revue structurelle. Il cherche
 
 Un motif absent n’est **pas** automatiquement un défaut : la file sert à provoquer une lecture humaine. Inversement, la présence d’un mot ne prouve pas que l’angle est bien traité. Les décisions humaines SHA-liées sont enregistrées séparément dans `reports/corpus-blind-spot-human-review-*.json`.
 
-Pages indexables analysées : **123**. Pages `noindex` exclues : **79**.
+Pages indexables analysées : **124**. Pages `noindex` exclues : **79**.
 
 ## Priorité heuristique
 
@@ -75,7 +75,7 @@ Pages : **27**. Angles le plus souvent non détectés : **acteur/gatekeeper** (2
 
 ### immobilier / crédit / indivision
 
-Pages : **25**. Angles le plus souvent non détectés : **attendre / statu quo** (18), **substitution** (18), **acteur/gatekeeper** (17), **condition de renversement** (17), **transfert de risque** (15), **objectif réel / substitution du moyen** (14), **effets de second ordre** (10).
+Pages : **26**. Angles le plus souvent non détectés : **acteur/gatekeeper** (18), **attendre / statu quo** (18), **condition de renversement** (18), **substitution** (18), **objectif réel / substitution du moyen** (15), **transfert de risque** (15), **effets de second ordre** (11).
 
 ### patrimoine / investissement / retraite
 
