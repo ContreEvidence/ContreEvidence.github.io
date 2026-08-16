@@ -75,7 +75,7 @@ Pages : **27**. Angles le plus souvent non détectés : **attendre / statu quo**
 
 ### immobilier / crédit / indivision
 
-Pages : **21**. Angles le plus souvent non détectés : **acteur/gatekeeper** (15), **substitution** (14), **attendre / statu quo** (12), **objectif réel / substitution du moyen** (12), **condition de renversement** (12), **transfert de risque** (12), **effets de second ordre** (10).
+Pages : **21**. Angles le plus souvent non détectés : **acteur/gatekeeper** (14), **substitution** (14), **objectif réel / substitution du moyen** (13), **attendre / statu quo** (12), **condition de renversement** (12), **transfert de risque** (11), **effets de second ordre** (10).
 
 ### patrimoine / investissement / retraite
 
