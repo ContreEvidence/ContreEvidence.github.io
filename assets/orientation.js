@@ -5,7 +5,7 @@
     const path = window.location.pathname;
     const nested = /\/(articles|themes|dossiers|fiches-metiers)\//.test(path);
     const prefix = nested ? '../' : '';
-    const toolsHref = `${prefix}bibliotheque.html?type=outil`;
+    const toolsHref = `${prefix}outils.html`;
 
     const renameText = (root = document.body) => {
       if (!root || root.dataset.ceLabelsRenamed) return;
@@ -41,9 +41,7 @@
       }
     }
 
-    /* Ponts dossier -> outil uniquement lorsqu'un outil traite réellement la question.
-       Aucun encadré générique n'est injecté pour simuler une profondeur éditoriale :
-       l'ingénierie de solutions doit exister dans le contenu source du dossier. */
+    /* Ponts dossier -> outil uniquement lorsqu'un outil traite réellement la question. */
     const toolMap = {
       '/dossiers/combien-epargne-avant-demissionner.html': {
         href:'../simulateur-epargne-demission.html',
@@ -75,15 +73,20 @@
         title:'Construisez maintenant votre plan 30/90 jours',
         text:'Objectif, non-négociable, première action, jalons, mesure et condition de revue : passez du raisonnement à l’exécution.'
       },
+      '/dossiers/indivision-immobiliere-sortir-sans-subir.html': {
+        href:'../simulateur-sortie-indivision.html',
+        title:'Mettez vente, rachat et attente sur la même feuille',
+        text:'Valeur, dette, quotes-parts, créances, liquidités et horizon : comparez les scénarios économiques avant de discuter la mécanique juridique.'
+      },
       '/dossiers/indivision-couple-separation-rachat-soulte.html': {
-        href:'../outil-ingenierie-solutions.html',
-        title:'Démontez votre propre « rachat impossible »',
-        text:'Identifiez qui dit non, l’écart à fermer, les variables réellement modifiables, les voies progressives et la condition de bascule.'
+        href:'../simulateur-sortie-indivision.html',
+        title:'Estimez l’écart à fermer pour rendre le rachat possible',
+        text:'Testez la valeur économique de la part, les liquidités disponibles et ce qui change si le rachat est repoussé dans le temps.'
       },
       '/dossiers/indivision-rachat-progressif-parts.html': {
-        href:'../outil-ingenierie-solutions.html',
-        title:'Testez le fractionnement avant de choisir le nombre de tranches',
-        text:'Comparez contrainte bancaire, coût des actes, seuil de droits utile, revenus et trajectoire de sortie finale.'
+        href:'../simulateur-sortie-indivision.html',
+        title:'Testez le fractionnement avec vos propres hypothèses',
+        text:'Projetez valeur du bien, dette restante, épargne future et ordre de grandeur de plusieurs tranches avant de retenir une architecture.'
       },
       '/dossiers/creer-entreprise-sans-diplome.html': {
         href:'../outil-ingenierie-solutions.html',
@@ -111,7 +114,7 @@
       ['dossiers/finances-difficiles-sortir-decouvert-dettes.html','Je finis le mois à découvert ou les dettes commencent à s’empiler.'],
       ['dossiers/quand-vie-change-sante-separation-revenu.html','Ma santé, mon couple ou mes revenus changent brutalement.'],
       ['dossiers/couple-famille-argent-temps.html','Comment répartir argent, temps et risques dans le foyer ?'],
-      ['dossiers/temps-energie-qualite-vie.html','Je gagne ou j’épargne, mais je manque surtout de temps et d’énergie.'],
+      ['parcours-temps-argent-liberte.html','Je gagne ou j’épargne, mais je manque surtout de temps et de liberté.'],
       ['dossiers/quand-arreter-optimiser-utiliser-patrimoine.html','Tout va plutôt bien : qu’est-ce que mon patrimoine doit maintenant rendre possible ?'],
       ['outil-plan-30-90-jours.html','J’ai décidé. Comment passer concrètement à l’action ?']
     ];
@@ -128,7 +131,7 @@
       }
     }
 
-    if (/\/parcours-de-vie\.html$/.test(path) && !document.querySelector('[data-ce-life-routes="journey"]')) {
+    if (/\/parcours-de-vie\.html$/.test(path) && !document.querySelector('[data-ce-life-routes="journey"]') && !document.querySelector('[data-ce-crossroads]')) {
       const buildGrid = document.querySelector('#construire .situation-grid');
       if (buildGrid && !buildGrid.querySelector('a[href="outil-plan-30-90-jours.html"]')) {
         const card = document.createElement('a');
@@ -143,7 +146,7 @@
         const section = document.createElement('section');
         section.className = 'journey-section';
         section.dataset.ceLifeRoutes = 'journey';
-        section.innerHTML = `<div class="container"><div class="journey-intro"><div class="kicker">Situations transversales</div><h2>Votre problème ne rentre pas proprement dans une case ? C’est normal.</h2><p>Certaines décisions touchent en même temps l’argent, le travail, le logement, la santé, le couple ou le temps disponible. Commencez par la situation réelle, pas par le domaine administratif.</p></div><div class="situation-grid">${lifeLinks.map(([href,label],index) => `<a class="situation-card" href="${href}"><span class="number">${String.fromCharCode(65+index)}</span><h3>${label}</h3><p>${index===0?'Stabiliser avant de chercher à optimiser.':index===1?'Protéger les options pendant que la situation se stabilise.':index===2?'Rendre visibles les transferts d’argent, de temps et de carrière.':index===3?'Regarder ce que les chiffres faciles à mesurer oublient.':index===4?'Passer de l’accumulation à l’usage choisi de la marge créée.':'Transformer le choix en actions, jalons et date de revue.'}</p></a>`).join('')}</div></div>`;
+        section.innerHTML = `<div class="container"><div class="journey-intro"><div class="kicker">Situations transversales</div><h2>Votre problème ne rentre pas proprement dans une case ? C’est normal.</h2><p>Certaines décisions touchent en même temps l’argent, le travail, le logement, la santé, le couple ou le temps disponible. Commencez par la situation réelle, pas par le domaine administratif.</p></div><div class="situation-grid">${lifeLinks.map(([href,label],index) => `<a class="situation-card" href="${href}"><span class="number">${String.fromCharCode(65+index)}</span><h3>${label}</h3><p>${index===0?'Stabiliser avant de chercher à optimiser.':index===1?'Protéger les options pendant que la situation se stabilise.':index===2?'Rendre visibles les transferts d’argent, de temps et de carrière.':index===3?'Comparer le prix du temps, de l’énergie et de la sécurité.':index===4?'Passer de l’accumulation à l’usage choisi de la marge créée.':'Transformer le choix en actions, jalons et date de revue.'}</p></a>`).join('')}</div></div>`;
         before.insertAdjacentElement('beforebegin', section);
       }
     }
@@ -164,6 +167,17 @@
       foundation.dataset.ceReordered = '1';
     }
 
+    if (path.endsWith('/outils.html')) {
+      const compare = document.querySelector('#comparer .tool-grid');
+      if (compare && !compare.querySelector('a[href="simulateur-sortie-indivision.html"]')) {
+        const card = document.createElement('a');
+        card.className = 'tool-card';
+        card.href = 'simulateur-sortie-indivision.html';
+        card.innerHTML = '<small>Indivision immobilière</small><h3>Vendre, racheter ou racheter progressivement</h3><p>Valeur, dette, quotes-parts, créances, liquidités et horizon réunis dans une seule simulation économique.</p><b>Comparer les sorties →</b>';
+        compare.appendChild(card);
+      }
+    }
+
     const flatLinks = document.querySelector('.ce-flat-links');
     if (flatLinks && !flatLinks.querySelector('[data-key="outils"]')) {
       const link = document.createElement('a');
@@ -175,7 +189,7 @@
     }
 
     const fallbackNav = document.querySelector('.ce-fallback-header nav');
-    if (!flatLinks && fallbackNav && !fallbackNav.querySelector('[data-ce-tools-link]') && ![...fallbackNav.links].some(a => /[?&]type=outil\b/.test(a.href))) {
+    if (!flatLinks && fallbackNav && !fallbackNav.querySelector('[data-ce-tools-link]') && ![...fallbackNav.links].some(a => /\/outils\.html$/.test(a.href))) {
       const link = document.createElement('a');
       link.href = toolsHref;
       link.dataset.ceToolsLink = '1';
@@ -184,7 +198,7 @@
     }
 
     const params = new URLSearchParams(window.location.search);
-    const isTools = /\/(simulateur|outil)[^/]*\.html$/i.test(path) || (path.endsWith('/bibliotheque.html') && params.get('type') === 'outil');
+    const isTools = /\/(simulateur|outil)[^/]*\.html$/i.test(path) || path.endsWith('/outils.html') || (path.endsWith('/bibliotheque.html') && params.get('type') === 'outil');
     if (isTools && flatLinks) {
       flatLinks.querySelectorAll('.ce-flat-link.is-current').forEach(el => el.classList.remove('is-current'));
       flatLinks.querySelector('[data-key="outils"]')?.classList.add('is-current');
