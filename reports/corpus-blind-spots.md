@@ -33,7 +33,6 @@ Pages indexables analysées : **122**. Pages `noindex` exclues : **79**.
 | 12 | 8/15 | patrimoine / investissement / retraite | `articles/comparatif-produits-bancaires.html` | attendre / statu quo, transfert de risque, condition de renversement, valeur d’option / irréversibilité |
 | 12 | 8/15 | emploi / carrière / qualification | `articles/sans-diplome-chemins-alternatifs.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen, condition de renversement |
 | 12 | 8/15 | emploi / carrière / qualification | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` | acteur/gatekeeper, substitution, fenêtre temporelle, objectif réel / substitution du moyen |
-| 12 | 8/15 | patrimoine / investissement / retraite | `dossiers/audit-budget-60-minutes.html` | effets de second ordre, transfert de risque, condition de renversement, valeur d’option / irréversibilité |
 | 12 | 8/15 | entrepreneuriat / activité | `dossiers/calculer-prix-minimum-rentable.html` | acteur/gatekeeper, substitution, fractionnement, combinaison de leviers |
 | 12 | 8/15 | patrimoine / investissement / retraite | `dossiers/combien-epargne-avant-demissionner.html` | effets de second ordre, transfert de risque, condition de renversement, valeur d’option / irréversibilité |
 | 12 | 8/15 | entrepreneuriat / activité | `dossiers/creer-entreprise-sans-diplome.html` | acteur/gatekeeper, effets de second ordre, attendre / statu quo, condition de renversement |
@@ -62,6 +61,7 @@ Pages indexables analysées : **122**. Pages `noindex` exclues : **79**.
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/competences-qualification-employabilite.html` | substitution, objectif réel / substitution du moyen, condition de renversement |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/experience-devient-risque-recruteur.html` | acteur/gatekeeper, substitution, condition de renversement |
 | 9 | 8/15 | immobilier / crédit / indivision | `dossiers/finances-investissement-locatif.html` | acteur/gatekeeper, valeur d’option / irréversibilité, condition de renversement |
+| 9 | 8/15 | patrimoine / investissement / retraite | `dossiers/passer-80-pourcent-cout-reel.html` | attendre / statu quo, transfert de risque, condition de renversement |
 
 ## Lecture par cluster
 
@@ -79,7 +79,7 @@ Pages : **24**. Angles le plus souvent non détectés : **attendre / statu quo**
 
 ### patrimoine / investissement / retraite
 
-Pages : **40**. Angles le plus souvent non détectés : **substitution** (33), **transfert de risque** (31), **acteur/gatekeeper** (29), **attendre / statu quo** (29), **condition de renversement** (29), **objectif réel / substitution du moyen** (28), **valeur d’option / irréversibilité** (19).
+Pages : **40**. Angles le plus souvent non détectés : **substitution** (33), **transfert de risque** (31), **acteur/gatekeeper** (29), **attendre / statu quo** (29), **objectif réel / substitution du moyen** (28), **condition de renversement** (28), **valeur d’option / irréversibilité** (19).
 
 ## Règle de reprise éditoriale
 
