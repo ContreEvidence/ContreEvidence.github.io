@@ -7,9 +7,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **27**
-- S2 — possibilité générale à examiner : **15**
-- OK heuristique — condition ou preuve détectée : **155**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **29**
+- S2 — possibilité générale à examiner : **16**
+- OK heuristique — condition ou preuve détectée : **154**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -60,6 +60,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Le coût total permet de voir ce que masque une mensualité réduite par une durée plus longue. _[fort enjeu, preuve détectée]_
 ### `dossiers/finances-residence-principale.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Si elle permet d’accepter dans deux ans une mobilité procurant +500 €/mois sans revente contrainte, le prix de l’option devient mesurable . _[fort enjeu, condition détectée]_
+### `dossiers/indivision-immobiliere-sortir-sans-subir.html`
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Fractionner peut réduire le besoin de cash — mais augmenter la friction Rachat unique Rachat progressif Besoin de financement élevé immédiatement Besoin initial plus faible. _[fort enjeu, condition détectée]_
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Le fait d’avoir payé davantage ne modifie pas automatiquement les quotes-parts inscrites au titre ; il peut ouvrir des comptes distincts. _[fort enjeu, condition détectée]_
 ### `dossiers/metiers-accessibles-sans-diplome.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Le ministère de l’Enseignement supérieur indique qu’il permet d’accéder directement à une formation universitaire sans avoir le diplôme requis, en faisant reconnaître expérience professionnelle, formations suivies et acquis personnels. _[fort enjeu, preuve détectée]_
 ### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
@@ -98,6 +101,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ### `dossiers/emploi-chercher-accepter-negocier-evoluer.html`
 - **possibilité générale à vérifier ou resserrer** — Le scénario intermédiaire est souvent négligé alors qu’il permet d’accumuler épargne, preuves, réseau ou formation tout en conservant un revenu.
 - **possibilité générale à vérifier ou resserrer** — Négocier ne consiste pas à demander davantage « parce qu’on le mérite » Une négociation robuste repose sur trois éléments : le périmètre réel du poste, la valeur que vous pouvez rendre crédible et vos alternatives.
+### `dossiers/indivision-immobiliere-sortir-sans-subir.html`
+- **possibilité générale à vérifier ou resserrer** — Partage / judiciaire Permet d’avancer malgré le désaccord Coût, durée, perte de contrôle.
 ### `dossiers/previsionnel-activite-12-mois.html`
 - **possibilité générale à vérifier ou resserrer** — Stress tests : une variable, puis des combinaisons réalistes Changer une variable à la fois permet d’identifier la sensibilité.
 ### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
