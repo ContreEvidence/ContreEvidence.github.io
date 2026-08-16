@@ -12,6 +12,7 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 
 | Priorité | Couverture | Cluster | Page | Angles critiques non détectés |
 |---:|---:|---|---|---|
+| 13 | 7/15 | emploi / carrière / qualification | `articles/competences-transferables.html` | substitution, objectif réel / substitution du moyen, asymétrie de preuve, condition de renversement |
 | 12 | 8/15 | patrimoine / investissement / retraite | `dossiers/combien-epargne-avant-demissionner.html` | effets de second ordre, transfert de risque, condition de renversement, valeur d’option / irréversibilité |
 | 12 | 8/15 | entrepreneuriat / activité | `dossiers/creer-entreprise-sans-diplome.html` | acteur/gatekeeper, effets de second ordre, attendre / statu quo, condition de renversement |
 | 12 | 8/15 | entrepreneuriat / activité | `dossiers/decision-plan-30-90-jours.html` | substitution, fractionnement, combinaison de leviers, condition de renversement |
@@ -39,7 +40,6 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 9 | 8/15 | immobilier / crédit / indivision | `dossiers/finances-investissement-locatif.html` | acteur/gatekeeper, valeur d’option / irréversibilité, condition de renversement |
 | 9 | 8/15 | patrimoine / investissement / retraite | `dossiers/passer-80-pourcent-cout-reel.html` | attendre / statu quo, transfert de risque, condition de renversement |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/plan-30-jours-recherche-emploi.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen |
-| 9 | 9/15 | emploi / carrière / qualification | `articles/competences-transferables.html` | substitution, objectif réel / substitution du moyen, asymétrie de preuve |
 | 9 | 9/15 | emploi / carrière / qualification | `articles/premiere-chance-sans-experience.html` | acteur/gatekeeper, objectif réel / substitution du moyen, asymétrie de preuve |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/audit-budget-60-minutes.html` | effets de second ordre, transfert de risque, valeur d’option / irréversibilité |
 | 9 | 9/15 | immobilier / crédit / indivision | `dossiers/audit-copropriete-avant-achat.html` | acteur/gatekeeper, valeur d’option / irréversibilité, condition de renversement |
@@ -67,7 +67,7 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 
 ### emploi / carrière / qualification
 
-Pages : **35**. Angles le plus souvent non détectés : **transfert de risque** (25), **substitution** (23), **valeur d’option / irréversibilité** (21), **attendre / statu quo** (18), **objectif réel / substitution du moyen** (16), **effets de second ordre** (16), **condition de renversement** (14).
+Pages : **35**. Angles le plus souvent non détectés : **transfert de risque** (25), **substitution** (23), **valeur d’option / irréversibilité** (21), **attendre / statu quo** (18), **effets de second ordre** (17), **objectif réel / substitution du moyen** (16), **condition de renversement** (15).
 
 ### entrepreneuriat / activité
 
