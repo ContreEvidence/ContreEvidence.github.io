@@ -34,6 +34,7 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 10 | 7/15 | patrimoine / investissement / retraite | `dossiers/prix-attendre-finances.html` | effets de second ordre, transfert de risque, condition de renversement |
 | 10 | 7/15 | emploi / carrière / qualification | `dossiers/regles-responsabilites-fautes-travail.html` | acteur/gatekeeper, objectif réel / substitution du moyen, condition de renversement |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/accepter-emploi-plus-loin-cout-trajet.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen |
+| 9 | 8/15 | immobilier / crédit / indivision | `dossiers/acheter-logement-sans-se-fragiliser.html` | fractionnement, effets de second ordre, condition de renversement |
 | 9 | 8/15 | immobilier / crédit / indivision | `dossiers/assurer-ou-autoassurer-risques.html` | acteur/gatekeeper, valeur d’option / irréversibilité, condition de renversement |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/competences-qualification-employabilite.html` | substitution, objectif réel / substitution du moyen, condition de renversement |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/experience-devient-risque-recruteur.html` | acteur/gatekeeper, substitution, condition de renversement |
@@ -61,7 +62,6 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 9 | 10/15 | patrimoine / investissement / retraite | `dossiers/finances-allocation-portefeuille.html` | attendre / statu quo, condition de renversement, valeur d’option / irréversibilité |
 | 9 | 10/15 | patrimoine / investissement / retraite | `dossiers/finances-enveloppes-fiscalite.html` | attendre / statu quo, transfert de risque, condition de renversement |
 | 9 | 10/15 | patrimoine / investissement / retraite | `dossiers/finances-retraite-decumulation.html` | attendre / statu quo, effets de second ordre, condition de renversement |
-| 9 | 10/15 | immobilier / crédit / indivision | `dossiers/indivision-immobiliere-sortir-sans-subir.html` | acteur/gatekeeper, fractionnement, condition de renversement |
 
 ## Lecture par cluster
 
@@ -75,7 +75,7 @@ Pages : **27**. Angles le plus souvent non détectés : **attendre / statu quo**
 
 ### immobilier / crédit / indivision
 
-Pages : **23**. Angles le plus souvent non détectés : **acteur/gatekeeper** (17), **attendre / statu quo** (15), **condition de renversement** (15), **objectif réel / substitution du moyen** (14), **substitution** (14), **transfert de risque** (14), **effets de second ordre** (9).
+Pages : **23**. Angles le plus souvent non détectés : **acteur/gatekeeper** (17), **attendre / statu quo** (15), **condition de renversement** (15), **substitution** (15), **objectif réel / substitution du moyen** (14), **transfert de risque** (14), **effets de second ordre** (10).
 
 ### patrimoine / investissement / retraite
 
