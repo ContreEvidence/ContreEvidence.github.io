@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **15**
 - P1 — affirmation forte à resserrer ou vérifier : **56**
-- P2 — nécessité à examiner : **139**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **707**
+- P2 — nécessité à examiner : **141**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **708**
 
 ## P0 — rouvrir en priorité
 
@@ -159,6 +159,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Additionnez vos coûts fixes professionnels, la rémunération que l’activité doit permettre, les prélèvements sociaux et fiscaux qui dépendent de votre statut lorsqu’ils ne sont pas déjà intégrés, et une marge de sécurité.
 - **nécessité à requalifier ou sourcer** — Le prix facturé doit ensuite couvrir cette contribution plus les coûts variables liés à la prestation .
 - **nécessité à requalifier ou sourcer** — Mais elle nécessite 30 minutes d’aller-retour, 15 minutes de préparation, 10 minutes de messages et 5 minutes de facturation.
+### `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`
+- **nécessité à requalifier ou sourcer** — Ce qui doit faire renverser la décision Conclusion provisoire Observation nouvelle Révision Accepter B pour le temps les horaires réels restent aussi capturants que A le bénéfice acheté disparaît.
+- **nécessité à requalifier ou sourcer** — Commencez par ce que la baisse de salaire doit acheter Motif annoncé Besoin réel Substitution à tester avant de baisser le salaire « Je veux vivre mieux » moins de trajet / horaires plus prévisibles télétravail, autre site, horaires, poste voisin. _[temporalité]_
 ### `dossiers/allocation-patrimoine-selon-situation.html`
 - **nécessité à requalifier ou sourcer** — Avant une décision réelle, il faut intégrer fiscalité, dettes, patrimoine immobilier, droits à retraite, situation familiale, enveloppes disponibles et capacité personnelle à supporter une baisse. _[temporalité]_
 ### `dossiers/ameliorer-processus-sans-degrader-service.html`
