@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **15**
 - P1 — affirmation forte à resserrer ou vérifier : **60**
-- P2 — nécessité à examiner : **146**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **761**
+- P2 — nécessité à examiner : **148**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **763**
 
 ## P0 — rouvrir en priorité
 
@@ -229,8 +229,10 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/depenses-recurrentes-abonnements-assurances.html`
 - **nécessité à requalifier ou sourcer** — 03 · Ce qu’il faut inventorier Le poste « abonnements » est beaucoup plus large que Netflix ou Spotify.
 ### `dossiers/devenir-manager-premiere-fois.html`
-- **nécessité à requalifier ou sourcer** — Donner du feedback exploitable Évitez « il faut être plus rigoureux » ou « bon travail ».
-- **nécessité à requalifier ou sourcer** — Déléguer une responsabilité, pas une corvée Une délégation solide précise : le résultat attendu ; les limites de décision ; les ressources disponibles ; les points de contrôle ; ce qui doit être escaladé ; la date de revue. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Contre-Évidence Le premier rôle de manager est réussi deux fois : quand il vous donne une vraie première preuve d’encadrement, puis quand l’équipe cesse progressivement d’avoir besoin de vous pour les décisions qu’elle doit savoir prendre elle-même. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Devenir manager pour la première fois : accéder au rôle et réussir la prise de poste | Contre-Évidence Aller au contenu CONTRE-ÉVIDENCE Patrimoine Vie professionnelle Fenêtres Outils Bibliothèque Mon espace Pour obtenir un premier poste de manager, il faut souvent prouver une partie du métier avant d’avoir le titre. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Le premier management ne doit pas nécessairement maximiser le titre : il doit maximiser la probabilité de réussite et la valeur de la preuve suivante .
+- **nécessité à requalifier ou sourcer** — Pour le réussir, il faut ensuite arrêter de gagner sa valeur en faisant le travail des autres. _[temporalité]_
 ### `dossiers/emploi-chercher-accepter-negocier-evoluer.html`
 - **nécessité à requalifier ou sourcer** — Chaque modification doit produire une information.
 - **nécessité à requalifier ou sourcer** — Il faut intégrer le temps de trajet, les coûts supplémentaires, le télétravail, les horaires, la stabilité, l’apprentissage, les responsabilités et ce que le poste rend possible ensuite.
