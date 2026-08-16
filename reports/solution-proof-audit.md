@@ -7,7 +7,7 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **30**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **31**
 - S2 — possibilité générale à examiner : **15**
 - OK heuristique — condition ou preuve détectée : **156**
 
@@ -42,6 +42,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Plus les charges fixes sont élevées, plus ce transfert peut réduire la capacité à absorber une panne, une période d’essai rompue ou un autre projet. _[fort enjeu, condition détectée]_
 ### `dossiers/acheter-logement-sans-se-fragiliser.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Le montant d’apport optimal est ce qui reste une fois ces trois contraintes satisfaites — pas le maximum que vous pouvez virer au notaire. _[fort enjeu, preuve détectée]_
+### `dossiers/audit-copropriete-avant-achat.html`
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Pour un foyer très juste après achat, la deuxième architecture peut être plus robuste parce qu’elle permet de répondre à un appel imprévu sans crédit coûteux. _[fort enjeu, condition détectée]_
 ### `dossiers/business-plan-utile.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — C’est celui qui organise la prochaine preuve, le prochain engagement, la condition qui arrête le projet et la substitution qui permet de tester autrement avant de brûler une option coûteuse. _[fort enjeu, preuve détectée]_
 ### `dossiers/competences-qualification-employabilite.html`
