@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **108**. Validations devenues caduques après modification : **15**.
+Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **107**. Validations devenues caduques après modification : **16**.
 
 ## Priorité humaine
 
@@ -23,6 +23,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/patrimoine-marge-de-manoeuvre.html` | `3e2dd7332b7c2063c63dbad30055168a61266868` | `50b975f0203803c81a54e764c76094e85630be34` |
 | `dossiers/capacite-refuser-travail-rentabilite.html` | `aace252f32a1faf81cf6e0a4665e9b60e694129e` | `91ebe0bb0dc7e77c7a5a042210a2f54a7e04570e` |
 | `dossiers/previsionnel-activite-12-mois.html` | `ec3ebe88a9923f6802788dd5fb1a65c113e220ae` | `f35cb5ed9159e68ac5caa6ea95ae5742ab5b7b8e` |
+| `articles/tester-metier-avant-investir.html` | `2d26e84a1aec867f3f795a7fe5076e5514259709` | `f0869a70482faef780134015edccb92309295c47` |
 | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` | `f1faf0bbb75b36b784e38e370c13eb49654a622f` | `cd3b8d01fbf0c7fffab2c109fcca1a2b0ecbae7b` |
 | `dossiers/reconversion-sans-perte-salaire.html` | `128613ebf08c799823434c76e96f628ec6102a5a` | `a3bf47dce0da390a93742f2dcbac9dc557d188e8` |
 | `dossiers/sante-travail-equilibre-vie-pro-perso.html` | `9075afe1528f2f4c763aa2ee6146d95a22ade56b` | `e0c5f4d97e9b96ce87e1cf00e611cddcbe349312` |
@@ -88,7 +89,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/combien-epargne-avant-demissionner.html` — 8/9 automatique — Runway par déficit réel, qualité de la liquidité, droits seulement après vérification, trois scénarios, valeur de l’information et seuils de départ/renoncement déjà structurés.
 - `dossiers/piloter-patrimoine-selon-taille.html` — 8/9 automatique — Montant distingué de la complexité, risque dominant par phase, budget de complexité, seuil de recours au conseil et contre-exemples déjà structurés.
 - `dossiers/dependance-gros-client.html` — 8/9 automatique — Concentration, rupture du client principal, mois de survie, diversification causale et plan de réduction de dépendance déjà structurés.
-- `articles/tester-metier-avant-investir.html` — 8/9 automatique — Hypothèses écrites avant test, offres réelles, immersion, contraintes, budget, contradiction externe et critères poursuivre/modifier/arrêter déjà structurés.
 - `dossiers/lancer-activite-sans-quitter-emploi.html` — 8/9 automatique — Lancement parallèle, contraintes à vérifier, seuils de bascule et séquençage avant abandon du revenu salarié déjà structurés.
 - `dossiers/audit-copropriete-avant-achat.html` — 8/9 automatique — Documents, charges, travaux, gouvernance, scénarios de choc et signaux de renoncement déjà structurés.
 - `dossiers/negocier-salaire-responsabilites.html` — 8/9 automatique — Poste réel versus surcharge, package complet, BATNA, coût de rester, contreparties alternatives, horizon et seuil de mobilité externe déjà structurés.
@@ -201,7 +201,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1410 | humaine ✓ | `dossiers/combien-epargne-avant-demissionner.html` |
 | 8/9 | 1411 | humaine ✓ | `dossiers/piloter-patrimoine-selon-taille.html` |
 | 8/9 | 1414 | humaine ✓ | `dossiers/dependance-gros-client.html` |
-| 8/9 | 1421 | humaine ✓ | `articles/tester-metier-avant-investir.html` |
 | 8/9 | 1425 | humaine ✓ | `dossiers/lancer-activite-sans-quitter-emploi.html` |
 | 8/9 | 1435 | humaine ✓ | `dossiers/audit-copropriete-avant-achat.html` |
 | 8/9 | 1435 | humaine ✓ | `dossiers/negocier-salaire-responsabilites.html` |
@@ -219,6 +218,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1799 | humaine ✓ | `dossiers/decider-sans-tourner-en-rond.html` |
 | 8/9 | 2036 | à revoir après changement | `dossiers/previsionnel-activite-12-mois.html` |
 | 8/9 | 2123 | humaine ✓ | `dossiers/plan-30-jours-recherche-emploi.html` |
+| 8/9 | 2183 | à revoir après changement | `articles/tester-metier-avant-investir.html` |
 | 8/9 | 2197 | humaine ✓ | `dossiers/allocation-patrimoine-selon-situation.html` |
 | 8/9 | 2320 | humaine ✓ | `dossiers/methode-analyse-complete.html` |
 | 8/9 | 2533 | humaine ✓ | `dossiers/metiers-accessibles-sans-diplome.html` |
