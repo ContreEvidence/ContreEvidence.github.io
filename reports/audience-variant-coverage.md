@@ -20,13 +20,12 @@ Pages/familles détectées : **44**. Pages `noindex` exclues : **79**. Promesses
 | 15 | NON_READY | reconversion / trajectoire pro | `dossiers/combien-epargne-avant-demissionner.html` | salarié, sans diplôme |
 | 14 | NON_READY | couple / logement / séparation | `dossiers/patrimoine-marge-de-manoeuvre.html` | mariage, PACS |
 | 14 | NON_READY | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
-| 10 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/changer-travail-avant-credit-immobilier.html` | santé / inaptitude, sans diplôme |
+| 9 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/changer-travail-avant-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 8 | NON_READY | entrepreneuriat | `dossiers/formation-vaut-elle-le-cout.html` | micro / EI / société |
 | 7 | NON_READY | reconversion / trajectoire pro | `articles/competences-transferables.html` | revenu / runway |
 | 7 | NON_READY | entrepreneuriat | `dossiers/are-arce-acre-creation-entreprise.html` | activité réglementée |
 | 7 | NON_READY | budget / dettes | `dossiers/creer-entreprise-avec-peu-argent.html` | revenu stable / variable |
 | 7 | NON_READY | budget / dettes | `dossiers/patrimoine-marge-de-manoeuvre.html` | déficit temporaire / structurel |
-| 5 | ROUTE_FIRST | achat immobilier / crédit | `dossiers/changer-travail-avant-credit-immobilier.html` | indépendant |
 | 5 | ROUTE_FIRST | achat immobilier / crédit | `dossiers/indivision-couple-separation-rachat-soulte.html` | indépendant |
 | 5 | ROUTE_FIRST | couple / logement / séparation | `dossiers/indivision-couple-separation-rachat-soulte.html` | SCI |
 | 5 | ROUTE_FIRST | travailler moins / qualité de vie | `dossiers/passer-80-pourcent-cout-reel.html` | indépendant |
@@ -42,6 +41,7 @@ Pages/familles détectées : **44**. Pages `noindex` exclues : **79**. Promesses
 | 0 | COVERED_OR_NARROW | achat immobilier / crédit | `dossiers/acheter-logement-sans-se-fragiliser.html` | — |
 | 0 | COVERED_OR_NARROW | achat immobilier / crédit | `dossiers/acheter-sans-vider-epargne.html` | — |
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/audit-budget-60-minutes.html` | — |
+| 0 | COVERED_OR_NARROW | achat immobilier / crédit | `dossiers/changer-travail-avant-credit-immobilier.html` | — |
 | 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/combien-chiffre-affaires-pour-vivre.html` | — |
 | 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/creer-entreprise-avec-peu-argent.html` | — |
 | 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/creer-entreprise-sans-diplome.html` | — |
@@ -256,7 +256,7 @@ Pages détectées : **8**. Promesses larges `NON_READY` : **5**. Variantes le pl
 
 ### achat immobilier / crédit
 
-Pages détectées : **5**. Promesses larges `NON_READY` : **0**. Variantes le plus souvent non détectées : **indépendant** (2), **public** (2), **mobilité / changement emploi** (1).
+Pages détectées : **5**. Promesses larges `NON_READY` : **0**. Variantes le plus souvent non détectées : **indépendant** (1), **mobilité / changement emploi** (1), **public** (1).
 
 ### investissement locatif
 
@@ -268,7 +268,7 @@ Pages détectées : **1**. Promesses larges `NON_READY` : **0**. Variantes le pl
 
 ### reconversion / trajectoire pro
 
-Pages détectées : **11**. Promesses larges `NON_READY` : **4**. Variantes le plus souvent non détectées : **public** (8), **senior / âge** (8), **indépendant** (7), **sans diplôme** (4), **santé / inaptitude** (3), **revenu / runway** (2).
+Pages détectées : **11**. Promesses larges `NON_READY` : **4**. Variantes le plus souvent non détectées : **senior / âge** (8), **public** (7), **indépendant** (6), **sans diplôme** (4), **santé / inaptitude** (3), **revenu / runway** (2).
 
 ### entrepreneuriat
 
