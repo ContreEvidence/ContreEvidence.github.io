@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **119**. Validations devenues caduques après modification : **3**.
+Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **118**. Validations devenues caduques après modification : **4**.
 
 ## Priorité humaine
 
@@ -19,13 +19,13 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | Page | SHA relu | SHA courant |
 |---|---|---|
 | `dossiers/decision-plan-30-90-jours.html` | `bbaaeeb8eb455d09d2f350f771cbb35631f71e17` | `c7bd8f5cd0a197ead2e0ebe3d947f0cacbc0d46c` |
+| `articles/competences-invisibles-preuves.html` | `cdc64be6a4013f201888b529313621f4c4ab3e3e` | `1894940607caec4067fd8609603f3e5ebe4233f2` |
 | `articles/clients-interesses-personne-nachete.html` | `d1c27c49f015873e1efdb0b95230274d18688c46` | `36393db1ca7c359beb075a4b3fe0e25fa86ee8bb` |
 | `dossiers/creer-entreprise-avec-peu-argent.html` | `c33927e54db0adede8026a6125f2848b70abf6b4` | `99fb67ac5498b3634df87e18d728af131d32c06e` |
 
 ## Pages validées humainement et inchangées
 
 - `dossiers/trouver-premiers-clients.html` — 6/9 automatique — Entonnoir causal, canaux alternatifs, seuils d’arrêt et changement d’offre déjà explicites.
-- `articles/competences-invisibles-preuves.html` — 6/9 automatique — Preuve comme réduction du risque, création d’expérience et test de crédibilité déjà structurés.
 - `articles/entretien-rate-ce-qui-bloque.html` — 6/9 automatique — Diagnostic de conversion, hypothèses concurrentes, retours convergents et conditions de recalibrage déjà présents.
 - `dossiers/combien-chiffre-affaires-pour-vivre.html` — 6/9 automatique — Seuils, capacité, scénario adverse et inversion de conclusion déjà explicites.
 - `dossiers/etre-riche-revenu-patrimoine-liberte.html` — 6/9 automatique — Page de clarification conceptuelle : plusieurs définitions et inversion selon la question déjà traitées.
@@ -149,7 +149,6 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | Score | Mots | Revue | Page |
 |---:|---:|---|---|
 | 6/9 | 1019 | humaine ✓ | `dossiers/trouver-premiers-clients.html` |
-| 6/9 | 1108 | humaine ✓ | `articles/competences-invisibles-preuves.html` |
 | 6/9 | 1115 | humaine ✓ | `articles/entretien-rate-ce-qui-bloque.html` |
 | 6/9 | 1246 | humaine ✓ | `dossiers/combien-chiffre-affaires-pour-vivre.html` |
 | 6/9 | 1353 | humaine ✓ | `dossiers/etre-riche-revenu-patrimoine-liberte.html` |
@@ -217,6 +216,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1425 | humaine ✓ | `dossiers/lancer-activite-sans-quitter-emploi.html` |
 | 8/9 | 1435 | humaine ✓ | `dossiers/audit-copropriete-avant-achat.html` |
 | 8/9 | 1435 | humaine ✓ | `dossiers/negocier-salaire-responsabilites.html` |
+| 8/9 | 1477 | à revoir après changement | `articles/competences-invisibles-preuves.html` |
 | 8/9 | 1490 | humaine ✓ | `dossiers/temps-energie-qualite-vie.html` |
 | 8/9 | 1549 | humaine ✓ | `dossiers/favoriser-un-enfant-succession-donation.html` |
 | 8/9 | 1554 | humaine ✓ | `dossiers/indivision-loyers-charges-comptes.html` |
