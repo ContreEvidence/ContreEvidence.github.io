@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
 - P1 — affirmation forte à resserrer ou vérifier : **65**
-- P2 — nécessité à examiner : **157**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **857**
+- P2 — nécessité à examiner : **156**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **856**
 
 ## P0 — rouvrir en priorité
 
@@ -238,8 +238,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — L'action des 7 jours doit produire du mouvement ou de l'information Une bonne première action est extérieure à votre tête. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Le plan 30/90 doit contenir plusieurs lignes en parallèle Un projet échoue souvent parce qu'il est traité comme une file d'attente : « d'abord la formation, puis le CV, puis les candidatures ».
 - **nécessité à requalifier ou sourcer** — Le plan doit donc comporter une colonne « effet combiné », pas seulement une liste de grandes décisions.
-### `dossiers/dependance-gros-client.html`
-- **nécessité à requalifier ou sourcer** — Ne remplacez pas un gros client par dix mauvais clients : diversifier doit préserver la marge. _[temporalité]_
 ### `dossiers/depenses-recurrentes-abonnements-assurances.html`
 - **nécessité à requalifier ou sourcer** — 03 · Ce qu’il faut inventorier Le poste « abonnements » est beaucoup plus large que Netflix ou Spotify.
 ### `dossiers/devenir-manager-premiere-fois.html`
