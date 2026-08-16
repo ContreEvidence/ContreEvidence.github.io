@@ -67,7 +67,7 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 
 ### emploi / carrière / qualification
 
-Pages : **36**. Angles le plus souvent non détectés : **transfert de risque** (24), **substitution** (22), **valeur d’option / irréversibilité** (21), **attendre / statu quo** (18), **effets de second ordre** (17), **objectif réel / substitution du moyen** (16), **condition de renversement** (16).
+Pages : **36**. Angles le plus souvent non détectés : **transfert de risque** (24), **substitution** (22), **valeur d’option / irréversibilité** (21), **attendre / statu quo** (18), **condition de renversement** (17), **effets de second ordre** (17), **objectif réel / substitution du moyen** (16).
 
 ### entrepreneuriat / activité
 
