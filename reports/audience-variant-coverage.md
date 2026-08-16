@@ -6,14 +6,13 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **27**.
+Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **26**.
 
 ## Priorités de relecture
 
 | Priorité | Gate | Famille | Page | Variantes critiques non détectées |
 |---:|---|---|---|---|
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/devenir-manager-premiere-fois.html` | demandeur emploi, santé / inaptitude, sans diplôme, revenu / runway |
-| 28 | NON_READY | reconversion / trajectoire pro | `dossiers/patrimoine-marge-de-manoeuvre.html` | salarié, demandeur emploi, santé / inaptitude, sans diplôme |
 | 28 | NON_READY | transmission / succession | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | mariage / conjoint, PACS / concubin, enfants / famille recomposée, SCI / parts |
 | 28 | NON_READY | travailler moins / qualité de vie | `dossiers/temps-energie-qualite-vie.html` | salarié privé, public, indépendant, retraite / protection |
 | 22 | NON_READY | reconversion / trajectoire pro | `articles/retrouver-emploi-apres-interruption.html` | salarié, demandeur emploi, sans diplôme |
@@ -27,10 +26,10 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 | 15 | NON_READY | reconversion / trajectoire pro | `dossiers/combien-epargne-avant-demissionner.html` | salarié, sans diplôme |
 | 15 | NON_READY | budget / dettes | `dossiers/creer-entreprise-avec-peu-argent.html` | déficit temporaire / structurel, dette / surendettement |
 | 15 | NON_READY | reconversion / trajectoire pro | `dossiers/decider-a-deux-travail-patrimoine.html` | demandeur emploi, sans diplôme |
+| 15 | NON_READY | budget / dettes | `dossiers/patrimoine-marge-de-manoeuvre.html` | revenu stable / variable, charges compressibles / non |
 | 14 | NON_READY | achat immobilier / crédit | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` | CDD / temporaire, indépendant |
 | 14 | NON_READY | entrepreneuriat | `dossiers/combien-chiffre-affaires-pour-vivre.html` | micro / EI / société, activité réglementée |
 | 14 | NON_READY | entrepreneuriat | `dossiers/creer-entreprise-avec-peu-argent.html` | micro / EI / société, activité réglementée |
-| 14 | NON_READY | budget / dettes | `dossiers/patrimoine-marge-de-manoeuvre.html` | déficit temporaire / structurel, revenu stable / variable |
 | 14 | NON_READY | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 10 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/changer-travail-avant-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 10 | NON_READY | couple / logement / séparation | `dossiers/decider-a-deux-travail-patrimoine.html` | SCI |
@@ -71,21 +70,6 @@ Promesse : **devenir manager pour la première fois : changer de métier sans de
 | sans diplôme | MANQUANTE |
 | senior / âge | MANQUANTE |
 | revenu / runway | MANQUANTE |
-
-### `dossiers/patrimoine-marge-de-manoeuvre.html` — reconversion / trajectoire pro
-
-Promesse : **patrimoine et marge de manœuvre : combien de liberté vos actifs vous donnent-ils ? | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| salarié | MANQUANTE |
-| demandeur emploi | MANQUANTE |
-| public | MANQUANTE |
-| indépendant | MANQUANTE |
-| santé / inaptitude | MANQUANTE |
-| sans diplôme | MANQUANTE |
-| senior / âge | MANQUANTE |
-| revenu / runway | TRAITEE |
 
 ### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` — transmission / succession
 
@@ -281,6 +265,19 @@ Promesse : **décider à deux : travail, mobilité et patrimoine sans fragiliser
 | senior / âge | MANQUANTE |
 | revenu / runway | TRAITEE |
 
+### `dossiers/patrimoine-marge-de-manoeuvre.html` — budget / dettes
+
+Promesse : **patrimoine et marge de manœuvre : combien de liberté vos actifs donnent-ils ? | contre-évidence**
+
+| Variante | Signal automatique |
+|---|---|
+| déficit temporaire / structurel | MENTIONNEE |
+| revenu stable / variable | MANQUANTE |
+| solo / couple | TRAITEE |
+| logement propriétaire / locataire | MANQUANTE |
+| dette / surendettement | TRAITEE |
+| charges compressibles / non | MANQUANTE |
+
 ### `dossiers/acheter-ou-louer-si-on-risque-demenager.html` — achat immobilier / crédit
 
 Promesse : **acheter ou louer si vous risquez de déménager bientôt ? | contre-évidence**
@@ -323,19 +320,6 @@ Promesse : **créer une entreprise avec peu d’argent : budget de départ réal
 | TVA | MANQUANTE |
 | financement / BFR | TRAITEE |
 | associés | MANQUANTE |
-
-### `dossiers/patrimoine-marge-de-manoeuvre.html` — budget / dettes
-
-Promesse : **patrimoine et marge de manœuvre : combien de liberté vos actifs vous donnent-ils ? | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| déficit temporaire / structurel | MANQUANTE |
-| revenu stable / variable | MANQUANTE |
-| solo / couple | TRAITEE |
-| logement propriétaire / locataire | MANQUANTE |
-| dette / surendettement | TRAITEE |
-| charges compressibles / non | TRAITEE |
 
 ### `dossiers/quitter-cdi-avec-credit-immobilier.html` — reconversion / trajectoire pro
 
@@ -477,7 +461,7 @@ Pages détectées : **2**. Promesses larges `NON_READY` : **2**. Variantes le pl
 
 ### reconversion / trajectoire pro
 
-Pages détectées : **14**. Promesses larges `NON_READY` : **10**. Variantes le plus souvent non détectées : **public** (14), **senior / âge** (13), **indépendant** (12), **sans diplôme** (10), **santé / inaptitude** (7), **demandeur emploi** (6).
+Pages détectées : **13**. Promesses larges `NON_READY` : **9**. Variantes le plus souvent non détectées : **public** (13), **senior / âge** (12), **indépendant** (11), **sans diplôme** (9), **santé / inaptitude** (6), **demandeur emploi** (5).
 
 ### entrepreneuriat
 
@@ -485,7 +469,7 @@ Pages détectées : **5**. Promesses larges `NON_READY` : **3**. Variantes le pl
 
 ### budget / dettes
 
-Pages détectées : **6**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **logement propriétaire / locataire** (3), **déficit temporaire / structurel** (2), **dette / surendettement** (1), **revenu stable / variable** (1).
+Pages détectées : **6**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **logement propriétaire / locataire** (3), **charges compressibles / non** (1), **dette / surendettement** (1), **déficit temporaire / structurel** (1), **revenu stable / variable** (1).
 
 ### travailler moins / qualité de vie
 
