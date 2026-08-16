@@ -1,0 +1,81 @@
+name: Batch 30 roadmap financial tools
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Add stage-specific financial tools to the life roadmap
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          roadmap = Path('parcours-de-vie.html')
+          text = roadmap.read_text(encoding='utf-8')
+
+          css_old = '.roadmap-stage .signal{margin-top:.8rem;padding-top:.7rem;border-top:1px solid rgba(16,24,32,.1);font-size:.88rem}'
+          css_new = css_old + '.roadmap-stage .tools{margin-top:.7rem;padding:.72rem .78rem;border-left:3px solid #d4ab56;background:#faf8f2;font-size:.9rem}.roadmap-stage .tools a{font-weight:850;text-decoration:none}.roadmap-stage .tools strong{display:block;margin-bottom:.18rem}'
+          assert text.count(css_old) == 1, text.count(css_old)
+          text = text.replace(css_old, css_new, 1)
+
+          replacements = {
+          '<p class="signal"><strong>Signal de passage :</strong> un imprévu ordinaire ne remet plus tout à zéro et votre travail commence à produire des preuves réutilisables.</p>': '<p class="tools"><strong>Outils à regarder maintenant</strong><a href="dossiers/liquidites-reserve-securite.html">LEP si vous y avez droit, Livret A puis LDDS</a> pour la réserve disponible. Une fois ce socle crédible, un <a href="dossiers/finances-enveloppes-fiscalite.html">PEA et/ou une bonne assurance-vie</a> peuvent être ouverts avec peu pour lancer leur ancienneté si vous avez une vraie raison de les utiliser plus tard. Si votre employeur abonde un PEE, comparez-le avant de l’ignorer.</p><p class="signal"><strong>Signal de passage :</strong> un imprévu ordinaire ne remet plus tout à zéro et votre travail commence à produire des preuves réutilisables.</p>',
+          '<p class="signal"><strong>Signal de passage :</strong> vous pouvez absorber une transition professionnelle raisonnable sans devoir vendre un placement ou accepter immédiatement le premier poste disponible.</p>': '<p class="tools"><strong>Outils à regarder maintenant</strong>La réserve reste sur des supports liquides et sûrs. Pour l’argent réellement long terme, le <a href="dossiers/finances-enveloppes-fiscalite.html">PEA devient souvent l’enveloppe naturelle à étudier pour les actions</a> ; une assurance-vie peut compléter pour d’autres horizons, supports et usages. <strong>Un bon contrat suffit généralement au départ :</strong> plusieurs assurances-vie n’ont d’intérêt que si elles remplissent des fonctions distinctes.</p><p class="signal"><strong>Signal de passage :</strong> vous pouvez absorber une transition professionnelle raisonnable sans devoir vendre un placement ou accepter immédiatement le premier poste disponible.</p>',
+          '<p class="signal"><strong>Signal de passage :</strong> la perte d’un seul revenu, client, employeur ou actif important ne détruit pas simultanément tout le plan familial.</p>': '<p class="tools"><strong>Outils à regarder maintenant</strong>Conservez le couple réserve liquide + capital long terme, puis vérifiez que PEA et assurance-vie ont chacun un rôle. Une deuxième assurance-vie peut se justifier par la qualité d’un autre assureur, des supports, des bénéficiaires ou un objectif séparé — <strong>jamais seulement pour collectionner les contrats</strong>. Le PER devient pertinent à étudier seulement si l’horizon retraite, la fiscalité et la moindre liquidité rendent réellement l’arbitrage favorable.</p><p class="signal"><strong>Signal de passage :</strong> la perte d’un seul revenu, client, employeur ou actif important ne détruit pas simultanément tout le plan familial.</p>',
+          '<p class="signal"><strong>Signal de passage :</strong> une évolution ou une rupture de carrière reste possible sans mettre en danger les objectifs essentiels du foyer.</p>': '<p class="tools"><strong>Outils à regarder maintenant</strong>Faites l’audit des enveloppes déjà ouvertes avant d’en ajouter : frais, ancienneté, bénéficiaires, allocation, doublons et argent réellement disponible. PEA et assurance-vie peuvent continuer à porter le long terme ; le PER peut gagner en intérêt dans certaines situations fiscales et de retraite. Le CTO reste surtout un outil de besoin spécifique lorsque l’exposition recherchée n’entre pas correctement dans les enveloppes existantes.</p><p class="signal"><strong>Signal de passage :</strong> une évolution ou une rupture de carrière reste possible sans mettre en danger les objectifs essentiels du foyer.</p>',
+          '<p class="signal"><strong>Signal de passage :</strong> le plan reste acceptable avec un départ décalé, une baisse de marché ou une dépense importante non prévue.</p>': '<p class="tools"><strong>Outils à regarder maintenant</strong>Le sujet n’est plus d’ouvrir des produits pour cocher des cases. Il faut préparer <a href="dossiers/finances-retraite-decumulation.html">les poches de liquidité et l’ordre d’utilisation</a> du Livret/monétaire, de l’assurance-vie, du PEA et du PER, en cohérence avec pensions, fiscalité, logement et risque de marché.</p><p class="signal"><strong>Signal de passage :</strong> le plan reste acceptable avec un départ décalé, une baisse de marché ou une dépense importante non prévue.</p>',
+          '<p class="signal"><strong>Point de contrôle :</strong> le conjoint ou les proches pourraient comprendre l’architecture, et une dépense de longévité ou de dépendance ne rend pas la transmission prévue irréaliste.</p>': '<p class="tools"><strong>Outils à regarder maintenant</strong>Gardez suffisamment de liquidités simples pour les besoins proches, conservez du long terme seulement quand son horizon le justifie, révisez les clauses bénéficiaires des assurances-vie et simplifiez les contrats devenus inutiles. À ce stade, <strong>la lisibilité de l’architecture peut valoir davantage qu’une enveloppe supplémentaire</strong>.</p><p class="signal"><strong>Point de contrôle :</strong> le conjoint ou les proches pourraient comprendre l’architecture, et une dépense de longévité ou de dépendance ne rend pas la transmission prévue irréaliste.</p>'
+          }
+
+          for old, new in replacements.items():
+              assert text.count(old) == 1, (old[:80], text.count(old))
+              text = text.replace(old, new, 1)
+
+          rule_anchor = '<div class="roadmap-rules">'
+          guide = '<div class="journey-note"><strong>Ce ne sont pas des cases à cocher à un âge donné.</strong>Un livret sert d’abord à rendre l’argent disponible et sûr ; un PEA sert surtout un capital actions de long terme ; une assurance-vie peut servir plusieurs horizons et la transmission ; un PER sert une logique retraite et fiscale avec davantage de contraintes. <strong>La bonne question est toujours : quelle fonction manque à mon patrimoine maintenant ?</strong> <a href="dossiers/finances-enveloppes-fiscalite.html">Comparer les enveloppes et leurs règles →</a></div>'
+          assert text.count(rule_anchor) == 1, text.count(rule_anchor)
+          text = text.replace(rule_anchor, guide + rule_anchor, 1)
+          roadmap.write_text(text, encoding='utf-8')
+
+          age = Path('dossiers/patrimoine-selon-age-construire-utiliser.html')
+          age_text = age.read_text(encoding='utf-8')
+          age_text = age_text.replace('<meta name="dateModified" content="2026-08-15"/>', '<meta name="dateModified" content="2026-08-16"/>', 1)
+          age_text = age_text.replace('<meta property="article:modified_time" content="2026-08-15"/>', '<meta property="article:modified_time" content="2026-08-16"/>', 1)
+          anchor = '<h2>14. Le standard Contre-Évidence</h2>'
+          block = '''<h2>14. Quels comptes et enveloppes deviennent utiles selon la phase ?</h2><p>Pour un débutant, parler seulement de « réserve », « long terme » ou « diversification » reste trop abstrait. Voici la traduction en outils concrets. <strong>Ce tableau indique quand un produit mérite d’être étudié, pas l’âge auquel il devient obligatoire.</strong></p><div class="compare-wrap"><table class="compare-table"><thead><tr><th>Situation</th><th>Outils à regarder en premier</th><th>Pourquoi</th><th>Ce qu’il ne faut pas précipiter</th></tr></thead><tbody><tr><td>Budget encore fragile / réserve incomplète</td><td><strong>LEP si éligible, Livret A, LDDS</strong></td><td>Argent disponible, capital non exposé aux marchés, intérêts des livrets réglementés exonérés d’impôt sur le revenu et de prélèvements sociaux.</td><td>Immobiliser l’épargne de secours ou chercher du rendement avec l’argent du prochain imprévu.</td></tr><tr><td>Réserve solide + premier capital vraiment long terme</td><td><strong>PEA</strong> pour une exposition actions compatible ; <strong>une assurance-vie de qualité</strong> si elle a une fonction plausible ; <strong>PEE</strong> à comparer si l’employeur apporte un abondement.</td><td>Le premier versement lance l’ancienneté du PEA ; l’assurance-vie acquiert aussi une ancienneté utile. Ouvrir avec peu et investir massivement sont deux décisions différentes.</td><td>Ouvrir cinq enveloppes ou investir l’apport immobilier / la réserve uniquement pour « prendre date ».</td></tr><tr><td>Accumulation régulière</td><td><strong>Réserve réglementée + PEA + éventuellement assurance-vie</strong></td><td>Les fonctions se séparent : sécurité immédiate, croissance long terme, puis complément flexible selon supports et objectifs.</td><td>Multiplier les contrats sans objectif, ou utiliser le CTO alors que l’exposition tient simplement dans une enveloppe plus adaptée.</td></tr><tr><td>Foyer, immobilier, patrimoine qui se complexifie</td><td>PEA et assurance-vie à organiser ; <strong>deuxième assurance-vie seulement avec une raison</strong> ; protection/prévoyance à vérifier ; PER à étudier au cas par cas.</td><td>La diversification ne concerne plus seulement les actifs : assureurs, bénéficiaires, liquidité, dette et dépendance aux revenus comptent aussi.</td><td>Considérer le PER comme obligatoire parce que la retraite existe ou ouvrir plusieurs assurances-vie par réflexe.</td></tr><tr><td>45–60 ans / capacité d’épargne souvent plus forte</td><td>Audit des PEA/assurances-vie existants ; retraite et bénéficiaires ; <strong>PER si l’économie fiscale et l’horizon compensent la contrainte</strong>.</td><td>Le temps avant usage se raccourcit alors que le patrimoine peut accélérer : l’organisation des enveloppes devient aussi importante que leur ouverture.</td><td>Ajouter des produits au lieu de corriger frais, concentration, mauvais bénéficiaires ou absence de liquidité.</td></tr><tr><td>Retraite à quelques années</td><td>Livret/monétaire pour les besoins proches ; PEA, assurance-vie et PER organisés par horizon et ordre de retrait.</td><td>Le portefeuille doit bientôt financer des flux : la séquence de décumulation devient une décision de premier rang.</td><td>Tout sécuriser d’un coup ou, à l’inverse, conserver en marché l’argent nécessaire aux premières années.</td></tr><tr><td>Retraite / transmission</td><td>Liquidité simple, assurance-vie et autres actifs conservés selon leur rôle ; architecture progressivement simplifiée.</td><td>Une partie du capital peut rester long terme, mais accessibilité, compréhension par le conjoint/proches et transmission prennent plus de poids.</td><td>Conserver une usine à gaz pour un avantage fiscal marginal.</td></tr></tbody></table></div><div class="decision-box"><h3>Une ou plusieurs assurances-vie ?</h3><p><strong>Pour un débutant, une bonne assurance-vie suffit généralement.</strong> Un deuxième contrat devient rationnel s’il apporte une fonction distincte : autre assureur, meilleurs supports, séparation claire d’objectifs ou de bénéficiaires, ou conservation de l’ancienneté d’un vieux contrat pendant que les nouveaux versements vont vers un contrat plus efficace. « En avoir plusieurs » n’est pas un objectif patrimonial.</p></div><div class="decision-box"><h3>Et le PER ?</h3><p>Il ne constitue pas une marche obligatoire après le PEA et l’assurance-vie. Il devient intéressant lorsque l’argent est réellement destiné à la retraite, que la liquidité plus faible est acceptable et que l’avantage fiscal attendu justifie les règles de sortie. <strong>Le bon âge n’existe pas ; le bon arbitrage fiscal et temporel, oui.</strong></p></div><p><a href="finances-enveloppes-fiscalite.html"><strong>→ Comparer en détail PEA, assurance-vie, CTO et PER</strong></a> · <a href="premier-investissement-comment-commencer.html"><strong>Premier investissement : passer de la réserve au marché →</strong></a></p><h2>15. Le standard Contre-Évidence</h2>'''
+          assert age_text.count(anchor) == 1, age_text.count(anchor)
+          age_text = age_text.replace(anchor, block, 1)
+          age.write_text(age_text, encoding='utf-8')
+
+          env = Path('dossiers/finances-enveloppes-fiscalite.html')
+          env_text = env.read_text(encoding='utf-8')
+          back_anchor = '<article class="prose">'
+          backlink = '<article class="prose"><p><a href="../parcours-de-vie.html#feuille-route"><strong>→ Voir à quel stade ces enveloppes deviennent utiles dans la feuille de route complète</strong></a></p>'
+          if 'Voir à quel stade ces enveloppes deviennent utiles' not in env_text:
+              assert env_text.count(back_anchor) == 1, env_text.count(back_anchor)
+              env_text = env_text.replace(back_anchor, backlink, 1)
+              env.write_text(env_text, encoding='utf-8')
+
+          report = Path('reports/content-review-decisions-2026-08-16-batch-30.md')
+          report.write_text('''# Revue éditoriale autonome — lot 30 — 16 août 2026\n\n## Déficit traité\nLa feuille de route indiquait les fonctions patrimoniales à construire mais restait trop abstraite pour un débutant : elle ne disait pas quand les livrets réglementés, le PEA, l’assurance-vie, l’épargne salariale, le CTO ou le PER deviennent concrètement pertinents à examiner.\n\n## Décisions\n- **REWRITE ciblé — `parcours-de-vie.html`** : chaque phase affiche désormais les outils financiers à regarder à ce stade, avec conditions et contre-indications.\n- **REWRITE ciblé — `dossiers/patrimoine-selon-age-construire-utiliser.html`** : ajout d’une grille opérationnelle phase → outils → fonction → erreur à éviter.\n- **LINK — `dossiers/finances-enveloppes-fiscalite.html`** : retour vers la feuille de route pour replacer les enveloppes dans le cycle de vie.\n- **PRESERVE — `dossiers/premier-investissement-comment-commencer.html`** : la page couvre déjà correctement le passage réserve → horizon → allocation → enveloppe → premier ordre.\n\n## Doctrine\n1. Un âge déclenche une question, pas l’ouverture obligatoire d’un produit.\n2. Les fonctions précèdent les enveloppes : sécurité, projet daté, capital long terme, retraite, transmission.\n3. LEP/Livret A/LDDS servent d’abord la disponibilité et la sécurité.\n4. PEA et assurance-vie peuvent avoir une valeur d’option d’ancienneté, mais ouvrir avec peu et financer fortement sont deux décisions distinctes.\n5. Une assurance-vie de qualité suffit généralement au début ; plusieurs contrats exigent une raison explicite.\n6. Le PER est conditionnel à l’horizon retraite, à la fiscalité et au coût de l’illiquidité.\n7. L’épargne salariale doit être regardée tôt lorsqu’un abondement employeur peut modifier l’ordre des priorités.\n8. À l’approche de la retraite, l’ordre d’utilisation et la liquidité deviennent plus importants que l’ajout de nouvelles enveloppes.\n''', encoding='utf-8')
+          PY
+      - name: Commit batch 30
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add parcours-de-vie.html dossiers/patrimoine-selon-age-construire-utiliser.html dossiers/finances-enveloppes-fiscalite.html reports/content-review-decisions-2026-08-16-batch-30.md
+          git diff --cached --check
+          git commit -m "Add financial tools to the life roadmap"
+          git push
