@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **14**
 - P1 — affirmation forte à resserrer ou vérifier : **48**
-- P2 — nécessité à examiner : **145**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **599**
+- P2 — nécessité à examiner : **147**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **600**
 
 ## P0 — rouvrir en priorité
 
@@ -309,6 +309,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `parcours-de-vie.html`
 - **nécessité à requalifier ou sourcer** — C Je veux organiser ou investir mon capital Faire découler la répartition de votre argent de vos projets, de ce qui doit rester disponible, du risque acceptable et du temps dont vous disposez. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Il faut la transformer en étapes ordonnées, avec des ressources, des délais et des points de contrôle.
+### `parcours-pilotage-professionnel.html`
+- **nécessité à requalifier ou sourcer** — Le bon signal « Une capacité auparavant invisible est désormais prouvée et reconnue par un acteur extérieur. » Signaux de trajectoire Ce qui doit déclencher une action.
+- **nécessité à requalifier ou sourcer** — Tester le marché → 04 · Revue Qu'est-ce qui doit changer dans les 90 prochains jours ? _[temporalité]_
 ### `simulateur-cout-formation.html`
 - **nécessité à requalifier ou sourcer** — Non Partiellement Oui, par immersion / pratique / mission Quel verrou précis la formation doit-elle lever ? _[temporalité]_
 ### `simulateur-decumulation-patrimoine.html`
