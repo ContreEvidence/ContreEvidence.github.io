@@ -144,8 +144,6 @@ jobs:
               missing_critical = [k for k in critical if not found[k]]
               missing_all = [k for k,v in found.items() if not v]
               coverage = sum(found.values())
-              # Priority is intentionally driven by decision-changing blind spots,
-              # not by page length or generic completeness.
               priority = len(missing_critical) * 3 + max(0, 8 - coverage)
               rows.append({
                   'path':str(path), 'cluster':cluster, 'coverage':coverage,
@@ -179,12 +177,12 @@ jobs:
           out.append('')
           out.append('Cet audit complète — il ne remplace pas — la revue structurelle. Il cherche des **familles de raisonnement susceptibles de changer la décision** mais souvent absentes d’un contenu pourtant correct : acteur, substitution, fenêtre temporelle, ordre, fractionnement, combinaison, statu quo, second ordre, transfert de risque, friction, hétérogénéité, renversement, objectif réel, optionnalité et asymétrie de preuve.')
           out.append('')
-          out.append('Un motif absent n’est **pas** automatiquement un défaut : la file sert à provoquer une lecture humaine. Inversement, la présence d’un mot ne prouve pas que l’angle est bien traité.')
+          out.append('Un motif absent n’est **pas** automatiquement un défaut : la file sert à provoquer une lecture humaine. Inversement, la présence d’un mot ne prouve pas que l’angle est bien traité. Les décisions humaines SHA-liées sont enregistrées séparément dans `reports/corpus-blind-spot-human-review-*.json`.')
           out.append('')
           out.append(f'Pages indexables analysées : **{len(rows)}**. Pages `noindex` exclues : **{excluded}**.')
           out.append('')
 
-          out.append('## Priorité de reprise')
+          out.append('## Priorité heuristique')
           out.append('')
           out.append('| Priorité | Couverture | Cluster | Page | Angles critiques non détectés |')
           out.append('|---:|---:|---|---|---|')
@@ -210,11 +208,11 @@ jobs:
 
           out.append('## Règle de reprise éditoriale')
           out.append('')
-          out.append('1. Lire humainement la page prioritaire et le cluster autour d’elle.')
-          out.append('2. Ne retenir que les angles qui peuvent réellement changer le choix, le coût, le risque, la séquence ou les options disponibles.')
-          out.append('3. Préparer **une seule proposition éditoriale active**.')
-          out.append('4. Ne rien modifier dans le contenu publié avant validation explicite de l’utilisateur.')
-          out.append('5. Après validation : appliquer, sourcer si nécessaire, auditer, journaliser, puis seulement passer à la proposition suivante.')
+          out.append('1. Lire humainement la page prioritaire et son cluster proche.')
+          out.append('2. Ne retenir que les angles qui changent réellement le choix, le coût, le risque, la séquence, les options ou la charge de preuve.')
+          out.append('3. Si le manque est réel, réécrire directement et journaliser la causalité ; si le signal est un faux positif, conserver le texte et enregistrer la décision humaine.')
+          out.append('4. Les affirmations sensibles sont revérifiées sur des sources primaires à jour avant toute modification factuelle.')
+          out.append('5. L’heuristique reste un détecteur : une décision humaine attachée au SHA exact prime jusqu’à modification du contenu.')
           out.append('')
           Path('reports/corpus-blind-spots.md').write_text('\n'.join(out)+'\n', encoding='utf-8')
           PY
