@@ -31,7 +31,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/apprendre-developper-competences.html` | `487f02e927355afd164e889a7c53b7d4e0e6ff65` | `3272d614977166149cab861080f1216a5458a5c2` |
 | `dossiers/capacite-refuser-travail-rentabilite.html` | `aace252f32a1faf81cf6e0a4665e9b60e694129e` | `91ebe0bb0dc7e77c7a5a042210a2f54a7e04570e` |
 | `articles/sans-diplome-chemins-alternatifs.html` | `d5f6867f38969bb89ca16df2bfdbd7ed2fed77ca` | `2a7cd63ced34759f03482dd0381857c50af183b0` |
-| `dossiers/location-courte-duree-meuble-tourisme.html` | `ddaf6bc36e2171b5e249a161fb66926f963ea4d2` | `67506904bc390ceac39951eb725bdb4625fe5b54` |
 | `dossiers/creer-entreprise-avec-peu-argent.html` | `99fb67ac5498b3634df87e18d728af131d32c06e` | `e761b606c01252b83ba6bc6dd6209e1c98e8023d` |
 | `dossiers/devenir-manager-premiere-fois.html` | `5b37be7ac97ba89e23e4f31456f90008c7ec49e5` | `20a9d53327c6b914612bb9737b5f6c5eecd266cd` |
 | `dossiers/decider-a-deux-travail-patrimoine.html` | `ba14b77f52087dfb20b0813df082369592184e8e` | `1971f8f7829d71996d0f7c3d06f20360bd7cbab2` |
@@ -42,6 +41,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `articles/tester-metier-avant-investir.html` | `2d26e84a1aec867f3f795a7fe5076e5514259709` | `f0869a70482faef780134015edccb92309295c47` |
 | `dossiers/finances-cadre-global.html` | `e736a54c8aa6746af202268837ab68501111b82f` | `a81a449cad1676ce338bf3c3386e1ab185e96c21` |
 | `dossiers/patrimoine-marge-de-manoeuvre.html` | `3e2dd7332b7c2063c63dbad30055168a61266868` | `2dbf9645bf9b74a55ad3cebd87d04fe2ae535ceb` |
+| `dossiers/location-courte-duree-meuble-tourisme.html` | `ddaf6bc36e2171b5e249a161fb66926f963ea4d2` | `2959b70d729c737f2c037f540d7240da12770b7e` |
 | `dossiers/changer-travail-avant-credit-immobilier.html` | `8b7e88c9c93261fc35ebcb3a4fd5052430befe79` | `82bec88878cee4c35920b82ddd48e71012134651` |
 | `dossiers/trajectoire-professionnelle-selon-situation.html` | `340b3c58bd6809606aac38282afac472924ee2b1` | `c507f380db4a0bcb57571cb0d12d2625ced63d5c` |
 | `dossiers/are-arce-acre-creation-entreprise.html` | `96944742e60f24751b001857871095f3ae55ce94` | `0a11bc2495d5e98ee3d769a581debaa5f66f4032` |
@@ -203,7 +203,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1782 | à revoir après changement | `articles/sans-diplome-chemins-alternatifs.html` |
 | 8/9 | 1788 | humaine ✓ | `dossiers/finances-allocation-portefeuille.html` |
 | 8/9 | 1799 | humaine ✓ | `dossiers/decider-sans-tourner-en-rond.html` |
-| 8/9 | 1842 | à revoir après changement | `dossiers/location-courte-duree-meuble-tourisme.html` |
 | 8/9 | 1874 | à revoir après changement | `dossiers/creer-entreprise-avec-peu-argent.html` |
 | 8/9 | 1899 | à revoir après changement | `dossiers/devenir-manager-premiere-fois.html` |
 | 8/9 | 1976 | à revoir après changement | `dossiers/decider-a-deux-travail-patrimoine.html` |
@@ -219,6 +218,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 2320 | humaine ✓ | `dossiers/methode-analyse-complete.html` |
 | 8/9 | 2498 | heuristique | `dossiers/vendre-bien-a-sa-sci-refinancement-patrimoine.html` |
 | 8/9 | 2533 | humaine ✓ | `dossiers/metiers-accessibles-sans-diplome.html` |
+| 8/9 | 2634 | à revoir après changement | `dossiers/location-courte-duree-meuble-tourisme.html` |
 | 8/9 | 2722 | humaine ✓ | `dossiers/inflation-comprendre-histoire-pouvoir-achat.html` |
 | 8/9 | 2791 | à revoir après changement | `dossiers/changer-travail-avant-credit-immobilier.html` |
 | 9/9 | 1193 | humaine ✓ | `dossiers/passer-80-pourcent-cout-reel.html` |
