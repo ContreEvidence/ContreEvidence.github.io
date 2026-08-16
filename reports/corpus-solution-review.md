@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **111**. Validations devenues caduques après modification : **12**.
+Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **110**. Validations devenues caduques après modification : **13**.
 
 ## Priorité humaine
 
@@ -28,6 +28,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/combien-chiffre-affaires-pour-vivre.html` | `ecb09de9f0ebcb7f42e79bac0351f086fadee8ae` | `6eb83e080e90da9965354053c9da5e0f41fe5c49` |
 | `dossiers/favoriser-un-enfant-succession-donation.html` | `87dc0927f5033751ed022b19eef2ce82ff2ba453` | `a82d032edac0c37906b42c8f11b37678be5e5b55` |
 | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` | `73804a97a74df735855ceb5291c6ce824e36da56` | `a982b4a256d31aa630435af2265c34c7134f8570` |
+| `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` | `aab16c4e6601ab8b9d42fc4230e4e668cbc1d540` | `97fa9c117bef460b3c2679212f70d819f9872519` |
 | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` | `b8ca6053a594bbee33797f2d2c4dce8b4854e67b` | `c6e5736d0811426bfb0bfd40ac588e3c6c3945cf` |
 | `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` | `0dde3d3af6dc5214b42e2e86c59d2ef2677de259` | `49a26a95921f5be5635c8609812eef122250a076` |
 
@@ -141,7 +142,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/trajectoire-professionnelle-selon-situation.html` — 9/9 automatique — Trajectoire pilotée par capital professionnel, contraintes, horizons, fenêtres et événements déclencheurs plutôt que par parcours linéaire.
 - `dossiers/indivision-immobiliere-sortir-sans-subir.html` — 9/9 automatique — Propriété, dette, créances, occupation et stratégie de sortie séparées ; négociation, convention, rachat, vente et preuve déjà structurés.
 - `dossiers/changer-travail-avant-credit-immobilier.html` — 9/9 automatique — Financement bancaire, période d’essai, mobilité, réserve et ordre des opérations traités comme variables distinctes avec scénarios d’inversion.
-- `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` — 9/9 automatique — Objectif diplôme séparé du moyen d’accès ; VAP, VAE, DAEU et voies institutionnelles comparées avec conditions et séquence.
 - `dossiers/indivision-rachat-progressif-parts.html` — 9/9 automatique — Fractionnement du rachat, courbe de propriété, dette bancaire distincte, valorisation, friction et alternatives en moins de tranches déjà structurés.
 - `dossiers/indivision-couple-separation-rachat-soulte.html` — 9/9 automatique — Réécriture de référence : refus bancaire actuel non confondu avec vente obligatoire, propriété/dette/créances séparées, fenêtres 1–5 ans et rachat futur simulés.
 
@@ -267,9 +267,9 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 2167 | à revoir après changement | `dossiers/favoriser-un-enfant-succession-donation.html` |
 | 9/9 | 2201 | à revoir après changement | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` |
 | 9/9 | 2215 | humaine ✓ | `dossiers/indivision-immobiliere-sortir-sans-subir.html` |
+| 9/9 | 2272 | à revoir après changement | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` |
 | 9/9 | 2472 | humaine ✓ | `dossiers/changer-travail-avant-credit-immobilier.html` |
 | 9/9 | 2581 | à revoir après changement | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` |
-| 9/9 | 2694 | humaine ✓ | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` |
 | 9/9 | 3065 | humaine ✓ | `dossiers/indivision-rachat-progressif-parts.html` |
 | 9/9 | 3821 | humaine ✓ | `dossiers/indivision-couple-separation-rachat-soulte.html` |
 | 9/9 | 4276 | à revoir après changement | `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` |
