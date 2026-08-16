@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **92**. Validations devenues caduques après modification : **31**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **91**. Validations devenues caduques après modification : **32**.
 
 ## Priorité humaine
 
@@ -23,6 +23,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/calculer-prix-minimum-rentable.html` | `1597bb81c5cba87c2e493fff0aa8a3bc640ac438` | `9625f1c2b342c3a6765072aa31ffb8c7c846fef2` |
 | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` | `e782289f8d68aab912acdd201a649e7782204756` | `959ef22860e5b38b622378e56ec4a2de9123e610` |
 | `dossiers/quand-vie-change-sante-separation-revenu.html` | `7c1e0e0d680c29f25db5fc5d7c9b17ccb1f37d6a` | `1487618f513ec93eafa2bc48959f9c83f74bcc57` |
+| `articles/competences-transferables.html` | `54a32e6988ad07816c8b18fc454c4de0eda4a129` | `343bc34e46dc1da22921da8845122da86db8a759` |
 | `dossiers/business-plan-utile.html` | `e905253a4ba67437152d5227dcdd9dd464886d32` | `d67ecb168823cccfc96f3a853f21e902602d46bb` |
 | `dossiers/apprendre-developper-competences.html` | `487f02e927355afd164e889a7c53b7d4e0e6ff65` | `3272d614977166149cab861080f1216a5458a5c2` |
 | `dossiers/patrimoine-marge-de-manoeuvre.html` | `3e2dd7332b7c2063c63dbad30055168a61266868` | `50b975f0203803c81a54e764c76094e85630be34` |
@@ -110,7 +111,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/methode-analyse-complete.html` — 8/9 automatique — Question d’investissement, benchmark, fondamental, valorisation, technique, sizing, scénario adverse et condition d’invalidation déjà structurés.
 - `dossiers/metiers-accessibles-sans-diplome.html` — 8/9 automatique — Réécriture de référence : métiers classés par verrous réels, preuves, voies d’accès et conditions de substitution au diplôme déjà structurés.
 - `dossiers/inflation-comprendre-histoire-pouvoir-achat.html` — 8/9 automatique — Page explicative longue : mécanismes, histoire, rendement réel, dette et implications patrimoniales sont reliés ; sa fonction n’exige pas d’ajouter artificiellement un plan de décision générique.
-- `articles/competences-transferables.html` — 9/9 automatique — Compétence traduite par problème résolu, preuve, contexte cible et écart restant ; transfert testé plutôt que supposé.
 - `dossiers/passer-80-pourcent-cout-reel.html` — 9/9 automatique — Coût réel du temps libéré, impact sur marge du foyer, effets différés et réversibilité déjà traités lors de la revue antérieure.
 - `dossiers/depenses-recurrentes-abonnements-assurances.html` — 9/9 automatique — Coût annuel, doublons, besoin réel, renégociation/substitution/suppression et seuils de conservation déjà structurés.
 - `dossiers/finances-retraite-decumulation.html` — 9/9 automatique — Gap retraite, risque de séquence, poches par fonction, garde-fous de retrait, longévité, stress tests et revue annuelle déjà structurés.
@@ -204,6 +204,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1554 | humaine ✓ | `dossiers/indivision-loyers-charges-comptes.html` |
 | 8/9 | 1591 | à revoir après changement | `dossiers/quand-vie-change-sante-separation-revenu.html` |
 | 8/9 | 1599 | humaine ✓ | `dossiers/comparer-deux-offres-emploi.html` |
+| 8/9 | 1671 | à revoir après changement | `articles/competences-transferables.html` |
 | 8/9 | 1690 | à revoir après changement | `dossiers/business-plan-utile.html` |
 | 8/9 | 1712 | humaine ✓ | `articles/frais-fiscalite-rendement-net.html` |
 | 8/9 | 1714 | à revoir après changement | `dossiers/apprendre-developper-competences.html` |
@@ -223,7 +224,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 2498 | heuristique | `dossiers/vendre-bien-a-sa-sci-refinancement-patrimoine.html` |
 | 8/9 | 2533 | humaine ✓ | `dossiers/metiers-accessibles-sans-diplome.html` |
 | 8/9 | 2722 | humaine ✓ | `dossiers/inflation-comprendre-histoire-pouvoir-achat.html` |
-| 9/9 | 1188 | humaine ✓ | `articles/competences-transferables.html` |
 | 9/9 | 1193 | humaine ✓ | `dossiers/passer-80-pourcent-cout-reel.html` |
 | 9/9 | 1215 | humaine ✓ | `dossiers/depenses-recurrentes-abonnements-assurances.html` |
 | 9/9 | 1297 | humaine ✓ | `dossiers/finances-retraite-decumulation.html` |
