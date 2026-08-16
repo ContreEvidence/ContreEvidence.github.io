@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
-- P1 — affirmation forte à resserrer ou vérifier : **54**
+- P1 — affirmation forte à resserrer ou vérifier : **53**
 - P2 — nécessité à examiner : **144**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **681**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **677**
 
 ## P0 — rouvrir en priorité
 
@@ -95,8 +95,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/indivision-loyers-charges-comptes.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Cela n’interdit pas de convenir d’une organisation différente. _[signal-source]_
 - **fermeture forte sourcée mais formulation trop absolue** — En pratique, un compte bancaire dédié n’est pas toujours juridiquement obligatoire dans toutes les indivisions, mais il rend le suivi beaucoup plus propre. _[signal-source]_
-### `dossiers/licence-universite-sans-bac-daeu-vap-vae.html`
-- **fermeture forte sourcée mais formulation trop absolue** — Le DAEU reste utile dans certains projets, mais il ne doit pas être transformé en étape obligatoire par défaut. _[signal-source]_
 ### `dossiers/metiers-fonctions-organisation-entreprise.html`
 - **affirmation forte sans signal de source explicite** — À l’inverse, un manager hiérarchique ne peut pas décider seul de sujets réglementaires ou techniques qui relèvent d’autres responsabilités. _[périmètre]_
 ### `dossiers/plan-30-jours-recherche-emploi.html`
