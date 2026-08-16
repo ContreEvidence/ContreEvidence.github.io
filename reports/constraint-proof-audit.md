@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **13**
 - P1 — affirmation forte à resserrer ou vérifier : **48**
-- P2 — nécessité à examiner : **141**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **593**
+- P2 — nécessité à examiner : **142**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **594**
 
 ## P0 — rouvrir en priorité
 
@@ -156,6 +156,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/audit-copropriete-avant-achat.html`
 - **nécessité à requalifier ou sourcer** — L’audit doit reconstituer l’économie de l’immeuble : dépenses courantes, travaux passés et futurs, impayés, trésorerie, gouvernance et quote-part de risque que vous achetez avec le logement.
 ### `dossiers/automatiser-ou-non-processus.html`
+- **nécessité à requalifier ou sourcer** — Avant « automatiser ou non » : la tâche doit-elle encore exister ? _[temporalité]_
 - **nécessité à requalifier ou sourcer** — C'est pourquoi le nombre réel d'exécutions doit être mesuré avant de choisir l'outil. _[temporalité]_
 ### `dossiers/business-plan-utile.html`
 - **nécessité à requalifier ou sourcer** — Le business plan doit donc financer le cycle d’exploitation, pas seulement l’achat de matériel. _[temporalité]_
