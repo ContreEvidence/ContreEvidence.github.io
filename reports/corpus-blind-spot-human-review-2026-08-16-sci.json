@@ -1,0 +1,12 @@
+{
+  "reviewed_at": "2026-08-16",
+  "scope": "SCI reference dossier — deep blind-spot review",
+  "rule": "Human review across actor, substitution, time, sequence, fractionation, combination, status quo, second order, risk transfer, execution friction, heterogeneity, reversal, objective substitution, option value and proof asymmetry.",
+  "pages": {
+    "dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html": {
+      "sha": "0dde3d3af6dc5214b42e2e86c59d2ef2677de259",
+      "decision": "rewrite",
+      "note": "Created as a new reference page because SCI was a systemic missing architecture across couple/separation, rental and transmission promises. The dossier explicitly tests risk transfer from indivision to corporate governance, financing versus ownership, IR/IS timing, furnished-rental tax shift, exit/approval friction, death, 50/50 deadlock and valuation."
+    }
+  }
+}
