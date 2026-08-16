@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **43**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **16**.
+Pages/familles détectées : **43**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **15**.
 
 ## Priorités de relecture
 
@@ -22,7 +22,6 @@ Pages/familles détectées : **43**. Pages `noindex` exclues : **79**. Promesses
 | 14 | NON_READY | couple / logement / séparation | `dossiers/patrimoine-marge-de-manoeuvre.html` | mariage, PACS |
 | 14 | NON_READY | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 10 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/changer-travail-avant-credit-immobilier.html` | santé / inaptitude, sans diplôme |
-| 8 | NON_READY | achat immobilier / crédit | `dossiers/finances-residence-principale.html` | CDD / temporaire |
 | 8 | NON_READY | entrepreneuriat | `dossiers/formation-vaut-elle-le-cout.html` | micro / EI / société |
 | 8 | NON_READY | reconversion / trajectoire pro | `dossiers/trajectoire-professionnelle-selon-situation.html` | sans diplôme |
 | 7 | NON_READY | reconversion / trajectoire pro | `articles/competences-transferables.html` | revenu / runway |
@@ -49,6 +48,7 @@ Pages/familles détectées : **43**. Pages `noindex` exclues : **79**. Promesses
 | 0 | COVERED_OR_NARROW | couple / logement / séparation | `dossiers/decider-a-deux-travail-patrimoine.html` | — |
 | 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/decider-a-deux-travail-patrimoine.html` | — |
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | — |
+| 0 | COVERED_OR_NARROW | achat immobilier / crédit | `dossiers/finances-residence-principale.html` | — |
 | 0 | COVERED_OR_NARROW | transmission / succession | `dossiers/finances-transmission-patrimoine.html` | — |
 | 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/formation-vaut-elle-le-cout.html` | — |
 | 0 | COVERED_OR_NARROW | travailler moins / qualité de vie | `dossiers/patrimoine-permet-il-travailler-moins.html` | — |
@@ -192,21 +192,6 @@ Promesse : **quitter son cdi avec un crédit : séquencer emploi, financement et
 | senior / âge | MANQUANTE |
 | revenu / runway | TRAITEE |
 
-### `dossiers/finances-residence-principale.html` — achat immobilier / crédit
-
-Promesse : **acheter ou louer sa résidence principale : durée, mobilité et coût de sortie | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| achat seul / à deux | TRAITEE |
-| CDI / stabilité | TRAITEE |
-| CDD / temporaire | MANQUANTE |
-| indépendant | MENTIONNEE |
-| public | MANQUANTE |
-| mobilité / changement emploi | TRAITEE |
-| apport / liquidité | TRAITEE |
-| dette existante | TRAITEE |
-
 ### `dossiers/formation-vaut-elle-le-cout.html` — entrepreneuriat
 
 Promesse : **choisir une formation pour une reconversion : coût, rncp et débouchés | contre-évidence**
@@ -299,7 +284,7 @@ Pages détectées : **8**. Promesses larges `NON_READY` : **5**. Variantes le pl
 
 ### achat immobilier / crédit
 
-Pages détectées : **5**. Promesses larges `NON_READY` : **1**. Variantes le plus souvent non détectées : **public** (3), **indépendant** (2), **CDD / temporaire** (1), **mobilité / changement emploi** (1).
+Pages détectées : **5**. Promesses larges `NON_READY` : **0**. Variantes le plus souvent non détectées : **indépendant** (2), **public** (2), **mobilité / changement emploi** (1).
 
 ### investissement locatif
 
