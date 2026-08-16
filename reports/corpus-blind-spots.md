@@ -50,7 +50,6 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/comparer-strategies-immobilieres.html` | attendre / statu quo, transfert de risque, condition de renversement |
 | 9 | 9/15 | entrepreneuriat / activité | `dossiers/dependance-gros-client.html` | acteur/gatekeeper, attendre / statu quo, condition de renversement |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/depenses-recurrentes-abonnements-assurances.html` | effets de second ordre, condition de renversement, valeur d’option / irréversibilité |
-| 9 | 9/15 | immobilier / crédit / indivision | `dossiers/finances-credit-endettement.html` | acteur/gatekeeper, effets de second ordre, condition de renversement |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/immobilier-allocation-globale-patrimoine.html` | attendre / statu quo, transfert de risque, condition de renversement |
 | 9 | 9/15 | immobilier / crédit / indivision | `dossiers/location-nue-ou-meublee-comparer.html` | acteur/gatekeeper, fractionnement, effets de second ordre |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/protocole-verifier-reponse-ia.html` | attendre / statu quo, effets de second ordre, transfert de risque |
@@ -62,6 +61,7 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 9 | 10/15 | entrepreneuriat / activité | `dossiers/are-arce-acre-creation-entreprise.html` | substitution, effets de second ordre, attendre / statu quo |
 | 9 | 10/15 | entrepreneuriat / activité | `dossiers/etude-marche-terrain.html` | substitution, fractionnement, attendre / statu quo |
 | 9 | 10/15 | patrimoine / investissement / retraite | `dossiers/finances-allocation-portefeuille.html` | attendre / statu quo, condition de renversement, valeur d’option / irréversibilité |
+| 9 | 10/15 | patrimoine / investissement / retraite | `dossiers/finances-enveloppes-fiscalite.html` | attendre / statu quo, transfert de risque, condition de renversement |
 
 ## Lecture par cluster
 
@@ -75,7 +75,7 @@ Pages : **27**. Angles le plus souvent non détectés : **attendre / statu quo**
 
 ### immobilier / crédit / indivision
 
-Pages : **22**. Angles le plus souvent non détectés : **acteur/gatekeeper** (16), **substitution** (15), **attendre / statu quo** (14), **objectif réel / substitution du moyen** (14), **condition de renversement** (14), **transfert de risque** (13), **effets de second ordre** (11).
+Pages : **22**. Angles le plus souvent non détectés : **acteur/gatekeeper** (16), **substitution** (15), **attendre / statu quo** (13), **objectif réel / substitution du moyen** (13), **condition de renversement** (13), **transfert de risque** (13), **effets de second ordre** (10).
 
 ### patrimoine / investissement / retraite
 
