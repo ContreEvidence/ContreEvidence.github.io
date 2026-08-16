@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **65**. Validations devenues caduques après modification : **58**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **64**. Validations devenues caduques après modification : **59**.
 
 ## Priorité humaine
 
@@ -38,6 +38,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/decider-a-deux-travail-patrimoine.html` | `ba14b77f52087dfb20b0813df082369592184e8e` | `1971f8f7829d71996d0f7c3d06f20360bd7cbab2` |
 | `dossiers/previsionnel-activite-12-mois.html` | `ec3ebe88a9923f6802788dd5fb1a65c113e220ae` | `f35cb5ed9159e68ac5caa6ea95ae5742ab5b7b8e` |
 | `dossiers/rembourser-credit-ou-investir.html` | `8748815b96435f7255f99965085fa55714c7334d` | `cd5f8143cad3394b08ea758e6663ad78438b118b` |
+| `articles/entretien-rate-ce-qui-bloque.html` | `121a55ba0a2268de0cb5f5de94a9eb283c4b2ab8` | `99a29630f8f182c98885a35a29ad67dc8afdd572` |
 | `dossiers/formation-vaut-elle-le-cout.html` | `601b970cd42683723682946ad1b8add7c7aa48db` | `7095c6d4c8f39406ac8311886e179d2bfcb7f0f7` |
 | `dossiers/acheter-sans-vider-epargne.html` | `8376bdcffd1c79dbcedf6b11fff240a1c8b4e6c0` | `8d8370eb96292e65df63ea37427ff9251ab4a96b` |
 | `articles/tester-metier-avant-investir.html` | `2d26e84a1aec867f3f795a7fe5076e5514259709` | `f0869a70482faef780134015edccb92309295c47` |
@@ -79,7 +80,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 
 ## Pages validées humainement et inchangées
 
-- `articles/entretien-rate-ce-qui-bloque.html` — 6/9 automatique — Diagnostic de conversion, hypothèses concurrentes, retours convergents et conditions de recalibrage déjà présents.
 - `dossiers/etre-riche-revenu-patrimoine-liberte.html` — 6/9 automatique — Page de clarification conceptuelle : plusieurs définitions et inversion selon la question déjà traitées.
 - `dossiers/experience-devient-risque-recruteur.html` — 6/9 automatique — Risques perçus, preuves, ciblage et test de cohérence personnelle déjà structurés.
 - `articles/50-candidatures-zero-reponse.html` — 7/9 automatique — Localisation de la rupture, séries comparables, tests A/B, scénarios de diagnostic et règles de changement de stratégie déjà explicites.
@@ -149,7 +149,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 
 | Score | Mots | Revue | Page |
 |---:|---:|---|---|
-| 6/9 | 1115 | humaine ✓ | `articles/entretien-rate-ce-qui-bloque.html` |
 | 6/9 | 1353 | humaine ✓ | `dossiers/etre-riche-revenu-patrimoine-liberte.html` |
 | 6/9 | 1485 | humaine ✓ | `dossiers/experience-devient-risque-recruteur.html` |
 | 6/9 | 2785 | à revoir après changement | `dossiers/indivision-loyers-charges-comptes.html` |
@@ -207,6 +206,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1976 | à revoir après changement | `dossiers/decider-a-deux-travail-patrimoine.html` |
 | 8/9 | 2036 | à revoir après changement | `dossiers/previsionnel-activite-12-mois.html` |
 | 8/9 | 2045 | à revoir après changement | `dossiers/rembourser-credit-ou-investir.html` |
+| 8/9 | 2048 | à revoir après changement | `articles/entretien-rate-ce-qui-bloque.html` |
 | 8/9 | 2123 | à revoir après changement | `dossiers/formation-vaut-elle-le-cout.html` |
 | 8/9 | 2123 | humaine ✓ | `dossiers/plan-30-jours-recherche-emploi.html` |
 | 8/9 | 2146 | à revoir après changement | `dossiers/acheter-sans-vider-epargne.html` |
