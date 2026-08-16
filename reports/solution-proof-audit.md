@@ -7,9 +7,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **31**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **29**
 - S2 — possibilité générale à examiner : **15**
-- OK heuristique — condition ou preuve détectée : **156**
+- OK heuristique — condition ou preuve détectée : **158**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -63,9 +63,6 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ### `dossiers/finances-retraite-decumulation.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Croissance Capital dont l’horizon long permet de conserver une exposition aux actifs risqués. _[fort enjeu, preuve détectée]_
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Vérifier les droits avant de simuler le patrimoine Le portail officiel Info Retraite permet de vérifier la carrière enregistrée et d’estimer l’âge et le montant de la retraite à partir des droits connus par les différents régimes. _[fort enjeu, preuve détectée]_
-### `dossiers/location-nue-ou-meublee-comparer.html`
-- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Il est possible d’opter pour le réel, mais l’option engage en principe pour trois ans. _[fort enjeu, condition détectée]_
-- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Le régime réel permet de déduire les charges selon les règles applicables et implique une comptabilité plus structurée. _[fort enjeu, condition détectée]_
 ### `dossiers/metiers-accessibles-sans-diplome.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Le ministère de l’Enseignement supérieur indique qu’il permet d’accéder directement à une formation universitaire sans avoir le diplôme requis, en faisant reconnaître expérience professionnelle, formations suivies et acquis personnels. _[fort enjeu, preuve détectée]_
 ### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
