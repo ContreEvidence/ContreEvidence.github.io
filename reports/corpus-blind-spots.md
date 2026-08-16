@@ -15,7 +15,6 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 15 | 10/15 | entrepreneuriat / activité | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` | substitution, fractionnement, effets de second ordre, attendre / statu quo, condition de renversement |
 | 13 | 7/15 | emploi / carrière / qualification | `articles/competences-transferables.html` | substitution, objectif réel / substitution du moyen, asymétrie de preuve, condition de renversement |
 | 12 | 8/15 | entrepreneuriat / activité | `dossiers/creer-entreprise-sans-diplome.html` | acteur/gatekeeper, effets de second ordre, attendre / statu quo, condition de renversement |
-| 12 | 9/15 | emploi / carrière / qualification | `articles/accepter-nimporte-quel-poste-retour-emploi.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen, condition de renversement |
 | 12 | 9/15 | patrimoine / investissement / retraite | `articles/construire-epargne-de-zero.html` | attendre / statu quo, transfert de risque, condition de renversement, valeur d’option / irréversibilité |
 | 12 | 9/15 | patrimoine / investissement / retraite | `dossiers/bien-immobilier-garder-vendre-transformer.html` | attendre / statu quo, transfert de risque, condition de renversement, fenêtre temporelle |
 | 12 | 9/15 | entrepreneuriat / activité | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | acteur/gatekeeper, substitution, effets de second ordre, condition de renversement |
@@ -62,12 +61,13 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 9 | 11/15 | entrepreneuriat / activité | `dossiers/couple-famille-argent-temps.html` | acteur/gatekeeper, substitution, attendre / statu quo |
 | 9 | 11/15 | entrepreneuriat / activité | `dossiers/creer-entreprise-avec-peu-argent.html` | fractionnement, attendre / statu quo, condition de renversement |
 | 9 | 11/15 | entrepreneuriat / activité | `dossiers/lancer-activite-sans-quitter-emploi.html` | acteur/gatekeeper, substitution, attendre / statu quo |
+| 9 | 11/15 | patrimoine / investissement / retraite | `dossiers/piloter-patrimoine-selon-taille.html` | attendre / statu quo, transfert de risque, valeur d’option / irréversibilité |
 
 ## Lecture par cluster
 
 ### emploi / carrière / qualification
 
-Pages : **39**. Angles le plus souvent non détectés : **transfert de risque** (25), **valeur d’option / irréversibilité** (23), **substitution** (22), **attendre / statu quo** (19), **effets de second ordre** (18), **objectif réel / substitution du moyen** (17), **condition de renversement** (17).
+Pages : **39**. Angles le plus souvent non détectés : **transfert de risque** (26), **valeur d’option / irréversibilité** (23), **substitution** (21), **attendre / statu quo** (18), **effets de second ordre** (18), **condition de renversement** (17), **objectif réel / substitution du moyen** (16).
 
 ### entrepreneuriat / activité
 
