@@ -6,10 +6,10 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 ## Synthèse
 
-- P0 — fermeture forte sans preuve/périmètre suffisant : **15**
-- P1 — affirmation forte à resserrer ou vérifier : **50**
+- P0 — fermeture forte sans preuve/périmètre suffisant : **14**
+- P1 — affirmation forte à resserrer ou vérifier : **53**
 - P2 — nécessité à examiner : **145**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **647**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **648**
 
 ## P0 — rouvrir en priorité
 
@@ -24,7 +24,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sans signal de preuve ni périmètre clair** — Tester une architecture plus soutenable plutôt qu’un effort impossible à tenir.
 ### `dossiers/contrat-travail-clauses-verifier-avant-signer.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Exclusivité Non Oui Quel projet futur devient impossible ?
-- **fermeture forte sans signal de preuve ni périmètre clair** — Période d’essai : ne pas la considérer comme automatique Service-Public rappelle que la période d’essai n’est pas obligatoire en CDI : elle doit être prévue dans le contrat ou la lettre d’engagement lorsqu’elle s’applique.
 ### `dossiers/decider-sans-tourner-en-rond.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Cette distinction est essentielle parce qu’un tableau pondéré ne doit jamais donner une bonne note à une option qui est en réalité impossible.
 ### `dossiers/etude-marche-terrain.html`
@@ -71,6 +70,10 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/competences-qualification-employabilite.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Cas n°1 — Très expérimenté, diplôme absent Offres analysées 30 Diplôme obligatoire 4 Diplôme ou expérience équivalente 18 Aucune exigence formelle 8 Expérience pertinente 10 ans Le candidat ne doit pas conclure « sans diplôme, impossible ». _[signal-source, temporalité]_
 - **fermeture forte sourcée mais formulation trop absolue** — Classer chaque exigence : obligatoire, souhaitée, négociable. _[signal-source]_
+### `dossiers/contrat-travail-clauses-verifier-avant-signer.html`
+- **affirmation forte sans signal de source explicite** — Identifier le vrai gatekeeper avant de conclure que « c’est impossible » Le recruteur, le manager, les RH, la direction de la rémunération ou le juridique n’ont pas toujours le même pouvoir de décision. _[périmètre, temporalité]_
+- **affirmation forte sans signal de source explicite** — Un refus peut signifier « cette personne ne peut pas modifier ce point », pas nécessairement « l’entreprise ne le modifiera jamais ». _[périmètre, temporalité]_
+- **affirmation forte sans signal de source explicite** — Vous ne pouvez pas évaluer correctement un renvoi invisible. _[périmètre, temporalité]_
 ### `dossiers/cout-reel-voiture-achat-credit-loa-lld.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Il est de rendre impossible la comparaison trompeuse « 390 €/mois contre 30 000 € comptant ». _[signal-source, temporalité]_
 ### `dossiers/creer-entreprise-sans-diplome.html`
