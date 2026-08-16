@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/</link>
     <description>Nouveaux guides, dossiers et outils Contre-Évidence consacrés à Vie professionnelle.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Sun, 16 Aug 2026 11:01:17 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 11:06:01 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/rss-vie-pro.xml" rel="self" type="application/rss+xml"/>
@@ -73,6 +73,16 @@
       <category>Vie professionnelle</category>
       <category>Entrepreneuriat · Validation</category>
       <description>Passer d’un marché théorique à un marché accessible avec tests de prix, comportements d’achat, concurrence, saisonnalité et critères d’abandon.</description>
+    </item>
+    <item>
+      <title>Construire un prévisionnel d’activité sur 12 mois</title>
+      <link>https://contreevidence.github.io/simulateur-previsionnel-activite.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-previsionnel-activite.html</guid>
+      <pubDate>Fri, 14 Aug 2026 08:17:24 GMT</pubDate>
+      <category>Outil</category>
+      <category>Vie professionnelle</category>
+      <category>Entrepreneuriat · Prévisionnel</category>
+      <description>Projeter chiffre d’affaires, charges et trésorerie à partir d’hypothèses explicites puis comparer plusieurs trajectoires.</description>
     </item>
     <item>
       <title>Se reconvertir sans deux ans de formation : comparer les voies courtes</title>
@@ -146,25 +156,14 @@
       <description>Comparer une décision à l’échelle du foyer : deux revenus, temps, employabilité, mobilité, réserve et réversibilité.</description>
     </item>
     <item>
-      <title>Diagnostic du capital professionnel : forces, dépendances et options</title>
+      <title>Diagnostic du capital professionnel</title>
       <link>https://contreevidence.github.io/outil-capital-professionnel.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/outil-capital-professionnel.html</guid>
       <pubDate>Wed, 12 Aug 2026 10:06:41 GMT</pubDate>
       <category>Outil</category>
       <category>Vie professionnelle</category>
-      <category>Diagnostic</category>
-      <description>Faites apparaître employabilité, compétences transférables, preuves, réseau, soutenabilité, marge financière et réversibilité sans note globale.</description>
-    </item>
-    <item>
-      <title>Simulateur : acheter ou louer si vous pouvez devoir déménager</title>
-      <link>https://contreevidence.github.io/simulateur-acheter-ou-louer-mobilite.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/simulateur-acheter-ou-louer-mobilite.html</guid>
-      <pubDate>Wed, 12 Aug 2026 08:08:26 GMT</pubDate>
-      <category>Outil</category>
-      <category>Patrimoine</category>
-      <category>Vie professionnelle</category>
-      <category>Immobilier &amp; mobilité</category>
-      <description>Comparez achat et location à 2, 3, 5 ou 8 ans avec crédit, capital restant dû, frais de vente et évolution du prix.</description>
+      <category>Capital professionnel</category>
+      <description>Cartographier compétences, preuves, réseau, dépendances et options pour comprendre ce que la trajectoire professionnelle construit réellement.</description>
     </item>
     <item>
       <title>Acheter ou louer si vous risquez de déménager bientôt ?</title>
@@ -178,15 +177,14 @@
       <description>Mesurer la durée de détention nécessaire lorsque travail, couple ou projet de vie peuvent imposer une revente rapide.</description>
     </item>
     <item>
-      <title>Simulateur : le vrai coût d’un trajet domicile-travail</title>
+      <title>Calculer le coût réel d’un trajet domicile-travail</title>
       <link>https://contreevidence.github.io/simulateur-cout-trajet-emploi.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/simulateur-cout-trajet-emploi.html</guid>
       <pubDate>Wed, 12 Aug 2026 07:57:18 GMT</pubDate>
       <category>Outil</category>
-      <category>Patrimoine</category>
       <category>Vie professionnelle</category>
-      <category>Mobilité &amp; emploi</category>
-      <description>Comparez deux emplois après frais de transport et temps de trajet, puis calculez les seuils de salaire cash, temps compris et décision.</description>
+      <category>Mobilité professionnelle</category>
+      <description>Convertir distance, frais et temps de transport en coût réel pour comparer un poste plus éloigné.</description>
     </item>
     <item>
       <title>Accepter un emploi plus loin : combien le trajet coûte vraiment ?</title>
@@ -200,15 +198,14 @@
       <description>Mesurer ce qu’il reste d’une hausse de salaire après transport et combien d’heures supplémentaires sont réellement échangées contre ce gain.</description>
     </item>
     <item>
-      <title>Simulateur : salaire minimum pour déménager pour un emploi</title>
+      <title>Quel salaire minimum pour déménager pour un emploi ?</title>
       <link>https://contreevidence.github.io/simulateur-salaire-minimum-demenagement.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/simulateur-salaire-minimum-demenagement.html</guid>
       <pubDate>Wed, 12 Aug 2026 06:36:26 GMT</pubDate>
       <category>Outil</category>
-      <category>Patrimoine</category>
       <category>Vie professionnelle</category>
-      <category>Mobilité &amp; emploi</category>
-      <description>Calculez le salaire net de bascule après logement, transport, coûts de transition, temps et marge de sécurité.</description>
+      <category>Mobilité professionnelle</category>
+      <description>Calculer la compensation nécessaire lorsque logement, transport et coût de vie changent avec le poste.</description>
     </item>
     <item>
       <title>Déménager pour un emploi : quel salaire supplémentaire faut-il ?</title>
@@ -813,7 +810,7 @@
       <category>Outil</category>
       <category>Vie professionnelle</category>
       <category>Recherche d’emploi</category>
-      <description>Enregistrer candidatures, réponses, entretiens et offres, puis comparer des séries cohérentes pour identifier où l’entonnoir de recherche bloque, sans taux cible universel.</description>
+      <description>Enregistrer candidatures, réponses, entretiens et offres, puis comparer des séries cohérentes pour identifier où l’entonnoir bloque.</description>
     </item>
     <item>
       <title>Matrice compétences → preuves</title>
@@ -823,10 +820,10 @@
       <category>Outil</category>
       <category>Vie professionnelle</category>
       <category>CV &amp; entretien</category>
-      <description>Transformer les exigences réellement importantes d’une offre en situations, actions, résultats et preuves, sans générer le CV à votre place.</description>
+      <description>Transformer les exigences réellement importantes d’une offre en situations, actions, résultats et preuves.</description>
     </item>
     <item>
-      <title>Calculer le coût réel d’une formation : prix, salaire perdu et retour</title>
+      <title>Calculer le coût réel d’une formation</title>
       <link>https://contreevidence.github.io/simulateur-cout-formation.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/simulateur-cout-formation.html</guid>
       <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>
@@ -836,7 +833,7 @@
       <description>Additionner prix net, frais, revenu sacrifié et mois de transition, puis tester vos propres hypothèses de revenu futur et le délai simple de récupération.</description>
     </item>
     <item>
-      <title>Calculer son prix minimum rentable : temps, coûts et tarif plancher</title>
+      <title>Calculer son prix minimum rentable</title>
       <link>https://contreevidence.github.io/simulateur-prix-minimum-rentable.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/simulateur-prix-minimum-rentable.html</guid>
       <pubDate>Tue, 11 Aug 2026 17:45:16 GMT</pubDate>

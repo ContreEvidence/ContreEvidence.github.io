@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/</link>
     <description>Nouveaux guides, dossiers et outils Contre-Évidence consacrés à mixte.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Sun, 16 Aug 2026 11:01:17 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 11:06:01 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/rss-mixte.xml" rel="self" type="application/rss+xml"/>
@@ -22,7 +22,7 @@
       <category>Outil</category>
       <category>mixte</category>
       <category>Décision · Ingénierie de solutions</category>
-      <description>Démonter le « non », distinguer contraintes fixes et variables modifiables, tester 18 lentilles, chercher voies progressives et combinaisons puis fixer le point de bascule.</description>
+      <description>Démonter le « non », distinguer contraintes fixes et variables modifiables, chercher voies progressives et combinaisons puis fixer le point de bascule.</description>
     </item>
     <item>
       <title>Construire un plan 30/90 jours</title>
