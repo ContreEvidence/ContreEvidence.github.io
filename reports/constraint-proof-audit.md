@@ -6,10 +6,10 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 ## Synthèse
 
-- P0 — fermeture forte sans preuve/périmètre suffisant : **16**
-- P1 — affirmation forte à resserrer ou vérifier : **65**
-- P2 — nécessité à examiner : **153**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **867**
+- P0 — fermeture forte sans preuve/périmètre suffisant : **15**
+- P1 — affirmation forte à resserrer ou vérifier : **63**
+- P2 — nécessité à examiner : **152**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **866**
 
 ## P0 — rouvrir en priorité
 
@@ -17,8 +17,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sans signal de preuve ni périmètre clair** — Changer simultanément cible, offre, prix et message : impossible de savoir ce qui a marché.
 ### `articles/competences-transferables.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Sans diplôme : distinguer compétence réelle et filtre d’accès Vous pouvez maîtriser 90 % du travail et rester bloqué par un diplôme obligatoire ou un filtre RH. _[temporalité]_
-### `dossiers/audit-budget-60-minutes.html`
-- **fermeture forte sans signal de preuve ni périmètre clair** — Tester une architecture plus soutenable plutôt qu’un effort impossible à tenir.
 ### `dossiers/contrat-travail-clauses-verifier-avant-signer.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Exclusivité Non Oui Quel projet futur devient impossible ?
 ### `dossiers/decider-sans-tourner-en-rond.html`
@@ -73,9 +71,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/assurer-ou-autoassurer-risques.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Le salarié privé doit auditer trois étages avant d'acheter une protection en plus Régime obligatoire : Assurance Maladie et autres protections légales. _[signal-source, temporalité]_
 - **fermeture forte sourcée mais formulation trop absolue** — Pour un locataire, l'assurance des risques locatifs est obligatoire ; en copropriété, le propriétaire doit au minimum être couvert pour sa responsabilité civile. _[signal-source]_
-### `dossiers/audit-budget-60-minutes.html`
-- **affirmation forte sans signal de source explicite** — Le problème n’est donc plus « je dois mieux surveiller mes dépenses » : la structure du budget ne peut pas s’équilibrer par ce seul levier . _[périmètre]_
-- **affirmation forte sans signal de source explicite** — Les dépenses incompressibles : celles qu’on ne peut pas réduire rapidement sans décision lourde. _[périmètre, temporalité]_
 ### `dossiers/comparer-deux-offres-emploi.html`
 - **affirmation forte sans signal de source explicite** — Une offre notée 86/100 reste mauvaise si elle viole votre seule contrainte absolue : revenu sous le plancher du foyer, horaires incompatibles, mobilité impossible, risque santé, trajet intenable ou clause contractuelle inacceptable. _[périmètre, temporalité]_
 ### `dossiers/comparer-strategies-immobilieres.html`
@@ -204,8 +199,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Ce qui fait inverser la méthode d’apprentissage On privilégierait… Mais si… Alors… autoformation titre réglementaire requis parcours reconnu. pratique immédiate erreur dangereuse simulation / encadrement d’abord. formation longue écart très ciblé parcours court. certification gatekeeper valorise surtout les réalisations construire preuve et expérience. portfolio filtre automatique ou réglementaire exige un diplôme ob
 - **nécessité à requalifier ou sourcer** — Le niveau de preuve doit donc correspondre à la décision que le gatekeeper doit prendre.
 ### `dossiers/audit-budget-60-minutes.html`
-- **nécessité à requalifier ou sourcer** — À la fin de l’heure, vous devez avoir une photographie suffisamment fiable pour prendre trois décisions. _[temporalité]_
-- **nécessité à requalifier ou sourcer** — À la minute 60, vous devez pouvoir écrire Revenu courant : ___ € · Fixes : ___ € · Vie courante + prévisible : ___ € · Excédent réel : ___ € · Trois décisions : 1. ___ 2. ___ 3. ___ Avant de commencer : prenez plusieurs mois, pas un seul Un mois isolé trompe facilement. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Votre projet change Recalibrez le budget : il doit servir l’objectif actuel, pas l’ancien.
 ### `dossiers/audit-copropriete-avant-achat.html`
 - **nécessité à requalifier ou sourcer** — L’audit doit reconstituer l’économie de l’immeuble : dépenses courantes, travaux passés et futurs, impayés, trésorerie, gouvernance et quote-part de risque que vous achetez avec le logement.
 ### `dossiers/automatiser-ou-non-processus.html`
