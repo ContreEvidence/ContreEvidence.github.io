@@ -12,7 +12,6 @@ Pages indexables analysées : **122**. Pages `noindex` exclues : **79**.
 
 | Priorité | Couverture | Cluster | Page | Angles critiques non détectés |
 |---:|---:|---|---|---|
-| 24 | 5/15 | entrepreneuriat / activité | `dossiers/decision-plan-30-90-jours.html` | acteur/gatekeeper, substitution, fractionnement, combinaison de leviers, friction d’exécution, attendre / statu quo, condition de renversement |
 | 19 | 7/15 | entrepreneuriat / activité | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` | substitution, fractionnement, combinaison de leviers, effets de second ordre, attendre / statu quo, condition de renversement |
 | 18 | 5/15 | entrepreneuriat / activité | `dossiers/combien-chiffre-affaires-pour-vivre.html` | acteur/gatekeeper, substitution, fractionnement, effets de second ordre, attendre / statu quo |
 | 16 | 7/15 | patrimoine / investissement / retraite | `articles/checklist-avant-placement-conseiller.html` | attendre / statu quo, effets de second ordre, transfert de risque, condition de renversement, valeur d’option / irréversibilité |
@@ -40,6 +39,7 @@ Pages indexables analysées : **122**. Pages `noindex` exclues : **79**.
 | 12 | 8/15 | entrepreneuriat / activité | `dossiers/calculer-prix-minimum-rentable.html` | acteur/gatekeeper, substitution, fractionnement, combinaison de leviers |
 | 12 | 8/15 | patrimoine / investissement / retraite | `dossiers/combien-epargne-avant-demissionner.html` | effets de second ordre, transfert de risque, condition de renversement, valeur d’option / irréversibilité |
 | 12 | 8/15 | entrepreneuriat / activité | `dossiers/creer-entreprise-sans-diplome.html` | acteur/gatekeeper, effets de second ordre, attendre / statu quo, condition de renversement |
+| 12 | 8/15 | entrepreneuriat / activité | `dossiers/decision-plan-30-90-jours.html` | substitution, fractionnement, combinaison de leviers, condition de renversement |
 | 12 | 8/15 | immobilier / crédit / indivision | `dossiers/indivision-loyers-charges-comptes.html` | acteur/gatekeeper, effets de second ordre, valeur d’option / irréversibilité, condition de renversement |
 | 12 | 8/15 | immobilier / crédit / indivision | `dossiers/location-courte-duree-meuble-tourisme.html` | acteur/gatekeeper, fractionnement, effets de second ordre, condition de renversement |
 | 12 | 8/15 | patrimoine / investissement / retraite | `dossiers/rembourser-credit-ou-investir.html` | attendre / statu quo, transfert de risque, condition de renversement, valeur d’option / irréversibilité |
@@ -71,7 +71,7 @@ Pages : **31**. Angles le plus souvent non détectés : **substitution** (26), *
 
 ### entrepreneuriat / activité
 
-Pages : **27**. Angles le plus souvent non détectés : **acteur/gatekeeper** (23), **attendre / statu quo** (23), **valeur d’option / irréversibilité** (21), **substitution** (20), **transfert de risque** (17), **objectif réel / substitution du moyen** (16), **condition de renversement** (12).
+Pages : **27**. Angles le plus souvent non détectés : **acteur/gatekeeper** (22), **attendre / statu quo** (22), **valeur d’option / irréversibilité** (21), **substitution** (20), **transfert de risque** (17), **objectif réel / substitution du moyen** (16), **condition de renversement** (12).
 
 ### immobilier / crédit / indivision
 
