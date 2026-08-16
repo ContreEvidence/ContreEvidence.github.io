@@ -8,8 +8,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
 - S1 — possibilité à fort enjeu à resserrer ou vérifier : **33**
-- S2 — possibilité générale à examiner : **16**
-- OK heuristique — condition ou preuve détectée : **158**
+- S2 — possibilité générale à examiner : **14**
+- OK heuristique — condition ou preuve détectée : **157**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -47,7 +47,7 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ### `dossiers/competences-qualification-employabilite.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Pour choisir une formation, préparer une reconversion ou comprendre pourquoi une candidature bloque, il faut distinguer ce que vous savez faire, ce qui est officiellement reconnu, ce qui est demandé dans les offres et ce que vous pouvez réellement prouver. _[fort enjeu, preuve détectée]_
 ### `dossiers/decider-a-deux-travail-patrimoine.html`
-- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Le transfert de risque est souvent invisible Une démission peut réduire le revenu de A mais augmenter la dépendance du foyer au revenu de B. _[fort enjeu, condition détectée]_
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Réserve commune et marges personnelles Un foyer peut conserver 30 000 € de cash tout en laissant A avec 500 € personnellement et B avec 29 500 €. _[fort enjeu, condition détectée]_
 ### `dossiers/devenir-manager-premiere-fois.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Santé / inaptitude : le management peut réduire le terrain… ou cumuler deux métiers Une évolution vers l’encadrement est parfois envisagée pour réduire une contrainte physique. _[fort enjeu, condition détectée]_
 ### `dossiers/embaucher-ou-sous-traiter.html`
@@ -103,9 +103,6 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité générale à vérifier ou resserrer** — Ce modèle permet de gagner du temps sans perdre la capacité de détecter un cas inhabituel.
 ### `dossiers/classes-actifs-allocation-patrimoine.html`
 - **possibilité générale à vérifier ou resserrer** — Pour un tableau de bord personnel, le séparer des obligations permet de ne pas confondre deux expériences de risque différentes.
-### `dossiers/decider-a-deux-travail-patrimoine.html`
-- **possibilité générale à vérifier ou resserrer** — Cette cartographie ne sert pas à « compter les points » ; elle permet d’éviter qu’un scénario soit présenté comme avantageux parce que le coût principal a simplement changé de personne.
-- **possibilité générale à vérifier ou resserrer** — Quelle décision intermédiaire permet d’apprendre sans rendre le changement irréversible ?
 ### `dossiers/emploi-chercher-accepter-negocier-evoluer.html`
 - **possibilité générale à vérifier ou resserrer** — Le scénario intermédiaire est souvent négligé alors qu’il permet d’accumuler épargne, preuves, réseau ou formation tout en conservant un revenu.
 - **possibilité générale à vérifier ou resserrer** — Négocier ne consiste pas à demander davantage « parce qu’on le mérite » Une négociation robuste repose sur trois éléments : le périmètre réel du poste, la valeur que vous pouvez rendre crédible et vos alternatives.
