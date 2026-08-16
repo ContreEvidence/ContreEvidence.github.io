@@ -6,7 +6,7 @@ Cet audit complète — il ne remplace pas — la revue structurelle. Il cherche
 
 Un motif absent n’est **pas** automatiquement un défaut : la file sert à provoquer une lecture humaine. Inversement, la présence d’un mot ne prouve pas que l’angle est bien traité. Les décisions humaines SHA-liées sont enregistrées séparément dans `reports/corpus-blind-spot-human-review-*.json`.
 
-Pages indexables analysées : **128**. Pages `noindex` exclues : **80**.
+Pages indexables analysées : **129**. Pages `noindex` exclues : **80**.
 
 ## Priorité heuristique
 
@@ -35,6 +35,7 @@ Pages indexables analysées : **128**. Pages `noindex` exclues : **80**.
 | 9 | 10/15 | patrimoine / investissement / retraite | `articles/grosse-entree-argent-que-faire.html` | attendre / statu quo, transfert de risque, condition de renversement |
 | 9 | 10/15 | entrepreneuriat / activité | `dossiers/allocation-patrimoine-selon-situation.html` | acteur/gatekeeper, substitution, attendre / statu quo |
 | 9 | 10/15 | immobilier / crédit / indivision | `dossiers/indivision-succession-heritiers-vendre-partager.html` | acteur/gatekeeper, valeur d’option / irréversibilité, condition de renversement |
+| 9 | 10/15 | patrimoine / investissement / retraite | `dossiers/seuils-maturite-patrimoniale.html` | attendre / statu quo, condition de renversement, valeur d’option / irréversibilité |
 | 9 | 11/15 | entrepreneuriat / activité | `dossiers/couple-famille-argent-temps.html` | acteur/gatekeeper, substitution, attendre / statu quo |
 | 9 | 11/15 | immobilier / crédit / indivision | `dossiers/indivision-immobiliere-sortir-sans-subir.html` | effets de second ordre, valeur d’option / irréversibilité, condition de renversement |
 | 9 | 11/15 | patrimoine / investissement / retraite | `dossiers/piloter-patrimoine-selon-taille.html` | attendre / statu quo, transfert de risque, valeur d’option / irréversibilité |
@@ -61,7 +62,6 @@ Pages indexables analysées : **128**. Pages `noindex` exclues : **80**.
 | 6 | 11/15 | patrimoine / investissement / retraite | `articles/investir-grosse-somme-dun-coup-ou-progressivement.html` | condition de renversement, valeur d’option / irréversibilité |
 | 6 | 11/15 | entrepreneuriat / activité | `dossiers/ameliorer-processus-sans-degrader-service.html` | acteur/gatekeeper, attendre / statu quo |
 | 6 | 11/15 | immobilier / crédit / indivision | `dossiers/audit-copropriete-avant-achat.html` | acteur/gatekeeper, effets de second ordre |
-| 6 | 11/15 | emploi / carrière / qualification | `dossiers/competent-mais-invisible-travail.html` | substitution, fenêtre temporelle |
 
 ## Lecture par cluster
 
@@ -79,7 +79,7 @@ Pages : **26**. Angles le plus souvent non détectés : **objectif réel / subst
 
 ### patrimoine / investissement / retraite
 
-Pages : **37**. Angles le plus souvent non détectés : **substitution** (29), **condition de renversement** (24), **objectif réel / substitution du moyen** (22), **transfert de risque** (21), **acteur/gatekeeper** (16), **attendre / statu quo** (13), **valeur d’option / irréversibilité** (6).
+Pages : **38**. Angles le plus souvent non détectés : **substitution** (30), **condition de renversement** (25), **objectif réel / substitution du moyen** (23), **transfert de risque** (21), **acteur/gatekeeper** (16), **attendre / statu quo** (14), **valeur d’option / irréversibilité** (7).
 
 ## Règle de reprise éditoriale
 
