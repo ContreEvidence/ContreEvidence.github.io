@@ -7,7 +7,7 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **29**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **30**
 - S2 — possibilité générale à examiner : **15**
 - OK heuristique — condition ou preuve détectée : **158**
 
@@ -46,6 +46,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Pour un foyer très juste après achat, la deuxième architecture peut être plus robuste parce qu’elle permet de répondre à un appel imprévu sans crédit coûteux. _[fort enjeu, condition détectée]_
 ### `dossiers/business-plan-utile.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — C’est celui qui organise la prochaine preuve, le prochain engagement, la condition qui arrête le projet et la substitution qui permet de tester autrement avant de brûler une option coûteuse. _[fort enjeu, preuve détectée]_
+### `dossiers/comparer-strategies-immobilieres.html`
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Fractionnez ce qui peut l’être On ne fractionne pas toujours juridiquement un achat immobilier, mais on peut fractionner l’engagement économique : acheter plus petit ou moins cher ; préserver davantage de liquidité au lieu de maximiser l’apport ; différer des travaux non urgents ; tester un usage avant transformation lourde ; attendre une vacance naturelle avant de changer le type de location ; conserver une sortie locative ou de revente plausible. _[fort enjeu, condition détectée]_
 ### `dossiers/competences-qualification-employabilite.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Pour choisir une formation, préparer une reconversion ou comprendre pourquoi une candidature bloque, il faut distinguer ce que vous savez faire, ce qui est officiellement reconnu, ce qui est demandé dans les offres et ce que vous pouvez réellement prouver. _[fort enjeu, preuve détectée]_
 ### `dossiers/decider-a-deux-travail-patrimoine.html`
