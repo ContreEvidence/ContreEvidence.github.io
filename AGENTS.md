@@ -106,50 +106,38 @@ For material decisions, inspect when relevant:
 
 Do not add generic paragraphs to tick these boxes. A blind spot matters only if it can change the decision, the sequence, the cost, the risk or the set of available options.
 
-## Editorial review gate — mandatory
+## Editorial review mode — autonomous
 
-The entire published corpus is being revisited under this reasoning policy. **Do not apply a substantive rewrite to an existing article or dossier until the user has explicitly approved that specific proposal.**
+The user has explicitly authorized autonomous application of substantive improvements across the corpus and does **not** want page-by-page approval requests.
 
-The default review flow is one proposal at a time. Do not batch editorial approvals.
+For the blind-spot/depth campaign:
 
-For every substantive proposed change, present a validation card containing:
+1. read the page and its closest cluster context;
+2. use automated blind-spot scores only as prompts for human review;
+3. apply a rewrite directly only when an omitted angle materially changes the decision, cost, risk, sequence, available options or proof burden;
+4. preserve the page unchanged when the missing motif is irrelevant or already covered semantically;
+5. never add generic depth veneer or boilerplate;
+6. refresh sensitive current claims from primary sources before changing high-stakes content;
+7. log every substantive change and every deliberate preservation decision in the review report;
+8. report the complete batch to the user after the autonomous pass.
 
-1. page concerned;
-2. why it is being revisited;
-3. current logic or relevant excerpt;
-4. problem detected;
-5. proposed change;
-6. solution-engineering motifs activated;
-7. causal test — `If X, then Y changes because Z`;
-8. proof status;
-9. sources required where applicable;
-10. expected reader impact;
-11. risk or downside of the change.
+The user can challenge, refine or revert any item after the report. A later explicit instruction to require approval again overrides this mode.
 
-The user may answer simply:
-
-- `valide` — apply only the approved proposal, audit it, record the decision, then present the next proposal;
-- `refuse` — keep the current content and record the decision;
-- `à revoir` — change nothing and rework the same proposal;
-- `passe` — defer the proposal and move to the next one.
-
-Infrastructure, audit scripts, reports, internal method files, and purely technical fixes may be changed without editorial approval when they do not alter the substantive meaning of published content.
-
-When there is any doubt whether a change is substantive, treat it as substantive and request approval.
+Infrastructure, audit scripts, reports, internal method files and purely technical fixes may continue autonomously.
 
 ## Review memory semantics
 
-Automated scores and prior internal corpus reviews are **diagnostic evidence only**. They are not equivalent to user approval and must never be labelled or interpreted as final editorial validation.
+Automated scores and prior internal corpus reviews are **diagnostic evidence only**. They are not equivalent to final editorial quality and must never be interpreted as proof that a page has no blind spot.
 
-A prior internal review may establish that a page already contains certain structural elements. It does not prove that the page has no blind spot, no missing solution family and no better sequencing.
+A prior internal review may establish that a page already contains structural elements. It does not prove that the page has no missing solution family, no better sequencing and no second-order effect worth surfacing.
 
-Only an explicit user decision under the editorial review gate closes a proposed substantive change.
+During an autonomous pass, the current human reread and logged decision supersede the older structural label for the reviewed dimension.
 
 ## Change logging
 
-For every substantive content change that the user approves:
+For every substantive content change:
 
-1. record the page in `reports/content-review-decisions.md`;
+1. record the page in `reports/content-review-decisions.md` or the dedicated blind-spot report;
 2. state the problem corrected;
 3. state the motifs activated;
 4. state the causal mechanism;
