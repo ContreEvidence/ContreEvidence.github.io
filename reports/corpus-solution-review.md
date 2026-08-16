@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **74**. Validations devenues caduques après modification : **49**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **73**. Validations devenues caduques après modification : **50**.
 
 ## Priorité humaine
 
@@ -65,6 +65,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` | `b8ca6053a594bbee33797f2d2c4dce8b4854e67b` | `c6e5736d0811426bfb0bfd40ac588e3c6c3945cf` |
 | `dossiers/liquidites-reserve-securite.html` | `ae88ad8ae7c6981800827b83825e37da0c51d1c5` | `a74e6236fdfeceb5bdb3917909629bf7e0528dc3` |
 | `dossiers/combien-chiffre-affaires-pour-vivre.html` | `ecb09de9f0ebcb7f42e79bac0351f086fadee8ae` | `0dfc9a1d1e4eb8bb68983008c839fd244620a987` |
+| `dossiers/combien-epargne-avant-demissionner.html` | `bf785f0d5781fd9e4ba7164de46da47b01542449` | `590189bf4699486987b5d492195cfe66a7d869ee` |
 | `dossiers/assurer-ou-autoassurer-risques.html` | `6bd9c11fce81a3115d0115986a602f1e4fb2753e` | `fdb5e3151d07b23ddc499f78adf060c37f630529` |
 | `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` | `0dde3d3af6dc5214b42e2e86c59d2ef2677de259` | `49a26a95921f5be5635c8609812eef122250a076` |
 
@@ -102,7 +103,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `articles/premiere-chance-sans-experience.html` — 8/9 automatique — Première expérience lue comme achat de preuve, réseau et option suivante ; coût d’enfermement, condition de sortie et scénario dégradé déjà traités.
 - `dossiers/management-relations-conflits.html` — 8/9 automatique — Réglages de management, seuil d’autonomie, goulot de validation, droits de décision, causes structurelles du conflit, escalade et stress test déjà structurés.
 - `dossiers/prix-attendre-finances.html` — 8/9 automatique — Coûts certains versus opportunité, cas où attendre protège, scénario symétrique d’action trop rapide et seuil de décision déjà présents.
-- `dossiers/combien-epargne-avant-demissionner.html` — 8/9 automatique — Runway par déficit réel, qualité de la liquidité, droits seulement après vérification, trois scénarios, valeur de l’information et seuils de départ/renoncement déjà structurés.
 - `dossiers/piloter-patrimoine-selon-taille.html` — 8/9 automatique — Montant distingué de la complexité, risque dominant par phase, budget de complexité, seuil de recours au conseil et contre-exemples déjà structurés.
 - `dossiers/dependance-gros-client.html` — 8/9 automatique — Concentration, rupture du client principal, mois de survie, diversification causale et plan de réduction de dépendance déjà structurés.
 - `dossiers/lancer-activite-sans-quitter-emploi.html` — 8/9 automatique — Lancement parallèle, contraintes à vérifier, seuils de bascule et séquençage avant abandon du revenu salarié déjà structurés.
@@ -187,7 +187,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1364 | humaine ✓ | `articles/premiere-chance-sans-experience.html` |
 | 8/9 | 1369 | humaine ✓ | `dossiers/management-relations-conflits.html` |
 | 8/9 | 1390 | humaine ✓ | `dossiers/prix-attendre-finances.html` |
-| 8/9 | 1410 | humaine ✓ | `dossiers/combien-epargne-avant-demissionner.html` |
 | 8/9 | 1411 | humaine ✓ | `dossiers/piloter-patrimoine-selon-taille.html` |
 | 8/9 | 1414 | humaine ✓ | `dossiers/dependance-gros-client.html` |
 | 8/9 | 1425 | humaine ✓ | `dossiers/lancer-activite-sans-quitter-emploi.html` |
@@ -270,6 +269,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 2581 | à revoir après changement | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` |
 | 9/9 | 2675 | à revoir après changement | `dossiers/liquidites-reserve-securite.html` |
 | 9/9 | 2742 | à revoir après changement | `dossiers/combien-chiffre-affaires-pour-vivre.html` |
+| 9/9 | 2764 | à revoir après changement | `dossiers/combien-epargne-avant-demissionner.html` |
 | 9/9 | 2961 | à revoir après changement | `dossiers/assurer-ou-autoassurer-risques.html` |
 | 9/9 | 3065 | humaine ✓ | `dossiers/indivision-rachat-progressif-parts.html` |
 | 9/9 | 3821 | humaine ✓ | `dossiers/indivision-couple-separation-rachat-soulte.html` |
