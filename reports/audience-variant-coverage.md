@@ -6,14 +6,13 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **46**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **13**.
+Pages/familles détectées : **45**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **12**.
 
 ## Priorités de relecture
 
 | Priorité | Gate | Famille | Page | Variantes critiques non détectées |
 |---:|---|---|---|---|
 | 29 | NON_READY | couple / logement / séparation | `dossiers/acheter-logement-sans-se-fragiliser.html` | indivision directe, SCI, mariage, PACS |
-| 28 | NON_READY | couple / logement / séparation | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` | indivision directe, SCI, mariage, PACS |
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | salarié, santé / inaptitude, sans diplôme, revenu / runway |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/acheter-sans-vider-epargne.html` | SCI, mariage, PACS |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | indivision directe, mariage, PACS |
@@ -74,21 +73,6 @@ Promesse : **acheter un logement sans se fragiliser : apport, épargne et crédi
 | concubinage | MANQUANTE |
 | tontine | MANQUANTE |
 | propriété ≠ financement | MENTIONNEE |
-| sorties multiples | TRAITEE |
-
-### `dossiers/acheter-ou-louer-si-on-risque-demenager.html` — couple / logement / séparation
-
-Promesse : **acheter ou louer si vous risquez de déménager bientôt ? | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| indivision directe | MANQUANTE |
-| SCI | MANQUANTE |
-| mariage | MANQUANTE |
-| PACS | MANQUANTE |
-| concubinage | MANQUANTE |
-| tontine | MANQUANTE |
-| propriété ≠ financement | TRAITEE |
 | sorties multiples | TRAITEE |
 
 ### `dossiers/metiers-fonctions-organisation-entreprise.html` — reconversion / trajectoire pro
@@ -252,7 +236,7 @@ Promesse : **patrimoine et marge de manœuvre : combien de liberté vos actifs d
 
 ### couple / logement / séparation
 
-Pages détectées : **8**. Promesses larges `NON_READY` : **5**. Variantes le plus souvent non détectées : **tontine** (7), **PACS** (5), **concubinage** (5), **mariage** (5), **SCI** (4), **indivision directe** (3).
+Pages détectées : **7**. Promesses larges `NON_READY` : **4**. Variantes le plus souvent non détectées : **tontine** (6), **PACS** (4), **concubinage** (4), **mariage** (4), **SCI** (3), **indivision directe** (2).
 
 ### achat immobilier / crédit
 
