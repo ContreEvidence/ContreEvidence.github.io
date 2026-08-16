@@ -7,9 +7,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **32**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **31**
 - S2 — possibilité générale à examiner : **16**
-- OK heuristique — condition ou preuve détectée : **160**
+- OK heuristique — condition ou preuve détectée : **159**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -68,8 +68,6 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Le régime réel permet de déduire les charges selon les règles applicables et implique une comptabilité plus structurée. _[fort enjeu, condition détectée]_
 ### `dossiers/metiers-accessibles-sans-diplome.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Le ministère de l’Enseignement supérieur indique qu’il permet d’accéder directement à une formation universitaire sans avoir le diplôme requis, en faisant reconnaître expérience professionnelle, formations suivies et acquis personnels. _[fort enjeu, preuve détectée]_
-### `dossiers/passer-80-pourcent-cout-reel.html`
-- **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Le bon dossier CE distingue donc le calcul de niveau de vie, que vous pouvez faire immédiatement, de l’estimation de retraite, qui doit être vérifiée sur votre situation administrative. _[fort enjeu, preuve détectée]_
 ### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Quand commencer à utiliser devient rationnel le socle reste intact après la dépense ; les objectifs futurs importants restent robustes dans un scénario adverse ; la transmission voulue est déjà couverte ou n’est pas prioritaire ; le capital supplémentaire améliore peu la sécurité ; une contrainte importante peut être supprimée pour une fraction raisonnable du patrimoine ; l’usage est particulièrement dépendant du temps, de l’âge ou de la santé ; une versio _[fort enjeu, condition détectée]_
 ### `dossiers/rembourser-credit-ou-investir.html`
