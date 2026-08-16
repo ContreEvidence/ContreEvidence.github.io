@@ -1,0 +1,12 @@
+{
+  "reviewed_at": "2026-08-16",
+  "batch": "SCI reference dossier",
+  "rule": "Human structural review under Solution Engineer standard; SHA-linked and reopened by any content change.",
+  "pages": {
+    "dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html": {
+      "sha": "0dde3d3af6dc5214b42e2e86c59d2ef2677de259",
+      "status": "conforme",
+      "note": "Deep lifecycle treatment: objective, ownership structure, governance, financing, liability, IR/IS, furnished rental, separation, transfer, withdrawal, death, valuation, exit and reversal conditions. Primary official sources checked 2026-08-16."
+    }
+  }
+}
