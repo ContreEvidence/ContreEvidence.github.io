@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **15**
-- P1 — affirmation forte à resserrer ou vérifier : **56**
-- P2 — nécessité à examiner : **135**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **726**
+- P1 — affirmation forte à resserrer ou vérifier : **57**
+- P2 — nécessité à examiner : **141**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **729**
 
 ## P0 — rouvrir en priorité
 
@@ -111,7 +111,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/previsionnel-activite-12-mois.html`
 - **affirmation forte sans signal de source explicite** — Ajoutez la colonne que les tableurs oublient : « qui doit dire oui ? » Hypothèse Gatekeeper Risque 45 jours de délai fournisseur fournisseur la trésorerie se dégrade s’il exige comptant. acompte de 30 % client le BFR augmente si le marché refuse. prêt de 30 000 € banque / financeur l’investissement ne peut pas être traité comme acquis. sous-traitance disponible prestataire capacité théorique sans solution opérationne _[périmètre, temporalité]_
 ### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
-- **affirmation forte sans signal de source explicite** — Ajoutez le regret inverse : « Si je conserve exactement cette stratégie pendant dix ans, qu’est-ce que j’aurai repoussé inutilement ? » Le patrimoine sert précisément à déplacer certains choix du domaine de l’impossible vers celui du possible. _[périmètre, temporalité]_
+- **affirmation forte sans signal de source explicite** — Trois poches plutôt qu’un seul patrimoine Poche Mission Interdit implicite Socle sécurité, dépenses proches, gros risques ne pas la consommer pour améliorer marginalement le confort. _[périmètre]_
+- **affirmation forte sans signal de source explicite** — Utiliser trop tard Qu’est-ce que l’âge, la santé, la famille ou le temps rendront impossible plus tard ? _[périmètre]_
 ### `dossiers/quitter-emploi-stable-ou-rester.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Intégrer la santé et l’énergie comme contraintes dures Un salaire supérieur ne compense pas toujours une situation qui dégrade durablement la santé ou rend la vie hors travail impossible. _[signal-source]_
 ### `dossiers/quitter-travail-reconversion-sans-se-fragiliser.html`
@@ -266,7 +267,13 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Plus le dommage possible est élevé, plus la validation humaine doit être forte.
 - **nécessité à requalifier ou sourcer** — Pour une décision juridique, médicale ou financière importante, le seuil de preuve doit être beaucoup plus élevé.
 ### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
-- **nécessité à requalifier ou sourcer** — La revue annuelle « construire / protéger / utiliser » Qu’est-ce qui doit encore être construit ?
+- **nécessité à requalifier ou sourcer** — Deuxième seuil : préserver le capital qui a déjà une date L’argent destiné à des dépenses proches, à un achat prévu, à des travaux identifiés ou à une retraite imminente ne doit pas être considéré comme « disponible » simplement parce qu’il est sur un compte. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Il faut regarder la trésorerie de la société, la dette, les règles de distribution, la possibilité de céder ou retirer des parts et les besoins futurs de l’immeuble.
+- **nécessité à requalifier ou sourcer** — Le regret symétrique Il faut comparer deux erreurs possibles : Erreur Question Utiliser trop tôt Qu’est-ce que je risque de ne plus pouvoir financer plus tard ?
+- **nécessité à requalifier ou sourcer** — L’usage irréversible doit franchir une barre plus haute Trois mois de temps partiel, six mois de délégation ou un séjour d’essai sont plus réversibles qu’une vente immobilière, une donation importante ou un arrêt définitif de carrière.
+- **nécessité à requalifier ou sourcer** — Mais elle doit correspondre à la fonction qu’on lui attribue.
+- **nécessité à requalifier ou sourcer** — Quand continuer à accumuler reste la meilleure décision la réserve reste insuffisante ; une dette ou un risque majeur rend le plan fragile ; la retraite ou un projet proche n’est pas financé ; la transmission souhaitée exige encore du capital ; l’usage envisagé répond surtout à une impulsion sans bénéfice durable ; le patrimoine est très illiquide et l’opération de conversion coûterait trop cher.
+- **nécessité à requalifier ou sourcer** — Règle Plus une décision est irréversible, plus son bénéfice doit être clair et plus le scénario adverse doit être supportable.
 ### `dossiers/quand-vie-change-sante-separation-revenu.html`
 - **nécessité à requalifier ou sourcer** — Ce qui doit faire renverser une décision provisoire Décision provisoire Signal de renversement Conserver le logement le coût mensuel rend le runway trop court ou aucune issue durable n’apparaît. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Quand la vie change brutalement : santé, séparation, revenu | Contre-Évidence Aller au contenu CONTRE-ÉVIDENCE Patrimoine Vie professionnelle Fenêtres Outils Bibliothèque Mon espace Quand trois variables changent en même temps, il faut d’abord éviter qu’une mauvaise décision en crée une quatrième — ou qu’une solution apparente transfère tout le risque sur la personne la plus fragile.
