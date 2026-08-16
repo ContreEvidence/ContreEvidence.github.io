@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **62**. Validations devenues caduques après modification : **61**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **61**. Validations devenues caduques après modification : **62**.
 
 ## Priorité humaine
 
@@ -20,6 +20,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 |---|---|---|
 | `dossiers/indivision-loyers-charges-comptes.html` | `17a2f1637380da7fdce685ccf909e3eeb3d5523a` | `58e167161f9837e65d22f8c8ead933f1bada5b48` |
 | `dossiers/metiers-fonctions-organisation-entreprise.html` | `b9100c518af815d5e3d410b6184e23e03d065471` | `d1ad766d8bb16ec3e4e166eea84be714d760711e` |
+| `dossiers/regles-responsabilites-fautes-travail.html` | `8d0c5f5cbcba540922996705b1dcc2807513c62a` | `8f9d6c7b057be2b49e71ea8f00fe98100b352ca5` |
 | `dossiers/acheter-logement-sans-se-fragiliser.html` | `917027c5225fc0464db739ffa51972e38f4655f6` | `6c7f375c0b74b45666efb0fbff2aac1f530c03ba` |
 | `dossiers/finances-residence-principale.html` | `89bdee80210b87568b4831b77c18bccbc6c8f1f9` | `4b05edd96e80db6ba39a4d61c824d1fc766e3489` |
 | `dossiers/calculer-prix-minimum-rentable.html` | `1597bb81c5cba87c2e493fff0aa8a3bc640ac438` | `9625f1c2b342c3a6765072aa31ffb8c7c846fef2` |
@@ -125,7 +126,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/passer-80-pourcent-cout-reel.html` — 9/9 automatique — Coût réel du temps libéré, impact sur marge du foyer, effets différés et réversibilité déjà traités lors de la revue antérieure.
 - `dossiers/depenses-recurrentes-abonnements-assurances.html` — 9/9 automatique — Coût annuel, doublons, besoin réel, renégociation/substitution/suppression et seuils de conservation déjà structurés.
 - `dossiers/finances-retraite-decumulation.html` — 9/9 automatique — Gap retraite, risque de séquence, poches par fonction, garde-fous de retrait, longévité, stress tests et revue annuelle déjà structurés.
-- `dossiers/regles-responsabilites-fautes-travail.html` — 9/9 automatique — Erreur, négligence, insuffisance et faute décomposées ; qualification conditionnelle et conséquences distinguées, avec sources adaptées déjà présentes.
 - `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` — 9/9 automatique — Réécriture de référence : besoin de mobilité avant financement, coût total, liquidité, sortie et stress tests.
 - `dossiers/gestion-pilotee-comparer-performances.html` — 9/9 automatique — Réécriture de référence : allocation/exécution/délégation séparées, benchmark comparable, valeur comportementale conditionnelle et règle de sortie.
 - `dossiers/valeur-option-bien-immobilier.html` — 9/9 automatique — Option immobilière distinguée de faisabilité prouvée, valeur conditionnelle, coûts d’activation et scénarios de sortie déjà structurés.
@@ -162,6 +162,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 7/9 | 1546 | humaine ✓ | `dossiers/debloquer-demarche-administrative.html` |
 | 7/9 | 1578 | humaine ✓ | `dossiers/patrimoine-selon-age-construire-utiliser.html` |
 | 7/9 | 1726 | à revoir après changement | `dossiers/metiers-fonctions-organisation-entreprise.html` |
+| 7/9 | 1841 | à revoir après changement | `dossiers/regles-responsabilites-fautes-travail.html` |
 | 7/9 | 2401 | humaine ✓ | `dossiers/demenager-pour-un-emploi-salaire-minimum.html` |
 | 8/9 | 1008 | humaine ✓ | `dossiers/immobilier-allocation-globale-patrimoine.html` |
 | 8/9 | 1074 | humaine ✓ | `dossiers/etude-marche-terrain.html` |
@@ -222,7 +223,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1215 | humaine ✓ | `dossiers/depenses-recurrentes-abonnements-assurances.html` |
 | 9/9 | 1259 | à revoir après changement | `dossiers/trajectoire-professionnelle-selon-situation.html` |
 | 9/9 | 1297 | humaine ✓ | `dossiers/finances-retraite-decumulation.html` |
-| 9/9 | 1314 | humaine ✓ | `dossiers/regles-responsabilites-fautes-travail.html` |
 | 9/9 | 1323 | humaine ✓ | `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` |
 | 9/9 | 1324 | humaine ✓ | `dossiers/gestion-pilotee-comparer-performances.html` |
 | 9/9 | 1346 | à revoir après changement | `dossiers/are-arce-acre-creation-entreprise.html` |
