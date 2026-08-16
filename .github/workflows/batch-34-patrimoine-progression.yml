@@ -1,0 +1,29 @@
+name: Batch 34 patrimoine progression
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Reorder patrimoine progression
+        run: python scripts/batch34_patrimoine_progression.py
+      - name: Commit batch 34
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add themes/argent.html reports/content-review-decisions-2026-08-16-batch-34.md
+          git diff --cached --check
+          git commit -m "Clarify patrimoine progression"
+          git pull --rebase origin main
+          git push
