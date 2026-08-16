@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
-- P1 — affirmation forte à resserrer ou vérifier : **67**
-- P2 — nécessité à examiner : **153**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **879**
+- P1 — affirmation forte à resserrer ou vérifier : **68**
+- P2 — nécessité à examiner : **154**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **881**
 
 ## P0 — rouvrir en priorité
 
@@ -102,8 +102,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sourcée mais formulation trop absolue** — D’abord : qu’est-ce qui rend le rachat « impossible » ? _[signal-source]_
 - **fermeture forte sourcée mais formulation trop absolue** — Le mot impossible mélange souvent plusieurs problèmes. _[signal-source]_
 ### `dossiers/indivision-immobiliere-sortir-sans-subir.html`
-- **affirmation forte sans signal de source explicite** — Les notaires rappellent aussi qu’une banque peut refuser la désolidarisation si la personne qui garde le bien ne peut pas assumer seule le crédit. citeturn912379search3turn912379search9 Conséquence : un montage patrimonial peut être juridiquement possible et rester économiquement inutilisable si la dette ne peut pas être réorganisée. _[périmètre]_
-- **affirmation forte sans signal de source explicite** — Rachat progressif : quand le tout-ou-rien est financièrement impossible Un indivisaire peut céder tout ou partie de ses droits. _[périmètre, temporalité]_
+- **affirmation forte sans signal de source explicite** — Conséquence : un montage patrimonial peut être juridiquement possible et rester économiquement inutilisable si la dette ne peut pas être réorganisée. _[périmètre]_
+- **affirmation forte sans signal de source explicite** — Les notaires rappellent aussi qu’une banque peut refuser la désolidarisation si la personne qui garde le bien ne peut pas assumer seule le crédit. _[périmètre]_
+- **affirmation forte sans signal de source explicite** — Rachat progressif : quand le tout-ou-rien est financièrement impossible Un indivisaire peut céder tout ou partie de ses droits. _[périmètre]_
 ### `dossiers/lancer-activite-sans-quitter-emploi.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Activité déjà créée avant nouvel emploi Nouveau contrat/statut + règles de cumul Le nouvel emploi rend-il le maintien impossible ou soumis à autorisation ? _[signal-source, temporalité]_
 ### `dossiers/location-courte-duree-meuble-tourisme.html`
@@ -260,6 +261,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Le stress test doit précéder le scénario favorable Testez au moins deux mauvaises nouvelles simultanées : baisse de revenu + travaux, vacance + hausse de charges, revente anticipée + prix stagnant.
 ### `dossiers/indivision-immobiliere-sortir-sans-subir.html`
 - **nécessité à requalifier ou sourcer** — Conditions de renversement Choix provisoire Information qui doit rouvrir la décision Rachat total Banque ne libère pas l’autre coemprunteur.
+- **nécessité à requalifier ou sourcer** — Céder sa part à un tiers : possible, mais les autres ont une priorité spécifique L’article 815-14 prévoit que l’indivisaire qui veut céder à titre onéreux à une personne étrangère à l’indivision tout ou partie de ses droits doit notifier aux autres le prix, les conditions et l’identité de l’acquéreur.
 - **nécessité à requalifier ou sourcer** — Mais il faut ensuite intégrer créances, travaux, indemnité d’occupation, revenus, frais d’acte et financement. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Qui doit quoi ?
 ### `dossiers/methode-analyse-complete.html`
