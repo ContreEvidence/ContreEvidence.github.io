@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **54**. Validations devenues caduques après modification : **69**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **53**. Validations devenues caduques après modification : **70**.
 
 ## Priorité humaine
 
@@ -34,6 +34,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/tresorerie-bfr-entreprise.html` | `d417764e8cd3a736d178f66ff2be9427bcbb0fdd` | `950f91f9aa4d61d341754c9bb97618e8e3ebffb3` |
 | `articles/accepter-nimporte-quel-poste-retour-emploi.html` | `27d74310369168d6bfc5db8c22d2b4ee679c7705` | `7cab1f949fbc95e018bdee353a9773b86d8e031e` |
 | `dossiers/quand-vie-change-sante-separation-revenu.html` | `7c1e0e0d680c29f25db5fc5d7c9b17ccb1f37d6a` | `1487618f513ec93eafa2bc48959f9c83f74bcc57` |
+| `dossiers/location-nue-ou-meublee-comparer.html` | `2b8b5bafcc308126c6704412e5d73d2b91345499` | `82e14615dac536096b9c165a449d48832c302318` |
 | `articles/competences-transferables.html` | `54a32e6988ad07816c8b18fc454c4de0eda4a129` | `343bc34e46dc1da22921da8845122da86db8a759` |
 | `dossiers/business-plan-utile.html` | `e905253a4ba67437152d5227dcdd9dd464886d32` | `d67ecb168823cccfc96f3a853f21e902602d46bb` |
 | `dossiers/apprendre-developper-competences.html` | `487f02e927355afd164e889a7c53b7d4e0e6ff65` | `3272d614977166149cab861080f1216a5458a5c2` |
@@ -99,7 +100,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `articles/investir-grosse-somme-dun-coup-ou-progressivement.html` — 7/9 automatique — Risque d’attente versus timing, stratégie hybride, calendrier mécanique, date de fin et motifs légitimes d’interruption déjà explicites.
 - `dossiers/cout-complet-achat-immobilier.html` — 7/9 automatique — Capital initial, coût d’opportunité, détention, copropriété, liquidité, revente et stress tests multidimensionnels déjà traités.
 - `dossiers/classes-actifs-allocation-patrimoine.html` — 7/9 automatique — Page de cartographie : séparation classe/véhicule/enveloppe, rôles, liquidité et agrégation par moteurs de risque déjà suffisamment explicites pour sa fonction.
-- `dossiers/location-nue-ou-meublee-comparer.html` — 7/9 automatique — Réécriture récente : usage, surloyer-seuil, rotation, DPE, fiscalité conditionnelle et réversibilité déjà au standard.
 - `dossiers/debloquer-demarche-administrative.html` — 7/9 automatique — Fait à prouver, preuves équivalentes, typologie du blocage, changement de niveau, trace écrite et voies de recours conditionnelles déjà structurés.
 - `dossiers/patrimoine-selon-age-construire-utiliser.html` — 7/9 automatique — Âge traité comme proxy d’événements et d’horizons, transitions de phase, exceptions et conditions d’inversion déjà explicites.
 - `dossiers/demenager-pour-un-emploi-salaire-minimum.html` — 7/9 automatique — Salaire net de bascule, coûts de transition, prix du temps, aides conditionnelles et valeur d’option de la mobilité déjà traités.
@@ -161,7 +161,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 7/9 | 1455 | humaine ✓ | `articles/investir-grosse-somme-dun-coup-ou-progressivement.html` |
 | 7/9 | 1462 | humaine ✓ | `dossiers/cout-complet-achat-immobilier.html` |
 | 7/9 | 1463 | humaine ✓ | `dossiers/classes-actifs-allocation-patrimoine.html` |
-| 7/9 | 1486 | humaine ✓ | `dossiers/location-nue-ou-meublee-comparer.html` |
 | 7/9 | 1536 | à revoir après changement | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` |
 | 7/9 | 1546 | humaine ✓ | `dossiers/debloquer-demarche-administrative.html` |
 | 7/9 | 1578 | humaine ✓ | `dossiers/patrimoine-selon-age-construire-utiliser.html` |
@@ -193,6 +192,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1477 | humaine ✓ | `articles/competences-invisibles-preuves.html` |
 | 8/9 | 1591 | à revoir après changement | `dossiers/quand-vie-change-sante-separation-revenu.html` |
 | 8/9 | 1599 | humaine ✓ | `dossiers/comparer-deux-offres-emploi.html` |
+| 8/9 | 1653 | à revoir après changement | `dossiers/location-nue-ou-meublee-comparer.html` |
 | 8/9 | 1671 | à revoir après changement | `articles/competences-transferables.html` |
 | 8/9 | 1690 | à revoir après changement | `dossiers/business-plan-utile.html` |
 | 8/9 | 1712 | humaine ✓ | `articles/frais-fiscalite-rendement-net.html` |
