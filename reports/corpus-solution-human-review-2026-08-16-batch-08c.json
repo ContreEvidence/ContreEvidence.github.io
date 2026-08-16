@@ -1,0 +1,10 @@
+{
+  "reviewed_at": "2026-08-16",
+  "batch": "8-of-9 continuation C — financial system",
+  "rule": "A review is valid only while the Git blob SHA remains identical.",
+  "pages": {
+    "articles/frais-fiscalite-rendement-net.html": {"sha": "629aaddee6a384f2b1861c2fc5a883da0613b963", "status": "conforme", "note": "Réécriture du 16/08 : frais fournisseurs actualisés, point mort de migration, coût ponctuel du changement et valeur des options perdues ajoutés."},
+    "dossiers/finances-allocation-portefeuille.html": {"sha": "625ccbd17f7ecb7384ea9fb54c0ea57508261285", "status": "conforme", "note": "Fonctions avant pourcentages, capacité versus tolérance au risque, moteurs communs, budget de risque, séquence, stress tests et politique écrite déjà structurés."},
+    "articles/grosse-entree-argent-que-faire.html": {"sha": "8055c8aabec056f575c0241372a9f49178d761e3", "status": "conforme", "note": "Capital réellement disponible, poches, délai adaptable, dette sans automatisme, allocation globale et séquence 0–90 jours déjà structurés."}
+  }
+}
