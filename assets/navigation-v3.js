@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VERSION = '20260816-product-map-1';
+  const VERSION = '20260816-product-map-2';
   if (document.documentElement.dataset.ceNavigation === VERSION) return;
   document.documentElement.dataset.ceNavigation = VERSION;
 
@@ -88,12 +88,12 @@
     main?.appendChild(section);
   }
 
-  if (/\/(simulateur|outil)[^/]*\.html$/i.test(path) && !path.endsWith('/outil-ingenierie-solutions.html')) {
-    const script = document.createElement('script');
-    script.src = u('assets/decision-next.js?v=20260816-1');
-    script.defer = true;
-    document.body.appendChild(script);
-  } else if (path.endsWith('/outil-ingenierie-solutions.html')) {
+  const integrations = document.createElement('script');
+  integrations.src = u('assets/cartography-integrations.js?v=20260816-1');
+  integrations.defer = true;
+  document.body.appendChild(integrations);
+
+  if (/\/(simulateur|outil)[^/]*\.html$/i.test(path)) {
     const script = document.createElement('script');
     script.src = u('assets/decision-next.js?v=20260816-1');
     script.defer = true;
