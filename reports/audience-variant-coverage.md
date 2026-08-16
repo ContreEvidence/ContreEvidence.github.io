@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **17**.
+Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **18**.
 
 ## Priorités de relecture
 
@@ -16,9 +16,9 @@ Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses
 | 21 | NON_READY | couple / logement / séparation | `dossiers/acheter-sans-vider-epargne.html` | SCI, mariage, PACS |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | indivision directe, mariage, PACS |
 | 15 | NON_READY | reconversion / trajectoire pro | `dossiers/combien-epargne-avant-demissionner.html` | salarié, sans diplôme |
-| 15 | NON_READY | budget / dettes | `dossiers/patrimoine-marge-de-manoeuvre.html` | revenu stable / variable, charges compressibles / non |
 | 14 | NON_READY | achat immobilier / crédit | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` | CDD / temporaire, indépendant |
 | 14 | NON_READY | entrepreneuriat | `dossiers/combien-chiffre-affaires-pour-vivre.html` | micro / EI / société, activité réglementée |
+| 14 | NON_READY | couple / logement / séparation | `dossiers/patrimoine-marge-de-manoeuvre.html` | mariage, PACS |
 | 14 | NON_READY | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 10 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/changer-travail-avant-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 10 | NON_READY | investissement locatif | `dossiers/finances-investissement-locatif.html` | SCI |
@@ -30,6 +30,7 @@ Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses
 | 7 | NON_READY | reconversion / trajectoire pro | `articles/competences-transferables.html` | revenu / runway |
 | 7 | NON_READY | entrepreneuriat | `dossiers/are-arce-acre-creation-entreprise.html` | activité réglementée |
 | 7 | NON_READY | budget / dettes | `dossiers/creer-entreprise-avec-peu-argent.html` | revenu stable / variable |
+| 7 | NON_READY | budget / dettes | `dossiers/patrimoine-marge-de-manoeuvre.html` | déficit temporaire / structurel |
 | 5 | ROUTE_FIRST | achat immobilier / crédit | `dossiers/changer-travail-avant-credit-immobilier.html` | indépendant |
 | 5 | ROUTE_FIRST | achat immobilier / crédit | `dossiers/indivision-couple-separation-rachat-soulte.html` | indépendant |
 | 5 | ROUTE_FIRST | couple / logement / séparation | `dossiers/indivision-couple-separation-rachat-soulte.html` | SCI |
@@ -116,19 +117,6 @@ Promesse : **combien d’épargne avant de démissionner ? calcul, runway et exe
 | senior / âge | MANQUANTE |
 | revenu / runway | TRAITEE |
 
-### `dossiers/patrimoine-marge-de-manoeuvre.html` — budget / dettes
-
-Promesse : **patrimoine et marge de manœuvre : combien de liberté vos actifs donnent-ils ? | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| déficit temporaire / structurel | MENTIONNEE |
-| revenu stable / variable | MANQUANTE |
-| solo / couple | TRAITEE |
-| logement propriétaire / locataire | MANQUANTE |
-| dette / surendettement | TRAITEE |
-| charges compressibles / non | MANQUANTE |
-
 ### `dossiers/acheter-ou-louer-si-on-risque-demenager.html` — achat immobilier / crédit
 
 Promesse : **acheter ou louer si vous risquez de déménager bientôt ? | contre-évidence**
@@ -157,6 +145,21 @@ Promesse : **combien de chiffre d’affaires faut-il pour en vivre ? | contre-é
 | TVA | MENTIONNEE |
 | financement / BFR | TRAITEE |
 | associés | MENTIONNEE |
+
+### `dossiers/patrimoine-marge-de-manoeuvre.html` — couple / logement / séparation
+
+Promesse : **patrimoine et marge de manœuvre : combien de liberté vos actifs donnent-ils ? | contre-évidence**
+
+| Variante | Signal automatique |
+|---|---|
+| indivision directe | TRAITEE |
+| SCI | TRAITEE |
+| mariage | MANQUANTE |
+| PACS | MANQUANTE |
+| concubinage | MANQUANTE |
+| tontine | MANQUANTE |
+| propriété ≠ financement | TRAITEE |
+| sorties multiples | TRAITEE |
 
 ### `dossiers/quitter-cdi-avec-credit-immobilier.html` — reconversion / trajectoire pro
 
@@ -305,11 +308,24 @@ Promesse : **créer une entreprise avec peu d’argent : budget de départ réal
 | dette / surendettement | TRAITEE |
 | charges compressibles / non | TRAITEE |
 
+### `dossiers/patrimoine-marge-de-manoeuvre.html` — budget / dettes
+
+Promesse : **patrimoine et marge de manœuvre : combien de liberté vos actifs donnent-ils ? | contre-évidence**
+
+| Variante | Signal automatique |
+|---|---|
+| déficit temporaire / structurel | MANQUANTE |
+| revenu stable / variable | TRAITEE |
+| solo / couple | TRAITEE |
+| logement propriétaire / locataire | TRAITEE |
+| dette / surendettement | TRAITEE |
+| charges compressibles / non | TRAITEE |
+
 ## Lecture par famille
 
 ### couple / logement / séparation
 
-Pages détectées : **5**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **tontine** (4), **PACS** (2), **SCI** (2), **concubinage** (2), **mariage** (2), **indivision directe** (1).
+Pages détectées : **6**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **tontine** (5), **PACS** (3), **concubinage** (3), **mariage** (3), **SCI** (2), **indivision directe** (1).
 
 ### achat immobilier / crédit
 
@@ -333,7 +349,7 @@ Pages détectées : **6**. Promesses larges `NON_READY` : **3**. Variantes le pl
 
 ### budget / dettes
 
-Pages détectées : **6**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **logement propriétaire / locataire** (3), **revenu stable / variable** (2), **charges compressibles / non** (1).
+Pages détectées : **6**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **logement propriétaire / locataire** (2), **déficit temporaire / structurel** (1), **revenu stable / variable** (1).
 
 ### travailler moins / qualité de vie
 
