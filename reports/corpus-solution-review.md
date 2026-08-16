@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **126**. Pages `noindex` exclues : **79**. Validations humaines actives : **44**. Validations devenues caduques après modification : **79**.
+Pages analysées : **127**. Pages `noindex` exclues : **79**. Validations humaines actives : **44**. Validations devenues caduques après modification : **79**.
 
 ## Priorité humaine
 
@@ -191,6 +191,7 @@ Pages analysées : **126**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1477 | humaine ✓ | `articles/competences-invisibles-preuves.html` |
 | 8/9 | 1566 | à revoir après changement | `articles/50-candidatures-zero-reponse.html` |
 | 8/9 | 1591 | à revoir après changement | `dossiers/quand-vie-change-sante-separation-revenu.html` |
+| 8/9 | 1596 | heuristique | `dossiers/preparer-candidature-avant-postuler.html` |
 | 8/9 | 1653 | à revoir après changement | `dossiers/location-nue-ou-meublee-comparer.html` |
 | 8/9 | 1671 | à revoir après changement | `articles/competences-transferables.html` |
 | 8/9 | 1690 | à revoir après changement | `dossiers/business-plan-utile.html` |
