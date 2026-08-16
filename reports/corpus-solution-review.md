@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **53**. Validations devenues caduques après modification : **70**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **52**. Validations devenues caduques après modification : **71**.
 
 ## Priorité humaine
 
@@ -21,6 +21,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 |---|---|---|
 | `dossiers/dependance-gros-client.html` | `aff1498bfed0cdae7eb745a22fc9815b7c5ef260` | `63a5b3d2462665749296e8ca3c0953454cee725f` |
 | `dossiers/indivision-loyers-charges-comptes.html` | `17a2f1637380da7fdce685ccf909e3eeb3d5523a` | `58e167161f9837e65d22f8c8ead933f1bada5b48` |
+| `dossiers/comparer-strategies-immobilieres.html` | `06acc378800acfdcbb52e5992f3067d5b16a0b72` | `c67bf5147a80d76880553802d97ac8e805724bc1` |
 | `dossiers/etude-marche-terrain.html` | `d7865b294ff9c7d2ee08a0265097e17bc1061c3c` | `f90b72113ee549aa64fd58cceb44980f67e77160` |
 | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` | `d6585d192caf10f10a45195559ae0365fe70cf46` | `6498bf43d1796b83e5483f73c202074032ce1dc7` |
 | `dossiers/metiers-fonctions-organisation-entreprise.html` | `b9100c518af815d5e3d410b6184e23e03d065471` | `d1ad766d8bb16ec3e4e166eea84be714d760711e` |
@@ -104,7 +105,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/patrimoine-selon-age-construire-utiliser.html` — 7/9 automatique — Âge traité comme proxy d’événements et d’horizons, transitions de phase, exceptions et conditions d’inversion déjà explicites.
 - `dossiers/demenager-pour-un-emploi-salaire-minimum.html` — 7/9 automatique — Salaire net de bascule, coûts de transition, prix du temps, aides conditionnelles et valeur d’option de la mobilité déjà traités.
 - `dossiers/immobilier-allocation-globale-patrimoine.html` — 8/9 automatique — Immobilier replacé dans l’allocation totale avec dette, concentration, liquidité et risques corrélés déjà structurés.
-- `dossiers/comparer-strategies-immobilieres.html` — 8/9 automatique — Même capital, revenu net, temps de gestion, vacance propre à chaque usage, option de repli et allocation patrimoniale globale déjà structurés.
 - `dossiers/protocole-verifier-reponse-ia.html` — 8/9 automatique — Hiérarchie de preuve, temporalité, contre-preuve, hypothèse d’inversion et seuil d’arrêt de vérification déjà structurés.
 - `dossiers/reconversion-sans-formation-longue.html` — 8/9 automatique — Verrou dominant, VAE/certification/poste passerelle/candidature directe, coût complet, seuils et conditions d’inversion déjà structurés.
 - `dossiers/emploi-chercher-accepter-negocier-evoluer.html` — 8/9 automatique — Entonnoir emploi, diagnostic par étape, alternatives, plancher de négociation, scénario rester/préparer/partir et options futures déjà traités.
@@ -155,6 +155,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 6/9 | 1485 | humaine ✓ | `dossiers/experience-devient-risque-recruteur.html` |
 | 6/9 | 2785 | à revoir après changement | `dossiers/indivision-loyers-charges-comptes.html` |
 | 7/9 | 1157 | humaine ✓ | `articles/50-candidatures-zero-reponse.html` |
+| 7/9 | 1222 | à revoir après changement | `dossiers/comparer-strategies-immobilieres.html` |
 | 7/9 | 1285 | humaine ✓ | `dossiers/competences-qualification-employabilite.html` |
 | 7/9 | 1303 | humaine ✓ | `dossiers/garages-parkings-locaux-commerciaux.html` |
 | 7/9 | 1348 | à revoir après changement | `dossiers/etude-marche-terrain.html` |
@@ -169,7 +170,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 7/9 | 2401 | humaine ✓ | `dossiers/demenager-pour-un-emploi-salaire-minimum.html` |
 | 8/9 | 1008 | humaine ✓ | `dossiers/immobilier-allocation-globale-patrimoine.html` |
 | 8/9 | 1124 | à revoir après changement | `dossiers/acheter-logement-sans-se-fragiliser.html` |
-| 8/9 | 1194 | humaine ✓ | `dossiers/comparer-strategies-immobilieres.html` |
 | 8/9 | 1200 | à revoir après changement | `dossiers/finances-residence-principale.html` |
 | 8/9 | 1227 | humaine ✓ | `dossiers/protocole-verifier-reponse-ia.html` |
 | 8/9 | 1286 | humaine ✓ | `dossiers/reconversion-sans-formation-longue.html` |
