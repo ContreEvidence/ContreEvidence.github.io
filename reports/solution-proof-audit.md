@@ -6,17 +6,15 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 
 ## Synthèse
 
-- S0 — possibilité à fort enjeu sans preuve/condition détectée : **7**
+- S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
 - S1 — possibilité à fort enjeu à resserrer ou vérifier : **29**
 - S2 — possibilité générale à examiner : **13**
-- OK heuristique — condition ou preuve détectée : **149**
+- OK heuristique — condition ou preuve détectée : **150**
 
 ## S0 — vérifier avant toute recommandation
 
 ### `dossiers/creer-entreprise-avec-peu-argent.html`
 - **possibilité à fort enjeu sans condition ni signal de preuve** — Il faut distinguer ce qui permet de commencer, ce qui permet d’encaisser un retard, ce qui permet au foyer de survivre pendant la montée en charge — et ce que l’on paie en temps quand on économise du cash. _[fort enjeu]_
-### `dossiers/finances-difficiles-sortir-decouvert-dettes.html`
-- **possibilité à fort enjeu sans condition ni signal de preuve** — Une seule carte permet de voir le montant, le flux mensuel et les urgences réelles. _[fort enjeu]_
 ### `parcours-vie-professionnelle.html`
 - **possibilité à fort enjeu sans condition ni signal de preuve** — Vos compétences, vos résultats, votre santé et les portes qui restent ouvertes disent où vous pouvez aller demain. _[fort enjeu]_
 ### `simulateur-epargne-demission.html`
