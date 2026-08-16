@@ -54,6 +54,36 @@ Les décisions SHA-liées sont enregistrées dans `reports/corpus-blind-spot-hum
 - **Impact lecteur attendu :** passer d’un arbitrage binaire accepter/refuser à une gestion de portefeuille de capacité : accepter maintenant, reconfigurer, reporter, mettre en attente ou refuser.
 - **Incertitude résiduelle :** élasticité au prix, tolérance au délai, qualité de sous-traitance, saisonnalité et pouvoir réel des différents interlocuteurs varient selon le marché et le contrat.
 
+#### `articles/checklist-avant-placement-conseiller.html` — `REWRITE` + `VERIFY`
+
+- **Signal initial :** priorité heuristique 16 ; angles non détectés : attente/statu quo, effets de second ordre, transfert de risque, condition de renversement et valeur d’option.
+- **Lecture humaine :** signal confirmé. La page était forte sur la lutte contre l’usurpation et les fraudes mais pouvait encore laisser entendre qu’un acteur autorisé et un produit réel suffisent à valider la décision patrimoniale.
+- **Correction :** séparation entre autorisation, existence du produit, adéquation et timing ; ajout de l’horizon, capacité à subir une perte, frais et rémunération du conseil, allocation globale, fractionnement de la décision, coût de l’attente, valeur de liquidité et conditions explicites de renversement.
+- **Causalité :** vérifier un registre réduit le risque d’interlocuteur illégitime mais ne prouve ni l’adéquation du produit ni celle du montant. Si un besoin de liquidité proche domine, le même produit peut passer de pertinent à inadapté sans que sa qualité intrinsèque change.
+- **Preuve :** obligations et bonnes pratiques revérifiées sur AMF : autorisations/REGAFI-ORIAS, obligations des CIF, information sur les frais, horizon de placement et diversification.
+- **Impact lecteur attendu :** passer de « est-ce une arnaque ? » à « l’acteur est-il légitime, le produit réel, le conseil adapté et l’investissement opportun maintenant ? ».
+- **Incertitude résiduelle :** la page ne recommande aucun produit ni allocation universelle ; horizon, risque, fiscalité, liquidité et concentration doivent rester spécifiques au lecteur.
+
+#### `dossiers/choisir-statut-micro-ei-eurl-sasu.html` — `REWRITE` + `VERIFY`
+
+- **Signal initial :** priorité heuristique 16 ; manque sur acteur/gatekeeper, substitution, combinaison de leviers, second ordre et attente/statu quo.
+- **Lecture humaine :** signal confirmé, avec un angle juridique matériel : le texte laissait encore parfois la société apparaître comme la voie naturelle pour l’IS, la protection patrimoniale ou le bénéfice conservé.
+- **Correction :** ajout de l’EI avec option IS comme substitution à tester, rappel de la séparation patrimoniale de principe en EI, rôle de la clientèle B2B/B2C dans le coût réel de la TVA, combinaison assurance/contrat/régime fiscal avant changement de forme, effets de second ordre et déclencheurs de bascule.
+- **Causalité :** si le besoin réel est fiscal, assurantiel ou commercial, changer uniquement cette dimension peut résoudre le verrou avec moins de coûts et davantage de réversibilité. La société reprend l’avantage lorsque titres, associés ou gouvernance deviennent réellement nécessaires.
+- **Preuve :** seuils micro 2026 et TVA revérifiés sur economie.gouv.fr, impots.gouv.fr et BOFiP ; possibilité d’option IS de l’EI et comparaison EI/EURL/SASU revérifiées sur Entreprendre.Service-Public et Ministère de l’Économie ; séparation patrimoniale recoupée sur la réforme des indépendants.
+- **Impact lecteur attendu :** remplacer la logique « micro puis société » par une architecture modulaire : TVA, réel, IR/IS, assurance, gouvernance et société ne changent que lorsqu’un besoin précis le justifie.
+- **Incertitude résiduelle :** choix IR/IS, coût social, garanties exigées par financeurs et contrats, exceptions à la protection patrimoniale et conséquences d’une transformation exigent un chiffrage professionnel lorsque les montants deviennent significatifs.
+
+#### `dossiers/previsionnel-activite-12-mois.html` — `REWRITE` + `VERIFY`
+
+- **Signal initial :** priorité heuristique 16 ; manque sur acteur/gatekeeper, substitution, combinaison de leviers, effets de second ordre et attente/statu quo.
+- **Lecture humaine :** signal confirmé. Le dossier stress-testait déjà correctement les hypothèses mais ne faisait pas assez apparaître les dépendances tierces ni le risque qu’un scénario favorable dégrade la trésorerie par croissance du BFR.
+- **Correction :** ajout de la carte trafic/conversion/panier/récurrence/capacité, colonne gatekeeper, croissance et BFR, substitutions avant coûts fixes, scénario de transition, chocs combinés, preuves préalables aux engagements irréversibles et conditions de renversement.
+- **Causalité :** une hypothèse de financement, d’acompte, de délai fournisseur ou de gros contrat ne doit pas être comptée comme acquise tant que l’acteur concerné n’a pas coopéré. Une hausse de CA peut accroître stocks, créances et coûts avant encaissement ; elle peut donc diminuer la trésorerie même quand le résultat futur s’améliore.
+- **Preuve :** méthode du prévisionnel, plan de trésorerie, BFR et risque de trésorerie lié à une croissance trop rapide revérifiés sur Bpifrance Création.
+- **Impact lecteur attendu :** transformer le prévisionnel en système de preuves, de dépendances et de déclencheurs : savoir quoi tester avant d’embaucher, louer, acheter ou quitter une source de revenu stable.
+- **Incertitude résiduelle :** les seuils d’alerte restent illustratifs et doivent être recalibrés selon secteur, saisonnalité, pouvoir de négociation, statut, fiscalité et besoins personnels.
+
 ## Campagne couverture des situations — 16 août 2026
 
 Une nouvelle dimension est ouverte après constat qu’une page peut être profonde sur son cas central tout en étant trop étroite pour l’audience attirée par sa promesse.
