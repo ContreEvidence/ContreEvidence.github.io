@@ -8,7 +8,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **14**
 - P1 — affirmation forte à resserrer ou vérifier : **48**
-- P2 — nécessité à examiner : **147**
+- P2 — nécessité à examiner : **148**
 - OK heuristique — source/périmètre détecté, fond restant à contrôler : **600**
 
 ## P0 — rouvrir en priorité
@@ -128,6 +128,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `articles/50-candidatures-zero-reponse.html`
 - **nécessité à requalifier ou sourcer** — Le silence persiste malgré un échantillon homogène, un CV recentré et des preuves fortes : il faut tester le marché ou une contrainte structurelle.
 ### `articles/clients-interesses-personne-nachete.html`
+- **nécessité à requalifier ou sourcer** — Qu’est-ce qu’il faut abandonner pour acheter ? _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Tous les « oui » ne se valent pas Signal Valeur « C’est une bonne idée » Très faible « Tiens-moi au courant » Faible Demande de détails / rendez-vous Moyenne Demande de devis Forte Accepte une date / réserve un créneau Très forte Verse un acompte / paie Validation comportementale Le passage important est celui où la personne doit sacrifier quelque chose : argent, temps, engagement ou changement d’habitude. _[temporalité]_
 ### `articles/entretien-rate-ce-qui-bloque.html`
 - **nécessité à requalifier ou sourcer** — Disponibilité, mobilité et contraintes : ne pas laisser de surprise tardive Une contrainte réelle doit être clarifiée au bon moment. _[temporalité]_
