@@ -12,7 +12,6 @@ Pages indexables analysées : **122**. Pages `noindex` exclues : **79**.
 
 | Priorité | Couverture | Cluster | Page | Angles critiques non détectés |
 |---:|---:|---|---|---|
-| 24 | 5/15 | entrepreneuriat / activité | `articles/clients-interesses-personne-nachete.html` | acteur/gatekeeper, substitution, fractionnement, combinaison de leviers, effets de second ordre, attendre / statu quo, condition de renversement |
 | 24 | 5/15 | entrepreneuriat / activité | `dossiers/decision-plan-30-90-jours.html` | acteur/gatekeeper, substitution, fractionnement, combinaison de leviers, friction d’exécution, attendre / statu quo, condition de renversement |
 | 19 | 7/15 | entrepreneuriat / activité | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` | substitution, fractionnement, combinaison de leviers, effets de second ordre, attendre / statu quo, condition de renversement |
 | 18 | 5/15 | entrepreneuriat / activité | `dossiers/combien-chiffre-affaires-pour-vivre.html` | acteur/gatekeeper, substitution, fractionnement, effets de second ordre, attendre / statu quo |
@@ -62,6 +61,7 @@ Pages indexables analysées : **122**. Pages `noindex` exclues : **79**.
 | 10 | 7/15 | emploi / carrière / qualification | `dossiers/regles-responsabilites-fautes-travail.html` | acteur/gatekeeper, objectif réel / substitution du moyen, condition de renversement |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/accepter-emploi-plus-loin-cout-trajet.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen |
 | 9 | 8/15 | immobilier / crédit / indivision | `dossiers/assurer-ou-autoassurer-risques.html` | acteur/gatekeeper, valeur d’option / irréversibilité, condition de renversement |
+| 9 | 8/15 | emploi / carrière / qualification | `dossiers/competences-qualification-employabilite.html` | substitution, objectif réel / substitution du moyen, condition de renversement |
 
 ## Lecture par cluster
 
@@ -71,7 +71,7 @@ Pages : **31**. Angles le plus souvent non détectés : **substitution** (26), *
 
 ### entrepreneuriat / activité
 
-Pages : **27**. Angles le plus souvent non détectés : **acteur/gatekeeper** (24), **attendre / statu quo** (24), **valeur d’option / irréversibilité** (21), **substitution** (20), **transfert de risque** (18), **objectif réel / substitution du moyen** (16), **condition de renversement** (13).
+Pages : **27**. Angles le plus souvent non détectés : **acteur/gatekeeper** (23), **attendre / statu quo** (23), **valeur d’option / irréversibilité** (21), **substitution** (20), **transfert de risque** (17), **objectif réel / substitution du moyen** (16), **condition de renversement** (12).
 
 ### immobilier / crédit / indivision
 
