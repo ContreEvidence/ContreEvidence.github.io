@@ -8,7 +8,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
 - P1 — affirmation forte à resserrer ou vérifier : **65**
-- P2 — nécessité à examiner : **156**
+- P2 — nécessité à examiner : **151**
 - OK heuristique — source/périmètre détecté, fond restant à contrôler : **856**
 
 ## P0 — rouvrir en priorité
@@ -24,7 +24,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/decider-sans-tourner-en-rond.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Cette distinction est essentielle parce qu’un tableau pondéré ne doit jamais donner une bonne note à une option qui est en réalité impossible.
 ### `dossiers/etude-marche-terrain.html`
-- **fermeture forte sans signal de preuve ni périmètre clair** — Leur intérêt est d’empêcher le projet de devenir impossible à contredire. _[temporalité]_
+- **fermeture forte sans signal de preuve ni périmètre clair** — Mais après quelques substitutions prédéfinies, continuer à modifier le projet jusqu’à obtenir un « oui » ne produit plus de connaissance : cela rend l’hypothèse impossible à réfuter. _[temporalité]_
 ### `dossiers/plan-30-jours-recherche-emploi.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Manquer un logiciel appris en trois jours n’est pas équivalent à manquer le permis obligatoire ou l’expérience réglementaire exigée.
 ### `dossiers/quand-vie-change-sante-separation-revenu.html`
@@ -251,13 +251,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Mais cela ne signifie pas qu’il faut accepter le flou. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Une offre d’emploi n’est plus un problème de recrutement : c’est un arbitrage de vie Une fois l’offre reçue, le raisonnement doit changer.
 ### `dossiers/etude-marche-terrain.html`
-- **nécessité à requalifier ou sourcer** — Elle doit produire des informations capables de vous faire modifier le prix, la cible, l’offre, le canal… ou d’abandonner le projet.
-- **nécessité à requalifier ou sourcer** — Il doit être lu avec la marge, le temps, la capacité et le positionnement. _[temporalité]_
-- **nécessité à requalifier ou sourcer** — Il faut reconstituer la saisonnalité à partir de données historiques, concurrents, mots-clés, appels, réservations ou ventes comparables.
-- **nécessité à requalifier ou sourcer** — Les sept questions auxquelles l’étude doit répondre Qui paie réellement ?
-- **nécessité à requalifier ou sourcer** — L’étude de marché doit donc regarder la valeur du client dans le temps , pas seulement le premier achat.
-- **nécessité à requalifier ou sourcer** — L’étude doit donc regarder concentration, cycle de vente, décideurs et durée de renouvellement.
-- **nécessité à requalifier ou sourcer** — Transformer le terrain en hypothèse de CA Une hypothèse de CA doit être reconstruite : prospects atteignables × conversion × panier × fréquence .
+- **nécessité à requalifier ou sourcer** — Le niveau de preuve doit être proportionné à ce que vous allez engager ensuite.
+- **nécessité à requalifier ou sourcer** — Étude de marché : tester la demande avant de créer | Contre-Évidence Une étude de marché ne doit pas seulement pouvoir tuer votre idée. _[temporalité]_
 ### `dossiers/immobilier-allocation-globale-patrimoine.html`
 - **nécessité à requalifier ou sourcer** — Il faut intégrer coût d’acquisition, financement, charges, vacance, travaux, gestion, fiscalité, temps personnel et valeur de sortie.
 - **nécessité à requalifier ou sourcer** — Le rendement doit être reconstruit Prix d’annonce, rendement brut et mensualité ne suffisent pas.
