@@ -6,10 +6,10 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 ## Synthèse
 
-- P0 — fermeture forte sans preuve/périmètre suffisant : **14**
-- P1 — affirmation forte à resserrer ou vérifier : **49**
+- P0 — fermeture forte sans preuve/périmètre suffisant : **15**
+- P1 — affirmation forte à resserrer ou vérifier : **50**
 - P2 — nécessité à examiner : **145**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **609**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **610**
 
 ## P0 — rouvrir en priorité
 
@@ -20,6 +20,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/apprendre-developper-competences.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Ce qui fait inverser la méthode d’apprentissage On privilégierait… Mais si… Alors… autoformation activité réglementée parcours reconnu obligatoire pratique immédiate erreur dangereuse simulation/encadrement d’abord formation longue écart très ciblé parcours court tutorat fort autonomie déjà démontrée contrôle plus léger certification marché valorise surtout les preuves projet/expérience peuvent primer 13.
 - **fermeture forte sans signal de preuve ni périmètre clair** — Les signes d’un mauvais dispositif de formation objectifs formulés uniquement en thèmes de cours ; aucune situation de travail décrite ; évaluation surtout basée sur la mémoire alors que le métier exige de décider ; pratique très tardive ; feedback générique ; aucun critère d’autonomie ; promesse d’emploi sans débouchés documentés ; pas de distinction entre compétence obligatoire, certification attendue et simple ava
+### `dossiers/audit-budget-60-minutes.html`
+- **fermeture forte sans signal de preuve ni périmètre clair** — Tester une architecture plus soutenable plutôt qu’un effort impossible à tenir.
 ### `dossiers/contrat-travail-clauses-verifier-avant-signer.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Exclusivité Non Oui Quel projet futur devient impossible ?
 - **fermeture forte sans signal de preuve ni périmètre clair** — Période d’essai : ne pas la considérer comme automatique Service-Public rappelle que la période d’essai n’est pas obligatoire en CDI : elle doit être prévue dans le contrat ou la lettre d’engagement lorsqu’elle s’applique.
@@ -60,6 +62,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/assurer-ou-autoassurer-risques.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Vérifier ce qui est déjà couvert Avant d’acheter une nouvelle garantie, inventorie : régime obligatoire, mutuelle, prévoyance employeur, assurance emprunteur, multirisque habitation, carte bancaire, contrat automobile, garanties professionnelles éventuelles. _[signal-source, temporalité]_
 ### `dossiers/audit-budget-60-minutes.html`
+- **affirmation forte sans signal de source explicite** — Le problème n’est donc plus « je dois mieux surveiller mes dépenses » : la structure du budget ne peut pas s’équilibrer par ce seul levier . _[périmètre]_
 - **affirmation forte sans signal de source explicite** — Les dépenses incompressibles : celles qu’on ne peut pas réduire rapidement sans décision lourde. _[périmètre, temporalité]_
 ### `dossiers/comparer-deux-offres-emploi.html`
 - **affirmation forte sans signal de source explicite** — Une offre notée 86/100 reste mauvaise si elle viole votre seule contrainte absolue : revenu sous le plancher du foyer, horaires incompatibles, mobilité impossible, risque santé, trajet intenable ou clause contractuelle inacceptable. _[périmètre, temporalité]_
