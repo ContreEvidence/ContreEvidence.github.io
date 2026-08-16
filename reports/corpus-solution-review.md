@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **121**. Validations devenues caduques après modification : **1**.
+Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **120**. Validations devenues caduques après modification : **2**.
 
 ## Priorité humaine
 
@@ -18,6 +18,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 
 | Page | SHA relu | SHA courant |
 |---|---|---|
+| `dossiers/decision-plan-30-90-jours.html` | `bbaaeeb8eb455d09d2f350f771cbb35631f71e17` | `c7bd8f5cd0a197ead2e0ebe3d947f0cacbc0d46c` |
 | `articles/clients-interesses-personne-nachete.html` | `d1c27c49f015873e1efdb0b95230274d18688c46` | `36393db1ca7c359beb075a4b3fe0e25fa86ee8bb` |
 
 ## Pages validées humainement et inchangées
@@ -31,7 +32,6 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/finances-residence-principale.html` — 6/9 automatique — Durée, coûts irrécupérables, mobilité, liquidité, options et scénarios de sortie déjà traités.
 - `dossiers/puis-je-me-permettre-reconversion.html` — 6/9 automatique — Déficit mensuel, runway, scénarios adverse/central et transition progressive déjà présents.
 - `dossiers/finances-transmission-patrimoine.html` — 6/9 automatique — Objectifs, propriété, liquidité, sécurité du donateur et coordination civile/fiscale déjà traités.
-- `dossiers/decision-plan-30-90-jours.html` — 7/9 automatique — Action 7 jours, jalon 30 jours, résultat 90 jours, indicateur/contre-indicateur et règles préécrites de révision déjà présents.
 - `dossiers/finances-difficiles-sortir-decouvert-dettes.html` — 7/9 automatique — Déficit structurel, priorisation, leviers de flux, accompagnement, plan 7/30/90 jours et retour conditionnel à l’épargne déjà structurés.
 - `articles/checklist-avant-placement-conseiller.html` — 7/9 automatique — Chaîne de preuves indépendante, vérification du bénéficiaire, scénario de perte, arrêt sous pression et contrôle croisé déjà structurés.
 - `articles/50-candidatures-zero-reponse.html` — 7/9 automatique — Localisation de la rupture, séries comparables, tests A/B, scénarios de diagnostic et règles de changement de stratégie déjà explicites.
@@ -157,13 +157,13 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 6/9 | 1489 | humaine ✓ | `dossiers/finances-residence-principale.html` |
 | 6/9 | 1596 | humaine ✓ | `dossiers/puis-je-me-permettre-reconversion.html` |
 | 6/9 | 1629 | humaine ✓ | `dossiers/finances-transmission-patrimoine.html` |
-| 7/9 | 861 | humaine ✓ | `dossiers/decision-plan-30-90-jours.html` |
 | 7/9 | 1010 | humaine ✓ | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` |
 | 7/9 | 1064 | humaine ✓ | `articles/checklist-avant-placement-conseiller.html` |
 | 7/9 | 1157 | humaine ✓ | `articles/50-candidatures-zero-reponse.html` |
 | 7/9 | 1244 | humaine ✓ | `dossiers/rembourser-credit-ou-investir.html` |
 | 7/9 | 1247 | humaine ✓ | `articles/choisir-etf-mondial-debutant.html` |
 | 7/9 | 1248 | humaine ✓ | `dossiers/apprendre-developper-competences.html` |
+| 7/9 | 1253 | à revoir après changement | `dossiers/decision-plan-30-90-jours.html` |
 | 7/9 | 1268 | humaine ✓ | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` |
 | 7/9 | 1270 | humaine ✓ | `dossiers/patrimoine-permet-il-travailler-moins.html` |
 | 7/9 | 1285 | humaine ✓ | `dossiers/competences-qualification-employabilite.html` |
