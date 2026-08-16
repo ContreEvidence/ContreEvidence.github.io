@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **27**.
+Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **27**.
 
 ## Priorités de relecture
 
@@ -53,6 +53,7 @@ Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses
 | 1 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/reconversion-sans-formation-longue.html` | — |
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/audit-budget-60-minutes.html` | — |
 | 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/creer-entreprise-sans-diplome.html` | — |
+| 0 | COVERED_OR_NARROW | couple / logement / séparation | `dossiers/separation-logement-achete-a-deux.html` | — |
 
 ## Détail des promesses larges `NON_READY`
 
@@ -460,7 +461,7 @@ Promesse : **are, arce, acre : choisir pour créer son entreprise en 2026 | cont
 
 ### couple / logement / séparation
 
-Pages détectées : **2**. Promesses larges `NON_READY` : **1**. Variantes le plus souvent non détectées : **SCI** (2), **tontine** (2), **concubinage** (1).
+Pages détectées : **3**. Promesses larges `NON_READY` : **1**. Variantes le plus souvent non détectées : **SCI** (2), **tontine** (2), **concubinage** (1).
 
 ### achat immobilier / crédit
 
