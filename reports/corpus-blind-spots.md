@@ -17,7 +17,6 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 12 | 8/15 | entrepreneuriat / activité | `dossiers/creer-entreprise-sans-diplome.html` | acteur/gatekeeper, effets de second ordre, attendre / statu quo, condition de renversement |
 | 12 | 9/15 | immobilier / crédit / indivision | `dossiers/finances-residence-principale.html` | acteur/gatekeeper, fractionnement, effets de second ordre, condition de renversement |
 | 12 | 10/15 | entrepreneuriat / activité | `dossiers/combien-chiffre-affaires-pour-vivre.html` | acteur/gatekeeper, substitution, attendre / statu quo, condition de renversement |
-| 12 | 10/15 | emploi / carrière / qualification | `dossiers/puis-je-me-permettre-reconversion.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen, condition de renversement |
 | 12 | 11/15 | emploi / carrière / qualification | `dossiers/decider-a-deux-travail-patrimoine.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen, condition de renversement |
 | 12 | 11/15 | entrepreneuriat / activité | `dossiers/inflation-comprendre-histoire-pouvoir-achat.html` | acteur/gatekeeper, fractionnement, effets de second ordre, condition de renversement |
 | 10 | 7/15 | emploi / carrière / qualification | `articles/entretien-rate-ce-qui-bloque.html` | acteur/gatekeeper, substitution, condition de renversement |
@@ -62,12 +61,13 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 9 | 11/15 | patrimoine / investissement / retraite | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` | effets de second ordre, transfert de risque, condition de renversement |
 | 9 | 12/15 | immobilier / crédit / indivision | `dossiers/indivision-couple-separation-rachat-soulte.html` | effets de second ordre, valeur d’option / irréversibilité, condition de renversement |
 | 9 | 12/15 | patrimoine / investissement / retraite | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | attendre / statu quo, transfert de risque, condition de renversement |
+| 7 | 7/15 | emploi / carrière / qualification | `dossiers/debloquer-demarche-administrative.html` | objectif réel / substitution du moyen, condition de renversement |
 
 ## Lecture par cluster
 
 ### emploi / carrière / qualification
 
-Pages : **39**. Angles le plus souvent non détectés : **transfert de risque** (26), **valeur d’option / irréversibilité** (23), **substitution** (21), **attendre / statu quo** (18), **effets de second ordre** (18), **condition de renversement** (17), **objectif réel / substitution du moyen** (16).
+Pages : **39**. Angles le plus souvent non détectés : **transfert de risque** (27), **valeur d’option / irréversibilité** (23), **substitution** (20), **effets de second ordre** (19), **attendre / statu quo** (17), **condition de renversement** (16), **objectif réel / substitution du moyen** (15).
 
 ### entrepreneuriat / activité
 
