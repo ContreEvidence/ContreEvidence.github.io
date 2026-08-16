@@ -9,7 +9,7 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
 - S1 — possibilité à fort enjeu à resserrer ou vérifier : **37**
 - S2 — possibilité générale à examiner : **14**
-- OK heuristique — condition ou preuve détectée : **158**
+- OK heuristique — condition ou preuve détectée : **154**
 
 ## S0 — vérifier avant toute recommandation
 
