@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **26**.
+Pages/familles détectées : **40**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **25**.
 
 ## Priorités de relecture
 
@@ -14,13 +14,12 @@ Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses
 |---:|---|---|---|---|
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/devenir-manager-premiere-fois.html` | demandeur emploi, santé / inaptitude, sans diplôme, revenu / runway |
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | salarié, santé / inaptitude, sans diplôme, revenu / runway |
-| 28 | NON_READY | transmission / succession | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | mariage / conjoint, PACS / concubin, enfants / famille recomposée, SCI / parts |
 | 28 | NON_READY | travailler moins / qualité de vie | `dossiers/temps-energie-qualite-vie.html` | salarié privé, public, indépendant, retraite / protection |
 | 22 | NON_READY | reconversion / trajectoire pro | `articles/retrouver-emploi-apres-interruption.html` | salarié, demandeur emploi, sans diplôme |
 | 22 | NON_READY | reconversion / trajectoire pro | `dossiers/formation-vaut-elle-le-cout.html` | salarié, demandeur emploi, santé / inaptitude |
-| 22 | NON_READY | travailler moins / qualité de vie | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | salarié privé, public, indépendant |
 | 21 | NON_READY | reconversion / trajectoire pro | `articles/competences-transferables.html` | demandeur emploi, santé / inaptitude, sans diplôme |
 | 21 | NON_READY | travailler moins / qualité de vie | `dossiers/patrimoine-permet-il-travailler-moins.html` | salarié privé, public, indépendant |
+| 21 | NON_READY | couple / logement / séparation | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | indivision directe, mariage, PACS |
 | 21 | NON_READY | travailler moins / qualité de vie | `dossiers/travailler-moins-vivre-mieux.html` | public, indépendant |
 | 15 | NON_READY | achat immobilier / crédit | `dossiers/acheter-sans-vider-epargne.html` | achat seul / à deux, CDD / temporaire |
 | 15 | NON_READY | reconversion / trajectoire pro | `dossiers/combien-epargne-avant-demissionner.html` | salarié, sans diplôme |
@@ -86,22 +85,6 @@ Promesse : **métier, poste, fonction, service : comprendre l’entreprise — c
 | senior / âge | MANQUANTE |
 | revenu / runway | MANQUANTE |
 
-### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` — transmission / succession
-
-Promesse : **quand arrêter d’optimiser et commencer à utiliser son patrimoine ? | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| mariage / conjoint | MANQUANTE |
-| PACS / concubin | MANQUANTE |
-| enfants / famille recomposée | MANQUANTE |
-| sans enfant | MANQUANTE |
-| immobilier direct | MANQUANTE |
-| SCI / parts | MANQUANTE |
-| donation | MANQUANTE |
-| succession | MANQUANTE |
-| liquidité / partage | ROUTEE |
-
 ### `dossiers/temps-energie-qualite-vie.html` — travailler moins / qualité de vie
 
 Promesse : **manque de temps : comment récupérer des heures de vie ? | contre-évidence**
@@ -147,21 +130,6 @@ Promesse : **choisir une formation pour une reconversion : coût, rncp et débou
 | senior / âge | MANQUANTE |
 | revenu / runway | TRAITEE |
 
-### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` — travailler moins / qualité de vie
-
-Promesse : **quand arrêter d’optimiser et commencer à utiliser son patrimoine ? | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| salarié privé | MANQUANTE |
-| public | MANQUANTE |
-| indépendant | MANQUANTE |
-| 80% / quatre jours | TRAITEE |
-| télétravail / autre levier | TRAITEE |
-| solo / couple | TRAITEE |
-| retraite / protection | TRAITEE |
-| temps réellement libéré | MENTIONNEE |
-
 ### `articles/competences-transferables.html` — reconversion / trajectoire pro
 
 Promesse : **changer de métier sans repartir de zéro : compétences transférables | contre-évidence**
@@ -191,6 +159,21 @@ Promesse : **travailler moins grâce à son patrimoine : combien faut-il ? | con
 | solo / couple | TRAITEE |
 | retraite / protection | TRAITEE |
 | temps réellement libéré | TRAITEE |
+
+### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` — couple / logement / séparation
+
+Promesse : **quand arrêter d’optimiser et commencer à utiliser son patrimoine ? | contre-évidence**
+
+| Variante | Signal automatique |
+|---|---|
+| indivision directe | MANQUANTE |
+| SCI | TRAITEE |
+| mariage | MANQUANTE |
+| PACS | MANQUANTE |
+| concubinage | MANQUANTE |
+| tontine | MANQUANTE |
+| propriété ≠ financement | TRAITEE |
+| sorties multiples | TRAITEE |
 
 ### `dossiers/travailler-moins-vivre-mieux.html` — travailler moins / qualité de vie
 
@@ -445,7 +428,7 @@ Promesse : **are, arce, acre : choisir pour créer son entreprise en 2026 | cont
 
 ### couple / logement / séparation
 
-Pages détectées : **3**. Promesses larges `NON_READY` : **1**. Variantes le plus souvent non détectées : **SCI** (2), **tontine** (2), **concubinage** (1).
+Pages détectées : **4**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **tontine** (3), **SCI** (2), **concubinage** (2), **PACS** (1), **indivision directe** (1), **mariage** (1).
 
 ### achat immobilier / crédit
 
@@ -457,7 +440,7 @@ Pages détectées : **1**. Promesses larges `NON_READY` : **1**. Variantes le pl
 
 ### transmission / succession
 
-Pages détectées : **2**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **SCI / parts** (2), **sans enfant** (2), **PACS / concubin** (1), **donation** (1), **enfants / famille recomposée** (1), **immobilier direct** (1).
+Pages détectées : **1**. Promesses larges `NON_READY` : **1**. Variantes le plus souvent non détectées : **SCI / parts** (1), **sans enfant** (1).
 
 ### reconversion / trajectoire pro
 
@@ -473,7 +456,7 @@ Pages détectées : **6**. Promesses larges `NON_READY` : **2**. Variantes le pl
 
 ### travailler moins / qualité de vie
 
-Pages détectées : **5**. Promesses larges `NON_READY` : **4**. Variantes le plus souvent non détectées : **indépendant** (5), **public** (4), **salarié privé** (3), **retraite / protection** (1), **télétravail / autre levier** (1).
+Pages détectées : **4**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **indépendant** (4), **public** (3), **salarié privé** (2), **retraite / protection** (1), **télétravail / autre levier** (1).
 
 ## Règle éditoriale
 
