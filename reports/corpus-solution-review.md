@@ -108,7 +108,6 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1227 | heuristique | `dossiers/protocole-verifier-reponse-ia.html` |
 | 8/9 | 1229 | heuristique | `dossiers/previsionnel-activite-12-mois.html` |
 | 8/9 | 1229 | heuristique | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` |
-| 8/9 | 1237 | heuristique | `dossiers/prejuges-biais-monde-professionnel.html` |
 | 8/9 | 1280 | heuristique | `articles/frais-fiscalite-rendement-net.html` |
 | 8/9 | 1281 | heuristique | `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
 | 8/9 | 1286 | heuristique | `dossiers/reconversion-sans-formation-longue.html` |
@@ -167,6 +166,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1707 | heuristique | `dossiers/ameliorer-processus-sans-degrader-service.html` |
 | 9/9 | 1760 | heuristique | `articles/travailler-beaucoup-gagner-peu-prix.html` |
 | 9/9 | 1777 | heuristique | `dossiers/calculer-prix-minimum-rentable.html` |
+| 9/9 | 1791 | heuristique | `dossiers/prejuges-biais-monde-professionnel.html` |
 | 9/9 | 1894 | heuristique | `dossiers/finances-enveloppes-fiscalite.html` |
 | 9/9 | 1923 | heuristique | `dossiers/couple-famille-argent-temps.html` |
 | 9/9 | 1995 | heuristique | `dossiers/formation-vaut-elle-le-cout.html` |
