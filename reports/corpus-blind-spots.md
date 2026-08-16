@@ -6,7 +6,7 @@ Cet audit complète — il ne remplace pas — la revue structurelle. Il cherche
 
 Un motif absent n’est **pas** automatiquement un défaut : la file sert à provoquer une lecture humaine. Inversement, la présence d’un mot ne prouve pas que l’angle est bien traité. Les décisions humaines SHA-liées sont enregistrées séparément dans `reports/corpus-blind-spot-human-review-*.json`.
 
-Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
+Pages indexables analysées : **126**. Pages `noindex` exclues : **79**.
 
 ## Priorité heuristique
 
@@ -22,7 +22,6 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 10 | 7/15 | patrimoine / investissement / retraite | `dossiers/prix-attendre-finances.html` | effets de second ordre, transfert de risque, condition de renversement |
 | 9 | 8/15 | immobilier / crédit / indivision | `dossiers/acheter-logement-sans-se-fragiliser.html` | fractionnement, effets de second ordre, condition de renversement |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/competences-qualification-employabilite.html` | substitution, objectif réel / substitution du moyen, condition de renversement |
-| 9 | 8/15 | emploi / carrière / qualification | `dossiers/experience-devient-risque-recruteur.html` | acteur/gatekeeper, substitution, condition de renversement |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/plan-30-jours-recherche-emploi.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen |
 | 9 | 9/15 | emploi / carrière / qualification | `articles/premiere-chance-sans-experience.html` | acteur/gatekeeper, objectif réel / substitution du moyen, asymétrie de preuve |
 | 9 | 9/15 | immobilier / crédit / indivision | `dossiers/audit-budget-60-minutes.html` | acteur/gatekeeper, fenêtre temporelle, condition de renversement |
@@ -47,7 +46,6 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 6 | 9/15 | patrimoine / investissement / retraite | `dossiers/demenager-pour-un-emploi-salaire-minimum.html` | attendre / statu quo, transfert de risque |
 | 6 | 9/15 | immobilier / crédit / indivision | `dossiers/finances-investissement-locatif.html` | acteur/gatekeeper, condition de renversement |
 | 6 | 9/15 | emploi / carrière / qualification | `dossiers/reconversion-sans-formation-longue.html` | acteur/gatekeeper, substitution |
-| 6 | 10/15 | emploi / carrière / qualification | `articles/50-candidatures-zero-reponse.html` | acteur/gatekeeper, substitution |
 | 6 | 10/15 | patrimoine / investissement / retraite | `articles/construire-epargne-de-zero.html` | condition de renversement, valeur d’option / irréversibilité |
 | 6 | 10/15 | immobilier / crédit / indivision | `dossiers/comparer-strategies-immobilieres.html` | acteur/gatekeeper, condition de renversement |
 | 6 | 10/15 | emploi / carrière / qualification | `dossiers/emploi-chercher-accepter-negocier-evoluer.html` | substitution, objectif réel / substitution du moyen |
@@ -55,6 +53,7 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 6 | 10/15 | immobilier / crédit / indivision | `dossiers/garages-parkings-locaux-commerciaux.html` | acteur/gatekeeper, condition de renversement |
 | 6 | 10/15 | entrepreneuriat / activité | `dossiers/lancer-activite-sans-quitter-emploi.html` | substitution, condition de renversement |
 | 6 | 10/15 | entrepreneuriat / activité | `dossiers/methode-analyse-complete.html` | acteur/gatekeeper, substitution |
+| 6 | 10/15 | patrimoine / investissement / retraite | `dossiers/preparer-retraite-droits-epargne-logement.html` | transfert de risque, condition de renversement |
 | 6 | 10/15 | emploi / carrière / qualification | `dossiers/quitter-emploi-stable-ou-rester.html` | objectif réel / substitution du moyen, condition de renversement |
 | 6 | 11/15 | patrimoine / investissement / retraite | `articles/checklist-avant-placement-conseiller.html` | transfert de risque, condition de renversement |
 | 6 | 11/15 | patrimoine / investissement / retraite | `articles/comparatif-produits-bancaires.html` | transfert de risque, condition de renversement |
@@ -62,12 +61,13 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 6 | 11/15 | entrepreneuriat / activité | `dossiers/ameliorer-processus-sans-degrader-service.html` | acteur/gatekeeper, attendre / statu quo |
 | 6 | 11/15 | immobilier / crédit / indivision | `dossiers/audit-copropriete-avant-achat.html` | acteur/gatekeeper, effets de second ordre |
 | 6 | 11/15 | emploi / carrière / qualification | `dossiers/competent-mais-invisible-travail.html` | substitution, fenêtre temporelle |
+| 6 | 11/15 | emploi / carrière / qualification | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` | objectif réel / substitution du moyen, condition de renversement |
 
 ## Lecture par cluster
 
 ### emploi / carrière / qualification
 
-Pages : **40**. Angles le plus souvent non détectés : **transfert de risque** (26), **valeur d’option / irréversibilité** (22), **effets de second ordre** (19), **substitution** (17), **objectif réel / substitution du moyen** (16), **attendre / statu quo** (15), **fractionnement** (13).
+Pages : **40**. Angles le plus souvent non détectés : **transfert de risque** (26), **valeur d’option / irréversibilité** (22), **effets de second ordre** (19), **objectif réel / substitution du moyen** (16), **substitution** (16), **attendre / statu quo** (14), **fractionnement** (13).
 
 ### entrepreneuriat / activité
 
@@ -79,7 +79,7 @@ Pages : **26**. Angles le plus souvent non détectés : **objectif réel / subst
 
 ### patrimoine / investissement / retraite
 
-Pages : **35**. Angles le plus souvent non détectés : **substitution** (27), **condition de renversement** (23), **objectif réel / substitution du moyen** (20), **transfert de risque** (20), **acteur/gatekeeper** (15), **attendre / statu quo** (12), **valeur d’option / irréversibilité** (6).
+Pages : **36**. Angles le plus souvent non détectés : **substitution** (28), **condition de renversement** (24), **objectif réel / substitution du moyen** (21), **transfert de risque** (21), **acteur/gatekeeper** (16), **attendre / statu quo** (12), **valeur d’option / irréversibilité** (6).
 
 ## Règle de reprise éditoriale
 
