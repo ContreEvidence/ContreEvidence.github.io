@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
-- P1 — affirmation forte à resserrer ou vérifier : **63**
-- P2 — nécessité à examiner : **145**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **829**
+- P1 — affirmation forte à resserrer ou vérifier : **64**
+- P2 — nécessité à examiner : **148**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **824**
 
 ## P0 — rouvrir en priorité
 
@@ -49,6 +49,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 ### `articles/50-candidatures-zero-reponse.html`
 - **affirmation forte sans signal de source explicite** — Si votre zone, salaire minimal, horaires, diplôme obligatoire ou disponibilité éliminent l’essentiel des offres, une optimisation du CV ne crée pas artificiellement de postes. _[périmètre]_
+### `articles/accepter-nimporte-quel-poste-retour-emploi.html`
+- **affirmation forte sans signal de source explicite** — Revu le 16/08/2026 · Alternatives intermédiaires, passerelles, critères de renversement et quatre profils intégrés La réponse courte Acceptez plus facilement un poste imparfait s'il résout une urgence réelle ou ferme un verrou professionnel identifiable — revenu, activité récente, expérience, preuve, réseau — sans rendre presque impossible la suite. _[périmètre, temporalité]_
 ### `articles/choisir-etf-mondial-debutant.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Attendre avant d’investir aucune variable patrimoniale ne doit changer et l’attente repose seulement sur une prévision de marché revenir à la règle d’allocation choisie plutôt qu’à une certitude impossible. _[signal-source, temporalité]_
 ### `articles/competences-invisibles-preuves.html`
@@ -152,6 +154,10 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 ### `articles/50-candidatures-zero-reponse.html`
 - **nécessité à requalifier ou sourcer** — Le silence persiste malgré un échantillon homogène, un CV recentré et des preuves fortes : il faut tester le marché ou une contrainte structurelle.
+### `articles/accepter-nimporte-quel-poste-retour-emploi.html`
+- **nécessité à requalifier ou sourcer** — Avant de signer, écrivez la fonction ET la date de revue J'accepte ce poste pour : ______ Il doit me donner avant le : ______ Je continue en parallèle : ______ Je réouvre la décision si : ______ Cette écriture réduit l'effet « soulagement → inertie ». _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Problème réel Le poste doit produire… Urgence de trésorerie Un gain net significatif et rapide.
+- **nécessité à requalifier ou sourcer** — Un poste de transition doit fabriquer une preuve Après 3–6 mois, pourrez-vous montrer… Valeur Un résultat mesuré Preuve forte. _[temporalité]_
 ### `articles/clients-interesses-personne-nachete.html`
 - **nécessité à requalifier ou sourcer** — Qu’est-ce qu’il faut abandonner pour acheter ? _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Tous les « oui » ne se valent pas Signal Valeur « C’est une bonne idée » Très faible « Tiens-moi au courant » Faible Demande de détails / rendez-vous Moyenne Demande de devis Forte Accepte une date / réserve un créneau Très forte Verse un acompte / paie Validation comportementale Le passage important est celui où la personne doit sacrifier quelque chose : argent, temps, engagement ou changement d’habitude. _[temporalité]_
