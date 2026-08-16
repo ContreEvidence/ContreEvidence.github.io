@@ -8,7 +8,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **15**
 - P1 — affirmation forte à resserrer ou vérifier : **54**
-- P2 — nécessité à examiner : **146**
+- P2 — nécessité à examiner : **145**
 - OK heuristique — source/périmètre détecté, fond restant à contrôler : **649**
 
 ## P0 — rouvrir en priorité
@@ -183,7 +183,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Passer du revenu souhaité au chiffre d’affaires nécessaire Je pars du résultat que l’activité doit produire, puis je remonte. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Une petite activité doit absorber devis, messages, achats, trajets, rangement, factures, relances, prospection et imprévus.
 ### `dossiers/capacite-refuser-travail-rentabilite.html`
-- **nécessité à requalifier ou sourcer** — Bpifrance rappelle que le prix doit intégrer demande, concurrence et coût de revient : ce n’est pas seulement une décision commerciale, c’est aussi une décision de capacité.
 - **nécessité à requalifier ou sourcer** — La capacité commerciale doit être traitée comme une ressource productive : sans elle, le portefeuille se fige autour des clients historiques.
 ### `dossiers/classes-actifs-allocation-patrimoine.html`
 - **nécessité à requalifier ou sourcer** — Ce que le cockpit doit permettre Un cockpit patrimonial cohérent doit pouvoir enregistrer ces classes séparément, afficher leur poids, les comparer à une cible personnelle, agréger les expositions communes et appliquer des scénarios de stress différents à chacune.
