@@ -8,8 +8,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **8**
 - S1 — possibilité à fort enjeu à resserrer ou vérifier : **29**
-- S2 — possibilité générale à examiner : **12**
-- OK heuristique — condition ou preuve détectée : **149**
+- S2 — possibilité générale à examiner : **13**
+- OK heuristique — condition ou preuve détectée : **148**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -39,7 +39,7 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ### `contact.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Vous pouvez demander une source, signaler une erreur, proposer une situation à analyser ou exercer un droit de réponse. _[fort enjeu, preuve détectée]_
 ### `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`
-- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Intégrer la trajectoire professionnelle sans fabriquer un score arbitraire Le poste le plus confortable aujourd’hui peut réduire les options futures ; le poste moins payé peut au contraire apporter une compétence plus rare. _[fort enjeu, condition détectée]_
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Plus les charges fixes sont élevées, plus ce transfert peut réduire la capacité à absorber une panne, une période d’essai rompue ou un autre projet. _[fort enjeu, condition détectée]_
 ### `dossiers/audit-budget-60-minutes.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Les dépenses fixes dépassent ce qu’on peut supporter avec un revenu légèrement plus faible. _[fort enjeu, condition détectée]_
 ### `dossiers/business-plan-utile.html`
@@ -90,6 +90,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 
 ### `articles/travailler-beaucoup-gagner-peu-prix.html`
 - **possibilité générale à vérifier ou resserrer** — Puis divisez ce besoin par le nombre d’heures que vous pouvez réellement facturer , pas par toutes les heures travaillées.
+### `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`
+- **possibilité générale à vérifier ou resserrer** — Ne payez pas avec le salaire un problème que vous pouvez résoudre avec une autre variable.
 ### `dossiers/ameliorer-processus-sans-degrader-service.html`
 - **possibilité générale à vérifier ou resserrer** — Cela permet de la remplacer sans rouvrir le problème qu’elle contenait.
 ### `dossiers/automatiser-ou-non-processus.html`
