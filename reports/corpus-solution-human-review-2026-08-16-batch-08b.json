@@ -1,0 +1,13 @@
+{
+  "reviewed_at": "2026-08-16",
+  "batch": "8-of-9 continuation B",
+  "rule": "A review is valid only while the Git blob SHA remains identical.",
+  "pages": {
+    "dossiers/capacite-refuser-travail-rentabilite.html": {"sha": "aace252f32a1faf81cf6e0a4665e9b60e694129e", "status": "conforme", "note": "Capacité vendable, marge par heure contrainte, prix/délai/périmètre/délégation, stress test d’embauche et conditions de refus déjà structurés."},
+    "dossiers/tresorerie-bfr-entreprise.html": {"sha": "d417764e8cd3a736d178f66ff2be9427bcbb0fdd", "status": "conforme", "note": "Cycle de cash, BFR, coût du délai client, prévision 13 semaines, réserve minimale et leviers de cycle déjà structurés."},
+    "dossiers/are-arce-acre-creation-entreprise.html": {"sha": "96944742e60f24751b001857871095f3ae55ce94", "status": "conforme", "note": "Filet mensuel versus capital, besoin de financement réel, échec à M6, BFR, ACRE temporaire et questions à France Travail déjà structurés ; règles 2026 revérifiées le 16/08."},
+    "dossiers/comparer-strategies-immobilieres.html": {"sha": "06acc378800acfdcbb52e5992f3067d5b16a0b72", "status": "conforme", "note": "Même capital, revenu net, temps de gestion, vacance propre à chaque usage, option de repli et allocation patrimoniale globale déjà structurés."},
+    "dossiers/favoriser-un-enfant-succession-donation.html": {"sha": "87dc0927f5033751ed022b19eef2ce82ff2ba453", "status": "conforme", "note": "Intention réelle décomposée, réserve/quotité, outils alternatifs, liquidité du partage, stress tests et protocole notarial déjà structurés."},
+    "dossiers/piloter-patrimoine-selon-taille.html": {"sha": "ddf1912265fa21be67cc6fd674b672c25976f63c", "status": "conforme", "note": "Montant distingué de la complexité, risque dominant par phase, budget de complexité, seuil de recours au conseil et contre-exemples déjà structurés."}
+  }
+}
