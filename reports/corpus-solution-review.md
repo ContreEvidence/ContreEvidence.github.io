@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **77**. Validations devenues caduques après modification : **46**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **76**. Validations devenues caduques après modification : **47**.
 
 ## Priorité humaine
 
@@ -39,6 +39,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/acheter-sans-vider-epargne.html` | `8376bdcffd1c79dbcedf6b11fff240a1c8b4e6c0` | `8d8370eb96292e65df63ea37427ff9251ab4a96b` |
 | `articles/tester-metier-avant-investir.html` | `2d26e84a1aec867f3f795a7fe5076e5514259709` | `f0869a70482faef780134015edccb92309295c47` |
 | `dossiers/patrimoine-marge-de-manoeuvre.html` | `3e2dd7332b7c2063c63dbad30055168a61266868` | `2dbf9645bf9b74a55ad3cebd87d04fe2ae535ceb` |
+| `dossiers/changer-travail-avant-credit-immobilier.html` | `8b7e88c9c93261fc35ebcb3a4fd5052430befe79` | `82bec88878cee4c35920b82ddd48e71012134651` |
 | `dossiers/trajectoire-professionnelle-selon-situation.html` | `340b3c58bd6809606aac38282afac472924ee2b1` | `c507f380db4a0bcb57571cb0d12d2625ced63d5c` |
 | `dossiers/are-arce-acre-creation-entreprise.html` | `96944742e60f24751b001857871095f3ae55ce94` | `0a11bc2495d5e98ee3d769a581debaa5f66f4032` |
 | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` | `f1faf0bbb75b36b784e38e370c13eb49654a622f` | `cd3b8d01fbf0c7fffab2c109fcca1a2b0ecbae7b` |
@@ -141,7 +142,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/quitter-cdi-avec-credit-immobilier.html` — 9/9 automatique — Réécriture de référence : dette existante versus nouveau financement, fenêtres temporelles, séquençage, réserve et déclarations exactes déjà structurés.
 - `dossiers/bien-immobilier-garder-vendre-transformer.html` — 9/9 automatique — Valeur actuelle, capital alternatif, rendement d’usage, transformation, coût d’opportunité, scénarios et sortie déjà structurés.
 - `dossiers/indivision-immobiliere-sortir-sans-subir.html` — 9/9 automatique — Propriété, dette, créances, occupation et stratégie de sortie séparées ; négociation, convention, rachat, vente et preuve déjà structurés.
-- `dossiers/changer-travail-avant-credit-immobilier.html` — 9/9 automatique — Financement bancaire, période d’essai, mobilité, réserve et ordre des opérations traités comme variables distinctes avec scénarios d’inversion.
 - `dossiers/indivision-rachat-progressif-parts.html` — 9/9 automatique — Fractionnement du rachat, courbe de propriété, dette bancaire distincte, valorisation, friction et alternatives en moins de tranches déjà structurés.
 - `dossiers/indivision-couple-separation-rachat-soulte.html` — 9/9 automatique — Réécriture de référence : refus bancaire actuel non confondu avec vente obligatoire, propriété/dette/créances séparées, fenêtres 1–5 ans et rachat futur simulés.
 
@@ -222,6 +222,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 2498 | heuristique | `dossiers/vendre-bien-a-sa-sci-refinancement-patrimoine.html` |
 | 8/9 | 2533 | humaine ✓ | `dossiers/metiers-accessibles-sans-diplome.html` |
 | 8/9 | 2722 | humaine ✓ | `dossiers/inflation-comprendre-histoire-pouvoir-achat.html` |
+| 8/9 | 2791 | à revoir après changement | `dossiers/changer-travail-avant-credit-immobilier.html` |
 | 9/9 | 1193 | humaine ✓ | `dossiers/passer-80-pourcent-cout-reel.html` |
 | 9/9 | 1215 | humaine ✓ | `dossiers/depenses-recurrentes-abonnements-assurances.html` |
 | 9/9 | 1259 | à revoir après changement | `dossiers/trajectoire-professionnelle-selon-situation.html` |
@@ -266,7 +267,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 2347 | à revoir après changement | `articles/comparatif-produits-bancaires.html` |
 | 9/9 | 2381 | à revoir après changement | `dossiers/finances-transmission-patrimoine.html` |
 | 9/9 | 2462 | à revoir après changement | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
-| 9/9 | 2472 | humaine ✓ | `dossiers/changer-travail-avant-credit-immobilier.html` |
 | 9/9 | 2581 | à revoir après changement | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` |
 | 9/9 | 2675 | à revoir après changement | `dossiers/liquidites-reserve-securite.html` |
 | 9/9 | 2742 | à revoir après changement | `dossiers/combien-chiffre-affaires-pour-vivre.html` |
