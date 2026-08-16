@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **122**. Validations devenues caduques après modification : **1**.
+Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **121**. Validations devenues caduques après modification : **2**.
 
 ## Priorité humaine
 
@@ -18,13 +18,13 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 
 | Page | SHA relu | SHA courant |
 |---|---|---|
+| `dossiers/combien-chiffre-affaires-pour-vivre.html` | `ecb09de9f0ebcb7f42e79bac0351f086fadee8ae` | `6eb83e080e90da9965354053c9da5e0f41fe5c49` |
 | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` | `73804a97a74df735855ceb5291c6ce824e36da56` | `a982b4a256d31aa630435af2265c34c7134f8570` |
 
 ## Pages validées humainement et inchangées
 
 - `dossiers/trouver-premiers-clients.html` — 6/9 automatique — Entonnoir causal, canaux alternatifs, seuils d’arrêt et changement d’offre déjà explicites.
 - `articles/entretien-rate-ce-qui-bloque.html` — 6/9 automatique — Diagnostic de conversion, hypothèses concurrentes, retours convergents et conditions de recalibrage déjà présents.
-- `dossiers/combien-chiffre-affaires-pour-vivre.html` — 6/9 automatique — Seuils, capacité, scénario adverse et inversion de conclusion déjà explicites.
 - `dossiers/etre-riche-revenu-patrimoine-liberte.html` — 6/9 automatique — Page de clarification conceptuelle : plusieurs définitions et inversion selon la question déjà traitées.
 - `dossiers/experience-devient-risque-recruteur.html` — 6/9 automatique — Risques perçus, preuves, ciblage et test de cohérence personnelle déjà structurés.
 - `dossiers/finances-residence-principale.html` — 6/9 automatique — Durée, coûts irrécupérables, mobilité, liquidité, options et scénarios de sortie déjà traités.
@@ -151,7 +151,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 |---:|---:|---|---|
 | 6/9 | 1019 | humaine ✓ | `dossiers/trouver-premiers-clients.html` |
 | 6/9 | 1115 | humaine ✓ | `articles/entretien-rate-ce-qui-bloque.html` |
-| 6/9 | 1246 | humaine ✓ | `dossiers/combien-chiffre-affaires-pour-vivre.html` |
 | 6/9 | 1353 | humaine ✓ | `dossiers/etre-riche-revenu-patrimoine-liberte.html` |
 | 6/9 | 1485 | humaine ✓ | `dossiers/experience-devient-risque-recruteur.html` |
 | 6/9 | 1489 | humaine ✓ | `dossiers/finances-residence-principale.html` |
@@ -266,6 +265,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 2015 | humaine ✓ | `dossiers/quitter-cdi-avec-credit-immobilier.html` |
 | 9/9 | 2018 | humaine ✓ | `dossiers/bien-immobilier-garder-vendre-transformer.html` |
 | 9/9 | 2071 | humaine ✓ | `dossiers/trajectoire-professionnelle-selon-situation.html` |
+| 9/9 | 2141 | à revoir après changement | `dossiers/combien-chiffre-affaires-pour-vivre.html` |
 | 9/9 | 2201 | à revoir après changement | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` |
 | 9/9 | 2215 | humaine ✓ | `dossiers/indivision-immobiliere-sortir-sans-subir.html` |
 | 9/9 | 2472 | humaine ✓ | `dossiers/changer-travail-avant-credit-immobilier.html` |
