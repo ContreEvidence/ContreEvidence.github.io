@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
-- P1 — affirmation forte à resserrer ou vérifier : **64**
-- P2 — nécessité à examiner : **156**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **854**
+- P1 — affirmation forte à resserrer ou vérifier : **66**
+- P2 — nécessité à examiner : **157**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **855**
 
 ## P0 — rouvrir en priorité
 
@@ -123,6 +123,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
 - **affirmation forte sans signal de source explicite** — Trois poches plutôt qu’un seul patrimoine Poche Mission Interdit implicite Socle sécurité, dépenses proches, gros risques ne pas la consommer pour améliorer marginalement le confort. _[périmètre]_
 - **affirmation forte sans signal de source explicite** — Utiliser trop tard Qu’est-ce que l’âge, la santé, la famille ou le temps rendront impossible plus tard ? _[périmètre]_
+### `dossiers/questions-poser-avant-prise-de-poste.html`
+- **affirmation forte sans signal de source explicite** — Le manager : testez le système de décision, pas la sympathie Au lieu de « quel est votre style de management ? », demandez : quelles décisions je prendrai seul ; quelles décisions doivent être validées ; comment les priorités sont arbitrées quand tout ne peut pas être fait ; à quelle fréquence nous ferons le point ; ce qui déclenche une intervention du manager ; comment un désaccord récent a été résolu. _[périmètre]_
+- **affirmation forte sans signal de source explicite** — Une petite hausse de salaire ne compense pas nécessairement une responsabilité impossible à exercer. _[périmètre]_
 ### `dossiers/quitter-emploi-stable-ou-rester.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Intégrer la santé et l’énergie comme contraintes dures Un salaire supérieur ne compense pas toujours une situation qui dégrade durablement la santé ou rend la vie hors travail impossible. _[signal-source]_
 ### `dossiers/quitter-travail-reconversion-sans-se-fragiliser.html`
@@ -300,6 +303,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/quand-vie-change-sante-separation-revenu.html`
 - **nécessité à requalifier ou sourcer** — Ce qui doit faire renverser une décision provisoire Décision provisoire Signal de renversement Conserver le logement le coût mensuel rend le runway trop court ou aucune issue durable n’apparaît. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Quand la vie change brutalement : santé, séparation, revenu | Contre-Évidence Aller au contenu CONTRE-ÉVIDENCE Patrimoine Vie professionnelle Fenêtres Outils Bibliothèque Mon espace Quand trois variables changent en même temps, il faut d’abord éviter qu’une mauvaise décision en crée une quatrième — ou qu’une solution apparente transfère tout le risque sur la personne la plus fragile.
+### `dossiers/questions-poser-avant-prise-de-poste.html`
+- **nécessité à requalifier ou sourcer** — Plus une condition est importante pour votre décision, moins elle doit reposer sur une phrase vague du type « on verra rapidement ».
 ### `dossiers/tout-ca-pour-quoi-objectifs-besoins.html`
 - **nécessité à requalifier ou sourcer** — Avant de comparer les stratégies, il faut savoir ce que l’on cherche réellement à obtenir, ce que l’on refuse de sacrifier et quelles options doivent rester ouvertes . _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Il doit rendre visibles les conséquences, les arbitrages et les conditions de renversement pour que chacun choisisse en fonction de ses objectifs réels.
