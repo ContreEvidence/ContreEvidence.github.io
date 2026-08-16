@@ -38,7 +38,6 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 9 | 8/15 | immobilier / crédit / indivision | `dossiers/assurer-ou-autoassurer-risques.html` | acteur/gatekeeper, valeur d’option / irréversibilité, condition de renversement |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/competences-qualification-employabilite.html` | substitution, objectif réel / substitution du moyen, condition de renversement |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/experience-devient-risque-recruteur.html` | acteur/gatekeeper, substitution, condition de renversement |
-| 9 | 8/15 | immobilier / crédit / indivision | `dossiers/finances-investissement-locatif.html` | acteur/gatekeeper, valeur d’option / irréversibilité, condition de renversement |
 | 9 | 8/15 | patrimoine / investissement / retraite | `dossiers/passer-80-pourcent-cout-reel.html` | attendre / statu quo, transfert de risque, condition de renversement |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/plan-30-jours-recherche-emploi.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen |
 | 9 | 9/15 | emploi / carrière / qualification | `articles/premiere-chance-sans-experience.html` | acteur/gatekeeper, objectif réel / substitution du moyen, asymétrie de preuve |
@@ -62,6 +61,7 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 9 | 10/15 | entrepreneuriat / activité | `dossiers/etude-marche-terrain.html` | substitution, fractionnement, attendre / statu quo |
 | 9 | 10/15 | patrimoine / investissement / retraite | `dossiers/finances-allocation-portefeuille.html` | attendre / statu quo, condition de renversement, valeur d’option / irréversibilité |
 | 9 | 10/15 | patrimoine / investissement / retraite | `dossiers/finances-enveloppes-fiscalite.html` | attendre / statu quo, transfert de risque, condition de renversement |
+| 9 | 10/15 | patrimoine / investissement / retraite | `dossiers/finances-retraite-decumulation.html` | attendre / statu quo, effets de second ordre, condition de renversement |
 
 ## Lecture par cluster
 
