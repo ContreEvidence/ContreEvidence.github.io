@@ -1,0 +1,77 @@
+name: Batch 26 first investment
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/batch26-first-investment.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Connect first-investment entry path
+        shell: python
+        run: |
+          from pathlib import Path
+
+          def replace_once(path, old, new):
+              p = Path(path)
+              text = p.read_text(encoding="utf-8")
+              if old not in text:
+                  raise SystemExit(f"Anchor not found in {path}")
+              if text.count(old) != 1:
+                  raise SystemExit(f"Anchor not unique in {path}: {text.count(old)}")
+              p.write_text(text.replace(old, new, 1), encoding="utf-8")
+
+          replace_once(
+              "parcours-argent.html",
+              '<p><a href="dossiers/allocation-patrimoine-selon-situation.html">Commencer par 8 situations concrètes →</a></p>',
+              '<p><a href="dossiers/premier-investissement-comment-commencer.html">Je commence : préparer mon premier investissement →</a></p><p><a href="dossiers/allocation-patrimoine-selon-situation.html">J’investis déjà : comparer 8 situations concrètes →</a></p>'
+          )
+          replace_once(
+              "parcours-argent.html",
+              '<meta name="dateModified" content="2026-08-15"/>',
+              '<meta name="dateModified" content="2026-08-16"/>'
+          )
+
+          replace_once(
+              "themes/argent.html",
+              '<div class="pillar-links"><a href="../dossiers/allocation-patrimoine-selon-situation.html">Commencer par votre situation : 8 allocations concrètes →</a>',
+              '<div class="pillar-links"><a href="../dossiers/premier-investissement-comment-commencer.html">Commencer : placer ses premiers 100, 500 ou 1 000 € sans brûler les étapes →</a><a href="../dossiers/allocation-patrimoine-selon-situation.html">J’investis déjà : 8 allocations selon la situation →</a>'
+          )
+
+          replace_once(
+              "articles/construire-epargne-de-zero.html",
+              '<p class="source-note"><a href="https://www.amf-france.org/fr/espace-epargnants/savoir-bien-investir/cadrer-son-projet/definir-son-objectif" rel="noopener noreferrer">AMF — définir son objectif d\'épargne</a>.</p>\n<h2>12. Le premier investissement ne doit pas supprimer le premier filet de sécurité</h2>',
+              '<p class="source-note"><a href="https://www.amf-france.org/fr/espace-epargnants/savoir-bien-investir/cadrer-son-projet/definir-son-objectif" rel="noopener noreferrer">AMF — définir son objectif d\'épargne</a>.</p><p><a href="../dossiers/premier-investissement-comment-commencer.html"><strong>→ La réserve est prête : préparer le premier investissement sans brûler les étapes</strong></a></p>\n<h2>12. Le premier investissement ne doit pas supprimer le premier filet de sécurité</h2>'
+          )
+
+          sitemap = Path("sitemap.xml")
+          text = sitemap.read_text(encoding="utf-8")
+          text = text.replace(
+              "<url><loc>https://contreevidence.github.io/parcours-argent.html</loc><lastmod>2026-08-15</lastmod></url>",
+              "<url><loc>https://contreevidence.github.io/parcours-argent.html</loc><lastmod>2026-08-16</lastmod></url>"
+          )
+          loc = "https://contreevidence.github.io/dossiers/premier-investissement-comment-commencer.html"
+          if loc not in text:
+              entry = f'  <url><loc>{loc}</loc><lastmod>2026-08-16</lastmod></url>\n'
+              text = text.replace("</urlset>", entry + "</urlset>")
+          sitemap.write_text(text, encoding="utf-8")
+
+      - name: Commit and push
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add parcours-argent.html themes/argent.html articles/construire-epargne-de-zero.html sitemap.xml
+          git diff --cached --quiet && exit 0
+          git commit -m "Connect first-investment entry journey"
+          git push
