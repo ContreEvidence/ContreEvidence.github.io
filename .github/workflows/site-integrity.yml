@@ -11,6 +11,7 @@ on:
     paths:
       - "**/*.html"
       - "sitemap.xml"
+      - ".github/workflows/site-integrity.yml"
   workflow_dispatch:
 
 permissions:
@@ -21,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - name: Check sitemap, canonicals, metadata and internal HTML links
+      - name: Check sitemap, canonicals, metadata, internal links and source hygiene
         shell: python
         run: |
           from __future__ import annotations
@@ -48,6 +49,24 @@ jobs:
                   path = path[1:]
               path = path.lstrip('/')
               return (root / path).resolve()
+
+          # Assistant/UI citation tokens are rendering metadata, never public editorial content.
+          # U+E200/U+E201 delimit tokens such as cite, filecite or memcite.
+          for page in root.rglob('*.html'):
+              if any(part in {'.git', 'node_modules', 'publications'} for part in page.parts):
+                  continue
+              text = page.read_text(encoding='utf-8', errors='replace')
+              if '\ue200' in text or '\ue201' in text:
+                  rel = page.relative_to(root)
+                  bad_lines = [
+                      str(i)
+                      for i, line in enumerate(text.splitlines(), start=1)
+                      if '\ue200' in line or '\ue201' in line
+                  ]
+                  errors.append(
+                      f'Marqueur interne de citation/UI dans une page publique: {rel} '
+                      f'(ligne(s) {", ".join(bad_lines[:12])})'
+                  )
 
           tree = ET.parse('sitemap.xml')
           ns = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
