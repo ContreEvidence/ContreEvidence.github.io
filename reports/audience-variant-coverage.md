@@ -35,6 +35,7 @@ Pages/familles détectées : **46**. Pages `noindex` exclues : **79**. Promesses
 | 1 | COVERED_OR_NARROW | budget / dettes | `articles/construire-epargne-de-zero.html` | — |
 | 1 | COVERED_OR_NARROW | budget / dettes | `dossiers/decision-plan-30-90-jours.html` | — |
 | 1 | COVERED_OR_NARROW | budget / dettes | `dossiers/finances-cadre-global.html` | — |
+| 1 | COVERED_OR_NARROW | budget / dettes | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | — |
 | 1 | COVERED_OR_NARROW | investissement locatif | `dossiers/finances-investissement-locatif.html` | — |
 | 1 | COVERED_OR_NARROW | budget / dettes | `dossiers/liquidites-reserve-securite.html` | — |
 | 1 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/reconversion-sans-formation-longue.html` | — |
@@ -50,7 +51,6 @@ Pages/familles détectées : **46**. Pages `noindex` exclues : **79**. Promesses
 | 0 | COVERED_OR_NARROW | couple / logement / séparation | `dossiers/decider-a-deux-travail-patrimoine.html` | — |
 | 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/decider-a-deux-travail-patrimoine.html` | — |
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/finances-credit-endettement.html` | — |
-| 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | — |
 | 0 | COVERED_OR_NARROW | achat immobilier / crédit | `dossiers/finances-residence-principale.html` | — |
 | 0 | COVERED_OR_NARROW | transmission / succession | `dossiers/finances-transmission-patrimoine.html` | — |
 | 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/formation-vaut-elle-le-cout.html` | — |
