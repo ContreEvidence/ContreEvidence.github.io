@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
 - P1 — affirmation forte à resserrer ou vérifier : **63**
-- P2 — nécessité à examiner : **148**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **840**
+- P2 — nécessité à examiner : **151**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **843**
 
 ## P0 — rouvrir en priorité
 
@@ -300,8 +300,11 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/trajectoire-professionnelle-selon-situation.html`
 - **nécessité à requalifier ou sourcer** — Santé → nouvelle fonction soutenabilité quelle contrainte doit disparaître ? _[temporalité]_
 ### `dossiers/trouver-premiers-clients.html`
-- **nécessité à requalifier ou sourcer** — Il faut examiner le prix, la confiance, l’offre, le délai, le devis et le décalage entre la promesse de départ et la proposition réelle.
-- **nécessité à requalifier ou sourcer** — Un message de prospection doit ouvrir une conversation Structure utile : contexte précis → problème observé → proposition courte → question simple . _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Ce qui fait renverser la conclusion On pensait… Mais si… Alors… « Il faut plus prospecter » 50 % des rendez-vous achètent oui : le volume est probablement le goulot.
+- **nécessité à requalifier ou sourcer** — Il faut donc souvent lui offrir autre chose : périmètre plus petit, engagement plus court, test, garantie raisonnable, paiement fractionné, disponibilité supérieure ou implication personnelle du fondateur.
+- **nécessité à requalifier ou sourcer** — Un canal dont 40 % des rendez-vous arrivent à la deuxième relance doit être évalué avec cette séquence complète, pas sur le premier message. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — « Il faut une grosse marque avant de vendre » les clients acceptent un pilote étroit la preuve client doit précéder une partie du branding. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — « La pub est trop chère » les clients rachètent 6 fois le CAC doit être comparé à la marge cumulée. _[temporalité]_
 ### `fiches-metiers.html`
 - **nécessité à requalifier ou sourcer** — Elle montre ce qu’il faut réellement décider, prouver, supporter et apprendre.
 ### `index.html`
