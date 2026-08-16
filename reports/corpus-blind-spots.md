@@ -26,7 +26,6 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/plan-30-jours-recherche-emploi.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen |
 | 9 | 9/15 | emploi / carrière / qualification | `articles/premiere-chance-sans-experience.html` | acteur/gatekeeper, objectif réel / substitution du moyen, asymétrie de preuve |
 | 9 | 9/15 | immobilier / crédit / indivision | `dossiers/audit-budget-60-minutes.html` | acteur/gatekeeper, fenêtre temporelle, condition de renversement |
-| 9 | 9/15 | immobilier / crédit / indivision | `dossiers/audit-copropriete-avant-achat.html` | acteur/gatekeeper, valeur d’option / irréversibilité, condition de renversement |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/automatiser-ou-non-processus.html` | attendre / statu quo, transfert de risque, hétérogénéité / cas local |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/classes-actifs-allocation-patrimoine.html` | attendre / statu quo, transfert de risque, condition de renversement |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/comparer-strategies-immobilieres.html` | attendre / statu quo, transfert de risque, condition de renversement |
@@ -62,6 +61,7 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 6 | 10/15 | emploi / carrière / qualification | `dossiers/formation-vaut-elle-le-cout.html` | substitution, objectif réel / substitution du moyen |
 | 6 | 10/15 | immobilier / crédit / indivision | `dossiers/garages-parkings-locaux-commerciaux.html` | acteur/gatekeeper, condition de renversement |
 | 6 | 10/15 | entrepreneuriat / activité | `dossiers/methode-analyse-complete.html` | acteur/gatekeeper, substitution |
+| 6 | 10/15 | emploi / carrière / qualification | `dossiers/quitter-emploi-stable-ou-rester.html` | objectif réel / substitution du moyen, condition de renversement |
 
 ## Lecture par cluster
 
@@ -75,7 +75,7 @@ Pages : **24**. Angles le plus souvent non détectés : **valeur d’option / ir
 
 ### immobilier / crédit / indivision
 
-Pages : **25**. Angles le plus souvent non détectés : **objectif réel / substitution du moyen** (19), **acteur/gatekeeper** (15), **substitution** (15), **transfert de risque** (14), **condition de renversement** (13), **attendre / statu quo** (11), **effets de second ordre** (8).
+Pages : **25**. Angles le plus souvent non détectés : **objectif réel / substitution du moyen** (19), **acteur/gatekeeper** (15), **substitution** (15), **transfert de risque** (14), **condition de renversement** (12), **attendre / statu quo** (10), **effets de second ordre** (9).
 
 ### patrimoine / investissement / retraite
 
