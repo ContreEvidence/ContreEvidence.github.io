@@ -8,15 +8,15 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **15**
 - P1 — affirmation forte à resserrer ou vérifier : **59**
-- P2 — nécessité à examiner : **140**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **750**
+- P2 — nécessité à examiner : **146**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **753**
 
 ## P0 — rouvrir en priorité
 
 ### `articles/clients-interesses-personne-nachete.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Changer simultanément cible, offre, prix et message : impossible de savoir ce qui a marché.
 ### `articles/competences-transferables.html`
-- **fermeture forte sans signal de preuve ni périmètre clair** — Construire une matrice de transfert exploitable Exigence cible Poids dans 20 offres Expérience source Profondeur Distance de contexte Preuve Écart restant Action la moins coûteuse Coordonner une équipe 17/20 Planning + suivi + imprévus Forte Moyenne Exemple + recommandation Outil de planification cible Pratique guidée Analyser des indicateurs 14/20 Suivi d’activité Moyenne Moyenne Tableau réel Reporting avancé Projet _[temporalité]_
+- **fermeture forte sans signal de preuve ni périmètre clair** — Sans diplôme : distinguer compétence réelle et filtre d’accès Vous pouvez maîtriser 90 % du travail et rester bloqué par un diplôme obligatoire ou un filtre RH. _[temporalité]_
 ### `dossiers/audit-budget-60-minutes.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Tester une architecture plus soutenable plutôt qu’un effort impossible à tenir.
 ### `dossiers/combien-chiffre-affaires-pour-vivre.html`
@@ -148,6 +148,13 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `articles/clients-interesses-personne-nachete.html`
 - **nécessité à requalifier ou sourcer** — Qu’est-ce qu’il faut abandonner pour acheter ? _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Tous les « oui » ne se valent pas Signal Valeur « C’est une bonne idée » Très faible « Tiens-moi au courant » Faible Demande de détails / rendez-vous Moyenne Demande de devis Forte Accepte une date / réserve un créneau Très forte Verse un acompte / paie Validation comportementale Le passage important est celui où la personne doit sacrifier quelque chose : argent, temps, engagement ou changement d’habitude. _[temporalité]_
+### `articles/competences-transferables.html`
+- **nécessité à requalifier ou sourcer** — Il faut traduire chaque capacité vers l’exigence du poste cible.
+- **nécessité à requalifier ou sourcer** — Le poste passerelle doit avoir une sortie écrite Un poste adjacent n’est utile que s’il rapproche du métier cible. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Le recruteur doit pouvoir imaginer ce que vous ferez chez lui. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Mais il n’est pas encore responsable de secteur : il possède un socle, puis doit fermer quelques écarts précis.
+- **nécessité à requalifier ou sourcer** — Mais vous ne transportez pas non plus votre ancien métier en bloc : vous transportez des capacités dont il faut tester la valeur dans un nouveau système.
+- **nécessité à requalifier ou sourcer** — Mis à jour le 16/08/2026 · Demandeur d’emploi, public, indépendant, santé, sans diplôme et seconde partie de carrière intégrés La réponse complète en 30 secondes Ne demandez pas « quelles compétences ai-je ? » mais « quelles exigences du métier cible sont déjà couvertes par des capacités que je maîtrise, à quelle profondeur, dans un contexte suffisamment proche, et avec quelle preuve ? » Le résultat doit classer chaq
 ### `articles/entretien-rate-ce-qui-bloque.html`
 - **nécessité à requalifier ou sourcer** — Disponibilité, mobilité et contraintes : ne pas laisser de surprise tardive Une contrainte réelle doit être clarifiée au bon moment. _[temporalité]_
 ### `articles/premiere-chance-sans-experience.html`
