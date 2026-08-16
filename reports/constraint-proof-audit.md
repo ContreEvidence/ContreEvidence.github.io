@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
-- P1 — affirmation forte à resserrer ou vérifier : **68**
+- P1 — affirmation forte à resserrer ou vérifier : **69**
 - P2 — nécessité à examiner : **154**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **889**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **896**
 
 ## P0 — rouvrir en priorité
 
@@ -121,6 +121,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sourcée mais formulation trop absolue** — Sources officielles vérifiées le 16/08/2026 Service-Public.fr — discrimination et critères interdits Service-Public.fr — informations pouvant être demandées lors d’un recrutement Défenseur des droits — discrimination : information, orientation et accompagnement ← Retour à Vie professionnelle À lire ensuite Continuez sans repartir de zéro. _[signal-source, temporalité]_
 - **fermeture forte sourcée mais formulation trop absolue** — Une discrimination correspond à une différence de traitement fondée sur un critère interdit par la loi. _[signal-source]_
 - **fermeture forte sourcée mais formulation trop absolue** — Une discrimination, au sens juridique, implique une différence de traitement fondée sur un critère interdit. _[signal-source]_
+### `dossiers/preparer-candidature-avant-postuler.html`
+- **fermeture forte sourcée mais formulation trop absolue** — Diplôme Obligatoire juridiquement, filtre RH, ou simple préférence ? _[signal-source]_
 ### `dossiers/previsionnel-activite-12-mois.html`
 - **affirmation forte sans signal de source explicite** — Ajoutez la colonne que les tableurs oublient : « qui doit dire oui ? » Hypothèse Gatekeeper Risque 45 jours de délai fournisseur fournisseur la trésorerie se dégrade s’il exige comptant. acompte de 30 % client le BFR augmente si le marché refuse. prêt de 30 000 € banque / financeur l’investissement ne peut pas être traité comme acquis. sous-traitance disponible prestataire capacité théorique sans solution opérationne _[périmètre, temporalité]_
 ### `dossiers/puis-je-me-permettre-reconversion.html`
