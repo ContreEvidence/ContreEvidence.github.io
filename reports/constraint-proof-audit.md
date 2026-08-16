@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **14**
 - P1 — affirmation forte à resserrer ou vérifier : **48**
-- P2 — nécessité à examiner : **148**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **600**
+- P2 — nécessité à examiner : **147**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **604**
 
 ## P0 — rouvrir en priorité
 
@@ -197,10 +197,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — « Le logement doit être à moins de 45 minutes du travail » n’a pas le même statut que « j’aimerais une terrasse ».
 ### `dossiers/decision-plan-30-90-jours.html`
 - **nécessité à requalifier ou sourcer** — Elles ne disent pas encore ce qui doit être fait lundi matin .
-- **nécessité à requalifier ou sourcer** — Il est de rendre visible ce qui doit se produire pour que le choix devienne réel, et de fixer les signaux qui justifieraient de modifier le chemin.
 - **nécessité à requalifier ou sourcer** — Le jalon 30 jours doit produire une preuve « Avoir réfléchi » n’est pas un jalon. _[temporalité]_
-- **nécessité à requalifier ou sourcer** — Les cinq cases du plan Résultat visé : ce qui doit réellement avoir changé.
-- **nécessité à requalifier ou sourcer** — Mais une fois le choix fait, il faut changer de mode : réduire l’objectif à quelques actions observables, protéger les contraintes importantes et décider à l’avance quand réévaluer le plan . _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Les six cases du plan Résultat visé : ce qui doit réellement avoir changé.
+- **nécessité à requalifier ou sourcer** — Mais une fois le choix fait, il faut changer de mode : réduire l’objectif à quelques actions observables, rendre visibles les dépendances et décider à l’avance quand réévaluer le plan . _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Non-négociable : ce que le plan ne doit pas détériorer. _[temporalité]_
 ### `dossiers/dependance-gros-client.html`
 - **nécessité à requalifier ou sourcer** — Ne remplacez pas un gros client par dix mauvais clients : diversifier doit préserver la marge. _[temporalité]_
