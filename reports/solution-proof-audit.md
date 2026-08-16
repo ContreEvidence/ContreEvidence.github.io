@@ -7,9 +7,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **29**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **28**
 - S2 — possibilité générale à examiner : **15**
-- OK heuristique — condition ou preuve détectée : **150**
+- OK heuristique — condition ou preuve détectée : **151**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -61,7 +61,6 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ### `dossiers/finances-residence-principale.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Si elle permet d’accepter dans deux ans une mobilité procurant +500 €/mois sans revente contrainte, le prix de l’option devient mesurable . _[fort enjeu, condition détectée]_
 ### `dossiers/indivision-immobiliere-sortir-sans-subir.html`
-- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Fractionner peut réduire le besoin de cash — mais augmenter la friction Rachat unique Rachat progressif Besoin de financement élevé immédiatement Besoin initial plus faible. _[fort enjeu, condition détectée]_
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Le fait d’avoir payé davantage ne modifie pas automatiquement les quotes-parts inscrites au titre ; il peut ouvrir des comptes distincts. _[fort enjeu, condition détectée]_
 ### `dossiers/metiers-accessibles-sans-diplome.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Le ministère de l’Enseignement supérieur indique qu’il permet d’accéder directement à une formation universitaire sans avoir le diplôme requis, en faisant reconnaître expérience professionnelle, formations suivies et acquis personnels. _[fort enjeu, preuve détectée]_
