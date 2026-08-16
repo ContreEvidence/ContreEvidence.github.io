@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **89**. Validations devenues caduques après modification : **34**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **88**. Validations devenues caduques après modification : **35**.
 
 ## Priorité humaine
 
@@ -40,6 +40,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/reconversion-sans-perte-salaire.html` | `128613ebf08c799823434c76e96f628ec6102a5a` | `a3bf47dce0da390a93742f2dcbac9dc557d188e8` |
 | `dossiers/patrimoine-permet-il-travailler-moins.html` | `c006f7a8de0d55c219f89748ad39053e8afecbec` | `343adf2f660396f9265ddab15531d93005090ae6` |
 | `dossiers/sante-travail-equilibre-vie-pro-perso.html` | `9075afe1528f2f4c763aa2ee6146d95a22ade56b` | `e0c5f4d97e9b96ce87e1cf00e611cddcbe349312` |
+| `dossiers/travailler-moins-vivre-mieux.html` | `eb67bcfbe9b9b1bdaf4c4e402946defb38068247` | `a36678cca70ced0efdd0b0b48e961df0b67e870c` |
 | `articles/retrouver-emploi-apres-interruption.html` | `abbaae628730e9314acfe90444f7185a18cf1072` | `184c63bafd29cadff71972e8e8dba04dbd97122a` |
 | `articles/checklist-avant-placement-conseiller.html` | `f0a354fedc6ee6b64f0235804b495c6a4701a872` | `561b9eb3d62a2ba88f0b48c12b4c1b36fe54d5a7` |
 | `articles/choisir-etf-mondial-debutant.html` | `51eb14e0e0798b03354f58360105a9a851af5bf0` | `8ca0d60ea3471345eb449e0e878724f000c1c24f` |
@@ -126,7 +127,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `articles/accepter-nimporte-quel-poste-retour-emploi.html` — 9/9 automatique — Premier poste lu comme achat de preuve et d’options, avec coût d’enfermement, seuil de sortie et alternatives déjà structurés.
 - `dossiers/creer-entreprise-avec-peu-argent.html` — 9/9 automatique — Revue angles morts : coût du faible capital déplacé vers temps fondateur, fiabilité, qualité et maintenance rendu explicite.
 - `dossiers/quitter-emploi-stable-ou-rester.html` — 9/9 automatique — Coût de rester versus coût de partir, options intermédiaires, runway, scénarios et conditions d’inversion déjà structurés.
-- `dossiers/travailler-moins-vivre-mieux.html` — 9/9 automatique — Temps libéré, revenu sacrifié, effets secondaires, alternatives graduelles, test temporaire et seuils de soutenabilité déjà structurés.
 - `dossiers/automatiser-ou-non-processus.html` — 9/9 automatique — Réécriture du 16/08 : supprimer/simplifier/standardiser avant automatisation, assistance partielle, rollback et condition d’abandon.
 - `dossiers/indivision-succession-heritiers-vendre-partager.html` — 9/9 automatique — Droits, usages, liquidité, soultes, vente, partage, convention et scénarios de blocage déjà distingués et structurés.
 - `dossiers/ameliorer-processus-sans-degrader-service.html` — 9/9 automatique — Processus, indicateurs, incitations, goulots et garde-fous qualité déjà structurés ; pas de réécriture artificielle lors de la revue antérieure.
@@ -240,7 +240,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1474 | humaine ✓ | `dossiers/creer-entreprise-avec-peu-argent.html` |
 | 9/9 | 1494 | humaine ✓ | `dossiers/quitter-emploi-stable-ou-rester.html` |
 | 9/9 | 1563 | heuristique | `dossiers/separation-logement-achete-a-deux.html` |
-| 9/9 | 1610 | humaine ✓ | `dossiers/travailler-moins-vivre-mieux.html` |
 | 9/9 | 1615 | humaine ✓ | `dossiers/automatiser-ou-non-processus.html` |
 | 9/9 | 1704 | humaine ✓ | `dossiers/indivision-succession-heritiers-vendre-partager.html` |
 | 9/9 | 1707 | humaine ✓ | `dossiers/ameliorer-processus-sans-degrader-service.html` |
@@ -252,6 +251,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1893 | à revoir après changement | `dossiers/patrimoine-permet-il-travailler-moins.html` |
 | 9/9 | 1894 | humaine ✓ | `dossiers/finances-enveloppes-fiscalite.html` |
 | 9/9 | 1901 | à revoir après changement | `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
+| 9/9 | 1919 | à revoir après changement | `dossiers/travailler-moins-vivre-mieux.html` |
 | 9/9 | 1923 | humaine ✓ | `dossiers/couple-famille-argent-temps.html` |
 | 9/9 | 1944 | à revoir après changement | `articles/retrouver-emploi-apres-interruption.html` |
 | 9/9 | 1965 | humaine ✓ | `dossiers/audit-budget-60-minutes.html` |
