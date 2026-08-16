@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **70**. Validations devenues caduques après modification : **53**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **69**. Validations devenues caduques après modification : **54**.
 
 ## Priorité humaine
 
@@ -34,6 +34,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `articles/sans-diplome-chemins-alternatifs.html` | `d5f6867f38969bb89ca16df2bfdbd7ed2fed77ca` | `2a7cd63ced34759f03482dd0381857c50af183b0` |
 | `dossiers/creer-entreprise-avec-peu-argent.html` | `99fb67ac5498b3634df87e18d728af131d32c06e` | `e761b606c01252b83ba6bc6dd6209e1c98e8023d` |
 | `dossiers/devenir-manager-premiere-fois.html` | `5b37be7ac97ba89e23e4f31456f90008c7ec49e5` | `20a9d53327c6b914612bb9737b5f6c5eecd266cd` |
+| `articles/construire-epargne-de-zero.html` | `a528b4cc9c82d8c7d6b737144fceb7adc70bd100` | `f48bf6af11c6cb13c903ec0029517ae0b4281ea7` |
 | `dossiers/decider-a-deux-travail-patrimoine.html` | `ba14b77f52087dfb20b0813df082369592184e8e` | `1971f8f7829d71996d0f7c3d06f20360bd7cbab2` |
 | `dossiers/previsionnel-activite-12-mois.html` | `ec3ebe88a9923f6802788dd5fb1a65c113e220ae` | `f35cb5ed9159e68ac5caa6ea95ae5742ab5b7b8e` |
 | `dossiers/rembourser-credit-ou-investir.html` | `8748815b96435f7255f99965085fa55714c7334d` | `cd5f8143cad3394b08ea758e6663ad78438b118b` |
@@ -99,7 +100,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/emploi-chercher-accepter-negocier-evoluer.html` — 8/9 automatique — Entonnoir emploi, diagnostic par étape, alternatives, plancher de négociation, scénario rester/préparer/partir et options futures déjà traités.
 - `dossiers/competent-mais-invisible-travail.html` — 8/9 automatique — Valeur créée transformée en preuves observables, visibilité auprès des décideurs et alternatives à l’attente d’une reconnaissance spontanée déjà structurées.
 - `dossiers/tresorerie-bfr-entreprise.html` — 8/9 automatique — Cycle de cash, BFR, coût du délai client, prévision 13 semaines, réserve minimale et leviers de cycle déjà structurés.
-- `articles/construire-epargne-de-zero.html` — 8/9 automatique — Ordre excédent → dette → réserve → projets → investissement, dettes classées par danger, réserve selon fragilité et test d’investissabilité déjà structurés.
 - `articles/grosse-entree-argent-que-faire.html` — 8/9 automatique — Capital réellement disponible, poches, délai adaptable, dette sans automatisme, allocation globale et séquence 0–90 jours déjà structurés.
 - `dossiers/quitter-travail-reconversion-sans-se-fragiliser.html` — 8/9 automatique — Diagnostic de ce qu’il faut réellement quitter, options de transition, coût de rester, runway, tests de marché, scénarios et seuils de départ/renoncement déjà structurés.
 - `articles/premiere-chance-sans-experience.html` — 8/9 automatique — Première expérience lue comme achat de preuve, réseau et option suivante ; coût d’enfermement, condition de sortie et scénario dégradé déjà traités.
@@ -181,7 +181,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1337 | humaine ✓ | `dossiers/competent-mais-invisible-travail.html` |
 | 8/9 | 1344 | à revoir après changement | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` |
 | 8/9 | 1351 | humaine ✓ | `dossiers/tresorerie-bfr-entreprise.html` |
-| 8/9 | 1352 | humaine ✓ | `articles/construire-epargne-de-zero.html` |
 | 8/9 | 1360 | humaine ✓ | `articles/grosse-entree-argent-que-faire.html` |
 | 8/9 | 1360 | humaine ✓ | `dossiers/quitter-travail-reconversion-sans-se-fragiliser.html` |
 | 8/9 | 1364 | humaine ✓ | `articles/premiere-chance-sans-experience.html` |
@@ -206,6 +205,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1799 | humaine ✓ | `dossiers/decider-sans-tourner-en-rond.html` |
 | 8/9 | 1874 | à revoir après changement | `dossiers/creer-entreprise-avec-peu-argent.html` |
 | 8/9 | 1899 | à revoir après changement | `dossiers/devenir-manager-premiere-fois.html` |
+| 8/9 | 1956 | à revoir après changement | `articles/construire-epargne-de-zero.html` |
 | 8/9 | 1976 | à revoir après changement | `dossiers/decider-a-deux-travail-patrimoine.html` |
 | 8/9 | 2036 | à revoir après changement | `dossiers/previsionnel-activite-12-mois.html` |
 | 8/9 | 2045 | à revoir après changement | `dossiers/rembourser-credit-ou-investir.html` |
