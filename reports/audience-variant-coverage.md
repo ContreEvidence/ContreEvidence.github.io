@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **14**.
+Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **13**.
 
 ## Priorités de relecture
 
@@ -18,7 +18,6 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 | 21 | NON_READY | couple / logement / séparation | `dossiers/acheter-sans-vider-epargne.html` | SCI, mariage, PACS |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | indivision directe, mariage, PACS |
 | 15 | NON_READY | reconversion / trajectoire pro | `dossiers/combien-epargne-avant-demissionner.html` | salarié, sans diplôme |
-| 14 | NON_READY | entrepreneuriat | `dossiers/combien-chiffre-affaires-pour-vivre.html` | micro / EI / société, activité réglementée |
 | 14 | NON_READY | couple / logement / séparation | `dossiers/patrimoine-marge-de-manoeuvre.html` | mariage, PACS |
 | 14 | NON_READY | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 10 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/changer-travail-avant-credit-immobilier.html` | santé / inaptitude, sans diplôme |
@@ -42,6 +41,7 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 | 0 | COVERED_OR_NARROW | achat immobilier / crédit | `dossiers/acheter-logement-sans-se-fragiliser.html` | — |
 | 0 | COVERED_OR_NARROW | achat immobilier / crédit | `dossiers/acheter-sans-vider-epargne.html` | — |
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/audit-budget-60-minutes.html` | — |
+| 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/combien-chiffre-affaires-pour-vivre.html` | — |
 | 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/creer-entreprise-avec-peu-argent.html` | — |
 | 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/creer-entreprise-sans-diplome.html` | — |
 | 0 | COVERED_OR_NARROW | couple / logement / séparation | `dossiers/decider-a-deux-travail-patrimoine.html` | — |
@@ -146,20 +146,6 @@ Promesse : **combien d’épargne avant de démissionner ? calcul, runway et exe
 | sans diplôme | MANQUANTE |
 | senior / âge | MANQUANTE |
 | revenu / runway | TRAITEE |
-
-### `dossiers/combien-chiffre-affaires-pour-vivre.html` — entrepreneuriat
-
-Promesse : **combien de chiffre d’affaires faut-il pour en vivre ? | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| activité principale / complément | TRAITEE |
-| micro / EI / société | MANQUANTE |
-| activité réglementée | MANQUANTE |
-| chômage / aides | TRAITEE |
-| TVA | MENTIONNEE |
-| financement / BFR | TRAITEE |
-| associés | MENTIONNEE |
 
 ### `dossiers/patrimoine-marge-de-manoeuvre.html` — couple / logement / séparation
 
@@ -284,7 +270,7 @@ Pages détectées : **11**. Promesses larges `NON_READY` : **4**. Variantes le p
 
 ### entrepreneuriat
 
-Pages détectées : **6**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **TVA** (4), **associés** (4), **activité réglementée** (3), **micro / EI / société** (2).
+Pages détectées : **6**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **TVA** (4), **associés** (4), **activité réglementée** (2), **micro / EI / société** (1).
 
 ### budget / dettes
 
