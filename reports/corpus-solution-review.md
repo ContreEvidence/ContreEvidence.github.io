@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **109**. Validations devenues caduques après modification : **14**.
+Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **108**. Validations devenues caduques après modification : **15**.
 
 ## Priorité humaine
 
@@ -20,6 +20,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 |---|---|---|
 | `dossiers/business-plan-utile.html` | `e905253a4ba67437152d5227dcdd9dd464886d32` | `d67ecb168823cccfc96f3a853f21e902602d46bb` |
 | `dossiers/apprendre-developper-competences.html` | `487f02e927355afd164e889a7c53b7d4e0e6ff65` | `3272d614977166149cab861080f1216a5458a5c2` |
+| `dossiers/patrimoine-marge-de-manoeuvre.html` | `3e2dd7332b7c2063c63dbad30055168a61266868` | `50b975f0203803c81a54e764c76094e85630be34` |
 | `dossiers/capacite-refuser-travail-rentabilite.html` | `aace252f32a1faf81cf6e0a4665e9b60e694129e` | `91ebe0bb0dc7e77c7a5a042210a2f54a7e04570e` |
 | `dossiers/previsionnel-activite-12-mois.html` | `ec3ebe88a9923f6802788dd5fb1a65c113e220ae` | `f35cb5ed9159e68ac5caa6ea95ae5742ab5b7b8e` |
 | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` | `f1faf0bbb75b36b784e38e370c13eb49654a622f` | `cd3b8d01fbf0c7fffab2c109fcca1a2b0ecbae7b` |
@@ -53,7 +54,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/garages-parkings-locaux-commerciaux.html` — 7/9 automatique — Vacance extrême, reconversion du local, financement, concentration, critères d’inversion et sortie avant entrée déjà structurés.
 - `dossiers/finances-credit-endettement.html` — 7/9 automatique — Fonction de la dette, coût complet, levier, liquidité, stress combiné et options futures détruites par la mensualité déjà explicites.
 - `dossiers/assurer-ou-autoassurer-risques.html` — 7/9 automatique — Gravité, capacité d’absorption, inventaire des couvertures, franchise comme partage du risque et matrice fréquence/gravité déjà traités.
-- `dossiers/patrimoine-marge-de-manoeuvre.html` — 7/9 automatique — Runway de décision, trois niveaux de liquidité, scénarios de transition, stress test et seuil minimal de marge déjà structurés.
 - `dossiers/acheter-sans-vider-epargne.html` — 7/9 automatique — Arbitrage marginal par tranche d’apport, mois de sécurité, stress test et valeur d’option de la liquidité déjà explicites.
 - `dossiers/questions-poser-avant-prise-de-poste.html` — 7/9 automatique — Questions conçues pour réduire l’incertitude, croisement d’interlocuteurs, moyens versus responsabilités et matrice importance × inconnue déjà présents.
 - `dossiers/accepter-emploi-plus-loin-cout-trajet.html` — 7/9 automatique — Gain net, coût du temps, trois seuils, option de carrière, télétravail et déménagement comme architectures alternatives déjà traités.
@@ -167,7 +167,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 7/9 | 1303 | humaine ✓ | `dossiers/garages-parkings-locaux-commerciaux.html` |
 | 7/9 | 1344 | humaine ✓ | `dossiers/finances-credit-endettement.html` |
 | 7/9 | 1390 | humaine ✓ | `dossiers/assurer-ou-autoassurer-risques.html` |
-| 7/9 | 1390 | humaine ✓ | `dossiers/patrimoine-marge-de-manoeuvre.html` |
 | 7/9 | 1407 | humaine ✓ | `dossiers/acheter-sans-vider-epargne.html` |
 | 7/9 | 1408 | humaine ✓ | `dossiers/questions-poser-avant-prise-de-poste.html` |
 | 7/9 | 1410 | humaine ✓ | `dossiers/accepter-emploi-plus-loin-cout-trajet.html` |
@@ -213,6 +212,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1690 | à revoir après changement | `dossiers/business-plan-utile.html` |
 | 8/9 | 1712 | humaine ✓ | `articles/frais-fiscalite-rendement-net.html` |
 | 8/9 | 1714 | à revoir après changement | `dossiers/apprendre-developper-competences.html` |
+| 8/9 | 1742 | à revoir après changement | `dossiers/patrimoine-marge-de-manoeuvre.html` |
 | 8/9 | 1754 | humaine ✓ | `dossiers/location-courte-duree-meuble-tourisme.html` |
 | 8/9 | 1771 | à revoir après changement | `dossiers/capacite-refuser-travail-rentabilite.html` |
 | 8/9 | 1788 | humaine ✓ | `dossiers/finances-allocation-portefeuille.html` |
