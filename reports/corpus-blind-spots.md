@@ -29,7 +29,6 @@ Pages indexables analysées : **122**. Pages `noindex` exclues : **79**.
 | 13 | 7/15 | emploi / carrière / qualification | `articles/tester-metier-avant-investir.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen, condition de renversement |
 | 13 | 7/15 | entrepreneuriat / activité | `dossiers/metiers-fonctions-organisation-entreprise.html` | acteur/gatekeeper, substitution, attendre / statu quo, condition de renversement |
 | 13 | 7/15 | patrimoine / investissement / retraite | `dossiers/quand-vie-change-sante-separation-revenu.html` | effets de second ordre, transfert de risque, hétérogénéité / cas local, condition de renversement |
-| 12 | 5/15 | emploi / carrière / qualification | `articles/competences-invisibles-preuves.html` | acteur/gatekeeper, substitution, condition de renversement |
 | 12 | 8/15 | patrimoine / investissement / retraite | `articles/choisir-etf-mondial-debutant.html` | attendre / statu quo, transfert de risque, condition de renversement, valeur d’option / irréversibilité |
 | 12 | 8/15 | patrimoine / investissement / retraite | `articles/comparatif-produits-bancaires.html` | attendre / statu quo, transfert de risque, condition de renversement, valeur d’option / irréversibilité |
 | 12 | 8/15 | emploi / carrière / qualification | `articles/sans-diplome-chemins-alternatifs.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen, condition de renversement |
@@ -62,12 +61,13 @@ Pages indexables analysées : **122**. Pages `noindex` exclues : **79**.
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/accepter-emploi-plus-loin-cout-trajet.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen |
 | 9 | 8/15 | immobilier / crédit / indivision | `dossiers/assurer-ou-autoassurer-risques.html` | acteur/gatekeeper, valeur d’option / irréversibilité, condition de renversement |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/competences-qualification-employabilite.html` | substitution, objectif réel / substitution du moyen, condition de renversement |
+| 9 | 8/15 | emploi / carrière / qualification | `dossiers/experience-devient-risque-recruteur.html` | acteur/gatekeeper, substitution, condition de renversement |
 
 ## Lecture par cluster
 
 ### emploi / carrière / qualification
 
-Pages : **31**. Angles le plus souvent non détectés : **substitution** (26), **transfert de risque** (26), **attendre / statu quo** (21), **acteur/gatekeeper** (20), **valeur d’option / irréversibilité** (20), **objectif réel / substitution du moyen** (18), **effets de second ordre** (16).
+Pages : **31**. Angles le plus souvent non détectés : **substitution** (26), **transfert de risque** (26), **attendre / statu quo** (21), **valeur d’option / irréversibilité** (20), **acteur/gatekeeper** (19), **objectif réel / substitution du moyen** (18), **effets de second ordre** (16).
 
 ### entrepreneuriat / activité
 
