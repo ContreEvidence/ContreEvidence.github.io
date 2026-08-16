@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **123**. Validations devenues caduques après modification : **0**.
+Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **122**. Validations devenues caduques après modification : **1**.
 
 ## Priorité humaine
 
@@ -16,7 +16,9 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 
 ## Validations devenues caduques
 
-Aucune.
+| Page | SHA relu | SHA courant |
+|---|---|---|
+| `dossiers/contrat-travail-clauses-verifier-avant-signer.html` | `73804a97a74df735855ceb5291c6ce824e36da56` | `a982b4a256d31aa630435af2265c34c7134f8570` |
 
 ## Pages validées humainement et inchangées
 
@@ -35,7 +37,6 @@ Aucune.
 - `articles/choisir-etf-mondial-debutant.html` — 7/9 automatique — Exposition avant produit, concentration, chevauchement, enveloppe, risque et séquence de sélection déjà structurés pour une page de choix d’ETF.
 - `dossiers/apprendre-developper-competences.html` — 7/9 automatique — Situation cible, modalités alternatives, autonomie progressive, stress test, seuil de formation et condition d’inversion déjà structurés.
 - `dossiers/decision-plan-30-90-jours.html` — 7/9 automatique — Revue angles morts : dépendances externes, contrôle/influence/dépendance, voie parallèle, attente bornée et séquence de préservation d’option ajoutées.
-- `dossiers/contrat-travail-clauses-verifier-avant-signer.html` — 7/9 automatique — Clauses lues comme options, matrice probabilité × impact × réversibilité, scénarios adverses et négociation avant signature déjà présents.
 - `dossiers/patrimoine-permet-il-travailler-moins.html` — 7/9 automatique — Coût net du temps libéré, runway, trois seuils de liberté, stress test et réversibilité déjà structurés.
 - `dossiers/competences-qualification-employabilite.html` — 7/9 automatique — Séparation compétence/qualification/preuve, verrou légal versus recrutement, test sur 30 offres et voies alternatives déjà structurés.
 - `dossiers/finances-cadre-global.html` — 7/9 automatique — Objectifs par horizon, réserve personnelle, allocation en zones, plafonds, stress tests et événements autorisant une révision déjà explicites.
@@ -163,7 +164,6 @@ Aucune.
 | 7/9 | 1247 | humaine ✓ | `articles/choisir-etf-mondial-debutant.html` |
 | 7/9 | 1248 | humaine ✓ | `dossiers/apprendre-developper-competences.html` |
 | 7/9 | 1253 | humaine ✓ | `dossiers/decision-plan-30-90-jours.html` |
-| 7/9 | 1268 | humaine ✓ | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` |
 | 7/9 | 1270 | humaine ✓ | `dossiers/patrimoine-permet-il-travailler-moins.html` |
 | 7/9 | 1285 | humaine ✓ | `dossiers/competences-qualification-employabilite.html` |
 | 7/9 | 1301 | humaine ✓ | `dossiers/finances-cadre-global.html` |
@@ -266,6 +266,7 @@ Aucune.
 | 9/9 | 2015 | humaine ✓ | `dossiers/quitter-cdi-avec-credit-immobilier.html` |
 | 9/9 | 2018 | humaine ✓ | `dossiers/bien-immobilier-garder-vendre-transformer.html` |
 | 9/9 | 2071 | humaine ✓ | `dossiers/trajectoire-professionnelle-selon-situation.html` |
+| 9/9 | 2201 | à revoir après changement | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` |
 | 9/9 | 2215 | humaine ✓ | `dossiers/indivision-immobiliere-sortir-sans-subir.html` |
 | 9/9 | 2472 | humaine ✓ | `dossiers/changer-travail-avant-credit-immobilier.html` |
 | 9/9 | 2694 | humaine ✓ | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` |
