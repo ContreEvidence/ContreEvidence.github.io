@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **87**. Validations devenues caduques après modification : **36**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **86**. Validations devenues caduques après modification : **37**.
 
 ## Priorité humaine
 
@@ -32,6 +32,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/location-courte-duree-meuble-tourisme.html` | `ddaf6bc36e2171b5e249a161fb66926f963ea4d2` | `67506904bc390ceac39951eb725bdb4625fe5b54` |
 | `dossiers/creer-entreprise-avec-peu-argent.html` | `99fb67ac5498b3634df87e18d728af131d32c06e` | `e761b606c01252b83ba6bc6dd6209e1c98e8023d` |
 | `dossiers/devenir-manager-premiere-fois.html` | `5b37be7ac97ba89e23e4f31456f90008c7ec49e5` | `20a9d53327c6b914612bb9737b5f6c5eecd266cd` |
+| `dossiers/decider-a-deux-travail-patrimoine.html` | `ba14b77f52087dfb20b0813df082369592184e8e` | `1971f8f7829d71996d0f7c3d06f20360bd7cbab2` |
 | `dossiers/previsionnel-activite-12-mois.html` | `ec3ebe88a9923f6802788dd5fb1a65c113e220ae` | `f35cb5ed9159e68ac5caa6ea95ae5742ab5b7b8e` |
 | `dossiers/formation-vaut-elle-le-cout.html` | `601b970cd42683723682946ad1b8add7c7aa48db` | `7095c6d4c8f39406ac8311886e179d2bfcb7f0f7` |
 | `dossiers/acheter-sans-vider-epargne.html` | `8376bdcffd1c79dbcedf6b11fff240a1c8b4e6c0` | `8d8370eb96292e65df63ea37427ff9251ab4a96b` |
@@ -121,7 +122,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` — 9/9 automatique — Réécriture de référence : besoin de mobilité avant financement, coût total, liquidité, sortie et stress tests.
 - `dossiers/gestion-pilotee-comparer-performances.html` — 9/9 automatique — Réécriture de référence : allocation/exécution/délégation séparées, benchmark comparable, valeur comportementale conditionnelle et règle de sortie.
 - `dossiers/finances-investissement-locatif.html` — 9/9 automatique — Rendement net, cash-flow, vacance, travaux, fiscalité, financement, stress tests et scénarios de sortie déjà structurés.
-- `dossiers/decider-a-deux-travail-patrimoine.html` — 9/9 automatique — Transferts de risque et de temps entre personnes rendus visibles, scénarios symétriques, règles temporaires et révision déjà structurés.
 - `dossiers/valeur-option-bien-immobilier.html` — 9/9 automatique — Option immobilière distinguée de faisabilité prouvée, valeur conditionnelle, coûts d’activation et scénarios de sortie déjà structurés.
 - `articles/clients-interesses-personne-nachete.html` — 9/9 automatique — Revue angles morts : utilisateur/payeur/décideur, coût de changement, fenêtre de décision et architecture de transaction intégrés.
 - `dossiers/embaucher-ou-sous-traiter.html` — 9/9 automatique — Coût complet, capacité, flexibilité, contrôle, seuil de charge et scénarios embauche/sous-traitance/hybride déjà structurés.
@@ -215,6 +215,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1842 | à revoir après changement | `dossiers/location-courte-duree-meuble-tourisme.html` |
 | 8/9 | 1874 | à revoir après changement | `dossiers/creer-entreprise-avec-peu-argent.html` |
 | 8/9 | 1899 | à revoir après changement | `dossiers/devenir-manager-premiere-fois.html` |
+| 8/9 | 1976 | à revoir après changement | `dossiers/decider-a-deux-travail-patrimoine.html` |
 | 8/9 | 2036 | à revoir après changement | `dossiers/previsionnel-activite-12-mois.html` |
 | 8/9 | 2123 | à revoir après changement | `dossiers/formation-vaut-elle-le-cout.html` |
 | 8/9 | 2123 | humaine ✓ | `dossiers/plan-30-jours-recherche-emploi.html` |
@@ -233,7 +234,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1324 | humaine ✓ | `dossiers/gestion-pilotee-comparer-performances.html` |
 | 9/9 | 1346 | à revoir après changement | `dossiers/are-arce-acre-creation-entreprise.html` |
 | 9/9 | 1392 | humaine ✓ | `dossiers/finances-investissement-locatif.html` |
-| 9/9 | 1419 | humaine ✓ | `dossiers/decider-a-deux-travail-patrimoine.html` |
 | 9/9 | 1439 | humaine ✓ | `dossiers/valeur-option-bien-immobilier.html` |
 | 9/9 | 1450 | humaine ✓ | `articles/clients-interesses-personne-nachete.html` |
 | 9/9 | 1469 | humaine ✓ | `dossiers/embaucher-ou-sous-traiter.html` |
