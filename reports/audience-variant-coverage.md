@@ -44,7 +44,6 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 | 5 | ROUTE_FIRST | achat immobilier / crédit | `dossiers/indivision-couple-separation-rachat-soulte.html` | indépendant |
 | 5 | ROUTE_FIRST | couple / logement / séparation | `dossiers/indivision-couple-separation-rachat-soulte.html` | SCI |
 | 5 | ROUTE_FIRST | travailler moins / qualité de vie | `dossiers/passer-80-pourcent-cout-reel.html` | indépendant |
-| 5 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/reconversion-sans-perte-salaire.html` | santé / inaptitude |
 | 4 | ROUTE_FIRST | entrepreneuriat | `dossiers/lancer-activite-sans-quitter-emploi.html` | activité réglementée |
 | 2 | COVERED_OR_NARROW | budget / dettes | `dossiers/puis-je-me-permettre-reconversion.html` | — |
 | 2 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/puis-je-me-permettre-reconversion.html` | — |
@@ -53,6 +52,7 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 | 1 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/reconversion-sans-formation-longue.html` | — |
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/audit-budget-60-minutes.html` | — |
 | 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/creer-entreprise-sans-diplome.html` | — |
+| 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/reconversion-sans-perte-salaire.html` | — |
 | 0 | COVERED_OR_NARROW | couple / logement / séparation | `dossiers/separation-logement-achete-a-deux.html` | — |
 
 ## Détail des promesses larges `NON_READY`
@@ -477,7 +477,7 @@ Pages détectées : **2**. Promesses larges `NON_READY` : **2**. Variantes le pl
 
 ### reconversion / trajectoire pro
 
-Pages détectées : **14**. Promesses larges `NON_READY` : **10**. Variantes le plus souvent non détectées : **public** (14), **senior / âge** (13), **indépendant** (12), **sans diplôme** (10), **santé / inaptitude** (8), **demandeur emploi** (6).
+Pages détectées : **14**. Promesses larges `NON_READY` : **10**. Variantes le plus souvent non détectées : **public** (14), **senior / âge** (13), **indépendant** (12), **sans diplôme** (10), **santé / inaptitude** (7), **demandeur emploi** (6).
 
 ### entrepreneuriat
 
