@@ -9,7 +9,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
 - P1 — affirmation forte à resserrer ou vérifier : **62**
 - P2 — nécessité à examiner : **145**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **816**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **815**
 
 ## P0 — rouvrir en priorité
 
@@ -220,11 +220,11 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Hypothèse Preuve actuelle Test contraire Le nouvel emploi ouvre une progression Promesse en entretien Parler à un salarié arrivé il y a 2 ans Le bien se revendra facilement Agent immobilier Délais et décotes réelles du secteur L’entreprise continuera à croître Historique récent Scénario de baisse des marges et concurrence Une décision solide doit survivre à une objection sérieuse, pas seulement à une recherche favora _[temporalité]_
 - **nécessité à requalifier ou sourcer** — « Le logement doit être à moins de 45 minutes du travail » n’a pas le même statut que « j’aimerais une terrasse ».
 ### `dossiers/decision-plan-30-90-jours.html`
-- **nécessité à requalifier ou sourcer** — Elles ne disent pas encore ce qui doit être fait lundi matin .
-- **nécessité à requalifier ou sourcer** — Le jalon 30 jours doit produire une preuve « Avoir réfléchi » n’est pas un jalon. _[temporalité]_
-- **nécessité à requalifier ou sourcer** — Les six cases du plan Résultat visé : ce qui doit réellement avoir changé.
-- **nécessité à requalifier ou sourcer** — Mais une fois le choix fait, il faut changer de mode : réduire l’objectif à quelques actions observables, rendre visibles les dépendances et décider à l’avance quand réévaluer le plan . _[temporalité]_
-- **nécessité à requalifier ou sourcer** — Non-négociable : ce que le plan ne doit pas détériorer. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Ajoutez un contre-indicateur Tout indicateur d'avancement doit être accompagné d'un signal de coût : CA et marge, candidatures et fatigue/temps, remboursement de dette et réserve restante, baisse de prix immobilier et travaux nécessaires.
+- **nécessité à requalifier ou sourcer** — Avant le planning : écrivez ce qui doit être vrai pour que la décision soit bonne « Je lance mon activité », « je change de métier », « j'achète », « je réduis mon temps de travail » ne sont pas encore des plans. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — L'action des 7 jours doit produire du mouvement ou de l'information Une bonne première action est extérieure à votre tête. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Le plan 30/90 doit contenir plusieurs lignes en parallèle Un projet échoue souvent parce qu'il est traité comme une file d'attente : « d'abord la formation, puis le CV, puis les candidatures ».
+- **nécessité à requalifier ou sourcer** — Le plan doit donc comporter une colonne « effet combiné », pas seulement une liste de grandes décisions.
 ### `dossiers/dependance-gros-client.html`
 - **nécessité à requalifier ou sourcer** — Ne remplacez pas un gros client par dix mauvais clients : diversifier doit préserver la marge. _[temporalité]_
 ### `dossiers/depenses-recurrentes-abonnements-assurances.html`
