@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **15**
-- P1 — affirmation forte à resserrer ou vérifier : **57**
+- P1 — affirmation forte à resserrer ou vérifier : **58**
 - P2 — nécessité à examiner : **140**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **733**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **741**
 
 ## P0 — rouvrir en priorité
 
@@ -93,7 +93,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/decider-sans-tourner-en-rond.html`
 - **affirmation forte sans signal de source explicite** — Si une donnée ne peut pas changer le choix, elle n’a probablement pas besoin d’être dans le tableau. _[périmètre]_
 ### `dossiers/formation-vaut-elle-le-cout.html`
-- **fermeture forte sourcée mais formulation trop absolue** — Source : Mon Compte Formation — participation financière obligatoire 2026 ; Mon Compte Formation — évolutions de financement 2026 . _[signal-source]_
+- **fermeture forte sourcée mais formulation trop absolue** — CPF 2026 : financement ne signifie pas coût nul Depuis le 1er avril 2026 , la participation financière obligatoire est fixée à 150 € pour les titulaires concernés, avec des exceptions prévues par les règles du dispositif. _[signal-source]_
+- **fermeture forte sourcée mais formulation trop absolue** — Verrou La formation aide si… Alternative possible Qualification obligatoire elle donne le titre ou l’habilitation exigée. autre voie reconnue plus courte. _[signal-source]_
 ### `dossiers/indivision-couple-separation-rachat-soulte.html`
 - **fermeture forte sourcée mais formulation trop absolue** — D’abord : qu’est-ce qui rend le rachat « impossible » ? _[signal-source]_
 - **fermeture forte sourcée mais formulation trop absolue** — Le mot impossible mélange souvent plusieurs problèmes. _[signal-source]_
