@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **47**. Validations devenues caduques après modification : **76**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **46**. Validations devenues caduques après modification : **77**.
 
 ## Priorité humaine
 
@@ -88,6 +88,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/finances-credit-endettement.html` | `0e7bf55b72e7d5d6a9b9df85ce1bd14c87f48715` | `d8d560cf2c838d289fa7b93c5cb7a0661987c11d` |
 | `articles/comparatif-produits-bancaires.html` | `f766c96540debfe1ce8ef1d2c7e38770df01b3f3` | `ac036634513c533460b7d5f49dcb8afc4914e497` |
 | `dossiers/finances-transmission-patrimoine.html` | `82b04a6992bd5fea253a773125768b5cb012a203` | `15070334cd5a3c650db719531dc521c35f00a76d` |
+| `dossiers/comparer-deux-offres-emploi.html` | `3ff2b7f7af69505d49005ced8661971e69e02c2d` | `d117b47683b6b788c73ff7985facab6e0f742d0d` |
 | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | `9b46d98a92fde3c92c7d0ba563bbece7cb3ce9ad` | `bac921cbe2446cc20f220d80e11bede4856b9672` |
 | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` | `b8ca6053a594bbee33797f2d2c4dce8b4854e67b` | `c6e5736d0811426bfb0bfd40ac588e3c6c3945cf` |
 | `dossiers/liquidites-reserve-securite.html` | `ae88ad8ae7c6981800827b83825e37da0c51d1c5` | `a74e6236fdfeceb5bdb3917909629bf7e0528dc3` |
@@ -122,7 +123,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/piloter-patrimoine-selon-taille.html` — 8/9 automatique — Montant distingué de la complexité, risque dominant par phase, budget de complexité, seuil de recours au conseil et contre-exemples déjà structurés.
 - `dossiers/negocier-salaire-responsabilites.html` — 8/9 automatique — Poste réel versus surcharge, package complet, BATNA, coût de rester, contreparties alternatives, horizon et seuil de mobilité externe déjà structurés.
 - `articles/competences-invisibles-preuves.html` — 8/9 automatique — Revue angles morts : distingue preuve insuffisante et filtre local via le test même preuve/autre acteur, avec condition de renversement.
-- `dossiers/comparer-deux-offres-emploi.html` — 8/9 automatique — Non-négociables avant score, package réel, temps capturé, contrat, risque organisationnel, capital professionnel, scénarios et option C déjà structurés.
 - `articles/frais-fiscalite-rendement-net.html` — 8/9 automatique — Réécriture du 16/08 : frais fournisseurs actualisés, point mort de migration, coût ponctuel du changement et valeur des options perdues ajoutés.
 - `dossiers/decider-sans-tourner-en-rond.html` — 8/9 automatique — Contraintes versus préférences, valeur de l’information, coût d’erreur, réversibilité, sunk cost, contradiction, pré-mortem et décision falsifiable déjà structurés.
 - `dossiers/plan-30-jours-recherche-emploi.html` — 8/9 automatique — Entonnoir mesurable, deux séries comparables, une hypothèse de blocage à la fois, preuves, débrief et règles de continuation/repositionnement déjà structurés.
@@ -191,7 +191,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1448 | à revoir après changement | `articles/accepter-nimporte-quel-poste-retour-emploi.html` |
 | 8/9 | 1477 | humaine ✓ | `articles/competences-invisibles-preuves.html` |
 | 8/9 | 1591 | à revoir après changement | `dossiers/quand-vie-change-sante-separation-revenu.html` |
-| 8/9 | 1599 | humaine ✓ | `dossiers/comparer-deux-offres-emploi.html` |
 | 8/9 | 1653 | à revoir après changement | `dossiers/location-nue-ou-meublee-comparer.html` |
 | 8/9 | 1671 | à revoir après changement | `articles/competences-transferables.html` |
 | 8/9 | 1690 | à revoir après changement | `dossiers/business-plan-utile.html` |
@@ -266,6 +265,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 2315 | à revoir après changement | `dossiers/finances-credit-endettement.html` |
 | 9/9 | 2347 | à revoir après changement | `articles/comparatif-produits-bancaires.html` |
 | 9/9 | 2381 | à revoir après changement | `dossiers/finances-transmission-patrimoine.html` |
+| 9/9 | 2444 | à revoir après changement | `dossiers/comparer-deux-offres-emploi.html` |
 | 9/9 | 2462 | à revoir après changement | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
 | 9/9 | 2581 | à revoir après changement | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` |
 | 9/9 | 2675 | à revoir après changement | `dossiers/liquidites-reserve-securite.html` |
