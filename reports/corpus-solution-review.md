@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **122**. Validations devenues caduques après modification : **0**.
+Pages analysées : **123**. Pages `noindex` exclues : **79**. Validations humaines actives : **122**. Validations devenues caduques après modification : **0**.
 
 ## Priorité humaine
 
@@ -269,6 +269,7 @@ Aucune.
 | 9/9 | 2694 | humaine ✓ | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` |
 | 9/9 | 3065 | humaine ✓ | `dossiers/indivision-rachat-progressif-parts.html` |
 | 9/9 | 3821 | humaine ✓ | `dossiers/indivision-couple-separation-rachat-soulte.html` |
+| 9/9 | 4276 | heuristique | `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` |
 
 ## Règle de reprise
 
