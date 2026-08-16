@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **40**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **25**.
+Pages/familles détectées : **40**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **24**.
 
 ## Priorités de relecture
 
@@ -14,7 +14,6 @@ Pages/familles détectées : **40**. Pages `noindex` exclues : **79**. Promesses
 |---:|---|---|---|---|
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/devenir-manager-premiere-fois.html` | demandeur emploi, santé / inaptitude, sans diplôme, revenu / runway |
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | salarié, santé / inaptitude, sans diplôme, revenu / runway |
-| 28 | NON_READY | travailler moins / qualité de vie | `dossiers/temps-energie-qualite-vie.html` | salarié privé, public, indépendant, retraite / protection |
 | 22 | NON_READY | reconversion / trajectoire pro | `articles/retrouver-emploi-apres-interruption.html` | salarié, demandeur emploi, sans diplôme |
 | 22 | NON_READY | reconversion / trajectoire pro | `dossiers/formation-vaut-elle-le-cout.html` | salarié, demandeur emploi, santé / inaptitude |
 | 21 | NON_READY | reconversion / trajectoire pro | `articles/competences-transferables.html` | demandeur emploi, santé / inaptitude, sans diplôme |
@@ -47,6 +46,7 @@ Pages/familles détectées : **40**. Pages `noindex` exclues : **79**. Promesses
 | 2 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/puis-je-me-permettre-reconversion.html` | — |
 | 1 | COVERED_OR_NARROW | budget / dettes | `articles/construire-epargne-de-zero.html` | — |
 | 1 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/reconversion-sans-formation-longue.html` | — |
+| 1 | COVERED_OR_NARROW | travailler moins / qualité de vie | `dossiers/temps-energie-qualite-vie.html` | — |
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/audit-budget-60-minutes.html` | — |
 | 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/creer-entreprise-sans-diplome.html` | — |
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | — |
@@ -84,21 +84,6 @@ Promesse : **métier, poste, fonction, service : comprendre l’entreprise — c
 | sans diplôme | MANQUANTE |
 | senior / âge | MANQUANTE |
 | revenu / runway | MANQUANTE |
-
-### `dossiers/temps-energie-qualite-vie.html` — travailler moins / qualité de vie
-
-Promesse : **manque de temps : comment récupérer des heures de vie ? | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| salarié privé | MANQUANTE |
-| public | MANQUANTE |
-| indépendant | MANQUANTE |
-| 80% / quatre jours | TRAITEE |
-| télétravail / autre levier | TRAITEE |
-| solo / couple | TRAITEE |
-| retraite / protection | MANQUANTE |
-| temps réellement libéré | TRAITEE |
 
 ### `articles/retrouver-emploi-apres-interruption.html` — reconversion / trajectoire pro
 
@@ -456,7 +441,7 @@ Pages détectées : **6**. Promesses larges `NON_READY` : **2**. Variantes le pl
 
 ### travailler moins / qualité de vie
 
-Pages détectées : **4**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **indépendant** (4), **public** (3), **salarié privé** (2), **retraite / protection** (1), **télétravail / autre levier** (1).
+Pages détectées : **4**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **indépendant** (3), **public** (2), **salarié privé** (1), **télétravail / autre levier** (1).
 
 ## Règle éditoriale
 
