@@ -4,127 +4,98 @@ Mise à jour : 16 août 2026
 
 ## Statut du chantier
 
-**Revue humaine intégrale du corpus indexable terminée sur le snapshot courant.**
+**Le chantier de profondeur est rouvert.**
 
-État confirmé par `reports/corpus-solution-review.md` le 16 août 2026 :
+Le snapshot courant comporte **122 contenus indexables** ayant reçu une revue structurelle interne attachée à leur SHA. Cette revue vérifie principalement la présence de dimensions classiques de résolution : problème, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie et preuve.
 
-- **122 contenus indexables analysés** ;
-- **122/122 validations humaines actives** ;
-- **79 pages `noindex` de consolidation/redirection exclues** ;
-- **0 validation caduque** ;
-- **aucune priorité critique non relue**.
+Elle ne doit plus être interprétée comme :
 
-Ce statut n’est pas définitif au sens éditorial : toute modification d’un contenu HTML invalide automatiquement la validation humaine liée à son ancien SHA et remet uniquement cette page dans la file de revue.
+- une preuve que le contenu est suffisamment profond ;
+- une preuve qu’aucun angle mort ne subsiste ;
+- une validation éditoriale de l’utilisateur ;
+- une autorisation de réécriture autonome.
+
+Les anciennes mentions « 122/122 validations humaines », « chantier terminé » ou « maintenance continue seulement » sont donc **requalifiées comme revues structurelles héritées**.
+
+## Pourquoi la revue est rouverte
+
+Une page peut satisfaire les neuf dimensions structurelles et rester insuffisante si elle ne cherche pas ce qui se trouve hors de la formulation initiale du problème.
+
+Le nouveau standard ajoute une recherche active de :
+
+- changement d’acteur ou de gatekeeper ;
+- substitution de preuve, garantie, ressource, usage, marché ou contrat ;
+- fenêtres temporelles ;
+- ordre des opérations ;
+- fractionnement et achat/transition progressive ;
+- combinaison de petits leviers ;
+- valeur de l’attente et du statu quo ;
+- effets de second ordre ;
+- transfert de risque ;
+- friction d’exécution et dépendances humaines ;
+- hétérogénéité par statut, contrat, lieu ou marché ;
+- condition de renversement ;
+- substitution de l’objectif visible par le besoin réel ;
+- valeur d’option et irréversibilité ;
+- asymétrie de preuve entre fermer une voie et la recommander.
 
 ## Standard éditorial
 
 Le corpus vise une **profondeur de résolution**, pas seulement une profondeur d’analyse :
 
-**promesse → obstacle précis → contraintes fixes / variables modifiables → fenêtres → conditions de possibilité → seuils et chiffrage → séquence d’exécution → scénario adverse → condition d’abandon ou de révision.**
+**promesse → obstacle précis → contraintes fixes / variables modifiables → angles morts → familles de solutions → conditions de possibilité → seuils et chiffrage → ordre d’exécution → scénario adverse → effets de second ordre → condition d’abandon ou de révision.**
 
 Une page n’est pas améliorée parce qu’elle devient plus longue. Elle l’est lorsqu’elle aide mieux le lecteur à comprendre :
 
 - ce qui bloque réellement ;
 - ce qui peut changer ;
+- ce qui peut être remplacé plutôt qu’optimisé ;
 - pourquoi un levier agit sur le verrou ;
 - à quel seuil la décision s’inverse ;
-- quelles options doivent être préservées ;
+- quelle séquence préserve le plus d’options ;
+- qui supporte le risque et les coûts différés ;
+- comment la solution peut échouer dans l’exécution ;
 - comment sortir ou réviser si le scénario se dégrade.
 
-## Mode de travail permanent
+## Règle d’approbation éditoriale
 
-Le chantier reste **autonome** : une amélioration substantielle est appliquée directement lorsqu’une lecture humaine identifie un gain réel. Elle est ensuite consignée dans `reports/content-review-decisions.md` et récapitulée à l’utilisateur.
+Les réécritures substantielles ne sont plus appliquées en lots autonomes.
 
-Une page déjà forte est conservée. Aucun bloc générique n’est ajouté pour améliorer artificiellement un score.
+Le flux obligatoire est désormais :
+
+1. identifier un angle mort ou un gain de profondeur réel ;
+2. préparer **une seule proposition active** ;
+3. présenter la carte de validation ;
+4. attendre `valide`, `refuse`, `à revoir` ou `passe` ;
+5. n’appliquer que la proposition validée ;
+6. auditer et consigner la décision ;
+7. présenter ensuite la proposition suivante.
+
+Les modifications d’infrastructure, d’audit, de méthode interne et les corrections purement techniques restent possibles sans validation lorsqu’elles ne changent pas le sens du contenu publié.
 
 ## Source de vérité
 
 Le pilotage repose sur :
 
-1. `.github/workflows/corpus-solution-review.yml` — scan transversal des contenus indexables ;
-2. `reports/corpus-solution-review.md` — état courant et file de reprise ;
-3. `reports/corpus-solution-human-review.json` + `reports/corpus-solution-human-review-*.json` — mémoire append-only des validations humaines attachées au SHA exact ;
-4. `reports/content-review-decisions.md` — journal des réécritures substantielles et décisions humaines.
+1. `AGENTS.md` — doctrine et gate éditorial actuel ;
+2. `.github/workflows/corpus-solution-review.yml` — scan structurel des contenus indexables ;
+3. `reports/corpus-solution-review.md` — état du scan structurel ;
+4. `reports/corpus-solution-human-review*.json` — mémoire historique de revues internes attachées au SHA, **pas validation utilisateur** ;
+5. `reports/corpus-blind-spots.md` — file de reprise selon le nouveau standard d’angles morts ;
+6. `reports/content-review-decisions.md` — décisions explicites de validation/refus/report/révision.
 
-Les anciennes vagues fondées sur des scores 4/12, 5/12, 6/12 ou 7/12 sont désormais historiques et ne pilotent plus le chantier.
+## Réécritures substantielles déjà réalisées avant le gate actuel
 
-## Règle de mémoire
+Ces réécritures constituent des travaux historiques à **revisiter et valider**, pas des exemptions définitives :
 
-Une validation humaine reste active uniquement tant que le **blob SHA Git** du contenu reste identique.
-
-- contenu inchangé → validation conservée ;
-- contenu modifié → validation automatiquement caduque ;
-- page modifiée → retour automatique dans la revue ;
-- nouvelle validation → enregistrée dans un lot append-only plus récent.
-
-Le workflow affiche aussi désormais le **SHA relu** et le **SHA courant** lorsqu’une validation devient caduque. Cela permet de distinguer immédiatement une vraie modification éditoriale d’un problème de métadonnées ou de cache.
-
-## Réécritures substantielles du 16 août 2026
-
-### `dossiers/choisir-statut-micro-ei-eurl-sasu.html`
-
-- forme juridique, régime micro et TVA séparés ;
-- trajectoire de structure au lieu d’un classement statique ;
-- déclencheurs de bascule mesurables ;
-- suppression du faux seuil universel de frais.
-
-### `dossiers/cout-reel-voiture-achat-credit-loa-lld.html`
-
-- besoin de mobilité placé avant le financement ;
-- coût total, liquidité et valeur de sortie ;
-- stress tests kilométrage / rupture anticipée ;
-- réduction du besoin testée avant optimisation du financement.
-
-### `dossiers/location-nue-ou-meublee-comparer.html`
-
-- usage et marché avant fiscalité ;
-- seuil de surloyer nécessaire pour justifier le meublé ;
-- rotation, mobilier, vacance, temps de gestion et DPE ;
-- réversibilité et options contractuelles conditionnelles.
-
-### `dossiers/gestion-pilotee-comparer-performances.html`
-
-- allocation / exécution / délégation séparées ;
-- prime de délégation ;
-- benchmark réellement comparable ;
-- valeur comportementale admise seulement si elle résout un problème observé ;
-- règle de sortie définie avant l’entrée.
-
-### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
-
-- trois poches : socle / long terme / option-usage ;
-- prix du temps racheté ;
-- expérimentation réversible ;
-- stress test après utilisation du capital ;
-- seuils de bascule entre construire, protéger et utiliser.
-
-### `dossiers/prejuges-biais-monde-professionnel.html`
-
-- séparation **signal mal interprété / gatekeeper local / traitement potentiellement discriminatoire** ;
-- test « même preuve, autre acteur » ;
-- substitution d’acteur plutôt que modification infinie du profil ;
-- seuil de sortie du registre de persuasion vers la conservation des faits et l’orientation adaptée.
-
-### `dossiers/automatiser-ou-non-processus.html`
-
-- nouvelle séquence **supprimer → simplifier → standardiser → assister → automatiser** ;
-- test causal avant choix d’un outil ;
-- procédure manuelle de secours ;
-- rollback ;
-- kill switch si maintenance, exceptions, dépendance ou baisse de volume détruisent le ROI.
-
-### `articles/frais-fiscalite-rendement-net.html`
-
-- frais fournisseurs rafraîchis ;
-- coût récurrent distingué du coût ponctuel d’une migration ;
-- `économie annuelle ≈ capital × écart de frais` ;
-- `point mort de migration ≈ coût ponctuel / économie annuelle` ;
-- valeur des options perdues intégrée avant de recommander un transfert.
-
-## Réécritures de référence déjà présentes
-
-Le corpus comporte également les architectures de référence suivantes, désormais toutes couvertes par une validation humaine SHA-active :
-
+- `dossiers/choisir-statut-micro-ei-eurl-sasu.html`
+- `dossiers/cout-reel-voiture-achat-credit-loa-lld.html`
+- `dossiers/location-nue-ou-meublee-comparer.html`
+- `dossiers/gestion-pilotee-comparer-performances.html`
+- `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
+- `dossiers/prejuges-biais-monde-professionnel.html`
+- `dossiers/automatiser-ou-non-processus.html`
+- `articles/frais-fiscalite-rendement-net.html`
 - `dossiers/indivision-couple-separation-rachat-soulte.html`
 - `dossiers/indivision-rachat-progressif-parts.html`
 - `dossiers/indivision-immobiliere-sortir-sans-subir.html`
@@ -138,39 +109,47 @@ Le corpus comporte également les architectures de référence suivantes, désor
 - `dossiers/previsionnel-activite-12-mois.html`
 - `dossiers/location-courte-duree-meuble-tourisme.html`
 
-## Règles permanentes
+## Définition de « suffisamment profond »
 
-1. Le score automatique est un détecteur, jamais une preuve de qualité.
-2. Toute affirmation sensible modifiée doit être revérifiée contre des sources primaires à jour.
-3. Un levier doit passer le test : **« Si nous faisons X, alors Y change parce que Z. »**
-4. Absence de preuve d’impossibilité ≠ preuve de faisabilité.
-5. Ne pas confondre politique d’un acteur, règle juridique et pratique dominante.
-6. Rechercher fenêtres temporelles, séquences, fractionnements, substitutions, combinaisons et options de sortie.
-7. Ne jamais faire dépendre une solution d’une fausse déclaration, d’une dissimulation ou d’une représentation trompeuse.
-8. Préserver un bon texte lorsqu’aucun gain causal, décisionnel ou probatoire réel n’est identifié.
-9. Utiliser des lots de revue append-only pour éviter une mémoire monolithique fragile.
-10. Une page validée aujourd’hui n’acquiert aucun droit à rester validée demain : toute modification la rouvre.
-
-## Définition de terminé pour une page
-
-Une page est suffisamment profonde lorsque, compte tenu de sa fonction :
+Une page est suffisamment profonde seulement lorsque, compte tenu de sa fonction :
 
 - la promesse du titre est délivrée ;
 - le vrai verrou est nommé ou la question correctement décomposée ;
-- les leviers proposés agissent réellement sur ce verrou ;
-- les conditions de possibilité et dépendances sont visibles ;
+- plusieurs familles de solutions réellement distinctes ont été testées ;
+- les leviers proposés agissent causalement sur le verrou ;
+- les acteurs, dépendances, fenêtres et séquences qui changent l’issue sont visibles ;
+- les substitutions, fractionnements et combinaisons pertinents ont été recherchés ;
+- le coût de l’attente et le coût d’agir sont comparés lorsque pertinent ;
+- les effets de second ordre et transferts de risque sont visibles ;
+- les conditions de possibilité sont séparées des hypothèses ;
 - les seuils utiles sont chiffrés quand cela a du sens ;
 - un scénario adverse est pris en compte lorsque l’enjeu le justifie ;
-- la séquence et la réversibilité sont traitées lorsque pertinentes ;
+- la réversibilité et la valeur des options sont traitées ;
+- la condition de renversement de la conclusion est explicite ;
 - les affirmations sensibles disposent du niveau de preuve adapté ;
-- une lecture humaine conclut que l’ajout apporte plus qu’une compilation de résultats de recherche.
+- l’ajout apporte plus qu’une compilation de résultats de recherche ;
+- la proposition éditoriale a été explicitement validée par l’utilisateur avant déploiement.
+
+## Règles permanentes
+
+1. Le score automatique est un détecteur, jamais une preuve de qualité.
+2. Une revue structurelle héritée n’est pas une validation éditoriale utilisateur.
+3. Toute affirmation sensible modifiée doit être revérifiée contre des sources primaires à jour.
+4. Un levier doit passer le test : **« Si nous faisons X, alors Y change parce que Z. »**
+5. Absence de preuve d’impossibilité ≠ preuve de faisabilité.
+6. Ne pas confondre politique d’un acteur, règle juridique et pratique dominante.
+7. Rechercher fenêtres temporelles, séquences, fractionnements, substitutions, combinaisons et options de sortie.
+8. Rechercher aussi les effets de second ordre, la friction d’exécution et le transfert de risque.
+9. Ne jamais faire dépendre une solution d’une fausse déclaration, d’une dissimulation ou d’une représentation trompeuse.
+10. Préserver un bon texte lorsqu’aucun gain causal, décisionnel, probatoire ou d’optionnalité réel n’est identifié.
 
 ## Prochaine logique de travail
 
-Le chantier n’a plus de backlog de réécriture globale. Il devient un **système de maintenance continue** :
+Le chantier est piloté par une **cartographie d’angles morts**, puis par validation unitaire.
 
-- toute page modifiée est automatiquement rouverte ;
-- toute nouvelle page entre automatiquement dans l’audit ;
-- une évolution réglementaire ou factuelle peut déclencher une reprise ciblée ;
-- une nouvelle solution réellement distincte peut enrichir une page ;
-- aucune création ou réécriture n’est justifiée uniquement pour augmenter le volume du site.
+Ordre de priorité :
+
+1. clusters à enjeu élevé et forte capacité de différenciation : immobilier/indivision/crédit ; carrière/reconversion ; entrepreneuriat ; patrimoine/usage ;
+2. pages structurellement « conformes » mais dont le raisonnement reste trop proche des réponses standard disponibles ailleurs ;
+3. pages où une dépendance tierce, une fenêtre temporelle ou une option progressive peut inverser la décision ;
+4. pages dont la conclusion pourrait changer par un effet de second ordre ou un coût différé aujourd’hui absent.
