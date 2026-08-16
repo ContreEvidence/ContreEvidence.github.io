@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
 - P1 — affirmation forte à resserrer ou vérifier : **64**
-- P2 — nécessité à examiner : **151**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **847**
+- P2 — nécessité à examiner : **156**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **850**
 
 ## P0 — rouvrir en priorité
 
@@ -169,7 +169,12 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Mais vous ne transportez pas non plus votre ancien métier en bloc : vous transportez des capacités dont il faut tester la valeur dans un nouveau système.
 - **nécessité à requalifier ou sourcer** — Mis à jour le 16/08/2026 · Demandeur d’emploi, public, indépendant, santé, sans diplôme et seconde partie de carrière intégrés La réponse complète en 30 secondes Ne demandez pas « quelles compétences ai-je ? » mais « quelles exigences du métier cible sont déjà couvertes par des capacités que je maîtrise, à quelle profondeur, dans un contexte suffisamment proche, et avec quelle preuve ? » Le résultat doit classer chaq
 ### `articles/entretien-rate-ce-qui-bloque.html`
-- **nécessité à requalifier ou sourcer** — Disponibilité, mobilité et contraintes : ne pas laisser de surprise tardive Une contrainte réelle doit être clarifiée au bon moment. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Choisir une seule hypothèse que cet entretien doit permettre de valider ou d’infirmer.
+- **nécessité à requalifier ou sourcer** — Elle doit rendre la prochaine étape crédible .
+- **nécessité à requalifier ou sourcer** — La correction doit donc se concentrer sur l’étape qui fuit.
+- **nécessité à requalifier ou sourcer** — Les conditions qui doivent renverser votre stratégie Signal répété Ce qui doit changer 0 entretien sur 20 candidatures ciblées Revenir au ciblage, CV, canal et preuve initiale.
+- **nécessité à requalifier ou sourcer** — Mais accepter trop vite un poste inférieur sans savoir quel écart il doit fermer ne l’est pas davantage.
+- **nécessité à requalifier ou sourcer** — Une preuve réduit un risque ; elle ne doit pas seulement « impressionner » Préparez 6 à 10 preuves que vous pouvez réutiliser : conflit, priorité, résultat, erreur, initiative, client, équipe, changement, apprentissage, situation difficile.
 ### `articles/premiere-chance-sans-experience.html`
 - **nécessité à requalifier ou sourcer** — Il doit cependant produire quelque chose de vérifiable.
 - **nécessité à requalifier ou sourcer** — Il faut rassurer l’employeur sur ce que vous saurez réellement faire, sans accepter une première expérience qui vous enferme.
