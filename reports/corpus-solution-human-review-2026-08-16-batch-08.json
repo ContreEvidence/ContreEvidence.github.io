@@ -1,0 +1,13 @@
+{
+  "reviewed_at": "2026-08-16",
+  "batch": "8-of-9 continuation",
+  "rule": "A review is valid only while the Git blob SHA remains identical.",
+  "pages": {
+    "dossiers/automatiser-ou-non-processus.html": {"sha": "2219f7b59c382026132d4c39c7847fa90a9e728c", "status": "conforme", "note": "Réécriture du 16/08 : supprimer/simplifier/standardiser avant automatisation, assistance partielle, rollback et condition d’abandon."},
+    "dossiers/metiers-fonctions-organisation-entreprise.html": {"sha": "b9100c518af815d5e3d410b6184e23e03d065471", "status": "conforme", "note": "Fonctions lues par flux, décisions, interfaces et criticité ; transferts de compétences et test organisationnel déjà structurés."},
+    "dossiers/sante-travail-equilibre-vie-pro-perso.html": {"sha": "9075afe1528f2f4c763aa2ee6146d95a22ade56b", "status": "conforme", "note": "Soutenabilité analysée par risques, charge, récupération, trajet et options de modification du travail avant abandon du métier."},
+    "dossiers/accepter-emploi-moins-paye-vivre-mieux.html": {"sha": "e782289f8d68aab912acdd201a649e7782204756", "status": "conforme", "note": "Deux systèmes de vie comparés : flux, temps capturé, robustesse, trajectoire, scénarios, seuil de bascule et options C/D déjà présents."},
+    "dossiers/reconversion-sans-formation-longue.html": {"sha": "d802367f18e91acefed62a8442350fd5d1604504", "status": "conforme", "note": "Verrou dominant, VAE/certification/poste passerelle/candidature directe, coût complet, seuils et conditions d’inversion déjà structurés."},
+    "dossiers/emploi-chercher-accepter-negocier-evoluer.html": {"sha": "32be1bec7e6d9053ef2c87ad9b5de107f6ef619d", "status": "conforme", "note": "Entonnoir emploi, diagnostic par étape, alternatives, plancher de négociation, scénario rester/préparer/partir et options futures déjà traités."}
+  }
+}
