@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **81**. Validations devenues caduques après modification : **42**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **80**. Validations devenues caduques après modification : **43**.
 
 ## Priorité humaine
 
@@ -39,12 +39,13 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/acheter-sans-vider-epargne.html` | `8376bdcffd1c79dbcedf6b11fff240a1c8b4e6c0` | `8d8370eb96292e65df63ea37427ff9251ab4a96b` |
 | `articles/tester-metier-avant-investir.html` | `2d26e84a1aec867f3f795a7fe5076e5514259709` | `f0869a70482faef780134015edccb92309295c47` |
 | `dossiers/patrimoine-marge-de-manoeuvre.html` | `3e2dd7332b7c2063c63dbad30055168a61266868` | `2dbf9645bf9b74a55ad3cebd87d04fe2ae535ceb` |
+| `dossiers/trajectoire-professionnelle-selon-situation.html` | `340b3c58bd6809606aac38282afac472924ee2b1` | `c507f380db4a0bcb57571cb0d12d2625ced63d5c` |
 | `dossiers/are-arce-acre-creation-entreprise.html` | `96944742e60f24751b001857871095f3ae55ce94` | `0a11bc2495d5e98ee3d769a581debaa5f66f4032` |
 | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` | `f1faf0bbb75b36b784e38e370c13eb49654a622f` | `cd3b8d01fbf0c7fffab2c109fcca1a2b0ecbae7b` |
 | `dossiers/reconversion-sans-perte-salaire.html` | `128613ebf08c799823434c76e96f628ec6102a5a` | `a3bf47dce0da390a93742f2dcbac9dc557d188e8` |
 | `dossiers/patrimoine-permet-il-travailler-moins.html` | `c006f7a8de0d55c219f89748ad39053e8afecbec` | `343adf2f660396f9265ddab15531d93005090ae6` |
 | `dossiers/sante-travail-equilibre-vie-pro-perso.html` | `9075afe1528f2f4c763aa2ee6146d95a22ade56b` | `e0c5f4d97e9b96ce87e1cf00e611cddcbe349312` |
-| `dossiers/acheter-ou-louer-si-on-risque-demenager.html` | `d6585d192caf10f10a45195559ae0365fe70cf46` | `3de65eabd7e80f44678e288675cdf8a9b998c4b2` |
+| `dossiers/acheter-ou-louer-si-on-risque-demenager.html` | `d6585d192caf10f10a45195559ae0365fe70cf46` | `9e3bcce1f00d8ddcb3a79f70e80180f6a6a42009` |
 | `dossiers/travailler-moins-vivre-mieux.html` | `eb67bcfbe9b9b1bdaf4c4e402946defb38068247` | `a36678cca70ced0efdd0b0b48e961df0b67e870c` |
 | `articles/retrouver-emploi-apres-interruption.html` | `abbaae628730e9314acfe90444f7185a18cf1072` | `184c63bafd29cadff71972e8e8dba04dbd97122a` |
 | `articles/checklist-avant-placement-conseiller.html` | `f0a354fedc6ee6b64f0235804b495c6a4701a872` | `561b9eb3d62a2ba88f0b48c12b4c1b36fe54d5a7` |
@@ -139,7 +140,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/creer-entreprise-sans-diplome.html` — 9/9 automatique — Réécriture de référence : fondateur/exécutant, activité réglementée, expérience, personne qualifiée, périmètre libre et voies alternatives déjà structurés.
 - `dossiers/quitter-cdi-avec-credit-immobilier.html` — 9/9 automatique — Réécriture de référence : dette existante versus nouveau financement, fenêtres temporelles, séquençage, réserve et déclarations exactes déjà structurés.
 - `dossiers/bien-immobilier-garder-vendre-transformer.html` — 9/9 automatique — Valeur actuelle, capital alternatif, rendement d’usage, transformation, coût d’opportunité, scénarios et sortie déjà structurés.
-- `dossiers/trajectoire-professionnelle-selon-situation.html` — 9/9 automatique — Trajectoire pilotée par capital professionnel, contraintes, horizons, fenêtres et événements déclencheurs plutôt que par parcours linéaire.
 - `dossiers/indivision-immobiliere-sortir-sans-subir.html` — 9/9 automatique — Propriété, dette, créances, occupation et stratégie de sortie séparées ; négociation, convention, rachat, vente et preuve déjà structurés.
 - `dossiers/changer-travail-avant-credit-immobilier.html` — 9/9 automatique — Financement bancaire, période d’essai, mobilité, réserve et ordre des opérations traités comme variables distinctes avec scénarios d’inversion.
 - `dossiers/indivision-rachat-progressif-parts.html` — 9/9 automatique — Fractionnement du rachat, courbe de propriété, dette bancaire distincte, valorisation, friction et alternatives en moins de tranches déjà structurés.
@@ -226,6 +226,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 2722 | humaine ✓ | `dossiers/inflation-comprendre-histoire-pouvoir-achat.html` |
 | 9/9 | 1193 | humaine ✓ | `dossiers/passer-80-pourcent-cout-reel.html` |
 | 9/9 | 1215 | humaine ✓ | `dossiers/depenses-recurrentes-abonnements-assurances.html` |
+| 9/9 | 1259 | à revoir après changement | `dossiers/trajectoire-professionnelle-selon-situation.html` |
 | 9/9 | 1297 | humaine ✓ | `dossiers/finances-retraite-decumulation.html` |
 | 9/9 | 1314 | humaine ✓ | `dossiers/regles-responsabilites-fautes-travail.html` |
 | 9/9 | 1323 | humaine ✓ | `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` |
@@ -258,7 +259,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 2015 | humaine ✓ | `dossiers/quitter-cdi-avec-credit-immobilier.html` |
 | 9/9 | 2018 | humaine ✓ | `dossiers/bien-immobilier-garder-vendre-transformer.html` |
 | 9/9 | 2050 | à revoir après changement | `articles/choisir-etf-mondial-debutant.html` |
-| 9/9 | 2071 | humaine ✓ | `dossiers/trajectoire-professionnelle-selon-situation.html` |
 | 9/9 | 2108 | à revoir après changement | `dossiers/temps-energie-qualite-vie.html` |
 | 9/9 | 2141 | à revoir après changement | `dossiers/combien-chiffre-affaires-pour-vivre.html` |
 | 9/9 | 2167 | à revoir après changement | `dossiers/favoriser-un-enfant-succession-donation.html` |
