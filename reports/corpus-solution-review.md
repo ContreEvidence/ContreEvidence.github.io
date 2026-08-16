@@ -43,7 +43,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/audit-copropriete-avant-achat.html` | `a0970b0fbb708617d937df0d3e62a49740a7a1b5` | `cf94b86a2ca788b54c468fc4d80d09952add8634` |
 | `dossiers/capacite-refuser-travail-rentabilite.html` | `aace252f32a1faf81cf6e0a4665e9b60e694129e` | `91ebe0bb0dc7e77c7a5a042210a2f54a7e04570e` |
 | `articles/sans-diplome-chemins-alternatifs.html` | `d5f6867f38969bb89ca16df2bfdbd7ed2fed77ca` | `2a7cd63ced34759f03482dd0381857c50af183b0` |
-| `dossiers/creer-entreprise-avec-peu-argent.html` | `99fb67ac5498b3634df87e18d728af131d32c06e` | `e761b606c01252b83ba6bc6dd6209e1c98e8023d` |
 | `dossiers/bien-immobilier-garder-vendre-transformer.html` | `851bc30ba2290f512e60911db8fbd24966b8a95f` | `f284772d45fc5d642ba0ba589b3b8cafdbbe4b73` |
 | `dossiers/devenir-manager-premiere-fois.html` | `5b37be7ac97ba89e23e4f31456f90008c7ec49e5` | `20a9d53327c6b914612bb9737b5f6c5eecd266cd` |
 | `articles/construire-epargne-de-zero.html` | `a528b4cc9c82d8c7d6b737144fceb7adc70bd100` | `f48bf6af11c6cb13c903ec0029517ae0b4281ea7` |
@@ -60,6 +59,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/changer-travail-avant-credit-immobilier.html` | `8b7e88c9c93261fc35ebcb3a4fd5052430befe79` | `82bec88878cee4c35920b82ddd48e71012134651` |
 | `dossiers/trajectoire-professionnelle-selon-situation.html` | `340b3c58bd6809606aac38282afac472924ee2b1` | `c507f380db4a0bcb57571cb0d12d2625ced63d5c` |
 | `dossiers/finances-allocation-portefeuille.html` | `625ccbd17f7ecb7384ea9fb54c0ea57508261285` | `8ffa0f7ed6a743bdd65e43b4d3d7d02c59296126` |
+| `dossiers/creer-entreprise-avec-peu-argent.html` | `99fb67ac5498b3634df87e18d728af131d32c06e` | `f3526f870d08e9995bffa3376e30f2f43d3894c4` |
 | `dossiers/finances-retraite-decumulation.html` | `eb117acf36b33c889691233c186e3837ef1177a7` | `edaf6e7b18596ed64fb1dad48011ef44ba0cc4d7` |
 | `dossiers/accepter-emploi-plus-loin-cout-trajet.html` | `90f2105cbfe1502d24237ff42c2304dec9fd12f7` | `723a94bf1bb087cd6c06680ecaf4bd18c5df15a4` |
 | `dossiers/passer-80-pourcent-cout-reel.html` | `47f382b81052f8abfae4795bae4f6bd07d13f005` | `59c19c7de50b40082ee9083b16a13421da9475ce` |
@@ -202,7 +202,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1771 | à revoir après changement | `dossiers/capacite-refuser-travail-rentabilite.html` |
 | 8/9 | 1782 | à revoir après changement | `articles/sans-diplome-chemins-alternatifs.html` |
 | 8/9 | 1799 | humaine ✓ | `dossiers/decider-sans-tourner-en-rond.html` |
-| 8/9 | 1874 | à revoir après changement | `dossiers/creer-entreprise-avec-peu-argent.html` |
 | 8/9 | 1879 | à revoir après changement | `dossiers/bien-immobilier-garder-vendre-transformer.html` |
 | 8/9 | 1899 | à revoir après changement | `dossiers/devenir-manager-premiere-fois.html` |
 | 8/9 | 1956 | à revoir après changement | `articles/construire-epargne-de-zero.html` |
@@ -233,6 +232,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1469 | humaine ✓ | `dossiers/embaucher-ou-sous-traiter.html` |
 | 9/9 | 1494 | humaine ✓ | `dossiers/quitter-emploi-stable-ou-rester.html` |
 | 9/9 | 1563 | heuristique | `dossiers/separation-logement-achete-a-deux.html` |
+| 9/9 | 1564 | à revoir après changement | `dossiers/creer-entreprise-avec-peu-argent.html` |
 | 9/9 | 1593 | à revoir après changement | `dossiers/finances-retraite-decumulation.html` |
 | 9/9 | 1615 | humaine ✓ | `dossiers/automatiser-ou-non-processus.html` |
 | 9/9 | 1656 | à revoir après changement | `dossiers/accepter-emploi-plus-loin-cout-trajet.html` |
