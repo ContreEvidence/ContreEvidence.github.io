@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **55**. Validations devenues caduques après modification : **68**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **54**. Validations devenues caduques après modification : **69**.
 
 ## Priorité humaine
 
@@ -37,6 +37,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `articles/competences-transferables.html` | `54a32e6988ad07816c8b18fc454c4de0eda4a129` | `343bc34e46dc1da22921da8845122da86db8a759` |
 | `dossiers/business-plan-utile.html` | `e905253a4ba67437152d5227dcdd9dd464886d32` | `d67ecb168823cccfc96f3a853f21e902602d46bb` |
 | `dossiers/apprendre-developper-competences.html` | `487f02e927355afd164e889a7c53b7d4e0e6ff65` | `3272d614977166149cab861080f1216a5458a5c2` |
+| `dossiers/audit-copropriete-avant-achat.html` | `a0970b0fbb708617d937df0d3e62a49740a7a1b5` | `cf94b86a2ca788b54c468fc4d80d09952add8634` |
 | `dossiers/capacite-refuser-travail-rentabilite.html` | `aace252f32a1faf81cf6e0a4665e9b60e694129e` | `91ebe0bb0dc7e77c7a5a042210a2f54a7e04570e` |
 | `articles/sans-diplome-chemins-alternatifs.html` | `d5f6867f38969bb89ca16df2bfdbd7ed2fed77ca` | `2a7cd63ced34759f03482dd0381857c50af183b0` |
 | `dossiers/creer-entreprise-avec-peu-argent.html` | `99fb67ac5498b3634df87e18d728af131d32c06e` | `e761b606c01252b83ba6bc6dd6209e1c98e8023d` |
@@ -115,7 +116,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/prix-attendre-finances.html` — 8/9 automatique — Coûts certains versus opportunité, cas où attendre protège, scénario symétrique d’action trop rapide et seuil de décision déjà présents.
 - `dossiers/piloter-patrimoine-selon-taille.html` — 8/9 automatique — Montant distingué de la complexité, risque dominant par phase, budget de complexité, seuil de recours au conseil et contre-exemples déjà structurés.
 - `dossiers/lancer-activite-sans-quitter-emploi.html` — 8/9 automatique — Lancement parallèle, contraintes à vérifier, seuils de bascule et séquençage avant abandon du revenu salarié déjà structurés.
-- `dossiers/audit-copropriete-avant-achat.html` — 8/9 automatique — Documents, charges, travaux, gouvernance, scénarios de choc et signaux de renoncement déjà structurés.
 - `dossiers/negocier-salaire-responsabilites.html` — 8/9 automatique — Poste réel versus surcharge, package complet, BATNA, coût de rester, contreparties alternatives, horizon et seuil de mobilité externe déjà structurés.
 - `articles/competences-invisibles-preuves.html` — 8/9 automatique — Revue angles morts : distingue preuve insuffisante et filtre local via le test même preuve/autre acteur, avec condition de renversement.
 - `dossiers/comparer-deux-offres-emploi.html` — 8/9 automatique — Non-négociables avant score, package réel, temps capturé, contrat, risque organisationnel, capital professionnel, scénarios et option C déjà structurés.
@@ -188,7 +188,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1404 | à revoir après changement | `dossiers/tresorerie-bfr-entreprise.html` |
 | 8/9 | 1411 | humaine ✓ | `dossiers/piloter-patrimoine-selon-taille.html` |
 | 8/9 | 1425 | humaine ✓ | `dossiers/lancer-activite-sans-quitter-emploi.html` |
-| 8/9 | 1435 | humaine ✓ | `dossiers/audit-copropriete-avant-achat.html` |
 | 8/9 | 1435 | humaine ✓ | `dossiers/negocier-salaire-responsabilites.html` |
 | 8/9 | 1448 | à revoir après changement | `articles/accepter-nimporte-quel-poste-retour-emploi.html` |
 | 8/9 | 1477 | humaine ✓ | `articles/competences-invisibles-preuves.html` |
@@ -198,6 +197,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1690 | à revoir après changement | `dossiers/business-plan-utile.html` |
 | 8/9 | 1712 | humaine ✓ | `articles/frais-fiscalite-rendement-net.html` |
 | 8/9 | 1714 | à revoir après changement | `dossiers/apprendre-developper-competences.html` |
+| 8/9 | 1756 | à revoir après changement | `dossiers/audit-copropriete-avant-achat.html` |
 | 8/9 | 1771 | à revoir après changement | `dossiers/capacite-refuser-travail-rentabilite.html` |
 | 8/9 | 1782 | à revoir après changement | `articles/sans-diplome-chemins-alternatifs.html` |
 | 8/9 | 1788 | humaine ✓ | `dossiers/finances-allocation-portefeuille.html` |
