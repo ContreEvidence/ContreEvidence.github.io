@@ -8,7 +8,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
 - P1 — affirmation forte à resserrer ou vérifier : **69**
-- P2 — nécessité à examiner : **154**
+- P2 — nécessité à examiner : **155**
 - OK heuristique — source/périmètre détecté, fond restant à contrôler : **910**
 
 ## P0 — rouvrir en priorité
@@ -343,6 +343,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Calculer → 04 · Tester un scénario Une décision robuste doit survivre à autre chose que l'hypothèse centrale.
 - **nécessité à requalifier ou sourcer** — Outils : diagnostiquer, comparer, calculer et décider | Contre-Évidence Aller au contenu Outils Commencez par ce que vous devez faire avec votre situation.
 ### `parcours-de-vie.html`
+- **nécessité à requalifier ou sourcer** — 5 · Horizon Quel objectif doit être avancé, retardé, fractionné ou abandonné pendant les 90 prochains jours ? _[temporalité]_
 - **nécessité à requalifier ou sourcer** — C Je veux organiser ou investir mon capital Faire découler la répartition de votre argent de vos projets, de ce qui doit rester disponible, du risque acceptable et du temps dont vous disposez. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Il faut la transformer en étapes ordonnées, avec des ressources, des délais et des points de contrôle.
 ### `parcours-pilotage-professionnel.html`
