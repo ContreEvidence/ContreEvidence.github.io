@@ -1,0 +1,29 @@
+name: Batch 35 patrimoine layers
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Apply patrimoine layers
+        run: python scripts/batch35_patrimoine_layers.py
+      - name: Commit batch 35
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add themes/argent.html parcours-argent.html reports/content-review-decisions-2026-08-17-batch-35.md
+          git diff --cached --check
+          git commit -m "Restructure patrimoine as layered progression"
+          git pull --rebase origin main
+          git push
