@@ -1,0 +1,51 @@
+name: Batch 29 annual roadmap review
+
+on:
+  push:
+    paths:
+      - '.github/workflows/batch-29-annual-roadmap-review.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Add annual roadmap review
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          def replace_once(text, old, new, label):
+              n = text.count(old)
+              if n != 1:
+                  raise SystemExit(f'{label}: expected 1 anchor, found {n}')
+              return text.replace(old, new, 1)
+
+          p = Path('parcours-de-vie.html')
+          t = p.read_text(encoding='utf-8')
+
+          css_anchor = '@media(max-width:560px){.reset-protocol{grid-template-columns:1fr}}@media(max-width:850px){.roadmap-grid,.roadmap-rules{grid-template-columns:1fr}}</style>'
+          annual_css = '''.annual-section{background:#fff}.annual-head{max-width:900px;margin-bottom:1rem}.annual-head h2{margin:.25rem 0 .55rem;font-size:clamp(2rem,4vw,3.05rem);letter-spacing:-.04em;line-height:1}.annual-head p{color:#59646d;line-height:1.65}.annual-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem}.annual-card{display:flex;flex-direction:column;padding:1.05rem 1.1rem;border:1px solid rgba(16,24,32,.12);border-radius:15px;background:#faf8f2;color:#101820;text-decoration:none}.annual-card:hover,.annual-card:focus-visible{border-color:rgba(212,171,86,.9);outline:none}.annual-card small{font-size:.7rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:#76591c}.annual-card strong{margin:.35rem 0;font-size:1.05rem}.annual-card span{color:#59646d;line-height:1.48;font-size:.91rem}.annual-output{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;margin-top:1rem}.annual-output div{padding:.95rem 1rem;border-left:3px solid #d4ab56;background:#f7f5ef}.annual-output b{display:block;margin-bottom:.25rem}.annual-output span{color:#59646d;font-size:.9rem;line-height:1.45}.annual-cadence{margin-top:1rem;padding:1rem 1.1rem;background:#101820;color:#fff;border-radius:15px}.annual-cadence strong{color:#e8c979}.annual-cadence p{margin:.35rem 0 0;color:#d7dfe3;line-height:1.55}@media(max-width:850px){.annual-grid,.annual-output{grid-template-columns:1fr}}'''
+          t = replace_once(t, css_anchor, annual_css + css_anchor, 'annual css')
+
+          anchor = '<section class="journey-section reset-section" id="recalculer">'
+          annual = '''<section class="journey-section annual-section" id="revue-annuelle"><div class="container"><div class="annual-head"><div class="kicker">Le point de contrôle annuel</div><h2>Une feuille de route n’est pas un plan que l’on écrit une fois.</h2><p>Une fois par an, faites un contrôle assez large pour détecter un changement de phase, mais assez court pour ne pas transformer votre vie en tableau de bord. <strong>Le but n’est pas d’améliorer six domaines à la fois : c’est d’identifier la priorité qui a réellement changé.</strong></p></div><div class="annual-grid"><a class="annual-card" href="dossiers/audit-budget-60-minutes.html"><small>01 · Flux</small><strong>Est-ce que mon système produit encore de la marge ?</strong><span>Revenu disponible, dépenses récurrentes, capacité d’épargne et gros paiements à venir : cherchez la tendance, pas seulement le solde du mois.</span></a><a class="annual-card" href="dossiers/patrimoine-marge-de-manoeuvre.html"><small>02 · Sécurité</small><strong>Combien de temps puis-je décider sans être forcé ?</strong><span>Réserve accessible, dettes, charges incompressibles, assurance et dépenses probables : la vraie sécurité est une durée de décision.</span></a><a class="annual-card" href="dossiers/allocation-patrimoine-selon-situation.html"><small>03 · Patrimoine</small><strong>Mon capital correspond-il toujours à mes horizons ?</strong><span>Repérez concentration, argent devenu nécessaire à court terme, doublons, risque inutile et actifs conservés sans rôle clair.</span></a><a class="annual-card" href="outil-capital-professionnel.html"><small>04 · Capital professionnel</small><strong>Qu’est-ce qui vaut davantage sur le marché qu’il y a un an ?</strong><span>Nouvelles preuves, compétences transférables, réseau, autonomie et valeur externe. Une année d’ancienneté n’est pas automatiquement une année de capital professionnel.</span></a><a class="annual-card" href="dossiers/preparer-retraite-droits-epargne-logement.html"><small>05 · Protection & long terme</small><strong>Quels droits ou engagements futurs commencent à devenir proches ?</strong><span>Retraite, extinction des dettes, logement, personnes à protéger, bénéficiaires et dépendance future deviennent progressivement des décisions présentes.</span></a><a class="annual-card" href="dossiers/tout-ca-pour-quoi-objectifs-besoins.html"><small>06 · Vie réelle</small><strong>Est-ce toujours la même vie que j’essaie de financer ?</strong><span>Temps, santé, famille, lieu de vie et envies peuvent changer avant le portefeuille ou le CV. Vérifiez que les moyens servent encore le bon objectif.</span></a></div><div class="annual-output"><div><b>À continuer</b><span>Une mécanique qui fonctionne déjà et qu’il faut protéger ou automatiser plutôt que réinventer.</span></div><div><b>À corriger</b><span>La fragilité qui peut réellement réduire vos options au cours des 12 à 36 prochains mois.</span></div><div><b>À construire</b><span>Une option nouvelle : compétence, réserve, mobilité, investissement, protection ou préparation d’une transition.</span></div></div><div class="annual-cadence"><strong>Trois rythmes suffisent.</strong><p><b>Courant :</b> suivre seulement ce qui peut déraper vite, comme le budget ou une dette. <b>Annuel :</b> refaire ce contrôle global et choisir une ou deux priorités. <b>Événement :</b> si survient naissance, séparation, chômage, santé, achat, héritage, création d’activité ou changement de poste, n’attendez pas la revue annuelle : passez directement au recalcul de trajectoire ci-dessous.</p></div></div></section>'''
+          t = replace_once(t, anchor, annual + anchor, 'annual section')
+          p.write_text(t, encoding='utf-8')
+          PY
+      - name: Commit annual roadmap review
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add parcours-de-vie.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Add annual checkpoints to life roadmap"
+          git pull --rebase origin main
+          git push origin HEAD:main
