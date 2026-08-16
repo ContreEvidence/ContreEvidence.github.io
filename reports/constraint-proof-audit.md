@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
 - P1 — affirmation forte à resserrer ou vérifier : **65**
-- P2 — nécessité à examiner : **151**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **856**
+- P2 — nécessité à examiner : **153**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **860**
 
 ## P0 — rouvrir en priorité
 
@@ -302,6 +302,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Le protocole Écrire ce qui doit réellement changer.
 ### `dossiers/trajectoire-professionnelle-selon-situation.html`
 - **nécessité à requalifier ou sourcer** — Santé → nouvelle fonction soutenabilité quelle contrainte doit disparaître ? _[temporalité]_
+### `dossiers/tresorerie-bfr-entreprise.html`
+- **nécessité à requalifier ou sourcer** — Pour chaque euro de croissance, demandez combien doit sortir avant d’être encaissé et combien de jours il reste immobilisé. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Quand c’est commercialement possible, cette différence doit influencer prix, conditions, priorité commerciale ou taille de contrat acceptée .
 ### `dossiers/trouver-premiers-clients.html`
 - **nécessité à requalifier ou sourcer** — Ce qui fait renverser la conclusion On pensait… Mais si… Alors… « Il faut plus prospecter » 50 % des rendez-vous achètent oui : le volume est probablement le goulot.
 - **nécessité à requalifier ou sourcer** — Il faut donc souvent lui offrir autre chose : périmètre plus petit, engagement plus court, test, garantie raisonnable, paiement fractionné, disponibilité supérieure ou implication personnelle du fondateur.
