@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **66**. Validations devenues caduques après modification : **57**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **65**. Validations devenues caduques après modification : **58**.
 
 ## Priorité humaine
 
@@ -56,6 +56,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/travailler-moins-vivre-mieux.html` | `eb67bcfbe9b9b1bdaf4c4e402946defb38068247` | `a36678cca70ced0efdd0b0b48e961df0b67e870c` |
 | `articles/retrouver-emploi-apres-interruption.html` | `abbaae628730e9314acfe90444f7185a18cf1072` | `184c63bafd29cadff71972e8e8dba04dbd97122a` |
 | `articles/checklist-avant-placement-conseiller.html` | `f0a354fedc6ee6b64f0235804b495c6a4701a872` | `561b9eb3d62a2ba88f0b48c12b4c1b36fe54d5a7` |
+| `dossiers/puis-je-me-permettre-reconversion.html` | `1ad192cf263278ca68066756f08f1dc2f62a58fc` | `30104a9749a082f9bb5eeed131ad4f9ff3738df9` |
 | `articles/choisir-etf-mondial-debutant.html` | `51eb14e0e0798b03354f58360105a9a851af5bf0` | `8ca0d60ea3471345eb449e0e878724f000c1c24f` |
 | `dossiers/temps-energie-qualite-vie.html` | `870bee99dfb0325a0253f9000e2414580b1b8e3c` | `942d12394fd23a3f0a04c8b4587a445061cba7f8` |
 | `dossiers/favoriser-un-enfant-succession-donation.html` | `87dc0927f5033751ed022b19eef2ce82ff2ba453` | `a82d032edac0c37906b42c8f11b37678be5e5b55` |
@@ -81,7 +82,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `articles/entretien-rate-ce-qui-bloque.html` — 6/9 automatique — Diagnostic de conversion, hypothèses concurrentes, retours convergents et conditions de recalibrage déjà présents.
 - `dossiers/etre-riche-revenu-patrimoine-liberte.html` — 6/9 automatique — Page de clarification conceptuelle : plusieurs définitions et inversion selon la question déjà traitées.
 - `dossiers/experience-devient-risque-recruteur.html` — 6/9 automatique — Risques perçus, preuves, ciblage et test de cohérence personnelle déjà structurés.
-- `dossiers/puis-je-me-permettre-reconversion.html` — 6/9 automatique — Déficit mensuel, runway, scénarios adverse/central et transition progressive déjà présents.
 - `articles/50-candidatures-zero-reponse.html` — 7/9 automatique — Localisation de la rupture, séries comparables, tests A/B, scénarios de diagnostic et règles de changement de stratégie déjà explicites.
 - `dossiers/competences-qualification-employabilite.html` — 7/9 automatique — Séparation compétence/qualification/preuve, verrou légal versus recrutement, test sur 30 offres et voies alternatives déjà structurés.
 - `dossiers/garages-parkings-locaux-commerciaux.html` — 7/9 automatique — Vacance extrême, reconversion du local, financement, concentration, critères d’inversion et sortie avant entrée déjà structurés.
@@ -152,7 +152,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 6/9 | 1115 | humaine ✓ | `articles/entretien-rate-ce-qui-bloque.html` |
 | 6/9 | 1353 | humaine ✓ | `dossiers/etre-riche-revenu-patrimoine-liberte.html` |
 | 6/9 | 1485 | humaine ✓ | `dossiers/experience-devient-risque-recruteur.html` |
-| 6/9 | 1596 | humaine ✓ | `dossiers/puis-je-me-permettre-reconversion.html` |
 | 6/9 | 2785 | à revoir après changement | `dossiers/indivision-loyers-charges-comptes.html` |
 | 7/9 | 1157 | humaine ✓ | `articles/50-candidatures-zero-reponse.html` |
 | 7/9 | 1285 | humaine ✓ | `dossiers/competences-qualification-employabilite.html` |
@@ -252,6 +251,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1980 | à revoir après changement | `articles/checklist-avant-placement-conseiller.html` |
 | 9/9 | 2013 | humaine ✓ | `dossiers/creer-entreprise-sans-diplome.html` |
 | 9/9 | 2015 | humaine ✓ | `dossiers/quitter-cdi-avec-credit-immobilier.html` |
+| 9/9 | 2025 | à revoir après changement | `dossiers/puis-je-me-permettre-reconversion.html` |
 | 9/9 | 2050 | à revoir après changement | `articles/choisir-etf-mondial-debutant.html` |
 | 9/9 | 2108 | à revoir après changement | `dossiers/temps-energie-qualite-vie.html` |
 | 9/9 | 2167 | à revoir après changement | `dossiers/favoriser-un-enfant-succession-donation.html` |
