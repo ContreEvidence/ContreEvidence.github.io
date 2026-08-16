@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **58**. Validations devenues caduques après modification : **65**.
+Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humaines actives : **57**. Validations devenues caduques après modification : **66**.
 
 ## Priorité humaine
 
@@ -55,6 +55,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/trajectoire-professionnelle-selon-situation.html` | `340b3c58bd6809606aac38282afac472924ee2b1` | `c507f380db4a0bcb57571cb0d12d2625ced63d5c` |
 | `dossiers/are-arce-acre-creation-entreprise.html` | `96944742e60f24751b001857871095f3ae55ce94` | `0a11bc2495d5e98ee3d769a581debaa5f66f4032` |
 | `dossiers/accepter-emploi-plus-loin-cout-trajet.html` | `90f2105cbfe1502d24237ff42c2304dec9fd12f7` | `723a94bf1bb087cd6c06680ecaf4bd18c5df15a4` |
+| `dossiers/passer-80-pourcent-cout-reel.html` | `47f382b81052f8abfae4795bae4f6bd07d13f005` | `59c19c7de50b40082ee9083b16a13421da9475ce` |
 | `dossiers/questions-poser-avant-prise-de-poste.html` | `946bd319f17d8bcf3b9c099f5f0b7a6cb7932c18` | `df65a9d9055ff6caf08a59556f680c35526ef907` |
 | `dossiers/trouver-premiers-clients.html` | `29837957e915643a0748021affe9c939cfc88f89` | `ae45cbcb2ec0e20e7b6bb613b59fb4efde5fe54c` |
 | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` | `f1faf0bbb75b36b784e38e370c13eb49654a622f` | `cd3b8d01fbf0c7fffab2c109fcca1a2b0ecbae7b` |
@@ -124,7 +125,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/methode-analyse-complete.html` — 8/9 automatique — Question d’investissement, benchmark, fondamental, valorisation, technique, sizing, scénario adverse et condition d’invalidation déjà structurés.
 - `dossiers/metiers-accessibles-sans-diplome.html` — 8/9 automatique — Réécriture de référence : métiers classés par verrous réels, preuves, voies d’accès et conditions de substitution au diplôme déjà structurés.
 - `dossiers/inflation-comprendre-histoire-pouvoir-achat.html` — 8/9 automatique — Page explicative longue : mécanismes, histoire, rendement réel, dette et implications patrimoniales sont reliés ; sa fonction n’exige pas d’ajouter artificiellement un plan de décision générique.
-- `dossiers/passer-80-pourcent-cout-reel.html` — 9/9 automatique — Coût réel du temps libéré, impact sur marge du foyer, effets différés et réversibilité déjà traités lors de la revue antérieure.
 - `dossiers/depenses-recurrentes-abonnements-assurances.html` — 9/9 automatique — Coût annuel, doublons, besoin réel, renégociation/substitution/suppression et seuils de conservation déjà structurés.
 - `dossiers/finances-retraite-decumulation.html` — 9/9 automatique — Gap retraite, risque de séquence, poches par fonction, garde-fous de retrait, longévité, stress tests et revue annuelle déjà structurés.
 - `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` — 9/9 automatique — Réécriture de référence : besoin de mobilité avant financement, coût total, liquidité, sortie et stress tests.
@@ -221,7 +221,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 2634 | à revoir après changement | `dossiers/location-courte-duree-meuble-tourisme.html` |
 | 8/9 | 2722 | humaine ✓ | `dossiers/inflation-comprendre-histoire-pouvoir-achat.html` |
 | 8/9 | 2791 | à revoir après changement | `dossiers/changer-travail-avant-credit-immobilier.html` |
-| 9/9 | 1193 | humaine ✓ | `dossiers/passer-80-pourcent-cout-reel.html` |
 | 9/9 | 1215 | humaine ✓ | `dossiers/depenses-recurrentes-abonnements-assurances.html` |
 | 9/9 | 1259 | à revoir après changement | `dossiers/trajectoire-professionnelle-selon-situation.html` |
 | 9/9 | 1297 | humaine ✓ | `dossiers/finances-retraite-decumulation.html` |
@@ -235,6 +234,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1563 | heuristique | `dossiers/separation-logement-achete-a-deux.html` |
 | 9/9 | 1615 | humaine ✓ | `dossiers/automatiser-ou-non-processus.html` |
 | 9/9 | 1656 | à revoir après changement | `dossiers/accepter-emploi-plus-loin-cout-trajet.html` |
+| 9/9 | 1683 | à revoir après changement | `dossiers/passer-80-pourcent-cout-reel.html` |
 | 9/9 | 1683 | à revoir après changement | `dossiers/questions-poser-avant-prise-de-poste.html` |
 | 9/9 | 1707 | humaine ✓ | `dossiers/ameliorer-processus-sans-degrader-service.html` |
 | 9/9 | 1718 | à revoir après changement | `dossiers/trouver-premiers-clients.html` |
