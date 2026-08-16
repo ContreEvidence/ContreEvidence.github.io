@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **93**. Validations devenues caduques après modification : **0**.
+Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **102**. Validations devenues caduques après modification : **20**.
 
 ## Priorité humaine
 
@@ -105,10 +105,19 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/regles-responsabilites-fautes-travail.html` — 9/9 automatique — Erreur, négligence, insuffisance et faute décomposées ; qualification conditionnelle et conséquences distinguées, avec sources adaptées déjà présentes.
 - `dossiers/liquidites-reserve-securite.html` — 9/9 automatique — Réserve calibrée par risques et charges plutôt que par règle universelle ; liquidité et marge d’option déjà traitées.
 - `dossiers/embaucher-ou-sous-traiter.html` — 9/9 automatique — Coût complet, capacité, flexibilité, contrôle, seuil de charge et scénarios embauche/sous-traitance/hybride déjà structurés.
+- `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` — 9/9 automatique — Réécriture du 16/08 : socle/long terme/option-usage, prix du temps, expérimentation réversible et stress test après usage.
 - `dossiers/automatiser-ou-non-processus.html` — 9/9 automatique — Réécriture du 16/08 : supprimer/simplifier/standardiser avant automatisation, assistance partielle, rollback et condition d’abandon.
 - `dossiers/ameliorer-processus-sans-degrader-service.html` — 9/9 automatique — Processus, indicateurs, incitations, goulots et garde-fous qualité déjà structurés ; pas de réécriture artificielle lors de la revue antérieure.
 - `dossiers/calculer-prix-minimum-rentable.html` — 9/9 automatique — Coût complet, temps non facturé, capacité, marge et seuil de prix/volume déjà structurés.
 - `dossiers/prejuges-biais-monde-professionnel.html` — 9/9 automatique — Réécriture du 16/08 : diagnostic signal/gatekeeper/discrimination, test causal, substitution d’acteur et seuil de sortie du registre de persuasion.
+- `dossiers/couple-famille-argent-temps.html` — 9/9 automatique — Réécriture de référence : contributions, temps, sacrifices de carrière, propriété, règles temporaires et simulations déjà structurés.
+- `dossiers/creer-entreprise-sans-diplome.html` — 9/9 automatique — Réécriture de référence : fondateur/exécutant, activité réglementée, expérience, personne qualifiée, périmètre libre et voies alternatives déjà structurés.
+- `dossiers/quitter-cdi-avec-credit-immobilier.html` — 9/9 automatique — Réécriture de référence : dette existante versus nouveau financement, fenêtres temporelles, séquençage, réserve et déclarations exactes déjà structurés.
+- `dossiers/indivision-immobiliere-sortir-sans-subir.html` — 9/9 automatique — Propriété, dette, créances, occupation et stratégie de sortie séparées ; négociation, convention, rachat, vente et preuve déjà structurés.
+- `dossiers/changer-travail-avant-credit-immobilier.html` — 9/9 automatique — Financement bancaire, période d’essai, mobilité, réserve et ordre des opérations traités comme variables distinctes avec scénarios d’inversion.
+- `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` — 9/9 automatique — Objectif diplôme séparé du moyen d’accès ; VAP, VAE, DAEU et voies institutionnelles comparées avec conditions et séquence.
+- `dossiers/indivision-rachat-progressif-parts.html` — 9/9 automatique — Fractionnement du rachat, courbe de propriété, dette bancaire distincte, valorisation, friction et alternatives en moins de tranches déjà structurés.
+- `dossiers/indivision-couple-separation-rachat-soulte.html` — 9/9 automatique — Réécriture de référence : refus bancaire actuel non confondu avec vente obligatoire, propriété/dette/créances séparées, fenêtres 1–5 ans et rachat futur simulés.
 
 ## Corpus complet
 
@@ -198,44 +207,44 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 2320 | humaine ✓ | `dossiers/methode-analyse-complete.html` |
 | 8/9 | 2533 | humaine ✓ | `dossiers/metiers-accessibles-sans-diplome.html` |
 | 8/9 | 2722 | humaine ✓ | `dossiers/inflation-comprendre-histoire-pouvoir-achat.html` |
-| 9/9 | 1038 | heuristique | `articles/clients-interesses-personne-nachete.html` |
-| 9/9 | 1188 | heuristique | `articles/competences-transferables.html` |
+| 9/9 | 1038 | à revoir après changement | `articles/clients-interesses-personne-nachete.html` |
+| 9/9 | 1188 | à revoir après changement | `articles/competences-transferables.html` |
 | 9/9 | 1193 | humaine ✓ | `dossiers/passer-80-pourcent-cout-reel.html` |
-| 9/9 | 1215 | heuristique | `dossiers/depenses-recurrentes-abonnements-assurances.html` |
-| 9/9 | 1277 | heuristique | `articles/retrouver-emploi-apres-interruption.html` |
+| 9/9 | 1215 | à revoir après changement | `dossiers/depenses-recurrentes-abonnements-assurances.html` |
+| 9/9 | 1277 | à revoir après changement | `articles/retrouver-emploi-apres-interruption.html` |
 | 9/9 | 1297 | humaine ✓ | `dossiers/finances-retraite-decumulation.html` |
 | 9/9 | 1314 | humaine ✓ | `dossiers/regles-responsabilites-fautes-travail.html` |
 | 9/9 | 1315 | humaine ✓ | `dossiers/liquidites-reserve-securite.html` |
-| 9/9 | 1323 | heuristique | `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` |
-| 9/9 | 1324 | heuristique | `dossiers/gestion-pilotee-comparer-performances.html` |
-| 9/9 | 1392 | heuristique | `dossiers/finances-investissement-locatif.html` |
-| 9/9 | 1405 | heuristique | `dossiers/devenir-manager-premiere-fois.html` |
-| 9/9 | 1419 | heuristique | `dossiers/decider-a-deux-travail-patrimoine.html` |
-| 9/9 | 1439 | heuristique | `dossiers/valeur-option-bien-immobilier.html` |
+| 9/9 | 1323 | à revoir après changement | `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` |
+| 9/9 | 1324 | à revoir après changement | `dossiers/gestion-pilotee-comparer-performances.html` |
+| 9/9 | 1392 | à revoir après changement | `dossiers/finances-investissement-locatif.html` |
+| 9/9 | 1405 | à revoir après changement | `dossiers/devenir-manager-premiere-fois.html` |
+| 9/9 | 1419 | à revoir après changement | `dossiers/decider-a-deux-travail-patrimoine.html` |
+| 9/9 | 1439 | à revoir après changement | `dossiers/valeur-option-bien-immobilier.html` |
 | 9/9 | 1469 | humaine ✓ | `dossiers/embaucher-ou-sous-traiter.html` |
-| 9/9 | 1474 | heuristique | `articles/accepter-nimporte-quel-poste-retour-emploi.html` |
-| 9/9 | 1494 | heuristique | `dossiers/quitter-emploi-stable-ou-rester.html` |
-| 9/9 | 1557 | heuristique | `articles/comparatif-produits-bancaires.html` |
-| 9/9 | 1570 | heuristique | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
-| 9/9 | 1610 | heuristique | `dossiers/travailler-moins-vivre-mieux.html` |
+| 9/9 | 1474 | à revoir après changement | `articles/accepter-nimporte-quel-poste-retour-emploi.html` |
+| 9/9 | 1494 | à revoir après changement | `dossiers/quitter-emploi-stable-ou-rester.html` |
+| 9/9 | 1557 | à revoir après changement | `articles/comparatif-produits-bancaires.html` |
+| 9/9 | 1570 | humaine ✓ | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
+| 9/9 | 1610 | à revoir après changement | `dossiers/travailler-moins-vivre-mieux.html` |
 | 9/9 | 1615 | humaine ✓ | `dossiers/automatiser-ou-non-processus.html` |
-| 9/9 | 1704 | heuristique | `dossiers/indivision-succession-heritiers-vendre-partager.html` |
+| 9/9 | 1704 | à revoir après changement | `dossiers/indivision-succession-heritiers-vendre-partager.html` |
 | 9/9 | 1707 | humaine ✓ | `dossiers/ameliorer-processus-sans-degrader-service.html` |
-| 9/9 | 1760 | heuristique | `articles/travailler-beaucoup-gagner-peu-prix.html` |
+| 9/9 | 1760 | à revoir après changement | `articles/travailler-beaucoup-gagner-peu-prix.html` |
 | 9/9 | 1777 | humaine ✓ | `dossiers/calculer-prix-minimum-rentable.html` |
 | 9/9 | 1791 | humaine ✓ | `dossiers/prejuges-biais-monde-professionnel.html` |
-| 9/9 | 1894 | heuristique | `dossiers/finances-enveloppes-fiscalite.html` |
-| 9/9 | 1923 | heuristique | `dossiers/couple-famille-argent-temps.html` |
-| 9/9 | 1995 | heuristique | `dossiers/formation-vaut-elle-le-cout.html` |
-| 9/9 | 2013 | heuristique | `dossiers/creer-entreprise-sans-diplome.html` |
-| 9/9 | 2015 | heuristique | `dossiers/quitter-cdi-avec-credit-immobilier.html` |
-| 9/9 | 2018 | heuristique | `dossiers/bien-immobilier-garder-vendre-transformer.html` |
-| 9/9 | 2071 | heuristique | `dossiers/trajectoire-professionnelle-selon-situation.html` |
-| 9/9 | 2215 | heuristique | `dossiers/indivision-immobiliere-sortir-sans-subir.html` |
-| 9/9 | 2472 | heuristique | `dossiers/changer-travail-avant-credit-immobilier.html` |
-| 9/9 | 2694 | heuristique | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` |
-| 9/9 | 3065 | heuristique | `dossiers/indivision-rachat-progressif-parts.html` |
-| 9/9 | 3821 | heuristique | `dossiers/indivision-couple-separation-rachat-soulte.html` |
+| 9/9 | 1894 | à revoir après changement | `dossiers/finances-enveloppes-fiscalite.html` |
+| 9/9 | 1923 | humaine ✓ | `dossiers/couple-famille-argent-temps.html` |
+| 9/9 | 1995 | à revoir après changement | `dossiers/formation-vaut-elle-le-cout.html` |
+| 9/9 | 2013 | humaine ✓ | `dossiers/creer-entreprise-sans-diplome.html` |
+| 9/9 | 2015 | humaine ✓ | `dossiers/quitter-cdi-avec-credit-immobilier.html` |
+| 9/9 | 2018 | à revoir après changement | `dossiers/bien-immobilier-garder-vendre-transformer.html` |
+| 9/9 | 2071 | à revoir après changement | `dossiers/trajectoire-professionnelle-selon-situation.html` |
+| 9/9 | 2215 | humaine ✓ | `dossiers/indivision-immobiliere-sortir-sans-subir.html` |
+| 9/9 | 2472 | humaine ✓ | `dossiers/changer-travail-avant-credit-immobilier.html` |
+| 9/9 | 2694 | humaine ✓ | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` |
+| 9/9 | 3065 | humaine ✓ | `dossiers/indivision-rachat-progressif-parts.html` |
+| 9/9 | 3821 | humaine ✓ | `dossiers/indivision-couple-separation-rachat-soulte.html` |
 
 ## Règle de reprise
 
