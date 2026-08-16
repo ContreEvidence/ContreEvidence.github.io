@@ -6,9 +6,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 ## Synthèse
 
-- P0 — fermeture forte sans preuve/périmètre suffisant : **15**
-- P1 — affirmation forte à resserrer ou vérifier : **64**
-- P2 — nécessité à examiner : **150**
+- P0 — fermeture forte sans preuve/périmètre suffisant : **16**
+- P1 — affirmation forte à resserrer ou vérifier : **66**
+- P2 — nécessité à examiner : **153**
 - OK heuristique — source/périmètre détecté, fond restant à contrôler : **869**
 
 ## P0 — rouvrir en priorité
@@ -23,6 +23,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sans signal de preuve ni périmètre clair** — Cette distinction est essentielle parce qu’un tableau pondéré ne doit jamais donner une bonne note à une option qui est en réalité impossible.
 ### `dossiers/etude-marche-terrain.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Mais après quelques substitutions prédéfinies, continuer à modifier le projet jusqu’à obtenir un « oui » ne produit plus de connaissance : cela rend l’hypothèse impossible à réfuter. _[temporalité]_
+### `dossiers/indivision-immobiliere-sortir-sans-subir.html`
+- **fermeture forte sans signal de preuve ni périmètre clair** — Rachat progressif Deuxième étape impossible dans trois ans.
 ### `dossiers/plan-30-jours-recherche-emploi.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Manquer un logiciel appris en trois jours n’est pas équivalent à manquer le permis obligatoire ou l’expérience réglementaire exigée.
 ### `dossiers/quand-vie-change-sante-separation-revenu.html`
@@ -99,6 +101,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/indivision-couple-separation-rachat-soulte.html`
 - **fermeture forte sourcée mais formulation trop absolue** — D’abord : qu’est-ce qui rend le rachat « impossible » ? _[signal-source]_
 - **fermeture forte sourcée mais formulation trop absolue** — Le mot impossible mélange souvent plusieurs problèmes. _[signal-source]_
+### `dossiers/indivision-immobiliere-sortir-sans-subir.html`
+- **affirmation forte sans signal de source explicite** — Les notaires rappellent aussi qu’une banque peut refuser la désolidarisation si la personne qui garde le bien ne peut pas assumer seule le crédit. citeturn912379search3turn912379search9 Conséquence : un montage patrimonial peut être juridiquement possible et rester économiquement inutilisable si la dette ne peut pas être réorganisée. _[périmètre]_
+- **affirmation forte sans signal de source explicite** — Rachat progressif : quand le tout-ou-rien est financièrement impossible Un indivisaire peut céder tout ou partie de ses droits. _[périmètre, temporalité]_
 ### `dossiers/location-courte-duree-meuble-tourisme.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Contre-Évidence La location courte durée n’est ni « interdite » ni « plus rentable » par nature. _[signal-source, temporalité]_
 - **fermeture forte sourcée mais formulation trop absolue** — Fractionner ne permet jamais de « tester » une exploitation interdite. _[signal-source]_
@@ -251,6 +256,10 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Il faut intégrer coût d’acquisition, financement, charges, vacance, travaux, gestion, fiscalité, temps personnel et valeur de sortie.
 - **nécessité à requalifier ou sourcer** — Le rendement doit être reconstruit Prix d’annonce, rendement brut et mensualité ne suffisent pas.
 - **nécessité à requalifier ou sourcer** — Le stress test doit précéder le scénario favorable Testez au moins deux mauvaises nouvelles simultanées : baisse de revenu + travaux, vacance + hausse de charges, revente anticipée + prix stagnant.
+### `dossiers/indivision-immobiliere-sortir-sans-subir.html`
+- **nécessité à requalifier ou sourcer** — Conditions de renversement Choix provisoire Information qui doit rouvrir la décision Rachat total Banque ne libère pas l’autre coemprunteur.
+- **nécessité à requalifier ou sourcer** — Mais il faut ensuite intégrer créances, travaux, indemnité d’occupation, revenus, frais d’acte et financement. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Qui doit quoi ?
 ### `dossiers/methode-analyse-complete.html`
 - **nécessité à requalifier ou sourcer** — Bull Exécution supérieure Levier opérationnel Prime maintenue Qu’est-ce qui doit réellement très bien se passer ?
 - **nécessité à requalifier ou sourcer** — Construire une conclusion falsifiable Une note d’investissement doit pouvoir être relue six mois plus tard sans réécrire l’histoire.
