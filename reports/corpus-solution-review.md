@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **104**. Validations devenues caduques après modification : **19**.
+Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **103**. Validations devenues caduques après modification : **20**.
 
 ## Priorité humaine
 
@@ -35,6 +35,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/favoriser-un-enfant-succession-donation.html` | `87dc0927f5033751ed022b19eef2ce82ff2ba453` | `a82d032edac0c37906b42c8f11b37678be5e5b55` |
 | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` | `73804a97a74df735855ceb5291c6ce824e36da56` | `a982b4a256d31aa630435af2265c34c7134f8570` |
 | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` | `aab16c4e6601ab8b9d42fc4230e4e668cbc1d540` | `97fa9c117bef460b3c2679212f70d819f9872519` |
+| `articles/comparatif-produits-bancaires.html` | `f766c96540debfe1ce8ef1d2c7e38770df01b3f3` | `ac036634513c533460b7d5f49dcb8afc4914e497` |
 | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` | `b8ca6053a594bbee33797f2d2c4dce8b4854e67b` | `c6e5736d0811426bfb0bfd40ac588e3c6c3945cf` |
 | `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` | `0dde3d3af6dc5214b42e2e86c59d2ef2677de259` | `49a26a95921f5be5635c8609812eef122250a076` |
 
@@ -122,7 +123,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 - `articles/accepter-nimporte-quel-poste-retour-emploi.html` — 9/9 automatique — Premier poste lu comme achat de preuve et d’options, avec coût d’enfermement, seuil de sortie et alternatives déjà structurés.
 - `dossiers/creer-entreprise-avec-peu-argent.html` — 9/9 automatique — Revue angles morts : coût du faible capital déplacé vers temps fondateur, fiabilité, qualité et maintenance rendu explicite.
 - `dossiers/quitter-emploi-stable-ou-rester.html` — 9/9 automatique — Coût de rester versus coût de partir, options intermédiaires, runway, scénarios et conditions d’inversion déjà structurés.
-- `articles/comparatif-produits-bancaires.html` — 9/9 automatique — Produits classés par fonction de l’argent, horizon, disponibilité et coût d’indisponibilité plutôt que par taux isolé.
 - `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` — 9/9 automatique — Réécriture du 16/08 : socle/long terme/option-usage, prix du temps, expérimentation réversible et stress test après usage.
 - `dossiers/travailler-moins-vivre-mieux.html` — 9/9 automatique — Temps libéré, revenu sacrifié, effets secondaires, alternatives graduelles, test temporaire et seuils de soutenabilité déjà structurés.
 - `dossiers/automatiser-ou-non-processus.html` — 9/9 automatique — Réécriture du 16/08 : supprimer/simplifier/standardiser avant automatisation, assistance partielle, rollback et condition d’abandon.
@@ -239,7 +239,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1474 | humaine ✓ | `articles/accepter-nimporte-quel-poste-retour-emploi.html` |
 | 9/9 | 1474 | humaine ✓ | `dossiers/creer-entreprise-avec-peu-argent.html` |
 | 9/9 | 1494 | humaine ✓ | `dossiers/quitter-emploi-stable-ou-rester.html` |
-| 9/9 | 1557 | humaine ✓ | `articles/comparatif-produits-bancaires.html` |
 | 9/9 | 1563 | heuristique | `dossiers/separation-logement-achete-a-deux.html` |
 | 9/9 | 1570 | humaine ✓ | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
 | 9/9 | 1610 | humaine ✓ | `dossiers/travailler-moins-vivre-mieux.html` |
@@ -268,6 +267,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 2201 | à revoir après changement | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` |
 | 9/9 | 2215 | humaine ✓ | `dossiers/indivision-immobiliere-sortir-sans-subir.html` |
 | 9/9 | 2272 | à revoir après changement | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` |
+| 9/9 | 2347 | à revoir après changement | `articles/comparatif-produits-bancaires.html` |
 | 9/9 | 2472 | humaine ✓ | `dossiers/changer-travail-avant-credit-immobilier.html` |
 | 9/9 | 2581 | à revoir après changement | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` |
 | 9/9 | 3065 | humaine ✓ | `dossiers/indivision-rachat-progressif-parts.html` |
