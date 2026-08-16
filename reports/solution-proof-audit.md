@@ -6,9 +6,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 
 ## Synthèse
 
-- S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
+- S0 — possibilité à fort enjeu sans preuve/condition détectée : **5**
 - S1 — possibilité à fort enjeu à resserrer ou vérifier : **31**
-- S2 — possibilité générale à examiner : **15**
+- S2 — possibilité générale à examiner : **16**
 - OK heuristique — condition ou preuve détectée : **162**
 
 ## S0 — vérifier avant toute recommandation
@@ -22,7 +22,6 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ### `themes/argent.html`
 - **possibilité à fort enjeu sans condition ni signal de preuve** — Le cockpit permet de photographier cette allocation, puis les dossiers expliquent les arbitrages qu’elle fait apparaître. _[fort enjeu]_
 - **possibilité à fort enjeu sans condition ni signal de preuve** — Patrimoine : budget, épargne, immobilier et investissement | Contre-Évidence Aller au contenu CONTRE-ÉVIDENCE Patrimoine Vie professionnelle Fenêtres Outils Bibliothèque Mon espace Vous pouvez commencer avec votre premier budget ou piloter déjà plusieurs actifs. _[fort enjeu]_
-- **possibilité à fort enjeu sans condition ni signal de preuve** — Quand vous avez déjà plusieurs placements, biens, dettes ou projets à faire tenir ensemble. répartition globale ce qui est trop concentré et ce qui reste disponible scénarios défavorables choix entre placements et transmission Ouvrir le cockpit patrimonial → Vous pouvez passer d’un chemin à l’autre à tout moment. _[fort enjeu]_
 
 ## S1 — vérifier preuve et périmètre
 
@@ -116,6 +115,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité générale à vérifier ou resserrer** — Pour aller plus loin, vous pouvez aussi renseigner les principaux sous-jacents d’un ETF sous la forme Nom:poids% , séparés par des points-virgules.
 ### `outil-pilotage-recherche-emploi.html`
 - **possibilité générale à vérifier ou resserrer** — Vous pouvez exporter votre suivi en CSV.
+### `themes/argent.html`
+- **possibilité générale à vérifier ou resserrer** — Quand vous avez déjà plusieurs placements, biens, dettes ou projets à faire tenir ensemble. répartition globale ce qui est trop concentré et ce qui reste disponible scénarios défavorables choix entre placements et transmission Ouvrir le cockpit patrimonial → Vous pouvez passer d’un chemin à l’autre à tout moment.
 
 ## Règle de relecture
 
