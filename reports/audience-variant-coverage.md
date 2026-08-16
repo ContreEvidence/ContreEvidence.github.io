@@ -6,13 +6,12 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **22**.
+Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **21**.
 
 ## Priorités de relecture
 
 | Priorité | Gate | Famille | Page | Variantes critiques non détectées |
 |---:|---|---|---|---|
-| 28 | NON_READY | reconversion / trajectoire pro | `dossiers/devenir-manager-premiere-fois.html` | demandeur emploi, santé / inaptitude, sans diplôme, revenu / runway |
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | salarié, santé / inaptitude, sans diplôme, revenu / runway |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/acheter-sans-vider-epargne.html` | SCI, mariage, PACS |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | indivision directe, mariage, PACS |
@@ -56,21 +55,6 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 | 0 | COVERED_OR_NARROW | couple / logement / séparation | `dossiers/separation-logement-achete-a-deux.html` | — |
 
 ## Détail des promesses larges `NON_READY`
-
-### `dossiers/devenir-manager-premiere-fois.html` — reconversion / trajectoire pro
-
-Promesse : **devenir manager pour la première fois : changer de métier sans devenir le goulot d’étranglement — contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| salarié | TRAITEE |
-| demandeur emploi | MANQUANTE |
-| public | MANQUANTE |
-| indépendant | MANQUANTE |
-| santé / inaptitude | MANQUANTE |
-| sans diplôme | MANQUANTE |
-| senior / âge | MANQUANTE |
-| revenu / runway | MANQUANTE |
 
 ### `dossiers/metiers-fonctions-organisation-entreprise.html` — reconversion / trajectoire pro
 
@@ -400,7 +384,7 @@ Pages détectées : **1**. Promesses larges `NON_READY` : **1**. Variantes le pl
 
 ### reconversion / trajectoire pro
 
-Pages détectées : **13**. Promesses larges `NON_READY` : **7**. Variantes le plus souvent non détectées : **public** (11), **senior / âge** (10), **indépendant** (8), **sans diplôme** (7), **santé / inaptitude** (4), **revenu / runway** (3).
+Pages détectées : **12**. Promesses larges `NON_READY` : **6**. Variantes le plus souvent non détectées : **public** (10), **senior / âge** (9), **indépendant** (7), **sans diplôme** (6), **santé / inaptitude** (3), **revenu / runway** (2).
 
 ### entrepreneuriat
 
