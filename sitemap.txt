@@ -144,6 +144,7 @@ https://contreevidence.github.io/outils.html
 https://contreevidence.github.io/parcours-achat-immobilier.html
 https://contreevidence.github.io/parcours-argent.html
 https://contreevidence.github.io/parcours-de-vie.html
+https://contreevidence.github.io/parcours-pilotage-professionnel.html
 https://contreevidence.github.io/parcours-temps-argent-liberte.html
 https://contreevidence.github.io/parcours-vie-professionnelle.html
 https://contreevidence.github.io/simulateur-80-pourcent-cout-reel.html
