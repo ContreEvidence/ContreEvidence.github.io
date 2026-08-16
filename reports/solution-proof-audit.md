@@ -7,7 +7,7 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **8**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **28**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **29**
 - S2 — possibilité générale à examiner : **12**
 - OK heuristique — condition ou preuve détectée : **143**
 
@@ -40,6 +40,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Intégrer la trajectoire professionnelle sans fabriquer un score arbitraire Le poste le plus confortable aujourd’hui peut réduire les options futures ; le poste moins payé peut au contraire apporter une compétence plus rare. _[fort enjeu, condition détectée]_
 ### `dossiers/audit-budget-60-minutes.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Les dépenses fixes dépassent ce qu’on peut supporter avec un revenu légèrement plus faible. _[fort enjeu, condition détectée]_
+### `dossiers/business-plan-utile.html`
+- **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — C’est celui qui organise la prochaine preuve, le prochain engagement, la condition qui arrête le projet et la substitution qui permet de tester autrement avant de brûler une option coûteuse. _[fort enjeu, preuve détectée]_
 ### `dossiers/competences-qualification-employabilite.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Pour choisir une formation, préparer une reconversion ou comprendre pourquoi une candidature bloque, il faut distinguer ce que vous savez faire, ce qui est officiellement reconnu, ce qui est demandé dans les offres et ce que vous pouvez réellement prouver. _[fort enjeu, preuve détectée]_
 ### `dossiers/creer-entreprise-avec-peu-argent.html`
