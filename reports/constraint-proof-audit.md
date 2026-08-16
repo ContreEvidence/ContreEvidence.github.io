@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **15**
 - P1 — affirmation forte à resserrer ou vérifier : **64**
-- P2 — nécessité à examiner : **149**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **865**
+- P2 — nécessité à examiner : **148**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **867**
 
 ## P0 — rouvrir en priorité
 
@@ -198,8 +198,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Le niveau de preuve doit donc correspondre à la décision que le gatekeeper doit prendre.
 ### `dossiers/audit-budget-60-minutes.html`
 - **nécessité à requalifier ou sourcer** — Votre projet change Recalibrez le budget : il doit servir l’objectif actuel, pas l’ancien.
-### `dossiers/audit-copropriete-avant-achat.html`
-- **nécessité à requalifier ou sourcer** — L’audit doit reconstituer l’économie de l’immeuble : dépenses courantes, travaux passés et futurs, impayés, trésorerie, gouvernance et quote-part de risque que vous achetez avec le logement.
 ### `dossiers/automatiser-ou-non-processus.html`
 - **nécessité à requalifier ou sourcer** — Avant « automatiser ou non » : la tâche doit-elle encore exister ? _[temporalité]_
 - **nécessité à requalifier ou sourcer** — C'est pourquoi le nombre réel d'exécutions doit être mesuré avant de choisir l'outil. _[temporalité]_
