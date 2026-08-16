@@ -6,12 +6,13 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **16**.
+Pages/familles détectées : **43**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **16**.
 
 ## Priorités de relecture
 
 | Priorité | Gate | Famille | Page | Variantes critiques non détectées |
 |---:|---|---|---|---|
+| 29 | NON_READY | couple / logement / séparation | `dossiers/acheter-logement-sans-se-fragiliser.html` | indivision directe, SCI, mariage, PACS |
 | 28 | NON_READY | couple / logement / séparation | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` | indivision directe, SCI, mariage, PACS |
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | salarié, santé / inaptitude, sans diplôme, revenu / runway |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/acheter-sans-vider-epargne.html` | SCI, mariage, PACS |
@@ -21,7 +22,6 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 | 14 | NON_READY | couple / logement / séparation | `dossiers/patrimoine-marge-de-manoeuvre.html` | mariage, PACS |
 | 14 | NON_READY | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 10 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/changer-travail-avant-credit-immobilier.html` | santé / inaptitude, sans diplôme |
-| 8 | NON_READY | achat immobilier / crédit | `dossiers/acheter-logement-sans-se-fragiliser.html` | CDD / temporaire |
 | 8 | NON_READY | achat immobilier / crédit | `dossiers/finances-residence-principale.html` | CDD / temporaire |
 | 8 | NON_READY | entrepreneuriat | `dossiers/formation-vaut-elle-le-cout.html` | micro / EI / société |
 | 8 | NON_READY | reconversion / trajectoire pro | `dossiers/trajectoire-professionnelle-selon-situation.html` | sans diplôme |
@@ -41,6 +41,7 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 | 1 | COVERED_OR_NARROW | investissement locatif | `dossiers/finances-investissement-locatif.html` | — |
 | 1 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/reconversion-sans-formation-longue.html` | — |
 | 1 | COVERED_OR_NARROW | travailler moins / qualité de vie | `dossiers/temps-energie-qualite-vie.html` | — |
+| 0 | COVERED_OR_NARROW | achat immobilier / crédit | `dossiers/acheter-logement-sans-se-fragiliser.html` | — |
 | 0 | COVERED_OR_NARROW | achat immobilier / crédit | `dossiers/acheter-sans-vider-epargne.html` | — |
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/audit-budget-60-minutes.html` | — |
 | 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/creer-entreprise-avec-peu-argent.html` | — |
@@ -56,6 +57,21 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 | 0 | COVERED_OR_NARROW | travailler moins / qualité de vie | `dossiers/travailler-moins-vivre-mieux.html` | — |
 
 ## Détail des promesses larges `NON_READY`
+
+### `dossiers/acheter-logement-sans-se-fragiliser.html` — couple / logement / séparation
+
+Promesse : **acheter un logement sans se fragiliser : apport, épargne et crédit | contre-évidence**
+
+| Variante | Signal automatique |
+|---|---|
+| indivision directe | MANQUANTE |
+| SCI | MANQUANTE |
+| mariage | MANQUANTE |
+| PACS | MANQUANTE |
+| concubinage | MANQUANTE |
+| tontine | MANQUANTE |
+| propriété ≠ financement | MENTIONNEE |
+| sorties multiples | TRAITEE |
 
 ### `dossiers/acheter-ou-louer-si-on-risque-demenager.html` — couple / logement / séparation
 
@@ -176,21 +192,6 @@ Promesse : **quitter son cdi avec un crédit : séquencer emploi, financement et
 | senior / âge | MANQUANTE |
 | revenu / runway | TRAITEE |
 
-### `dossiers/acheter-logement-sans-se-fragiliser.html` — achat immobilier / crédit
-
-Promesse : **acheter un logement sans se fragiliser : apport, épargne et crédit | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| achat seul / à deux | TRAITEE |
-| CDI / stabilité | TRAITEE |
-| CDD / temporaire | MANQUANTE |
-| indépendant | MENTIONNEE |
-| public | MANQUANTE |
-| mobilité / changement emploi | TRAITEE |
-| apport / liquidité | TRAITEE |
-| dette existante | MENTIONNEE |
-
 ### `dossiers/finances-residence-principale.html` — achat immobilier / crédit
 
 Promesse : **acheter ou louer sa résidence principale : durée, mobilité et coût de sortie | contre-évidence**
@@ -294,11 +295,11 @@ Promesse : **patrimoine et marge de manœuvre : combien de liberté vos actifs d
 
 ### couple / logement / séparation
 
-Pages détectées : **7**. Promesses larges `NON_READY` : **4**. Variantes le plus souvent non détectées : **tontine** (6), **PACS** (4), **concubinage** (4), **mariage** (4), **SCI** (3), **indivision directe** (2).
+Pages détectées : **8**. Promesses larges `NON_READY` : **5**. Variantes le plus souvent non détectées : **tontine** (7), **PACS** (5), **concubinage** (5), **mariage** (5), **SCI** (4), **indivision directe** (3).
 
 ### achat immobilier / crédit
 
-Pages détectées : **5**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **public** (4), **CDD / temporaire** (2), **indépendant** (2), **mobilité / changement emploi** (1).
+Pages détectées : **5**. Promesses larges `NON_READY` : **1**. Variantes le plus souvent non détectées : **public** (3), **indépendant** (2), **CDD / temporaire** (1), **mobilité / changement emploi** (1).
 
 ### investissement locatif
 
