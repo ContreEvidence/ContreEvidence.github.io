@@ -63,6 +63,18 @@
         links.appendChild(a);
       }
     }
+
+    if (path.endsWith('/parcours-vie-professionnelle.html') && !document.querySelector('[data-ce-pro-pilotage]')) {
+      const frame = document.querySelector('.pro-frame');
+      if (frame) {
+        const block = document.createElement('div');
+        block.className = 'start-here';
+        block.dataset.ceProPilotage = '1';
+        block.style.margin = '0 0 1.7rem';
+        block.innerHTML = `<div><div class="kicker">Suivre dans le temps</div><h2>Votre poste est une photo. Pilotez la trajectoire.</h2><p>Capital professionnel → preuves → test du marché → revue 30/90 jours : reliez les outils existants dans une boucle régulière plutôt que d’attendre la prochaine crise de carrière.</p></div><a class="btn btn-primary" href="parcours-pilotage-professionnel.html">Piloter ma trajectoire →</a>`;
+        frame.insertAdjacentElement('afterend', block);
+      }
+    }
   };
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run, {once:true});
