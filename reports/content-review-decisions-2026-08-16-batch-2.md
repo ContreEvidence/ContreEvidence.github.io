@@ -59,3 +59,13 @@ Ce fichier complète `reports/content-review-decisions.md`. Les scores automatiq
 - **Causalité :** une solution locale peut détériorer un autre système ; le bon pont de transition doit être viable même si plusieurs variables restent défavorables en même temps.
 - **Impact attendu :** stabiliser l’ensemble du foyer sans transformer un problème initial en chaîne de décisions forcées.
 - **Incertitude résiduelle :** toute dimension médicale, juridique ou sociale sensible doit être traitée avec le professionnel compétent ; ce dossier reste un cadre transversal de décision.
+
+## `articles/choisir-etf-mondial-debutant.html` — `REWRITE` + `VERIFY`
+
+- **Signal initial :** attente/statu quo, transfert de risque, renversement et optionnalité insuffisamment visibles.
+- **Lecture humaine :** confirmé. La page sélectionnait correctement un ETF mais commençait encore trop tard dans la chaîne de décision, une fois l’exposition actions presque supposée acquise.
+- **Correction :** fonction de la somme et horizon avant le produit ; diversification du patrimoine distincte de la diversification interne de l’indice ; liquidité et DIC ; risque précis de réplication synthétique ; attente motivée par un changement patrimonial distincte du market timing ; fractionnement de la décision ; conditions explicites de renversement.
+- **Causalité :** passer d’une action unique à un ETF mondial réduit le risque spécifique mais peut laisser le patrimoine fortement exposé aux actions ; une somme nécessaire à court terme peut être mal allouée même si l’ETF choisi est excellent.
+- **Preuve :** caractéristiques et composition du MSCI World revérifiées chez MSCI au 31/07/2026 ; horizon, diversification, risques ETF, liquidité et DIC revérifiés sur l’AMF.
+- **Impact attendu :** déplacer la question de « quel ticker ? » vers « quelle somme, quelle fonction, quel horizon, quelle exposition, puis quel véhicule ? ».
+- **Incertitude résiduelle :** allocation, enveloppe, fiscalité et capacité de perte restent spécifiques à l’investisseur ; aucun ETF particulier n’est recommandé.
