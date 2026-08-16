@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **20**.
+Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **19**.
 
 ## Priorités de relecture
 
@@ -16,12 +16,10 @@ Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses
 | 21 | NON_READY | couple / logement / séparation | `dossiers/acheter-sans-vider-epargne.html` | SCI, mariage, PACS |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | indivision directe, mariage, PACS |
 | 15 | NON_READY | reconversion / trajectoire pro | `dossiers/combien-epargne-avant-demissionner.html` | salarié, sans diplôme |
-| 15 | NON_READY | budget / dettes | `dossiers/creer-entreprise-avec-peu-argent.html` | déficit temporaire / structurel, dette / surendettement |
 | 15 | NON_READY | reconversion / trajectoire pro | `dossiers/decider-a-deux-travail-patrimoine.html` | demandeur emploi, sans diplôme |
 | 15 | NON_READY | budget / dettes | `dossiers/patrimoine-marge-de-manoeuvre.html` | revenu stable / variable, charges compressibles / non |
 | 14 | NON_READY | achat immobilier / crédit | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` | CDD / temporaire, indépendant |
 | 14 | NON_READY | entrepreneuriat | `dossiers/combien-chiffre-affaires-pour-vivre.html` | micro / EI / société, activité réglementée |
-| 14 | NON_READY | entrepreneuriat | `dossiers/creer-entreprise-avec-peu-argent.html` | micro / EI / société, activité réglementée |
 | 14 | NON_READY | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 10 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/changer-travail-avant-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 10 | NON_READY | couple / logement / séparation | `dossiers/decider-a-deux-travail-patrimoine.html` | SCI |
@@ -33,6 +31,7 @@ Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses
 | 8 | NON_READY | reconversion / trajectoire pro | `dossiers/trajectoire-professionnelle-selon-situation.html` | sans diplôme |
 | 7 | NON_READY | reconversion / trajectoire pro | `articles/competences-transferables.html` | revenu / runway |
 | 7 | NON_READY | entrepreneuriat | `dossiers/are-arce-acre-creation-entreprise.html` | activité réglementée |
+| 7 | NON_READY | budget / dettes | `dossiers/creer-entreprise-avec-peu-argent.html` | revenu stable / variable |
 | 5 | ROUTE_FIRST | achat immobilier / crédit | `dossiers/changer-travail-avant-credit-immobilier.html` | indépendant |
 | 5 | ROUTE_FIRST | achat immobilier / crédit | `dossiers/indivision-couple-separation-rachat-soulte.html` | indépendant |
 | 5 | ROUTE_FIRST | couple / logement / séparation | `dossiers/indivision-couple-separation-rachat-soulte.html` | SCI |
@@ -46,6 +45,7 @@ Pages/familles détectées : **41**. Pages `noindex` exclues : **79**. Promesses
 | 1 | COVERED_OR_NARROW | travailler moins / qualité de vie | `dossiers/temps-energie-qualite-vie.html` | — |
 | 0 | COVERED_OR_NARROW | achat immobilier / crédit | `dossiers/acheter-sans-vider-epargne.html` | — |
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/audit-budget-60-minutes.html` | — |
+| 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/creer-entreprise-avec-peu-argent.html` | — |
 | 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/creer-entreprise-sans-diplome.html` | — |
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | — |
 | 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/formation-vaut-elle-le-cout.html` | — |
@@ -116,19 +116,6 @@ Promesse : **combien d’épargne avant de démissionner ? calcul, runway et exe
 | senior / âge | MANQUANTE |
 | revenu / runway | TRAITEE |
 
-### `dossiers/creer-entreprise-avec-peu-argent.html` — budget / dettes
-
-Promesse : **créer une entreprise avec peu d’argent : budget de départ réaliste | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| déficit temporaire / structurel | MANQUANTE |
-| revenu stable / variable | MENTIONNEE |
-| solo / couple | TRAITEE |
-| logement propriétaire / locataire | MENTIONNEE |
-| dette / surendettement | MANQUANTE |
-| charges compressibles / non | TRAITEE |
-
 ### `dossiers/decider-a-deux-travail-patrimoine.html` — reconversion / trajectoire pro
 
 Promesse : **décider à deux : travail, mobilité et patrimoine sans fragiliser le foyer | contre-évidence**
@@ -185,20 +172,6 @@ Promesse : **combien de chiffre d’affaires faut-il pour en vivre ? | contre-é
 | TVA | MENTIONNEE |
 | financement / BFR | TRAITEE |
 | associés | MENTIONNEE |
-
-### `dossiers/creer-entreprise-avec-peu-argent.html` — entrepreneuriat
-
-Promesse : **créer une entreprise avec peu d’argent : budget de départ réaliste | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| activité principale / complément | TRAITEE |
-| micro / EI / société | MANQUANTE |
-| activité réglementée | MANQUANTE |
-| chômage / aides | TRAITEE |
-| TVA | MANQUANTE |
-| financement / BFR | TRAITEE |
-| associés | MANQUANTE |
 
 ### `dossiers/quitter-cdi-avec-credit-immobilier.html` — reconversion / trajectoire pro
 
@@ -349,6 +322,19 @@ Promesse : **are, arce, acre : choisir pour créer son entreprise en 2026 | cont
 | financement / BFR | TRAITEE |
 | associés | MANQUANTE |
 
+### `dossiers/creer-entreprise-avec-peu-argent.html` — budget / dettes
+
+Promesse : **créer une entreprise avec peu d’argent : budget de départ réaliste | contre-évidence**
+
+| Variante | Signal automatique |
+|---|---|
+| déficit temporaire / structurel | TRAITEE |
+| revenu stable / variable | MANQUANTE |
+| solo / couple | TRAITEE |
+| logement propriétaire / locataire | MENTIONNEE |
+| dette / surendettement | TRAITEE |
+| charges compressibles / non | TRAITEE |
+
 ## Lecture par famille
 
 ### couple / logement / séparation
@@ -373,11 +359,11 @@ Pages détectées : **12**. Promesses larges `NON_READY` : **6**. Variantes le p
 
 ### entrepreneuriat
 
-Pages détectées : **6**. Promesses larges `NON_READY` : **4**. Variantes le plus souvent non détectées : **TVA** (5), **associés** (5), **activité réglementée** (4), **micro / EI / société** (3).
+Pages détectées : **6**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **TVA** (4), **associés** (4), **activité réglementée** (3), **micro / EI / société** (2).
 
 ### budget / dettes
 
-Pages détectées : **6**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **logement propriétaire / locataire** (3), **charges compressibles / non** (1), **dette / surendettement** (1), **déficit temporaire / structurel** (1), **revenu stable / variable** (1).
+Pages détectées : **6**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **logement propriétaire / locataire** (3), **revenu stable / variable** (2), **charges compressibles / non** (1).
 
 ### travailler moins / qualité de vie
 
