@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **15**
-- P1 — affirmation forte à resserrer ou vérifier : **55**
+- P1 — affirmation forte à resserrer ou vérifier : **54**
 - P2 — nécessité à examiner : **146**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **672**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **677**
 
 ## P0 — rouvrir en priorité
 
@@ -117,8 +117,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sourcée mais formulation trop absolue** — Cas E — Candidature directe : la formation ne sert qu’à rassurer Offres analysées 30 Diplôme obligatoire 0 Diplôme « souhaité » 9 Expérience équivalente acceptée 21 Compétences transférables déjà prouvées fortes Ici, payer une formation longue avant d’avoir envoyé des candidatures ciblées serait prématuré. _[signal-source, temporalité]_
 ### `dossiers/regles-responsabilites-fautes-travail.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Le règlement intérieur, lorsqu’il est obligatoire et en vigueur, fixe notamment les règles générales et permanentes de discipline ainsi que la nature et l’échelle des sanctions. _[signal-source]_
-### `dossiers/sante-travail-equilibre-vie-pro-perso.html`
-- **fermeture forte sourcée mais formulation trop absolue** — Les signaux de non-soutenabilité à traiter tôt la récupération ne suffit plus entre deux journées ; les erreurs augmentent avec la fatigue ; les jours de repos servent uniquement à « récupérer pour repartir » ; les horaires réels dépassent durablement le cadre annoncé ; les priorités sont incompatibles sans arbitrage ; la santé ou la vie familiale obligent à contourner en permanence l’organisation ; la seule solution _[signal-source]_
 ### `dossiers/valeur-option-bien-immobilier.html`
 - **affirmation forte sans signal de source explicite** — Stress test : si l’option principale devient impossible Vous achetez 20 000 € plus cher un logement parce que vous pensez pouvoir le diviser. _[périmètre, temporalité]_
 ### `fiches-metiers/charge-recrutement-rh.html`
