@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **122**. Validations devenues caduques après modification : **0**.
+Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **121**. Validations devenues caduques après modification : **1**.
 
 ## Priorité humaine
 
@@ -16,7 +16,9 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 
 ## Validations devenues caduques
 
-Aucune.
+| Page | SHA relu | SHA courant |
+|---|---|---|
+| `articles/clients-interesses-personne-nachete.html` | `d1c27c49f015873e1efdb0b95230274d18688c46` | `36393db1ca7c359beb075a4b3fe0e25fa86ee8bb` |
 
 ## Pages validées humainement et inchangées
 
@@ -104,7 +106,6 @@ Aucune.
 - `dossiers/methode-analyse-complete.html` — 8/9 automatique — Question d’investissement, benchmark, fondamental, valorisation, technique, sizing, scénario adverse et condition d’invalidation déjà structurés.
 - `dossiers/metiers-accessibles-sans-diplome.html` — 8/9 automatique — Réécriture de référence : métiers classés par verrous réels, preuves, voies d’accès et conditions de substitution au diplôme déjà structurés.
 - `dossiers/inflation-comprendre-histoire-pouvoir-achat.html` — 8/9 automatique — Page explicative longue : mécanismes, histoire, rendement réel, dette et implications patrimoniales sont reliés ; sa fonction n’exige pas d’ajouter artificiellement un plan de décision générique.
-- `articles/clients-interesses-personne-nachete.html` — 9/9 automatique — Intérêt distingué de l’achat, entonnoir de conversion, hypothèses concurrentes, tests de paiement et critères de pivot déjà structurés.
 - `articles/competences-transferables.html` — 9/9 automatique — Compétence traduite par problème résolu, preuve, contexte cible et écart restant ; transfert testé plutôt que supposé.
 - `dossiers/passer-80-pourcent-cout-reel.html` — 9/9 automatique — Coût réel du temps libéré, impact sur marge du foyer, effets différés et réversibilité déjà traités lors de la revue antérieure.
 - `dossiers/depenses-recurrentes-abonnements-assurances.html` — 9/9 automatique — Coût annuel, doublons, besoin réel, renégociation/substitution/suppression et seuils de conservation déjà structurés.
@@ -231,7 +232,6 @@ Aucune.
 | 8/9 | 2320 | humaine ✓ | `dossiers/methode-analyse-complete.html` |
 | 8/9 | 2533 | humaine ✓ | `dossiers/metiers-accessibles-sans-diplome.html` |
 | 8/9 | 2722 | humaine ✓ | `dossiers/inflation-comprendre-histoire-pouvoir-achat.html` |
-| 9/9 | 1038 | humaine ✓ | `articles/clients-interesses-personne-nachete.html` |
 | 9/9 | 1188 | humaine ✓ | `articles/competences-transferables.html` |
 | 9/9 | 1193 | humaine ✓ | `dossiers/passer-80-pourcent-cout-reel.html` |
 | 9/9 | 1215 | humaine ✓ | `dossiers/depenses-recurrentes-abonnements-assurances.html` |
@@ -245,6 +245,7 @@ Aucune.
 | 9/9 | 1405 | humaine ✓ | `dossiers/devenir-manager-premiere-fois.html` |
 | 9/9 | 1419 | humaine ✓ | `dossiers/decider-a-deux-travail-patrimoine.html` |
 | 9/9 | 1439 | humaine ✓ | `dossiers/valeur-option-bien-immobilier.html` |
+| 9/9 | 1450 | à revoir après changement | `articles/clients-interesses-personne-nachete.html` |
 | 9/9 | 1469 | humaine ✓ | `dossiers/embaucher-ou-sous-traiter.html` |
 | 9/9 | 1474 | humaine ✓ | `articles/accepter-nimporte-quel-poste-retour-emploi.html` |
 | 9/9 | 1494 | humaine ✓ | `dossiers/quitter-emploi-stable-ou-rester.html` |
