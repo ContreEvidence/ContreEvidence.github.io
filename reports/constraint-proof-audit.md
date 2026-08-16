@@ -6,7 +6,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 ## Synthèse
 
-- P0 — fermeture forte sans preuve/périmètre suffisant : **15**
+- P0 — fermeture forte sans preuve/périmètre suffisant : **16**
 - P1 — affirmation forte à resserrer ou vérifier : **54**
 - P2 — nécessité à examiner : **146**
 - OK heuristique — source/périmètre détecté, fond restant à contrôler : **677**
@@ -32,6 +32,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sans signal de preuve ni périmètre clair** — Leur intérêt est d’empêcher le projet de devenir impossible à contredire. _[temporalité]_
 ### `dossiers/plan-30-jours-recherche-emploi.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Manquer un logiciel appris en trois jours n’est pas équivalent à manquer le permis obligatoire ou l’expérience réglementaire exigée.
+### `dossiers/tout-ca-pour-quoi-objectifs-besoins.html`
+- **fermeture forte sans signal de preuve ni périmètre clair** — Et l’optionnalité oblige à regarder ce qu’une décision rend ensuite difficile ou impossible.
 ### `fiches-metiers.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Accès Diplôme obligatoire, attendu ou contournable ?
 ### `methode-sources.html`
@@ -283,9 +285,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/temps-energie-qualite-vie.html`
 - **nécessité à requalifier ou sourcer** — Une décision réelle doit utiliser les heures effectivement récupérées et intégrer les coûts de travail évités.
 ### `dossiers/tout-ca-pour-quoi-objectifs-besoins.html`
-- **nécessité à requalifier ou sourcer** — Avant de comparer les stratégies, il faut savoir ce que l’on cherche réellement à obtenir — et ce que l’on refuse de sacrifier pour y arriver. _[temporalité]_
-- **nécessité à requalifier ou sourcer** — Il doit rendre visibles les conséquences des chemins possibles pour que chacun choisisse en fonction de ses objectifs réels.
-- **nécessité à requalifier ou sourcer** — Le protocole en sept étapes Écrire ce qui doit réellement changer.
+- **nécessité à requalifier ou sourcer** — Avant de comparer les stratégies, il faut savoir ce que l’on cherche réellement à obtenir, ce que l’on refuse de sacrifier et quelles options doivent rester ouvertes . _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Il doit rendre visibles les conséquences, les arbitrages et les conditions de renversement pour que chacun choisisse en fonction de ses objectifs réels.
+- **nécessité à requalifier ou sourcer** — Le protocole Écrire ce qui doit réellement changer.
 ### `dossiers/trajectoire-professionnelle-selon-situation.html`
 - **nécessité à requalifier ou sourcer** — C’est : qu’est-ce qui doit devenir plus solide ou plus libre dans ma situation au cours des 12 à 24 prochains mois ?
 ### `dossiers/trouver-premiers-clients.html`
