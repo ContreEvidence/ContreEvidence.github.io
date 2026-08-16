@@ -2,49 +2,56 @@
 
 Mise à jour : 16 août 2026
 
-## Correction de gouvernance
+## Gouvernance actuelle
 
-À compter de cette mise à jour, les réécritures substantielles d’un contenu publié sont soumises au **gate éditorial unitaire** défini dans `AGENTS.md`.
+Le mode de travail courant est **autonome** : l’utilisateur a explicitement demandé que les améliorations substantielles justifiées soient appliquées sans validation page par page, avec un compte rendu consolidé à la fin de la passe.
 
-Les mentions antérieures « revue humaine intégrale », « 122/122 validations humaines » et « reprise directe sans validation préalable » désignent désormais des **revues structurelles internes historiques**. Elles ne valent ni validation explicite de l’utilisateur, ni preuve d’absence d’angle mort.
-
-Le chantier de profondeur est donc rouvert sous le standard : structure + angles morts + validation éditoriale explicite.
+Les audits automatiques restent des détecteurs. Ils ne suffisent jamais, à eux seuls, à déclencher un ajout éditorial : chaque signal doit être interprété humainement et l’on ne modifie une page que si le changement améliore réellement le choix, le coût, le risque, la séquence, la preuve ou la couverture des situations.
 
 ## Statuts de décision
 
-- `VALIDE` : proposition explicitement approuvée par l’utilisateur ; elle peut être appliquée.
-- `APPLIQUEE` : proposition validée, déployée et auditée.
-- `REFUSE` : proposition rejetée ; contenu actuel conservé.
-- `A_REVOIR` : proposition à retravailler avant toute modification.
-- `PASSE` : proposition reportée.
-- `LEGACY_PRE_GATE` : modification ou revue antérieure au gate actuel ; ne vaut pas validation utilisateur.
+- `REWRITE` : angle mort ou variante d’audience matérielle trouvée et corrigée.
+- `ROUTE` : cas voisin reconnu et envoyé vers une ressource plus adaptée.
+- `PRESERVE` : alerte vérifiée, page volontairement conservée.
+- `VERIFY` : affirmation sensible revérifiée sur source primaire avant modification.
+- `DEFER` : hypothèse intéressante mais insuffisamment justifiée pour modifier le produit.
 
-## Décisions explicites sous le gate actuel
+## Campagne profondeur / angles morts — 16 août 2026
 
-_Aucune décision explicite enregistrée pour le moment._
+La revue de profondeur a ajouté une seconde couche au contrôle structurel historique : acteur/gatekeeper, substitution, séquence, fractionnement, statu quo, second ordre, transfert de risque, friction d’exécution, objectif réel, optionnalité et condition de renversement.
 
-## Travaux historiques — `LEGACY_PRE_GATE`
+Les décisions SHA-liées sont enregistrées dans `reports/corpus-blind-spot-human-review-2026-08-16.json` et les rapports associés.
 
-Les travaux ci-dessous ont été réalisés avant la restauration du gate actuel. Ils doivent être considérés comme des états de contenu à revisiter, pas comme des décisions définitivement approuvées :
+## Campagne couverture des situations — 16 août 2026
 
-- `dossiers/choisir-statut-micro-ei-eurl-sasu.html` — séparation forme juridique / micro / TVA ; trajectoire et seuils de bascule.
-- `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` — besoin de mobilité, coût complet, liquidité, sortie et stress tests.
-- `dossiers/location-nue-ou-meublee-comparer.html` — usage avant fiscalité, seuil économique, DPE, rotation et réversibilité.
-- `dossiers/gestion-pilotee-comparer-performances.html` — allocation / exécution / délégation, benchmark et règle de sortie.
-- `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` — poches de capital, prix du temps et expérimentation réversible.
-- `dossiers/prejuges-biais-monde-professionnel.html` — signal / gatekeeper / discrimination potentielle et substitution d’acteur.
-- `dossiers/automatiser-ou-non-processus.html` — supprimer → simplifier → standardiser → assister → automatiser ; rollback.
-- `articles/frais-fiscalite-rendement-net.html` — coût récurrent / coût ponctuel, point mort de migration et options perdues.
+Une nouvelle dimension est ouverte après constat qu’une page peut être profonde sur son cas central tout en étant trop étroite pour l’audience attirée par sa promesse.
 
-Les autres « validations humaines » stockées dans `reports/corpus-solution-human-review*.json` restent utilisables uniquement comme **mémoire de revue structurelle SHA-liée**.
+Règle : pour une promesse large, chaque variante matérielle doit être `TRAITEE`, `ROUTEE`, `HORS_PERIMETRE_EXPLICITE` ou identifiée `MANQUANTE`.
+
+Références :
+
+- `AUDIT-COUVERTURE-SITUATIONS.md`
+- `.github/workflows/audience-variant-coverage.yml`
+- `reports/audience-variant-coverage.md`
+
+### Première correction structurante
+
+- `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` — création d’un dossier SCI de référence couvrant propriété, parts, statuts, financement, responsabilité, IR/IS, location meublée, séparation, cession, retrait, décès, transmission et sortie. Motif : les promesses larges autour de « acheter à deux / se séparer / immobilier à plusieurs » attirent notamment des personnes en SCI qui ne doivent pas être envoyées mécaniquement vers les règles de l’indivision directe.
+
+## Travaux historiques
+
+Les anciens fichiers `reports/corpus-solution-human-review*.json` restent utilisables comme mémoire structurelle SHA-liée. Ils ne prouvent ni l’absence d’angle mort ni la couverture de toutes les variantes d’audience.
 
 ## Règle de travail
 
-Pour toute nouvelle proposition substantielle :
+Pour toute nouvelle campagne éditoriale :
 
-1. identifier le gain réel et l’angle mort ;
-2. présenter une seule carte de validation ;
-3. attendre `valide`, `refuse`, `à revoir` ou `passe` ;
-4. n’appliquer que la proposition validée ;
-5. enregistrer ici la décision et l’état de déploiement ;
-6. présenter ensuite la proposition suivante.
+1. identifier le gain réel ;
+2. relire le cas central ;
+3. tester les angles morts à l’intérieur du cas ;
+4. tester les variantes raisonnablement attirées par la promesse ;
+5. appliquer directement uniquement les corrections matériellement utiles ;
+6. privilégier le routage lorsque développer le cas voisin diluerait la page centrale ;
+7. vérifier les affirmations sensibles sur sources primaires à jour ;
+8. journaliser les réécritures, routages et conservations ;
+9. faire un compte rendu consolidé à l’utilisateur.
