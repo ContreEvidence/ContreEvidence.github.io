@@ -44,6 +44,16 @@ Les décisions SHA-liées sont enregistrées dans `reports/corpus-blind-spot-hum
 - **Impact lecteur attendu :** passer de « combien de CA ? » à « quel modèle économique rend ce revenu atteignable, répétable et refusable ? ».
 - **Incertitude résiduelle :** les exemples restent pédagogiques ; la fiscalité, les prélèvements, la TVA, les aides, les obligations de statut et les besoins du foyer sont propres au cas concret.
 
+#### `dossiers/capacite-refuser-travail-rentabilite.html` — `REWRITE` + `VERIFY`
+
+- **Signal initial :** priorité heuristique 16 après les deux corrections précédentes ; angles non détectés : acteur/gatekeeper, substitution, combinaison de leviers, attente/statu quo et condition de renversement.
+- **Lecture humaine :** signal partiellement confirmé. La page traitait déjà réellement la substitution (prix, délai, périmètre, délégation) et plusieurs conditions de renversement. Les gains matériels se situaient surtout dans la combinaison de leviers, l’identification de la source réelle de la contrainte et la valeur d’une réponse intermédiaire entre oui et non.
+- **Correction :** ajout de combinaisons prix + créneau/tournée, périmètre + délai et sous-traitance + liste d’attente ; identification du gatekeeper qui impose réellement prix, créneau ou organisation ; ajout de l’option « pas maintenant » avec report, démarrage ultérieur, périmètre réduit ou liste d’attente ; explicitation de la condition où attendre cesse d’avoir de la valeur.
+- **Causalité :** plusieurs petits leviers peuvent ensemble franchir un seuil de marge ou de capacité alors qu’aucun ne suffit seul. Identifier l’acteur qui impose la contrainte évite de négocier la mauvaise variable. Une liste d’attente préserve l’option commerciale sans consommer la capacité actuelle uniquement lorsqu’un état pertinent peut réellement changer.
+- **Preuve :** principes de fixation des prix et arbitrage embauche/externalisation revérifiés sur Bpifrance Création ; les exemples de combinaisons restent des scénarios économiques à tester, pas des promesses de réaction client.
+- **Impact lecteur attendu :** passer d’un arbitrage binaire accepter/refuser à une gestion de portefeuille de capacité : accepter maintenant, reconfigurer, reporter, mettre en attente ou refuser.
+- **Incertitude résiduelle :** élasticité au prix, tolérance au délai, qualité de sous-traitance, saisonnalité et pouvoir réel des différents interlocuteurs varient selon le marché et le contrat.
+
 ## Campagne couverture des situations — 16 août 2026
 
 Une nouvelle dimension est ouverte après constat qu’une page peut être profonde sur son cas central tout en étant trop étroite pour l’audience attirée par sa promesse.
