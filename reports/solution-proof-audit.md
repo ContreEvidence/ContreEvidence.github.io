@@ -7,9 +7,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **29**
-- S2 — possibilité générale à examiner : **13**
-- OK heuristique — condition ou preuve détectée : **153**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **30**
+- S2 — possibilité générale à examiner : **14**
+- OK heuristique — condition ou preuve détectée : **154**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -66,6 +66,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Le bon dossier CE distingue donc le calcul de niveau de vie, que vous pouvez faire immédiatement, de l’estimation de retraite, qui doit être vérifiée sur votre situation administrative. _[fort enjeu, preuve détectée]_
 ### `dossiers/puis-je-me-permettre-reconversion.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Réduire le coût sans abandonner l’objectif Levier Ce qu’il peut réduire Ce qu’il faut préserver Tester le métier avant formation risque de payer pour une mauvaise cible qualité du test réel VAE / reconnaissance d’acquis durée ou contenu à refaire adéquation avec le métier visé Formation courte ciblée prix et revenu sacrifié preuve réellement attendue par le marché Poste passerelle mois sans revenu progression vers la cible Temps partiel / préparation paral _[fort enjeu, condition détectée]_
+### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Quand commencer à utiliser devient rationnel le socle reste intact après la dépense ; les objectifs futurs importants restent robustes dans un scénario adverse ; la transmission voulue est déjà couverte ou n’est pas prioritaire ; le capital supplémentaire améliore peu la sécurité ; une contrainte importante peut être supprimée pour une fraction raisonnable du patrimoine ; l’usage est particulièrement dépendant du temps, de l’âge ou de la santé ; une versio _[fort enjeu, condition détectée]_
 ### `dossiers/rembourser-credit-ou-investir.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Exemple simplifié Un remboursement de 20 000 € permet d’économiser 3 200 € d’intérêts et 600 € d’assurance sur la durée restante, mais coûte 300 € de frais. _[fort enjeu, preuve détectée]_
 ### `dossiers/tout-ca-pour-quoi-objectifs-besoins.html`
@@ -102,6 +104,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité générale à vérifier ou resserrer** — Négocier ne consiste pas à demander davantage « parce qu’on le mérite » Une négociation robuste repose sur trois éléments : le périmètre réel du poste, la valeur que vous pouvez rendre crédible et vos alternatives.
 ### `dossiers/previsionnel-activite-12-mois.html`
 - **possibilité générale à vérifier ou resserrer** — Stress tests : une variable, puis des combinaisons réalistes Changer une variable à la fois permet d’identifier la sensibilité.
+### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
+- **possibilité générale à vérifier ou resserrer** — Cette séparation permet de profiter du patrimoine sans traiter tout le capital comme consommable.
 ### `index.html`
 - **possibilité générale à vérifier ou resserrer** — Vous pouvez arriver ici sans savoir exactement ce qui ne va pas, avec une décision difficile à prendre, ou avec un objectif déjà clair.
 ### `outil-microscope-pea.html`
