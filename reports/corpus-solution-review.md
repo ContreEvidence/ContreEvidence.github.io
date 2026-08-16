@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **36**. Validations devenues caduques après modification : **0**.
+Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **42**. Validations devenues caduques après modification : **0**.
 
 ## Priorité humaine
 
@@ -52,6 +52,12 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/patrimoine-selon-age-construire-utiliser.html` — 7/9 automatique — Âge traité comme proxy d’événements et d’horizons, transitions de phase, exceptions et conditions d’inversion déjà explicites.
 - `dossiers/demenager-pour-un-emploi-salaire-minimum.html` — 7/9 automatique — Salaire net de bascule, coûts de transition, prix du temps, aides conditionnelles et valeur d’option de la mobilité déjà traités.
 - `dossiers/quand-vie-change-sante-separation-revenu.html` — 8/9 automatique — Stabilisation, période tampon, réversibilité, séquence 30 jours et stress test déjà structurés.
+- `dossiers/etude-marche-terrain.html` — 8/9 automatique — Preuve payante, marché accessible, CAC/LTV, saisonnalité, test terrain et critères de pivot/abandon déjà explicites.
+- `dossiers/business-plan-utile.html` — 8/9 automatique — Capacité, BFR, trois scénarios, trajectoire à trois ans et critères explicites d’abandon rendent le plan falsifiable.
+- `dossiers/protocole-verifier-reponse-ia.html` — 8/9 automatique — Hiérarchie de preuve, temporalité, contre-preuve, hypothèse d’inversion et seuil d’arrêt de vérification déjà structurés.
+- `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` — 8/9 automatique — Besoin/objectifs/moyens séparés, non-négociables, options concurrentes, scénario adverse et seuil de changement déjà structurés.
+- `dossiers/prix-attendre-finances.html` — 8/9 automatique — Coûts certains versus opportunité, cas où attendre protège, scénario symétrique d’action trop rapide et seuil de décision déjà présents.
+- `dossiers/prejuges-biais-monde-professionnel.html` — 9/9 automatique — Réécriture du 16/08 : diagnostic signal/gatekeeper/discrimination, test causal, substitution d’acteur et seuil de sortie du registre de persuasion.
 
 ## Corpus complet
 
@@ -94,10 +100,10 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 7/9 | 2401 | humaine ✓ | `dossiers/demenager-pour-un-emploi-salaire-minimum.html` |
 | 8/9 | 693 | humaine ✓ | `dossiers/quand-vie-change-sante-separation-revenu.html` |
 | 8/9 | 1008 | heuristique | `dossiers/immobilier-allocation-globale-patrimoine.html` |
-| 8/9 | 1074 | heuristique | `dossiers/etude-marche-terrain.html` |
+| 8/9 | 1074 | humaine ✓ | `dossiers/etude-marche-terrain.html` |
 | 8/9 | 1077 | heuristique | `dossiers/reconversion-sans-perte-salaire.html` |
 | 8/9 | 1090 | heuristique | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` |
-| 8/9 | 1116 | heuristique | `dossiers/business-plan-utile.html` |
+| 8/9 | 1116 | humaine ✓ | `dossiers/business-plan-utile.html` |
 | 8/9 | 1164 | heuristique | `dossiers/automatiser-ou-non-processus.html` |
 | 8/9 | 1170 | heuristique | `articles/sans-diplome-chemins-alternatifs.html` |
 | 8/9 | 1185 | heuristique | `dossiers/acheter-logement-sans-se-fragiliser.html` |
@@ -105,9 +111,9 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1194 | heuristique | `dossiers/comparer-strategies-immobilieres.html` |
 | 8/9 | 1201 | heuristique | `dossiers/are-arce-acre-creation-entreprise.html` |
 | 8/9 | 1208 | heuristique | `dossiers/metiers-fonctions-organisation-entreprise.html` |
-| 8/9 | 1227 | heuristique | `dossiers/protocole-verifier-reponse-ia.html` |
+| 8/9 | 1227 | humaine ✓ | `dossiers/protocole-verifier-reponse-ia.html` |
 | 8/9 | 1229 | heuristique | `dossiers/previsionnel-activite-12-mois.html` |
-| 8/9 | 1229 | heuristique | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` |
+| 8/9 | 1229 | humaine ✓ | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` |
 | 8/9 | 1280 | heuristique | `articles/frais-fiscalite-rendement-net.html` |
 | 8/9 | 1281 | heuristique | `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
 | 8/9 | 1286 | heuristique | `dossiers/reconversion-sans-formation-longue.html` |
@@ -120,7 +126,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1360 | heuristique | `dossiers/quitter-travail-reconversion-sans-se-fragiliser.html` |
 | 8/9 | 1364 | heuristique | `articles/premiere-chance-sans-experience.html` |
 | 8/9 | 1369 | heuristique | `dossiers/management-relations-conflits.html` |
-| 8/9 | 1390 | heuristique | `dossiers/prix-attendre-finances.html` |
+| 8/9 | 1390 | humaine ✓ | `dossiers/prix-attendre-finances.html` |
 | 8/9 | 1405 | heuristique | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` |
 | 8/9 | 1410 | heuristique | `dossiers/combien-epargne-avant-demissionner.html` |
 | 8/9 | 1411 | heuristique | `dossiers/piloter-patrimoine-selon-taille.html` |
@@ -166,7 +172,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1707 | heuristique | `dossiers/ameliorer-processus-sans-degrader-service.html` |
 | 9/9 | 1760 | heuristique | `articles/travailler-beaucoup-gagner-peu-prix.html` |
 | 9/9 | 1777 | heuristique | `dossiers/calculer-prix-minimum-rentable.html` |
-| 9/9 | 1791 | heuristique | `dossiers/prejuges-biais-monde-professionnel.html` |
+| 9/9 | 1791 | humaine ✓ | `dossiers/prejuges-biais-monde-professionnel.html` |
 | 9/9 | 1894 | heuristique | `dossiers/finances-enveloppes-fiscalite.html` |
 | 9/9 | 1923 | heuristique | `dossiers/couple-famille-argent-temps.html` |
 | 9/9 | 1995 | heuristique | `dossiers/formation-vaut-elle-le-cout.html` |
