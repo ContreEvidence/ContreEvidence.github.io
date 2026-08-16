@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **110**. Validations devenues caduques après modification : **13**.
+Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humaines actives : **109**. Validations devenues caduques après modification : **14**.
 
 ## Priorité humaine
 
@@ -19,6 +19,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | Page | SHA relu | SHA courant |
 |---|---|---|
 | `dossiers/business-plan-utile.html` | `e905253a4ba67437152d5227dcdd9dd464886d32` | `d67ecb168823cccfc96f3a853f21e902602d46bb` |
+| `dossiers/apprendre-developper-competences.html` | `487f02e927355afd164e889a7c53b7d4e0e6ff65` | `3272d614977166149cab861080f1216a5458a5c2` |
 | `dossiers/capacite-refuser-travail-rentabilite.html` | `aace252f32a1faf81cf6e0a4665e9b60e694129e` | `91ebe0bb0dc7e77c7a5a042210a2f54a7e04570e` |
 | `dossiers/previsionnel-activite-12-mois.html` | `ec3ebe88a9923f6802788dd5fb1a65c113e220ae` | `f35cb5ed9159e68ac5caa6ea95ae5742ab5b7b8e` |
 | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` | `f1faf0bbb75b36b784e38e370c13eb49654a622f` | `cd3b8d01fbf0c7fffab2c109fcca1a2b0ecbae7b` |
@@ -45,7 +46,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 - `articles/50-candidatures-zero-reponse.html` — 7/9 automatique — Localisation de la rupture, séries comparables, tests A/B, scénarios de diagnostic et règles de changement de stratégie déjà explicites.
 - `dossiers/rembourser-credit-ou-investir.html` — 7/9 automatique — Rendement certain de la dette versus rendement incertain, liquidité, dette globale, scénarios 100/0-hybride et règle de décision déjà traités.
 - `articles/choisir-etf-mondial-debutant.html` — 7/9 automatique — Exposition avant produit, concentration, chevauchement, enveloppe, risque et séquence de sélection déjà structurés pour une page de choix d’ETF.
-- `dossiers/apprendre-developper-competences.html` — 7/9 automatique — Situation cible, modalités alternatives, autonomie progressive, stress test, seuil de formation et condition d’inversion déjà structurés.
 - `dossiers/decision-plan-30-90-jours.html` — 7/9 automatique — Revue angles morts : dépendances externes, contrôle/influence/dépendance, voie parallèle, attente bornée et séquence de préservation d’option ajoutées.
 - `dossiers/patrimoine-permet-il-travailler-moins.html` — 7/9 automatique — Coût net du temps libéré, runway, trois seuils de liberté, stress test et réversibilité déjà structurés.
 - `dossiers/competences-qualification-employabilite.html` — 7/9 automatique — Séparation compétence/qualification/preuve, verrou légal versus recrutement, test sur 30 offres et voies alternatives déjà structurés.
@@ -160,7 +160,6 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 7/9 | 1157 | humaine ✓ | `articles/50-candidatures-zero-reponse.html` |
 | 7/9 | 1244 | humaine ✓ | `dossiers/rembourser-credit-ou-investir.html` |
 | 7/9 | 1247 | humaine ✓ | `articles/choisir-etf-mondial-debutant.html` |
-| 7/9 | 1248 | humaine ✓ | `dossiers/apprendre-developper-competences.html` |
 | 7/9 | 1253 | humaine ✓ | `dossiers/decision-plan-30-90-jours.html` |
 | 7/9 | 1270 | humaine ✓ | `dossiers/patrimoine-permet-il-travailler-moins.html` |
 | 7/9 | 1285 | humaine ✓ | `dossiers/competences-qualification-employabilite.html` |
@@ -213,6 +212,7 @@ Pages analysées : **124**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1599 | humaine ✓ | `dossiers/comparer-deux-offres-emploi.html` |
 | 8/9 | 1690 | à revoir après changement | `dossiers/business-plan-utile.html` |
 | 8/9 | 1712 | humaine ✓ | `articles/frais-fiscalite-rendement-net.html` |
+| 8/9 | 1714 | à revoir après changement | `dossiers/apprendre-developper-competences.html` |
 | 8/9 | 1754 | humaine ✓ | `dossiers/location-courte-duree-meuble-tourisme.html` |
 | 8/9 | 1771 | à revoir après changement | `dossiers/capacite-refuser-travail-rentabilite.html` |
 | 8/9 | 1788 | humaine ✓ | `dossiers/finances-allocation-portefeuille.html` |
