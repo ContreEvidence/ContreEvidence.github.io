@@ -7,9 +7,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **8**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **28**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **27**
 - S2 — possibilité générale à examiner : **12**
-- OK heuristique — condition ou preuve détectée : **144**
+- OK heuristique — condition ou preuve détectée : **143**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -68,8 +68,6 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Dette restante 20 000 € Liquidités 25 000 € Dépenses essentielles 2 000 €/mois Projet professionnel à 6 mois Oui Rembourser immédiatement peut réduire les intérêts, mais ferait tomber la réserve à 5 000 €, soit seulement 2,5 mois de dépenses essentielles avant même la transition. _[fort enjeu, condition détectée]_
 ### `dossiers/puis-je-me-permettre-reconversion.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Réduire le coût sans abandonner l’objectif Levier Ce qu’il peut réduire Ce qu’il faut préserver Tester le métier avant formation risque de payer pour une mauvaise cible qualité du test réel VAE / reconnaissance d’acquis durée ou contenu à refaire adéquation avec le métier visé Formation courte ciblée prix et revenu sacrifié preuve réellement attendue par le marché Poste passerelle mois sans revenu progression vers la cible Temps partiel / préparation paral _[fort enjeu, condition détectée]_
-### `dossiers/reconversion-sans-perte-salaire.html`
-- **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — La structure du foyer détermine combien de transition vous pouvez acheter. _[fort enjeu, preuve détectée]_
 ### `dossiers/rembourser-credit-ou-investir.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Exemple simplifié Un remboursement de 20 000 € permet d’économiser 3 200 € d’intérêts et 600 € d’assurance sur la durée restante, mais coûte 300 € de frais. _[fort enjeu, preuve détectée]_
 ### `dossiers/tout-ca-pour-quoi-objectifs-besoins.html`
