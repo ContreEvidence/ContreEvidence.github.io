@@ -6,10 +6,10 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 ## Synthèse
 
-- P0 — fermeture forte sans preuve/périmètre suffisant : **14**
+- P0 — fermeture forte sans preuve/périmètre suffisant : **15**
 - P1 — affirmation forte à resserrer ou vérifier : **53**
 - P2 — nécessité à examiner : **139**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **689**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **693**
 
 ## P0 — rouvrir en priorité
 
@@ -29,6 +29,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sans signal de preuve ni périmètre clair** — Leur intérêt est d’empêcher le projet de devenir impossible à contredire. _[temporalité]_
 ### `dossiers/plan-30-jours-recherche-emploi.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Manquer un logiciel appris en trois jours n’est pas équivalent à manquer le permis obligatoire ou l’expérience réglementaire exigée.
+### `dossiers/quand-vie-change-sante-separation-revenu.html`
+- **fermeture forte sans signal de preuve ni périmètre clair** — Accepter un emploi de transition ses contraintes rendent impossible le rôle d’aidant ou la santé actuelle. _[temporalité]_
 ### `dossiers/tout-ca-pour-quoi-objectifs-besoins.html`
 - **fermeture forte sans signal de preuve ni périmètre clair** — Et l’optionnalité oblige à regarder ce qu’une décision rend ensuite difficile ou impossible.
 ### `fiches-metiers.html`
@@ -265,8 +267,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
 - **nécessité à requalifier ou sourcer** — La revue annuelle « construire / protéger / utiliser » Qu’est-ce qui doit encore être construit ?
 ### `dossiers/quand-vie-change-sante-separation-revenu.html`
-- **nécessité à requalifier ou sourcer** — Il faut rendre visible le transfert de temps et de capacité au sein du foyer.
-- **nécessité à requalifier ou sourcer** — Quand la vie change brutalement : santé, séparation, revenu | Contre-Évidence Aller au contenu CONTRE-ÉVIDENCE Patrimoine Vie professionnelle Fenêtres Outils Bibliothèque Mon espace Quand trois variables changent en même temps, il faut d’abord éviter qu’une mauvaise décision en crée une quatrième.
+- **nécessité à requalifier ou sourcer** — Ce qui doit faire renverser une décision provisoire Décision provisoire Signal de renversement Conserver le logement le coût mensuel rend le runway trop court ou aucune issue durable n’apparaît. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Quand la vie change brutalement : santé, séparation, revenu | Contre-Évidence Aller au contenu CONTRE-ÉVIDENCE Patrimoine Vie professionnelle Fenêtres Outils Bibliothèque Mon espace Quand trois variables changent en même temps, il faut d’abord éviter qu’une mauvaise décision en crée une quatrième — ou qu’une solution apparente transfère tout le risque sur la personne la plus fragile.
 ### `dossiers/temps-energie-qualite-vie.html`
 - **nécessité à requalifier ou sourcer** — Une décision réelle doit utiliser les heures effectivement récupérées et intégrer les coûts de travail évités.
 ### `dossiers/tout-ca-pour-quoi-objectifs-besoins.html`
