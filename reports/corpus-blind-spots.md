@@ -25,7 +25,7 @@ Pages indexables analysées : **125**. Pages `noindex` exclues : **79**.
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/experience-devient-risque-recruteur.html` | acteur/gatekeeper, substitution, condition de renversement |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/plan-30-jours-recherche-emploi.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen |
 | 9 | 9/15 | emploi / carrière / qualification | `articles/premiere-chance-sans-experience.html` | acteur/gatekeeper, objectif réel / substitution du moyen, asymétrie de preuve |
-| 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/audit-budget-60-minutes.html` | effets de second ordre, transfert de risque, valeur d’option / irréversibilité |
+| 9 | 9/15 | immobilier / crédit / indivision | `dossiers/audit-budget-60-minutes.html` | acteur/gatekeeper, fenêtre temporelle, condition de renversement |
 | 9 | 9/15 | immobilier / crédit / indivision | `dossiers/audit-copropriete-avant-achat.html` | acteur/gatekeeper, valeur d’option / irréversibilité, condition de renversement |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/automatiser-ou-non-processus.html` | attendre / statu quo, transfert de risque, hétérogénéité / cas local |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/classes-actifs-allocation-patrimoine.html` | attendre / statu quo, transfert de risque, condition de renversement |
@@ -75,11 +75,11 @@ Pages : **24**. Angles le plus souvent non détectés : **valeur d’option / ir
 
 ### immobilier / crédit / indivision
 
-Pages : **24**. Angles le plus souvent non détectés : **objectif réel / substitution du moyen** (18), **acteur/gatekeeper** (14), **substitution** (14), **transfert de risque** (14), **condition de renversement** (12), **attendre / statu quo** (10), **effets de second ordre** (8).
+Pages : **25**. Angles le plus souvent non détectés : **objectif réel / substitution du moyen** (19), **acteur/gatekeeper** (15), **substitution** (15), **transfert de risque** (14), **condition de renversement** (13), **attendre / statu quo** (11), **effets de second ordre** (8).
 
 ### patrimoine / investissement / retraite
 
-Pages : **37**. Angles le plus souvent non détectés : **substitution** (29), **condition de renversement** (24), **objectif réel / substitution du moyen** (23), **transfert de risque** (23), **acteur/gatekeeper** (16), **attendre / statu quo** (16), **valeur d’option / irréversibilité** (8).
+Pages : **36**. Angles le plus souvent non détectés : **substitution** (28), **condition de renversement** (24), **objectif réel / substitution du moyen** (22), **transfert de risque** (22), **attendre / statu quo** (16), **acteur/gatekeeper** (15), **valeur d’option / irréversibilité** (7).
 
 ## Règle de reprise éditoriale
 
