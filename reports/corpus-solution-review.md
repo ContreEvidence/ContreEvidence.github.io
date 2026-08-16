@@ -19,6 +19,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | Page | SHA relu | SHA courant |
 |---|---|---|
 | `dossiers/indivision-loyers-charges-comptes.html` | `17a2f1637380da7fdce685ccf909e3eeb3d5523a` | `58e167161f9837e65d22f8c8ead933f1bada5b48` |
+| `dossiers/acheter-ou-louer-si-on-risque-demenager.html` | `d6585d192caf10f10a45195559ae0365fe70cf46` | `6498bf43d1796b83e5483f73c202074032ce1dc7` |
 | `dossiers/metiers-fonctions-organisation-entreprise.html` | `b9100c518af815d5e3d410b6184e23e03d065471` | `d1ad766d8bb16ec3e4e166eea84be714d760711e` |
 | `dossiers/regles-responsabilites-fautes-travail.html` | `8d0c5f5cbcba540922996705b1dcc2807513c62a` | `8f9d6c7b057be2b49e71ea8f00fe98100b352ca5` |
 | `dossiers/acheter-logement-sans-se-fragiliser.html` | `917027c5225fc0464db739ffa51972e38f4655f6` | `6c7f375c0b74b45666efb0fbff2aac1f530c03ba` |
@@ -56,7 +57,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/reconversion-sans-perte-salaire.html` | `128613ebf08c799823434c76e96f628ec6102a5a` | `a3bf47dce0da390a93742f2dcbac9dc557d188e8` |
 | `dossiers/patrimoine-permet-il-travailler-moins.html` | `c006f7a8de0d55c219f89748ad39053e8afecbec` | `343adf2f660396f9265ddab15531d93005090ae6` |
 | `dossiers/sante-travail-equilibre-vie-pro-perso.html` | `9075afe1528f2f4c763aa2ee6146d95a22ade56b` | `e0c5f4d97e9b96ce87e1cf00e611cddcbe349312` |
-| `dossiers/acheter-ou-louer-si-on-risque-demenager.html` | `d6585d192caf10f10a45195559ae0365fe70cf46` | `9e3bcce1f00d8ddcb3a79f70e80180f6a6a42009` |
 | `dossiers/travailler-moins-vivre-mieux.html` | `eb67bcfbe9b9b1bdaf4c4e402946defb38068247` | `a36678cca70ced0efdd0b0b48e961df0b67e870c` |
 | `articles/retrouver-emploi-apres-interruption.html` | `abbaae628730e9314acfe90444f7185a18cf1072` | `184c63bafd29cadff71972e8e8dba04dbd97122a` |
 | `articles/checklist-avant-placement-conseiller.html` | `f0a354fedc6ee6b64f0235804b495c6a4701a872` | `561b9eb3d62a2ba88f0b48c12b4c1b36fe54d5a7` |
@@ -159,6 +159,7 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 7/9 | 1462 | humaine ✓ | `dossiers/cout-complet-achat-immobilier.html` |
 | 7/9 | 1463 | humaine ✓ | `dossiers/classes-actifs-allocation-patrimoine.html` |
 | 7/9 | 1486 | humaine ✓ | `dossiers/location-nue-ou-meublee-comparer.html` |
+| 7/9 | 1536 | à revoir après changement | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` |
 | 7/9 | 1546 | humaine ✓ | `dossiers/debloquer-demarche-administrative.html` |
 | 7/9 | 1578 | humaine ✓ | `dossiers/patrimoine-selon-age-construire-utiliser.html` |
 | 7/9 | 1726 | à revoir après changement | `dossiers/metiers-fonctions-organisation-entreprise.html` |
@@ -243,7 +244,6 @@ Pages analysées : **125**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1893 | à revoir après changement | `dossiers/patrimoine-permet-il-travailler-moins.html` |
 | 9/9 | 1894 | humaine ✓ | `dossiers/finances-enveloppes-fiscalite.html` |
 | 9/9 | 1901 | à revoir après changement | `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
-| 9/9 | 1911 | à revoir après changement | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` |
 | 9/9 | 1919 | à revoir après changement | `dossiers/travailler-moins-vivre-mieux.html` |
 | 9/9 | 1923 | humaine ✓ | `dossiers/couple-famille-argent-temps.html` |
 | 9/9 | 1944 | à revoir après changement | `articles/retrouver-emploi-apres-interruption.html` |
