@@ -9,7 +9,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
 - P1 — affirmation forte à resserrer ou vérifier : **67**
 - P2 — nécessité à examiner : **153**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **872**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **879**
 
 ## P0 — rouvrir en priorité
 
@@ -76,7 +76,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sourcée mais formulation trop absolue** — Le salarié privé doit auditer trois étages avant d'acheter une protection en plus Régime obligatoire : Assurance Maladie et autres protections légales. _[signal-source, temporalité]_
 - **fermeture forte sourcée mais formulation trop absolue** — Pour un locataire, l'assurance des risques locatifs est obligatoire ; en copropriété, le propriétaire doit au minimum être couvert pour sa responsabilité civile. _[signal-source]_
 ### `dossiers/comparer-deux-offres-emploi.html`
-- **affirmation forte sans signal de source explicite** — Une offre notée 86/100 reste mauvaise si elle viole votre seule contrainte absolue : revenu sous le plancher du foyer, horaires incompatibles, mobilité impossible, risque santé, trajet intenable ou clause contractuelle inacceptable. _[périmètre, temporalité]_
+- **affirmation forte sans signal de source explicite** — Une offre notée 90/100 reste mauvaise si elle viole votre seule contrainte absolue : revenu sous le plancher du foyer, horaires incompatibles, mobilité impossible, risque de santé, trajet intenable ou responsabilité que vous ne voulez plus exercer. _[périmètre, temporalité]_
 ### `dossiers/competences-qualification-employabilite.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Cas n°1 — Très expérimenté, diplôme absent Offres analysées 30 Diplôme obligatoire 4 Diplôme ou expérience équivalente 18 Aucune exigence formelle 8 Expérience pertinente 10 ans Le candidat ne doit pas conclure « sans diplôme, impossible ». _[signal-source, temporalité]_
 - **fermeture forte sourcée mais formulation trop absolue** — Classer chaque exigence : obligatoire, souhaitée, négociable. _[signal-source]_
