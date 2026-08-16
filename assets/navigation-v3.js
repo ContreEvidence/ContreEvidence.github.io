@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VERSION = '20260816-product-map-2';
+  const VERSION = '20260816-product-map-3';
   if (document.documentElement.dataset.ceNavigation === VERSION) return;
   document.documentElement.dataset.ceNavigation = VERSION;
 
@@ -41,7 +41,7 @@
   let current = isTools ? 'outils'
     : path.includes('/hors-cadre') ? 'hors-cadre'
     : path.includes('/themes/argent') || path.includes('/parcours-argent') || path.includes('/parcours-achat-immobilier') || path.includes('/marches-analyses-avancees') || path.includes('/dossiers/finances-') || path.includes('/dossiers/audit-budget') || path.includes('/dossiers/liquidites-reserve') || path.includes('/dossiers/rembourser-credit') || path.includes('/dossiers/assurer-ou-autoassurer') || path.includes('/dossiers/vendre-ou-conserver-bien-immobilier') || path.includes('/dossiers/immobilier-') || path.includes('/dossiers/location-') || path.includes('/dossiers/garages-') || path.includes('/dossiers/classes-actifs') ? 'patrimoine'
-    : path.includes('/fiches-metiers') || path.includes('/parcours-vie-professionnelle') || path.includes('/parcours-temps-argent-liberte') || path.includes('/themes/travail') || path.includes('/themes/entreprendre') || path.includes('/moins-de-25-ans') || path.includes('/videos') || path.includes('/dossiers/plan-30-jours') || path.includes('/dossiers/calculer-prix') || path.includes('/dossiers/debloquer') || path.includes('/dossiers/negocier-salaire') || path.includes('/dossiers/dependance-gros-client') || path.includes('/dossiers/tresorerie-bfr') || path.includes('/dossiers/devenir-manager') || path.includes('/dossiers/competent-mais-invisible') || path.includes('/dossiers/capacite-refuser-travail') || path.includes('/dossiers/formation-vaut-elle-le-cout') || path.includes('/dossiers/quitter-emploi-stable') || path.includes('/dossiers/embaucher-ou-sous-traiter') || path.includes('/dossiers/competences-qualification-employabilite') || path.includes('/dossiers/metiers-fonctions-organisation-entreprise') || path.includes('/dossiers/apprendre-developper-competences') || path.includes('/dossiers/management-relations-conflits') || path.includes('/dossiers/regles-responsabilites-fautes-travail') || path.includes('/dossiers/prejuges-biais-monde-professionnel') || path.includes('/dossiers/sante-travail-equilibre-vie-pro-perso') ? 'vie-pro'
+    : path.includes('/fiches-metiers') || path.includes('/parcours-vie-professionnelle') || path.includes('/parcours-pilotage-professionnel') || path.includes('/parcours-temps-argent-liberte') || path.includes('/themes/travail') || path.includes('/themes/entreprendre') || path.includes('/moins-de-25-ans') || path.includes('/videos') || path.includes('/dossiers/plan-30-jours') || path.includes('/dossiers/calculer-prix') || path.includes('/dossiers/debloquer') || path.includes('/dossiers/negocier-salaire') || path.includes('/dossiers/dependance-gros-client') || path.includes('/dossiers/tresorerie-bfr') || path.includes('/dossiers/devenir-manager') || path.includes('/dossiers/competent-mais-invisible') || path.includes('/dossiers/capacite-refuser-travail') || path.includes('/dossiers/formation-vaut-elle-le-cout') || path.includes('/dossiers/quitter-emploi-stable') || path.includes('/dossiers/embaucher-ou-sous-traiter') || path.includes('/dossiers/competences-qualification-employabilite') || path.includes('/dossiers/metiers-fonctions-organisation-entreprise') || path.includes('/dossiers/apprendre-developper-competences') || path.includes('/dossiers/management-relations-conflits') || path.includes('/dossiers/regles-responsabilites-fautes-travail') || path.includes('/dossiers/prejuges-biais-monde-professionnel') || path.includes('/dossiers/sante-travail-equilibre-vie-pro-perso') ? 'vie-pro'
     : '';
 
   if (!current) {
@@ -89,9 +89,14 @@
   }
 
   const integrations = document.createElement('script');
-  integrations.src = u('assets/cartography-integrations.js?v=20260816-1');
+  integrations.src = u('assets/cartography-integrations.js?v=20260816-3');
   integrations.defer = true;
   document.body.appendChild(integrations);
+
+  const handoff = document.createElement('script');
+  handoff.src = u('assets/tool-handoff.js?v=20260816-1');
+  handoff.defer = true;
+  document.body.appendChild(handoff);
 
   if (/\/(simulateur|outil)[^/]*\.html$/i.test(path)) {
     const script = document.createElement('script');
