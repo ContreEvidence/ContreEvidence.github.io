@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **43**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **15**.
+Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **14**.
 
 ## Priorités de relecture
 
@@ -23,7 +23,6 @@ Pages/familles détectées : **43**. Pages `noindex` exclues : **79**. Promesses
 | 14 | NON_READY | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 10 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/changer-travail-avant-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 8 | NON_READY | entrepreneuriat | `dossiers/formation-vaut-elle-le-cout.html` | micro / EI / société |
-| 8 | NON_READY | reconversion / trajectoire pro | `dossiers/trajectoire-professionnelle-selon-situation.html` | sans diplôme |
 | 7 | NON_READY | reconversion / trajectoire pro | `articles/competences-transferables.html` | revenu / runway |
 | 7 | NON_READY | entrepreneuriat | `dossiers/are-arce-acre-creation-entreprise.html` | activité réglementée |
 | 7 | NON_READY | budget / dettes | `dossiers/creer-entreprise-avec-peu-argent.html` | revenu stable / variable |
@@ -206,21 +205,6 @@ Promesse : **choisir une formation pour une reconversion : coût, rncp et débou
 | financement / BFR | TRAITEE |
 | associés | MANQUANTE |
 
-### `dossiers/trajectoire-professionnelle-selon-situation.html` — reconversion / trajectoire pro
-
-Promesse : **quelle stratégie professionnelle selon votre situation ? 8 trajectoires concrètes | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| salarié | MENTIONNEE |
-| demandeur emploi | TRAITEE |
-| public | MANQUANTE |
-| indépendant | TRAITEE |
-| santé / inaptitude | TRAITEE |
-| sans diplôme | MANQUANTE |
-| senior / âge | TRAITEE |
-| revenu / runway | TRAITEE |
-
 ### `articles/competences-transferables.html` — reconversion / trajectoire pro
 
 Promesse : **changer de métier sans repartir de zéro : compétences transférables | contre-évidence**
@@ -296,7 +280,7 @@ Pages détectées : **1**. Promesses larges `NON_READY` : **0**. Variantes le pl
 
 ### reconversion / trajectoire pro
 
-Pages détectées : **12**. Promesses larges `NON_READY` : **5**. Variantes le plus souvent non détectées : **public** (9), **senior / âge** (8), **indépendant** (7), **sans diplôme** (5), **santé / inaptitude** (3), **revenu / runway** (2).
+Pages détectées : **11**. Promesses larges `NON_READY` : **4**. Variantes le plus souvent non détectées : **public** (8), **senior / âge** (8), **indépendant** (7), **sans diplôme** (4), **santé / inaptitude** (3), **revenu / runway** (2).
 
 ### entrepreneuriat
 
