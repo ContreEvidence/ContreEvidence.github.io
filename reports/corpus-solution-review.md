@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **48**. Validations devenues caduques après modification : **0**.
+Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humaines actives : **65**. Validations devenues caduques après modification : **0**.
 
 ## Priorité humaine
 
@@ -52,17 +52,34 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/patrimoine-selon-age-construire-utiliser.html` — 7/9 automatique — Âge traité comme proxy d’événements et d’horizons, transitions de phase, exceptions et conditions d’inversion déjà explicites.
 - `dossiers/demenager-pour-un-emploi-salaire-minimum.html` — 7/9 automatique — Salaire net de bascule, coûts de transition, prix du temps, aides conditionnelles et valeur d’option de la mobilité déjà traités.
 - `dossiers/quand-vie-change-sante-separation-revenu.html` — 8/9 automatique — Stabilisation, période tampon, réversibilité, séquence 30 jours et stress test déjà structurés.
+- `dossiers/immobilier-allocation-globale-patrimoine.html` — 8/9 automatique — Immobilier replacé dans l’allocation totale avec dette, concentration, liquidité et risques corrélés déjà structurés.
 - `dossiers/etude-marche-terrain.html` — 8/9 automatique — Preuve payante, marché accessible, CAC/LTV, saisonnalité, test terrain et critères de pivot/abandon déjà explicites.
+- `dossiers/reconversion-sans-perte-salaire.html` — 8/9 automatique — Maintien de revenu, manque à gagner, transition progressive, dispositifs conditionnels et solutions passerelles déjà structurés.
 - `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` — 8/9 automatique — Deux systèmes de vie comparés : flux, temps capturé, robustesse, trajectoire, scénarios, seuil de bascule et options C/D déjà présents.
 - `dossiers/business-plan-utile.html` — 8/9 automatique — Capacité, BFR, trois scénarios, trajectoire à trois ans et critères explicites d’abandon rendent le plan falsifiable.
+- `dossiers/acheter-logement-sans-se-fragiliser.html` — 8/9 automatique — Apport, liquidité résiduelle, mensualité soutenable, stress tests et options de sortie déjà au niveau attendu lors de la revue antérieure.
+- `dossiers/creer-entreprise-avec-peu-argent.html` — 8/9 automatique — Coût de lancement distingué du besoin économique complet, BFR/runway et tests à faible capital déjà traités.
 - `dossiers/metiers-fonctions-organisation-entreprise.html` — 8/9 automatique — Fonctions lues par flux, décisions, interfaces et criticité ; transferts de compétences et test organisationnel déjà structurés.
 - `dossiers/protocole-verifier-reponse-ia.html` — 8/9 automatique — Hiérarchie de preuve, temporalité, contre-preuve, hypothèse d’inversion et seuil d’arrêt de vérification déjà structurés.
 - `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` — 8/9 automatique — Besoin/objectifs/moyens séparés, non-négociables, options concurrentes, scénario adverse et seuil de changement déjà structurés.
 - `dossiers/sante-travail-equilibre-vie-pro-perso.html` — 8/9 automatique — Soutenabilité analysée par risques, charge, récupération, trajet et options de modification du travail avant abandon du métier.
 - `dossiers/reconversion-sans-formation-longue.html` — 8/9 automatique — Verrou dominant, VAE/certification/poste passerelle/candidature directe, coût complet, seuils et conditions d’inversion déjà structurés.
 - `dossiers/emploi-chercher-accepter-negocier-evoluer.html` — 8/9 automatique — Entonnoir emploi, diagnostic par étape, alternatives, plancher de négociation, scénario rester/préparer/partir et options futures déjà traités.
+- `dossiers/competent-mais-invisible-travail.html` — 8/9 automatique — Valeur créée transformée en preuves observables, visibilité auprès des décideurs et alternatives à l’attente d’une reconnaissance spontanée déjà structurées.
 - `dossiers/prix-attendre-finances.html` — 8/9 automatique — Coûts certains versus opportunité, cas où attendre protège, scénario symétrique d’action trop rapide et seuil de décision déjà présents.
+- `dossiers/dependance-gros-client.html` — 8/9 automatique — Concentration, rupture du client principal, mois de survie, diversification causale et plan de réduction de dépendance déjà structurés.
+- `dossiers/lancer-activite-sans-quitter-emploi.html` — 8/9 automatique — Lancement parallèle, contraintes à vérifier, seuils de bascule et séquençage avant abandon du revenu salarié déjà structurés.
+- `dossiers/audit-copropriete-avant-achat.html` — 8/9 automatique — Documents, charges, travaux, gouvernance, scénarios de choc et signaux de renoncement déjà structurés.
+- `dossiers/indivision-loyers-charges-comptes.html` — 8/9 automatique — Flux de loyers, charges, preuves comptables, comptes entre indivisaires et architecture de décision déjà structurés lors de la revue antérieure.
+- `dossiers/audit-budget-60-minutes.html` — 8/9 automatique — Audit déjà opérationnel : masses budgétaires, anomalies, priorisation et actions concrètes ; pas de gain causal identifié lors de la revue antérieure.
+- `dossiers/passer-80-pourcent-cout-reel.html` — 9/9 automatique — Coût réel du temps libéré, impact sur marge du foyer, effets différés et réversibilité déjà traités lors de la revue antérieure.
+- `dossiers/finances-retraite-decumulation.html` — 9/9 automatique — Gap retraite, risque de séquence, poches par fonction, garde-fous de retrait, longévité, stress tests et revue annuelle déjà structurés.
+- `dossiers/regles-responsabilites-fautes-travail.html` — 9/9 automatique — Erreur, négligence, insuffisance et faute décomposées ; qualification conditionnelle et conséquences distinguées, avec sources adaptées déjà présentes.
+- `dossiers/liquidites-reserve-securite.html` — 9/9 automatique — Réserve calibrée par risques et charges plutôt que par règle universelle ; liquidité et marge d’option déjà traitées.
+- `dossiers/embaucher-ou-sous-traiter.html` — 9/9 automatique — Coût complet, capacité, flexibilité, contrôle, seuil de charge et scénarios embauche/sous-traitance/hybride déjà structurés.
 - `dossiers/automatiser-ou-non-processus.html` — 9/9 automatique — Réécriture du 16/08 : supprimer/simplifier/standardiser avant automatisation, assistance partielle, rollback et condition d’abandon.
+- `dossiers/ameliorer-processus-sans-degrader-service.html` — 9/9 automatique — Processus, indicateurs, incitations, goulots et garde-fous qualité déjà structurés ; pas de réécriture artificielle lors de la revue antérieure.
+- `dossiers/calculer-prix-minimum-rentable.html` — 9/9 automatique — Coût complet, temps non facturé, capacité, marge et seuil de prix/volume déjà structurés.
 - `dossiers/prejuges-biais-monde-professionnel.html` — 9/9 automatique — Réécriture du 16/08 : diagnostic signal/gatekeeper/discrimination, test causal, substitution d’acteur et seuil de sortie du registre de persuasion.
 
 ## Corpus complet
@@ -105,14 +122,14 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 7/9 | 1578 | humaine ✓ | `dossiers/patrimoine-selon-age-construire-utiliser.html` |
 | 7/9 | 2401 | humaine ✓ | `dossiers/demenager-pour-un-emploi-salaire-minimum.html` |
 | 8/9 | 693 | humaine ✓ | `dossiers/quand-vie-change-sante-separation-revenu.html` |
-| 8/9 | 1008 | heuristique | `dossiers/immobilier-allocation-globale-patrimoine.html` |
+| 8/9 | 1008 | humaine ✓ | `dossiers/immobilier-allocation-globale-patrimoine.html` |
 | 8/9 | 1074 | humaine ✓ | `dossiers/etude-marche-terrain.html` |
-| 8/9 | 1077 | heuristique | `dossiers/reconversion-sans-perte-salaire.html` |
+| 8/9 | 1077 | humaine ✓ | `dossiers/reconversion-sans-perte-salaire.html` |
 | 8/9 | 1090 | humaine ✓ | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` |
 | 8/9 | 1116 | humaine ✓ | `dossiers/business-plan-utile.html` |
 | 8/9 | 1170 | heuristique | `articles/sans-diplome-chemins-alternatifs.html` |
-| 8/9 | 1185 | heuristique | `dossiers/acheter-logement-sans-se-fragiliser.html` |
-| 8/9 | 1189 | heuristique | `dossiers/creer-entreprise-avec-peu-argent.html` |
+| 8/9 | 1185 | humaine ✓ | `dossiers/acheter-logement-sans-se-fragiliser.html` |
+| 8/9 | 1189 | humaine ✓ | `dossiers/creer-entreprise-avec-peu-argent.html` |
 | 8/9 | 1194 | heuristique | `dossiers/comparer-strategies-immobilieres.html` |
 | 8/9 | 1201 | heuristique | `dossiers/are-arce-acre-creation-entreprise.html` |
 | 8/9 | 1208 | humaine ✓ | `dossiers/metiers-fonctions-organisation-entreprise.html` |
@@ -123,7 +140,7 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1281 | humaine ✓ | `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
 | 8/9 | 1286 | humaine ✓ | `dossiers/reconversion-sans-formation-longue.html` |
 | 8/9 | 1317 | humaine ✓ | `dossiers/emploi-chercher-accepter-negocier-evoluer.html` |
-| 8/9 | 1337 | heuristique | `dossiers/competent-mais-invisible-travail.html` |
+| 8/9 | 1337 | humaine ✓ | `dossiers/competent-mais-invisible-travail.html` |
 | 8/9 | 1345 | heuristique | `dossiers/capacite-refuser-travail-rentabilite.html` |
 | 8/9 | 1351 | heuristique | `dossiers/tresorerie-bfr-entreprise.html` |
 | 8/9 | 1352 | heuristique | `articles/construire-epargne-de-zero.html` |
@@ -135,16 +152,16 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1405 | heuristique | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` |
 | 8/9 | 1410 | heuristique | `dossiers/combien-epargne-avant-demissionner.html` |
 | 8/9 | 1411 | heuristique | `dossiers/piloter-patrimoine-selon-taille.html` |
-| 8/9 | 1414 | heuristique | `dossiers/dependance-gros-client.html` |
+| 8/9 | 1414 | humaine ✓ | `dossiers/dependance-gros-client.html` |
 | 8/9 | 1421 | heuristique | `articles/tester-metier-avant-investir.html` |
-| 8/9 | 1425 | heuristique | `dossiers/lancer-activite-sans-quitter-emploi.html` |
-| 8/9 | 1435 | heuristique | `dossiers/audit-copropriete-avant-achat.html` |
+| 8/9 | 1425 | humaine ✓ | `dossiers/lancer-activite-sans-quitter-emploi.html` |
+| 8/9 | 1435 | humaine ✓ | `dossiers/audit-copropriete-avant-achat.html` |
 | 8/9 | 1435 | heuristique | `dossiers/negocier-salaire-responsabilites.html` |
 | 8/9 | 1490 | heuristique | `dossiers/temps-energie-qualite-vie.html` |
 | 8/9 | 1549 | heuristique | `dossiers/favoriser-un-enfant-succession-donation.html` |
-| 8/9 | 1554 | heuristique | `dossiers/indivision-loyers-charges-comptes.html` |
+| 8/9 | 1554 | humaine ✓ | `dossiers/indivision-loyers-charges-comptes.html` |
 | 8/9 | 1599 | heuristique | `dossiers/comparer-deux-offres-emploi.html` |
-| 8/9 | 1652 | heuristique | `dossiers/audit-budget-60-minutes.html` |
+| 8/9 | 1652 | humaine ✓ | `dossiers/audit-budget-60-minutes.html` |
 | 8/9 | 1754 | heuristique | `dossiers/location-courte-duree-meuble-tourisme.html` |
 | 8/9 | 1788 | heuristique | `dossiers/finances-allocation-portefeuille.html` |
 | 8/9 | 1799 | heuristique | `dossiers/decider-sans-tourner-en-rond.html` |
@@ -155,19 +172,19 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 2722 | heuristique | `dossiers/inflation-comprendre-histoire-pouvoir-achat.html` |
 | 9/9 | 1038 | heuristique | `articles/clients-interesses-personne-nachete.html` |
 | 9/9 | 1188 | heuristique | `articles/competences-transferables.html` |
-| 9/9 | 1193 | heuristique | `dossiers/passer-80-pourcent-cout-reel.html` |
+| 9/9 | 1193 | humaine ✓ | `dossiers/passer-80-pourcent-cout-reel.html` |
 | 9/9 | 1215 | heuristique | `dossiers/depenses-recurrentes-abonnements-assurances.html` |
 | 9/9 | 1277 | heuristique | `articles/retrouver-emploi-apres-interruption.html` |
-| 9/9 | 1297 | heuristique | `dossiers/finances-retraite-decumulation.html` |
-| 9/9 | 1314 | heuristique | `dossiers/regles-responsabilites-fautes-travail.html` |
-| 9/9 | 1315 | heuristique | `dossiers/liquidites-reserve-securite.html` |
+| 9/9 | 1297 | humaine ✓ | `dossiers/finances-retraite-decumulation.html` |
+| 9/9 | 1314 | humaine ✓ | `dossiers/regles-responsabilites-fautes-travail.html` |
+| 9/9 | 1315 | humaine ✓ | `dossiers/liquidites-reserve-securite.html` |
 | 9/9 | 1323 | heuristique | `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` |
 | 9/9 | 1324 | heuristique | `dossiers/gestion-pilotee-comparer-performances.html` |
 | 9/9 | 1392 | heuristique | `dossiers/finances-investissement-locatif.html` |
 | 9/9 | 1405 | heuristique | `dossiers/devenir-manager-premiere-fois.html` |
 | 9/9 | 1419 | heuristique | `dossiers/decider-a-deux-travail-patrimoine.html` |
 | 9/9 | 1439 | heuristique | `dossiers/valeur-option-bien-immobilier.html` |
-| 9/9 | 1469 | heuristique | `dossiers/embaucher-ou-sous-traiter.html` |
+| 9/9 | 1469 | humaine ✓ | `dossiers/embaucher-ou-sous-traiter.html` |
 | 9/9 | 1474 | heuristique | `articles/accepter-nimporte-quel-poste-retour-emploi.html` |
 | 9/9 | 1494 | heuristique | `dossiers/quitter-emploi-stable-ou-rester.html` |
 | 9/9 | 1557 | heuristique | `articles/comparatif-produits-bancaires.html` |
@@ -175,9 +192,9 @@ Pages analysées : **122**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1610 | heuristique | `dossiers/travailler-moins-vivre-mieux.html` |
 | 9/9 | 1615 | humaine ✓ | `dossiers/automatiser-ou-non-processus.html` |
 | 9/9 | 1704 | heuristique | `dossiers/indivision-succession-heritiers-vendre-partager.html` |
-| 9/9 | 1707 | heuristique | `dossiers/ameliorer-processus-sans-degrader-service.html` |
+| 9/9 | 1707 | humaine ✓ | `dossiers/ameliorer-processus-sans-degrader-service.html` |
 | 9/9 | 1760 | heuristique | `articles/travailler-beaucoup-gagner-peu-prix.html` |
-| 9/9 | 1777 | heuristique | `dossiers/calculer-prix-minimum-rentable.html` |
+| 9/9 | 1777 | humaine ✓ | `dossiers/calculer-prix-minimum-rentable.html` |
 | 9/9 | 1791 | humaine ✓ | `dossiers/prejuges-biais-monde-professionnel.html` |
 | 9/9 | 1894 | heuristique | `dossiers/finances-enveloppes-fiscalite.html` |
 | 9/9 | 1923 | heuristique | `dossiers/couple-famille-argent-temps.html` |
