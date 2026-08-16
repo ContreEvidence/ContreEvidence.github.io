@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **16**
-- P1 — affirmation forte à resserrer ou vérifier : **61**
+- P1 — affirmation forte à resserrer ou vérifier : **62**
 - P2 — nécessité à examiner : **146**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **796**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **801**
 
 ## P0 — rouvrir en priorité
 
@@ -71,7 +71,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **affirmation forte sans signal de source explicite** — Substituez le mode d’apprentissage au lieu d’allonger automatiquement la formation Écart réel Substitution à tester connaissance ciblée module court / lecture guidée plutôt que cursus complet. manque de pratique projet, mission ou simulation plutôt qu’heures théoriques supplémentaires. manque de feedback tuteur, pair expert ou revue de travail plutôt qu’un nouveau cours. manque de preuve portfolio, test, mission, cer _[périmètre]_
 - **affirmation forte sans signal de source explicite** — Tester le gatekeeper avant d’investir lourd Quand c’est possible, cherchez une petite preuve de marché avant une formation longue : analyser 30 offres et noter les filtres réellement utilisés ; demander à plusieurs recruteurs quels signaux déclenchent un entretien ; tenter un projet, un test ou une mission limitée ; faire évaluer un portfolio par quelqu’un qui recrute réellement ; vérifier si la certification demandé _[périmètre, temporalité]_
 ### `dossiers/assurer-ou-autoassurer-risques.html`
-- **fermeture forte sourcée mais formulation trop absolue** — Vérifier ce qui est déjà couvert Avant d’acheter une nouvelle garantie, inventorie : régime obligatoire, mutuelle, prévoyance employeur, assurance emprunteur, multirisque habitation, carte bancaire, contrat automobile, garanties professionnelles éventuelles. _[signal-source, temporalité]_
+- **fermeture forte sourcée mais formulation trop absolue** — Le salarié privé doit auditer trois étages avant d'acheter une protection en plus Régime obligatoire : Assurance Maladie et autres protections légales. _[signal-source, temporalité]_
+- **fermeture forte sourcée mais formulation trop absolue** — Pour un locataire, l'assurance des risques locatifs est obligatoire ; en copropriété, le propriétaire doit au minimum être couvert pour sa responsabilité civile. _[signal-source]_
 ### `dossiers/audit-budget-60-minutes.html`
 - **affirmation forte sans signal de source explicite** — Le problème n’est donc plus « je dois mieux surveiller mes dépenses » : la structure du budget ne peut pas s’équilibrer par ce seul levier . _[périmètre]_
 - **affirmation forte sans signal de source explicite** — Les dépenses incompressibles : celles qu’on ne peut pas réduire rapidement sans décision lourde. _[périmètre, temporalité]_
