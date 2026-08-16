@@ -6,17 +6,15 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 
 ## Synthèse
 
-- S0 — possibilité à fort enjeu sans preuve/condition détectée : **7**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **34**
+- S0 — possibilité à fort enjeu sans preuve/condition détectée : **6**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **33**
 - S2 — possibilité générale à examiner : **16**
-- OK heuristique — condition ou preuve détectée : **156**
+- OK heuristique — condition ou preuve détectée : **158**
 
 ## S0 — vérifier avant toute recommandation
 
 ### `articles/competences-transferables.html`
 - **possibilité à fort enjeu sans condition ni signal de preuve** — Sans diplôme : distinguer compétence réelle et filtre d’accès Vous pouvez maîtriser 90 % du travail et rester bloqué par un diplôme obligatoire ou un filtre RH. _[fort enjeu]_
-### `dossiers/creer-entreprise-avec-peu-argent.html`
-- **possibilité à fort enjeu sans condition ni signal de preuve** — Il faut distinguer ce qui permet de commencer, ce qui permet d’encaisser un retard, ce qui permet au foyer de survivre pendant la montée en charge — et ce que l’on paie en temps quand on économise du cash. _[fort enjeu]_
 ### `parcours-vie-professionnelle.html`
 - **possibilité à fort enjeu sans condition ni signal de preuve** — Vos compétences, vos résultats, votre santé et les portes qui restent ouvertes disent où vous pouvez aller demain. _[fort enjeu]_
 ### `simulateur-epargne-demission.html`
@@ -48,8 +46,6 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — C’est celui qui organise la prochaine preuve, le prochain engagement, la condition qui arrête le projet et la substitution qui permet de tester autrement avant de brûler une option coûteuse. _[fort enjeu, preuve détectée]_
 ### `dossiers/competences-qualification-employabilite.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Pour choisir une formation, préparer une reconversion ou comprendre pourquoi une candidature bloque, il faut distinguer ce que vous savez faire, ce qui est officiellement reconnu, ce qui est demandé dans les offres et ce que vous pouvez réellement prouver. _[fort enjeu, preuve détectée]_
-### `dossiers/creer-entreprise-avec-peu-argent.html`
-- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Cas A — Service léger : moins de 1 000 € peut suffire pour tester Matériel 350 € Assurance / outils 250 € Communication initiale 150 € Marge imprévus 250 € Budget lancement 1 000 € Si le service peut être vendu avant d’acheter davantage de matériel, le risque financier reste faible. _[fort enjeu, condition détectée]_
 ### `dossiers/decider-a-deux-travail-patrimoine.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Le transfert de risque est souvent invisible Une démission peut réduire le revenu de A mais augmenter la dépendance du foyer au revenu de B. _[fort enjeu, condition détectée]_
 ### `dossiers/devenir-manager-premiere-fois.html`
