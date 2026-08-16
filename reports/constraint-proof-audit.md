@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **15**
 - P1 — affirmation forte à resserrer ou vérifier : **56**
-- P2 — nécessité à examiner : **141**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **708**
+- P2 — nécessité à examiner : **135**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **712**
 
 ## P0 — rouvrir en priorité
 
@@ -181,13 +181,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/automatiser-ou-non-processus.html`
 - **nécessité à requalifier ou sourcer** — Avant « automatiser ou non » : la tâche doit-elle encore exister ? _[temporalité]_
 - **nécessité à requalifier ou sourcer** — C'est pourquoi le nombre réel d'exécutions doit être mesuré avant de choisir l'outil. _[temporalité]_
-### `dossiers/calculer-prix-minimum-rentable.html`
-- **nécessité à requalifier ou sourcer** — Calculer le point mort Le point mort indique combien il faut vendre pour couvrir la structure avant rémunération supplémentaire. _[temporalité]_
-- **nécessité à requalifier ou sourcer** — Exemple complet Votre activité doit produire 66,70 € de marge contributive par heure vendue.
-- **nécessité à requalifier ou sourcer** — Il doit payer aussi le temps non vendu, les coûts fixes, le risque et la capacité que la prestation bloque pour autre chose.
-- **nécessité à requalifier ou sourcer** — Il faut 10 prestations uniquement pour absorber la structure.
-- **nécessité à requalifier ou sourcer** — Passer du revenu souhaité au chiffre d’affaires nécessaire Je pars du résultat que l’activité doit produire, puis je remonte. _[temporalité]_
-- **nécessité à requalifier ou sourcer** — Une petite activité doit absorber devis, messages, achats, trajets, rangement, factures, relances, prospection et imprévus.
 ### `dossiers/capacite-refuser-travail-rentabilite.html`
 - **nécessité à requalifier ou sourcer** — La capacité commerciale doit être traitée comme une ressource productive : sans elle, le portefeuille se fige autour des clients historiques.
 ### `dossiers/classes-actifs-allocation-patrimoine.html`
