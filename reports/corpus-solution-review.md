@@ -12,6 +12,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 
 | Score | Mots | Page | Dimensions manquantes |
 |---:|---:|---|---|
+| 6/9 | 1426 | `dossiers/temps-energie-qualite-vie.html` | causalite, options, adverse · validation précédente caduque |
 | 6/9 | 1463 | `dossiers/dependance-gros-client.html` | probleme, causalite, sortie · validation précédente caduque |
 | 6/9 | 2785 | `dossiers/indivision-loyers-charges-comptes.html` | probleme, causalite, options · validation précédente caduque |
 
@@ -19,6 +20,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 
 | Page | SHA relu | SHA courant |
 |---|---|---|
+| `dossiers/temps-energie-qualite-vie.html` | `870bee99dfb0325a0253f9000e2414580b1b8e3c` | `db24f912688069337b478cddb5232af122f92a66` |
 | `dossiers/dependance-gros-client.html` | `aff1498bfed0cdae7eb745a22fc9815b7c5ef260` | `bdbca2d0a06cf686a0fc4786708fd14489f953e1` |
 | `dossiers/indivision-loyers-charges-comptes.html` | `17a2f1637380da7fdce685ccf909e3eeb3d5523a` | `58e167161f9837e65d22f8c8ead933f1bada5b48` |
 | `dossiers/comparer-strategies-immobilieres.html` | `06acc378800acfdcbb52e5992f3067d5b16a0b72` | `c67bf5147a80d76880553802d97ac8e805724bc1` |
@@ -79,7 +81,6 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/puis-je-me-permettre-reconversion.html` | `1ad192cf263278ca68066756f08f1dc2f62a58fc` | `30104a9749a082f9bb5eeed131ad4f9ff3738df9` |
 | `articles/choisir-etf-mondial-debutant.html` | `51eb14e0e0798b03354f58360105a9a851af5bf0` | `8ca0d60ea3471345eb449e0e878724f000c1c24f` |
 | `dossiers/travailler-moins-vivre-mieux.html` | `eb67bcfbe9b9b1bdaf4c4e402946defb38068247` | `62b2ddd216c99bb409373d14bce456aba6ff22ff` |
-| `dossiers/temps-energie-qualite-vie.html` | `870bee99dfb0325a0253f9000e2414580b1b8e3c` | `942d12394fd23a3f0a04c8b4587a445061cba7f8` |
 | `dossiers/favoriser-un-enfant-succession-donation.html` | `87dc0927f5033751ed022b19eef2ce82ff2ba453` | `a82d032edac0c37906b42c8f11b37678be5e5b55` |
 | `dossiers/finances-enveloppes-fiscalite.html` | `465e5a96cac235489cd54df12555dc85c8f66542` | `8c35e60f67744f074952974871dc2b4daca9c74c` |
 | `dossiers/finances-investissement-locatif.html` | `2c09f9a2b80c1ef004f4c07f5941dcf88894a1e3` | `98ddfae8c33b7d2e8cf18dbdaf56180f8c8b5e96` |
@@ -151,6 +152,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | Score | Mots | Revue | Page |
 |---:|---:|---|---|
 | 6/9 | 1353 | humaine ✓ | `dossiers/etre-riche-revenu-patrimoine-liberte.html` |
+| 6/9 | 1426 | à revoir après changement | `dossiers/temps-energie-qualite-vie.html` |
 | 6/9 | 1463 | à revoir après changement | `dossiers/dependance-gros-client.html` |
 | 6/9 | 2785 | à revoir après changement | `dossiers/indivision-loyers-charges-comptes.html` |
 | 7/9 | 1222 | à revoir après changement | `dossiers/comparer-strategies-immobilieres.html` |
@@ -255,7 +257,6 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 2025 | à revoir après changement | `dossiers/puis-je-me-permettre-reconversion.html` |
 | 9/9 | 2050 | à revoir après changement | `articles/choisir-etf-mondial-debutant.html` |
 | 9/9 | 2062 | à revoir après changement | `dossiers/travailler-moins-vivre-mieux.html` |
-| 9/9 | 2108 | à revoir après changement | `dossiers/temps-energie-qualite-vie.html` |
 | 9/9 | 2167 | à revoir après changement | `dossiers/favoriser-un-enfant-succession-donation.html` |
 | 9/9 | 2170 | à revoir après changement | `dossiers/finances-enveloppes-fiscalite.html` |
 | 9/9 | 2176 | à revoir après changement | `dossiers/finances-investissement-locatif.html` |
