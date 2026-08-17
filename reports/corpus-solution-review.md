@@ -35,6 +35,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/acheter-logement-sans-se-fragiliser.html` | `917027c5225fc0464db739ffa51972e38f4655f6` | `a662879d31e2383f03f92f5ef3359fce84f66753` |
 | `dossiers/finances-residence-principale.html` | `89bdee80210b87568b4831b77c18bccbc6c8f1f9` | `06bdc06f234c3297252bb7523969af5b95145d3c` |
 | `dossiers/liquidites-reserve-securite.html` | `ae88ad8ae7c6981800827b83825e37da0c51d1c5` | `dbc55f545460a92295bc3e0b35f075039e34e829` |
+| `dossiers/assurer-ou-autoassurer-risques.html` | `6bd9c11fce81a3115d0115986a602f1e4fb2753e` | `9eee2066642ab55d9556dd47be2f89847888709f` |
 | `dossiers/calculer-prix-minimum-rentable.html` | `1597bb81c5cba87c2e493fff0aa8a3bc640ac438` | `9625f1c2b342c3a6765072aa31ffb8c7c846fef2` |
 | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` | `e782289f8d68aab912acdd201a649e7782204756` | `959ef22860e5b38b622378e56ec4a2de9123e610` |
 | `articles/travailler-beaucoup-gagner-peu-prix.html` | `53df5406709273e5dedfe3ae2a2085c3913bb872` | `ef5958de28d3016d2ede477b860eb43a06bdddb6` |
@@ -102,7 +103,6 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` | `b8ca6053a594bbee33797f2d2c4dce8b4854e67b` | `c6e5736d0811426bfb0bfd40ac588e3c6c3945cf` |
 | `dossiers/combien-epargne-avant-demissionner.html` | `bf785f0d5781fd9e4ba7164de46da47b01542449` | `590189bf4699486987b5d492195cfe66a7d869ee` |
 | `dossiers/combien-chiffre-affaires-pour-vivre.html` | `ecb09de9f0ebcb7f42e79bac0351f086fadee8ae` | `554d9c99fd7e7baea7af294e49113ecc825726b1` |
-| `dossiers/assurer-ou-autoassurer-risques.html` | `6bd9c11fce81a3115d0115986a602f1e4fb2753e` | `fdb5e3151d07b23ddc499f78adf060c37f630529` |
 | `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` | `0dde3d3af6dc5214b42e2e86c59d2ef2677de259` | `49a26a95921f5be5635c8609812eef122250a076` |
 
 ## Pages validées humainement et inchangées
@@ -179,6 +179,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1227 | humaine ✓ | `dossiers/protocole-verifier-reponse-ia.html` |
 | 8/9 | 1286 | humaine ✓ | `dossiers/reconversion-sans-formation-longue.html` |
 | 8/9 | 1317 | humaine ✓ | `dossiers/emploi-chercher-accepter-negocier-evoluer.html` |
+| 8/9 | 1319 | à revoir après changement | `dossiers/assurer-ou-autoassurer-risques.html` |
 | 8/9 | 1334 | à revoir après changement | `dossiers/calculer-prix-minimum-rentable.html` |
 | 8/9 | 1337 | humaine ✓ | `dossiers/competent-mais-invisible-travail.html` |
 | 8/9 | 1344 | à revoir après changement | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` |
@@ -277,7 +278,6 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 2581 | à revoir après changement | `dossiers/choisir-statut-micro-ei-eurl-sasu.html` |
 | 9/9 | 2764 | à revoir après changement | `dossiers/combien-epargne-avant-demissionner.html` |
 | 9/9 | 2777 | à revoir après changement | `dossiers/combien-chiffre-affaires-pour-vivre.html` |
-| 9/9 | 2961 | à revoir après changement | `dossiers/assurer-ou-autoassurer-risques.html` |
 | 9/9 | 3065 | humaine ✓ | `dossiers/indivision-rachat-progressif-parts.html` |
 | 9/9 | 3821 | humaine ✓ | `dossiers/indivision-couple-separation-rachat-soulte.html` |
 | 9/9 | 4276 | à revoir après changement | `dossiers/sci-immobiliere-acheter-gerer-transmettre-sortir.html` |
