@@ -1,0 +1,110 @@
+name: Apply manual intent-fit table overrides
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/editorial-manual-table-overrides.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Restore tables that are part of the actual answer
+        shell: python
+        run: |
+          from pathlib import Path
+          import re, html
+
+          targets={
+            'dossiers/decision-plan-30-90-jours.html':[
+              '6. Dépendances',
+              '7. Pour chaque décideur',
+              '9. Donnez un budget de risque',
+              '11. Le jalon à 30 jours',
+              '12. Le résultat à 90 jours',
+              '13. Mesurez trois niveaux',
+            ],
+            'articles/competences-transferables.html':[
+              '3. Le nouveau contexte',
+              '10. Construire la matrice',
+              '11. Candidature directe',
+              '15. Exemple complet',
+            ],
+            'dossiers/trouver-premiers-clients.html':[
+              "6. L'entonnoir",
+              '12. Réseau, prospection, plateforme',
+              "13. La preuve minimale",
+              '17. Quand couper un canal',
+              '19. Plan 30 jours',
+            ],
+            'dossiers/finances-cadre-global.html':[
+              "7. L'allocation cible",
+              '15. Stress testez',
+              '17. Les vrais motifs de révision',
+              '18. Une politique doit contenir les conditions',
+              '19. Exemple : même patrimoine',
+            ],
+            'dossiers/reconversion-sans-formation-longue.html':[
+              '4. Cas A',
+              '5. Cas B',
+              '6. Cas C',
+              '8. Cas E',
+              "10. Le coût complet",
+              "11. Quand la conclusion s’inverse",
+            ],
+          }
+
+          tag_re=re.compile(r'<[^>]+>')
+          h2_re=re.compile(r'<h2\b[^>]*>(.*?)</h2>',re.I|re.S)
+          detail_re=re.compile(r'<details\b([^>]*)class=(["\'])([^"\']*\bce-legacy-detail\b[^"\']*)\2([^>]*)>\s*<summary>(.*?)</summary>\s*(.*?)</details\s*>',re.I|re.S)
+          def plain(s):
+            return re.sub(r'\s+',' ',html.unescape(tag_re.sub(' ',s))).strip()
+
+          changed=[]
+          for rel,prefixes in targets.items():
+            p=Path(rel)
+            s=p.read_text(encoding='utf-8')
+            headings=list(h2_re.finditer(s))
+            out=[]; last=0; touched=[]
+            for m in detail_re.finditer(s):
+              out.append(s[last:m.start()])
+              section=''
+              for h in headings:
+                if h.start()<m.start(): section=plain(h.group(1))
+                else: break
+              attrs=(m.group(1)+f'class={m.group(2)}{m.group(3)}{m.group(2)}'+m.group(4)).strip()
+              body=m.group(6)
+              summary=m.group(5)
+              if any(section.startswith(prefix) for prefix in prefixes):
+                attrs=re.sub(r'\s*data-ce-table-role=["\'][^"\']*["\']','',attrs,flags=re.I)
+                if not re.search(r'\bopen\b',attrs,re.I): attrs+=' open'
+                attrs+=' data-ce-table-role="primary"'
+                summary='Tableau principal de cette section'
+                touched.append(section)
+              out.append(f'<details {attrs.strip()}><summary>{summary}</summary>{body}</details>')
+              last=m.end()
+            out.append(s[last:])
+            new=''.join(out)
+            if new!=s:
+              p.write_text(new,encoding='utf-8')
+              changed.append(rel)
+              print('UPDATED',rel)
+              for x in touched: print('  OPEN',x)
+          print('Pages modifiées:',len(changed))
+      - name: Validate and commit
+        run: |
+          git diff --check
+          git config user.name "ContreEvidence"
+          git config user.email "contreevidence@gmail.com"
+          git add dossiers articles
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Restore decision-critical tables after intent review"
+          git push
