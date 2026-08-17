@@ -40,7 +40,7 @@ jobs:
           h1_re=re.compile(r'<h1\b[^>]*>(.*?)</h1>',re.I|re.S)
           h2_re=re.compile(r'<h2\b[^>]*>(.*?)</h2>',re.I|re.S)
           table_re=re.compile(r'<table\b',re.I)
-          details_re=re.compile(r'<details\b[^>]*>(.*?)</details\s*>',re.I|re.S)
+          details_re=re.compile(r'<details\b([^>]*)>(.*?)</details\s*>',re.I|re.S)
           source_re=re.compile(r'href=["\']https?://([^/"\']+)',re.I)
           internal_link_re=re.compile(r'href=["\'](?!https?://|#|mailto:|tel:)([^"\']+\.html(?:#[^"\']*)?)',re.I)
           word_re=re.compile(r"[A-Za-zÀ-ÖØ-öø-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÖØ-öø-ÿ0-9]+)*")
@@ -72,41 +72,30 @@ jobs:
           def classify_intent(rel,title,h1):
               name=pathlib.PurePosixPath(rel.lower()).name
               signal=f'{name} {title} {h1}'.lower()
-
-              # Intention inferred only from the promise of the page, never from incidental words in the body.
               explicit_comparison=(
                   'comparer' in signal or 'comparatif' in signal or ' ou ' in h1.lower() or
                   name.startswith(('comparer-','acheter-ou-louer','rembourser-credit-ou-investir','location-nue-ou-meublee','assurer-ou-autoassurer','embaucher-ou-sous-traiter')) or
                   any(x in signal for x in ('garder, vendre','garder vendre','acheter, crédit, loa','achat, crédit, loa'))
               )
-              if explicit_comparison:
-                  return 'comparison/arbitrage'
-
+              if explicit_comparison: return 'comparison/arbitrage'
               explicit_calculation=(
                   name.startswith(('combien-','cout-','coût-','calculer-','prix-','capacite-','capacité-','previsionnel-','tresorerie-')) or
                   any(x in signal for x in ('combien ','coût réel','cout réel','prix minimum','budget nécessaire','salaire minimum','chiffre d’affaires','chiffre affaires','rentabilité','rentabilite','mensualité','mensualite'))
               )
-              if explicit_calculation:
-                  return 'calculation/simulation'
-
+              if explicit_calculation: return 'calculation/simulation'
               explicit_procedure=(
                   name.startswith(('comment-','audit-','plan-','preparer-','préparer-','debloquer-','débloquer-','protocole-','questions-','checklist-')) or
                   any(x in signal for x in ('comment faire','comment vérifier','comment verifier','avant de signer','avant de postuler','plan 30','plan 90'))
               )
-              if explicit_procedure:
-                  return 'procedure/action'
-
-              decision_markers=('faut-il','puis-je','accepter','quitter','changer','passer à','passer au','travailler moins','se permettre','sans se fragiliser','dois-je')
-              if any(x in signal for x in decision_markers):
+              if explicit_procedure: return 'procedure/action'
+              if any(x in signal for x in ('faut-il','puis-je','accepter','quitter','changer','passer à','passer au','travailler moins','se permettre','sans se fragiliser','dois-je')):
                   return 'decision/acquisition'
-
-              if rel.lower().startswith('articles/'):
-                  return 'analysis/article'
+              if rel.lower().startswith('articles/'): return 'analysis/article'
               return 'reference/deep-dive'
 
-          def expectations(intent,title_h1,visible):
+          def expectations(intent,title_h1):
               quantitative=bool(re.search(r'\b(?:combien|coût|cout|prix|budget nécessaire|salaire minimum|chiffre d.affaires|rentabilité|rentabilite|mensualité|mensualite)\b',title_h1,re.I))
-              regulatory=bool(legal_re.search(title_h1+' '+visible[:2200]))
+              regulatory=bool(legal_re.search(title_h1))
               return {
                   'answer': intent=='decision/acquisition',
                   'action': intent in ('decision/acquisition','procedure/action'),
@@ -132,8 +121,13 @@ jobs:
               h2s=[plain(x) for x in h2_re.findall(raw)]
               words=len(word_re.findall(visible))
               tables_total=len(table_re.findall(raw))
-              tables_hidden=sum(len(table_re.findall(block)) for block in details_re.findall(raw))
-              tables_visible=max(0,tables_total-tables_hidden)
+              tables_closed=0
+              tables_open_details=0
+              for attrs,body in details_re.findall(raw):
+                  count=len(table_re.findall(body))
+                  if re.search(r'\bopen\b',attrs,re.I): tables_open_details+=count
+                  else: tables_closed+=count
+              tables_visible=max(0,tables_total-tables_closed)
               cases=len(case_re.findall(visible))
               numbers=len(number_re.findall(visible))
               hosts=[h.lower() for h in source_re.findall(raw)]
@@ -146,40 +140,34 @@ jobs:
               jargon=len(jargon_re.findall(visible))
 
               intent=classify_intent(rel,title,h1)
-              exp=expectations(intent,f'{title} {h1}',visible)
+              exp=expectations(intent,f'{title} {h1}')
               issues=[]
               observations=[]
 
-              if exp['answer'] and not has_answer:
-                  issues.append('promesse de décision sans réponse immédiate identifiable')
-              if exp['action'] and not has_action:
-                  issues.append('promesse orientée action sans prochaine action claire')
-              if exp['quantification'] and numbers<2:
-                  issues.append('promesse quantitative avec très peu de quantification')
-              if exp['sources'] and sources==0:
-                  issues.append('sujet réglementaire/juridique sans source institutionnelle détectée')
+              if exp['answer'] and not has_answer: issues.append('promesse de décision sans réponse immédiate identifiable')
+              if exp['action'] and not has_action: issues.append('promesse orientée action sans prochaine action claire')
+              if exp['quantification'] and numbers<2: issues.append('promesse quantitative avec très peu de quantification')
+              if exp['sources'] and sources==0: issues.append('sujet réglementaire/juridique sans source institutionnelle détectée')
               if exp['navigation'] and words>=2600 and len(h2s)>=15 and not has_navigation:
                   observations.append('référence très longue : vérifier si la navigation reste confortable')
-              if jargon:
-                  issues.append('jargon anglais/non nécessaire détecté')
+              if jargon: issues.append('jargon anglais/non nécessaire détecté')
 
-              # These are review prompts, never quality scores.
               if tables_visible>=4:
                   observations.append(f'{tables_visible} tableaux visibles : vérifier chacun selon sa fonction, sans plafond automatique')
-              if tables_hidden:
-                  observations.append(f'{tables_hidden} tableau(x) replié(s) : vérifier si certains sont décisifs et doivent redevenir visibles')
+              if tables_closed:
+                  observations.append(f'{tables_closed} tableau(x) de détail fermé(s) : vérifier seulement si une information décisive reste cachée')
               if words>=2200 and not has_visual:
                   observations.append('page longue sans visuel : acceptable si aucune relation/processus ne gagne à être montré')
               if intent=='comparison/arbitrage' and tables_total==0:
-                  observations.append('comparaison sans tableau : peut être très bien si la comparaison narrative est plus claire')
-              if intent=='analysis/article' and tables_visible>=3:
+                  observations.append('comparaison sans tableau : acceptable si la comparaison narrative est plus claire')
+              if intent=='analysis/article' and tables_visible>=5:
                   observations.append('article analytique très tabulaire : vérifier que chaque tableau porte une étape de l’argument')
               if cases==0 and intent in ('decision/acquisition','comparison/arbitrage','calculation/simulation'):
                   observations.append('aucun cas explicite : en ajouter seulement si un exemple lève une ambiguïté réelle')
               if internal<2 and intent not in ('analysis/article','reference/deep-dive'):
                   observations.append('vérifier s’il existe une étape suivante réellement utile')
 
-              rows.append(dict(rel=rel,intent=intent,issues=issues,observations=observations,words=words,h2=len(h2s),tables=tables_visible,tables_total=tables_total,tables_hidden=tables_hidden,cases=cases,numbers=numbers,sources=sources,visual=has_visual))
+              rows.append(dict(rel=rel,intent=intent,issues=issues,observations=observations,words=words,h2=len(h2s),tables=tables_visible,tables_total=tables_total,tables_closed=tables_closed,tables_open_details=tables_open_details,cases=cases,numbers=numbers,sources=sources,visual=has_visual))
 
           print(f'Indexable dossiers/articles audités: {len(rows)}')
           print('\nDOCTRINE : exigence commune, formes différentes selon la fonction de la page.')
@@ -197,12 +185,11 @@ jobs:
               print(f'\n## {intent}')
               for r in grouped[intent]: print(f"{r['rel']} | "+' ; '.join(r['issues']))
 
-          # Migration follow-up: where the former blanket table-collapse rule deserves a human re-check.
-          hidden=sorted([r for r in rows if r['tables_hidden']],key=lambda r:(-r['tables_hidden'],-r['tables_total']))
-          print('\nPriorité de contrôle de la hiérarchie des tableaux repliés (informatif):')
+          hidden=sorted([r for r in rows if r['tables_closed']],key=lambda r:(-r['tables_closed'],-r['tables_total']))
+          print('\nPages ayant encore le plus de tableaux de détail fermés (informatif):')
           for r in hidden[:30]:
-              print(f"{r['tables_hidden']:2} replié(s) / {r['tables_total']:2} total | {r['intent']:<22} | {r['rel']}")
-          print(f'Pages concernées au total: {len(hidden)}')
+              print(f"{r['tables_closed']:2} fermés / {r['tables_open_details']:2} ouverts dans details / {r['tables_total']:2} total | {r['intent']:<22} | {r['rel']}")
+          print(f'Pages avec au moins un tableau de détail fermé: {len(hidden)}')
 
           observed=[r for r in rows if r['observations']]
           print('\nAutres observations non bloquantes (30 premières):')
@@ -211,6 +198,6 @@ jobs:
 
           print('\nRÈGLE DE LECTURE:')
           print('- Une alerte signifie « relire cette adéquation », jamais « appliquer automatiquement un composant ».')
-          print('- Un quatrième ou cinquième tableau peut rester visible s’il est indispensable à la décision.')
+          print('- Un tableau principal peut être le quatrième ou le huitième de la page et rester visible.')
+          print('- Un tableau de détail peut être le premier et rester replié si sa lecture n’est pas nécessaire à la décision.')
           print('- Une page peut n’avoir aucun tableau, aucun chiffre ou aucun visuel si sa fonction ne les exige pas.')
-          print('- Les tableaux repliés par la migration précédente doivent être réévalués selon leur importance, pas selon leur position.')
