@@ -1,0 +1,38 @@
+name: Fix health page next action
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/fix-health-next-action.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Add a proportionate next action
+        shell: python
+        run: |
+          from pathlib import Path
+          p=Path('dossiers/sante-travail-equilibre-vie-pro-perso.html')
+          s=p.read_text(encoding='utf-8')
+          marker='<h2>8. Le bon objectif n’est pas « tenir davantage »</h2>'
+          block='''<h2>8. Ce que vous pouvez faire maintenant</h2>\n<div class="decision-box"><h3>Ne changez qu’un niveau à la fois lorsque c’est possible</h3><p><strong>1.</strong> Nommez la contrainte la plus concrète : tâche, horaire, charge, site, trajet, outil, relation ou exposition. <strong>2.</strong> Identifiez qui peut réellement agir dessus : manager, employeur, service de prévention et de santé au travail ou autre interlocuteur compétent selon la situation. <strong>3.</strong> Demandez ou testez une modification précise plutôt qu’un changement global lorsque cela reste compatible avec votre sécurité et votre santé. <strong>4.</strong> Fixez une date de réévaluation : si l’exposition reste la même malgré les modifications réalistes, réouvrez une solution plus lourde — mobilité, changement de fonction ou reconversion.</p></div>\n\n<h2>9. Le bon objectif n’est pas « tenir davantage »</h2>'''
+          if 'Ce que vous pouvez faire maintenant' not in s:
+              if marker not in s: raise SystemExit('marker not found')
+              s=s.replace(marker,block,1)
+              p.write_text(s,encoding='utf-8')
+      - name: Commit
+        run: |
+          git diff --check
+          git config user.name "ContreEvidence"
+          git config user.email "contreevidence@gmail.com"
+          git add dossiers/sante-travail-equilibre-vie-pro-perso.html
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Add a clear next action to health at work dossier"
+          git push
