@@ -25,9 +25,7 @@ jobs:
 
           files=list(Path('dossiers').glob('*.html'))+list(Path('articles').glob('*.html'))
           changed=[]
-
-          # Ordered replacements: specific expressions first, then safe generic grammatical corrections.
-          literal=[
+          specific=[
             ('AI Risk Management cadre','AI Risk Management Framework'),
             ('gatekeepers de facturation et paiement','points de blocage de facturation et de paiement'),
             ('gatekeepers du prix','contraintes qui verrouillent le prix'),
@@ -40,34 +38,26 @@ jobs:
             ('immersion, gatekeepers, contraintes','immersion, conditions d’accès, contraintes'),
             ('Gatekeepers, canaux','Décideurs, canaux'),
             ('gatekeepers, hypothèses','décideurs, hypothèses'),
-            ('durée de sécurité patrimonial','durée de sécurité patrimoniale'),
-            ('durée de sécurité court','durée de sécurité courte'),
-            ('durée de sécurité long','durée de sécurité longue'),
-            ('la durée de sécurité brut','la durée de sécurité brute'),
-            ('La durée de sécurité brut','La durée de sécurité brute'),
-            ('la durée de sécurité immédiat','la durée de sécurité immédiate'),
-            ('La durée de sécurité immédiat','La durée de sécurité immédiate'),
-            ('la durée de sécurité trop court','la durée de sécurité trop courte'),
-            ('La durée de sécurité trop court','La durée de sécurité trop courte'),
-            ('La durée de sécurité doit être calculé','La durée de sécurité doit être calculée'),
-            ('le durée de sécurité','la durée de sécurité'),
-            ('Le durée de sécurité','La durée de sécurité'),
-            ('un durée de sécurité','une durée de sécurité'),
-            ('Un durée de sécurité','Une durée de sécurité'),
-            ('du durée de sécurité','de la durée de sécurité'),
-            ('Du durée de sécurité','De la durée de sécurité'),
           ]
 
           for p in files:
             s=p.read_text(encoding='utf-8',errors='replace')
             original=s
-            for old,new in literal:
+            for old,new in specific:
               s=s.replace(old,new)
-            # Remaining English shorthand from the migration should be expressed in French,
-            # except official proper names such as NIST AI Risk Management Framework.
             s=re.sub(r'\brunway\b','durée de sécurité',s,flags=re.I)
             s=re.sub(r'\bgatekeepers\b','décideurs',s,flags=re.I)
             s=re.sub(r'\bgatekeeper\b','décideur',s,flags=re.I)
+            s=re.sub(r'\b[Ll]e durée de sécurité\b',lambda m:'La durée de sécurité' if m.group(0)[0].isupper() else 'la durée de sécurité',s)
+            s=re.sub(r'\b[Uu]n durée de sécurité\b',lambda m:'Une durée de sécurité' if m.group(0)[0].isupper() else 'une durée de sécurité',s)
+            s=re.sub(r'\b[Dd]u durée de sécurité\b',lambda m:'De la durée de sécurité' if m.group(0)[0].isupper() else 'de la durée de sécurité',s)
+            s=re.sub(r'\bdurée de sécurité patrimonial\b','durée de sécurité patrimoniale',s,flags=re.I)
+            s=re.sub(r'\bdurée de sécurité court\b','durée de sécurité courte',s,flags=re.I)
+            s=re.sub(r'\bdurée de sécurité long\b','durée de sécurité longue',s,flags=re.I)
+            s=re.sub(r'\bdurée de sécurité brut\b','durée de sécurité brute',s,flags=re.I)
+            s=re.sub(r'\bdurée de sécurité immédiat\b','durée de sécurité immédiate',s,flags=re.I)
+            s=re.sub(r'\bdurée de sécurité trop court\b','durée de sécurité trop courte',s,flags=re.I)
+            s=s.replace('La durée de sécurité doit être calculé','La durée de sécurité doit être calculée')
             if p.as_posix()=='dossiers/seuils-maturite-patrimoniale.html':
               s=s.replace('"dateModified":"2026-08-16"','"dateModified":"2026-08-17"')
             if s!=original:
