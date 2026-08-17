@@ -1,0 +1,184 @@
+name: Editorial standard migration
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/editorial-standard-migration.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Migrate legacy indexable content conservatively
+        shell: python
+        run: |
+          from __future__ import annotations
+          import html
+          import pathlib
+          import re
+          import urllib.parse
+          import xml.etree.ElementTree as ET
+
+          root=pathlib.Path('.').resolve()
+          prefix='https://contreevidence.github.io/'
+          ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls=[n.text.strip() for n in ET.parse('sitemap.xml').findall('.//s:loc',ns) if n.text]
+          rels=[]
+          for url in urls:
+              if not url.startswith(prefix): continue
+              rel=urllib.parse.unquote(url[len(prefix):]) or 'index.html'
+              if rel.startswith('dossiers/') or rel.startswith('articles/'):
+                  rels.append(rel)
+
+          def plain(s):
+              return re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>',' ',s))).strip()
+
+          def add_article_marker(raw):
+              m=re.search(r'<article\b([^>]*)>',raw,re.I)
+              if not m: return raw
+              attrs=m.group(1)
+              if 'data-ce-editorial-standard=' in attrs: return raw
+              cm=re.search(r'class=(["\'])(.*?)\1',attrs,re.I|re.S)
+              if cm:
+                  classes=cm.group(2).split()
+                  if 'legacy-polished' not in classes: classes.append('legacy-polished')
+                  attrs=attrs[:cm.start()]+f'class={cm.group(1)}{" ".join(classes)}{cm.group(1)}'+attrs[cm.end():]
+              else:
+                  attrs+=' class="legacy-polished"'
+              attrs+=' data-ce-editorial-standard="2026-08-17"'
+              return raw[:m.start()]+f'<article{attrs}>'+raw[m.end():]
+
+          def find_answer_end(raw):
+              m=re.search(r'<div\b[^>]*class=(["\'])[^"\']*\banswer-box\b[^"\']*\1[^>]*>',raw,re.I)
+              if not m: return None
+              token_re=re.compile(r'<div\b[^>]*>|</div\s*>',re.I)
+              depth=0
+              for t in token_re.finditer(raw,m.start()):
+                  if t.group(0).lower().startswith('<div'): depth+=1
+                  else:
+                      depth-=1
+                      if depth==0: return t.end()
+              return None
+
+          def make_route(raw):
+              if 'ce-legacy-route' in raw: return raw
+              headings=[]
+              for h in re.findall(r'<h2\b[^>]*>(.*?)</h2>',raw,re.I|re.S):
+                  text=plain(h)
+                  if not text: continue
+                  if re.search(r'^(?:en bref|la réponse|réponse|à retenir|si vous ne lisez|sources?|à lire ensuite)',text,re.I):
+                      continue
+                  headings.append(text)
+              if len(headings)<3: return raw
+              chosen=headings[:3]
+              route='<div class="ce-legacy-route" role="img" aria-label="Parcours de lecture du dossier"><h3>Le parcours de cette page</h3><div class="ce-legacy-route-grid">'
+              for i,text in enumerate(chosen,1):
+                  label=re.sub(r'^\s*\d+[.)·:-]?\s*','',text).strip()
+                  if len(label)>92: label=label[:89].rstrip()+'…'
+                  route+=f'<div class="ce-legacy-route-step"><b>Étape {i}</b><span>{html.escape(label)}</span></div>'
+              route+='</div></div>'
+              pos=find_answer_end(raw)
+              if pos is None:
+                  am=re.search(r'<article\b[^>]*>',raw,re.I)
+                  pos=am.end() if am else None
+              if pos is None: return raw
+              return raw[:pos]+route+raw[pos:]
+
+          def collapse_late_tables(raw):
+              pattern=re.compile(r'<div\b[^>]*class=(["\'])[^"\']*\bcompare-wrap\b[^"\']*\1[^>]*>\s*<table\b.*?</table>\s*</div>',re.I|re.S)
+              matches=list(pattern.finditer(raw))
+              if len(matches)<4: return raw
+              out=[]; last=0
+              for idx,m in enumerate(matches,1):
+                  out.append(raw[last:m.start()])
+                  block=m.group(0)
+                  if idx<=3:
+                      out.append(block)
+                  else:
+                      before=raw[max(0,m.start()-120):m.start()].lower()
+                      if '<details' in before and '</summary>' in before:
+                          out.append(block)
+                      else:
+                          out.append('<details class="ce-legacy-detail"><summary>Voir le tableau détaillé</summary>'+block+'</details>')
+                  last=m.end()
+              out.append(raw[last:])
+              return ''.join(out)
+
+          replacements=[
+              (r'\bgatekeepers\b','interlocuteurs qui décident'),
+              (r'\bgatekeeper\b','interlocuteur qui décide'),
+              (r'\brunway\b','durée de sécurité'),
+              (r'\bframework\b','cadre'),
+              (r'\bscorecard\b','grille'),
+              (r'\bflywheel\b','boucle de croissance'),
+              (r'\bproof points?\b','preuves concrètes'),
+              (r'\buse cases?\b','cas d’usage'),
+              (r'\bred flags?\b','signaux d’alerte'),
+          ]
+          def translate_text_nodes(raw):
+              def repl(m):
+                  text=m.group(1)
+                  for pat,replacement in replacements:
+                      text=re.sub(pat,replacement,text,flags=re.I)
+                  return '>'+text+'<'
+              return re.sub(r'>([^<>]+)<',repl,raw)
+
+          changed=[]
+          skipped=[]
+          for rel in rels:
+              p=root/rel
+              if not p.exists(): continue
+              raw=p.read_text(encoding='utf-8',errors='replace')
+              if re.search(r'<meta\s+name=["\']robots["\'][^>]*noindex',raw,re.I): continue
+              if 'novice-prose' in raw or 'data-ce-editorial-standard=' in raw:
+                  skipped.append(rel); continue
+              original=raw
+              if 'editorial-standard.css' not in raw:
+                  raw=raw.replace('</head>','<link rel="stylesheet" href="../assets/editorial-standard.css?v=20260817-1"/></head>',1)
+              raw=add_article_marker(raw)
+              raw=make_route(raw)
+              raw=collapse_late_tables(raw)
+              raw=translate_text_nodes(raw)
+              raw=re.sub(r'(<meta\s+name=["\']dateModified["\']\s+content=["\'])\d{4}-\d{2}-\d{2}(["\'])',r'\g<1>2026-08-17\2',raw,flags=re.I)
+              raw=re.sub(r'(<meta\s+property=["\']article:modified_time["\']\s+content=["\'])\d{4}-\d{2}-\d{2}(["\'])',r'\g<1>2026-08-17\2',raw,flags=re.I)
+              raw=re.sub(r'(Mis à jour le\s+)\d{2}/\d{2}/\d{4}',r'\g<1>17/08/2026',raw,flags=re.I)
+              if raw!=original:
+                  p.write_text(raw,encoding='utf-8')
+                  changed.append(rel)
+
+          print(f'Pages migrées: {len(changed)}')
+          print(f'Pages déjà au nouveau standard / ignorées: {len(skipped)}')
+          for rel in changed: print('MIGRATED',rel)
+      - name: Validate diff
+        run: |
+          git diff --check
+          python3 - <<'PY'
+          import pathlib,re,sys
+          bad=[]
+          for p in list(pathlib.Path('dossiers').glob('*.html'))+list(pathlib.Path('articles').glob('*.html')):
+              s=p.read_text(encoding='utf-8',errors='replace')
+              if s.count('<details class="ce-legacy-detail">') != s.count('</details>') and 'ce-legacy-detail' in s:
+                  bad.append(str(p))
+          if bad:
+              print('Details imbalance:',*bad,sep='\n')
+              sys.exit(1)
+          PY
+      - name: Commit migration
+        run: |
+          if git diff --quiet -- dossiers articles; then
+            echo "No legacy pages required migration."
+            exit 0
+          fi
+          git config user.name "ContreEvidence"
+          git config user.email "contreevidence@gmail.com"
+          git add dossiers articles
+          git commit -m "Apply new editorial standard across legacy content"
+          git push
