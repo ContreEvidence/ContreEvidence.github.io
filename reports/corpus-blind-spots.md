@@ -48,6 +48,7 @@ Pages indexables analysées : **130**. Pages `noindex` exclues : **79**.
 | 9 | 12/15 | immobilier / crédit / indivision | `dossiers/indivision-couple-separation-rachat-soulte.html` | effets de second ordre, valeur d’option / irréversibilité, condition de renversement |
 | 9 | 12/15 | patrimoine / investissement / retraite | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | attendre / statu quo, transfert de risque, condition de renversement |
 | 7 | 7/15 | emploi / carrière / qualification | `dossiers/debloquer-demarche-administrative.html` | objectif réel / substitution du moyen, condition de renversement |
+| 6 | 8/15 | emploi / carrière / qualification | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` | substitution, condition de renversement |
 | 6 | 9/15 | immobilier / crédit / indivision | `dossiers/cout-complet-achat-immobilier.html` | acteur/gatekeeper, condition de renversement |
 | 6 | 9/15 | patrimoine / investissement / retraite | `dossiers/demenager-pour-un-emploi-salaire-minimum.html` | attendre / statu quo, transfert de risque |
 | 6 | 9/15 | immobilier / crédit / indivision | `dossiers/finances-investissement-locatif.html` | acteur/gatekeeper, condition de renversement |
@@ -61,13 +62,12 @@ Pages indexables analysées : **130**. Pages `noindex` exclues : **79**.
 | 6 | 10/15 | patrimoine / investissement / retraite | `dossiers/patrimoine-permet-il-travailler-moins.html` | transfert de risque, condition de renversement |
 | 6 | 10/15 | patrimoine / investissement / retraite | `dossiers/premier-salaire-18-ans-chez-parents.html` | effets de second ordre, transfert de risque |
 | 6 | 10/15 | patrimoine / investissement / retraite | `dossiers/preparer-retraite-droits-epargne-logement.html` | transfert de risque, condition de renversement |
-| 6 | 10/15 | emploi / carrière / qualification | `dossiers/quitter-emploi-stable-ou-rester.html` | objectif réel / substitution du moyen, condition de renversement |
 
 ## Lecture par cluster
 
 ### emploi / carrière / qualification
 
-Pages : **40**. Angles le plus souvent non détectés : **transfert de risque** (28), **valeur d’option / irréversibilité** (23), **effets de second ordre** (20), **substitution** (19), **objectif réel / substitution du moyen** (17), **attendre / statu quo** (14), **condition de renversement** (14).
+Pages : **40**. Angles le plus souvent non détectés : **transfert de risque** (28), **valeur d’option / irréversibilité** (24), **effets de second ordre** (21), **substitution** (20), **objectif réel / substitution du moyen** (17), **attendre / statu quo** (15), **condition de renversement** (15).
 
 ### entrepreneuriat / activité
 
