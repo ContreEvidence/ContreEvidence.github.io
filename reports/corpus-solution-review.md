@@ -23,6 +23,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/temps-energie-qualite-vie.html` | `870bee99dfb0325a0253f9000e2414580b1b8e3c` | `a4a69ff672a469d2e3f8f5718fc188fdaab535fd` |
 | `dossiers/dependance-gros-client.html` | `aff1498bfed0cdae7eb745a22fc9815b7c5ef260` | `bdbca2d0a06cf686a0fc4786708fd14489f953e1` |
 | `dossiers/indivision-loyers-charges-comptes.html` | `17a2f1637380da7fdce685ccf909e3eeb3d5523a` | `58e167161f9837e65d22f8c8ead933f1bada5b48` |
+| `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` | `e782289f8d68aab912acdd201a649e7782204756` | `2a0b506fae49029d696b954ea5162158fd27ccab` |
 | `dossiers/comparer-strategies-immobilieres.html` | `06acc378800acfdcbb52e5992f3067d5b16a0b72` | `c67bf5147a80d76880553802d97ac8e805724bc1` |
 | `dossiers/etude-marche-terrain.html` | `d7865b294ff9c7d2ee08a0265097e17bc1061c3c` | `f90b72113ee549aa64fd58cceb44980f67e77160` |
 | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` | `d6585d192caf10f10a45195559ae0365fe70cf46` | `ed75a3a647e5a990033e2166ed48b67223ebdea9` |
@@ -37,7 +38,6 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/liquidites-reserve-securite.html` | `ae88ad8ae7c6981800827b83825e37da0c51d1c5` | `dbc55f545460a92295bc3e0b35f075039e34e829` |
 | `dossiers/assurer-ou-autoassurer-risques.html` | `6bd9c11fce81a3115d0115986a602f1e4fb2753e` | `9eee2066642ab55d9556dd47be2f89847888709f` |
 | `dossiers/calculer-prix-minimum-rentable.html` | `1597bb81c5cba87c2e493fff0aa8a3bc640ac438` | `9625f1c2b342c3a6765072aa31ffb8c7c846fef2` |
-| `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` | `e782289f8d68aab912acdd201a649e7782204756` | `959ef22860e5b38b622378e56ec4a2de9123e610` |
 | `articles/travailler-beaucoup-gagner-peu-prix.html` | `53df5406709273e5dedfe3ae2a2085c3913bb872` | `ef5958de28d3016d2ede477b860eb43a06bdddb6` |
 | `articles/grosse-entree-argent-que-faire.html` | `8055c8aabec056f575c0241372a9f49178d761e3` | `2d169248963e5f1ddffee684db3a659be22bc0af` |
 | `dossiers/tresorerie-bfr-entreprise.html` | `d417764e8cd3a736d178f66ff2be9427bcbb0fdd` | `926690c824cc8534dd133bc9d2c627d58c084223` |
@@ -155,6 +155,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 6/9 | 1460 | à revoir après changement | `dossiers/temps-energie-qualite-vie.html` |
 | 6/9 | 1463 | à revoir après changement | `dossiers/dependance-gros-client.html` |
 | 6/9 | 2785 | à revoir après changement | `dossiers/indivision-loyers-charges-comptes.html` |
+| 7/9 | 1061 | à revoir après changement | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` |
 | 7/9 | 1222 | à revoir après changement | `dossiers/comparer-strategies-immobilieres.html` |
 | 7/9 | 1285 | humaine ✓ | `dossiers/competences-qualification-employabilite.html` |
 | 7/9 | 1303 | humaine ✓ | `dossiers/garages-parkings-locaux-commerciaux.html` |
@@ -182,7 +183,6 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1319 | à revoir après changement | `dossiers/assurer-ou-autoassurer-risques.html` |
 | 8/9 | 1334 | à revoir après changement | `dossiers/calculer-prix-minimum-rentable.html` |
 | 8/9 | 1337 | humaine ✓ | `dossiers/competent-mais-invisible-travail.html` |
-| 8/9 | 1344 | à revoir après changement | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` |
 | 8/9 | 1360 | humaine ✓ | `dossiers/quitter-travail-reconversion-sans-se-fragiliser.html` |
 | 8/9 | 1362 | à revoir après changement | `articles/travailler-beaucoup-gagner-peu-prix.html` |
 | 8/9 | 1364 | humaine ✓ | `articles/premiere-chance-sans-experience.html` |
