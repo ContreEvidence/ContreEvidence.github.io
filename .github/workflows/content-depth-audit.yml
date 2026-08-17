@@ -22,11 +22,7 @@ jobs:
         shell: python
         run: |
           from __future__ import annotations
-          import html
-          import pathlib
-          import re
-          import urllib.parse
-          import xml.etree.ElementTree as ET
+          import html, pathlib, re, urllib.parse, xml.etree.ElementTree as ET
           from collections import Counter, defaultdict
 
           root=pathlib.Path('.').resolve()
@@ -39,6 +35,7 @@ jobs:
           title_re=re.compile(r'<title\b[^>]*>(.*?)</title>',re.I|re.S)
           h1_re=re.compile(r'<h1\b[^>]*>(.*?)</h1>',re.I|re.S)
           h2_re=re.compile(r'<h2\b[^>]*>(.*?)</h2>',re.I|re.S)
+          desc_re=re.compile(r'<meta\s+name=["\']description["\']\s+content=["\'](.*?)["\']\s*/?>',re.I|re.S)
           table_re=re.compile(r'<table\b',re.I)
           details_re=re.compile(r'<details\b([^>]*)>(.*?)</details\s*>',re.I|re.S)
           source_re=re.compile(r'href=["\']https?://([^/"\']+)',re.I)
@@ -48,7 +45,7 @@ jobs:
           case_re=re.compile(r'\b(?:cas|exemple|scénario|profil|simulation)\b',re.I)
           action_re=re.compile(r'\b(?:plan d.?action|protocole|checklist|à faire|étapes?|questions à poser|commencez|faites|vérifiez|comparez|décidez|choisissez|calculez|mesurez)\b',re.I)
           legal_re=re.compile(r'\b(?:loi|article\s+\d+|code\s+(?:civil|du travail|monétaire|monetaire)|fiscal|impôt|impot|juridique|droit|obligation|réglement|reglement|hcsf|urssaf|licenciement|indivision|succession|donation)\b',re.I)
-          jargon_re=re.compile(r'\b(?:gatekeeper|runway|framework|scorecard|flywheel|proof point|use case|red flags?)\b',re.I)
+          jargon_re=re.compile(r'\b(?:gatekeeper|runway|scorecard|flywheel|proof point|use case|red flags?)\b',re.I)
           visual_re=re.compile(r'(?:<figure\b|role=["\']img["\']|class=["\'][^"\']*(?:ce-visual|diagram|flow|map|ladder|triage|path|steps|timeline|priority-visual)[^"\']*["\'])',re.I)
           navigation_re=re.compile(r'(?:ce-legacy-route|toc|table-of-contents|sommaire|parcours de cette page)',re.I)
           answer_re=re.compile(r'class=["\'][^"\']*answer-box',re.I)
@@ -63,19 +60,16 @@ jobs:
           )
           primary_market=('msci.com','spglobal.com','ecb.europa.eu','eurostat.ec.europa.eu')
 
-          def plain(s):
-              return re.sub(r'\s+',' ',html.unescape(tag_re.sub(' ',s))).strip()
+          def plain(s): return re.sub(r'\s+',' ',html.unescape(tag_re.sub(' ',s))).strip()
+          def count_hosts(hosts,domains): return sum(1 for host in hosts if any(host==d or host.endswith('.'+d) for d in domains))
 
-          def count_hosts(hosts,domains):
-              return sum(1 for host in hosts if any(host==d or host.endswith('.'+d) for d in domains))
-
-          def classify_intent(rel,title,h1):
+          def classify_intent(rel,title,h1,description):
               name=pathlib.PurePosixPath(rel.lower()).name
-              signal=f'{name} {title} {h1}'.lower()
+              signal=f'{name} {title} {h1} {description}'.lower()
               explicit_comparison=(
                   'comparer' in signal or 'comparatif' in signal or ' ou ' in h1.lower() or
                   name.startswith(('comparer-','acheter-ou-louer','rembourser-credit-ou-investir','location-nue-ou-meublee','assurer-ou-autoassurer','embaucher-ou-sous-traiter')) or
-                  any(x in signal for x in ('garder, vendre','garder vendre','acheter, crédit, loa','achat, crédit, loa'))
+                  any(x in signal for x in ('garder, vendre','garder vendre','acheter, crédit, loa','achat, crédit, loa','quelle place donner','quelle allocation','selon votre situation'))
               )
               if explicit_comparison: return 'comparison/arbitrage'
               explicit_calculation=(
@@ -93,90 +87,66 @@ jobs:
               if rel.lower().startswith('articles/'): return 'analysis/article'
               return 'reference/deep-dive'
 
-          def expectations(intent,title_h1):
-              quantitative=bool(re.search(r'\b(?:combien|coût|cout|prix|budget nécessaire|salaire minimum|chiffre d.affaires|rentabilité|rentabilite|mensualité|mensualite)\b',title_h1,re.I))
-              regulatory=bool(legal_re.search(title_h1))
-              return {
-                  'answer': intent=='decision/acquisition',
-                  'action': intent in ('decision/acquisition','procedure/action'),
-                  'quantification': intent=='calculation/simulation' or quantitative,
-                  'sources': regulatory,
-                  'navigation': intent=='reference/deep-dive',
-              }
+          def expectations(intent,promise):
+              quantitative=bool(re.search(r'\b(?:combien|coût|cout|prix|budget nécessaire|salaire minimum|chiffre d.affaires|rentabilité|rentabilite|mensualité|mensualite)\b',promise,re.I))
+              regulatory=bool(legal_re.search(promise))
+              return {'answer':intent=='decision/acquisition','action':intent in ('decision/acquisition','procedure/action'),'quantification':intent=='calculation/simulation' or quantitative,'sources':regulatory,'navigation':intent=='reference/deep-dive'}
 
           rows=[]
           for url in urls:
               if not url.startswith(prefix): continue
               rel=urllib.parse.unquote(url[len(prefix):]) or 'index.html'
-              if not (rel.startswith('dossiers/') or rel.startswith('articles/')): continue
+              if not rel.startswith(('dossiers/','articles/')): continue
               page=root/rel
               if not page.exists(): continue
               raw=page.read_text(encoding='utf-8',errors='replace')
               if re.search(r'<meta\s+name=["\']robots["\'][^>]*noindex',raw,re.I): continue
 
-              clean=script_re.sub(' ',raw)
-              visible=plain(clean)
+              clean=script_re.sub(' ',raw); visible=plain(clean)
               title=plain(title_re.search(raw).group(1)) if title_re.search(raw) else ''
               h1=plain(h1_re.search(raw).group(1)) if h1_re.search(raw) else ''
+              description=plain(desc_re.search(raw).group(1)) if desc_re.search(raw) else ''
               h2s=[plain(x) for x in h2_re.findall(raw)]
-              words=len(word_re.findall(visible))
-              tables_total=len(table_re.findall(raw))
-              tables_closed=0
-              tables_open_details=0
+              words=len(word_re.findall(visible)); tables_total=len(table_re.findall(raw))
+              tables_closed=0; tables_open_details=0
               for attrs,body in details_re.findall(raw):
                   count=len(table_re.findall(body))
                   if re.search(r'\bopen\b',attrs,re.I): tables_open_details+=count
                   else: tables_closed+=count
               tables_visible=max(0,tables_total-tables_closed)
-              cases=len(case_re.findall(visible))
-              numbers=len(number_re.findall(visible))
+              cases=len(case_re.findall(visible)); numbers=len(number_re.findall(visible))
               hosts=[h.lower() for h in source_re.findall(raw)]
               sources=count_hosts(hosts,institutional)+count_hosts(hosts,primary_market)
               internal=len(internal_link_re.findall(raw))
-              has_answer=bool(answer_re.search(raw))
-              has_visual=bool(visual_re.search(raw))
-              has_action=bool(decision_box_re.search(raw) or action_re.search(visible))
-              has_navigation=bool(navigation_re.search(raw))
+              has_answer=bool(answer_re.search(raw)); has_visual=bool(visual_re.search(raw)); has_action=bool(decision_box_re.search(raw) or action_re.search(visible)); has_navigation=bool(navigation_re.search(raw))
               jargon=len(jargon_re.findall(visible))
 
-              intent=classify_intent(rel,title,h1)
-              exp=expectations(intent,f'{title} {h1}')
-              issues=[]
-              observations=[]
-
+              intent=classify_intent(rel,title,h1,description)
+              promise=f'{title} {h1} {description}'
+              exp=expectations(intent,promise)
+              issues=[]; observations=[]
               if exp['answer'] and not has_answer: issues.append('promesse de décision sans réponse immédiate identifiable')
               if exp['action'] and not has_action: issues.append('promesse orientée action sans prochaine action claire')
               if exp['quantification'] and numbers<2: issues.append('promesse quantitative avec très peu de quantification')
               if exp['sources'] and sources==0: issues.append('sujet réglementaire/juridique sans source institutionnelle détectée')
-              if exp['navigation'] and words>=2600 and len(h2s)>=15 and not has_navigation:
-                  observations.append('référence très longue : vérifier si la navigation reste confortable')
+              if exp['navigation'] and words>=2600 and len(h2s)>=15 and not has_navigation: observations.append('référence très longue : vérifier si la navigation reste confortable')
               if jargon: issues.append('jargon anglais/non nécessaire détecté')
 
-              if tables_visible>=4:
-                  observations.append(f'{tables_visible} tableaux visibles : vérifier chacun selon sa fonction, sans plafond automatique')
-              if tables_closed:
-                  observations.append(f'{tables_closed} tableau(x) de détail fermé(s) : vérifier seulement si une information décisive reste cachée')
-              if words>=2200 and not has_visual:
-                  observations.append('page longue sans visuel : acceptable si aucune relation/processus ne gagne à être montré')
-              if intent=='comparison/arbitrage' and tables_total==0:
-                  observations.append('comparaison sans tableau : acceptable si la comparaison narrative est plus claire')
-              if intent=='analysis/article' and tables_visible>=5:
-                  observations.append('article analytique très tabulaire : vérifier que chaque tableau porte une étape de l’argument')
-              if cases==0 and intent in ('decision/acquisition','comparison/arbitrage','calculation/simulation'):
-                  observations.append('aucun cas explicite : en ajouter seulement si un exemple lève une ambiguïté réelle')
-              if internal<2 and intent not in ('analysis/article','reference/deep-dive'):
-                  observations.append('vérifier s’il existe une étape suivante réellement utile')
-
+              if tables_visible>=4: observations.append(f'{tables_visible} tableaux visibles : vérifier chacun selon sa fonction, sans plafond automatique')
+              if tables_closed: observations.append(f'{tables_closed} tableau(x) de détail fermé(s) : vérifier seulement si une information décisive reste cachée')
+              if words>=2200 and not has_visual: observations.append('page longue sans visuel : acceptable si aucune relation/processus ne gagne à être montré')
+              if intent=='comparison/arbitrage' and tables_total==0: observations.append('comparaison sans tableau : acceptable si la comparaison narrative est plus claire')
+              if intent=='analysis/article' and tables_visible>=5: observations.append('article analytique très tabulaire : vérifier que chaque tableau porte une étape de l’argument')
+              if cases==0 and intent in ('decision/acquisition','comparison/arbitrage','calculation/simulation'): observations.append('aucun cas explicite : en ajouter seulement si un exemple lève une ambiguïté réelle')
+              if internal<2 and intent not in ('analysis/article','reference/deep-dive'): observations.append('vérifier s’il existe une étape suivante réellement utile')
               rows.append(dict(rel=rel,intent=intent,issues=issues,observations=observations,words=words,h2=len(h2s),tables=tables_visible,tables_total=tables_total,tables_closed=tables_closed,tables_open_details=tables_open_details,cases=cases,numbers=numbers,sources=sources,visual=has_visual))
 
           print(f'Indexable dossiers/articles audités: {len(rows)}')
           print('\nDOCTRINE : exigence commune, formes différentes selon la fonction de la page.')
           print('Aucun nombre de tableaux, visuels, chiffres, exemples ou sections n’est valorisé ou pénalisé en soi.')
-
           by_intent=Counter(r['intent'] for r in rows)
           print('\nRépartition par intention probable:')
           for intent,count in sorted(by_intent.items()): print(f'- {intent}: {count}')
-
           needs=[r for r in rows if r['issues']]
           print(f'\nInadéquations probables à examiner humainement: {len(needs)}')
           grouped=defaultdict(list)
@@ -184,18 +154,14 @@ jobs:
           for intent in sorted(grouped):
               print(f'\n## {intent}')
               for r in grouped[intent]: print(f"{r['rel']} | "+' ; '.join(r['issues']))
-
           hidden=sorted([r for r in rows if r['tables_closed']],key=lambda r:(-r['tables_closed'],-r['tables_total']))
           print('\nPages ayant encore le plus de tableaux de détail fermés (informatif):')
-          for r in hidden[:30]:
-              print(f"{r['tables_closed']:2} fermés / {r['tables_open_details']:2} ouverts dans details / {r['tables_total']:2} total | {r['intent']:<22} | {r['rel']}")
+          for r in hidden[:30]: print(f"{r['tables_closed']:2} fermés / {r['tables_open_details']:2} ouverts dans details / {r['tables_total']:2} total | {r['intent']:<22} | {r['rel']}")
           print(f'Pages avec au moins un tableau de détail fermé: {len(hidden)}')
-
           observed=[r for r in rows if r['observations']]
           print('\nAutres observations non bloquantes (30 premières):')
           for r in observed[:30]: print(f"{r['rel']} [{r['intent']}] | "+' ; '.join(r['observations']))
           if len(observed)>30: print(f'... {len(observed)-30} autres observations')
-
           print('\nRÈGLE DE LECTURE:')
           print('- Une alerte signifie « relire cette adéquation », jamais « appliquer automatiquement un composant ».')
           print('- Un tableau principal peut être le quatrième ou le huitième de la page et rester visible.')
