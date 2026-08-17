@@ -33,3 +33,5 @@ for path, anchor, figure in items:
         head += '<meta name="dateModified" content="2026-08-17"/>'
     head = re.sub(r'article:modified_time" content="[^"]+"', 'article:modified_time" content="2026-08-17"', head, count=1)
     p.write_text(head + '</head>' + tail, encoding='utf-8')
+
+# Trigger marker batch 39
