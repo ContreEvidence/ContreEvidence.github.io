@@ -31,6 +31,7 @@ Pages indexables analysées : **130**. Pages `noindex` exclues : **79**.
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/depenses-recurrentes-abonnements-assurances.html` | effets de second ordre, condition de renversement, valeur d’option / irréversibilité |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/immobilier-allocation-globale-patrimoine.html` | attendre / statu quo, transfert de risque, condition de renversement |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/protocole-verifier-reponse-ia.html` | attendre / statu quo, effets de second ordre, transfert de risque |
+| 9 | 9/15 | emploi / carrière / qualification | `dossiers/travailler-moins-vivre-mieux.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen |
 | 9 | 10/15 | patrimoine / investissement / retraite | `articles/frais-fiscalite-rendement-net.html` | attendre / statu quo, effets de second ordre, transfert de risque |
 | 9 | 10/15 | patrimoine / investissement / retraite | `articles/grosse-entree-argent-que-faire.html` | attendre / statu quo, transfert de risque, condition de renversement |
 | 9 | 10/15 | immobilier / crédit / indivision | `dossiers/indivision-succession-heritiers-vendre-partager.html` | acteur/gatekeeper, valeur d’option / irréversibilité, condition de renversement |
@@ -61,13 +62,12 @@ Pages indexables analysées : **130**. Pages `noindex` exclues : **79**.
 | 6 | 11/15 | patrimoine / investissement / retraite | `articles/comparatif-produits-bancaires.html` | transfert de risque, condition de renversement |
 | 6 | 11/15 | patrimoine / investissement / retraite | `articles/investir-grosse-somme-dun-coup-ou-progressivement.html` | condition de renversement, valeur d’option / irréversibilité |
 | 6 | 11/15 | entrepreneuriat / activité | `dossiers/ameliorer-processus-sans-degrader-service.html` | acteur/gatekeeper, attendre / statu quo |
-| 6 | 11/15 | immobilier / crédit / indivision | `dossiers/audit-copropriete-avant-achat.html` | acteur/gatekeeper, effets de second ordre |
 
 ## Lecture par cluster
 
 ### emploi / carrière / qualification
 
-Pages : **41**. Angles le plus souvent non détectés : **transfert de risque** (27), **valeur d’option / irréversibilité** (23), **effets de second ordre** (20), **substitution** (17), **objectif réel / substitution du moyen** (16), **attendre / statu quo** (15), **fractionnement** (13).
+Pages : **41**. Angles le plus souvent non détectés : **transfert de risque** (28), **valeur d’option / irréversibilité** (23), **effets de second ordre** (20), **substitution** (18), **objectif réel / substitution du moyen** (17), **attendre / statu quo** (15), **fractionnement** (13).
 
 ### entrepreneuriat / activité
 
