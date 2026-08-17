@@ -7,8 +7,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **17**
-- P1 — affirmation forte à resserrer ou vérifier : **71**
-- P2 — nécessité à examiner : **159**
+- P1 — affirmation forte à resserrer ou vérifier : **72**
+- P2 — nécessité à examiner : **161**
 - OK heuristique — source/périmètre détecté, fond restant à contrôler : **931**
 
 ## P0 — rouvrir en priorité
@@ -77,6 +77,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/assurer-ou-autoassurer-risques.html`
 - **fermeture forte sourcée mais formulation trop absolue** — Le salarié privé doit auditer trois étages avant d'acheter une protection en plus Régime obligatoire : Assurance Maladie et autres protections légales. _[signal-source, temporalité]_
 - **fermeture forte sourcée mais formulation trop absolue** — Pour un locataire, l'assurance des risques locatifs est obligatoire ; en copropriété, le propriétaire doit au minimum être couvert pour sa responsabilité civile. _[signal-source]_
+### `dossiers/audit-budget-60-minutes.html`
+- **affirmation forte sans signal de source explicite** — Elle varie mais ne peut pas être réduite à zéro durablement. _[périmètre]_
 ### `dossiers/comparer-deux-offres-emploi.html`
 - **affirmation forte sans signal de source explicite** — Une offre notée 90/100 reste mauvaise si elle viole votre seule contrainte absolue : revenu sous le plancher du foyer, horaires incompatibles, mobilité impossible, risque de santé, trajet intenable ou responsabilité que vous ne voulez plus exercer. _[périmètre, temporalité]_
 ### `dossiers/competences-qualification-employabilite.html`
@@ -212,7 +214,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Ce qui fait inverser la méthode d’apprentissage On privilégierait… Mais si… Alors… autoformation titre réglementaire requis parcours reconnu. pratique immédiate erreur dangereuse simulation / encadrement d’abord. formation longue écart très ciblé parcours court. certification gatekeeper valorise surtout les réalisations construire preuve et expérience. portfolio filtre automatique ou réglementaire exige un diplôme ob
 - **nécessité à requalifier ou sourcer** — Le niveau de preuve doit donc correspondre à la décision que le gatekeeper doit prendre.
 ### `dossiers/audit-budget-60-minutes.html`
-- **nécessité à requalifier ou sourcer** — Votre projet change Recalibrez le budget : il doit servir l’objectif actuel, pas l’ancien.
+- **nécessité à requalifier ou sourcer** — Engagements fixes Ce que vous devez payer avant même de choisir le reste. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Il doit vous montrer ce que votre vie coûte réellement — et ce qui absorbe votre marge sans que vous l’ayez choisi.
+- **nécessité à requalifier ou sourcer** — Il faut changer l’architecture, pas surveiller chaque café.
 ### `dossiers/automatiser-ou-non-processus.html`
 - **nécessité à requalifier ou sourcer** — Avant « automatiser ou non » : la tâche doit-elle encore exister ? _[temporalité]_
 - **nécessité à requalifier ou sourcer** — C'est pourquoi le nombre réel d'exécutions doit être mesuré avant de choisir l'outil. _[temporalité]_
