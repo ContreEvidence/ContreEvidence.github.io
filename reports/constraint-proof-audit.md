@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **17**
 - P1 — affirmation forte à resserrer ou vérifier : **71**
-- P2 — nécessité à examiner : **159**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **888**
+- P2 — nécessité à examiner : **155**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **892**
 
 ## P0 — rouvrir en priorité
 
@@ -237,11 +237,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Il faut les séparer puis reconstruire l’économie complète du projet.
 - **nécessité à requalifier ou sourcer** — Pour comparer achat et location, il faut donc éviter le raccourci « mensualité = loyer ».
 - **nécessité à requalifier ou sourcer** — Une hausse du prix ne doit jamais être la seule raison pour laquelle l’achat devient rentable.
-### `dossiers/decider-a-deux-travail-patrimoine.html`
-- **nécessité à requalifier ou sourcer** — Agent public ou contractuel : l’étiquette “public” ne suffit pas Le couple doit regarder le contrat et la situation réelle : titulaire, contractuel, durée du contrat, mobilité, période de prise de poste, perspectives.
-- **nécessité à requalifier ou sourcer** — Indivision, SCI, mariage, PACS : ne pas mélanger les architectures Voir le tableau détaillé Architecture Ce qu’il faut lire Pourquoi Indivision directe acte, quotes-parts, convention, comptes les personnes détiennent directement le bien.
-- **nécessité à requalifier ou sourcer** — La durée de sécurité doit être calculée sur le scénario du foyer durée de sécurité = réserve réellement disponible / déficit mensuel du scénario. _[temporalité]_
-- **nécessité à requalifier ou sourcer** — Le statu quo doit lui aussi être stress-testé. _[temporalité]_
 ### `dossiers/decider-sans-tourner-en-rond.html`
 - **nécessité à requalifier ou sourcer** — Voir le tableau détaillé Hypothèse Preuve actuelle Test contraire Le nouvel emploi ouvre une progression Promesse en entretien Parler à un salarié arrivé il y a 2 ans Le bien se revendra facilement Agent immobilier Délais et décotes réelles du secteur L’entreprise continuera à croître Historique récent Scénario de baisse des marges et concurrence Une décision solide doit survivre à une objection sérieuse, pas seuleme _[temporalité]_
 - **nécessité à requalifier ou sourcer** — « Le logement doit être à moins de 45 minutes du travail » n’a pas le même statut que « j’aimerais une terrasse ».
