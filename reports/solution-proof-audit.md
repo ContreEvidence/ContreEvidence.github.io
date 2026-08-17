@@ -7,7 +7,7 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **4**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **32**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **33**
 - S2 — possibilité générale à examiner : **15**
 - OK heuristique — condition ou preuve détectée : **153**
 
@@ -46,6 +46,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Fractionnez ce qui peut l’être On ne fractionne pas toujours juridiquement un achat immobilier, mais on peut fractionner l’engagement économique : acheter plus petit ou moins cher ; préserver davantage de liquidité au lieu de maximiser l’apport ; différer des travaux non urgents ; tester un usage avant transformation lourde ; attendre une vacance naturelle avant de changer le type de location ; conserver une sortie locative ou de revente plausible. _[fort enjeu, condition détectée]_
 ### `dossiers/competences-qualification-employabilite.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Pour choisir une formation, préparer une reconversion ou comprendre pourquoi une candidature bloque, il faut distinguer ce que vous savez faire, ce qui est officiellement reconnu, ce qui est demandé dans les offres et ce que vous pouvez réellement prouver. _[fort enjeu, preuve détectée]_
+### `dossiers/debloquer-demarche-administrative.html`
+- **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Preuve attendue Quel document, texte, numéro, accusé ou justificatif permet de rendre la demande vérifiable ? _[fort enjeu, preuve détectée]_
 ### `dossiers/decider-a-deux-travail-patrimoine.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Réserve commune et marges personnelles Un foyer peut conserver 30 000 € de cash tout en laissant A avec 500 € personnellement et B avec 29 500 €. _[fort enjeu, condition détectée]_
 ### `dossiers/devenir-manager-premiere-fois.html`
