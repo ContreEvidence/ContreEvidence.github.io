@@ -7,9 +7,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **4**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **32**
-- S2 — possibilité générale à examiner : **15**
-- OK heuristique — condition ou preuve détectée : **163**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **34**
+- S2 — possibilité générale à examiner : **16**
+- OK heuristique — condition ou preuve détectée : **164**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -72,6 +72,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Quand commencer à utiliser devient rationnel le socle reste intact après la dépense ; les objectifs futurs importants restent robustes dans un scénario adverse ; la transmission voulue est déjà couverte ou n’est pas prioritaire ; le capital supplémentaire améliore peu la sécurité ; une contrainte importante peut être supprimée pour une fraction raisonnable du patrimoine ; l’usage est particulièrement dépendant du temps, de l’âge ou de la santé ; une versio _[fort enjeu, condition détectée]_
 ### `dossiers/rembourser-credit-ou-investir.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Pour un crédit immobilier, vous pouvez demander une estimation chiffrée des frais du remboursement anticipé ; pour les contrats conclus après le 1er juillet 2016, cette estimation est gratuite. _[fort enjeu, preuve détectée]_
+### `dossiers/temps-energie-qualite-vie.html`
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Si le travail est la contrainte principale, arrêtez ici l’audit et choisissez la bonne branche Une fois la semaine cartographiée, vous pouvez découvrir que le problème est clairement professionnel. _[fort enjeu, condition détectée]_
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Si l’argent vous empêche de supprimer une contrainte, ne mélangez pas les questions Vous pouvez très bien savoir ce qu’il faudrait changer et ne pas pouvoir encore vous le permettre. _[fort enjeu, condition détectée]_
 ### `dossiers/tout-ca-pour-quoi-objectifs-besoins.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Ce que l’on dit vouloir Ce que l’on peut chercher derrière Conséquence 500 000 € de patrimoine Sécurité, retraite, transmission, liberté de choix La bonne allocation dépend de la fonction du capital. _[fort enjeu, condition détectée]_
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Toute optimisation transfère quelque chose On optimise… On peut transférer le coût vers… le rendement la liquidité, la volatilité ou le risque de perte. le salaire le temps, le trajet, la santé ou la disponibilité familiale. la sécurité la croissance, l’apprentissage ou la liberté d’expérimenter. la vitesse la réversibilité et le droit à l’erreur. le confort présent les ressources du futur soi ou des proches. _[fort enjeu, condition détectée]_
@@ -110,6 +113,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité générale à vérifier ou resserrer** — Stress tests : une variable, puis des combinaisons réalistes Changer une variable à la fois permet d’identifier la sensibilité.
 ### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
 - **possibilité générale à vérifier ou resserrer** — Cette séparation permet de profiter du patrimoine sans traiter tout le capital comme consommable.
+### `dossiers/temps-energie-qualite-vie.html`
+- **possibilité générale à vérifier ou resserrer** — Vous pouvez donc manquer moins d’heures que de bonnes heures .
 ### `index.html`
 - **possibilité générale à vérifier ou resserrer** — Vous pouvez arriver ici sans savoir exactement ce qui ne va pas, avec une décision difficile à prendre, ou avec un objectif déjà clair.
 ### `outil-microscope-pea.html`
