@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **45**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **13**.
+Pages/familles détectées : **45**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **14**.
 
 ## Priorités de relecture
 
@@ -22,6 +22,7 @@ Pages/familles détectées : **45**. Pages `noindex` exclues : **79**. Promesses
 | 9 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/changer-travail-avant-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 8 | NON_READY | entrepreneuriat | `dossiers/formation-vaut-elle-le-cout.html` | micro / EI / société |
 | 7 | NON_READY | reconversion / trajectoire pro | `articles/competences-transferables.html` | revenu / runway |
+| 7 | NON_READY | budget / dettes | `articles/construire-epargne-de-zero.html` | déficit temporaire / structurel |
 | 7 | NON_READY | entrepreneuriat | `dossiers/are-arce-acre-creation-entreprise.html` | activité réglementée |
 | 7 | NON_READY | investissement locatif | `dossiers/comparer-strategies-immobilieres.html` | SCI |
 | 7 | NON_READY | budget / dettes | `dossiers/creer-entreprise-avec-peu-argent.html` | revenu stable / variable |
@@ -31,7 +32,6 @@ Pages/familles détectées : **45**. Pages `noindex` exclues : **79**. Promesses
 | 5 | ROUTE_FIRST | travailler moins / qualité de vie | `dossiers/passer-80-pourcent-cout-reel.html` | indépendant |
 | 2 | COVERED_OR_NARROW | reconversion / trajectoire pro | `articles/retrouver-emploi-apres-interruption.html` | — |
 | 2 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/lancer-activite-sans-quitter-emploi.html` | — |
-| 1 | COVERED_OR_NARROW | budget / dettes | `articles/construire-epargne-de-zero.html` | — |
 | 1 | COVERED_OR_NARROW | budget / dettes | `dossiers/decision-plan-30-90-jours.html` | — |
 | 1 | COVERED_OR_NARROW | budget / dettes | `dossiers/finances-cadre-global.html` | — |
 | 1 | COVERED_OR_NARROW | budget / dettes | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | — |
@@ -192,6 +192,19 @@ Promesse : **changer de métier sans repartir de zéro : compétences transféra
 | senior / âge | MANQUANTE |
 | revenu / runway | MANQUANTE |
 
+### `articles/construire-epargne-de-zero.html` — budget / dettes
+
+Promesse : **construire son épargne à partir de zéro : premier coussin, réserve puis investissement | contre-évidence**
+
+| Variante | Signal automatique |
+|---|---|
+| déficit temporaire / structurel | MANQUANTE |
+| revenu stable / variable | TRAITEE |
+| solo / couple | MENTIONNEE |
+| logement propriétaire / locataire | MANQUANTE |
+| dette / surendettement | TRAITEE |
+| charges compressibles / non | TRAITEE |
+
 ### `dossiers/are-arce-acre-creation-entreprise.html` — entrepreneuriat
 
 Promesse : **are, arce, acre : choisir pour créer son entreprise en 2026 | contre-évidence**
@@ -275,7 +288,7 @@ Pages détectées : **6**. Promesses larges `NON_READY` : **2**. Variantes le pl
 
 ### budget / dettes
 
-Pages détectées : **10**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **logement propriétaire / locataire** (4), **déficit temporaire / structurel** (2), **dette / surendettement** (1), **revenu stable / variable** (1).
+Pages détectées : **10**. Promesses larges `NON_READY` : **4**. Variantes le plus souvent non détectées : **logement propriétaire / locataire** (4), **déficit temporaire / structurel** (3), **dette / surendettement** (1), **revenu stable / variable** (1).
 
 ### travailler moins / qualité de vie
 
