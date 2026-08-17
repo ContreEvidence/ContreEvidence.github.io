@@ -30,6 +30,7 @@ Pages indexables analysées : **130**. Pages `noindex` exclues : **79**.
 | 9 | 8/15 | immobilier / crédit / indivision | `dossiers/acheter-logement-sans-se-fragiliser.html` | fractionnement, effets de second ordre, condition de renversement |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/competences-qualification-employabilite.html` | substitution, objectif réel / substitution du moyen, condition de renversement |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/plan-30-jours-recherche-emploi.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen |
+| 9 | 8/15 | patrimoine / investissement / retraite | `dossiers/premier-investissement-comment-commencer.html` | attendre / statu quo, hétérogénéité / cas local, condition de renversement |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/preparer-candidature-avant-postuler.html` | acteur/gatekeeper, substitution, condition de renversement |
 | 9 | 9/15 | emploi / carrière / qualification | `articles/premiere-chance-sans-experience.html` | acteur/gatekeeper, objectif réel / substitution du moyen, asymétrie de preuve |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/automatiser-ou-non-processus.html` | attendre / statu quo, transfert de risque, hétérogénéité / cas local |
@@ -61,7 +62,6 @@ Pages indexables analysées : **130**. Pages `noindex` exclues : **79**.
 | 6 | 10/15 | immobilier / crédit / indivision | `dossiers/garages-parkings-locaux-commerciaux.html` | acteur/gatekeeper, condition de renversement |
 | 6 | 10/15 | entrepreneuriat / activité | `dossiers/lancer-activite-sans-quitter-emploi.html` | substitution, condition de renversement |
 | 6 | 10/15 | entrepreneuriat / activité | `dossiers/methode-analyse-complete.html` | acteur/gatekeeper, substitution |
-| 6 | 10/15 | immobilier / crédit / indivision | `dossiers/patrimoine-marge-de-manoeuvre.html` | acteur/gatekeeper, valeur d’option / irréversibilité |
 
 ## Lecture par cluster
 
@@ -79,7 +79,7 @@ Pages : **27**. Angles le plus souvent non détectés : **objectif réel / subst
 
 ### patrimoine / investissement / retraite
 
-Pages : **40**. Angles le plus souvent non détectés : **substitution** (35), **condition de renversement** (26), **objectif réel / substitution du moyen** (25), **transfert de risque** (24), **acteur/gatekeeper** (22), **attendre / statu quo** (18), **effets de second ordre** (10).
+Pages : **40**. Angles le plus souvent non détectés : **substitution** (35), **condition de renversement** (27), **objectif réel / substitution du moyen** (25), **transfert de risque** (24), **acteur/gatekeeper** (23), **attendre / statu quo** (18), **effets de second ordre** (10).
 
 ## Règle de reprise éditoriale
 
