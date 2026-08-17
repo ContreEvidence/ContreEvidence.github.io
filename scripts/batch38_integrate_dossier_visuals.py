@@ -63,3 +63,5 @@ patch(
     FIG['windfall'],
     '<meta name="dateModified" content="2026-08-12"/>'
 )
+
+# Trigger marker: batch 38
