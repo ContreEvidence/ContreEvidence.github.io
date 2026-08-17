@@ -1,4 +1,4 @@
-name: Content depth audit
+name: Editorial intent-fit audit
 
 on:
   workflow_dispatch:
@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - name: Audit the current editorial standard
+      - name: Audit adequation between page intent and form
         shell: python
         run: |
           from __future__ import annotations
@@ -27,6 +27,7 @@ jobs:
           import re
           import urllib.parse
           import xml.etree.ElementTree as ET
+          from collections import Counter, defaultdict
 
           root = pathlib.Path('.').resolve()
           prefix = 'https://contreevidence.github.io/'
@@ -35,18 +36,27 @@ jobs:
 
           script_re = re.compile(r'<(script|style)\b.*?</\1>', re.I | re.S)
           tag_re = re.compile(r'<[^>]+>')
+          title_re = re.compile(r'<title\b[^>]*>(.*?)</title>', re.I|re.S)
+          h1_re = re.compile(r'<h1\b[^>]*>(.*?)</h1>', re.I|re.S)
+          h2_re = re.compile(r'<h2\b[^>]*>(.*?)</h2>', re.I|re.S)
           table_re = re.compile(r'<table\b', re.I)
-          collapsed_detail_re = re.compile(r'<details\b[^>]*class=(["\'])[^"\']*\bce-legacy-detail\b[^"\']*\1[^>]*>.*?</details\s*>', re.I|re.S)
-          h2_re = re.compile(r'<h2\b', re.I)
+          details_re = re.compile(r'<details\b[^>]*>(.*?)</details\s*>', re.I|re.S)
           source_re = re.compile(r'href=["\']https?://([^/"\']+)', re.I)
           internal_link_re = re.compile(r'href=["\'](?!https?://|#|mailto:|tel:)([^"\']+\.html(?:#[^"\']*)?)', re.I)
           word_re = re.compile(r"[A-Za-zÀ-ÖØ-öø-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÖØ-öø-ÿ0-9]+)*")
-          number_re = re.compile(r'\b\d+(?:[\s.,]\d+)?\s*(?:€|%|euros?|mois|ans?|heures?|h\b|jours?|k€)', re.I)
-          case_re = re.compile(r'\b(?:cas|exemple|scénario|profil)\b', re.I)
-          action_re = re.compile(r'\b(?:plan d.?action|protocole|checklist|à faire|étapes?|questions à poser|commencez|faites|vérifiez|comparez|décidez)\b', re.I)
-          human_re = re.compile(r'\b(?:vous|votre|vos|je |j[’\']|famille|couple|travail|temps|vie|budget|logement|projet)\b', re.I)
+          number_re = re.compile(r'\b\d+(?:[\s.,]\d+)?\s*(?:€|%|euros?|mois|ans?|heures?|h\b|jours?|k€|km|m²)', re.I)
+          case_re = re.compile(r'\b(?:cas|exemple|scénario|profil|simulation)\b', re.I)
+          action_re = re.compile(r'\b(?:plan d.?action|protocole|checklist|à faire|étapes?|questions à poser|commencez|faites|vérifiez|comparez|décidez|choisissez|calculez|mesurez)\b', re.I)
+          comparison_re = re.compile(r'\b(?:comparer|comparaison|versus|vs\.?|option\s+[ab]|scénarios?|arbitrage|avantages?|inconvénients?|différence|meilleur|moins cher|plus rentable)\b', re.I)
+          calculation_re = re.compile(r'\b(?:combien|coût|cout|prix|budget|salaire|revenu|rendement|mensualité|capacité|seuil|taux|marge|trésorerie|tresorerie|rentable|rentabilité|rentabilite|simulation|calcul)\b', re.I)
+          procedure_re = re.compile(r'\b(?:comment faire|démarche|demarche|procédure|procedure|étapes|etapes|checklist|plan\s+\d+|préparer|preparer|vérifier|verifier|avant de signer|avant de postuler|débloquer|debloquer)\b', re.I)
+          legal_re = re.compile(r'\b(?:loi|article\s+\d+|code\s+(?:civil|du travail|monétaire|monetaire)|fiscal|impôt|impot|juridique|droit|obligation|réglement|reglement|hcsf|urssaf|licenciement|indivision|succession|donation|assurance|crédit|credit)\b', re.I)
+          human_re = re.compile(r'\b(?:vous|votre|vos|je |j[’\']|famille|couple|travail|temps|vie|budget|logement|projet|santé|sante)\b', re.I)
           jargon_re = re.compile(r'\b(?:gatekeeper|runway|framework|scorecard|flywheel|proof point|use case|red flags?)\b', re.I)
           visual_re = re.compile(r'(?:<figure\b|role=["\']img["\']|class=["\'][^"\']*(?:ce-visual|diagram|flow|map|ladder|triage|path|steps|timeline|priority-visual)[^"\']*["\'])', re.I)
+          navigation_re = re.compile(r'(?:ce-legacy-route|toc|table-of-contents|sommaire|parcours de cette page)', re.I)
+          answer_re = re.compile(r'class=["\'][^"\']*answer-box', re.I)
+          decision_box_re = re.compile(r'class=["\'][^"\']*decision-box', re.I)
 
           institutional = (
               'banque-france.fr','economie.gouv.fr','service-public.fr','service-public.gouv.fr',
@@ -57,16 +67,42 @@ jobs:
           )
           primary_market = ('msci.com','spglobal.com','ecb.europa.eu','eurostat.ec.europa.eu')
 
+          def plain(s):
+              return re.sub(r'\s+',' ',html.unescape(tag_re.sub(' ',s))).strip()
+
           def count_hosts(hosts, domains):
               return sum(1 for host in hosts if any(host == d or host.endswith('.'+d) for d in domains))
 
-          def classify(rel, raw):
-              low = rel.lower()
-              if low.startswith('articles/'): return 'article'
-              acquisition_markers = ('comment-', 'combien-', 'faut-il-', 'puis-je-', 'accepter-', 'acheter-', 'quitter-', 'changer-', 'passer-', 'travailler-', 'depenses-', 'audit-', 'reconversion-', 'premier-', 'finances-difficiles')
-              if any(pathlib.PurePosixPath(low).name.startswith(x) for x in acquisition_markers): return 'decision/acquisition'
-              if 'simulateur' in low or 'outil' in low: return 'tool'
+          def classify_intent(rel, title, h1, visible):
+              name = pathlib.PurePosixPath(rel.lower()).name
+              lead = f'{name} {title} {h1} {visible[:1400]}'.lower()
+
+              # Function first, not directory. A page can be a dossier yet fundamentally be a comparison or calculation.
+              if comparison_re.search(lead) or name.startswith(('comparer-','acheter-ou-louer','rembourser-credit-ou-investir','location-nue-ou-meublee')):
+                  return 'comparison/arbitrage'
+              if calculation_re.search(f'{name} {title} {h1}') or name.startswith(('combien-','cout-','coût-','calculer-','prix-','capacite-','capacité-','previsionnel-','tresorerie-')):
+                  return 'calculation/simulation'
+              if procedure_re.search(f'{name} {title} {h1}') or name.startswith(('comment-','audit-','plan-','preparer-','préparer-','debloquer-','débloquer-','protocole-','questions-')):
+                  return 'procedure/action'
+              decision_markers = ('faut-il','puis-je','accepter','quitter','changer','passer','travailler moins','se permettre','garder vendre transformer','sans se fragiliser')
+              if any(x in lead for x in decision_markers):
+                  return 'decision/acquisition'
+              if rel.lower().startswith('articles/'):
+                  return 'analysis/article'
               return 'reference/deep-dive'
+
+          def expected_for(intent, title_h1, visible):
+              numeric_topic = bool(calculation_re.search(title_h1))
+              regulatory_topic = bool(legal_re.search(title_h1 + ' ' + visible[:2200]))
+              comparison_topic = intent == 'comparison/arbitrage'
+              return {
+                  'immediate_answer': intent == 'decision/acquisition',
+                  'action': intent in ('decision/acquisition','procedure/action'),
+                  'comparison_structure': comparison_topic,
+                  'quantification': intent == 'calculation/simulation' or numeric_topic,
+                  'sources': regulatory_topic or intent == 'reference/deep-dive',
+                  'navigation_if_long': intent == 'reference/deep-dive',
+              }
 
           rows=[]
           for url in urls:
@@ -77,92 +113,111 @@ jobs:
               if not page.exists(): continue
               raw=page.read_text(encoding='utf-8', errors='replace')
               if re.search(r'<meta\s+name=["\']robots["\'][^>]*noindex', raw, re.I): continue
+
               clean=script_re.sub(' ', raw)
-              visible=html.unescape(tag_re.sub(' ', clean))
+              visible=plain(clean)
+              title=plain(title_re.search(raw).group(1)) if title_re.search(raw) else ''
+              h1=plain(h1_re.search(raw).group(1)) if h1_re.search(raw) else ''
+              h2s=[plain(x) for x in h2_re.findall(raw)]
               words=len(word_re.findall(visible))
               tables_total=len(table_re.findall(raw))
-              collapsed_blocks=collapsed_detail_re.findall(raw)
-              collapsed_tables=sum(len(table_re.findall(block)) for block in re.findall(r'<details\b[^>]*class=(["\'])[^"\']*\bce-legacy-detail\b[^"\']*\1[^>]*>(.*?)</details\s*>', raw, re.I|re.S) for block in [block[1]])
-              tables=max(0,tables_total-collapsed_tables)
-              h2=len(h2_re.findall(raw))
+              tables_in_details=sum(len(table_re.findall(block)) for block in details_re.findall(raw))
+              tables_visible=max(0,tables_total-tables_in_details)
               cases=len(case_re.findall(visible))
               numbers=len(number_re.findall(visible))
               hosts=[h.lower() for h in source_re.findall(raw)]
-              sources=count_hosts(hosts, institutional)+count_hosts(hosts, primary_market)
+              authoritative_sources=count_hosts(hosts, institutional)+count_hosts(hosts, primary_market)
               internal=len(internal_link_re.findall(raw))
-              answer=('answer-box' in raw)
-              voice=('voice-signature' in raw)
-              visual=bool(visual_re.search(raw))
-              action=('decision-box' in raw or bool(action_re.search(visible)))
-              human=bool(human_re.search(visible[:1800]))
+              has_answer=bool(answer_re.search(raw))
+              has_visual=bool(visual_re.search(raw))
+              has_action=bool(decision_box_re.search(raw) or action_re.search(visible))
+              has_comparison=bool(comparison_re.search(visible) or tables_total>=1)
+              has_navigation=bool(navigation_re.search(raw))
+              has_human=bool(human_re.search(visible[:1800]))
               jargon=len(jargon_re.findall(visible))
-              kind=classify(rel, raw)
 
-              score=0
-              if answer: score+=2
-              if voice or human: score+=1
-              if visual: score+=2
-              if cases>=1: score+=1
-              if numbers>=3: score+=1
-              if action: score+=2
-              if internal>=2: score+=1
-              if sources>=1: score+=1
-              if words>=700: score+=1
-              if tables<=2: score+=1
-              elif tables>=5: score-=2
-              elif tables==4: score-=1
-              if words>=1500 and not visual: score-=2
-              if jargon: score-=min(2,jargon)
-              if h2>=14: score-=1
+              intent=classify_intent(rel,title,h1,visible)
+              exp=expected_for(intent,f'{title} {h1}',visible)
 
-              flags=[]
-              if not answer: flags.append('réponse immédiate')
-              if not visual: flags.append('visuel de compréhension')
-              if not action: flags.append('décision/action')
-              if internal<2: flags.append('sortie logique')
-              if cases<1 and kind!='article': flags.append('cas concret')
-              if numbers<3 and kind!='article': flags.append('chiffrage')
-              if tables>=4: flags.append(f'{tables} tableaux visibles')
-              if tables_total>tables: flags.append(f'{tables_total-tables} tableau(x) en détail')
-              if words>=1500 and not visual: flags.append('long sans visuel')
-              if jargon: flags.append('jargon')
-              if h2>=14: flags.append(f'{h2} sections')
-              rows.append(dict(score=score,kind=kind,words=words,tables=tables,tables_total=tables_total,h2=h2,cases=cases,numbers=numbers,sources=sources,internal=internal,visual=visual,answer=answer,action=action,jargon=jargon,rel=rel,flags=flags))
+              issues=[]
+              observations=[]
+
+              # Intent-specific checks only.
+              if exp['immediate_answer'] and not has_answer:
+                  issues.append('décision/acquisition sans réponse immédiate identifiable')
+              if exp['action'] and not has_action:
+                  issues.append('page orientée action sans prochaine action claire')
+              if exp['comparison_structure'] and not has_comparison:
+                  issues.append('comparaison sans structure comparative identifiable')
+              if exp['quantification'] and numbers < 2:
+                  issues.append('question quantitative avec très peu de quantification')
+              if exp['sources'] and authoritative_sources == 0:
+                  observations.append('vérifier si des sources de référence sont nécessaires')
+              if exp['navigation_if_long'] and words >= 2200 and len(h2s) >= 12 and not has_navigation:
+                  issues.append('référence longue sans dispositif de navigation/hiérarchie')
+
+              # Form is never rewarded or punished in isolation.
+              if tables_visible >= 4:
+                  observations.append(f'{tables_visible} tableaux visibles : vérifier leur utilité individuelle, sans seuil automatique')
+              if tables_total > tables_visible:
+                  observations.append(f'{tables_total-tables_visible} tableau(x) replié(s) : vérifier que les éléments décisifs ne sont pas cachés')
+              if has_visual:
+                  observations.append('visuel présent : vérifier qu’il montre une relation/processus/ordre de grandeur plutôt qu’une décoration')
+              elif words >= 1800:
+                  observations.append('page longue sans visuel : acceptable si le sujet ne gagne rien à être visualisé')
+              if intent == 'analysis/article' and tables_visible >= 2:
+                  observations.append('article analytique assez tabulaire : vérifier que les tableaux servent l’argument')
+              if intent == 'reference/deep-dive' and has_answer:
+                  observations.append('référence avec answer-box : vérifier qu’elle ne simplifie pas abusivement un sujet de fond')
+              if not has_human and intent in ('decision/acquisition','analysis/article'):
+                  observations.append('entrée peu incarnée pour une page destinée à une situation vécue')
+              if cases == 0 and intent in ('decision/acquisition','comparison/arbitrage','calculation/simulation'):
+                  observations.append('aucun cas explicite : à ajouter seulement s’il réduit une ambiguïté réelle')
+              if internal < 2 and intent != 'analysis/article':
+                  observations.append('peu de sorties internes : vérifier qu’une étape suivante pertinente existe')
+              if jargon:
+                  issues.append('jargon anglais/non nécessaire détecté')
+
+              fit = 'REVIEW' if issues else 'OK'
+              rows.append(dict(
+                  rel=rel,intent=intent,fit=fit,issues=issues,observations=observations,
+                  words=words,h2=len(h2s),tables=tables_visible,tables_total=tables_total,
+                  cases=cases,numbers=numbers,sources=authoritative_sources,visual=has_visual
+              ))
 
           print(f'Indexable dossiers/articles audités: {len(rows)}')
-          print('\nNOUVEAU STANDARD : situation/question → réponse immédiate → chiffres/cas → visuel → décision/action → étape suivante.')
-          print('Les tableaux repliés en détail ne sont pas comptés dans la densité de lecture principale.')
+          print('\nDOCTRINE : l’exigence est commune, le gabarit ne l’est pas.')
+          print('L’audit cherche une adéquation entre INTENTION et FORME. Aucun nombre de tableaux, visuels, chiffres ou sections n’est bon ou mauvais en soi.')
 
-          print('\nRépartition par niveau:')
-          for label, pred in [
-              ('A · déjà au niveau', lambda r:r['score']>=10 and r['tables']<=3),
-              ('B · bonne base, finition', lambda r:7<=r['score']<10 or (r['score']>=10 and r['tables']>3)),
-              ('C · migration prioritaire', lambda r:r['score']<7),
-          ]:
-              subset=[r for r in rows if pred(r)]
-              print(f'{label}: {len(subset)}')
+          by_intent=Counter(r['intent'] for r in rows)
+          print('\nRépartition par intention probable:')
+          for intent,count in sorted(by_intent.items()):
+              print(f'- {intent}: {count}')
 
-          priority=sorted(rows,key=lambda r:(r['score'],-r['tables'],-r['words']))
-          print('\n40 pages à migrer en priorité:')
-          for r in priority[:40]:
-              print(f"{r['score']:2}/13 | {r['tables']:2} tab visibles / {r['tables_total']:2} total | {r['words']:4} mots | {r['kind']:<20} | {r['rel']} | {', '.join(r['flags']) or 'finition'}")
+          needs=[r for r in rows if r['issues']]
+          print(f'\nPages avec inadéquation probable à examiner: {len(needs)}')
+          grouped=defaultdict(list)
+          for r in needs: grouped[r['intent']].append(r)
+          for intent in sorted(grouped):
+              print(f'\n## {intent}')
+              for r in grouped[intent]:
+                  print(f"{r['rel']} | " + ' ; '.join(r['issues']))
 
-          print('\nPages avec 4 tableaux visibles ou plus:')
-          heavy=sorted([r for r in rows if r['tables']>=4], key=lambda r:(-r['tables'],-r['words']))
-          for r in heavy:
-              print(f"{r['tables']:2} visibles / {r['tables_total']:2} total | {r['words']:4} mots | {r['rel']}")
-          print(f'Total: {len(heavy)}')
+          print('\nObservations éditoriales non bloquantes:')
+          observed=[r for r in rows if r['observations']]
+          for r in observed[:80]:
+              print(f"{r['rel']} [{r['intent']}] | " + ' ; '.join(r['observations']))
+          if len(observed)>80:
+              print(f'... {len(observed)-80} autres pages avec observations non bloquantes')
 
-          print('\nPages longues sans visuel de compréhension:')
-          long_no_visual=sorted([r for r in rows if r['words']>=1500 and not r['visual']], key=lambda r:-r['words'])
-          for r in long_no_visual[:50]:
-              print(f"{r['words']:4} mots | {r['tables']:2} tab visibles | {r['rel']}")
-          print(f'Total: {len(long_no_visual)}')
+          print('\nContrôles de forme — informatifs uniquement:')
+          print(f"Pages avec >=4 tableaux visibles: {sum(1 for r in rows if r['tables']>=4)}")
+          print(f"Pages longues >=1800 mots sans visuel: {sum(1 for r in rows if r['words']>=1800 and not r['visual'])}")
+          print(f"Pages avec tableaux repliés: {sum(1 for r in rows if r['tables_total']>r['tables'])}")
 
-          print('\nJargon à éliminer ou traduire:')
-          jargon_rows=[r for r in rows if r['jargon']]
-          for r in jargon_rows:
-              print(f"{r['jargon']:2} occurrence(s) | {r['rel']}")
-          print(f'Total: {len(jargon_rows)}')
-
-          print('\nAudit informatif : une page de référence peut rester plus dense lorsqu’un tableau est réellement l’outil adéquat. Le signal porte sur l’accumulation visible et l’absence de hiérarchie.')
+          print('\nRÈGLE DE LECTURE DU RAPPORT :')
+          print('- REVIEW = incohérence probable entre la promesse de la page et ce qu’elle permet de faire.')
+          print('- Une observation n’est jamais une injonction automatique à modifier la page.')
+          print('- Un tableau reste visible s’il est décisif, même s’il est le quatrième.')
+          print('- Un visuel n’est ajouté que s’il permet de voir quelque chose que le texte montre moins bien.')
+          print('- Une page de référence peut être longue et dense si cette profondeur est sa fonction.')
