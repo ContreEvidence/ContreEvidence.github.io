@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **44**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **13**.
+Pages/familles détectées : **43**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **12**.
 
 ## Priorités de relecture
 
@@ -15,7 +15,6 @@ Pages/familles détectées : **44**. Pages `noindex` exclues : **79**. Promesses
 | 29 | NON_READY | couple / logement / séparation | `dossiers/acheter-logement-sans-se-fragiliser.html` | indivision directe, SCI, mariage, PACS |
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | salarié, santé / inaptitude, sans diplôme, revenu / runway |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/acheter-sans-vider-epargne.html` | SCI, mariage, PACS |
-| 21 | NON_READY | couple / logement / séparation | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | indivision directe, mariage, PACS |
 | 14 | NON_READY | budget / dettes | `dossiers/puis-je-me-permettre-reconversion.html` | déficit temporaire / structurel, dette / surendettement |
 | 14 | NON_READY | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 9 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/changer-travail-avant-credit-immobilier.html` | santé / inaptitude, sans diplôme |
@@ -103,21 +102,6 @@ Promesse : **combien d’épargne garder après un achat immobilier ? apport et 
 | tontine | MANQUANTE |
 | propriété ≠ financement | TRAITEE |
 | sorties multiples | ROUTEE |
-
-### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` — couple / logement / séparation
-
-Promesse : **quand arrêter d’optimiser et commencer à utiliser son patrimoine ? | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| indivision directe | MANQUANTE |
-| SCI | TRAITEE |
-| mariage | MANQUANTE |
-| PACS | MANQUANTE |
-| concubinage | MANQUANTE |
-| tontine | MANQUANTE |
-| propriété ≠ financement | TRAITEE |
-| sorties multiples | TRAITEE |
 
 ### `dossiers/puis-je-me-permettre-reconversion.html` — budget / dettes
 
@@ -248,7 +232,7 @@ Promesse : **patrimoine et marge de manœuvre : combien de liberté vos actifs d
 
 ### couple / logement / séparation
 
-Pages détectées : **6**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **tontine** (5), **PACS** (3), **SCI** (3), **concubinage** (3), **mariage** (3), **indivision directe** (2).
+Pages détectées : **5**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **tontine** (4), **SCI** (3), **PACS** (2), **concubinage** (2), **mariage** (2), **indivision directe** (1).
 
 ### achat immobilier / crédit
 
