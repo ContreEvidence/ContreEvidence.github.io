@@ -36,6 +36,7 @@ jobs:
           script_re = re.compile(r'<(script|style)\b.*?</\1>', re.I | re.S)
           tag_re = re.compile(r'<[^>]+>')
           table_re = re.compile(r'<table\b', re.I)
+          collapsed_detail_re = re.compile(r'<details\b[^>]*class=(["\'])[^"\']*\bce-legacy-detail\b[^"\']*\1[^>]*>.*?</details\s*>', re.I|re.S)
           h2_re = re.compile(r'<h2\b', re.I)
           source_re = re.compile(r'href=["\']https?://([^/"\']+)', re.I)
           internal_link_re = re.compile(r'href=["\'](?!https?://|#|mailto:|tel:)([^"\']+\.html(?:#[^"\']*)?)', re.I)
@@ -45,7 +46,7 @@ jobs:
           action_re = re.compile(r'\b(?:plan d.?action|protocole|checklist|à faire|étapes?|questions à poser|commencez|faites|vérifiez|comparez|décidez)\b', re.I)
           human_re = re.compile(r'\b(?:vous|votre|vos|je |j[’\']|famille|couple|travail|temps|vie|budget|logement|projet)\b', re.I)
           jargon_re = re.compile(r'\b(?:gatekeeper|runway|framework|scorecard|flywheel|proof point|use case|red flags?)\b', re.I)
-          visual_re = re.compile(r'(?:<figure\b|role=["\']img["\']|class=["\'][^"\']*(?:ce-visual|diagram|flow|map|ladder|triage|path|steps|timeline)[^"\']*["\'])', re.I)
+          visual_re = re.compile(r'(?:<figure\b|role=["\']img["\']|class=["\'][^"\']*(?:ce-visual|diagram|flow|map|ladder|triage|path|steps|timeline|priority-visual)[^"\']*["\'])', re.I)
 
           institutional = (
               'banque-france.fr','economie.gouv.fr','service-public.fr','service-public.gouv.fr',
@@ -79,7 +80,10 @@ jobs:
               clean=script_re.sub(' ', raw)
               visible=html.unescape(tag_re.sub(' ', clean))
               words=len(word_re.findall(visible))
-              tables=len(table_re.findall(raw))
+              tables_total=len(table_re.findall(raw))
+              collapsed_blocks=collapsed_detail_re.findall(raw)
+              collapsed_tables=sum(len(table_re.findall(block)) for block in re.findall(r'<details\b[^>]*class=(["\'])[^"\']*\bce-legacy-detail\b[^"\']*\1[^>]*>(.*?)</details\s*>', raw, re.I|re.S) for block in [block[1]])
+              tables=max(0,tables_total-collapsed_tables)
               h2=len(h2_re.findall(raw))
               cases=len(case_re.findall(visible))
               numbers=len(number_re.findall(visible))
@@ -118,14 +122,16 @@ jobs:
               if internal<2: flags.append('sortie logique')
               if cases<1 and kind!='article': flags.append('cas concret')
               if numbers<3 and kind!='article': flags.append('chiffrage')
-              if tables>=4: flags.append(f'{tables} tableaux')
+              if tables>=4: flags.append(f'{tables} tableaux visibles')
+              if tables_total>tables: flags.append(f'{tables_total-tables} tableau(x) en détail')
               if words>=1500 and not visual: flags.append('long sans visuel')
               if jargon: flags.append('jargon')
               if h2>=14: flags.append(f'{h2} sections')
-              rows.append(dict(score=score,kind=kind,words=words,tables=tables,h2=h2,cases=cases,numbers=numbers,sources=sources,internal=internal,visual=visual,answer=answer,action=action,jargon=jargon,rel=rel,flags=flags))
+              rows.append(dict(score=score,kind=kind,words=words,tables=tables,tables_total=tables_total,h2=h2,cases=cases,numbers=numbers,sources=sources,internal=internal,visual=visual,answer=answer,action=action,jargon=jargon,rel=rel,flags=flags))
 
           print(f'Indexable dossiers/articles audités: {len(rows)}')
           print('\nNOUVEAU STANDARD : situation/question → réponse immédiate → chiffres/cas → visuel → décision/action → étape suivante.')
+          print('Les tableaux repliés en détail ne sont pas comptés dans la densité de lecture principale.')
 
           print('\nRépartition par niveau:')
           for label, pred in [
@@ -139,18 +145,18 @@ jobs:
           priority=sorted(rows,key=lambda r:(r['score'],-r['tables'],-r['words']))
           print('\n40 pages à migrer en priorité:')
           for r in priority[:40]:
-              print(f"{r['score']:2}/13 | {r['tables']:2} tab | {r['words']:4} mots | {r['kind']:<20} | {r['rel']} | {', '.join(r['flags']) or 'finition'}")
+              print(f"{r['score']:2}/13 | {r['tables']:2} tab visibles / {r['tables_total']:2} total | {r['words']:4} mots | {r['kind']:<20} | {r['rel']} | {', '.join(r['flags']) or 'finition'}")
 
-          print('\nPages avec 4 tableaux ou plus:')
+          print('\nPages avec 4 tableaux visibles ou plus:')
           heavy=sorted([r for r in rows if r['tables']>=4], key=lambda r:(-r['tables'],-r['words']))
           for r in heavy:
-              print(f"{r['tables']:2} tab | {r['words']:4} mots | {r['rel']}")
+              print(f"{r['tables']:2} visibles / {r['tables_total']:2} total | {r['words']:4} mots | {r['rel']}")
           print(f'Total: {len(heavy)}')
 
           print('\nPages longues sans visuel de compréhension:')
           long_no_visual=sorted([r for r in rows if r['words']>=1500 and not r['visual']], key=lambda r:-r['words'])
           for r in long_no_visual[:50]:
-              print(f"{r['words']:4} mots | {r['tables']:2} tab | {r['rel']}")
+              print(f"{r['words']:4} mots | {r['tables']:2} tab visibles | {r['rel']}")
           print(f'Total: {len(long_no_visual)}')
 
           print('\nJargon à éliminer ou traduire:')
@@ -159,4 +165,4 @@ jobs:
               print(f"{r['jargon']:2} occurrence(s) | {r['rel']}")
           print(f'Total: {len(jargon_rows)}')
 
-          print('\nAudit informatif : les pages de référence peuvent rester plus denses lorsqu’un tableau est réellement l’outil adéquat. Le signal porte sur l’accumulation, pas sur l’existence d’un tableau.')
+          print('\nAudit informatif : une page de référence peut rester plus dense lorsqu’un tableau est réellement l’outil adéquat. Le signal porte sur l’accumulation visible et l’absence de hiérarchie.')
