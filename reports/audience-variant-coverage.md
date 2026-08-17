@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **46**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **13**.
+Pages/familles détectées : **45**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **13**.
 
 ## Priorités de relecture
 
@@ -36,7 +36,6 @@ Pages/familles détectées : **46**. Pages `noindex` exclues : **79**. Promesses
 | 1 | COVERED_OR_NARROW | budget / dettes | `dossiers/finances-cadre-global.html` | — |
 | 1 | COVERED_OR_NARROW | budget / dettes | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | — |
 | 1 | COVERED_OR_NARROW | investissement locatif | `dossiers/finances-investissement-locatif.html` | — |
-| 1 | COVERED_OR_NARROW | budget / dettes | `dossiers/liquidites-reserve-securite.html` | — |
 | 1 | COVERED_OR_NARROW | travailler moins / qualité de vie | `dossiers/patrimoine-permet-il-travailler-moins.html` | — |
 | 1 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/reconversion-sans-formation-longue.html` | — |
 | 0 | COVERED_OR_NARROW | achat immobilier / crédit | `dossiers/acheter-logement-sans-se-fragiliser.html` | — |
@@ -276,7 +275,7 @@ Pages détectées : **6**. Promesses larges `NON_READY` : **2**. Variantes le pl
 
 ### budget / dettes
 
-Pages détectées : **11**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **logement propriétaire / locataire** (4), **déficit temporaire / structurel** (2), **dette / surendettement** (1), **revenu stable / variable** (1).
+Pages détectées : **10**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **logement propriétaire / locataire** (4), **déficit temporaire / structurel** (2), **dette / surendettement** (1), **revenu stable / variable** (1).
 
 ### travailler moins / qualité de vie
 
