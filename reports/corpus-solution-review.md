@@ -1,12 +1,12 @@
 # Revue corpus — Solution Engineer
 
-Mise à jour automatique : 2026-08-16
+Mise à jour automatique : 2026-08-17
 
 Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les pages `noindex` sont exclues. Les validations humaines restent actives uniquement tant que le SHA du fichier ne change pas.
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **129**. Pages `noindex` exclues : **80**. Validations humaines actives : **42**. Validations devenues caduques après modification : **81**.
+Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humaines actives : **40**. Validations devenues caduques après modification : **83**.
 
 ## Priorité humaine
 
@@ -30,10 +30,11 @@ Pages analysées : **129**. Pages `noindex` exclues : **80**. Validations humain
 | `dossiers/experience-devient-risque-recruteur.html` | `fa76f61cde9496a7e8b186c63d02ccf92abb860c` | `381d6952b2473a1a2e66f4cbfe8f1555b01a2578` |
 | `dossiers/acheter-logement-sans-se-fragiliser.html` | `917027c5225fc0464db739ffa51972e38f4655f6` | `a662879d31e2383f03f92f5ef3359fce84f66753` |
 | `dossiers/finances-residence-principale.html` | `89bdee80210b87568b4831b77c18bccbc6c8f1f9` | `06bdc06f234c3297252bb7523969af5b95145d3c` |
-| `dossiers/audit-budget-60-minutes.html` | `8de2b2164b0d8d56823db98de8e87e9fbf70bef8` | `29a39ee3b752b9184513bfb7b98ba778a47db971` |
 | `dossiers/calculer-prix-minimum-rentable.html` | `1597bb81c5cba87c2e493fff0aa8a3bc640ac438` | `9625f1c2b342c3a6765072aa31ffb8c7c846fef2` |
 | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` | `e782289f8d68aab912acdd201a649e7782204756` | `959ef22860e5b38b622378e56ec4a2de9123e610` |
+| `dossiers/audit-budget-60-minutes.html` | `8de2b2164b0d8d56823db98de8e87e9fbf70bef8` | `a6a020387adb2449ffe809ba3cbc35d28758d9e9` |
 | `articles/travailler-beaucoup-gagner-peu-prix.html` | `53df5406709273e5dedfe3ae2a2085c3913bb872` | `ef5958de28d3016d2ede477b860eb43a06bdddb6` |
+| `articles/grosse-entree-argent-que-faire.html` | `8055c8aabec056f575c0241372a9f49178d761e3` | `2d169248963e5f1ddffee684db3a659be22bc0af` |
 | `dossiers/tresorerie-bfr-entreprise.html` | `d417764e8cd3a736d178f66ff2be9427bcbb0fdd` | `926690c824cc8534dd133bc9d2c627d58c084223` |
 | `articles/accepter-nimporte-quel-poste-retour-emploi.html` | `27d74310369168d6bfc5db8c22d2b4ee679c7705` | `7cab1f949fbc95e018bdee353a9773b86d8e031e` |
 | `articles/50-candidatures-zero-reponse.html` | `e142df6c147e5a8a6fdc20827854362f8930329d` | `2891c2d54ee6686413a0136caa2f6ca7c5e9b9cf` |
@@ -54,6 +55,7 @@ Pages analysées : **129**. Pages `noindex` exclues : **80**. Validations humain
 | `dossiers/formation-vaut-elle-le-cout.html` | `601b970cd42683723682946ad1b8add7c7aa48db` | `7095c6d4c8f39406ac8311886e179d2bfcb7f0f7` |
 | `dossiers/acheter-sans-vider-epargne.html` | `8376bdcffd1c79dbcedf6b11fff240a1c8b4e6c0` | `8d8370eb96292e65df63ea37427ff9251ab4a96b` |
 | `articles/tester-metier-avant-investir.html` | `2d26e84a1aec867f3f795a7fe5076e5514259709` | `f0869a70482faef780134015edccb92309295c47` |
+| `dossiers/allocation-patrimoine-selon-situation.html` | `bf4f5ae7a51941cee5e49bfa63f1726e1076ab8a` | `60cb7a6a957a4eb396cbf0ffe5339c64d5abca99` |
 | `dossiers/finances-cadre-global.html` | `e736a54c8aa6746af202268837ab68501111b82f` | `a81a449cad1676ce338bf3c3386e1ab185e96c21` |
 | `dossiers/patrimoine-marge-de-manoeuvre.html` | `3e2dd7332b7c2063c63dbad30055168a61266868` | `8a4cd4944f44a2838e67f48a4521f44c3ac6a459` |
 | `dossiers/location-courte-duree-meuble-tourisme.html` | `ddaf6bc36e2171b5e249a161fb66926f963ea4d2` | `2959b70d729c737f2c037f540d7240da12770b7e` |
@@ -79,8 +81,8 @@ Pages analysées : **129**. Pages `noindex` exclues : **80**. Validations humain
 | `dossiers/puis-je-me-permettre-reconversion.html` | `1ad192cf263278ca68066756f08f1dc2f62a58fc` | `30104a9749a082f9bb5eeed131ad4f9ff3738df9` |
 | `articles/choisir-etf-mondial-debutant.html` | `51eb14e0e0798b03354f58360105a9a851af5bf0` | `8ca0d60ea3471345eb449e0e878724f000c1c24f` |
 | `dossiers/temps-energie-qualite-vie.html` | `870bee99dfb0325a0253f9000e2414580b1b8e3c` | `942d12394fd23a3f0a04c8b4587a445061cba7f8` |
-| `dossiers/finances-enveloppes-fiscalite.html` | `465e5a96cac235489cd54df12555dc85c8f66542` | `46247f92f0411627c710f4b0002ee4216d7cda37` |
 | `dossiers/favoriser-un-enfant-succession-donation.html` | `87dc0927f5033751ed022b19eef2ce82ff2ba453` | `a82d032edac0c37906b42c8f11b37678be5e5b55` |
+| `dossiers/finances-enveloppes-fiscalite.html` | `465e5a96cac235489cd54df12555dc85c8f66542` | `8c35e60f67744f074952974871dc2b4daca9c74c` |
 | `dossiers/finances-investissement-locatif.html` | `2c09f9a2b80c1ef004f4c07f5941dcf88894a1e3` | `98ddfae8c33b7d2e8cf18dbdaf56180f8c8b5e96` |
 | `dossiers/indivision-succession-heritiers-vendre-partager.html` | `edf2c7b8270a9c257c28c282fda78fa8a71dd0c9` | `ebb86a9c091deb6ccb2747e9acba6335bd66d818` |
 | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` | `73804a97a74df735855ceb5291c6ce824e36da56` | `a982b4a256d31aa630435af2265c34c7134f8570` |
@@ -90,7 +92,7 @@ Pages analysées : **129**. Pages `noindex` exclues : **80**. Validations humain
 | `dossiers/finances-credit-endettement.html` | `0e7bf55b72e7d5d6a9b9df85ce1bd14c87f48715` | `d8d560cf2c838d289fa7b93c5cb7a0661987c11d` |
 | `articles/construire-epargne-de-zero.html` | `a528b4cc9c82d8c7d6b737144fceb7adc70bd100` | `afa848569393911123b1166dfdc9daa81721a20f` |
 | `articles/comparatif-produits-bancaires.html` | `f766c96540debfe1ce8ef1d2c7e38770df01b3f3` | `ac036634513c533460b7d5f49dcb8afc4914e497` |
-| `dossiers/patrimoine-selon-age-construire-utiliser.html` | `5de90833ce46e346e0e9e3c3877994fbbca9921c` | `4197bc9524cbbf26f3d546dc4d448f93c85d4487` |
+| `dossiers/patrimoine-selon-age-construire-utiliser.html` | `5de90833ce46e346e0e9e3c3877994fbbca9921c` | `f571a8d8d95f55edd72da41ee5f44345a35b2f5c` |
 | `dossiers/finances-transmission-patrimoine.html` | `82b04a6992bd5fea253a773125768b5cb012a203` | `b0d640f7a1e93de925f2f261e300b5cba6457787` |
 | `dossiers/comparer-deux-offres-emploi.html` | `3ff2b7f7af69505d49005ced8661971e69e02c2d` | `d117b47683b6b788c73ff7985facab6e0f742d0d` |
 | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | `9b46d98a92fde3c92c7d0ba563bbece7cb3ce9ad` | `bac921cbe2446cc20f220d80e11bede4856b9672` |
@@ -116,7 +118,6 @@ Pages analysées : **129**. Pages `noindex` exclues : **80**. Validations humain
 - `dossiers/reconversion-sans-formation-longue.html` — 8/9 automatique — Verrou dominant, VAE/certification/poste passerelle/candidature directe, coût complet, seuils et conditions d’inversion déjà structurés.
 - `dossiers/emploi-chercher-accepter-negocier-evoluer.html` — 8/9 automatique — Entonnoir emploi, diagnostic par étape, alternatives, plancher de négociation, scénario rester/préparer/partir et options futures déjà traités.
 - `dossiers/competent-mais-invisible-travail.html` — 8/9 automatique — Valeur créée transformée en preuves observables, visibilité auprès des décideurs et alternatives à l’attente d’une reconnaissance spontanée déjà structurées.
-- `articles/grosse-entree-argent-que-faire.html` — 8/9 automatique — Capital réellement disponible, poches, délai adaptable, dette sans automatisme, allocation globale et séquence 0–90 jours déjà structurés.
 - `dossiers/quitter-travail-reconversion-sans-se-fragiliser.html` — 8/9 automatique — Diagnostic de ce qu’il faut réellement quitter, options de transition, coût de rester, runway, tests de marché, scénarios et seuils de départ/renoncement déjà structurés.
 - `articles/premiere-chance-sans-experience.html` — 8/9 automatique — Première expérience lue comme achat de preuve, réseau et option suivante ; coût d’enfermement, condition de sortie et scénario dégradé déjà traités.
 - `dossiers/management-relations-conflits.html` — 8/9 automatique — Réglages de management, seuil d’autonomie, goulot de validation, droits de décision, causes structurelles du conflit, escalade et stress test déjà structurés.
@@ -127,7 +128,6 @@ Pages analysées : **129**. Pages `noindex` exclues : **80**. Validations humain
 - `articles/frais-fiscalite-rendement-net.html` — 8/9 automatique — Réécriture du 16/08 : frais fournisseurs actualisés, point mort de migration, coût ponctuel du changement et valeur des options perdues ajoutés.
 - `dossiers/decider-sans-tourner-en-rond.html` — 8/9 automatique — Contraintes versus préférences, valeur de l’information, coût d’erreur, réversibilité, sunk cost, contradiction, pré-mortem et décision falsifiable déjà structurés.
 - `dossiers/plan-30-jours-recherche-emploi.html` — 8/9 automatique — Entonnoir mesurable, deux séries comparables, une hypothèse de blocage à la fois, preuves, débrief et règles de continuation/repositionnement déjà structurés.
-- `dossiers/allocation-patrimoine-selon-situation.html` — 8/9 automatique — Allocation pilotée par fonction, horizon, stabilité des revenus et capacité de perte ; huit situations avec déclencheurs explicites de réallocation déjà structurées.
 - `dossiers/methode-analyse-complete.html` — 8/9 automatique — Question d’investissement, benchmark, fondamental, valorisation, technique, sizing, scénario adverse et condition d’invalidation déjà structurés.
 - `dossiers/metiers-accessibles-sans-diplome.html` — 8/9 automatique — Réécriture de référence : métiers classés par verrous réels, preuves, voies d’accès et conditions de substitution au diplôme déjà structurés.
 - `dossiers/inflation-comprendre-histoire-pouvoir-achat.html` — 8/9 automatique — Page explicative longue : mécanismes, histoire, rendement réel, dette et implications patrimoniales sont reliés ; sa fonction n’exige pas d’ajouter artificiellement un plan de décision générique.
@@ -164,8 +164,8 @@ Pages analysées : **129**. Pages `noindex` exclues : **80**. Validations humain
 | 7/9 | 1546 | humaine ✓ | `dossiers/debloquer-demarche-administrative.html` |
 | 7/9 | 1726 | à revoir après changement | `dossiers/metiers-fonctions-organisation-entreprise.html` |
 | 7/9 | 1841 | à revoir après changement | `dossiers/regles-responsabilites-fautes-travail.html` |
-| 7/9 | 1989 | heuristique | `dossiers/seuils-maturite-patrimoniale.html` |
 | 7/9 | 2018 | à revoir après changement | `dossiers/are-arce-acre-creation-entreprise.html` |
+| 7/9 | 2145 | heuristique | `dossiers/seuils-maturite-patrimoniale.html` |
 | 7/9 | 2401 | humaine ✓ | `dossiers/demenager-pour-un-emploi-salaire-minimum.html` |
 | 7/9 | 2458 | à revoir après changement | `dossiers/experience-devient-risque-recruteur.html` |
 | 8/9 | 1008 | humaine ✓ | `dossiers/immobilier-allocation-globale-patrimoine.html` |
@@ -174,15 +174,15 @@ Pages analysées : **129**. Pages `noindex` exclues : **80**. Validations humain
 | 8/9 | 1227 | humaine ✓ | `dossiers/protocole-verifier-reponse-ia.html` |
 | 8/9 | 1286 | humaine ✓ | `dossiers/reconversion-sans-formation-longue.html` |
 | 8/9 | 1317 | humaine ✓ | `dossiers/emploi-chercher-accepter-negocier-evoluer.html` |
-| 8/9 | 1331 | à revoir après changement | `dossiers/audit-budget-60-minutes.html` |
 | 8/9 | 1334 | à revoir après changement | `dossiers/calculer-prix-minimum-rentable.html` |
 | 8/9 | 1337 | humaine ✓ | `dossiers/competent-mais-invisible-travail.html` |
 | 8/9 | 1344 | à revoir après changement | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` |
-| 8/9 | 1360 | humaine ✓ | `articles/grosse-entree-argent-que-faire.html` |
+| 8/9 | 1346 | à revoir après changement | `dossiers/audit-budget-60-minutes.html` |
 | 8/9 | 1360 | humaine ✓ | `dossiers/quitter-travail-reconversion-sans-se-fragiliser.html` |
 | 8/9 | 1362 | à revoir après changement | `articles/travailler-beaucoup-gagner-peu-prix.html` |
 | 8/9 | 1364 | humaine ✓ | `articles/premiere-chance-sans-experience.html` |
 | 8/9 | 1369 | humaine ✓ | `dossiers/management-relations-conflits.html` |
+| 8/9 | 1385 | à revoir après changement | `articles/grosse-entree-argent-que-faire.html` |
 | 8/9 | 1390 | humaine ✓ | `dossiers/prix-attendre-finances.html` |
 | 8/9 | 1403 | à revoir après changement | `dossiers/tresorerie-bfr-entreprise.html` |
 | 8/9 | 1411 | humaine ✓ | `dossiers/piloter-patrimoine-selon-taille.html` |
@@ -211,7 +211,7 @@ Pages analysées : **129**. Pages `noindex` exclues : **80**. Validations humain
 | 8/9 | 2123 | humaine ✓ | `dossiers/plan-30-jours-recherche-emploi.html` |
 | 8/9 | 2146 | à revoir après changement | `dossiers/acheter-sans-vider-epargne.html` |
 | 8/9 | 2183 | à revoir après changement | `articles/tester-metier-avant-investir.html` |
-| 8/9 | 2197 | humaine ✓ | `dossiers/allocation-patrimoine-selon-situation.html` |
+| 8/9 | 2212 | à revoir après changement | `dossiers/allocation-patrimoine-selon-situation.html` |
 | 8/9 | 2224 | à revoir après changement | `dossiers/finances-cadre-global.html` |
 | 8/9 | 2248 | à revoir après changement | `dossiers/patrimoine-marge-de-manoeuvre.html` |
 | 8/9 | 2320 | humaine ✓ | `dossiers/methode-analyse-complete.html` |
@@ -233,13 +233,14 @@ Pages analysées : **129**. Pages `noindex` exclues : **80**. Validations humain
 | 9/9 | 1564 | à revoir après changement | `dossiers/creer-entreprise-avec-peu-argent.html` |
 | 9/9 | 1593 | à revoir après changement | `dossiers/finances-retraite-decumulation.html` |
 | 9/9 | 1615 | humaine ✓ | `dossiers/automatiser-ou-non-processus.html` |
+| 9/9 | 1651 | heuristique | `dossiers/premier-salaire-18-ans-chez-parents.html` |
 | 9/9 | 1656 | à revoir après changement | `dossiers/accepter-emploi-plus-loin-cout-trajet.html` |
 | 9/9 | 1676 | à revoir après changement | `dossiers/passer-80-pourcent-cout-reel.html` |
 | 9/9 | 1683 | à revoir après changement | `dossiers/questions-poser-avant-prise-de-poste.html` |
 | 9/9 | 1707 | humaine ✓ | `dossiers/ameliorer-processus-sans-degrader-service.html` |
 | 9/9 | 1718 | à revoir après changement | `dossiers/trouver-premiers-clients.html` |
 | 9/9 | 1733 | à revoir après changement | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` |
-| 9/9 | 1756 | heuristique | `dossiers/premier-investissement-comment-commencer.html` |
+| 9/9 | 1774 | heuristique | `dossiers/premier-investissement-comment-commencer.html` |
 | 9/9 | 1789 | à revoir après changement | `dossiers/indivision-immobiliere-sortir-sans-subir.html` |
 | 9/9 | 1791 | humaine ✓ | `dossiers/prejuges-biais-monde-professionnel.html` |
 | 9/9 | 1849 | à revoir après changement | `dossiers/reconversion-sans-perte-salaire.html` |
@@ -256,8 +257,8 @@ Pages analysées : **129**. Pages `noindex` exclues : **80**. Validations humain
 | 9/9 | 2025 | à revoir après changement | `dossiers/puis-je-me-permettre-reconversion.html` |
 | 9/9 | 2050 | à revoir après changement | `articles/choisir-etf-mondial-debutant.html` |
 | 9/9 | 2108 | à revoir après changement | `dossiers/temps-energie-qualite-vie.html` |
-| 9/9 | 2152 | à revoir après changement | `dossiers/finances-enveloppes-fiscalite.html` |
 | 9/9 | 2167 | à revoir après changement | `dossiers/favoriser-un-enfant-succession-donation.html` |
+| 9/9 | 2170 | à revoir après changement | `dossiers/finances-enveloppes-fiscalite.html` |
 | 9/9 | 2176 | à revoir après changement | `dossiers/finances-investissement-locatif.html` |
 | 9/9 | 2183 | à revoir après changement | `dossiers/indivision-succession-heritiers-vendre-partager.html` |
 | 9/9 | 2201 | à revoir après changement | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` |
@@ -267,7 +268,7 @@ Pages analysées : **129**. Pages `noindex` exclues : **80**. Validations humain
 | 9/9 | 2315 | à revoir après changement | `dossiers/finances-credit-endettement.html` |
 | 9/9 | 2325 | à revoir après changement | `articles/construire-epargne-de-zero.html` |
 | 9/9 | 2347 | à revoir après changement | `articles/comparatif-produits-bancaires.html` |
-| 9/9 | 2357 | à revoir après changement | `dossiers/patrimoine-selon-age-construire-utiliser.html` |
+| 9/9 | 2380 | à revoir après changement | `dossiers/patrimoine-selon-age-construire-utiliser.html` |
 | 9/9 | 2390 | à revoir après changement | `dossiers/finances-transmission-patrimoine.html` |
 | 9/9 | 2444 | à revoir après changement | `dossiers/comparer-deux-offres-emploi.html` |
 | 9/9 | 2462 | à revoir après changement | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
