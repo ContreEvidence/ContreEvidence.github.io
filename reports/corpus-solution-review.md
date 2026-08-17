@@ -65,6 +65,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/finances-cadre-global.html` | `e736a54c8aa6746af202268837ab68501111b82f` | `a81a449cad1676ce338bf3c3386e1ab185e96c21` |
 | `dossiers/location-courte-duree-meuble-tourisme.html` | `ddaf6bc36e2171b5e249a161fb66926f963ea4d2` | `2959b70d729c737f2c037f540d7240da12770b7e` |
 | `dossiers/changer-travail-avant-credit-immobilier.html` | `8b7e88c9c93261fc35ebcb3a4fd5052430befe79` | `82bec88878cee4c35920b82ddd48e71012134651` |
+| `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | `7dbb9a5b999cc3cf143d8f63841135ec93581ac3` | `c3e13270e447a80884f10cb91ce8b9820629c084` |
 | `articles/construire-epargne-de-zero.html` | `a528b4cc9c82d8c7d6b737144fceb7adc70bd100` | `58b7903acd95fbf152fb2d98f0a6e343c6d3c7f0` |
 | `dossiers/trajectoire-professionnelle-selon-situation.html` | `340b3c58bd6809606aac38282afac472924ee2b1` | `b9a43b3c5de703d2c230aa55bc778f03c0fe3ac3` |
 | `dossiers/finances-allocation-portefeuille.html` | `625ccbd17f7ecb7384ea9fb54c0ea57508261285` | `8ffa0f7ed6a743bdd65e43b4d3d7d02c59296126` |
@@ -93,7 +94,6 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/patrimoine-permet-il-travailler-moins.html` | `c006f7a8de0d55c219f89748ad39053e8afecbec` | `f1b6646e5695d1b33af10d06e2d7f0acc0e5fef8` |
 | `dossiers/decision-plan-30-90-jours.html` | `c7bd8f5cd0a197ead2e0ebe3d947f0cacbc0d46c` | `450681d85699873f6a7322980d21c36d1cc38467` |
 | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` | `aab16c4e6601ab8b9d42fc4230e4e668cbc1d540` | `97fa9c117bef460b3c2679212f70d819f9872519` |
-| `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | `7dbb9a5b999cc3cf143d8f63841135ec93581ac3` | `160a66e65a40e3015317d8a6ea03589c02c19b68` |
 | `dossiers/finances-credit-endettement.html` | `0e7bf55b72e7d5d6a9b9df85ce1bd14c87f48715` | `d8d560cf2c838d289fa7b93c5cb7a0661987c11d` |
 | `articles/comparatif-produits-bancaires.html` | `f766c96540debfe1ce8ef1d2c7e38770df01b3f3` | `ac036634513c533460b7d5f49dcb8afc4914e497` |
 | `dossiers/patrimoine-selon-age-construire-utiliser.html` | `5de90833ce46e346e0e9e3c3877994fbbca9921c` | `f571a8d8d95f55edd72da41ee5f44345a35b2f5c` |
@@ -225,6 +225,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 2634 | à revoir après changement | `dossiers/location-courte-duree-meuble-tourisme.html` |
 | 8/9 | 2722 | humaine ✓ | `dossiers/inflation-comprendre-histoire-pouvoir-achat.html` |
 | 8/9 | 2791 | à revoir après changement | `dossiers/changer-travail-avant-credit-immobilier.html` |
+| 9/9 | 1057 | à revoir après changement | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` |
 | 9/9 | 1273 | à revoir après changement | `articles/construire-epargne-de-zero.html` |
 | 9/9 | 1274 | à revoir après changement | `dossiers/trajectoire-professionnelle-selon-situation.html` |
 | 9/9 | 1292 | à revoir après changement | `dossiers/finances-allocation-portefeuille.html` |
@@ -268,7 +269,6 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 2230 | à revoir après changement | `dossiers/patrimoine-permet-il-travailler-moins.html` |
 | 9/9 | 2251 | à revoir après changement | `dossiers/decision-plan-30-90-jours.html` |
 | 9/9 | 2272 | à revoir après changement | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` |
-| 9/9 | 2298 | à revoir après changement | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` |
 | 9/9 | 2315 | à revoir après changement | `dossiers/finances-credit-endettement.html` |
 | 9/9 | 2347 | à revoir après changement | `articles/comparatif-produits-bancaires.html` |
 | 9/9 | 2380 | à revoir après changement | `dossiers/patrimoine-selon-age-construire-utiliser.html` |
