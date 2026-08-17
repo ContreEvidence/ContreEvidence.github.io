@@ -1,0 +1,38 @@
+name: Scan editorial migration language residues
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/editorial-language-residue-scan.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Scan HTML text and metadata
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+          pats={
+            'grammar_la_duree': re.compile(r'\b(?:le|un) durée de sécurité\b',re.I),
+            'grammar_de_la_duree': re.compile(r'\bdu durée de sécurité\b',re.I),
+            'grammar_adj': re.compile(r'\bdurée de sécurité (?:patrimonial|court|long)\b',re.I),
+            'legacy_jargon': re.compile(r'\b(?:gatekeepers?|runway|framework|scorecard|flywheel|proof points?|use cases?|red flags?)\b',re.I),
+          }
+          total=0
+          for p in list(Path('dossiers').glob('*.html'))+list(Path('articles').glob('*.html')):
+            s=p.read_text(encoding='utf-8',errors='replace')
+            for name,pat in pats.items():
+              for m in pat.finditer(s):
+                total+=1
+                a=max(0,m.start()-90); b=min(len(s),m.end()+120)
+                snippet=re.sub(r'\s+',' ',s[a:b])
+                print(name,'|',p,'|',snippet)
+          print('TOTAL',total)
