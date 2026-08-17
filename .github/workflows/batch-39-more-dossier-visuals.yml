@@ -1,0 +1,28 @@
+name: Batch 39 more dossier visuals
+
+on:
+  push:
+    paths:
+      - 'scripts/batch39_more_dossier_visuals.py'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Integrate more visuals into dossiers
+        run: python scripts/batch39_more_dossier_visuals.py
+      - name: Commit batch 39
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dossiers
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Add more educational visuals to finance dossiers"
+          git pull --rebase origin main
+          git push origin main
