@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **45**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **14**.
+Pages/familles détectées : **44**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **13**.
 
 ## Priorités de relecture
 
@@ -16,7 +16,6 @@ Pages/familles détectées : **45**. Pages `noindex` exclues : **79**. Promesses
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | salarié, santé / inaptitude, sans diplôme, revenu / runway |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/acheter-sans-vider-epargne.html` | SCI, mariage, PACS |
 | 21 | NON_READY | couple / logement / séparation | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | indivision directe, mariage, PACS |
-| 14 | NON_READY | couple / logement / séparation | `dossiers/patrimoine-marge-de-manoeuvre.html` | mariage, PACS |
 | 14 | NON_READY | budget / dettes | `dossiers/puis-je-me-permettre-reconversion.html` | déficit temporaire / structurel, dette / surendettement |
 | 14 | NON_READY | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 9 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/changer-travail-avant-credit-immobilier.html` | santé / inaptitude, sans diplôme |
@@ -112,21 +111,6 @@ Promesse : **quand arrêter d’optimiser et commencer à utiliser son patrimoin
 | Variante | Signal automatique |
 |---|---|
 | indivision directe | MANQUANTE |
-| SCI | TRAITEE |
-| mariage | MANQUANTE |
-| PACS | MANQUANTE |
-| concubinage | MANQUANTE |
-| tontine | MANQUANTE |
-| propriété ≠ financement | TRAITEE |
-| sorties multiples | TRAITEE |
-
-### `dossiers/patrimoine-marge-de-manoeuvre.html` — couple / logement / séparation
-
-Promesse : **patrimoine et marge de manœuvre : combien de liberté vos actifs donnent-ils ? | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| indivision directe | TRAITEE |
 | SCI | TRAITEE |
 | mariage | MANQUANTE |
 | PACS | MANQUANTE |
@@ -256,7 +240,7 @@ Promesse : **patrimoine et marge de manœuvre : combien de liberté vos actifs d
 | déficit temporaire / structurel | MANQUANTE |
 | revenu stable / variable | TRAITEE |
 | solo / couple | TRAITEE |
-| logement propriétaire / locataire | TRAITEE |
+| logement propriétaire / locataire | MENTIONNEE |
 | dette / surendettement | TRAITEE |
 | charges compressibles / non | TRAITEE |
 
@@ -264,7 +248,7 @@ Promesse : **patrimoine et marge de manœuvre : combien de liberté vos actifs d
 
 ### couple / logement / séparation
 
-Pages détectées : **7**. Promesses larges `NON_READY` : **4**. Variantes le plus souvent non détectées : **tontine** (6), **PACS** (4), **concubinage** (4), **mariage** (4), **SCI** (3), **indivision directe** (2).
+Pages détectées : **6**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **tontine** (5), **PACS** (3), **SCI** (3), **concubinage** (3), **mariage** (3), **indivision directe** (2).
 
 ### achat immobilier / crédit
 
