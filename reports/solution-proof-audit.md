@@ -7,9 +7,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **4**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **33**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **32**
 - S2 — possibilité générale à examiner : **15**
-- OK heuristique — condition ou preuve détectée : **154**
+- OK heuristique — condition ou preuve détectée : **155**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -48,8 +48,6 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Pour choisir une formation, préparer une reconversion ou comprendre pourquoi une candidature bloque, il faut distinguer ce que vous savez faire, ce qui est officiellement reconnu, ce qui est demandé dans les offres et ce que vous pouvez réellement prouver. _[fort enjeu, preuve détectée]_
 ### `dossiers/debloquer-demarche-administrative.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Preuve attendue Quel document, texte, numéro, accusé ou justificatif permet de rendre la demande vérifiable ? _[fort enjeu, preuve détectée]_
-### `dossiers/decider-a-deux-travail-patrimoine.html`
-- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Réserve commune et marges personnelles Un foyer peut conserver 30 000 € de cash tout en laissant A avec 500 € personnellement et B avec 29 500 €. _[fort enjeu, condition détectée]_
 ### `dossiers/devenir-manager-premiere-fois.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Santé / inaptitude : le management peut réduire le terrain… ou cumuler deux métiers Une évolution vers l’encadrement est parfois envisagée pour réduire une contrainte physique. _[fort enjeu, condition détectée]_
 ### `dossiers/embaucher-ou-sous-traiter.html`
