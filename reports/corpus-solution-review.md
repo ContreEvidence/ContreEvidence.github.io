@@ -12,7 +12,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 
 | Score | Mots | Page | Dimensions manquantes |
 |---:|---:|---|---|
-| 6/9 | 1426 | `dossiers/temps-energie-qualite-vie.html` | causalite, options, adverse · validation précédente caduque |
+| 6/9 | 1460 | `dossiers/temps-energie-qualite-vie.html` | causalite, options, adverse · validation précédente caduque |
 | 6/9 | 1463 | `dossiers/dependance-gros-client.html` | probleme, causalite, sortie · validation précédente caduque |
 | 6/9 | 2785 | `dossiers/indivision-loyers-charges-comptes.html` | probleme, causalite, options · validation précédente caduque |
 
@@ -20,7 +20,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 
 | Page | SHA relu | SHA courant |
 |---|---|---|
-| `dossiers/temps-energie-qualite-vie.html` | `870bee99dfb0325a0253f9000e2414580b1b8e3c` | `db24f912688069337b478cddb5232af122f92a66` |
+| `dossiers/temps-energie-qualite-vie.html` | `870bee99dfb0325a0253f9000e2414580b1b8e3c` | `a4a69ff672a469d2e3f8f5718fc188fdaab535fd` |
 | `dossiers/dependance-gros-client.html` | `aff1498bfed0cdae7eb745a22fc9815b7c5ef260` | `bdbca2d0a06cf686a0fc4786708fd14489f953e1` |
 | `dossiers/indivision-loyers-charges-comptes.html` | `17a2f1637380da7fdce685ccf909e3eeb3d5523a` | `58e167161f9837e65d22f8c8ead933f1bada5b48` |
 | `dossiers/comparer-strategies-immobilieres.html` | `06acc378800acfdcbb52e5992f3067d5b16a0b72` | `c67bf5147a80d76880553802d97ac8e805724bc1` |
@@ -152,7 +152,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | Score | Mots | Revue | Page |
 |---:|---:|---|---|
 | 6/9 | 1353 | humaine ✓ | `dossiers/etre-riche-revenu-patrimoine-liberte.html` |
-| 6/9 | 1426 | à revoir après changement | `dossiers/temps-energie-qualite-vie.html` |
+| 6/9 | 1460 | à revoir après changement | `dossiers/temps-energie-qualite-vie.html` |
 | 6/9 | 1463 | à revoir après changement | `dossiers/dependance-gros-client.html` |
 | 6/9 | 2785 | à revoir après changement | `dossiers/indivision-loyers-charges-comptes.html` |
 | 7/9 | 1222 | à revoir après changement | `dossiers/comparer-strategies-immobilieres.html` |
