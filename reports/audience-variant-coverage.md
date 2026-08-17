@@ -18,12 +18,12 @@ Pages/familles détectées : **43**. Pages `noindex` exclues : **79**. Promesses
 | 14 | NON_READY | budget / dettes | `dossiers/puis-je-me-permettre-reconversion.html` | déficit temporaire / structurel, dette / surendettement |
 | 14 | NON_READY | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 9 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/changer-travail-avant-credit-immobilier.html` | santé / inaptitude, sans diplôme |
-| 8 | NON_READY | entrepreneuriat | `dossiers/formation-vaut-elle-le-cout.html` | micro / EI / société |
 | 7 | NON_READY | reconversion / trajectoire pro | `articles/competences-transferables.html` | revenu / runway |
 | 7 | NON_READY | budget / dettes | `articles/construire-epargne-de-zero.html` | déficit temporaire / structurel |
 | 7 | NON_READY | entrepreneuriat | `dossiers/are-arce-acre-creation-entreprise.html` | activité réglementée |
 | 7 | NON_READY | investissement locatif | `dossiers/comparer-strategies-immobilieres.html` | SCI |
 | 7 | NON_READY | budget / dettes | `dossiers/creer-entreprise-avec-peu-argent.html` | revenu stable / variable |
+| 7 | NON_READY | entrepreneuriat | `dossiers/formation-vaut-elle-le-cout.html` | micro / EI / société |
 | 7 | NON_READY | budget / dettes | `dossiers/patrimoine-marge-de-manoeuvre.html` | déficit temporaire / structurel |
 | 5 | ROUTE_FIRST | achat immobilier / crédit | `dossiers/indivision-couple-separation-rachat-soulte.html` | indépendant |
 | 5 | ROUTE_FIRST | couple / logement / séparation | `dossiers/indivision-couple-separation-rachat-soulte.html` | SCI |
@@ -131,20 +131,6 @@ Promesse : **quitter son cdi avec un crédit : séquencer emploi, financement et
 | senior / âge | MANQUANTE |
 | revenu / runway | TRAITEE |
 
-### `dossiers/formation-vaut-elle-le-cout.html` — entrepreneuriat
-
-Promesse : **choisir une formation pour une reconversion : coût, rncp et débouchés | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| activité principale / complément | MENTIONNEE |
-| micro / EI / société | MANQUANTE |
-| activité réglementée | TRAITEE |
-| chômage / aides | TRAITEE |
-| TVA | MANQUANTE |
-| financement / BFR | TRAITEE |
-| associés | MANQUANTE |
-
 ### `articles/competences-transferables.html` — reconversion / trajectoire pro
 
 Promesse : **changer de métier sans repartir de zéro : compétences transférables | contre-évidence**
@@ -214,6 +200,20 @@ Promesse : **créer une entreprise avec peu d’argent : budget de départ réal
 | logement propriétaire / locataire | MENTIONNEE |
 | dette / surendettement | ROUTEE |
 | charges compressibles / non | TRAITEE |
+
+### `dossiers/formation-vaut-elle-le-cout.html` — entrepreneuriat
+
+Promesse : **choisir une formation pour une reconversion : coût, rncp et débouchés | contre-évidence**
+
+| Variante | Signal automatique |
+|---|---|
+| activité principale / complément | TRAITEE |
+| micro / EI / société | MANQUANTE |
+| activité réglementée | TRAITEE |
+| chômage / aides | TRAITEE |
+| TVA | MANQUANTE |
+| financement / BFR | TRAITEE |
+| associés | MANQUANTE |
 
 ### `dossiers/patrimoine-marge-de-manoeuvre.html` — budget / dettes
 
