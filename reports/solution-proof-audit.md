@@ -7,9 +7,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **4**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **35**
-- S2 — possibilité générale à examiner : **15**
-- OK heuristique — condition ou preuve détectée : **151**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **34**
+- S2 — possibilité générale à examiner : **14**
+- OK heuristique — condition ou preuve détectée : **150**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -70,8 +70,6 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Ce que cette période sans charges peut financer de plus utile qu’un placement un permis ou une mobilité qui élargit réellement la zone d’emploi ; une formation courte et vérifiable qui augmente les postes accessibles ; un ordinateur ou du matériel qui permet de travailler ou d’apprendre ; un déménagement vers un bassin d’emploi plus favorable ; quelques mois de marge pour refuser un mauvais poste ou chercher mieux. _[fort enjeu, condition détectée]_
 ### `dossiers/preparer-retraite-droits-epargne-logement.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Le service officiel Ma carrière d’Info Retraite est accessible à tout âge et permet de voir les périodes enregistrées, les trimestres et les points. _[fort enjeu, preuve détectée]_
-### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
-- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Quand commencer à utiliser devient rationnel le socle reste intact après la dépense ; les objectifs futurs importants restent robustes dans un scénario adverse ; la transmission voulue est déjà couverte ou n’est pas prioritaire ; le capital supplémentaire améliore peu la sécurité ; une contrainte importante peut être supprimée pour une fraction raisonnable du patrimoine ; l’usage est particulièrement dépendant du temps, de l’âge ou de la santé ; une versio _[fort enjeu, condition détectée]_
 ### `dossiers/rembourser-credit-ou-investir.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Pour un crédit immobilier, vous pouvez demander une estimation chiffrée des frais du remboursement anticipé ; pour les contrats conclus après le 1er juillet 2016, cette estimation est gratuite. _[fort enjeu, preuve détectée]_
 ### `dossiers/temps-energie-qualite-vie.html`
@@ -111,8 +109,6 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité générale à vérifier ou resserrer** — Partage / judiciaire Permet d’avancer malgré le désaccord Coût, durée, perte de contrôle.
 ### `dossiers/previsionnel-activite-12-mois.html`
 - **possibilité générale à vérifier ou resserrer** — Stress tests : une variable, puis des combinaisons réalistes Changer une variable à la fois permet d’identifier la sensibilité.
-### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
-- **possibilité générale à vérifier ou resserrer** — Cette séparation permet de profiter du patrimoine sans traiter tout le capital comme consommable.
 ### `dossiers/temps-energie-qualite-vie.html`
 - **possibilité générale à vérifier ou resserrer** — Vous pouvez donc manquer moins d’heures que de bonnes heures .
 ### `index.html`
