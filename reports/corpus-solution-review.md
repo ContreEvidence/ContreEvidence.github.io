@@ -47,6 +47,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/capacite-refuser-travail-rentabilite.html` | `aace252f32a1faf81cf6e0a4665e9b60e694129e` | `91ebe0bb0dc7e77c7a5a042210a2f54a7e04570e` |
 | `articles/sans-diplome-chemins-alternatifs.html` | `d5f6867f38969bb89ca16df2bfdbd7ed2fed77ca` | `2a7cd63ced34759f03482dd0381857c50af183b0` |
 | `dossiers/bien-immobilier-garder-vendre-transformer.html` | `851bc30ba2290f512e60911db8fbd24966b8a95f` | `f284772d45fc5d642ba0ba589b3b8cafdbbe4b73` |
+| `dossiers/patrimoine-permet-il-travailler-moins.html` | `c006f7a8de0d55c219f89748ad39053e8afecbec` | `707b4a2a68a6bd07bf10e7916e0f1ca6253e7478` |
 | `dossiers/devenir-manager-premiere-fois.html` | `5b37be7ac97ba89e23e4f31456f90008c7ec49e5` | `09dec0b2443f6b4369705c480ea3a5e54b5d9ac9` |
 | `dossiers/decider-a-deux-travail-patrimoine.html` | `ba14b77f52087dfb20b0813df082369592184e8e` | `1971f8f7829d71996d0f7c3d06f20360bd7cbab2` |
 | `dossiers/previsionnel-activite-12-mois.html` | `ec3ebe88a9923f6802788dd5fb1a65c113e220ae` | `f35cb5ed9159e68ac5caa6ea95ae5742ab5b7b8e` |
@@ -72,7 +73,6 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/indivision-immobiliere-sortir-sans-subir.html` | `7050814d0158c4069612a710f31ed7aeb6fee26e` | `e08192255565543814e7c2e872f6ec5f6c4f7beb` |
 | `dossiers/reconversion-sans-perte-salaire.html` | `128613ebf08c799823434c76e96f628ec6102a5a` | `a3bf47dce0da390a93742f2dcbac9dc557d188e8` |
 | `dossiers/lancer-activite-sans-quitter-emploi.html` | `2f63b913b35de4a4dd8f3a6fed4d1b93b6a2761a` | `43ab6e3ddca7a83819200ef8bfe00aada0b7753e` |
-| `dossiers/patrimoine-permet-il-travailler-moins.html` | `c006f7a8de0d55c219f89748ad39053e8afecbec` | `343adf2f660396f9265ddab15531d93005090ae6` |
 | `dossiers/sante-travail-equilibre-vie-pro-perso.html` | `9075afe1528f2f4c763aa2ee6146d95a22ade56b` | `e0c5f4d97e9b96ce87e1cf00e611cddcbe349312` |
 | `dossiers/couple-famille-argent-temps.html` | `8a38569c71f9b277366dfb15dfb6c05c0c101c52` | `48309b2bae9375e4e3d92fdc39d43a9b4e58f73d` |
 | `articles/retrouver-emploi-apres-interruption.html` | `abbaae628730e9314acfe90444f7185a18cf1072` | `184c63bafd29cadff71972e8e8dba04dbd97122a` |
@@ -202,6 +202,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1782 | à revoir après changement | `articles/sans-diplome-chemins-alternatifs.html` |
 | 8/9 | 1799 | humaine ✓ | `dossiers/decider-sans-tourner-en-rond.html` |
 | 8/9 | 1879 | à revoir après changement | `dossiers/bien-immobilier-garder-vendre-transformer.html` |
+| 8/9 | 1899 | à revoir après changement | `dossiers/patrimoine-permet-il-travailler-moins.html` |
 | 8/9 | 1912 | à revoir après changement | `dossiers/devenir-manager-premiere-fois.html` |
 | 8/9 | 1976 | à revoir après changement | `dossiers/decider-a-deux-travail-patrimoine.html` |
 | 8/9 | 2036 | à revoir après changement | `dossiers/previsionnel-activite-12-mois.html` |
@@ -245,7 +246,6 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1791 | humaine ✓ | `dossiers/prejuges-biais-monde-professionnel.html` |
 | 9/9 | 1849 | à revoir après changement | `dossiers/reconversion-sans-perte-salaire.html` |
 | 9/9 | 1876 | à revoir après changement | `dossiers/lancer-activite-sans-quitter-emploi.html` |
-| 9/9 | 1893 | à revoir après changement | `dossiers/patrimoine-permet-il-travailler-moins.html` |
 | 9/9 | 1901 | à revoir après changement | `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
 | 9/9 | 1937 | à revoir après changement | `dossiers/couple-famille-argent-temps.html` |
 | 9/9 | 1944 | à revoir après changement | `articles/retrouver-emploi-apres-interruption.html` |
