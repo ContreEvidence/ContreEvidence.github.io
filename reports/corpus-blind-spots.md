@@ -13,11 +13,11 @@ Pages indexables analysées : **130**. Pages `noindex` exclues : **79**.
 | Priorité | Couverture | Cluster | Page | Angles critiques non détectés |
 |---:|---:|---|---|---|
 | 17 | 6/15 | patrimoine / investissement / retraite | `dossiers/temps-energie-qualite-vie.html` | attendre / statu quo, transfert de risque, hétérogénéité / cas local, condition de renversement, valeur d’option / irréversibilité |
+| 15 | 8/15 | patrimoine / investissement / retraite | `dossiers/audit-budget-60-minutes.html` | attendre / statu quo, effets de second ordre, transfert de risque, condition de renversement, valeur d’option / irréversibilité |
 | 13 | 7/15 | emploi / carrière / qualification | `articles/competences-transferables.html` | substitution, objectif réel / substitution du moyen, asymétrie de preuve, condition de renversement |
 | 12 | 8/15 | entrepreneuriat / activité | `dossiers/creer-entreprise-sans-diplome.html` | acteur/gatekeeper, effets de second ordre, attendre / statu quo, condition de renversement |
 | 12 | 8/15 | emploi / carrière / qualification | `dossiers/travailler-moins-vivre-mieux.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen, condition de renversement |
 | 12 | 9/15 | immobilier / crédit / indivision | `dossiers/finances-residence-principale.html` | acteur/gatekeeper, fractionnement, effets de second ordre, condition de renversement |
-| 12 | 10/15 | entrepreneuriat / activité | `dossiers/audit-budget-60-minutes.html` | acteur/gatekeeper, substitution, attendre / statu quo, condition de renversement |
 | 12 | 10/15 | entrepreneuriat / activité | `dossiers/combien-chiffre-affaires-pour-vivre.html` | acteur/gatekeeper, substitution, attendre / statu quo, condition de renversement |
 | 12 | 11/15 | emploi / carrière / qualification | `dossiers/decider-a-deux-travail-patrimoine.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen, condition de renversement |
 | 12 | 11/15 | entrepreneuriat / activité | `dossiers/inflation-comprendre-histoire-pouvoir-achat.html` | acteur/gatekeeper, fractionnement, effets de second ordre, condition de renversement |
@@ -71,7 +71,7 @@ Pages : **41**. Angles le plus souvent non détectés : **transfert de risque** 
 
 ### entrepreneuriat / activité
 
-Pages : **24**. Angles le plus souvent non détectés : **valeur d’option / irréversibilité** (14), **transfert de risque** (13), **condition de renversement** (12), **objectif réel / substitution du moyen** (11), **acteur/gatekeeper** (9), **substitution** (8), **attendre / statu quo** (7).
+Pages : **23**. Angles le plus souvent non détectés : **valeur d’option / irréversibilité** (14), **transfert de risque** (13), **objectif réel / substitution du moyen** (11), **condition de renversement** (11), **acteur/gatekeeper** (8), **substitution** (7), **attendre / statu quo** (6).
 
 ### immobilier / crédit / indivision
 
@@ -79,7 +79,7 @@ Pages : **25**. Angles le plus souvent non détectés : **objectif réel / subst
 
 ### patrimoine / investissement / retraite
 
-Pages : **40**. Angles le plus souvent non détectés : **substitution** (33), **condition de renversement** (26), **objectif réel / substitution du moyen** (25), **transfert de risque** (23), **acteur/gatekeeper** (19), **attendre / statu quo** (16), **valeur d’option / irréversibilité** (8).
+Pages : **41**. Angles le plus souvent non détectés : **substitution** (34), **condition de renversement** (27), **objectif réel / substitution du moyen** (25), **transfert de risque** (24), **acteur/gatekeeper** (20), **attendre / statu quo** (17), **valeur d’option / irréversibilité** (9).
 
 ## Règle de reprise éditoriale
 
