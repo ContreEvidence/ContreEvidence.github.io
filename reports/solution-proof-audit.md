@@ -7,9 +7,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **4**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **33**
-- S2 — possibilité générale à examiner : **14**
-- OK heuristique — condition ou preuve détectée : **148**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **32**
+- S2 — possibilité générale à examiner : **15**
+- OK heuristique — condition ou preuve détectée : **153**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -38,8 +38,6 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Test Le poste cible est-il compatible non seulement avec ce que vous savez faire, mais avec ce que vous pouvez durablement supporter ? _[fort enjeu, condition détectée]_
 ### `contact.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Vous pouvez demander une source, signaler une erreur, proposer une situation à analyser ou exercer un droit de réponse. _[fort enjeu, preuve détectée]_
-### `dossiers/acheter-logement-sans-se-fragiliser.html`
-- **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Le montant d’apport optimal est ce qui reste une fois ces trois contraintes satisfaites — pas le maximum que vous pouvez virer au notaire. _[fort enjeu, preuve détectée]_
 ### `dossiers/audit-copropriete-avant-achat.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Pour un foyer très juste après achat, la deuxième architecture peut être plus robuste parce qu’elle permet de répondre à un appel imprévu sans crédit coûteux. _[fort enjeu, condition détectée]_
 ### `dossiers/business-plan-utile.html`
@@ -75,7 +73,7 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Si l’argent vous empêche de supprimer une contrainte, ne mélangez pas les questions Vous pouvez très bien savoir ce qu’il faudrait changer et ne pas pouvoir encore vous le permettre. _[fort enjeu, condition détectée]_
 ### `dossiers/tout-ca-pour-quoi-objectifs-besoins.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Ce que l’on dit vouloir Ce que l’on peut chercher derrière Conséquence 500 000 € de patrimoine Sécurité, retraite, transmission, liberté de choix La bonne allocation dépend de la fonction du capital. _[fort enjeu, condition détectée]_
-- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Toute optimisation transfère quelque chose On optimise… On peut transférer le coût vers… le rendement la liquidité, la volatilité ou le risque de perte. le salaire le temps, le trajet, la santé ou la disponibilité familiale. la sécurité la croissance, l’apprentissage ou la liberté d’expérimenter. la vitesse la réversibilité et le droit à l’erreur. le confort présent les ressources du futur soi ou des proches. _[fort enjeu, condition détectée]_
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Toute optimisation transfère quelque chose Voir le tableau détaillé On optimise… On peut transférer le coût vers… le rendement la liquidité, la volatilité ou le risque de perte. le salaire le temps, le trajet, la santé ou la disponibilité familiale. la sécurité la croissance, l’apprentissage ou la liberté d’expérimenter. la vitesse la réversibilité et le droit à l’erreur. le confort présent les ressources du futur soi ou des proches. _[fort enjeu, condition détectée]_
 ### `dossiers/valeur-option-bien-immobilier.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Cas n°2 — Louer une partie pour absorber une baisse de revenu Mensualité logement 1 450 € Baisse temporaire de revenu foyer -800 €/mois Pièce/espace potentiellement louable 450 €/mois brut Coût d’aménagement 3 000 € Temps brut pour couvrir le coût ≈ 7 mois L’option ne compense pas entièrement le choc de revenu, mais peut réduire la pression. _[fort enjeu, condition détectée]_
 ### `outil-microscope-pea.html`
@@ -92,14 +90,16 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ### `articles/entretien-rate-ce-qui-bloque.html`
 - **possibilité générale à vérifier ou resserrer** — Une preuve réduit un risque ; elle ne doit pas seulement « impressionner » Préparez 6 à 10 preuves que vous pouvez réutiliser : conflit, priorité, résultat, erreur, initiative, client, équipe, changement, apprentissage, situation difficile.
 ### `articles/retrouver-emploi-apres-interruption.html`
-- **possibilité générale à vérifier ou resserrer** — Le gatekeeper veut savoir ce que cette expérience vous permet de faire dans son organisation .
-- **possibilité générale à vérifier ou resserrer** — Le runway ne dicte pas le choix, mais il fixe combien de temps vous pouvez exiger une meilleure porte.
+- **possibilité générale à vérifier ou resserrer** — Le Décideur veut savoir ce que cette expérience vous permet de faire dans son organisation .
+- **possibilité générale à vérifier ou resserrer** — Le durée de sécurité ne dicte pas le choix, mais il fixe combien de temps vous pouvez exiger une meilleure porte.
 ### `dossiers/ameliorer-processus-sans-degrader-service.html`
 - **possibilité générale à vérifier ou resserrer** — Cela permet de la remplacer sans rouvrir le problème qu’elle contenait.
 ### `dossiers/automatiser-ou-non-processus.html`
 - **possibilité générale à vérifier ou resserrer** — Ce modèle permet de gagner du temps sans perdre la capacité de détecter un cas inhabituel.
 ### `dossiers/classes-actifs-allocation-patrimoine.html`
 - **possibilité générale à vérifier ou resserrer** — Pour un tableau de bord personnel, le séparer des obligations permet de ne pas confondre deux expériences de risque différentes.
+### `dossiers/decider-sans-tourner-en-rond.html`
+- **possibilité générale à vérifier ou resserrer** — Information décisive Cherchez ce qui ferait basculer le choix, pas tout ce qu’il est possible de savoir.
 ### `dossiers/emploi-chercher-accepter-negocier-evoluer.html`
 - **possibilité générale à vérifier ou resserrer** — Le scénario intermédiaire est souvent négligé alors qu’il permet d’accumuler épargne, preuves, réseau ou formation tout en conservant un revenu.
 - **possibilité générale à vérifier ou resserrer** — Négocier ne consiste pas à demander davantage « parce qu’on le mérite » Une négociation robuste repose sur trois éléments : le périmètre réel du poste, la valeur que vous pouvez rendre crédible et vos alternatives.
