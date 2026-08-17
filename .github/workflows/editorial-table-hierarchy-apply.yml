@@ -1,0 +1,135 @@
+name: Apply editorial table hierarchy
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/editorial-table-hierarchy-apply.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Re-rank collapsed tables by editorial function
+        shell: python
+        run: |
+          from __future__ import annotations
+          import html, pathlib, re, urllib.parse, xml.etree.ElementTree as ET
+
+          root=pathlib.Path('.').resolve()
+          prefix='https://contreevidence.github.io/'
+          ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls=[n.text.strip() for n in ET.parse('sitemap.xml').findall('.//s:loc',ns) if n.text]
+          rels=[]
+          for url in urls:
+              if not url.startswith(prefix): continue
+              rel=urllib.parse.unquote(url[len(prefix):]) or 'index.html'
+              if rel.startswith(('dossiers/','articles/')): rels.append(rel)
+
+          tag_re=re.compile(r'<[^>]+>')
+          heading_re=re.compile(r'<h([23])\b[^>]*>(.*?)</h\1>',re.I|re.S)
+          detail_re=re.compile(r'<details\b([^>]*)class=(["\'])([^"\']*\bce-legacy-detail\b[^"\']*)\2([^>]*)>\s*<summary>(.*?)</summary>\s*(.*?)</details\s*>',re.I|re.S)
+
+          def plain(s):
+              return re.sub(r'\s+',' ',html.unescape(tag_re.sub(' ',s))).strip()
+
+          def classify(rel,title,h1):
+              name=pathlib.PurePosixPath(rel.lower()).name
+              signal=f'{name} {title} {h1}'.lower()
+              if ('comparer' in signal or 'comparatif' in signal or ' ou ' in h1.lower() or
+                  name.startswith(('comparer-','acheter-ou-louer','rembourser-credit-ou-investir','location-nue-ou-meublee','assurer-ou-autoassurer','embaucher-ou-sous-traiter')) or
+                  any(x in signal for x in ('garder, vendre','garder vendre','acheter, crédit, loa','achat, crédit, loa'))):
+                  return 'comparison'
+              if (name.startswith(('combien-','cout-','coût-','calculer-','prix-','capacite-','capacité-','previsionnel-','tresorerie-')) or
+                  any(x in signal for x in ('combien ','coût réel','cout réel','prix minimum','budget nécessaire','salaire minimum','chiffre d’affaires','chiffre affaires','rentabilité','rentabilite','mensualité','mensualite'))):
+                  return 'calculation'
+              if (name.startswith(('comment-','audit-','plan-','preparer-','préparer-','debloquer-','débloquer-','protocole-','questions-','checklist-')) or
+                  any(x in signal for x in ('comment faire','comment vérifier','comment verifier','avant de signer','avant de postuler','plan 30','plan 90'))):
+                  return 'procedure'
+              if any(x in signal for x in ('faut-il','puis-je','accepter','quitter','changer','passer à','passer au','travailler moins','se permettre','sans se fragiliser','dois-je')):
+                  return 'decision'
+              if rel.lower().startswith('articles/'):
+                  return 'analysis'
+              return 'reference'
+
+          # These terms describe a table that is often the actual instrument of the section,
+          # not merely supporting documentation. They are interpreted together with page intent.
+          core_patterns={
+              'decision': re.compile(r'\b(?:décision|decison|conclusion|profil|scénario|scenario|renverser|renversement|conditions|arbitrage|option|coût réel|cout réel|gain net|seuil|risque|priorité)\b',re.I),
+              'comparison': re.compile(r'\b(?:compar|option|scénario|scenario|profil|coût|cout|prix|gain|perte|avantage|inconvénient|inconvenient|arbitrage|décision|decision|renverser|renversement|choisir|fonction|horizon|échéance|echeance)\b',re.I),
+              'calculation': re.compile(r'\b(?:calcul|coût|cout|prix|budget|revenu|salaire|marge|seuil|taux|rendement|mensualité|mensualite|scénario|scenario|simulation|profil|exemple|résultat|resultat|hypothèse|hypothese|indicateur|ratio)\b',re.I),
+              'procedure': re.compile(r'\b(?:checklist|protocole|étape|etape|jour|à vérifier|a verifier|avant|tableau à remplir|tableau a remplir|question|décision|decision|renverser|renversement|ordre|priorité|priorite)\b',re.I),
+              'analysis': re.compile(r'\b(?:repère|repere|exemple|profil|ratio|test a/b|test a\/b|preuve|décision|decision|renverser|renversement|indicateur|comparaison principale)\b',re.I),
+              'reference': re.compile(r'\b(?:tableau à remplir|tableau a remplir|checklist|protocole|cas pratique|exemple chiffré|exemple chiffre|simulation|décision|decision|renverser|renversement)\b',re.I),
+          }
+
+          changed=[]; opened=0; closed=0
+          for rel in rels:
+              p=root/rel
+              if not p.exists(): continue
+              raw=p.read_text(encoding='utf-8',errors='replace')
+              if 'ce-legacy-detail' not in raw: continue
+              tm=re.search(r'<title\b[^>]*>(.*?)</title>',raw,re.I|re.S)
+              hm=re.search(r'<h1\b[^>]*>(.*?)</h1>',raw,re.I|re.S)
+              title=plain(tm.group(1)) if tm else ''
+              h1=plain(hm.group(1)) if hm else ''
+              intent=classify(rel,title,h1)
+              headings=list(heading_re.finditer(raw))
+
+              out=[]; last=0; local_change=False
+              for m in detail_re.finditer(raw):
+                  out.append(raw[last:m.start()])
+                  section=''
+                  for h in headings:
+                      if h.start()<m.start(): section=plain(h.group(2))
+                      else: break
+                  attrs=(m.group(1)+f'class={m.group(2)}{m.group(3)}{m.group(2)}'+m.group(4)).strip()
+                  body=m.group(6)
+                  summary=plain(m.group(5)) or 'Voir le tableau détaillé'
+                  is_core=bool(core_patterns[intent].search(section))
+
+                  # Primary tables are visible by default but remain collapsible.
+                  # Secondary/documentary tables remain closed. No decision depends on ordinal position.
+                  attrs=re.sub(r'\s*open(?:=["\'][^"\']*["\'])?','',attrs,flags=re.I)
+                  attrs=re.sub(r'\s*data-ce-table-role=["\'][^"\']*["\']','',attrs,flags=re.I)
+                  if is_core:
+                      attrs=(attrs+' open data-ce-table-role="primary"').strip()
+                      new_summary='Tableau principal de cette section'
+                      opened+=1
+                  else:
+                      attrs=(attrs+' data-ce-table-role="detail"').strip()
+                      new_summary='Voir le tableau détaillé'
+                      closed+=1
+                  replacement=f'<details {attrs}><summary>{new_summary}</summary>{body}</details>'
+                  if replacement!=m.group(0): local_change=True
+                  out.append(replacement)
+                  last=m.end()
+              out.append(raw[last:])
+              new=''.join(out)
+              if local_change and new!=raw:
+                  p.write_text(new,encoding='utf-8')
+                  changed.append(rel)
+
+          print(f'Pages modifiées: {len(changed)}')
+          print(f'Tableaux classés principaux (ouverts): {opened}')
+          print(f'Tableaux classés détails (fermés): {closed}')
+          for rel in changed: print('UPDATED',rel)
+      - name: Validate and commit
+        run: |
+          git diff --check
+          git config user.name "ContreEvidence"
+          git config user.email "contreevidence@gmail.com"
+          git add dossiers articles
+          if git diff --cached --quiet; then
+            echo "No hierarchy changes"
+            exit 0
+          fi
+          git commit -m "Apply intent-based table hierarchy across content"
+          git push
