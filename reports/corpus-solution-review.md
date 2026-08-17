@@ -30,7 +30,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/regles-responsabilites-fautes-travail.html` | `8d0c5f5cbcba540922996705b1dcc2807513c62a` | `8f9d6c7b057be2b49e71ea8f00fe98100b352ca5` |
 | `dossiers/are-arce-acre-creation-entreprise.html` | `96944742e60f24751b001857871095f3ae55ce94` | `ee86aaa59ef89d513a68d1901bc8473d5acf90f5` |
 | `dossiers/experience-devient-risque-recruteur.html` | `fa76f61cde9496a7e8b186c63d02ccf92abb860c` | `381d6952b2473a1a2e66f4cbfe8f1555b01a2578` |
-| `dossiers/depenses-recurrentes-abonnements-assurances.html` | `7ab68ff16885592aa5a53bcbf88bea40f0d60230` | `30ada199ddea3d8c50a2f9e5fcaae49d6aeb41cb` |
+| `dossiers/depenses-recurrentes-abonnements-assurances.html` | `7ab68ff16885592aa5a53bcbf88bea40f0d60230` | `88d345eabfef91786e1331b4dd29efd5de0938d9` |
 | `dossiers/audit-budget-60-minutes.html` | `8de2b2164b0d8d56823db98de8e87e9fbf70bef8` | `bca39ad4d7047e295ddfabafb39cfc2f8bfd1c84` |
 | `dossiers/acheter-logement-sans-se-fragiliser.html` | `917027c5225fc0464db739ffa51972e38f4655f6` | `a662879d31e2383f03f92f5ef3359fce84f66753` |
 | `dossiers/finances-residence-principale.html` | `89bdee80210b87568b4831b77c18bccbc6c8f1f9` | `06bdc06f234c3297252bb7523969af5b95145d3c` |
@@ -171,7 +171,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 7/9 | 2401 | humaine ✓ | `dossiers/demenager-pour-un-emploi-salaire-minimum.html` |
 | 7/9 | 2458 | à revoir après changement | `dossiers/experience-devient-risque-recruteur.html` |
 | 8/9 | 1008 | humaine ✓ | `dossiers/immobilier-allocation-globale-patrimoine.html` |
-| 8/9 | 1034 | à revoir après changement | `dossiers/depenses-recurrentes-abonnements-assurances.html` |
+| 8/9 | 1036 | à revoir après changement | `dossiers/depenses-recurrentes-abonnements-assurances.html` |
 | 8/9 | 1068 | à revoir après changement | `dossiers/audit-budget-60-minutes.html` |
 | 8/9 | 1123 | à revoir après changement | `dossiers/acheter-logement-sans-se-fragiliser.html` |
 | 8/9 | 1203 | à revoir après changement | `dossiers/finances-residence-principale.html` |
