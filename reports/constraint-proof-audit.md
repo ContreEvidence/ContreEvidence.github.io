@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **17**
 - P1 — affirmation forte à resserrer ou vérifier : **73**
-- P2 — nécessité à examiner : **164**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **910**
+- P2 — nécessité à examiner : **163**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **911**
 
 ## P0 — rouvrir en priorité
 
@@ -205,8 +205,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Le retour doit surtout produire une preuve convaincante du présent. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — L’interruption doit être expliquée de façon stable, factuelle et proportionnée.
 ### `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`
-- **nécessité à requalifier ou sourcer** — Ce qui doit faire renverser la décision Conclusion provisoire Observation nouvelle Révision Accepter B pour le temps les horaires réels restent aussi capturants que A le bénéfice acheté disparaît.
-- **nécessité à requalifier ou sourcer** — Commencez par ce que la baisse de salaire doit acheter Motif annoncé Besoin réel Substitution à tester avant de baisser le salaire « Je veux vivre mieux » moins de trajet / horaires plus prévisibles télétravail, autre site, horaires, poste voisin. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Choix de vie durable Le budget doit tenir sans compter sur une hausse future hypothétique. _[temporalité]_
 ### `dossiers/allocation-patrimoine-selon-situation.html`
 - **nécessité à requalifier ou sourcer** — Avant une décision réelle, il faut intégrer fiscalité, dettes, patrimoine immobilier, droits à retraite, situation familiale, enveloppes disponibles et capacité personnelle à supporter une baisse. _[temporalité]_
 ### `dossiers/ameliorer-processus-sans-degrader-service.html`
