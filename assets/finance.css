@@ -96,3 +96,11 @@
 .prose:has(> .ce-tool-bridge){display:flex;flex-direction:column}
 .prose>.ce-tool-bridge{order:90;margin-top:1.8rem}
 .prose>p:has(>a.back){order:100}
+
+
+/* ===== Visuels pédagogiques intégrés ===== */
+.ce-visual{margin:1.65rem 0 2rem;font-family:Inter,system-ui,sans-serif}
+.ce-visual img{display:block;width:100%;height:auto;border-radius:18px;background:#101820;border:1px solid rgba(16,24,32,.13);box-shadow:0 12px 28px rgba(16,24,32,.10)}
+.ce-visual figcaption{margin:.65rem .15rem 0;color:#5a6570;font-size:.86rem;line-height:1.5}
+.ce-visual-wide{width:min(980px,calc(100vw - 8vw));margin-left:50%;transform:translateX(-50%)}
+@media(max-width:820px){.ce-visual-wide{width:100%;margin-left:0;transform:none}.ce-visual img{border-radius:13px}.ce-visual figcaption{font-size:.82rem}}
