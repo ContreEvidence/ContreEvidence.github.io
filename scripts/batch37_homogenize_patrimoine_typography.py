@@ -1,5 +1,6 @@
 from pathlib import Path
 
+# Batch 37: align Patrimoine typography with the established Contre-Evidence visual system.
 path = Path('themes/argent.html')
 s = path.read_text(encoding='utf-8')
 
@@ -34,5 +35,4 @@ for old, new in replacements.items():
         raise SystemExit(f'Expected typography rule not found: {old[:90]}')
     s = s.replace(old, new, 1)
 
-s = s.replace('<meta name="dateModified" content="2026-08-17"/>', '<meta name="dateModified" content="2026-08-17"/>', 1)
 path.write_text(s, encoding='utf-8')
