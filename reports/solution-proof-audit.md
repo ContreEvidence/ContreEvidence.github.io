@@ -7,7 +7,7 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **4**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **34**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **35**
 - S2 — possibilité générale à examiner : **17**
 - OK heuristique — condition ou preuve détectée : **153**
 
@@ -26,6 +26,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 
 ### `articles/choisir-etf-mondial-debutant.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Il ne remplace pas votre allocation, mais il permet de vérifier que le produit réel correspond à ce que vous pensez acheter. _[fort enjeu, preuve détectée]_
+### `articles/construire-epargne-de-zero.html`
+- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Dette coûteuse Un mini-coussin peut éviter de reprendre du crédit au premier incident ; ensuite la dette peut devenir prioritaire. _[fort enjeu, condition détectée]_
 ### `articles/frais-fiscalite-rendement-net.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Le simulateur permet d’isoler l’effet des frais et de tester vos propres hypothèses sans présumer d’un rendement futur. _[fort enjeu, preuve détectée]_
 ### `articles/grosse-entree-argent-que-faire.html`
