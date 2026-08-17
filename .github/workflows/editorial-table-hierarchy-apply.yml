@@ -59,15 +59,13 @@ jobs:
                   return 'analysis'
               return 'reference'
 
-          # These terms describe a table that is often the actual instrument of the section,
-          # not merely supporting documentation. They are interpreted together with page intent.
           core_patterns={
-              'decision': re.compile(r'\b(?:décision|decison|conclusion|profil|scénario|scenario|renverser|renversement|conditions|arbitrage|option|coût réel|cout réel|gain net|seuil|risque|priorité)\b',re.I),
-              'comparison': re.compile(r'\b(?:compar|option|scénario|scenario|profil|coût|cout|prix|gain|perte|avantage|inconvénient|inconvenient|arbitrage|décision|decision|renverser|renversement|choisir|fonction|horizon|échéance|echeance)\b',re.I),
-              'calculation': re.compile(r'\b(?:calcul|coût|cout|prix|budget|revenu|salaire|marge|seuil|taux|rendement|mensualité|mensualite|scénario|scenario|simulation|profil|exemple|résultat|resultat|hypothèse|hypothese|indicateur|ratio)\b',re.I),
-              'procedure': re.compile(r'\b(?:checklist|protocole|étape|etape|jour|à vérifier|a verifier|avant|tableau à remplir|tableau a remplir|question|décision|decision|renverser|renversement|ordre|priorité|priorite)\b',re.I),
-              'analysis': re.compile(r'\b(?:repère|repere|exemple|profil|ratio|test a/b|test a\/b|preuve|décision|decision|renverser|renversement|indicateur|comparaison principale)\b',re.I),
-              'reference': re.compile(r'\b(?:tableau à remplir|tableau a remplir|checklist|protocole|cas pratique|exemple chiffré|exemple chiffre|simulation|décision|decision|renverser|renversement)\b',re.I),
+              'decision': re.compile(r'\b(?:décisions?|decisions?|conclusions?|profils?|scénarios?|scenarios?|renvers(?:er|ement)|conditions?|arbitrages?|options?|coûts? réels?|couts? reels?|gains? nets?|seuils?|risques?|priorités?)\b',re.I),
+              'comparison': re.compile(r'\b(?:compar(?:er|aison|atif|ative|atives|atifs|aisons)?|options?|scénarios?|scenarios?|profils?|coûts?|couts?|prix|gains?|pertes?|avantages?|inconvénients?|inconvenients?|arbitrages?|décisions?|decisions?|renvers(?:er|ement)|choisir|fonctions?|horizons?|échéances?|echeances?)\b',re.I),
+              'calculation': re.compile(r'\b(?:calculs?|coûts?|couts?|prix|budgets?|revenus?|salaires?|marges?|seuils?|taux|rendements?|mensualités?|mensualites?|scénarios?|scenarios?|simulations?|profils?|exemples?|résultats?|resultats?|hypothèses?|hypotheses?|indicateurs?|ratios?)\b',re.I),
+              'procedure': re.compile(r'\b(?:checklists?|protocoles?|étapes?|etapes?|jours?|à vérifier|a verifier|avant|tableaux? à remplir|tableaux? a remplir|questions?|décisions?|decisions?|renvers(?:er|ement)|ordres?|priorités?|priorites?)\b',re.I),
+              'analysis': re.compile(r'\b(?:repères?|reperes?|exemples?|profils?|ratios?|tests? a/b|tests? a\/b|preuves?|décisions?|decisions?|renvers(?:er|ement)|indicateurs?|comparaisons? principales?)\b',re.I),
+              'reference': re.compile(r'\b(?:tableaux? à remplir|tableaux? a remplir|checklists?|protocoles?|cas pratiques?|exemples? chiffrés?|exemples? chiffres?|simulations?|décisions?|decisions?|renvers(?:er|ement))\b',re.I),
           }
 
           changed=[]; opened=0; closed=0
@@ -92,11 +90,8 @@ jobs:
                       else: break
                   attrs=(m.group(1)+f'class={m.group(2)}{m.group(3)}{m.group(2)}'+m.group(4)).strip()
                   body=m.group(6)
-                  summary=plain(m.group(5)) or 'Voir le tableau détaillé'
                   is_core=bool(core_patterns[intent].search(section))
 
-                  # Primary tables are visible by default but remain collapsible.
-                  # Secondary/documentary tables remain closed. No decision depends on ordinal position.
                   attrs=re.sub(r'\s*open(?:=["\'][^"\']*["\'])?','',attrs,flags=re.I)
                   attrs=re.sub(r'\s*data-ce-table-role=["\'][^"\']*["\']','',attrs,flags=re.I)
                   if is_core:
@@ -131,5 +126,5 @@ jobs:
             echo "No hierarchy changes"
             exit 0
           fi
-          git commit -m "Apply intent-based table hierarchy across content"
+          git commit -m "Refine intent-based table hierarchy across content"
           git push
