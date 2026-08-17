@@ -4,9 +4,17 @@ import re
 p = Path('dossiers/inflation-comprendre-histoire-pouvoir-achat.html')
 s = p.read_text(encoding='utf-8')
 
+new_title = '10 000 € aujourd’hui : combien vaudront-ils vraiment dans 5, 10 ou 20 ans ? | Contre-Évidence'
+new_share_title = '10 000 € aujourd’hui : combien vaudront-ils vraiment dans 5, 10 ou 20 ans ?'
+new_desc = 'Inflation en euros concrets : ce que 10 000 €, un salaire, un crédit et une épargne deviennent quand les prix montent, avant d’aller plus loin dans l’histoire et les mécanismes.'
+
 # Make the acquisition promise concrete without deleting the deep historical material.
-s = re.sub(r'<title>.*?</title>', '<title>10 000 € aujourd’hui : combien vaudront-ils vraiment dans 5, 10 ou 20 ans ? | Contre-Évidence</title>', s, count=1)
-s = re.sub(r'<meta name="description" content="[^"]*"/>', '<meta name="description" content="Inflation en euros concrets : ce que 10 000 €, un salaire, un crédit et une épargne deviennent quand les prix montent, avant d’aller plus loin dans l’histoire et les mécanismes."/>', s, count=1)
+s = re.sub(r'<title>.*?</title>', f'<title>{new_title}</title>', s, count=1)
+s = re.sub(r'<meta name="description" content="[^"]*"/>', f'<meta name="description" content="{new_desc}"/>', s, count=1)
+s = re.sub(r'<meta property="og:title" content="[^"]*"/>', f'<meta property="og:title" content="{new_share_title}"/>', s, count=1)
+s = re.sub(r'<meta property="og:description" content="[^"]*"/>', f'<meta property="og:description" content="{new_desc}"/>', s, count=1)
+s = re.sub(r'<meta name="twitter:title" content="[^"]*"/>', f'<meta name="twitter:title" content="{new_share_title}"/>', s, count=1)
+s = re.sub(r'<meta name="twitter:description" content="[^"]*"/>', f'<meta name="twitter:description" content="{new_desc}"/>', s, count=1)
 s = s.replace('<div class="kicker">Patrimoine · Comprendre</div><h1>Inflation : pourquoi votre argent perd de la valeur même quand votre compte ne baisse pas.</h1><p>Définition, causes, 80 ans d’histoire française, effets sur le pouvoir d’achat, l’épargne, le crédit et les placements. Avec les chiffres qui permettent enfin de mesurer ce que quelques pourcents changent réellement.</p><div class="dossier-hero-note"><strong>Idée centrale :</strong> l’inflation ne dit pas seulement que les prix montent. Elle dit que la quantité de biens et de services qu’un euro permet d’acheter diminue. Et sur plusieurs années, l’effet composé devient considérable.</div>', '<div class="kicker">Patrimoine · Pouvoir d’achat</div><h1>Vous avez 10 000 € sur un compte : combien vaudront-ils réellement dans 5, 10 ou 20 ans ?</h1><p>Commencez par vos euros, pas par la théorie. L’inflation change ce que votre épargne achète, la valeur réelle de votre salaire, le poids d’un crédit et le rendement qu’il faut réellement regarder.</p><div class="dossier-hero-note"><strong>Question utile :</strong> si les prix augmentent plus vite que votre argent ou vos revenus, combien de pouvoir d’achat perdez-vous réellement — et quelle décision cela change-t-il aujourd’hui ?</div>', 1)
 
 marker = '<article class="prose">'
@@ -16,8 +24,15 @@ if insert not in s:
 
 s = re.sub(r'<meta name="dateModified" content="[^"]*"/>', '<meta name="dateModified" content="2026-08-17"/>', s, count=1)
 s = re.sub(r'article:modified_time" content="[^"]*"', 'article:modified_time" content="2026-08-17"', s, count=1)
+# Keep JSON-LD aligned with the visible acquisition promise.
+s = re.sub(r'"headline":"[^"]*"', f'"headline":"{new_share_title}"', s, count=1)
+s = re.sub(r'"description":"[^"]*"', f'"description":"{new_desc}"', s, count=1)
+s = re.sub(r'"dateModified":"[^"]*"', '"dateModified":"2026-08-17"', s, count=1)
+# Breadcrumb label should also describe the page visitors actually land on.
+s = s.replace('"position":3,"name":"Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent"', f'"position":3,"name":"{new_share_title}"', 1)
+
 p.write_text(s, encoding='utf-8')
 
 Path('reports/editorial-acquisition-doctrine-2026-08-17.md').write_text('''# Doctrine acquisition — 17 août 2026\n\n## Règle\nAucun nouveau dossier d’acquisition ne doit être construit autour d’un concept abstrait.\n\nUne porte d’entrée publique doit commencer par une situation réelle, une décision ou un montant immédiatement reconnaissable.\n\n## Ordre obligatoire\n1. Situation concrète / question du visiteur.\n2. Réponse ou ordre d’action en moins d’un écran.\n3. Exemple chiffré ou comparaison.\n4. Ce qui ferait changer la réponse.\n5. Outil, checklist ou action.\n6. Seulement ensuite : mécanisme, contexte, histoire, réglementation et théorie utiles.\n\n## Interdit comme angle principal d’acquisition\n- « Comprendre X » sans situation concrète.\n- Histoire ou théorie avant l’usage.\n- Cadre global abstrait comme page d’arrivée d’un post social.\n- Lexique ou taxonomie comme promesse principale.\n\n## Autorisé\nLes pages de fond conceptuelles existantes peuvent rester comme références secondaires ou bibliothèque, mais ne doivent pas être choisies comme landing pages d’acquisition tant qu’elles n’ont pas une entrée situationnelle forte.\n\n## Test avant publication sociale\nLa page cible doit permettre en moins de 30 secondes de répondre à : « Est-ce que cette page parle exactement de mon problème et que puis-je faire maintenant ? »\n''', encoding='utf-8')
 
-# Trigger batch 40
+# Trigger batch 40 metadata sync
