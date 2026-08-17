@@ -1,0 +1,175 @@
+name: Editorial backlog finish
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/editorial-backlog-finish.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  finish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Finish the remaining editorial backlog
+        shell: python
+        run: |
+          from __future__ import annotations
+          import pathlib
+          import re
+
+          root=pathlib.Path('.').resolve()
+          pages={
+            'articles/retrouver-emploi-apres-interruption.html':(
+              'Une interruption n’efface pas votre valeur : elle change ce qu’il faut prouver',
+              [('Point de départ','Expliquez la situation actuelle sans laisser l’interruption définir tout le récit.'),('Compétences encore utiles','Repérez ce que vous savez toujours faire et ce qui a été actualisé.'),('Preuves récentes','Projet, mission, formation, résultat ou réalisation : rendez la capacité observable.'),('Cible réaliste','Visez le poste où ces preuves ont une valeur immédiate, puis élargissez.')],
+              'Le retour à l’emploi devient plus crédible quand le recruteur voit ce que vous savez faire aujourd’hui, pas seulement ce que vous faisiez avant.'),
+            'articles/competences-transferables.html':(
+              'Une compétence n’est transférable que si le recruteur voit le pont',
+              [('Situation d’origine','Décrivez la tâche ou le problème que vous avez réellement traité.'),('Capacité observable','Isolez ce que vous savez faire indépendamment du secteur ou du titre.'),('Contexte cible','Montrez où cette capacité résout un problème comparable.'),('Preuve','Ajoutez un résultat, un exemple ou une réalisation qui réduit l’incertitude.')],
+              'Ne dites pas seulement « compétence transférable » : montrez la continuité entre ce que vous avez déjà produit et ce que le nouveau poste attend.'),
+            'dossiers/decider-a-deux-travail-patrimoine.html':(
+              'Une décision à deux doit montrer qui gagne, qui paie, qui porte le risque et comment revenir en arrière',
+              [('Bénéfice','Qu’est-ce que chacun gagne réellement si la décision fonctionne ?'),('Coût','Qui perd du revenu, du temps, de la liquidité ou une autre option ?'),('Risque','Qui absorbe le scénario défavorable si le plan dérape ?'),('Réversibilité','Quel accord, quelle réserve ou quelle date permet de réviser la décision ?')],
+              'Une décision commune est plus robuste quand les bénéfices, les coûts et les risques ne sont pas seulement additionnés au niveau du foyer, mais rendus visibles pour chacun.'),
+            'articles/50-candidatures-zero-reponse.html':(
+              '50 candidatures sans réponse : le système doit changer avant le volume',
+              [('Ciblage','Les postes visés correspondent-ils réellement au profil et au niveau de preuve disponible ?'),('Signal du CV','Le recruteur comprend-il en quelques secondes la fonction, le niveau et les résultats ?'),('Preuve','Les affirmations importantes sont-elles appuyées par des faits, réalisations ou chiffres ?'),('Canal','Faut-il compléter la candidature froide par réseau, approche directe ou intermédiaire ?')],
+              'Quand le taux de réponse reste proche de zéro, envoyer davantage du même dossier produit surtout davantage du même résultat.'),
+            'dossiers/plan-30-jours-recherche-emploi.html':(
+              '30 jours de recherche : quatre boucles d’amélioration, pas trente jours d’envoi',
+              [('Semaine 1','Cibler les rôles et rendre les preuves immédiatement lisibles.'),('Semaine 2','Tester plusieurs canaux et observer lesquels génèrent des réponses.'),('Semaine 3','Transformer les retours en préparation d’entretien et en correction du discours.'),('Semaine 4','Mesurer les conversions et modifier ce qui bloque réellement.')],
+              'Le bon indicateur n’est pas le nombre de candidatures envoyées, mais le passage d’une étape à la suivante : vue → réponse → entretien → offre.'),
+            'articles/comparatif-produits-bancaires.html':(
+              'Un produit bancaire ne se compare pas seul : il se compare à l’usage que vous en ferez',
+              [('Objectif','À quoi doit servir l’argent et à quelle date ?'),('Coût','Frais d’entrée, de tenue, de gestion, d’arbitrage ou de sortie réellement applicables.'),('Disponibilité','Sous quel délai et quelles conditions pouvez-vous récupérer l’argent ?'),('Risque et protection','Quel risque vous portez et quelles garanties existent réellement ?')],
+              'Il n’existe pas de « meilleur produit » hors contexte : un produit est adapté ou non à un objectif, un horizon, un besoin de liquidité et un niveau de risque.'),
+            'articles/tester-metier-avant-investir.html':(
+              'Avant de payer une formation longue, achetez d’abord de l’information',
+              [('Observer','Voir le travail réel, les contraintes et le rythme plutôt que le métier imaginé.'),('Tester petit','Mission, bénévolat, projet, immersion ou exercice concret quand c’est possible.'),('Parler aux praticiens','Demander ce qui fait réussir, échouer ou abandonner dans ce métier.'),('Investir ensuite','Engager temps et argent seulement quand le test renforce réellement l’hypothèse.')],
+              'Un petit test imparfait peut éviter un gros investissement fondé sur une image fausse du métier.'),
+            'articles/choisir-etf-mondial-debutant.html':(
+              'Choisissez d’abord le rôle de l’ETF, ensuite seulement son nom',
+              [('Horizon','L’argent peut-il réellement rester investi assez longtemps ?'),('Enveloppe','PEA, assurance-vie ou CTO modifient accès, fiscalité et gamme disponible.'),('Indice','Comprendre ce que « mondial » couvre réellement et ce qu’il exclut.'),('Frais et réplication','Comparer les caractéristiques utiles sans transformer le choix en chasse au centième de point.')],
+              'Pour un premier socle diversifié, la simplicité et la cohérence avec l’horizon comptent davantage qu’une optimisation permanente entre produits très proches.'),
+            'articles/sans-diplome-chemins-alternatifs.html':(
+              'Le diplôme n’est pas la seule porte, mais chaque porte a ses propres règles',
+              [('Cible','Quel métier, concours, niveau d’étude ou responsabilité voulez-vous réellement atteindre ?'),('Voie d’accès','Expérience, alternance, DAEU, VAP, VAE, concours ou recrutement direct selon le cas.'),('Preuve','Quel élément peut remplacer ou compenser le signal du diplôme ?'),('Reconnaissance','Vérifiez ce que la voie choisie permet juridiquement et ce qu’elle vaut réellement sur le marché.')],
+              'Contourner une porte fermée fonctionne quand la voie alternative mène au même objectif — pas quand elle produit seulement un titre différent.'),
+            'articles/frais-fiscalite-rendement-net.html':(
+              'Le rendement qui compte est celui que vous conservez',
+              [('Rendement brut','Ce que produit le placement avant toutes les frictions.'),('Frais','Ce qui est prélevé par le produit, l’enveloppe ou l’intermédiaire.'),('Fiscalité','Ce qui dépend de l’enveloppe, de la durée et du type de gain.'),('Inflation','Ce qui mesure le pouvoir d’achat réellement gagné ou perdu.')],
+              'Comparer deux placements sur leur rendement brut peut inverser la conclusion : regardez le rendement net de frais, de fiscalité pertinente et d’inflation.'),
+            'dossiers/preparer-retraite-droits-epargne-logement.html':(
+              'Préparer sa retraite = coordonner quatre systèmes, pas atteindre un montant magique',
+              [('Droits futurs','Pensions estimées, dates, trimestres et incertitudes à vérifier.'),('Budget futur','Dépenses qui disparaissent, persistent ou augmentent réellement.'),('Logement','Dette, loyer, entretien, mobilité et capital immobilisé.'),('Épargne et patrimoine','Ce qui complète les revenus, finance un projet ou protège les aléas.')],
+              'Le besoin d’épargne retraite dépend de l’écart entre revenus futurs et dépenses futures, puis du rôle que le logement et le patrimoine peuvent réellement jouer.'),
+            'articles/checklist-avant-placement-conseiller.html':(
+              'Avant de regarder le produit, vérifiez d’abord ce qu’il doit résoudre',
+              [('Objectif et horizon','Pourquoi cet argent est-il placé et quand peut-il être nécessaire ?'),('Liquidité','Que se passe-t-il si vous devez récupérer l’argent plus tôt ?'),('Risque','Quelle perte temporaire ou définitive pouvez-vous réellement supporter ?'),('Frais et intérêts','Combien coûte la solution et comment l’interlocuteur est-il rémunéré ?')],
+              'Un bon entretien de placement commence par votre situation et vos contraintes ; le produit vient ensuite.'),
+            'dossiers/decider-sans-tourner-en-rond.html':(
+              'Décider plus vite ne signifie pas décider avec moins d’information : il faut identifier l’information qui pourrait vraiment changer le choix',
+              [('Question','Formulez une décision précise avec une échéance.'),('Options','Comparez des alternatives réelles, y compris ne rien changer.'),('Information décisive','Cherchez ce qui ferait basculer le choix, pas tout ce qu’il est possible de savoir.'),('Seuil de décision','Fixez le niveau suffisant pour agir et la date de réévaluation.')],
+              'Une décision bloque souvent non parce qu’il manque de l’information, mais parce qu’aucun critère n’a été défini pour savoir quand l’information devient suffisante.'),
+            'articles/travailler-beaucoup-gagner-peu-prix.html':(
+              'Un prix bas peut acheter du volume tout en vendant votre temps à perte',
+              [('Chiffre d’affaires','Ce que le client paie réellement.'),('Temps complet','Production + déplacement + préparation + administratif + reprises.'),('Coûts','Achats, plateforme, véhicule, charges et autres dépenses liées à la mission.'),('Marge horaire','Ce qui reste réellement pour chaque heure mobilisée.')],
+              'Une activité peut sembler pleine et rester peu rentable : le bon indicateur est la marge créée par heure réellement capturée.'),
+            'articles/clients-interesses-personne-nachete.html':(
+              'Des clients intéressés mais aucun achat : localisez la friction avant d’ajouter du trafic',
+              [('Promesse','Le client comprend-il immédiatement ce qu’il obtient et pour quel problème ?'),('Preuve','A-t-il suffisamment de raisons de croire que la promesse sera tenue ?'),('Prix et risque','Le coût, l’engagement ou l’incertitude paraît-il supérieur au bénéfice ?'),('Passage à l’acte','L’étape suivante est-elle simple, claire et sans friction inutile ?')],
+              'Quand l’intérêt existe déjà, le prochain levier n’est pas toujours plus d’audience : il faut trouver ce qui casse la conversion.'),
+          }
+
+          def div_end(raw,start):
+              token=re.compile(r'<div\b[^>]*>|</div\s*>',re.I)
+              depth=0
+              for m in token.finditer(raw,start):
+                  if m.group(0).lower().startswith('<div'): depth+=1
+                  else:
+                      depth-=1
+                      if depth==0: return m.end()
+              return None
+
+          def remove_div(raw,cls):
+              pat=re.compile(r'<div\b[^>]*class=(["\'])[^"\']*\b'+re.escape(cls)+r'\b[^"\']*\1[^>]*>',re.I)
+              while True:
+                  m=pat.search(raw)
+                  if not m: return raw
+                  end=div_end(raw,m.start())
+                  if end is None: return raw
+                  raw=raw[:m.start()]+raw[end:]
+
+          def answer_end(raw):
+              m=re.search(r'<div\b[^>]*class=(["\'])[^"\']*\banswer-box\b[^"\']*\1[^>]*>',raw,re.I)
+              return div_end(raw,m.start()) if m else None
+
+          def visual(title,steps,result):
+              cards=''.join(f'<div class="ce-priority-step"><b>{a}</b><span>{b}</span></div>' for a,b in steps)
+              return f'<div class="ce-priority-visual" role="img" aria-label="Résumé visuel de la page"><h3>{title}</h3><div class="ce-priority-grid">{cards}</div><div class="ce-priority-result"><strong>À retenir :</strong> {result}</div></div>'
+
+          def collapse_after_two(raw):
+              pat=re.compile(r'<div\b[^>]*class=(["\'])[^"\']*\bcompare-wrap\b[^"\']*\1[^>]*>\s*<table\b.*?</table>\s*</div>',re.I|re.S)
+              matches=list(pat.finditer(raw))
+              if len(matches)<=2: return raw
+              out=[]; last=0
+              for i,m in enumerate(matches,1):
+                  out.append(raw[last:m.start()]); block=m.group(0)
+                  if i<=2: out.append(block)
+                  else:
+                      before=raw[:m.start()]
+                      inside=before.rfind('<details class="ce-legacy-detail">')>before.rfind('</details>')
+                      out.append(block if inside else '<details class="ce-legacy-detail"><summary>Voir le tableau détaillé</summary>'+block+'</details>')
+                  last=m.end()
+              out.append(raw[last:])
+              return ''.join(out)
+
+          def mark(raw):
+              m=re.search(r'<article\b([^>]*)>',raw,re.I)
+              if not m: return raw
+              attrs=m.group(1)
+              if re.search(r'data-ce-editorial-standard=(["\']).*?\1',attrs,re.I):
+                  attrs=re.sub(r'data-ce-editorial-standard=(["\']).*?\1','data-ce-editorial-standard="2026-08-17-v3"',attrs,flags=re.I)
+              else: attrs+=' data-ce-editorial-standard="2026-08-17-v3"'
+              return raw[:m.start()]+'<article'+attrs+'>'+raw[m.end():]
+
+          changed=[]
+          for rel,(title,steps,result) in pages.items():
+              p=root/rel
+              if not p.exists():
+                  print('MISSING',rel); continue
+              raw=p.read_text(encoding='utf-8',errors='replace'); original=raw
+              if 'editorial-standard.css' not in raw:
+                  raw=raw.replace('</head>','<link rel="stylesheet" href="../assets/editorial-standard.css?v=20260817-2"/></head>',1)
+              raw=remove_div(raw,'ce-legacy-route')
+              raw=remove_div(raw,'ce-priority-visual')
+              pos=answer_end(raw)
+              if pos is None:
+                  a=re.search(r'<article\b[^>]*>',raw,re.I); pos=a.end() if a else None
+              if pos is not None: raw=raw[:pos]+visual(title,steps,result)+raw[pos:]
+              raw=collapse_after_two(raw)
+              raw=mark(raw)
+              if raw!=original:
+                  p.write_text(raw,encoding='utf-8'); changed.append(rel)
+
+          print(f'Pages finalisées: {len(changed)}')
+          for rel in changed: print('FINISHED',rel)
+      - name: Validate and commit
+        run: |
+          git diff --check
+          if git diff --quiet -- articles dossiers; then
+            echo "No remaining backlog changes."
+            exit 0
+          fi
+          git config user.name "ContreEvidence"
+          git config user.email "contreevidence@gmail.com"
+          git add articles dossiers
+          git commit -m "Finish remaining editorial backlog"
+          git push
