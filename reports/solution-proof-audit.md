@@ -92,8 +92,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ### `articles/entretien-rate-ce-qui-bloque.html`
 - **possibilité générale à vérifier ou resserrer** — Une preuve réduit un risque ; elle ne doit pas seulement « impressionner » Préparez 6 à 10 preuves que vous pouvez réutiliser : conflit, priorité, résultat, erreur, initiative, client, équipe, changement, apprentissage, situation difficile.
 ### `articles/retrouver-emploi-apres-interruption.html`
+- **possibilité générale à vérifier ou resserrer** — La durée de sécurité ne dicte pas le choix, mais il fixe combien de temps vous pouvez exiger une meilleure porte.
 - **possibilité générale à vérifier ou resserrer** — Le Décideur veut savoir ce que cette expérience vous permet de faire dans son organisation .
-- **possibilité générale à vérifier ou resserrer** — Le durée de sécurité ne dicte pas le choix, mais il fixe combien de temps vous pouvez exiger une meilleure porte.
 ### `dossiers/ameliorer-processus-sans-degrader-service.html`
 - **possibilité générale à vérifier ou resserrer** — Cela permet de la remplacer sans rouvrir le problème qu’elle contenait.
 ### `dossiers/automatiser-ou-non-processus.html`
