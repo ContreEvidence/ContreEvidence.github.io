@@ -1,0 +1,90 @@
+name: Editorial table hierarchy review
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/editorial-table-hierarchy-review.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Build contextual inventory of collapsed tables
+        shell: python
+        run: |
+          from __future__ import annotations
+          import html, pathlib, re, urllib.parse, xml.etree.ElementTree as ET
+
+          root=pathlib.Path('.').resolve()
+          prefix='https://contreevidence.github.io/'
+          ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls=[n.text.strip() for n in ET.parse('sitemap.xml').findall('.//s:loc',ns) if n.text]
+          rels=[]
+          for url in urls:
+              if not url.startswith(prefix): continue
+              rel=urllib.parse.unquote(url[len(prefix):]) or 'index.html'
+              if rel.startswith(('dossiers/','articles/')):
+                  rels.append(rel)
+
+          tag_re=re.compile(r'<[^>]+>')
+          heading_re=re.compile(r'<h([23])\b[^>]*>(.*?)</h\1>',re.I|re.S)
+          detail_re=re.compile(r'<details\b[^>]*class=(["\'])[^"\']*\bce-legacy-detail\b[^"\']*\1[^>]*>\s*<summary>.*?</summary>\s*(.*?)</details\s*>',re.I|re.S)
+          table_re=re.compile(r'<table\b.*?</table>',re.I|re.S)
+          cell_re=re.compile(r'<t[hd]\b[^>]*>(.*?)</t[hd]>',re.I|re.S)
+          def plain(s):
+              return re.sub(r'\s+',' ',html.unescape(tag_re.sub(' ',s))).strip()
+
+          rows=[]
+          for rel in rels:
+              p=root/rel
+              if not p.exists(): continue
+              raw=p.read_text(encoding='utf-8',errors='replace')
+              matches=list(detail_re.finditer(raw))
+              if not matches: continue
+              headings=list(heading_re.finditer(raw))
+              title=''
+              tm=re.search(r'<title\b[^>]*>(.*?)</title>',raw,re.I|re.S)
+              if tm: title=plain(tm.group(1)).replace(' | Contre-Évidence','')
+              for idx,m in enumerate(matches,1):
+                  ctx='Début de page'
+                  for h in headings:
+                      if h.start()<m.start(): ctx=plain(h.group(2))
+                      else: break
+                  tables=table_re.findall(m.group(2))
+                  for j,t in enumerate(tables,1):
+                      cells=[plain(x) for x in cell_re.findall(t)]
+                      sample=' | '.join([x for x in cells[:10] if x])[:520]
+                      rows.append((rel,title,idx,j,ctx,sample))
+
+          lines=['# Revue de hiérarchie des tableaux repliés','',
+                 'Objectif : décider tableau par tableau selon sa fonction éditoriale, jamais selon sa position.','',
+                 f'Pages concernées : {len(set(r[0] for r in rows))} · Tableaux repliés recensés : {len(rows)}','']
+          current=None
+          for rel,title,idx,j,ctx,sample in rows:
+              if rel!=current:
+                  lines += [f'## `{rel}`',f'**Page :** {title}','']
+                  current=rel
+              lines += [f'### Tableau replié {idx}.{j}',f'- **Section :** {ctx}',f'- **Aperçu :** {sample or "(contenu non textuel ou cellules vides)"}','']
+          out=pathlib.Path('reports/table-hierarchy-review.md')
+          out.write_text('\n'.join(lines)+'\n',encoding='utf-8')
+          print(f'Pages concernées: {len(set(r[0] for r in rows))}')
+          print(f'Tableaux repliés: {len(rows)}')
+      - name: Commit report
+        run: |
+          git config user.name "ContreEvidence"
+          git config user.email "contreevidence@gmail.com"
+          git add reports/table-hierarchy-review.md
+          if git diff --cached --quiet; then
+            echo "No report change"
+            exit 0
+          fi
+          git commit -m "Inventory collapsed table hierarchy"
+          git push
