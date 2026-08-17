@@ -30,7 +30,7 @@ Pages indexables analysées : **130**. Pages `noindex` exclues : **79**.
 | 9 | 9/15 | emploi / carrière / qualification | `articles/premiere-chance-sans-experience.html` | acteur/gatekeeper, objectif réel / substitution du moyen, asymétrie de preuve |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/automatiser-ou-non-processus.html` | attendre / statu quo, transfert de risque, hétérogénéité / cas local |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/classes-actifs-allocation-patrimoine.html` | attendre / statu quo, transfert de risque, condition de renversement |
-| 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/depenses-recurrentes-abonnements-assurances.html` | effets de second ordre, condition de renversement, valeur d’option / irréversibilité |
+| 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/depenses-recurrentes-abonnements-assurances.html` | attendre / statu quo, condition de renversement, valeur d’option / irréversibilité |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/immobilier-allocation-globale-patrimoine.html` | attendre / statu quo, transfert de risque, condition de renversement |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/protocole-verifier-reponse-ia.html` | attendre / statu quo, effets de second ordre, transfert de risque |
 | 9 | 10/15 | patrimoine / investissement / retraite | `articles/frais-fiscalite-rendement-net.html` | attendre / statu quo, effets de second ordre, transfert de risque |
@@ -79,7 +79,7 @@ Pages : **25**. Angles le plus souvent non détectés : **objectif réel / subst
 
 ### patrimoine / investissement / retraite
 
-Pages : **40**. Angles le plus souvent non détectés : **substitution** (33), **objectif réel / substitution du moyen** (26), **condition de renversement** (26), **transfert de risque** (23), **acteur/gatekeeper** (19), **attendre / statu quo** (15), **valeur d’option / irréversibilité** (8).
+Pages : **40**. Angles le plus souvent non détectés : **substitution** (33), **condition de renversement** (26), **objectif réel / substitution du moyen** (25), **transfert de risque** (23), **acteur/gatekeeper** (19), **attendre / statu quo** (16), **valeur d’option / irréversibilité** (8).
 
 ## Règle de reprise éditoriale
 
