@@ -47,7 +47,6 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/capacite-refuser-travail-rentabilite.html` | `aace252f32a1faf81cf6e0a4665e9b60e694129e` | `91ebe0bb0dc7e77c7a5a042210a2f54a7e04570e` |
 | `articles/sans-diplome-chemins-alternatifs.html` | `d5f6867f38969bb89ca16df2bfdbd7ed2fed77ca` | `2a7cd63ced34759f03482dd0381857c50af183b0` |
 | `dossiers/bien-immobilier-garder-vendre-transformer.html` | `851bc30ba2290f512e60911db8fbd24966b8a95f` | `f284772d45fc5d642ba0ba589b3b8cafdbbe4b73` |
-| `dossiers/patrimoine-permet-il-travailler-moins.html` | `c006f7a8de0d55c219f89748ad39053e8afecbec` | `707b4a2a68a6bd07bf10e7916e0f1ca6253e7478` |
 | `dossiers/devenir-manager-premiere-fois.html` | `5b37be7ac97ba89e23e4f31456f90008c7ec49e5` | `09dec0b2443f6b4369705c480ea3a5e54b5d9ac9` |
 | `dossiers/decider-a-deux-travail-patrimoine.html` | `ba14b77f52087dfb20b0813df082369592184e8e` | `1971f8f7829d71996d0f7c3d06f20360bd7cbab2` |
 | `dossiers/previsionnel-activite-12-mois.html` | `ec3ebe88a9923f6802788dd5fb1a65c113e220ae` | `f35cb5ed9159e68ac5caa6ea95ae5742ab5b7b8e` |
@@ -86,6 +85,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/finances-investissement-locatif.html` | `2c09f9a2b80c1ef004f4c07f5941dcf88894a1e3` | `98ddfae8c33b7d2e8cf18dbdaf56180f8c8b5e96` |
 | `dossiers/indivision-succession-heritiers-vendre-partager.html` | `edf2c7b8270a9c257c28c282fda78fa8a71dd0c9` | `ebb86a9c091deb6ccb2747e9acba6335bd66d818` |
 | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` | `73804a97a74df735855ceb5291c6ce824e36da56` | `a982b4a256d31aa630435af2265c34c7134f8570` |
+| `dossiers/patrimoine-permet-il-travailler-moins.html` | `c006f7a8de0d55c219f89748ad39053e8afecbec` | `a305708a1618bc9e2a5b9cce7857b75c10cf9a80` |
 | `dossiers/decision-plan-30-90-jours.html` | `c7bd8f5cd0a197ead2e0ebe3d947f0cacbc0d46c` | `450681d85699873f6a7322980d21c36d1cc38467` |
 | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` | `aab16c4e6601ab8b9d42fc4230e4e668cbc1d540` | `97fa9c117bef460b3c2679212f70d819f9872519` |
 | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | `7dbb9a5b999cc3cf143d8f63841135ec93581ac3` | `160a66e65a40e3015317d8a6ea03589c02c19b68` |
@@ -202,7 +202,6 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1782 | à revoir après changement | `articles/sans-diplome-chemins-alternatifs.html` |
 | 8/9 | 1799 | humaine ✓ | `dossiers/decider-sans-tourner-en-rond.html` |
 | 8/9 | 1879 | à revoir après changement | `dossiers/bien-immobilier-garder-vendre-transformer.html` |
-| 8/9 | 1899 | à revoir après changement | `dossiers/patrimoine-permet-il-travailler-moins.html` |
 | 8/9 | 1912 | à revoir après changement | `dossiers/devenir-manager-premiere-fois.html` |
 | 8/9 | 1976 | à revoir après changement | `dossiers/decider-a-deux-travail-patrimoine.html` |
 | 8/9 | 2036 | à revoir après changement | `dossiers/previsionnel-activite-12-mois.html` |
@@ -262,6 +261,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 2176 | à revoir après changement | `dossiers/finances-investissement-locatif.html` |
 | 9/9 | 2183 | à revoir après changement | `dossiers/indivision-succession-heritiers-vendre-partager.html` |
 | 9/9 | 2201 | à revoir après changement | `dossiers/contrat-travail-clauses-verifier-avant-signer.html` |
+| 9/9 | 2208 | à revoir après changement | `dossiers/patrimoine-permet-il-travailler-moins.html` |
 | 9/9 | 2251 | à revoir après changement | `dossiers/decision-plan-30-90-jours.html` |
 | 9/9 | 2272 | à revoir après changement | `dossiers/licence-universite-sans-bac-daeu-vap-vae.html` |
 | 9/9 | 2298 | à revoir après changement | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` |
