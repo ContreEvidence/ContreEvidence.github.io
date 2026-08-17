@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humaines actives : **1**. Validations devenues caduques après modification : **122**.
+Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humaines actives : **0**. Validations devenues caduques après modification : **123**.
 
 ## Priorité humaine
 
@@ -34,6 +34,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/cout-complet-achat-immobilier.html` | `127fce4a7c9eb0dd467292564568edb110a37efd` | `3b53f98eb1bf64eeb070bcff45e94f57de12ed01` |
 | `dossiers/classes-actifs-allocation-patrimoine.html` | `e3597290b5b0634ef0bebbf1a149474f2f17e51e` | `9f1c0f27dea7e09586e38a9d9f0c85dc99becae8` |
 | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` | `d6585d192caf10f10a45195559ae0365fe70cf46` | `7c09a53fc2de9cf9fed0ee2f0838458337449f0f` |
+| `dossiers/debloquer-demarche-administrative.html` | `3311a29a2d4cb108b14536cfcfd1a06a510c3ca0` | `053af120879c2de623de788da6c04cb70e67040e` |
 | `dossiers/metiers-fonctions-organisation-entreprise.html` | `b9100c518af815d5e3d410b6184e23e03d065471` | `2e19d665977ee69b331ac3917aefbf89b50d6e23` |
 | `dossiers/regles-responsabilites-fautes-travail.html` | `8d0c5f5cbcba540922996705b1dcc2807513c62a` | `69a9d451448a9aff74450449ddd0e2744a3f502a` |
 | `dossiers/are-arce-acre-creation-entreprise.html` | `96944742e60f24751b001857871095f3ae55ce94` | `959247a41236f3f20ccbcc5c2fc22913a621441c` |
@@ -62,7 +63,6 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/piloter-patrimoine-selon-taille.html` | `ddf1912265fa21be67cc6fd674b672c25976f63c` | `c19f21736a53366544fccdce54e70d5b336d60f6` |
 | `articles/travailler-beaucoup-gagner-peu-prix.html` | `53df5406709273e5dedfe3ae2a2085c3913bb872` | `443717579966e19e9c5afe38e43960db8028f433` |
 | `dossiers/negocier-salaire-responsabilites.html` | `bf456b29db1478550bf715535617f49fce6c3284` | `205269ad38b6adda7eb51bfd6195fe0cae248bda` |
-| `articles/competences-invisibles-preuves.html` | `1894940607caec4067fd8609603f3e5ebe4233f2` | `b5a27400d9302b318656695cb524df441fbb98c0` |
 | `articles/accepter-nimporte-quel-poste-retour-emploi.html` | `27d74310369168d6bfc5db8c22d2b4ee679c7705` | `ce21d85f053cb5e466396502a08ced8e52950275` |
 | `dossiers/quand-vie-change-sante-separation-revenu.html` | `7c1e0e0d680c29f25db5fc5d7c9b17ccb1f37d6a` | `6476c9fe59efd09437a4fa501ae2637c7501bf1e` |
 | `articles/50-candidatures-zero-reponse.html` | `e142df6c147e5a8a6fdc20827854362f8930329d` | `888d4dd7c87e62f0916aee988266cec078a2db70` |
@@ -103,6 +103,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/embaucher-ou-sous-traiter.html` | `3e2a1ada5ac4604fe7c317123ca1d17e130e8954` | `bb9b652c95541c90c21e6d8368779cddee6fdf42` |
 | `dossiers/quitter-emploi-stable-ou-rester.html` | `e6fb490461c91b774628d9affbfd71f0fa38b70d` | `52f5ed0b969dd879dbaac282757c9e97eb9d4623` |
 | `articles/clients-interesses-personne-nachete.html` | `36393db1ca7c359beb075a4b3fe0e25fa86ee8bb` | `a601d105d668f9192ace24161b46c067dbf8990c` |
+| `articles/competences-invisibles-preuves.html` | `1894940607caec4067fd8609603f3e5ebe4233f2` | `08ba12fde6dc6412dfb47a612a45e8d6ceb061f8` |
 | `dossiers/creer-entreprise-avec-peu-argent.html` | `99fb67ac5498b3634df87e18d728af131d32c06e` | `ee67e39dd76bacb74f61871139973c49e86f972f` |
 | `dossiers/finances-retraite-decumulation.html` | `eb117acf36b33c889691233c186e3837ef1177a7` | `3601ae1d36a25e92ce17078a725b24e027bdad72` |
 | `dossiers/automatiser-ou-non-processus.html` | `2219f7b59c382026132d4c39c7847fa90a9e728c` | `c26bfa6ab96fd92561ef197ade70f4fb84d1151b` |
@@ -146,7 +147,6 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 
 ## Pages validées humainement et inchangées
 
-- `dossiers/debloquer-demarche-administrative.html` — 7/9 automatique — Fait à prouver, preuves équivalentes, typologie du blocage, changement de niveau, trace écrite et voies de recours conditionnelles déjà structurés.
 
 ## Corpus complet
 
@@ -164,8 +164,8 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 7/9 | 1463 | à revoir après changement | `articles/investir-grosse-somme-dun-coup-ou-progressivement.html` |
 | 7/9 | 1496 | à revoir après changement | `dossiers/cout-complet-achat-immobilier.html` |
 | 7/9 | 1504 | à revoir après changement | `dossiers/classes-actifs-allocation-patrimoine.html` |
-| 7/9 | 1546 | humaine ✓ | `dossiers/debloquer-demarche-administrative.html` |
 | 7/9 | 1577 | à revoir après changement | `dossiers/acheter-ou-louer-si-on-risque-demenager.html` |
+| 7/9 | 1656 | à revoir après changement | `dossiers/debloquer-demarche-administrative.html` |
 | 7/9 | 1795 | à revoir après changement | `dossiers/metiers-fonctions-organisation-entreprise.html` |
 | 7/9 | 1894 | à revoir après changement | `dossiers/regles-responsabilites-fautes-travail.html` |
 | 7/9 | 2064 | à revoir après changement | `dossiers/are-arce-acre-creation-entreprise.html` |
@@ -196,12 +196,11 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1456 | à revoir après changement | `dossiers/piloter-patrimoine-selon-taille.html` |
 | 8/9 | 1461 | à revoir après changement | `articles/travailler-beaucoup-gagner-peu-prix.html` |
 | 8/9 | 1480 | à revoir après changement | `dossiers/negocier-salaire-responsabilites.html` |
-| 8/9 | 1485 | à revoir après changement | `articles/competences-invisibles-preuves.html` |
 | 8/9 | 1504 | à revoir après changement | `articles/accepter-nimporte-quel-poste-retour-emploi.html` |
-| 8/9 | 1612 | heuristique | `dossiers/preparer-candidature-avant-postuler.html` |
 | 8/9 | 1666 | à revoir après changement | `dossiers/quand-vie-change-sante-separation-revenu.html` |
 | 8/9 | 1679 | à revoir après changement | `articles/50-candidatures-zero-reponse.html` |
 | 8/9 | 1694 | à revoir après changement | `dossiers/location-nue-ou-meublee-comparer.html` |
+| 8/9 | 1705 | heuristique | `dossiers/preparer-candidature-avant-postuler.html` |
 | 8/9 | 1756 | à revoir après changement | `dossiers/business-plan-utile.html` |
 | 8/9 | 1789 | à revoir après changement | `dossiers/apprendre-developper-competences.html` |
 | 8/9 | 1792 | à revoir après changement | `articles/competences-transferables.html` |
@@ -239,6 +238,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1503 | à revoir après changement | `dossiers/embaucher-ou-sous-traiter.html` |
 | 9/9 | 1536 | à revoir après changement | `dossiers/quitter-emploi-stable-ou-rester.html` |
 | 9/9 | 1556 | à revoir après changement | `articles/clients-interesses-personne-nachete.html` |
+| 9/9 | 1590 | à revoir après changement | `articles/competences-invisibles-preuves.html` |
 | 9/9 | 1596 | heuristique | `dossiers/separation-logement-achete-a-deux.html` |
 | 9/9 | 1628 | à revoir après changement | `dossiers/creer-entreprise-avec-peu-argent.html` |
 | 9/9 | 1638 | à revoir après changement | `dossiers/finances-retraite-decumulation.html` |
