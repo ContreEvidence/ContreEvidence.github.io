@@ -7,9 +7,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **4**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **34**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **33**
 - S2 — possibilité générale à examiner : **14**
-- OK heuristique — condition ou preuve détectée : **150**
+- OK heuristique — condition ou preuve détectée : **148**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -64,8 +64,6 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Le ministère de l’Enseignement supérieur indique qu’il permet d’accéder directement à une formation universitaire sans avoir le diplôme requis, en faisant reconnaître expérience professionnelle, formations suivies et acquis personnels. _[fort enjeu, preuve détectée]_
 ### `dossiers/patrimoine-marge-de-manoeuvre.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Une ressource conditionnelle vaut zéro dans le scénario où elle n’arrive pas Crédit futur, vente non signée, aide attendue, refinancement envisagé : vous pouvez les intégrer dans un scénario optimiste. _[fort enjeu, preuve détectée]_
-### `dossiers/premier-investissement-comment-commencer.html`
-- **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — C’est celui qui transforme de l’argent réellement long terme en une exposition comprise, à un risque supportable, avec une règle que vous pouvez encore suivre quand le marché devient désagréable. _[fort enjeu, preuve détectée]_
 ### `dossiers/premier-salaire-18-ans-chez-parents.html`
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Ce que cette période sans charges peut financer de plus utile qu’un placement un permis ou une mobilité qui élargit réellement la zone d’emploi ; une formation courte et vérifiable qui augmente les postes accessibles ; un ordinateur ou du matériel qui permet de travailler ou d’apprendre ; un déménagement vers un bassin d’emploi plus favorable ; quelques mois de marge pour refuser un mauvais poste ou chercher mieux. _[fort enjeu, condition détectée]_
 ### `dossiers/preparer-retraite-droits-epargne-logement.html`
