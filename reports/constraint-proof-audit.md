@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **17**
 - P1 — affirmation forte à resserrer ou vérifier : **71**
-- P2 — nécessité à examiner : **159**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **931**
+- P2 — nécessité à examiner : **160**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **926**
 
 ## P0 — rouvrir en priorité
 
@@ -313,6 +313,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Quand la vie change brutalement : santé, séparation, revenu | Contre-Évidence Aller au contenu CONTRE-ÉVIDENCE Patrimoine Vie professionnelle Fenêtres Outils Bibliothèque Mon espace Quand trois variables changent en même temps, il faut d’abord éviter qu’une mauvaise décision en crée une quatrième — ou qu’une solution apparente transfère tout le risque sur la personne la plus fragile.
 ### `dossiers/questions-poser-avant-prise-de-poste.html`
 - **nécessité à requalifier ou sourcer** — Plus une condition est importante pour votre décision, moins elle doit reposer sur une phrase vague du type « on verra rapidement ».
+### `dossiers/temps-energie-qualite-vie.html`
+- **nécessité à requalifier ou sourcer** — Avant de travailler moins, d’acheter de l’aide ou de changer de vie, il faut savoir ce qui a réellement mangé la semaine. _[temporalité]_
 ### `dossiers/tout-ca-pour-quoi-objectifs-besoins.html`
 - **nécessité à requalifier ou sourcer** — Avant de comparer les stratégies, il faut savoir ce que l’on cherche réellement à obtenir, ce que l’on refuse de sacrifier et quelles options doivent rester ouvertes . _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Il doit rendre visibles les conséquences, les arbitrages et les conditions de renversement pour que chacun choisisse en fonction de ses objectifs réels.
