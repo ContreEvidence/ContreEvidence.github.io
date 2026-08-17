@@ -6,7 +6,7 @@ Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les page
 
 Dimensions détectées : problème/contrainte, causalité, options, temps/seuils, quantification, scénario adverse, séquence, sortie/réversibilité, preuve.
 
-Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humaines actives : **40**. Validations devenues caduques après modification : **83**.
+Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humaines actives : **39**. Validations devenues caduques après modification : **84**.
 
 ## Priorité humaine
 
@@ -30,6 +30,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/regles-responsabilites-fautes-travail.html` | `8d0c5f5cbcba540922996705b1dcc2807513c62a` | `8f9d6c7b057be2b49e71ea8f00fe98100b352ca5` |
 | `dossiers/are-arce-acre-creation-entreprise.html` | `96944742e60f24751b001857871095f3ae55ce94` | `ee86aaa59ef89d513a68d1901bc8473d5acf90f5` |
 | `dossiers/experience-devient-risque-recruteur.html` | `fa76f61cde9496a7e8b186c63d02ccf92abb860c` | `381d6952b2473a1a2e66f4cbfe8f1555b01a2578` |
+| `dossiers/depenses-recurrentes-abonnements-assurances.html` | `7ab68ff16885592aa5a53bcbf88bea40f0d60230` | `30ada199ddea3d8c50a2f9e5fcaae49d6aeb41cb` |
 | `dossiers/acheter-logement-sans-se-fragiliser.html` | `917027c5225fc0464db739ffa51972e38f4655f6` | `a662879d31e2383f03f92f5ef3359fce84f66753` |
 | `dossiers/finances-residence-principale.html` | `89bdee80210b87568b4831b77c18bccbc6c8f1f9` | `06bdc06f234c3297252bb7523969af5b95145d3c` |
 | `dossiers/calculer-prix-minimum-rentable.html` | `1597bb81c5cba87c2e493fff0aa8a3bc640ac438` | `9625f1c2b342c3a6765072aa31ffb8c7c846fef2` |
@@ -132,7 +133,6 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 - `dossiers/methode-analyse-complete.html` — 8/9 automatique — Question d’investissement, benchmark, fondamental, valorisation, technique, sizing, scénario adverse et condition d’invalidation déjà structurés.
 - `dossiers/metiers-accessibles-sans-diplome.html` — 8/9 automatique — Réécriture de référence : métiers classés par verrous réels, preuves, voies d’accès et conditions de substitution au diplôme déjà structurés.
 - `dossiers/inflation-comprendre-histoire-pouvoir-achat.html` — 8/9 automatique — Page explicative longue : mécanismes, histoire, rendement réel, dette et implications patrimoniales sont reliés ; sa fonction n’exige pas d’ajouter artificiellement un plan de décision générique.
-- `dossiers/depenses-recurrentes-abonnements-assurances.html` — 9/9 automatique — Coût annuel, doublons, besoin réel, renégociation/substitution/suppression et seuils de conservation déjà structurés.
 - `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` — 9/9 automatique — Réécriture de référence : besoin de mobilité avant financement, coût total, liquidité, sortie et stress tests.
 - `dossiers/gestion-pilotee-comparer-performances.html` — 9/9 automatique — Réécriture de référence : allocation/exécution/délégation séparées, benchmark comparable, valeur comportementale conditionnelle et règle de sortie.
 - `dossiers/valeur-option-bien-immobilier.html` — 9/9 automatique — Option immobilière distinguée de faisabilité prouvée, valeur conditionnelle, coûts d’activation et scénarios de sortie déjà structurés.
@@ -171,6 +171,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 7/9 | 2401 | humaine ✓ | `dossiers/demenager-pour-un-emploi-salaire-minimum.html` |
 | 7/9 | 2458 | à revoir après changement | `dossiers/experience-devient-risque-recruteur.html` |
 | 8/9 | 1008 | humaine ✓ | `dossiers/immobilier-allocation-globale-patrimoine.html` |
+| 8/9 | 1034 | à revoir après changement | `dossiers/depenses-recurrentes-abonnements-assurances.html` |
 | 8/9 | 1123 | à revoir après changement | `dossiers/acheter-logement-sans-se-fragiliser.html` |
 | 8/9 | 1203 | à revoir après changement | `dossiers/finances-residence-principale.html` |
 | 8/9 | 1227 | humaine ✓ | `dossiers/protocole-verifier-reponse-ia.html` |
@@ -222,7 +223,6 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 2634 | à revoir après changement | `dossiers/location-courte-duree-meuble-tourisme.html` |
 | 8/9 | 2722 | humaine ✓ | `dossiers/inflation-comprendre-histoire-pouvoir-achat.html` |
 | 8/9 | 2791 | à revoir après changement | `dossiers/changer-travail-avant-credit-immobilier.html` |
-| 9/9 | 1215 | humaine ✓ | `dossiers/depenses-recurrentes-abonnements-assurances.html` |
 | 9/9 | 1274 | à revoir après changement | `dossiers/trajectoire-professionnelle-selon-situation.html` |
 | 9/9 | 1292 | à revoir après changement | `dossiers/finances-allocation-portefeuille.html` |
 | 9/9 | 1323 | humaine ✓ | `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` |
