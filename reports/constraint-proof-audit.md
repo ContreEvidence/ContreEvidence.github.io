@@ -8,7 +8,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **17**
 - P1 — affirmation forte à resserrer ou vérifier : **71**
-- P2 — nécessité à examiner : **160**
+- P2 — nécessité à examiner : **159**
 - OK heuristique — source/périmètre détecté, fond restant à contrôler : **931**
 
 ## P0 — rouvrir en priorité
@@ -244,8 +244,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — L'action des 7 jours doit produire du mouvement ou de l'information Une bonne première action est extérieure à votre tête. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Le plan 30/90 doit contenir plusieurs lignes en parallèle Un projet échoue souvent parce qu'il est traité comme une file d'attente : « d'abord la formation, puis le CV, puis les candidatures ».
 - **nécessité à requalifier ou sourcer** — Le plan doit donc comporter une colonne « effet combiné », pas seulement une liste de grandes décisions.
-### `dossiers/depenses-recurrentes-abonnements-assurances.html`
-- **nécessité à requalifier ou sourcer** — 03 · Ce qu’il faut inventorier Le poste « abonnements » est beaucoup plus large que Netflix ou Spotify.
 ### `dossiers/devenir-manager-premiere-fois.html`
 - **nécessité à requalifier ou sourcer** — Contre-Évidence Le premier rôle de manager est réussi deux fois : quand il vous donne une vraie première preuve d’encadrement, puis quand l’équipe cesse progressivement d’avoir besoin de vous pour les décisions qu’elle doit savoir prendre elle-même. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Devenir manager pour la première fois : accéder au rôle et réussir la prise de poste | Contre-Évidence Aller au contenu CONTRE-ÉVIDENCE Patrimoine Vie professionnelle Fenêtres Outils Bibliothèque Mon espace Pour obtenir un premier poste de manager, il faut souvent prouver une partie du métier avant d’avoir le titre. _[temporalité]_
