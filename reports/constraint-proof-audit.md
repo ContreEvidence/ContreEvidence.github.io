@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **17**
-- P1 — affirmation forte à resserrer ou vérifier : **72**
+- P1 — affirmation forte à resserrer ou vérifier : **71**
 - P2 — nécessité à examiner : **159**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **928**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **927**
 
 ## P0 — rouvrir en priorité
 
@@ -113,8 +113,6 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **fermeture forte sourcée mais formulation trop absolue** — Contre-Évidence La location courte durée n’est ni « interdite » ni « plus rentable » par nature. _[signal-source, temporalité]_
 - **fermeture forte sourcée mais formulation trop absolue** — Fractionner ne permet jamais de « tester » une exploitation interdite. _[signal-source]_
 - **fermeture forte sourcée mais formulation trop absolue** — Régime réel obligatoire en indivision Le net après charges/comptabilité reste-t-il suffisant ? _[signal-source, temporalité]_
-### `dossiers/patrimoine-permet-il-travailler-moins.html`
-- **fermeture forte sourcée mais formulation trop absolue** — C’est celui qui vous permet de refuser une heure, un jour ou une contrainte que votre salaire rendait auparavant obligatoire. _[signal-source]_
 ### `dossiers/plan-30-jours-recherche-emploi.html`
 - **affirmation forte sans signal de source explicite** — Si tout change en même temps, impossible de savoir ce qui a amélioré le résultat. _[périmètre, temporalité]_
 ### `dossiers/prejuges-biais-monde-professionnel.html`
