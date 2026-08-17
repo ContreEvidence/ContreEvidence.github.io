@@ -175,6 +175,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 996 | à revoir après changement | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
 | 8/9 | 1008 | humaine ✓ | `dossiers/immobilier-allocation-globale-patrimoine.html` |
 | 8/9 | 1036 | à revoir après changement | `dossiers/depenses-recurrentes-abonnements-assurances.html` |
+| 8/9 | 1113 | heuristique | `dossiers/premier-investissement-comment-commencer.html` |
 | 8/9 | 1123 | à revoir après changement | `dossiers/acheter-logement-sans-se-fragiliser.html` |
 | 8/9 | 1148 | à revoir après changement | `dossiers/audit-budget-60-minutes.html` |
 | 8/9 | 1203 | à revoir après changement | `dossiers/finances-residence-principale.html` |
@@ -247,7 +248,6 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 9/9 | 1707 | humaine ✓ | `dossiers/ameliorer-processus-sans-degrader-service.html` |
 | 9/9 | 1718 | à revoir après changement | `dossiers/trouver-premiers-clients.html` |
 | 9/9 | 1733 | à revoir après changement | `dossiers/tout-ca-pour-quoi-objectifs-besoins.html` |
-| 9/9 | 1774 | heuristique | `dossiers/premier-investissement-comment-commencer.html` |
 | 9/9 | 1789 | à revoir après changement | `dossiers/indivision-immobiliere-sortir-sans-subir.html` |
 | 9/9 | 1791 | humaine ✓ | `dossiers/prejuges-biais-monde-professionnel.html` |
 | 9/9 | 1810 | à revoir après changement | `dossiers/passer-80-pourcent-cout-reel.html` |
