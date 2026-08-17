@@ -3,3 +3,13 @@
 /* Browser-audit guard: wide tool content must scroll inside its panel, never widen the page. */
 .tool-shell,.tool-panel,.tool-split,.tool-split>*{min-width:0}
 .tool-table-wrap{width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* Legacy standalone simulators use local .panel/.fields/.scenario classes instead of .tool-panel.
+   Keep their intrinsic table/input widths from widening the mobile viewport. */
+.decum *,.indiv-tool *{box-sizing:border-box}
+.decum .shell,.decum .grid,.decum .panel,.decum .fields,.decum .results,.decum .scenario,
+.indiv-tool .tool-shell,.indiv-tool .tool-grid,.indiv-tool .panel,.indiv-tool .fields,.indiv-tool .results,.indiv-tool .scenario{min-width:0;max-width:100%}
+.decum .panel,.indiv-tool .panel{overflow:hidden}
+.decum .scenario>div[style*="overflow"],.indiv-tool .scenario>div[style*="overflow"]{width:100%;max-width:100%;overflow-x:auto!important;-webkit-overflow-scrolling:touch}
+.decum table,.indiv-tool table{min-width:620px}
+@media(max-width:850px){.decum .shell,.indiv-tool .tool-shell{width:100%;max-width:100%;padding-left:12px!important;padding-right:12px!important}.decum .panel,.indiv-tool .panel{width:100%;max-width:100%;padding:1rem!important}.decum input,.indiv-tool input{min-width:0;max-width:100%}}
