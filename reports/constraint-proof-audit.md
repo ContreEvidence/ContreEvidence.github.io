@@ -240,7 +240,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/decider-a-deux-travail-patrimoine.html`
 - **nécessité à requalifier ou sourcer** — Agent public ou contractuel : l’étiquette “public” ne suffit pas Le couple doit regarder le contrat et la situation réelle : titulaire, contractuel, durée du contrat, mobilité, période de prise de poste, perspectives.
 - **nécessité à requalifier ou sourcer** — Indivision, SCI, mariage, PACS : ne pas mélanger les architectures Voir le tableau détaillé Architecture Ce qu’il faut lire Pourquoi Indivision directe acte, quotes-parts, convention, comptes les personnes détiennent directement le bien.
-- **nécessité à requalifier ou sourcer** — Le durée de sécurité doit être calculé sur le scénario du foyer durée de sécurité = réserve réellement disponible / déficit mensuel du scénario. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — La durée de sécurité doit être calculée sur le scénario du foyer durée de sécurité = réserve réellement disponible / déficit mensuel du scénario. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Le statu quo doit lui aussi être stress-testé. _[temporalité]_
 ### `dossiers/decider-sans-tourner-en-rond.html`
 - **nécessité à requalifier ou sourcer** — Voir le tableau détaillé Hypothèse Preuve actuelle Test contraire Le nouvel emploi ouvre une progression Promesse en entretien Parler à un salarié arrivé il y a 2 ans Le bien se revendra facilement Agent immobilier Délais et décotes réelles du secteur L’entreprise continuera à croître Historique récent Scénario de baisse des marges et concurrence Une décision solide doit survivre à une objection sérieuse, pas seuleme _[temporalité]_
@@ -308,7 +308,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ### `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`
 - **nécessité à requalifier ou sourcer** — Le patrimoine n’est pas seulement un score : il doit servir des fonctions Sécurité Absorber un choc sans dette d’urgence ni vente forcée.
 ### `dossiers/quand-vie-change-sante-separation-revenu.html`
-- **nécessité à requalifier ou sourcer** — Ce qui doit faire renverser une décision provisoire Tableau principal de cette section Décision provisoire Signal de renversement Conserver le logement le coût mensuel rend le durée de sécurité trop court ou aucune issue durable n’apparaît. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Ce qui doit faire renverser une décision provisoire Tableau principal de cette section Décision provisoire Signal de renversement Conserver le logement le coût mensuel rend la durée de sécurité trop courte ou aucune issue durable n’apparaît. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — Quand la vie change brutalement : santé, séparation, revenu | Contre-Évidence Aller au contenu CONTRE-ÉVIDENCE Patrimoine Vie professionnelle Fenêtres Outils Bibliothèque Mon espace Quand trois variables changent en même temps, il faut d’abord éviter qu’une mauvaise décision en crée une quatrième — ou qu’une solution apparente transfère tout le risque sur la personne la plus fragile.
 ### `dossiers/questions-poser-avant-prise-de-poste.html`
 - **nécessité à requalifier ou sourcer** — Plus une condition est importante pour votre décision, moins elle doit reposer sur une phrase vague du type « on verra rapidement ».
