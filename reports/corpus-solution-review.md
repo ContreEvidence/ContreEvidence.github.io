@@ -31,11 +31,11 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/are-arce-acre-creation-entreprise.html` | `96944742e60f24751b001857871095f3ae55ce94` | `ee86aaa59ef89d513a68d1901bc8473d5acf90f5` |
 | `dossiers/experience-devient-risque-recruteur.html` | `fa76f61cde9496a7e8b186c63d02ccf92abb860c` | `381d6952b2473a1a2e66f4cbfe8f1555b01a2578` |
 | `dossiers/depenses-recurrentes-abonnements-assurances.html` | `7ab68ff16885592aa5a53bcbf88bea40f0d60230` | `30ada199ddea3d8c50a2f9e5fcaae49d6aeb41cb` |
+| `dossiers/audit-budget-60-minutes.html` | `8de2b2164b0d8d56823db98de8e87e9fbf70bef8` | `bca39ad4d7047e295ddfabafb39cfc2f8bfd1c84` |
 | `dossiers/acheter-logement-sans-se-fragiliser.html` | `917027c5225fc0464db739ffa51972e38f4655f6` | `a662879d31e2383f03f92f5ef3359fce84f66753` |
 | `dossiers/finances-residence-principale.html` | `89bdee80210b87568b4831b77c18bccbc6c8f1f9` | `06bdc06f234c3297252bb7523969af5b95145d3c` |
 | `dossiers/calculer-prix-minimum-rentable.html` | `1597bb81c5cba87c2e493fff0aa8a3bc640ac438` | `9625f1c2b342c3a6765072aa31ffb8c7c846fef2` |
 | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` | `e782289f8d68aab912acdd201a649e7782204756` | `959ef22860e5b38b622378e56ec4a2de9123e610` |
-| `dossiers/audit-budget-60-minutes.html` | `8de2b2164b0d8d56823db98de8e87e9fbf70bef8` | `a6a020387adb2449ffe809ba3cbc35d28758d9e9` |
 | `articles/travailler-beaucoup-gagner-peu-prix.html` | `53df5406709273e5dedfe3ae2a2085c3913bb872` | `ef5958de28d3016d2ede477b860eb43a06bdddb6` |
 | `articles/grosse-entree-argent-que-faire.html` | `8055c8aabec056f575c0241372a9f49178d761e3` | `2d169248963e5f1ddffee684db3a659be22bc0af` |
 | `dossiers/tresorerie-bfr-entreprise.html` | `d417764e8cd3a736d178f66ff2be9427bcbb0fdd` | `926690c824cc8534dd133bc9d2c627d58c084223` |
@@ -172,6 +172,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 7/9 | 2458 | à revoir après changement | `dossiers/experience-devient-risque-recruteur.html` |
 | 8/9 | 1008 | humaine ✓ | `dossiers/immobilier-allocation-globale-patrimoine.html` |
 | 8/9 | 1034 | à revoir après changement | `dossiers/depenses-recurrentes-abonnements-assurances.html` |
+| 8/9 | 1068 | à revoir après changement | `dossiers/audit-budget-60-minutes.html` |
 | 8/9 | 1123 | à revoir après changement | `dossiers/acheter-logement-sans-se-fragiliser.html` |
 | 8/9 | 1203 | à revoir après changement | `dossiers/finances-residence-principale.html` |
 | 8/9 | 1227 | humaine ✓ | `dossiers/protocole-verifier-reponse-ia.html` |
@@ -180,7 +181,6 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1334 | à revoir après changement | `dossiers/calculer-prix-minimum-rentable.html` |
 | 8/9 | 1337 | humaine ✓ | `dossiers/competent-mais-invisible-travail.html` |
 | 8/9 | 1344 | à revoir après changement | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` |
-| 8/9 | 1346 | à revoir après changement | `dossiers/audit-budget-60-minutes.html` |
 | 8/9 | 1360 | humaine ✓ | `dossiers/quitter-travail-reconversion-sans-se-fragiliser.html` |
 | 8/9 | 1362 | à revoir après changement | `articles/travailler-beaucoup-gagner-peu-prix.html` |
 | 8/9 | 1364 | humaine ✓ | `articles/premiere-chance-sans-experience.html` |
