@@ -38,11 +38,11 @@ Pages indexables analysées : **130**. Pages `noindex` exclues : **79**.
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/immobilier-allocation-globale-patrimoine.html` | attendre / statu quo, transfert de risque, condition de renversement |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/protocole-verifier-reponse-ia.html` | attendre / statu quo, effets de second ordre, transfert de risque |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | effets de second ordre, transfert de risque, condition de renversement |
-| 9 | 10/15 | patrimoine / investissement / retraite | `articles/frais-fiscalite-rendement-net.html` | attendre / statu quo, effets de second ordre, transfert de risque |
 | 9 | 10/15 | patrimoine / investissement / retraite | `articles/grosse-entree-argent-que-faire.html` | attendre / statu quo, transfert de risque, condition de renversement |
 | 9 | 10/15 | immobilier / crédit / indivision | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | acteur/gatekeeper, valeur d’option / irréversibilité, condition de renversement |
 | 9 | 10/15 | immobilier / crédit / indivision | `dossiers/indivision-succession-heritiers-vendre-partager.html` | acteur/gatekeeper, valeur d’option / irréversibilité, condition de renversement |
 | 9 | 10/15 | patrimoine / investissement / retraite | `dossiers/seuils-maturite-patrimoniale.html` | attendre / statu quo, condition de renversement, valeur d’option / irréversibilité |
+| 9 | 11/15 | patrimoine / investissement / retraite | `articles/frais-fiscalite-rendement-net.html` | attendre / statu quo, effets de second ordre, transfert de risque |
 | 9 | 11/15 | entrepreneuriat / activité | `dossiers/couple-famille-argent-temps.html` | acteur/gatekeeper, substitution, attendre / statu quo |
 | 9 | 11/15 | immobilier / crédit / indivision | `dossiers/indivision-immobiliere-sortir-sans-subir.html` | effets de second ordre, valeur d’option / irréversibilité, condition de renversement |
 | 9 | 11/15 | patrimoine / investissement / retraite | `dossiers/piloter-patrimoine-selon-taille.html` | attendre / statu quo, transfert de risque, valeur d’option / irréversibilité |
@@ -56,18 +56,18 @@ Pages indexables analysées : **130**. Pages `noindex` exclues : **79**.
 | 6 | 9/15 | patrimoine / investissement / retraite | `dossiers/demenager-pour-un-emploi-salaire-minimum.html` | attendre / statu quo, transfert de risque |
 | 6 | 9/15 | immobilier / crédit / indivision | `dossiers/finances-investissement-locatif.html` | acteur/gatekeeper, condition de renversement |
 | 6 | 9/15 | emploi / carrière / qualification | `dossiers/reconversion-sans-formation-longue.html` | acteur/gatekeeper, substitution |
+| 6 | 10/15 | emploi / carrière / qualification | `dossiers/acheter-sans-vider-epargne.html` | objectif réel / substitution du moyen, asymétrie de preuve |
 | 6 | 10/15 | immobilier / crédit / indivision | `dossiers/comparer-strategies-immobilieres.html` | acteur/gatekeeper, condition de renversement |
 | 6 | 10/15 | emploi / carrière / qualification | `dossiers/emploi-chercher-accepter-negocier-evoluer.html` | substitution, objectif réel / substitution du moyen |
 | 6 | 10/15 | emploi / carrière / qualification | `dossiers/formation-vaut-elle-le-cout.html` | substitution, objectif réel / substitution du moyen |
 | 6 | 10/15 | immobilier / crédit / indivision | `dossiers/garages-parkings-locaux-commerciaux.html` | acteur/gatekeeper, condition de renversement |
 | 6 | 10/15 | entrepreneuriat / activité | `dossiers/lancer-activite-sans-quitter-emploi.html` | substitution, condition de renversement |
-| 6 | 10/15 | entrepreneuriat / activité | `dossiers/methode-analyse-complete.html` | acteur/gatekeeper, substitution |
 
 ## Lecture par cluster
 
 ### emploi / carrière / qualification
 
-Pages : **40**. Angles le plus souvent non détectés : **transfert de risque** (29), **valeur d’option / irréversibilité** (25), **effets de second ordre** (22), **substitution** (21), **objectif réel / substitution du moyen** (17), **attendre / statu quo** (16), **condition de renversement** (15).
+Pages : **40**. Angles le plus souvent non détectés : **transfert de risque** (30), **valeur d’option / irréversibilité** (25), **effets de second ordre** (22), **substitution** (20), **objectif réel / substitution du moyen** (18), **attendre / statu quo** (17), **condition de renversement** (14).
 
 ### entrepreneuriat / activité
 
@@ -75,11 +75,11 @@ Pages : **23**. Angles le plus souvent non détectés : **valeur d’option / ir
 
 ### immobilier / crédit / indivision
 
-Pages : **27**. Angles le plus souvent non détectés : **objectif réel / substitution du moyen** (19), **acteur/gatekeeper** (16), **substitution** (16), **transfert de risque** (16), **condition de renversement** (13), **attendre / statu quo** (10), **effets de second ordre** (10).
+Pages : **26**. Angles le plus souvent non détectés : **objectif réel / substitution du moyen** (18), **acteur/gatekeeper** (16), **substitution** (16), **transfert de risque** (15), **condition de renversement** (13), **attendre / statu quo** (9), **effets de second ordre** (9).
 
 ### patrimoine / investissement / retraite
 
-Pages : **40**. Angles le plus souvent non détectés : **substitution** (35), **condition de renversement** (27), **objectif réel / substitution du moyen** (25), **transfert de risque** (24), **acteur/gatekeeper** (23), **attendre / statu quo** (18), **effets de second ordre** (10).
+Pages : **41**. Angles le plus souvent non détectés : **substitution** (36), **condition de renversement** (28), **objectif réel / substitution du moyen** (25), **transfert de risque** (23), **acteur/gatekeeper** (22), **attendre / statu quo** (18), **effets de second ordre** (11).
 
 ## Règle de reprise éditoriale
 
