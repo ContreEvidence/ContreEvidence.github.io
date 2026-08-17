@@ -1,0 +1,123 @@
+name: Refine semantic table hierarchy
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/editorial-table-hierarchy-semantic.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Refine table visibility from section and table semantics
+        shell: python
+        run: |
+          from __future__ import annotations
+          import html, pathlib, re, urllib.parse, xml.etree.ElementTree as ET
+
+          root=pathlib.Path('.').resolve()
+          prefix='https://contreevidence.github.io/'
+          ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls=[n.text.strip() for n in ET.parse('sitemap.xml').findall('.//s:loc',ns) if n.text]
+          rels=[]
+          for url in urls:
+              if not url.startswith(prefix): continue
+              rel=urllib.parse.unquote(url[len(prefix):]) or 'index.html'
+              if rel.startswith(('dossiers/','articles/')): rels.append(rel)
+
+          tag_re=re.compile(r'<[^>]+>')
+          heading_re=re.compile(r'<h([23])\b[^>]*>(.*?)</h\1>',re.I|re.S)
+          detail_re=re.compile(r'<details\b([^>]*)class=(["\'])([^"\']*\bce-legacy-detail\b[^"\']*)\2([^>]*)>\s*<summary>(.*?)</summary>\s*(.*?)</details\s*>',re.I|re.S)
+
+          def plain(s):
+              return re.sub(r'\s+',' ',html.unescape(tag_re.sub(' ',s))).strip()
+
+          def classify(rel,title,h1):
+              name=pathlib.PurePosixPath(rel.lower()).name
+              signal=f'{name} {title} {h1}'.lower()
+              if ('comparer' in signal or 'comparatif' in signal or ' ou ' in h1.lower() or
+                  name.startswith(('comparer-','acheter-ou-louer','rembourser-credit-ou-investir','location-nue-ou-meublee','assurer-ou-autoassurer','embaucher-ou-sous-traiter')) or
+                  any(x in signal for x in ('garder, vendre','garder vendre','acheter, crédit, loa','achat, crédit, loa'))): return 'comparison'
+              if (name.startswith(('combien-','cout-','coût-','calculer-','prix-','capacite-','capacité-','previsionnel-','tresorerie-')) or
+                  any(x in signal for x in ('combien ','coût réel','cout réel','prix minimum','budget nécessaire','salaire minimum','chiffre d’affaires','chiffre affaires','rentabilité','rentabilite','mensualité','mensualite'))): return 'calculation'
+              if (name.startswith(('comment-','audit-','plan-','preparer-','préparer-','debloquer-','débloquer-','protocole-','questions-','checklist-')) or
+                  any(x in signal for x in ('comment faire','comment vérifier','comment verifier','avant de signer','avant de postuler','plan 30','plan 90'))): return 'procedure'
+              if any(x in signal for x in ('faut-il','puis-je','accepter','quitter','changer','passer à','passer au','travailler moins','se permettre','sans se fragiliser','dois-je')): return 'decision'
+              if rel.lower().startswith('articles/'): return 'analysis'
+              return 'reference'
+
+          section_patterns={
+              'decision': re.compile(r'\b(?:décisions?|decisions?|conclusions?|profils?|scénarios?|scenarios?|renvers(?:er|ement)|conditions?|arbitrages?|options?|coûts? réels?|couts? reels?|gains? nets?|seuils?|risques?|priorités?)\b',re.I),
+              'comparison': re.compile(r'\b(?:compar(?:er|aison|atif|ative|atives|atifs|aisons)?|options?|scénarios?|scenarios?|profils?|coûts?|couts?|prix|gains?|pertes?|avantages?|inconvénients?|inconvenients?|arbitrages?|décisions?|decisions?|renvers(?:er|ement)|choisir|fonctions?|horizons?|échéances?|echeances?)\b',re.I),
+              'calculation': re.compile(r'\b(?:calculs?|coûts?|couts?|prix|budgets?|revenus?|salaires?|marges?|seuils?|taux|rendements?|mensualités?|mensualites?|scénarios?|scenarios?|simulations?|profils?|exemples?|résultats?|resultats?|hypothèses?|hypotheses?|indicateurs?|ratios?)\b',re.I),
+              'procedure': re.compile(r'\b(?:checklists?|protocoles?|étapes?|etapes?|jours?|à vérifier|a verifier|avant|tableaux? à remplir|tableaux? a remplir|questions?|décisions?|decisions?|renvers(?:er|ement)|ordres?|priorités?|priorites?)\b',re.I),
+              'analysis': re.compile(r'\b(?:repères?|reperes?|exemples?|profils?|ratios?|tests? a/b|tests? a\/b|preuves?|décisions?|decisions?|renvers(?:er|ement)|indicateurs?|comparaisons? principales?)\b',re.I),
+              'reference': re.compile(r'\b(?:tableaux? à remplir|tableaux? a remplir|checklists?|protocoles?|cas pratiques?|exemples? chiffrés?|exemples? chiffres?|simulations?|décisions?|decisions?|renvers(?:er|ement))\b',re.I),
+          }
+          table_patterns={
+              'decision': re.compile(r'\b(?:option|lecture|décision|decision|conclusion|profil|scénario|scenario|gain net|coût réel|cout réel|risque|priorité|priorite|conséquence|consequence)\b',re.I),
+              'comparison': re.compile(r'\b(?:option|critère|critere|comparaison|scénario|scenario|avantage|inconvénient|inconvenient|coût|cout|prix|horizon|échéance|echeance|fonction|lecture|choix)\b',re.I),
+              'calculation': re.compile(r'\b(?:montant|coût|cout|prix|budget|revenu|salaire|marge|taux|rendement|mensualité|mensualite|hypothèse|hypothese|résultat|resultat|simulation|scénario|scenario|ratio|indicateur)\b',re.I),
+              'procedure': re.compile(r'\b(?:action|étape|etape|jour|question|à vérifier|a verifier|contrôle|controle|décision|decision|ordre|priorité|priorite|point à vérifier|point a verifier)\b',re.I),
+              'analysis': re.compile(r'\b(?:indicateur|ratio|profil|preuve|résultat|resultat|lecture|test|repère|repere|interprétation|interpretation)\b',re.I),
+              'reference': re.compile(r'\b(?:cas pratique|simulation|décision|decision|checklist|protocole|exemple chiffré|exemple chiffre)\b',re.I),
+          }
+
+          changed=[]; opened=0; closed=0
+          for rel in rels:
+              p=root/rel
+              if not p.exists(): continue
+              raw=p.read_text(encoding='utf-8',errors='replace')
+              if 'ce-legacy-detail' not in raw: continue
+              tm=re.search(r'<title\b[^>]*>(.*?)</title>',raw,re.I|re.S)
+              hm=re.search(r'<h1\b[^>]*>(.*?)</h1>',raw,re.I|re.S)
+              title=plain(tm.group(1)) if tm else ''
+              h1=plain(hm.group(1)) if hm else ''
+              intent=classify(rel,title,h1)
+              headings=list(heading_re.finditer(raw))
+              out=[]; last=0; local_change=False
+              for m in detail_re.finditer(raw):
+                  out.append(raw[last:m.start()])
+                  section=''
+                  for h in headings:
+                      if h.start()<m.start(): section=plain(h.group(2))
+                      else: break
+                  attrs=(m.group(1)+f'class={m.group(2)}{m.group(3)}{m.group(2)}'+m.group(4)).strip()
+                  body=m.group(6)
+                  table_signal=plain(body)[:900]
+                  is_core=bool(section_patterns[intent].search(section) or table_patterns[intent].search(table_signal))
+                  attrs=re.sub(r'\s*open(?:=["\'][^"\']*["\'])?','',attrs,flags=re.I)
+                  attrs=re.sub(r'\s*data-ce-table-role=["\'][^"\']*["\']','',attrs,flags=re.I)
+                  if is_core:
+                      attrs=(attrs+' open data-ce-table-role="primary"').strip(); new_summary='Tableau principal de cette section'; opened+=1
+                  else:
+                      attrs=(attrs+' data-ce-table-role="detail"').strip(); new_summary='Voir le tableau détaillé'; closed+=1
+                  replacement=f'<details {attrs}><summary>{new_summary}</summary>{body}</details>'
+                  if replacement!=m.group(0): local_change=True
+                  out.append(replacement); last=m.end()
+              out.append(raw[last:])
+              new=''.join(out)
+              if local_change and new!=raw:
+                  p.write_text(new,encoding='utf-8'); changed.append(rel)
+
+          print(f'Pages modifiées: {len(changed)}')
+          print(f'Tableaux principaux ouverts: {opened}')
+          print(f'Tableaux de détail fermés: {closed}')
+          for rel in changed: print('UPDATED',rel)
+      - name: Validate and commit
+        run: |
+          git diff --check
+          git config user.name "ContreEvidence"
+          git config user.email "contreevidence@gmail.com"
+          git add dossiers articles
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Refine table hierarchy from section and table semantics"
+          git push
