@@ -9,7 +9,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - P0 — fermeture forte sans preuve/périmètre suffisant : **17**
 - P1 — affirmation forte à resserrer ou vérifier : **73**
 - P2 — nécessité à examiner : **163**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **902**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **892**
 
 ## P0 — rouvrir en priorité
 
