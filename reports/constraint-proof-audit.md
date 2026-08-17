@@ -8,8 +8,8 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **17**
 - P1 — affirmation forte à resserrer ou vérifier : **73**
-- P2 — nécessité à examiner : **161**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **917**
+- P2 — nécessité à examiner : **164**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **910**
 
 ## P0 — rouvrir en priorité
 
@@ -184,6 +184,10 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — Mais il n’est pas encore responsable de secteur : il possède un socle, puis doit fermer quelques écarts précis.
 - **nécessité à requalifier ou sourcer** — Mais vous ne transportez pas non plus votre ancien métier en bloc : vous transportez des capacités dont il faut tester la valeur dans un nouveau système.
 - **nécessité à requalifier ou sourcer** — Mis à jour le 16/08/2026 · Demandeur d’emploi, public, indépendant, santé, sans diplôme et seconde partie de carrière intégrés La réponse complète en 30 secondes Ne demandez pas « quelles compétences ai-je ? » mais « quelles exigences du métier cible sont déjà couvertes par des capacités que je maîtrise, à quelle profondeur, dans un contexte suffisamment proche, et avec quelle preuve ? » Le résultat doit classer chaq
+### `articles/construire-epargne-de-zero.html`
+- **nécessité à requalifier ou sourcer** — Chaque étape doit supprimer une fragilité avant de chercher le rendement suivant. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — L’escalier : de la marge mensuelle au capital de long terme Ne sautez pas l’étage qui vous protège de retomber 0 Budget positif Le mois doit pouvoir finir sans recréer du découvert ou reprendre l’épargne déposée.
+- **nécessité à requalifier ou sourcer** — Où doit aller le premier euro ?
 ### `articles/entretien-rate-ce-qui-bloque.html`
 - **nécessité à requalifier ou sourcer** — Choisir une seule hypothèse que cet entretien doit permettre de valider ou d’infirmer.
 - **nécessité à requalifier ou sourcer** — Elle doit rendre la prochaine étape crédible .
