@@ -7,9 +7,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **4**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **34**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **35**
 - S2 — possibilité générale à examiner : **15**
-- OK heuristique — condition ou preuve détectée : **155**
+- OK heuristique — condition ou preuve détectée : **151**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -62,6 +62,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Le fait d’avoir payé davantage ne modifie pas automatiquement les quotes-parts inscrites au titre ; il peut ouvrir des comptes distincts. _[fort enjeu, condition détectée]_
 ### `dossiers/metiers-accessibles-sans-diplome.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Le ministère de l’Enseignement supérieur indique qu’il permet d’accéder directement à une formation universitaire sans avoir le diplôme requis, en faisant reconnaître expérience professionnelle, formations suivies et acquis personnels. _[fort enjeu, preuve détectée]_
+### `dossiers/patrimoine-marge-de-manoeuvre.html`
+- **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Une ressource conditionnelle vaut zéro dans le scénario où elle n’arrive pas Crédit futur, vente non signée, aide attendue, refinancement envisagé : vous pouvez les intégrer dans un scénario optimiste. _[fort enjeu, preuve détectée]_
 ### `dossiers/premier-investissement-comment-commencer.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — C’est celui qui transforme de l’argent réellement long terme en une exposition comprise, à un risque supportable, avec une règle que vous pouvez encore suivre quand le marché devient désagréable. _[fort enjeu, preuve détectée]_
 ### `dossiers/premier-salaire-18-ans-chez-parents.html`
