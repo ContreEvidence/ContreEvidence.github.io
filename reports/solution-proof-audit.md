@@ -7,9 +7,9 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ## Synthèse
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **4**
-- S1 — possibilité à fort enjeu à resserrer ou vérifier : **35**
-- S2 — possibilité générale à examiner : **16**
-- OK heuristique — condition ou preuve détectée : **154**
+- S1 — possibilité à fort enjeu à resserrer ou vérifier : **34**
+- S2 — possibilité générale à examiner : **15**
+- OK heuristique — condition ou preuve détectée : **155**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -38,8 +38,6 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Test Le poste cible est-il compatible non seulement avec ce que vous savez faire, mais avec ce que vous pouvez durablement supporter ? _[fort enjeu, condition détectée]_
 ### `contact.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Vous pouvez demander une source, signaler une erreur, proposer une situation à analyser ou exercer un droit de réponse. _[fort enjeu, preuve détectée]_
-### `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`
-- **possibilité à fort enjeu conditionnelle mais preuve non détectée** — Plus les charges fixes sont élevées, plus ce transfert peut réduire la capacité à absorber une panne, une période d’essai rompue ou un autre projet. _[fort enjeu, condition détectée]_
 ### `dossiers/acheter-logement-sans-se-fragiliser.html`
 - **possibilité à fort enjeu sourcée mais périmètre/condition peu visible** — Le montant d’apport optimal est ce qui reste une fois ces trois contraintes satisfaites — pas le maximum que vous pouvez virer au notaire. _[fort enjeu, preuve détectée]_
 ### `dossiers/audit-copropriete-avant-achat.html`
@@ -98,8 +96,6 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 ### `articles/retrouver-emploi-apres-interruption.html`
 - **possibilité générale à vérifier ou resserrer** — Le gatekeeper veut savoir ce que cette expérience vous permet de faire dans son organisation .
 - **possibilité générale à vérifier ou resserrer** — Le runway ne dicte pas le choix, mais il fixe combien de temps vous pouvez exiger une meilleure porte.
-### `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`
-- **possibilité générale à vérifier ou resserrer** — Ne payez pas avec le salaire un problème que vous pouvez résoudre avec une autre variable.
 ### `dossiers/ameliorer-processus-sans-degrader-service.html`
 - **possibilité générale à vérifier ou resserrer** — Cela permet de la remplacer sans rouvrir le problème qu’elle contenait.
 ### `dossiers/automatiser-ou-non-processus.html`
