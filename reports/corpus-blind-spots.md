@@ -16,6 +16,7 @@ Pages indexables analysées : **130**. Pages `noindex` exclues : **79**.
 | 15 | 8/15 | patrimoine / investissement / retraite | `dossiers/audit-budget-60-minutes.html` | attendre / statu quo, effets de second ordre, transfert de risque, condition de renversement, valeur d’option / irréversibilité |
 | 13 | 7/15 | emploi / carrière / qualification | `articles/competences-transferables.html` | substitution, objectif réel / substitution du moyen, asymétrie de preuve, condition de renversement |
 | 12 | 8/15 | entrepreneuriat / activité | `dossiers/creer-entreprise-sans-diplome.html` | acteur/gatekeeper, effets de second ordre, attendre / statu quo, condition de renversement |
+| 12 | 8/15 | patrimoine / investissement / retraite | `dossiers/liquidites-reserve-securite.html` | attendre / statu quo, effets de second ordre, condition de renversement, valeur d’option / irréversibilité |
 | 12 | 8/15 | emploi / carrière / qualification | `dossiers/travailler-moins-vivre-mieux.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen, condition de renversement |
 | 12 | 9/15 | immobilier / crédit / indivision | `dossiers/finances-residence-principale.html` | acteur/gatekeeper, fractionnement, effets de second ordre, condition de renversement |
 | 12 | 10/15 | entrepreneuriat / activité | `dossiers/combien-chiffre-affaires-pour-vivre.html` | acteur/gatekeeper, substitution, attendre / statu quo, condition de renversement |
@@ -61,7 +62,6 @@ Pages indexables analysées : **130**. Pages `noindex` exclues : **79**.
 | 6 | 10/15 | patrimoine / investissement / retraite | `dossiers/preparer-retraite-droits-epargne-logement.html` | transfert de risque, condition de renversement |
 | 6 | 10/15 | emploi / carrière / qualification | `dossiers/quitter-emploi-stable-ou-rester.html` | objectif réel / substitution du moyen, condition de renversement |
 | 6 | 11/15 | patrimoine / investissement / retraite | `articles/checklist-avant-placement-conseiller.html` | transfert de risque, condition de renversement |
-| 6 | 11/15 | patrimoine / investissement / retraite | `articles/comparatif-produits-bancaires.html` | transfert de risque, condition de renversement |
 
 ## Lecture par cluster
 
@@ -79,7 +79,7 @@ Pages : **25**. Angles le plus souvent non détectés : **objectif réel / subst
 
 ### patrimoine / investissement / retraite
 
-Pages : **41**. Angles le plus souvent non détectés : **substitution** (34), **condition de renversement** (27), **objectif réel / substitution du moyen** (25), **transfert de risque** (24), **acteur/gatekeeper** (20), **attendre / statu quo** (17), **valeur d’option / irréversibilité** (9).
+Pages : **41**. Angles le plus souvent non détectés : **substitution** (35), **condition de renversement** (28), **objectif réel / substitution du moyen** (24), **transfert de risque** (23), **acteur/gatekeeper** (21), **attendre / statu quo** (18), **valeur d’option / irréversibilité** (10).
 
 ## Règle de reprise éditoriale
 
