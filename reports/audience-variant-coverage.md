@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **46**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **13**.
+Pages/familles détectées : **47**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **13**.
 
 ## Priorités de relecture
 
@@ -53,6 +53,7 @@ Pages/familles détectées : **46**. Pages `noindex` exclues : **79**. Promesses
 | 0 | COVERED_OR_NARROW | achat immobilier / crédit | `dossiers/finances-residence-principale.html` | — |
 | 0 | COVERED_OR_NARROW | transmission / succession | `dossiers/finances-transmission-patrimoine.html` | — |
 | 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/formation-vaut-elle-le-cout.html` | — |
+| 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/patrimoine-permet-il-travailler-moins.html` | — |
 | 0 | COVERED_OR_NARROW | travailler moins / qualité de vie | `dossiers/patrimoine-permet-il-travailler-moins.html` | — |
 | 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/puis-je-me-permettre-reconversion.html` | — |
 | 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/reconversion-sans-perte-salaire.html` | — |
@@ -276,7 +277,7 @@ Pages détectées : **6**. Promesses larges `NON_READY` : **2**. Variantes le pl
 
 ### budget / dettes
 
-Pages détectées : **10**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **logement propriétaire / locataire** (4), **déficit temporaire / structurel** (2), **dette / surendettement** (1), **revenu stable / variable** (1).
+Pages détectées : **11**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **logement propriétaire / locataire** (4), **déficit temporaire / structurel** (2), **dette / surendettement** (1), **revenu stable / variable** (1).
 
 ### travailler moins / qualité de vie
 
