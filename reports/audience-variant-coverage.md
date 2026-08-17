@@ -1,12 +1,12 @@
 # Audit de couverture des situations
 
-Mise à jour automatique : 2026-08-16
+Mise à jour automatique : 2026-08-17
 
 Cet audit cherche les **variantes raisonnablement attirées par la promesse visible d’une page** mais non reconnues dans son contenu ou son routage. La famille est déterminée uniquement par le title, le H1 et la meta description — jamais par un exemple rencontré plus loin dans le texte.
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **46**. Pages `noindex` exclues : **80**. Promesses larges à relire avant acquisition : **13**.
+Pages/familles détectées : **46**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **13**.
 
 ## Priorités de relecture
 
