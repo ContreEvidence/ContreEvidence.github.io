@@ -8,8 +8,8 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 
 - S0 — possibilité à fort enjeu sans preuve/condition détectée : **4**
 - S1 — possibilité à fort enjeu à resserrer ou vérifier : **35**
-- S2 — possibilité générale à examiner : **17**
-- OK heuristique — condition ou preuve détectée : **153**
+- S2 — possibilité générale à examiner : **16**
+- OK heuristique — condition ou preuve détectée : **154**
 
 ## S0 — vérifier avant toute recommandation
 
@@ -106,8 +106,6 @@ Le scanner cherche les formulations positives (« vous pouvez », « permet de �
 - **possibilité générale à vérifier ou resserrer** — Ce modèle permet de gagner du temps sans perdre la capacité de détecter un cas inhabituel.
 ### `dossiers/classes-actifs-allocation-patrimoine.html`
 - **possibilité générale à vérifier ou resserrer** — Pour un tableau de bord personnel, le séparer des obligations permet de ne pas confondre deux expériences de risque différentes.
-### `dossiers/depenses-recurrentes-abonnements-assurances.html`
-- **possibilité générale à vérifier ou resserrer** — Douze prélèvements : voici d’où viennent les 1 037 € Le tableau est volontairement détaillé : il permet de vérifier que l’économie ne repose pas sur une suppression aveugle.
 ### `dossiers/emploi-chercher-accepter-negocier-evoluer.html`
 - **possibilité générale à vérifier ou resserrer** — Le scénario intermédiaire est souvent négligé alors qu’il permet d’accumuler épargne, preuves, réseau ou formation tout en conservant un revenu.
 - **possibilité générale à vérifier ou resserrer** — Négocier ne consiste pas à demander davantage « parce qu’on le mérite » Une négociation robuste repose sur trois éléments : le périmètre réel du poste, la valeur que vous pouvez rendre crédible et vos alternatives.
