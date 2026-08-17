@@ -12,6 +12,7 @@ Pages indexables analysées : **130**. Pages `noindex` exclues : **79**.
 
 | Priorité | Couverture | Cluster | Page | Angles critiques non détectés |
 |---:|---:|---|---|---|
+| 17 | 6/15 | patrimoine / investissement / retraite | `articles/construire-epargne-de-zero.html` | attendre / statu quo, effets de second ordre, transfert de risque, hétérogénéité / cas local, valeur d’option / irréversibilité |
 | 17 | 6/15 | patrimoine / investissement / retraite | `dossiers/temps-energie-qualite-vie.html` | attendre / statu quo, transfert de risque, hétérogénéité / cas local, condition de renversement, valeur d’option / irréversibilité |
 | 15 | 8/15 | immobilier / crédit / indivision | `dossiers/assurer-ou-autoassurer-risques.html` | acteur/gatekeeper, fractionnement, effets de second ordre, valeur d’option / irréversibilité, condition de renversement |
 | 15 | 8/15 | patrimoine / investissement / retraite | `dossiers/audit-budget-60-minutes.html` | attendre / statu quo, effets de second ordre, transfert de risque, condition de renversement, valeur d’option / irréversibilité |
@@ -51,7 +52,6 @@ Pages indexables analysées : **130**. Pages `noindex` exclues : **79**.
 | 6 | 9/15 | patrimoine / investissement / retraite | `dossiers/demenager-pour-un-emploi-salaire-minimum.html` | attendre / statu quo, transfert de risque |
 | 6 | 9/15 | immobilier / crédit / indivision | `dossiers/finances-investissement-locatif.html` | acteur/gatekeeper, condition de renversement |
 | 6 | 9/15 | emploi / carrière / qualification | `dossiers/reconversion-sans-formation-longue.html` | acteur/gatekeeper, substitution |
-| 6 | 10/15 | patrimoine / investissement / retraite | `articles/construire-epargne-de-zero.html` | condition de renversement, valeur d’option / irréversibilité |
 | 6 | 10/15 | immobilier / crédit / indivision | `dossiers/comparer-strategies-immobilieres.html` | acteur/gatekeeper, condition de renversement |
 | 6 | 10/15 | emploi / carrière / qualification | `dossiers/emploi-chercher-accepter-negocier-evoluer.html` | substitution, objectif réel / substitution du moyen |
 | 6 | 10/15 | emploi / carrière / qualification | `dossiers/formation-vaut-elle-le-cout.html` | substitution, objectif réel / substitution du moyen |
@@ -79,7 +79,7 @@ Pages : **26**. Angles le plus souvent non détectés : **objectif réel / subst
 
 ### patrimoine / investissement / retraite
 
-Pages : **41**. Angles le plus souvent non détectés : **substitution** (35), **condition de renversement** (28), **objectif réel / substitution du moyen** (24), **transfert de risque** (23), **acteur/gatekeeper** (21), **attendre / statu quo** (18), **valeur d’option / irréversibilité** (10).
+Pages : **41**. Angles le plus souvent non détectés : **substitution** (35), **condition de renversement** (27), **objectif réel / substitution du moyen** (25), **transfert de risque** (24), **acteur/gatekeeper** (21), **attendre / statu quo** (19), **valeur d’option / irréversibilité** (10).
 
 ## Règle de reprise éditoriale
 
