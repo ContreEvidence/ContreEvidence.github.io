@@ -7,9 +7,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 ## Synthèse
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **17**
-- P1 — affirmation forte à resserrer ou vérifier : **72**
+- P1 — affirmation forte à resserrer ou vérifier : **73**
 - P2 — nécessité à examiner : **161**
-- OK heuristique — source/périmètre détecté, fond restant à contrôler : **924**
+- OK heuristique — source/périmètre détecté, fond restant à contrôler : **917**
 
 ## P0 — rouvrir en priorité
 
@@ -75,8 +75,9 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **affirmation forte sans signal de source explicite** — Substituez le mode d’apprentissage au lieu d’allonger automatiquement la formation Écart réel Substitution à tester connaissance ciblée module court / lecture guidée plutôt que cursus complet. manque de pratique projet, mission ou simulation plutôt qu’heures théoriques supplémentaires. manque de feedback tuteur, pair expert ou revue de travail plutôt qu’un nouveau cours. manque de preuve portfolio, test, mission, cer _[périmètre]_
 - **affirmation forte sans signal de source explicite** — Tester le gatekeeper avant d’investir lourd Quand c’est possible, cherchez une petite preuve de marché avant une formation longue : analyser 30 offres et noter les filtres réellement utilisés ; demander à plusieurs recruteurs quels signaux déclenchent un entretien ; tenter un projet, un test ou une mission limitée ; faire évaluer un portfolio par quelqu’un qui recrute réellement ; vérifier si la certification demandé _[périmètre, temporalité]_
 ### `dossiers/assurer-ou-autoassurer-risques.html`
-- **fermeture forte sourcée mais formulation trop absolue** — Le salarié privé doit auditer trois étages avant d'acheter une protection en plus Régime obligatoire : Assurance Maladie et autres protections légales. _[signal-source, temporalité]_
-- **fermeture forte sourcée mais formulation trop absolue** — Pour un locataire, l'assurance des risques locatifs est obligatoire ; en copropriété, le propriétaire doit au minimum être couvert pour sa responsabilité civile. _[signal-source]_
+- **fermeture forte sourcée mais formulation trop absolue** — Avant d’acheter un contrat individuel, vérifiez ce qui est déjà couvert par le régime obligatoire, l’employeur ou un autre contrat. _[signal-source, temporalité]_
+- **fermeture forte sourcée mais formulation trop absolue** — Avant d’acheter une protection supplémentaire, auditez trois étages 1 Régime obligatoire Assurance Maladie, protections légales et dispositifs liés à votre statut. _[signal-source, temporalité]_
+- **fermeture forte sourcée mais formulation trop absolue** — Votre statut change le point de départ de l’audit Salarié privé Vérifiez régime obligatoire, mutuelle et prévoyance collectives, maintien de salaire et portabilité éventuelle avant toute souscription individuelle. _[signal-source, temporalité]_
 ### `dossiers/audit-budget-60-minutes.html`
 - **affirmation forte sans signal de source explicite** — Elle varie mais ne peut pas être réduite à zéro durablement. _[périmètre]_
 ### `dossiers/comparer-deux-offres-emploi.html`
