@@ -1,12 +1,12 @@
 # Cartographie des angles morts du corpus
 
-Mise à jour automatique : 2026-08-16
+Mise à jour automatique : 2026-08-17
 
 Cet audit complète — il ne remplace pas — la revue structurelle. Il cherche des **familles de raisonnement susceptibles de changer la décision** mais souvent absentes d’un contenu pourtant correct : acteur, substitution, fenêtre temporelle, ordre, fractionnement, combinaison, statu quo, second ordre, transfert de risque, friction, hétérogénéité, renversement, objectif réel, optionnalité et asymétrie de preuve.
 
 Un motif absent n’est **pas** automatiquement un défaut : la file sert à provoquer une lecture humaine. Inversement, la présence d’un mot ne prouve pas que l’angle est bien traité. Les décisions humaines SHA-liées sont enregistrées séparément dans `reports/corpus-blind-spot-human-review-*.json`.
 
-Pages indexables analysées : **129**. Pages `noindex` exclues : **80**.
+Pages indexables analysées : **130**. Pages `noindex` exclues : **79**.
 
 ## Priorité heuristique
 
@@ -15,6 +15,7 @@ Pages indexables analysées : **129**. Pages `noindex` exclues : **80**.
 | 13 | 7/15 | emploi / carrière / qualification | `articles/competences-transferables.html` | substitution, objectif réel / substitution du moyen, asymétrie de preuve, condition de renversement |
 | 12 | 8/15 | entrepreneuriat / activité | `dossiers/creer-entreprise-sans-diplome.html` | acteur/gatekeeper, effets de second ordre, attendre / statu quo, condition de renversement |
 | 12 | 9/15 | immobilier / crédit / indivision | `dossiers/finances-residence-principale.html` | acteur/gatekeeper, fractionnement, effets de second ordre, condition de renversement |
+| 12 | 10/15 | entrepreneuriat / activité | `dossiers/audit-budget-60-minutes.html` | acteur/gatekeeper, substitution, attendre / statu quo, condition de renversement |
 | 12 | 10/15 | entrepreneuriat / activité | `dossiers/combien-chiffre-affaires-pour-vivre.html` | acteur/gatekeeper, substitution, attendre / statu quo, condition de renversement |
 | 12 | 11/15 | emploi / carrière / qualification | `dossiers/decider-a-deux-travail-patrimoine.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen, condition de renversement |
 | 12 | 11/15 | entrepreneuriat / activité | `dossiers/inflation-comprendre-histoire-pouvoir-achat.html` | acteur/gatekeeper, fractionnement, effets de second ordre, condition de renversement |
@@ -25,7 +26,6 @@ Pages indexables analysées : **129**. Pages `noindex` exclues : **80**.
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/plan-30-jours-recherche-emploi.html` | acteur/gatekeeper, substitution, objectif réel / substitution du moyen |
 | 9 | 8/15 | emploi / carrière / qualification | `dossiers/preparer-candidature-avant-postuler.html` | acteur/gatekeeper, substitution, condition de renversement |
 | 9 | 9/15 | emploi / carrière / qualification | `articles/premiere-chance-sans-experience.html` | acteur/gatekeeper, objectif réel / substitution du moyen, asymétrie de preuve |
-| 9 | 9/15 | immobilier / crédit / indivision | `dossiers/audit-budget-60-minutes.html` | acteur/gatekeeper, fenêtre temporelle, condition de renversement |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/automatiser-ou-non-processus.html` | attendre / statu quo, transfert de risque, hétérogénéité / cas local |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/classes-actifs-allocation-patrimoine.html` | attendre / statu quo, transfert de risque, condition de renversement |
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/depenses-recurrentes-abonnements-assurances.html` | effets de second ordre, condition de renversement, valeur d’option / irréversibilité |
@@ -33,7 +33,6 @@ Pages indexables analysées : **129**. Pages `noindex` exclues : **80**.
 | 9 | 9/15 | patrimoine / investissement / retraite | `dossiers/protocole-verifier-reponse-ia.html` | attendre / statu quo, effets de second ordre, transfert de risque |
 | 9 | 10/15 | patrimoine / investissement / retraite | `articles/frais-fiscalite-rendement-net.html` | attendre / statu quo, effets de second ordre, transfert de risque |
 | 9 | 10/15 | patrimoine / investissement / retraite | `articles/grosse-entree-argent-que-faire.html` | attendre / statu quo, transfert de risque, condition de renversement |
-| 9 | 10/15 | entrepreneuriat / activité | `dossiers/allocation-patrimoine-selon-situation.html` | acteur/gatekeeper, substitution, attendre / statu quo |
 | 9 | 10/15 | immobilier / crédit / indivision | `dossiers/indivision-succession-heritiers-vendre-partager.html` | acteur/gatekeeper, valeur d’option / irréversibilité, condition de renversement |
 | 9 | 10/15 | patrimoine / investissement / retraite | `dossiers/seuils-maturite-patrimoniale.html` | attendre / statu quo, condition de renversement, valeur d’option / irréversibilité |
 | 9 | 11/15 | entrepreneuriat / activité | `dossiers/couple-famille-argent-temps.html` | acteur/gatekeeper, substitution, attendre / statu quo |
@@ -55,6 +54,7 @@ Pages indexables analysées : **129**. Pages `noindex` exclues : **80**.
 | 6 | 10/15 | immobilier / crédit / indivision | `dossiers/garages-parkings-locaux-commerciaux.html` | acteur/gatekeeper, condition de renversement |
 | 6 | 10/15 | entrepreneuriat / activité | `dossiers/lancer-activite-sans-quitter-emploi.html` | substitution, condition de renversement |
 | 6 | 10/15 | entrepreneuriat / activité | `dossiers/methode-analyse-complete.html` | acteur/gatekeeper, substitution |
+| 6 | 10/15 | patrimoine / investissement / retraite | `dossiers/premier-salaire-18-ans-chez-parents.html` | effets de second ordre, transfert de risque |
 | 6 | 10/15 | patrimoine / investissement / retraite | `dossiers/preparer-retraite-droits-epargne-logement.html` | transfert de risque, condition de renversement |
 | 6 | 10/15 | emploi / carrière / qualification | `dossiers/quitter-emploi-stable-ou-rester.html` | objectif réel / substitution du moyen, condition de renversement |
 | 6 | 11/15 | patrimoine / investissement / retraite | `articles/checklist-avant-placement-conseiller.html` | transfert de risque, condition de renversement |
@@ -71,15 +71,15 @@ Pages : **41**. Angles le plus souvent non détectés : **transfert de risque** 
 
 ### entrepreneuriat / activité
 
-Pages : **24**. Angles le plus souvent non détectés : **valeur d’option / irréversibilité** (14), **transfert de risque** (13), **objectif réel / substitution du moyen** (12), **condition de renversement** (11), **acteur/gatekeeper** (9), **substitution** (8), **attendre / statu quo** (7).
+Pages : **24**. Angles le plus souvent non détectés : **valeur d’option / irréversibilité** (14), **transfert de risque** (13), **condition de renversement** (12), **objectif réel / substitution du moyen** (11), **acteur/gatekeeper** (9), **substitution** (8), **attendre / statu quo** (7).
 
 ### immobilier / crédit / indivision
 
-Pages : **26**. Angles le plus souvent non détectés : **objectif réel / substitution du moyen** (19), **substitution** (16), **transfert de risque** (15), **acteur/gatekeeper** (14), **condition de renversement** (13), **attendre / statu quo** (10), **effets de second ordre** (10).
+Pages : **25**. Angles le plus souvent non détectés : **objectif réel / substitution du moyen** (18), **substitution** (15), **transfert de risque** (15), **acteur/gatekeeper** (13), **condition de renversement** (12), **effets de second ordre** (10), **attendre / statu quo** (9).
 
 ### patrimoine / investissement / retraite
 
-Pages : **38**. Angles le plus souvent non détectés : **substitution** (30), **condition de renversement** (25), **objectif réel / substitution du moyen** (23), **transfert de risque** (21), **acteur/gatekeeper** (16), **attendre / statu quo** (14), **valeur d’option / irréversibilité** (7).
+Pages : **40**. Angles le plus souvent non détectés : **substitution** (32), **condition de renversement** (25), **objectif réel / substitution du moyen** (24), **transfert de risque** (22), **acteur/gatekeeper** (17), **attendre / statu quo** (15), **valeur d’option / irréversibilité** (7).
 
 ## Règle de reprise éditoriale
 
