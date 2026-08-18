@@ -1,6 +1,6 @@
 # Revue corpus — Solution Engineer
 
-Mise à jour automatique : 2026-08-17
+Mise à jour automatique : 2026-08-18
 
 Cet audit couvre les contenus indexables de `dossiers/` et `articles/`. Les pages `noindex` sont exclues. Les validations humaines restent actives uniquement tant que le SHA du fichier ne change pas.
 
@@ -84,9 +84,9 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/formation-vaut-elle-le-cout.html` | `601b970cd42683723682946ad1b8add7c7aa48db` | `38582603b62147a0fabc35ffbbf3be5820eb1a3c` |
 | `dossiers/plan-30-jours-recherche-emploi.html` | `266f0a20263296fe2847ae2cecefed3182796cc4` | `5829b52a9f3411e1d97a5ab64d6b8cd68db36c6a` |
 | `dossiers/allocation-patrimoine-selon-situation.html` | `bf4f5ae7a51941cee5e49bfa63f1726e1076ab8a` | `80338482725cb2fe188ec8e17d5269f44e91ee53` |
-| `dossiers/acheter-sans-vider-epargne.html` | `8376bdcffd1c79dbcedf6b11fff240a1c8b4e6c0` | `044cb53c70896729fc622bdd8ce5667e55df08ca` |
 | `articles/tester-metier-avant-investir.html` | `2d26e84a1aec867f3f795a7fe5076e5514259709` | `1bb8f46792f50b9086cabe8f39ea287eba98fe77` |
 | `dossiers/finances-cadre-global.html` | `e736a54c8aa6746af202268837ab68501111b82f` | `077e16061b5c50a0de552a802ceb17b6b369eff8` |
+| `dossiers/acheter-sans-vider-epargne.html` | `8376bdcffd1c79dbcedf6b11fff240a1c8b4e6c0` | `cf8ace9ba7920940d1581e23f795b92d39937eae` |
 | `dossiers/methode-analyse-complete.html` | `3633e892628579f08a3e9e8381b6c54fca5689b0` | `e4060b01c885ab8b1673008fd1453df9acfc9f96` |
 | `dossiers/metiers-accessibles-sans-diplome.html` | `b2a23f1e370f9cfdc09815314410fa0827c880c3` | `69c266fd20b1c0661e69b59f2dfe689448e8c45a` |
 | `dossiers/location-courte-duree-meuble-tourisme.html` | `ddaf6bc36e2171b5e249a161fb66926f963ea4d2` | `5f1cc0b81fcc9396f0feec9af703b682cbd5e4d5` |
@@ -218,9 +218,9 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 2179 | à revoir après changement | `dossiers/formation-vaut-elle-le-cout.html` |
 | 8/9 | 2229 | à revoir après changement | `dossiers/plan-30-jours-recherche-emploi.html` |
 | 8/9 | 2244 | à revoir après changement | `dossiers/allocation-patrimoine-selon-situation.html` |
-| 8/9 | 2258 | à revoir après changement | `dossiers/acheter-sans-vider-epargne.html` |
 | 8/9 | 2295 | à revoir après changement | `articles/tester-metier-avant-investir.html` |
 | 8/9 | 2301 | à revoir après changement | `dossiers/finances-cadre-global.html` |
+| 8/9 | 2338 | à revoir après changement | `dossiers/acheter-sans-vider-epargne.html` |
 | 8/9 | 2370 | à revoir après changement | `dossiers/methode-analyse-complete.html` |
 | 8/9 | 2554 | heuristique | `dossiers/vendre-bien-a-sa-sci-refinancement-patrimoine.html` |
 | 8/9 | 2595 | à revoir après changement | `dossiers/metiers-accessibles-sans-diplome.html` |
