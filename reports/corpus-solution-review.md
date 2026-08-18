@@ -26,7 +26,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/dependance-gros-client.html` | `aff1498bfed0cdae7eb745a22fc9815b7c5ef260` | `2358d106f11d6a244e79da92ce54bde92073cefa` |
 | `dossiers/indivision-loyers-charges-comptes.html` | `17a2f1637380da7fdce685ccf909e3eeb3d5523a` | `5278517bcdabb10da9a1de6e41422b54cb96fb68` |
 | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` | `e782289f8d68aab912acdd201a649e7782204756` | `2a0b506fae49029d696b954ea5162158fd27ccab` |
-| `dossiers/comparer-strategies-immobilieres.html` | `06acc378800acfdcbb52e5992f3067d5b16a0b72` | `bd016f9cd727fe505e6c08538b60f4d267c1862b` |
+| `dossiers/comparer-strategies-immobilieres.html` | `06acc378800acfdcbb52e5992f3067d5b16a0b72` | `e24f3c90801cab03158dad47d8948546e9bdd6b6` |
 | `dossiers/competences-qualification-employabilite.html` | `6451d1f015cf2a765cda44c3a908365ee68b159a` | `5bd2d9ddbf3a2de9375a8d2d501071bb7adc2bc1` |
 | `dossiers/garages-parkings-locaux-commerciaux.html` | `777a5d8d555673c621af3f13d154a2dce07b6be6` | `95e43ff7db0d52558e2a5ac72640f80c8c5d6294` |
 | `dossiers/etude-marche-terrain.html` | `d7865b294ff9c7d2ee08a0265097e17bc1061c3c` | `1da12d4c9d89c5157238141fa459721b5f3599c0` |
@@ -157,7 +157,7 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 6/9 | 1520 | à revoir après changement | `dossiers/dependance-gros-client.html` |
 | 6/9 | 2860 | à revoir après changement | `dossiers/indivision-loyers-charges-comptes.html` |
 | 7/9 | 1061 | à revoir après changement | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` |
-| 7/9 | 1274 | à revoir après changement | `dossiers/comparer-strategies-immobilieres.html` |
+| 7/9 | 1327 | à revoir après changement | `dossiers/comparer-strategies-immobilieres.html` |
 | 7/9 | 1335 | à revoir après changement | `dossiers/competences-qualification-employabilite.html` |
 | 7/9 | 1380 | à revoir après changement | `dossiers/garages-parkings-locaux-commerciaux.html` |
 | 7/9 | 1406 | à revoir après changement | `dossiers/etude-marche-terrain.html` |
