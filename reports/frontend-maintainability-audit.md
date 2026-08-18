@@ -87,6 +87,7 @@ Cet audit mesure la **surface de maintenance**, pas la qualité visuelle. Un sty
 | `assets/hors-cadre-downloads.css` | 1 711 caractères |
 | `assets/voice.css` | 1 065 caractères |
 | `assets/cockpit-progressive.css` | 915 caractères |
+| `assets/editorial-components.css` | 409 caractères |
 
 ## Références CSS les plus fréquentes
 
