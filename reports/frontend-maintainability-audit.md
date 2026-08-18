@@ -26,23 +26,23 @@ Cet audit mesure la **surface de maintenance**, pas la qualité visuelle. Un sty
 | EXTRACT | `parcours-pilotage-professionnel.html` | 1 | 2063 | 2 | 7 |
 | REVIEW | `dossiers/allocation-patrimoine-selon-situation.html` | 1 | 1967 | 0 | 9 |
 | REVIEW | `outils.html` | 1 | 1828 | 0 | 7 |
-| REVIEW | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` | 1 | 1703 | 0 | 8 |
 | REVIEW | `outil-capital-professionnel.html` | 3 | 1607 | 5 | 7 |
-| REVIEW | `dossiers/patrimoine-marge-de-manoeuvre.html` | 1 | 1514 | 0 | 8 |
-| REVIEW | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | 1 | 1486 | 0 | 8 |
 | REVIEW | `outil-repartir-grosse-somme.html` | 2 | 1485 | 2 | 9 |
 | REVIEW | `outil-ingenierie-solutions.html` | 1 | 1474 | 1 | 5 |
 | REVIEW | `parcours-temps-argent-liberte.html` | 1 | 1457 | 1 | 7 |
+| REVIEW | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html` | 1 | 1431 | 0 | 9 |
 | REVIEW | `simulateur-capacite-emprunt.html` | 1 | 1427 | 3 | 8 |
-| REVIEW | `dossiers/premier-investissement-comment-commencer.html` | 1 | 1411 | 0 | 8 |
 | REVIEW | `dossiers/education-financiere-consommation.html` | 1 | 1396 | 0 | 8 |
 | REVIEW | `contact.html` | 1 | 1381 | 0 | 5 |
-| REVIEW | `dossiers/sante-travail-equilibre-vie-pro-perso.html` | 1 | 1367 | 0 | 7 |
-| REVIEW | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | 1 | 1353 | 0 | 8 |
 | REVIEW | `outil-microscope-pea.html` | 1 | 1313 | 5 | 8 |
 | REVIEW | `themes/entreprendre.html` | 1 | 1305 | 1 | 7 |
 | REVIEW | `parcours-achat-immobilier.html` | 1 | 1272 | 0 | 7 |
 | REVIEW | `outil-plan-30-90-jours.html` | 1 | 1222 | 0 | 6 |
+| REVIEW | `dossiers/patrimoine-marge-de-manoeuvre.html` | 1 | 1216 | 0 | 9 |
+| REVIEW | `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` | 1 | 1188 | 0 | 9 |
+| REVIEW | `dossiers/premier-investissement-comment-commencer.html` | 1 | 1139 | 0 | 9 |
+| REVIEW | `dossiers/sante-travail-equilibre-vie-pro-perso.html` | 1 | 1095 | 0 | 8 |
+| REVIEW | `dossiers/finances-difficiles-sortir-decouvert-dettes.html` | 1 | 1081 | 0 | 9 |
 | REVIEW | `fiches-metiers.html` | 1 | 1079 | 0 | 7 |
 | REVIEW | `simulateur-capitalisation-comparateur.html` | 1 | 981 | 2 | 9 |
 | REVIEW | `simulateur-previsionnel-activite.html` | 1 | 977 | 0 | 5 |
@@ -111,13 +111,13 @@ Cet audit mesure la **surface de maintenance**, pas la qualité visuelle. Un sty
 | `assets/voice.css` | 39 |
 | `assets/tools.css` | 26 |
 | `assets/finance.css` | 23 |
+| `../assets/editorial-components.css` | 6 |
 | `../assets/video.css` | 4 |
 | `assets/hors-cadre.css` | 4 |
 | `assets/hors-cadre-downloads.css` | 1 |
 | `assets/young.css` | 1 |
 | `assets/home.css` | 1 |
 | `assets/finance-cockpit.css` | 1 |
-| `assets/finance-architecture.css` | 1 |
 
 ## Blocs locaux exactement dupliqués
 
@@ -133,9 +133,6 @@ Aucun candidat strictement stable selon ce critère.
 
 | Occurrences | Variantes | Sélecteur | Pages |
 |---:|---:|---|---|
-| 12 | 2 | `.ce-card-grid` | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`, `dossiers/finances-difficiles-sortir-decouvert-dettes.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/premier-investissement-comment-commencer.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`, `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
-| 7 | 2 | `.ce-card b` | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`, `dossiers/finances-difficiles-sortir-decouvert-dettes.html`, `dossiers/liquidites-reserve-securite.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/premier-investissement-comment-commencer.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`, `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
-| 7 | 2 | `.ce-card` | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`, `dossiers/finances-difficiles-sortir-decouvert-dettes.html`, `dossiers/liquidites-reserve-securite.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/premier-investissement-comment-commencer.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`, `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
 | 6 | 2 | `.ce-flow>div` | `articles/construire-epargne-de-zero.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
 | 6 | 2 | `.ce-flow i` | `articles/construire-epargne-de-zero.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
 | 4 | 3 | `.sim-grid` | `simulateur-capacite-emprunt.html`, `simulateur-previsionnel-activite.html` |
@@ -173,6 +170,9 @@ Aucun candidat strictement stable selon ce critère.
 | 2 | 2 | `.reset-grid` | `parcours-de-vie.html` |
 | 2 | 2 | `.recipe-top` | `hors-cadre-cuisine.html` |
 | 2 | 2 | `.recipe-grid` | `hors-cadre-cuisine.html` |
+| 2 | 2 | `.recipe-columns` | `hors-cadre-cuisine.html` |
+| 2 | 2 | `.recipe-body` | `hors-cadre-cuisine.html` |
+| 2 | 2 | `.prose .ce-compact-kv th` | `dossiers/management-relations-conflits.html` |
 
 ## Règle de consolidation
 
