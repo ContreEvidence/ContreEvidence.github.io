@@ -8,7 +8,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 
 - P0 — fermeture forte sans preuve/périmètre suffisant : **17**
 - P1 — affirmation forte à resserrer ou vérifier : **71**
-- P2 — nécessité à examiner : **155**
+- P2 — nécessité à examiner : **156**
 - OK heuristique — source/périmètre détecté, fond restant à contrôler : **894**
 
 ## P0 — rouvrir en priorité
@@ -376,6 +376,7 @@ Il s’agit d’un filtre heuristique : un signal P0/P1 impose une relecture, pa
 - **nécessité à requalifier ou sourcer** — 07 Je veux savoir ce qu’il faut demander avant d’accepter Révéler le poste réel : raison du recrutement, charge, objectifs, moyens, turnover, variable, télétravail et évolution. _[temporalité]_
 - **nécessité à requalifier ou sourcer** — 13 Je ne sais plus s’il faut rester ou partir Comparer rémunération totale, marché, santé, employabilité, réserve financière et options futures.
 - **nécessité à requalifier ou sourcer** — Commencez par diagnostiquer ce qui doit vraiment changer, tester le métier et mesurer l’écart avant de payer une formation ou de quitter votre revenu. _[temporalité]_
+- **nécessité à requalifier ou sourcer** — Vie professionnelle · Emploi & carrière Emploi & carrière Trouver, retrouver, choisir une offre, négocier, manager ou faire évoluer sa carrière : partez du problème concret qui doit être résolu maintenant. _[temporalité]_
 
 ## Règle de relecture
 
