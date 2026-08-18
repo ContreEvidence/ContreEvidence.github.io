@@ -1,12 +1,12 @@
 # Audit de couverture des situations
 
-Mise à jour automatique : 2026-08-17
+Mise à jour automatique : 2026-08-18
 
 Cet audit cherche les **variantes raisonnablement attirées par la promesse visible d’une page** mais non reconnues dans son contenu ou son routage. La famille est déterminée uniquement par le title, le H1 et la meta description — jamais par un exemple rencontré plus loin dans le texte.
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **43**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **12**.
+Pages/familles détectées : **43**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **11**.
 
 ## Priorités de relecture
 
@@ -14,7 +14,6 @@ Pages/familles détectées : **43**. Pages `noindex` exclues : **79**. Promesses
 |---:|---|---|---|---|
 | 29 | NON_READY | couple / logement / séparation | `dossiers/acheter-logement-sans-se-fragiliser.html` | indivision directe, SCI, mariage, PACS |
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | salarié, santé / inaptitude, sans diplôme, revenu / runway |
-| 21 | NON_READY | couple / logement / séparation | `dossiers/acheter-sans-vider-epargne.html` | SCI, mariage, PACS |
 | 14 | NON_READY | budget / dettes | `dossiers/puis-je-me-permettre-reconversion.html` | déficit temporaire / structurel, dette / surendettement |
 | 14 | NON_READY | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 9 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/changer-travail-avant-credit-immobilier.html` | santé / inaptitude, sans diplôme |
@@ -29,6 +28,7 @@ Pages/familles détectées : **43**. Pages `noindex` exclues : **79**. Promesses
 | 5 | ROUTE_FIRST | couple / logement / séparation | `dossiers/indivision-couple-separation-rachat-soulte.html` | SCI |
 | 5 | ROUTE_FIRST | travailler moins / qualité de vie | `dossiers/passer-80-pourcent-cout-reel.html` | indépendant |
 | 2 | COVERED_OR_NARROW | reconversion / trajectoire pro | `articles/retrouver-emploi-apres-interruption.html` | — |
+| 2 | COVERED_OR_NARROW | couple / logement / séparation | `dossiers/acheter-sans-vider-epargne.html` | — |
 | 2 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/lancer-activite-sans-quitter-emploi.html` | — |
 | 1 | COVERED_OR_NARROW | budget / dettes | `dossiers/decision-plan-30-90-jours.html` | — |
 | 1 | COVERED_OR_NARROW | budget / dettes | `dossiers/finances-cadre-global.html` | — |
@@ -87,21 +87,6 @@ Promesse : **métier, poste, fonction, service : comprendre l’entreprise — c
 | sans diplôme | MANQUANTE |
 | senior / âge | MANQUANTE |
 | revenu / runway | MANQUANTE |
-
-### `dossiers/acheter-sans-vider-epargne.html` — couple / logement / séparation
-
-Promesse : **combien d’épargne garder après un achat immobilier ? apport et réserve | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| indivision directe | ROUTEE |
-| SCI | MANQUANTE |
-| mariage | MANQUANTE |
-| PACS | MANQUANTE |
-| concubinage | MANQUANTE |
-| tontine | MANQUANTE |
-| propriété ≠ financement | TRAITEE |
-| sorties multiples | ROUTEE |
 
 ### `dossiers/puis-je-me-permettre-reconversion.html` — budget / dettes
 
@@ -232,7 +217,7 @@ Promesse : **patrimoine et marge de manœuvre : combien de liberté vos actifs d
 
 ### couple / logement / séparation
 
-Pages détectées : **5**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **tontine** (4), **SCI** (3), **PACS** (2), **concubinage** (2), **mariage** (2), **indivision directe** (1).
+Pages détectées : **5**. Promesses larges `NON_READY` : **1**. Variantes le plus souvent non détectées : **tontine** (4), **SCI** (2), **PACS** (1), **concubinage** (1), **indivision directe** (1), **mariage** (1).
 
 ### achat immobilier / crédit
 
