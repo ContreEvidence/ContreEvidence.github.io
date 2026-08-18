@@ -13,18 +13,24 @@ on:
       - '.github/workflows/intent-overlap-audit.yml'
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: intent-overlap-audit
+  cancel-in-progress: true
 
 jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with: {fetch-depth: 0}
       - name: Rank suspiciously similar search intents
         shell: python
         run: |
           from pathlib import Path
           import collections,html,math,re,urllib.parse,xml.etree.ElementTree as ET
+          from datetime import date
           root=Path('.').resolve(); base='https://contreevidence.github.io/'
           ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
           urls=[n.text.strip() for n in ET.parse('sitemap.xml').findall('.//s:loc',ns) if n.text]
@@ -49,7 +55,6 @@ jobs:
               title=html.unescape(tags.sub(' ',tm.group(1))) if tm else ''
               desc=html.unescape(next((g for g in dm.groups() if g),'') if dm else '')
               h1=html.unescape(tags.sub(' ',hm.group(1))) if hm else ''
-              # Intent fields are deliberately weighted more than body copy.
               bag=tokens(title+' '+title+' '+h1+' '+h1+' '+desc+' '+rel.replace('/',' ').replace('-',' '))
               docs.append({'rel':rel,'title':re.sub(r'\s+',' ',title).strip(),'bag':collections.Counter(bag)})
           df=collections.Counter()
@@ -73,9 +78,36 @@ jobs:
                   s=cosine(vecs[i],vecs[j])
                   if s>=0.34: pairs.append((s,docs[i],docs[j]))
           pairs.sort(key=lambda x:x[0],reverse=True)
+
           print('Editorial/hub pages compared:',N)
           print('Pairs >= 0.34 cosine intent similarity:',len(pairs))
           print('\nTop suspicious overlaps:')
           for s,a,b in pairs[:60]:
               print(f'{s:.3f} | {a["rel"]} | {a["title"]} || {b["rel"]} | {b["title"]}')
           print('\nThis is a review queue, not a merge instruction: related master/satellite pages are expected to score highly.')
+
+          report=['# Audit des chevauchements d’intention SEO','',f'Mise à jour automatique : {date.today().isoformat()}','',
+                  f'Pages éditoriales/hubs comparées : **{N}**. Paires au-dessus du seuil 0,34 : **{len(pairs)}**.','',
+                  'Ce classement est une **file de revue**, pas une instruction de fusion. Un dossier maître et ses satellites peuvent légitimement être proches. La décision humaine doit désigner l’URL propriétaire de l’intention et vérifier que les autres pages ont une promesse distincte ou un routage explicite.','',
+                  '| Similarité | Page A | Page B |','|---:|---|---|']
+          for s,a,b in pairs[:80]:
+              report.append(f'| {s:.3f} | `{a["rel"]}` — {a["title"]} | `{b["rel"]}` — {b["title"]} |')
+          report += ['','## Règle de revue','',
+                     '1. Identifier la requête ou décision réellement promise par chaque page.',
+                     '2. Désigner une URL propriétaire si deux pages promettent la même réponse principale.',
+                     '3. Fusionner seulement si la décision, le public et le niveau de détail sont réellement identiques.',
+                     '4. Sinon, resserrer title/H1/meta et router la page satellite vers la propriétaire.',
+                     '5. Ne pas transformer un score de similarité lexical en règle éditoriale automatique.','']
+          Path('reports/intent-overlap-audit.md').write_text('\n'.join(report),encoding='utf-8')
+      - name: Commit report if changed
+        run: |
+          if [ -z "$(git status --porcelain -- reports/intent-overlap-audit.md)" ]; then exit 0; fi
+          git config user.name 'github-actions[bot]'; git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/intent-overlap-audit.md; git commit -m 'Update SEO intent overlap audit'
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main || { git rebase --abort; sleep 2; continue; }
+            git push origin HEAD:main && exit 0
+            sleep $((i*2))
+          done
+          exit 1
