@@ -17,11 +17,86 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  audit:
+  extract_verified_card_component:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
         with: {fetch-depth: 0}
+      - name: Move only the six exact card copies to the shared component
+        shell: python
+        run: |
+          from pathlib import Path
+
+          targets = [
+              'dossiers/accepter-emploi-moins-paye-vivre-mieux.html',
+              'dossiers/finances-difficiles-sortir-decouvert-dettes.html',
+              'dossiers/patrimoine-marge-de-manoeuvre.html',
+              'dossiers/premier-investissement-comment-commencer.html',
+              'dossiers/quand-arreter-optimiser-utiliser-patrimoine.html',
+              'dossiers/sante-travail-equilibre-vie-pro-perso.html',
+          ]
+          base = '.ce-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin:1rem 0}.ce-card{padding:1rem 1.05rem;border:1px solid rgba(16,24,32,.14);border-radius:15px;background:#fff}.ce-card b{display:block;margin-bottom:.28rem;color:#73530c}'
+          link = '<link rel="stylesheet" href="../assets/editorial-components.css?v=20260818-1"/>'
+          mobile = {
+              targets[0]: ('.ce-job-branches,.ce-card-grid{grid-template-columns:1fr}', '.ce-job-branches{grid-template-columns:1fr}'),
+              targets[1]: ('.ce-triage-grid,.ce-card-grid{grid-template-columns:1fr}', '.ce-triage-grid{grid-template-columns:1fr}'),
+              targets[2]: ('.ce-card-grid{grid-template-columns:1fr}', ''),
+              targets[3]: ('.ce-card-grid,.ce-size-grid{grid-template-columns:1fr}', '.ce-size-grid{grid-template-columns:1fr}'),
+              targets[4]: ('.ce-card-grid{grid-template-columns:1fr}', ''),
+              targets[5]: ('.ce-health-grid,.ce-card-grid{grid-template-columns:1fr}', '.ce-health-grid{grid-template-columns:1fr}'),
+          }
+
+          if not Path('assets/editorial-components.css').exists():
+              raise SystemExit('shared component file is missing')
+
+          changed=[]
+          for path in targets:
+              p=Path(path)
+              text=p.read_text(encoding='utf-8')
+              if 'editorial-components.css?v=20260818-1' in text:
+                  if base in text:
+                      raise SystemExit(f'{path}: shared link exists but local base rules remain')
+                  continue
+              if text.count(base) != 1:
+                  raise SystemExit(f'{path}: exact base component changed; refusing migration')
+              old_mobile,new_mobile=mobile[path]
+              if text.count(old_mobile) != 1:
+                  raise SystemExit(f'{path}: exact mobile component changed; refusing migration')
+              text=text.replace(base,'',1).replace(old_mobile,new_mobile,1)
+              anchors=[
+                  '<link rel="stylesheet" href="../assets/ux-retention.css?v=20260810-13"/>',
+                  '<link href="../assets/ux-retention.css?v=20260810-13" rel="stylesheet"/>',
+              ]
+              anchor=next((a for a in anchors if a in text),None)
+              if not anchor:
+                  raise SystemExit(f'{path}: ux-retention anchor not found')
+              text=text.replace(anchor,anchor+link,1)
+              p.write_text(text,encoding='utf-8')
+              changed.append(path)
+
+          print('Migrated:', ', '.join(changed) if changed else 'already complete')
+      - name: Commit migration when needed
+        run: |
+          if [ -z "$(git status --porcelain -- dossiers)" ]; then exit 0; fi
+          git diff --check
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add dossiers/accepter-emploi-moins-paye-vivre-mieux.html \
+            dossiers/finances-difficiles-sortir-decouvert-dettes.html \
+            dossiers/patrimoine-marge-de-manoeuvre.html \
+            dossiers/premier-investissement-comment-commencer.html \
+            dossiers/quand-arreter-optimiser-utiliser-patrimoine.html \
+            dossiers/sante-travail-equilibre-vie-pro-perso.html
+          git diff --cached --check
+          git commit -m 'Share stable editorial card component'
+          git push origin HEAD:main
+
+  audit:
+    needs: extract_verified_card_component
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with: {fetch-depth: 0, ref: main}
       - name: Measure local and shared CSS surface
         shell: python
         run: |
