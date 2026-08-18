@@ -1,0 +1,129 @@
+name: Frontend maintainability audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.html'
+      - 'assets/**/*.css'
+      - '.github/workflows/frontend-maintainability-audit.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: frontend-maintainability-audit
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with: {fetch-depth: 0}
+      - name: Measure local and shared CSS surface
+        shell: python
+        run: |
+          from pathlib import Path
+          from datetime import date
+          import collections, hashlib, re
+
+          STYLE_BLOCK=re.compile(r'<style\b[^>]*>(.*?)</style>',re.I|re.S)
+          STYLE_ATTR=re.compile(r'\sstyle=["\'][^"\']*["\']',re.I)
+          LINK_CSS=re.compile(r'<link\b[^>]*href=["\']([^"\']+\.css(?:\?[^"\']*)?)["\']',re.I)
+          CLASS_RULE=re.compile(r'([^{}]+)\{[^{}]*\}')
+
+          pages=[]
+          exact_blocks=collections.defaultdict(list)
+          css_refs=collections.Counter()
+          local_selectors=collections.Counter()
+
+          for p in sorted(Path('.').rglob('*.html')):
+              if any(part.startswith('.') for part in p.parts):
+                  continue
+              raw=p.read_text(encoding='utf-8',errors='ignore')
+              blocks=STYLE_BLOCK.findall(raw)
+              inline_attrs=len(STYLE_ATTR.findall(raw))
+              local_chars=sum(len(b) for b in blocks)
+              refs=[]
+              for href in LINK_CSS.findall(raw):
+                  clean=href.split('?',1)[0]
+                  refs.append(clean)
+                  css_refs[clean]+=1
+              for b in blocks:
+                  norm=re.sub(r'\s+',' ',b).strip()
+                  if norm:
+                      exact_blocks[hashlib.sha1(norm.encode()).hexdigest()].append(str(p))
+                  for sel in CLASS_RULE.findall(b):
+                      for part in sel.split(','):
+                          s=re.sub(r'\s+',' ',part).strip()
+                          if s.startswith('.') and len(s)<120:
+                              local_selectors[s]+=1
+              gate='EXTRACT' if local_chars>=2000 else ('REVIEW' if local_chars>=600 or inline_attrs>=8 else 'OK')
+              pages.append(dict(path=str(p),blocks=len(blocks),chars=local_chars,attrs=inline_attrs,refs=len(set(refs)),gate=gate))
+
+          css_files=[]
+          for p in sorted(Path('assets').rglob('*.css')) if Path('assets').exists() else []:
+              raw=p.read_text(encoding='utf-8',errors='ignore')
+              css_files.append((len(raw),str(p)))
+          css_files.sort(reverse=True)
+
+          pages.sort(key=lambda x:(-x['chars'],-x['attrs'],x['path']))
+          extract=[x for x in pages if x['gate']=='EXTRACT']
+          review=[x for x in pages if x['gate']=='REVIEW']
+          with_style=[x for x in pages if x['blocks']]
+          duplicate_groups=[v for v in exact_blocks.values() if len(v)>1]
+          duplicate_groups.sort(key=lambda v:(-len(v),v[0]))
+          repeated_selectors=[(n,s) for s,n in local_selectors.items() if n>=2]
+          repeated_selectors.sort(reverse=True)
+
+          out=['# Audit de maintenabilité front-end','',f'Mise à jour automatique : {date.today().isoformat()}','',
+               f'Pages HTML analysées : **{len(pages)}**. Pages avec CSS local `<style>` : **{len(with_style)}**. Candidats `EXTRACT` (≥ 2 000 caractères de CSS local) : **{len(extract)}**. Candidats `REVIEW` : **{len(review)}**.','',
+               'Cet audit mesure la **surface de maintenance**, pas la qualité visuelle. Un style local peut être légitime ; la priorité augmente lorsqu’un gros bloc local recrée des composants déjà présents ailleurs.','',
+               '## Pages avec le plus de CSS local','',
+               '| Gate | Page | Blocs `<style>` | Caractères CSS local | Attributs `style=` | CSS partagés référencés |','|---|---|---:|---:|---:|---:|']
+          for x in pages[:50]:
+              if not x['blocks'] and not x['attrs']: continue
+              out.append(f"| {x['gate']} | `{x['path']}` | {x['blocks']} | {x['chars']} | {x['attrs']} | {x['refs']} |")
+
+          out += ['','## Fichiers CSS partagés les plus lourds','', '| Fichier | Taille source |','|---|---:|']
+          for size,path in css_files[:25]: out.append(f'| `{path}` | {size:,} caractères |'.replace(',',' '))
+
+          out += ['','## Références CSS les plus fréquentes','', '| Référence telle qu’utilisée dans les pages | Pages |','|---|---:|']
+          for ref,n in css_refs.most_common(25): out.append(f'| `{ref}` | {n} |')
+
+          out += ['','## Blocs locaux exactement dupliqués','']
+          if duplicate_groups:
+              for i,group in enumerate(duplicate_groups[:20],1):
+                  out.append(f'**Groupe {i} — {len(group)} pages** : '+', '.join(f'`{p}`' for p in group))
+          else:
+              out.append('Aucun bloc `<style>` strictement identique sur plusieurs pages.')
+
+          out += ['','## Sélecteurs locaux répétés entre blocs','']
+          if repeated_selectors:
+              out += ['| Occurrences | Sélecteur |','|---:|---|']
+              for n,s in repeated_selectors[:40]: out.append(f'| {n} | `{s.replace("|","\\|")}` |')
+          else:
+              out.append('Aucun sélecteur local répété au moins deux fois.')
+
+          out += ['','## Règle de consolidation','',
+                  '1. Extraire d’abord les composants locaux réutilisés ou répliqués, pas les exceptions de mise en page réellement uniques.',
+                  '2. Ne pas déplacer un bloc uniquement pour faire baisser un compteur : un composant partagé doit avoir un nom et une responsabilité stables.',
+                  '3. Après chaque extraction, comparer le rendu desktop/mobile avant et après.',
+                  '4. Éviter les nouvelles couches correctives globales lorsque la règle peut vivre dans le composant concerné.',
+                  '5. Les attributs `style=` répétés sont des candidats à une classe ; un attribut isolé peut rester local si son intention est réellement unique.','']
+          Path('reports/frontend-maintainability-audit.md').write_text('\n'.join(out),encoding='utf-8')
+      - name: Commit report if changed
+        run: |
+          if [ -z "$(git status --porcelain -- reports/frontend-maintainability-audit.md)" ]; then exit 0; fi
+          git config user.name 'github-actions[bot]'; git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/frontend-maintainability-audit.md
+          git commit -m 'Update frontend maintainability audit'
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main || { git rebase --abort; sleep 2; continue; }
+            git push origin HEAD:main && exit 0
+            sleep $((i*2))
+          done
+          exit 1
