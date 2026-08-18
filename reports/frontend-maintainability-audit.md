@@ -122,50 +122,56 @@ Cet audit mesure la **surface de maintenance**, pas la qualité visuelle. Un sty
 
 **Groupe 1 — 5 pages** : `articles/contraintes-innovation.html`, `articles/investir-grosse-somme-dun-coup-ou-progressivement.html`, `dossiers/competent-mais-invisible-travail.html`, `outil-capital-professionnel.html`, `simulateur-investissement-locatif.html`
 
+## Candidats de composants strictement stables
+
+Sélecteurs présents sur au moins trois pages avec **une seule variante exacte de déclarations**. Ce sont les meilleurs candidats à une extraction sans changement de rendu.
+
+Aucun candidat strictement stable selon ce critère.
+
 ## Sélecteurs locaux répétés entre blocs
 
-| Occurrences | Sélecteur | Pages |
-|---:|---|---|
-| 12 | `.ce-card-grid` | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`, `dossiers/finances-difficiles-sortir-decouvert-dettes.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/premier-investissement-comment-commencer.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`, `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
-| 7 | `.ce-card b` | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`, `dossiers/finances-difficiles-sortir-decouvert-dettes.html`, `dossiers/liquidites-reserve-securite.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/premier-investissement-comment-commencer.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`, `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
-| 7 | `.ce-card` | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`, `dossiers/finances-difficiles-sortir-decouvert-dettes.html`, `dossiers/liquidites-reserve-securite.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/premier-investissement-comment-commencer.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`, `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
-| 6 | `.ce-flow>div` | `articles/construire-epargne-de-zero.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
-| 6 | `.ce-flow i` | `articles/construire-epargne-de-zero.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
-| 4 | `.sim-grid` | `simulateur-capacite-emprunt.html`, `simulateur-previsionnel-activite.html` |
-| 4 | `.ce-decision-flow>div` | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`, `dossiers/liquidites-reserve-securite.html` |
-| 4 | `.ce-decision-flow i` | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`, `dossiers/liquidites-reserve-securite.html` |
-| 3 | `.scenario-grid` | `simulateur-capitalisation-comparateur.html` |
-| 3 | `.reset-protocol` | `parcours-de-vie.html` |
-| 3 | `.pro-pilot .loop` | `parcours-pilotage-professionnel.html` |
-| 3 | `.photo-credit` | `hors-cadre-decouvertes.html` |
-| 3 | `.person-series` | `hors-cadre-decouvertes.html` |
-| 3 | `.person-head p` | `hors-cadre-decouvertes.html` |
-| 3 | `.person-head h2` | `hors-cadre-decouvertes.html` |
-| 3 | `.pause-window` | `hors-cadre.html` |
-| 3 | `.ce-flow` | `articles/construire-epargne-de-zero.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
-| 3 | `.ce-check` | `dossiers/liquidites-reserve-securite.html`, `dossiers/premier-investissement-comment-commencer.html` |
-| 3 | `.alloc-table` | `outil-repartir-grosse-somme.html` |
-| 2 | `.warn` | `outil-repartir-grosse-somme.html`, `simulateur-previsionnel-activite.html` |
-| 2 | `.tool-hub .tool-grid` | `outils.html` |
-| 2 | `.tool-hub .rescue .btns` | `outils.html` |
-| 2 | `.tool-hub .rescue` | `outils.html` |
-| 2 | `.tool-hub .function-nav` | `outils.html` |
-| 2 | `.terrain-grid` | `parcours-de-vie.html` |
-| 2 | `.strategy-grid` | `simulateur-comparer-strategies-immobilieres.html` |
-| 2 | `.sim-wrap` | `simulateur-capacite-emprunt.html` |
-| 2 | `.se-proof-grid textarea` | `outil-ingenierie-solutions.html` |
-| 2 | `.se-proof-grid` | `outil-ingenierie-solutions.html` |
-| 2 | `.se-output dl` | `outil-ingenierie-solutions.html` |
-| 2 | `.se-output dd` | `outil-ingenierie-solutions.html` |
-| 2 | `.se-lenses` | `outil-ingenierie-solutions.html` |
-| 2 | `.se-grid` | `outil-ingenierie-solutions.html` |
-| 2 | `.se-card textarea` | `outil-ingenierie-solutions.html` |
-| 2 | `.roadmap-rules` | `parcours-de-vie.html` |
-| 2 | `.roadmap-grid` | `parcours-de-vie.html` |
-| 2 | `.result-cards` | `simulateur-previsionnel-activite.html` |
-| 2 | `.reset-grid` | `parcours-de-vie.html` |
-| 2 | `.recipe-top` | `hors-cadre-cuisine.html` |
-| 2 | `.recipe-grid` | `hors-cadre-cuisine.html` |
+| Occurrences | Variantes | Sélecteur | Pages |
+|---:|---:|---|---|
+| 12 | 2 | `.ce-card-grid` | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`, `dossiers/finances-difficiles-sortir-decouvert-dettes.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/premier-investissement-comment-commencer.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`, `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
+| 7 | 2 | `.ce-card b` | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`, `dossiers/finances-difficiles-sortir-decouvert-dettes.html`, `dossiers/liquidites-reserve-securite.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/premier-investissement-comment-commencer.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`, `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
+| 7 | 2 | `.ce-card` | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`, `dossiers/finances-difficiles-sortir-decouvert-dettes.html`, `dossiers/liquidites-reserve-securite.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/premier-investissement-comment-commencer.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`, `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
+| 6 | 2 | `.ce-flow>div` | `articles/construire-epargne-de-zero.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
+| 6 | 2 | `.ce-flow i` | `articles/construire-epargne-de-zero.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
+| 4 | 3 | `.sim-grid` | `simulateur-capacite-emprunt.html`, `simulateur-previsionnel-activite.html` |
+| 4 | 3 | `.ce-decision-flow>div` | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`, `dossiers/liquidites-reserve-securite.html` |
+| 4 | 2 | `.ce-decision-flow i` | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`, `dossiers/liquidites-reserve-securite.html` |
+| 3 | 3 | `.scenario-grid` | `simulateur-capitalisation-comparateur.html` |
+| 3 | 3 | `.reset-protocol` | `parcours-de-vie.html` |
+| 3 | 3 | `.pro-pilot .loop` | `parcours-pilotage-professionnel.html` |
+| 3 | 3 | `.photo-credit` | `hors-cadre-decouvertes.html` |
+| 3 | 3 | `.person-series` | `hors-cadre-decouvertes.html` |
+| 3 | 3 | `.person-head p` | `hors-cadre-decouvertes.html` |
+| 3 | 3 | `.person-head h2` | `hors-cadre-decouvertes.html` |
+| 3 | 3 | `.pause-window` | `hors-cadre.html` |
+| 3 | 2 | `.ce-flow` | `articles/construire-epargne-de-zero.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
+| 3 | 3 | `.ce-check` | `dossiers/liquidites-reserve-securite.html`, `dossiers/premier-investissement-comment-commencer.html` |
+| 3 | 3 | `.alloc-table` | `outil-repartir-grosse-somme.html` |
+| 2 | 2 | `.warn` | `outil-repartir-grosse-somme.html`, `simulateur-previsionnel-activite.html` |
+| 2 | 2 | `.tool-hub .tool-grid` | `outils.html` |
+| 2 | 2 | `.tool-hub .rescue .btns` | `outils.html` |
+| 2 | 2 | `.tool-hub .rescue` | `outils.html` |
+| 2 | 2 | `.tool-hub .function-nav` | `outils.html` |
+| 2 | 2 | `.terrain-grid` | `parcours-de-vie.html` |
+| 2 | 2 | `.strategy-grid` | `simulateur-comparer-strategies-immobilieres.html` |
+| 2 | 2 | `.sim-wrap` | `simulateur-capacite-emprunt.html` |
+| 2 | 2 | `.se-proof-grid textarea` | `outil-ingenierie-solutions.html` |
+| 2 | 2 | `.se-proof-grid` | `outil-ingenierie-solutions.html` |
+| 2 | 2 | `.se-output dl` | `outil-ingenierie-solutions.html` |
+| 2 | 2 | `.se-output dd` | `outil-ingenierie-solutions.html` |
+| 2 | 2 | `.se-lenses` | `outil-ingenierie-solutions.html` |
+| 2 | 2 | `.se-grid` | `outil-ingenierie-solutions.html` |
+| 2 | 2 | `.se-card textarea` | `outil-ingenierie-solutions.html` |
+| 2 | 2 | `.roadmap-rules` | `parcours-de-vie.html` |
+| 2 | 2 | `.roadmap-grid` | `parcours-de-vie.html` |
+| 2 | 2 | `.result-cards` | `simulateur-previsionnel-activite.html` |
+| 2 | 2 | `.reset-grid` | `parcours-de-vie.html` |
+| 2 | 2 | `.recipe-top` | `hors-cadre-cuisine.html` |
+| 2 | 2 | `.recipe-grid` | `hors-cadre-cuisine.html` |
 
 ## Règle de consolidation
 
