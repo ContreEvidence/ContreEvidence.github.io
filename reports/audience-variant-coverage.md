@@ -6,14 +6,13 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **1**.
+Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **0**.
 
 ## Priorités de relecture
 
 | Priorité | Gate | Famille | Page | Variantes critiques non détectées |
 |---:|---|---|---|---|
 | 16 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | salarié, santé / inaptitude, sans diplôme, revenu / runway |
-| 14 | NON_READY | budget / dettes | `dossiers/puis-je-me-permettre-reconversion.html` | déficit temporaire / structurel, dette / surendettement |
 | 9 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/changer-travail-avant-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 8 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 5 | ROUTE_FIRST | achat immobilier / crédit | `dossiers/indivision-couple-separation-rachat-soulte.html` | indépendant |
@@ -50,25 +49,13 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 | 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/formation-vaut-elle-le-cout.html` | — |
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/patrimoine-marge-de-manoeuvre.html` | — |
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/patrimoine-permet-il-travailler-moins.html` | — |
+| 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/puis-je-me-permettre-reconversion.html` | — |
 | 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/puis-je-me-permettre-reconversion.html` | — |
 | 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/reconversion-sans-perte-salaire.html` | — |
 | 0 | COVERED_OR_NARROW | couple / logement / séparation | `dossiers/separation-logement-achete-a-deux.html` | — |
 | 0 | COVERED_OR_NARROW | travailler moins / qualité de vie | `dossiers/travailler-moins-vivre-mieux.html` | — |
 
 ## Détail des promesses larges `NON_READY`
-
-### `dossiers/puis-je-me-permettre-reconversion.html` — budget / dettes
-
-Promesse : **puis-je me permettre une reconversion ? budget, voies courtes et seuils de décision | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| déficit temporaire / structurel | MANQUANTE |
-| revenu stable / variable | TRAITEE |
-| solo / couple | TRAITEE |
-| logement propriétaire / locataire | MANQUANTE |
-| dette / surendettement | MANQUANTE |
-| charges compressibles / non | TRAITEE |
 
 ## Lecture par famille
 
@@ -98,7 +85,7 @@ Pages détectées : **5**. Promesses larges `NON_READY` : **0**. Variantes le pl
 
 ### budget / dettes
 
-Pages détectées : **10**. Promesses larges `NON_READY` : **1**. Variantes le plus souvent non détectées : **logement propriétaire / locataire** (4), **déficit temporaire / structurel** (2), **dette / surendettement** (1), **revenu stable / variable** (1).
+Pages détectées : **10**. Promesses larges `NON_READY` : **0**. Variantes le plus souvent non détectées : **logement propriétaire / locataire** (4), **déficit temporaire / structurel** (1), **revenu stable / variable** (1).
 
 ### travailler moins / qualité de vie
 
