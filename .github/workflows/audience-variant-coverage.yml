@@ -67,18 +67,18 @@ jobs:
             'c':['mariage / conjoint','PACS / concubin','enfants / famille recomposée','SCI / parts','liquidité / partage']},
           'reconversion / trajectoire pro':{
             'b':[r'reconversion',r'changer de métier',r'changer de travail',r'retour.*emploi',r'trajectoire professionnelle'],
-            'n':[r'sans perte de salaire',r'après interruption',r'sans diplôme',r'avant.*crédit immobilier'],
+            'n':[r'sans perte de salaire',r'après interruption',r'sans diplôme',r'avant.*crédit immobilier',r'métier.*poste.*fonction',r'compétences? transférables?',r'quitter.*\bcdi\b'],
             'v':{'salarié':[r'salari'],'demandeur emploi':[r'chômage',r'demandeur d.emploi',r'france travail'],'public':[r'agent public',r'fonction publique',r'contractuel public'],'indépendant':[r'indépendant',r'entrepreneur'],'santé / inaptitude':[r'santé',r'inaptitude',r'handicap'],'sans diplôme':[r'sans diplôme',r'vae',r'vap'],'senior / âge':[r'senior',r'50 ans',r'âge'],'revenu / runway':[r'revenu',r'épargne',r'runway',r'indemnisation']},
             'c':['salarié','demandeur emploi','santé / inaptitude','sans diplôme','revenu / runway']},
           'entrepreneuriat':{
-            'b':[r'créer.*entreprise',r'lancer.*activité',r'entreprendre',r'vivre de son activité',r'choisir.*statut'],
-            'n':[r'micro.*ei.*eurl.*sasu',r'sans diplôme',r'sans quitter.*emploi'],
+            'b':[r'créer.*entreprise',r'lancer.*activité',r'entreprendre',r'vivre de son activité',r'choisir.{0,60}(?:statut|structure)'],
+            'n':[r'micro.*ei.*eurl.*sasu',r'sans diplôme',r'sans quitter.*emploi',r'\bare\b.*\barce\b.*\bacre\b'],
             'v':{'activité principale / complément':[r'complément',r'principal',r'parallèle',r'sans quitter'],'micro / EI / société':[r'micro',r'\bei\b',r'eurl',r'sasu',r'société'],'activité réglementée':[r'réglement',r'diplôme',r'qualification'],'chômage / aides':[r'are',r'arce',r'acre',r'chômage'],'TVA':[r'\btva\b'],'financement / BFR':[r'financ',r'bfr',r'trésorerie'],'associés':[r'associé',r'solo']},
             'c':['activité principale / complément','micro / EI / société','activité réglementée','chômage / aides','financement / BFR']},
           'budget / dettes':{
             'b':[r'budget',r'dettes',r'découvert',r'difficultés financières',r'où part.*argent'],
-            'n':[r'audit.*60',r'surendettement'],
-            'v':{'déficit temporaire / structurel':[r'temporaire',r'structurel'],'revenu stable / variable':[r'stable',r'variable',r'irrégulier'],'solo / couple':[r'couple',r'foyer',r'seul'],'logement propriétaire / locataire':[r'propriétaire',r'locataire',r'loyer',r'crédit immobilier'],'dette / surendettement':[r'dette',r'surendett'],'charges compressibles / non':[r'incompress',r'réduire',r'économie']},
+            'n':[r'audit.*60',r'surendettement',r'construire.*épargne',r'créer.*entreprise.*peu d.argent'],
+            'v':{'déficit temporaire / structurel':[r'temporaire',r'structurel',r'déficit permanent',r'transition.*bornée'],'revenu stable / variable':[r'stable',r'variable',r'irrégulier'],'solo / couple':[r'couple',r'foyer',r'seul'],'logement propriétaire / locataire':[r'propriétaire',r'locataire',r'loyer',r'crédit immobilier'],'dette / surendettement':[r'dette',r'surendett'],'charges compressibles / non':[r'incompress',r'réduire',r'économie']},
             'c':['déficit temporaire / structurel','revenu stable / variable','dette / surendettement','charges compressibles / non']},
           'travailler moins / qualité de vie':{
             'b':[r'travailler moins',r'80 ?%',r'80 pourcent',r'qualité de vie.*travail',r'récupérer.*temps'],
