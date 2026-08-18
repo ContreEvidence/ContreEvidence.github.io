@@ -1,10 +1,10 @@
 name: P0 acquisition promise review
 
 on:
-  push:
+  pull_request:
     branches: [main]
     paths:
-      - '.github/workflows/p0-acquisition-pass.yml'
+      - '.github/p0-acquisition-trigger.txt'
   workflow_dispatch:
 
 permissions:
@@ -20,10 +20,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.head_ref }}
           fetch-depth: 0
       - name: Apply reviewed P0 pass
         run: python .github/scripts/p0_acquisition_pass.py
-      - name: Validate and commit
+      - name: Validate and commit to review branch
         run: |
           git diff --check
           git config user.name "github-actions[bot]"
@@ -35,4 +36,4 @@ jobs:
             dossiers/comparer-strategies-immobilieres.html
           git diff --cached --check
           git commit -m "Refine acquisition promises and routing"
-          git push
+          git push origin HEAD:${{ github.head_ref }}
