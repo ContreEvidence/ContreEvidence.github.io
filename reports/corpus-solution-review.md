@@ -46,9 +46,9 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | `dossiers/immobilier-allocation-globale-patrimoine.html` | `5efc7a75224680022c77aeaadaab037db1a3de52` | `21ae95b3543b00c14c2f6658d2e67b4628b69e72` |
 | `dossiers/audit-budget-60-minutes.html` | `8de2b2164b0d8d56823db98de8e87e9fbf70bef8` | `c85ea314369c4eff5164065f0c0d5e24f8ae5eba` |
 | `dossiers/liquidites-reserve-securite.html` | `ae88ad8ae7c6981800827b83825e37da0c51d1c5` | `dbc55f545460a92295bc3e0b35f075039e34e829` |
-| `dossiers/acheter-logement-sans-se-fragiliser.html` | `917027c5225fc0464db739ffa51972e38f4655f6` | `a87b174ad4dd65a91567cca93373ea995f93429c` |
 | `dossiers/finances-residence-principale.html` | `89bdee80210b87568b4831b77c18bccbc6c8f1f9` | `1caa35d16d6a3a9651711b0982645223edad1704` |
 | `dossiers/protocole-verifier-reponse-ia.html` | `ec82b9e8c65ba1c55e937db7c11e96ff33e86f17` | `dfde7fd94a64aa47e6b17f98d6603307f84df2ce` |
+| `dossiers/acheter-logement-sans-se-fragiliser.html` | `917027c5225fc0464db739ffa51972e38f4655f6` | `98fffae0c83d4f1573fc4e8345b0549d883fe69b` |
 | `dossiers/assurer-ou-autoassurer-risques.html` | `6bd9c11fce81a3115d0115986a602f1e4fb2753e` | `9eee2066642ab55d9556dd47be2f89847888709f` |
 | `dossiers/reconversion-sans-formation-longue.html` | `d802367f18e91acefed62a8442350fd5d1604504` | `b0bdd471b6a4a335edf637d4277c7717ead5ea08` |
 | `dossiers/emploi-chercher-accepter-negocier-evoluer.html` | `32be1bec7e6d9053ef2c87ad9b5de107f6ef619d` | `b5d0334d49e7965e4c8ad53bf1a6c256c75b0c3d` |
@@ -179,9 +179,9 @@ Pages analysées : **130**. Pages `noindex` exclues : **79**. Validations humain
 | 8/9 | 1113 | heuristique | `dossiers/premier-investissement-comment-commencer.html` |
 | 8/9 | 1148 | à revoir après changement | `dossiers/audit-budget-60-minutes.html` |
 | 8/9 | 1206 | à revoir après changement | `dossiers/liquidites-reserve-securite.html` |
-| 8/9 | 1222 | à revoir après changement | `dossiers/acheter-logement-sans-se-fragiliser.html` |
 | 8/9 | 1257 | à revoir après changement | `dossiers/finances-residence-principale.html` |
 | 8/9 | 1298 | à revoir après changement | `dossiers/protocole-verifier-reponse-ia.html` |
+| 8/9 | 1309 | à revoir après changement | `dossiers/acheter-logement-sans-se-fragiliser.html` |
 | 8/9 | 1319 | à revoir après changement | `dossiers/assurer-ou-autoassurer-risques.html` |
 | 8/9 | 1354 | à revoir après changement | `dossiers/reconversion-sans-formation-longue.html` |
 | 8/9 | 1357 | à revoir après changement | `dossiers/emploi-chercher-accepter-negocier-evoluer.html` |
