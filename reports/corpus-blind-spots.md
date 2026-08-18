@@ -1,6 +1,6 @@
 # Cartographie des angles morts du corpus
 
-Mise à jour automatique : 2026-08-17
+Mise à jour automatique : 2026-08-18
 
 Cet audit complète — il ne remplace pas — la revue structurelle. Il cherche des **familles de raisonnement susceptibles de changer la décision** mais souvent absentes d’un contenu pourtant correct : acteur, substitution, fenêtre temporelle, ordre, fractionnement, combinaison, statu quo, second ordre, transfert de risque, friction, hétérogénéité, renversement, objectif réel, optionnalité et asymétrie de preuve.
 
@@ -55,19 +55,19 @@ Pages indexables analysées : **130**. Pages `noindex` exclues : **79**.
 | 6 | 9/15 | patrimoine / investissement / retraite | `dossiers/demenager-pour-un-emploi-salaire-minimum.html` | attendre / statu quo, transfert de risque |
 | 6 | 9/15 | immobilier / crédit / indivision | `dossiers/finances-investissement-locatif.html` | acteur/gatekeeper, condition de renversement |
 | 6 | 9/15 | emploi / carrière / qualification | `dossiers/reconversion-sans-formation-longue.html` | acteur/gatekeeper, substitution |
-| 6 | 10/15 | emploi / carrière / qualification | `dossiers/acheter-sans-vider-epargne.html` | objectif réel / substitution du moyen, asymétrie de preuve |
 | 6 | 10/15 | immobilier / crédit / indivision | `dossiers/comparer-strategies-immobilieres.html` | acteur/gatekeeper, condition de renversement |
 | 6 | 10/15 | emploi / carrière / qualification | `dossiers/emploi-chercher-accepter-negocier-evoluer.html` | substitution, objectif réel / substitution du moyen |
 | 6 | 10/15 | emploi / carrière / qualification | `dossiers/formation-vaut-elle-le-cout.html` | substitution, objectif réel / substitution du moyen |
 | 6 | 10/15 | immobilier / crédit / indivision | `dossiers/garages-parkings-locaux-commerciaux.html` | acteur/gatekeeper, condition de renversement |
 | 6 | 10/15 | entrepreneuriat / activité | `dossiers/lancer-activite-sans-quitter-emploi.html` | substitution, condition de renversement |
 | 6 | 10/15 | entrepreneuriat / activité | `dossiers/methode-analyse-complete.html` | acteur/gatekeeper, substitution |
+| 6 | 10/15 | immobilier / crédit / indivision | `dossiers/patrimoine-marge-de-manoeuvre.html` | acteur/gatekeeper, valeur d’option / irréversibilité |
 
 ## Lecture par cluster
 
 ### emploi / carrière / qualification
 
-Pages : **40**. Angles le plus souvent non détectés : **transfert de risque** (30), **valeur d’option / irréversibilité** (25), **effets de second ordre** (22), **substitution** (20), **objectif réel / substitution du moyen** (18), **attendre / statu quo** (17), **condition de renversement** (14).
+Pages : **39**. Angles le plus souvent non détectés : **transfert de risque** (29), **valeur d’option / irréversibilité** (25), **effets de second ordre** (21), **substitution** (20), **objectif réel / substitution du moyen** (17), **attendre / statu quo** (16), **condition de renversement** (14).
 
 ### entrepreneuriat / activité
 
@@ -75,7 +75,7 @@ Pages : **23**. Angles le plus souvent non détectés : **valeur d’option / ir
 
 ### immobilier / crédit / indivision
 
-Pages : **26**. Angles le plus souvent non détectés : **objectif réel / substitution du moyen** (18), **acteur/gatekeeper** (16), **substitution** (16), **transfert de risque** (15), **condition de renversement** (13), **attendre / statu quo** (9), **effets de second ordre** (9).
+Pages : **27**. Angles le plus souvent non détectés : **objectif réel / substitution du moyen** (19), **acteur/gatekeeper** (16), **substitution** (16), **transfert de risque** (16), **condition de renversement** (13), **attendre / statu quo** (10), **effets de second ordre** (10).
 
 ### patrimoine / investissement / retraite
 
