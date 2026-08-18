@@ -38,6 +38,7 @@ jobs:
           exact_blocks=collections.defaultdict(list)
           css_refs=collections.Counter()
           local_selectors=collections.Counter()
+          selector_pages=collections.defaultdict(set)
 
           for p in sorted(Path('.').rglob('*.html')):
               if any(part.startswith('.') for part in p.parts):
@@ -60,6 +61,7 @@ jobs:
                           s=re.sub(r'\s+',' ',part).strip()
                           if s.startswith('.') and len(s)<120:
                               local_selectors[s]+=1
+                              selector_pages[s].add(str(p))
               gate='EXTRACT' if local_chars>=2000 else ('REVIEW' if local_chars>=600 or inline_attrs>=8 else 'OK')
               pages.append(dict(path=str(p),blocks=len(blocks),chars=local_chars,attrs=inline_attrs,refs=len(set(refs)),gate=gate))
 
@@ -102,8 +104,11 @@ jobs:
 
           out += ['','## Sélecteurs locaux répétés entre blocs','']
           if repeated_selectors:
-              out += ['| Occurrences | Sélecteur |','|---:|---|']
-              for n,s in repeated_selectors[:40]: out.append(f'| {n} | `{s.replace("|","\\|")}` |')
+              out += ['| Occurrences | Sélecteur | Pages |','|---:|---|---|']
+              for n,s in repeated_selectors[:40]:
+                  listed=', '.join(f'`{p}`' for p in sorted(selector_pages[s])[:12])
+                  if len(selector_pages[s])>12: listed+=f' + {len(selector_pages[s])-12} autres'
+                  out.append(f'| {n} | `{s.replace("|","\\|")}` | {listed} |')
           else:
               out.append('Aucun sélecteur local répété au moins deux fois.')
 
