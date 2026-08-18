@@ -6,13 +6,12 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **43**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **11**.
+Pages/familles détectées : **43**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **10**.
 
 ## Priorités de relecture
 
 | Priorité | Gate | Famille | Page | Variantes critiques non détectées |
 |---:|---|---|---|---|
-| 29 | NON_READY | couple / logement / séparation | `dossiers/acheter-logement-sans-se-fragiliser.html` | indivision directe, SCI, mariage, PACS |
 | 28 | NON_READY | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | salarié, santé / inaptitude, sans diplôme, revenu / runway |
 | 14 | NON_READY | budget / dettes | `dossiers/puis-je-me-permettre-reconversion.html` | déficit temporaire / structurel, dette / surendettement |
 | 14 | NON_READY | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
@@ -28,6 +27,7 @@ Pages/familles détectées : **43**. Pages `noindex` exclues : **79**. Promesses
 | 5 | ROUTE_FIRST | couple / logement / séparation | `dossiers/indivision-couple-separation-rachat-soulte.html` | SCI |
 | 5 | ROUTE_FIRST | travailler moins / qualité de vie | `dossiers/passer-80-pourcent-cout-reel.html` | indépendant |
 | 2 | COVERED_OR_NARROW | reconversion / trajectoire pro | `articles/retrouver-emploi-apres-interruption.html` | — |
+| 2 | COVERED_OR_NARROW | couple / logement / séparation | `dossiers/acheter-logement-sans-se-fragiliser.html` | — |
 | 2 | COVERED_OR_NARROW | couple / logement / séparation | `dossiers/acheter-sans-vider-epargne.html` | — |
 | 2 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/lancer-activite-sans-quitter-emploi.html` | — |
 | 1 | COVERED_OR_NARROW | budget / dettes | `dossiers/decision-plan-30-90-jours.html` | — |
@@ -57,21 +57,6 @@ Pages/familles détectées : **43**. Pages `noindex` exclues : **79**. Promesses
 | 0 | COVERED_OR_NARROW | travailler moins / qualité de vie | `dossiers/travailler-moins-vivre-mieux.html` | — |
 
 ## Détail des promesses larges `NON_READY`
-
-### `dossiers/acheter-logement-sans-se-fragiliser.html` — couple / logement / séparation
-
-Promesse : **acheter un logement sans se fragiliser : apport, épargne et crédit | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| indivision directe | MANQUANTE |
-| SCI | MANQUANTE |
-| mariage | MANQUANTE |
-| PACS | MANQUANTE |
-| concubinage | MANQUANTE |
-| tontine | MANQUANTE |
-| propriété ≠ financement | MENTIONNEE |
-| sorties multiples | TRAITEE |
 
 ### `dossiers/metiers-fonctions-organisation-entreprise.html` — reconversion / trajectoire pro
 
@@ -217,7 +202,7 @@ Promesse : **patrimoine et marge de manœuvre : combien de liberté vos actifs d
 
 ### couple / logement / séparation
 
-Pages détectées : **5**. Promesses larges `NON_READY` : **1**. Variantes le plus souvent non détectées : **tontine** (4), **SCI** (2), **PACS** (1), **concubinage** (1), **indivision directe** (1), **mariage** (1).
+Pages détectées : **5**. Promesses larges `NON_READY` : **0**. Variantes le plus souvent non détectées : **tontine** (4), **SCI** (1).
 
 ### achat immobilier / crédit
 
