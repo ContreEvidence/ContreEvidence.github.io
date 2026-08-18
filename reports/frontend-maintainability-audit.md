@@ -124,48 +124,48 @@ Cet audit mesure la **surface de maintenance**, pas la qualité visuelle. Un sty
 
 ## Sélecteurs locaux répétés entre blocs
 
-| Occurrences | Sélecteur |
-|---:|---|
-| 12 | `.ce-card-grid` |
-| 7 | `.ce-card b` |
-| 7 | `.ce-card` |
-| 6 | `.ce-flow>div` |
-| 6 | `.ce-flow i` |
-| 4 | `.sim-grid` |
-| 4 | `.ce-decision-flow>div` |
-| 4 | `.ce-decision-flow i` |
-| 3 | `.scenario-grid` |
-| 3 | `.reset-protocol` |
-| 3 | `.pro-pilot .loop` |
-| 3 | `.photo-credit` |
-| 3 | `.person-series` |
-| 3 | `.person-head p` |
-| 3 | `.person-head h2` |
-| 3 | `.pause-window` |
-| 3 | `.ce-flow` |
-| 3 | `.ce-check` |
-| 3 | `.alloc-table` |
-| 2 | `.warn` |
-| 2 | `.tool-hub .tool-grid` |
-| 2 | `.tool-hub .rescue .btns` |
-| 2 | `.tool-hub .rescue` |
-| 2 | `.tool-hub .function-nav` |
-| 2 | `.terrain-grid` |
-| 2 | `.strategy-grid` |
-| 2 | `.sim-wrap` |
-| 2 | `.se-proof-grid textarea` |
-| 2 | `.se-proof-grid` |
-| 2 | `.se-output dl` |
-| 2 | `.se-output dd` |
-| 2 | `.se-lenses` |
-| 2 | `.se-grid` |
-| 2 | `.se-card textarea` |
-| 2 | `.roadmap-rules` |
-| 2 | `.roadmap-grid` |
-| 2 | `.result-cards` |
-| 2 | `.reset-grid` |
-| 2 | `.recipe-top` |
-| 2 | `.recipe-grid` |
+| Occurrences | Sélecteur | Pages |
+|---:|---|---|
+| 12 | `.ce-card-grid` | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`, `dossiers/finances-difficiles-sortir-decouvert-dettes.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/premier-investissement-comment-commencer.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`, `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
+| 7 | `.ce-card b` | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`, `dossiers/finances-difficiles-sortir-decouvert-dettes.html`, `dossiers/liquidites-reserve-securite.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/premier-investissement-comment-commencer.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`, `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
+| 7 | `.ce-card` | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`, `dossiers/finances-difficiles-sortir-decouvert-dettes.html`, `dossiers/liquidites-reserve-securite.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/premier-investissement-comment-commencer.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html`, `dossiers/sante-travail-equilibre-vie-pro-perso.html` |
+| 6 | `.ce-flow>div` | `articles/construire-epargne-de-zero.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
+| 6 | `.ce-flow i` | `articles/construire-epargne-de-zero.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
+| 4 | `.sim-grid` | `simulateur-capacite-emprunt.html`, `simulateur-previsionnel-activite.html` |
+| 4 | `.ce-decision-flow>div` | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`, `dossiers/liquidites-reserve-securite.html` |
+| 4 | `.ce-decision-flow i` | `dossiers/accepter-emploi-moins-paye-vivre-mieux.html`, `dossiers/liquidites-reserve-securite.html` |
+| 3 | `.scenario-grid` | `simulateur-capitalisation-comparateur.html` |
+| 3 | `.reset-protocol` | `parcours-de-vie.html` |
+| 3 | `.pro-pilot .loop` | `parcours-pilotage-professionnel.html` |
+| 3 | `.photo-credit` | `hors-cadre-decouvertes.html` |
+| 3 | `.person-series` | `hors-cadre-decouvertes.html` |
+| 3 | `.person-head p` | `hors-cadre-decouvertes.html` |
+| 3 | `.person-head h2` | `hors-cadre-decouvertes.html` |
+| 3 | `.pause-window` | `hors-cadre.html` |
+| 3 | `.ce-flow` | `articles/construire-epargne-de-zero.html`, `dossiers/patrimoine-marge-de-manoeuvre.html`, `dossiers/quand-arreter-optimiser-utiliser-patrimoine.html` |
+| 3 | `.ce-check` | `dossiers/liquidites-reserve-securite.html`, `dossiers/premier-investissement-comment-commencer.html` |
+| 3 | `.alloc-table` | `outil-repartir-grosse-somme.html` |
+| 2 | `.warn` | `outil-repartir-grosse-somme.html`, `simulateur-previsionnel-activite.html` |
+| 2 | `.tool-hub .tool-grid` | `outils.html` |
+| 2 | `.tool-hub .rescue .btns` | `outils.html` |
+| 2 | `.tool-hub .rescue` | `outils.html` |
+| 2 | `.tool-hub .function-nav` | `outils.html` |
+| 2 | `.terrain-grid` | `parcours-de-vie.html` |
+| 2 | `.strategy-grid` | `simulateur-comparer-strategies-immobilieres.html` |
+| 2 | `.sim-wrap` | `simulateur-capacite-emprunt.html` |
+| 2 | `.se-proof-grid textarea` | `outil-ingenierie-solutions.html` |
+| 2 | `.se-proof-grid` | `outil-ingenierie-solutions.html` |
+| 2 | `.se-output dl` | `outil-ingenierie-solutions.html` |
+| 2 | `.se-output dd` | `outil-ingenierie-solutions.html` |
+| 2 | `.se-lenses` | `outil-ingenierie-solutions.html` |
+| 2 | `.se-grid` | `outil-ingenierie-solutions.html` |
+| 2 | `.se-card textarea` | `outil-ingenierie-solutions.html` |
+| 2 | `.roadmap-rules` | `parcours-de-vie.html` |
+| 2 | `.roadmap-grid` | `parcours-de-vie.html` |
+| 2 | `.result-cards` | `simulateur-previsionnel-activite.html` |
+| 2 | `.reset-grid` | `parcours-de-vie.html` |
+| 2 | `.recipe-top` | `hors-cadre-cuisine.html` |
+| 2 | `.recipe-grid` | `hors-cadre-cuisine.html` |
 
 ## Règle de consolidation
 
