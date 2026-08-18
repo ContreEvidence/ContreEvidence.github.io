@@ -32,13 +32,14 @@ jobs:
           STYLE_BLOCK=re.compile(r'<style\b[^>]*>(.*?)</style>',re.I|re.S)
           STYLE_ATTR=re.compile(r'\sstyle=["\'][^"\']*["\']',re.I)
           LINK_CSS=re.compile(r'<link\b[^>]*href=["\']([^"\']+\.css(?:\?[^"\']*)?)["\']',re.I)
-          CLASS_RULE=re.compile(r'([^{}]+)\{[^{}]*\}')
+          CLASS_RULE=re.compile(r'([^{}]+)\{([^{}]*)\}')
 
           pages=[]
           exact_blocks=collections.defaultdict(list)
           css_refs=collections.Counter()
           local_selectors=collections.Counter()
           selector_pages=collections.defaultdict(set)
+          selector_bodies=collections.defaultdict(lambda: collections.defaultdict(set))
 
           for p in sorted(Path('.').rglob('*.html')):
               if any(part.startswith('.') for part in p.parts):
@@ -56,12 +57,14 @@ jobs:
                   norm=re.sub(r'\s+',' ',b).strip()
                   if norm:
                       exact_blocks[hashlib.sha1(norm.encode()).hexdigest()].append(str(p))
-                  for sel in CLASS_RULE.findall(b):
+                  for sel,body in CLASS_RULE.findall(b):
+                      body_norm=re.sub(r'\s+',' ',body).strip()
                       for part in sel.split(','):
                           s=re.sub(r'\s+',' ',part).strip()
                           if s.startswith('.') and len(s)<120:
                               local_selectors[s]+=1
                               selector_pages[s].add(str(p))
+                              selector_bodies[s][body_norm].add(str(p))
               gate='EXTRACT' if local_chars>=2000 else ('REVIEW' if local_chars>=600 or inline_attrs>=8 else 'OK')
               pages.append(dict(path=str(p),blocks=len(blocks),chars=local_chars,attrs=inline_attrs,refs=len(set(refs)),gate=gate))
 
@@ -79,6 +82,11 @@ jobs:
           duplicate_groups.sort(key=lambda v:(-len(v),v[0]))
           repeated_selectors=[(n,s) for s,n in local_selectors.items() if n>=2]
           repeated_selectors.sort(reverse=True)
+          stable_shared=[]
+          for s,pageset in selector_pages.items():
+              if len(pageset)>=3 and len(selector_bodies[s])==1:
+                  stable_shared.append((len(pageset),local_selectors[s],s,sorted(pageset)))
+          stable_shared.sort(key=lambda x:(-x[0],-x[1],x[2]))
 
           out=['# Audit de maintenabilité front-end','',f'Mise à jour automatique : {date.today().isoformat()}','',
                f'Pages HTML analysées : **{len(pages)}**. Pages avec CSS local `<style>` : **{len(with_style)}**. Candidats `EXTRACT` (≥ 2 000 caractères de CSS local) : **{len(extract)}**. Candidats `REVIEW` : **{len(review)}**.','',
@@ -102,13 +110,24 @@ jobs:
           else:
               out.append('Aucun bloc `<style>` strictement identique sur plusieurs pages.')
 
+          out += ['','## Candidats de composants strictement stables','',
+                  'Sélecteurs présents sur au moins trois pages avec **une seule variante exacte de déclarations**. Ce sont les meilleurs candidats à une extraction sans changement de rendu.','']
+          if stable_shared:
+              out += ['| Pages | Occurrences | Sélecteur | Où |','|---:|---:|---|---|']
+              for page_count,n,s,plist in stable_shared[:30]:
+                  listed=', '.join(f'`{p}`' for p in plist[:10])
+                  if len(plist)>10: listed+=f' + {len(plist)-10} autres'
+                  out.append(f'| {page_count} | {n} | `{s.replace("|","\\|")}` | {listed} |')
+          else:
+              out.append('Aucun candidat strictement stable selon ce critère.')
+
           out += ['','## Sélecteurs locaux répétés entre blocs','']
           if repeated_selectors:
-              out += ['| Occurrences | Sélecteur | Pages |','|---:|---|---|']
+              out += ['| Occurrences | Variantes | Sélecteur | Pages |','|---:|---:|---|---|']
               for n,s in repeated_selectors[:40]:
                   listed=', '.join(f'`{p}`' for p in sorted(selector_pages[s])[:12])
                   if len(selector_pages[s])>12: listed+=f' + {len(selector_pages[s])-12} autres'
-                  out.append(f'| {n} | `{s.replace("|","\\|")}` | {listed} |')
+                  out.append(f'| {n} | {len(selector_bodies[s])} | `{s.replace("|","\\|")}` | {listed} |')
           else:
               out.append('Aucun sélecteur local répété au moins deux fois.')
 
