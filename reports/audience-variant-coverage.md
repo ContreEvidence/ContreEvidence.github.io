@@ -6,26 +6,24 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **43**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **10**.
+Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **2**.
 
 ## Priorités de relecture
 
 | Priorité | Gate | Famille | Page | Variantes critiques non détectées |
 |---:|---|---|---|---|
-| 28 | NON_READY | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | salarié, santé / inaptitude, sans diplôme, revenu / runway |
+| 16 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/metiers-fonctions-organisation-entreprise.html` | salarié, santé / inaptitude, sans diplôme, revenu / runway |
 | 14 | NON_READY | budget / dettes | `dossiers/puis-je-me-permettre-reconversion.html` | déficit temporaire / structurel, dette / surendettement |
-| 14 | NON_READY | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 9 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/changer-travail-avant-credit-immobilier.html` | santé / inaptitude, sans diplôme |
-| 7 | NON_READY | reconversion / trajectoire pro | `articles/competences-transferables.html` | revenu / runway |
-| 7 | NON_READY | budget / dettes | `articles/construire-epargne-de-zero.html` | déficit temporaire / structurel |
-| 7 | NON_READY | entrepreneuriat | `dossiers/are-arce-acre-creation-entreprise.html` | activité réglementée |
+| 8 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 7 | NON_READY | investissement locatif | `dossiers/comparer-strategies-immobilieres.html` | SCI |
-| 7 | NON_READY | budget / dettes | `dossiers/creer-entreprise-avec-peu-argent.html` | revenu stable / variable |
-| 7 | NON_READY | entrepreneuriat | `dossiers/formation-vaut-elle-le-cout.html` | micro / EI / société |
-| 7 | NON_READY | budget / dettes | `dossiers/patrimoine-marge-de-manoeuvre.html` | déficit temporaire / structurel |
 | 5 | ROUTE_FIRST | achat immobilier / crédit | `dossiers/indivision-couple-separation-rachat-soulte.html` | indépendant |
 | 5 | ROUTE_FIRST | couple / logement / séparation | `dossiers/indivision-couple-separation-rachat-soulte.html` | SCI |
 | 5 | ROUTE_FIRST | travailler moins / qualité de vie | `dossiers/passer-80-pourcent-cout-reel.html` | indépendant |
+| 4 | ROUTE_FIRST | reconversion / trajectoire pro | `articles/competences-transferables.html` | revenu / runway |
+| 4 | ROUTE_FIRST | budget / dettes | `articles/construire-epargne-de-zero.html` | déficit temporaire / structurel |
+| 4 | ROUTE_FIRST | entrepreneuriat | `dossiers/are-arce-acre-creation-entreprise.html` | activité réglementée |
+| 4 | ROUTE_FIRST | budget / dettes | `dossiers/creer-entreprise-avec-peu-argent.html` | revenu stable / variable |
 | 2 | COVERED_OR_NARROW | reconversion / trajectoire pro | `articles/retrouver-emploi-apres-interruption.html` | — |
 | 2 | COVERED_OR_NARROW | couple / logement / séparation | `dossiers/acheter-logement-sans-se-fragiliser.html` | — |
 | 2 | COVERED_OR_NARROW | couple / logement / séparation | `dossiers/acheter-sans-vider-epargne.html` | — |
@@ -50,6 +48,7 @@ Pages/familles détectées : **43**. Pages `noindex` exclues : **79**. Promesses
 | 0 | COVERED_OR_NARROW | achat immobilier / crédit | `dossiers/finances-residence-principale.html` | — |
 | 0 | COVERED_OR_NARROW | transmission / succession | `dossiers/finances-transmission-patrimoine.html` | — |
 | 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/formation-vaut-elle-le-cout.html` | — |
+| 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/patrimoine-marge-de-manoeuvre.html` | — |
 | 0 | COVERED_OR_NARROW | budget / dettes | `dossiers/patrimoine-permet-il-travailler-moins.html` | — |
 | 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/puis-je-me-permettre-reconversion.html` | — |
 | 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/reconversion-sans-perte-salaire.html` | — |
@@ -57,21 +56,6 @@ Pages/familles détectées : **43**. Pages `noindex` exclues : **79**. Promesses
 | 0 | COVERED_OR_NARROW | travailler moins / qualité de vie | `dossiers/travailler-moins-vivre-mieux.html` | — |
 
 ## Détail des promesses larges `NON_READY`
-
-### `dossiers/metiers-fonctions-organisation-entreprise.html` — reconversion / trajectoire pro
-
-Promesse : **métier, poste, fonction, service : comprendre l’entreprise — contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| salarié | MANQUANTE |
-| demandeur emploi | TRAITEE |
-| public | MANQUANTE |
-| indépendant | MANQUANTE |
-| santé / inaptitude | MANQUANTE |
-| sans diplôme | MANQUANTE |
-| senior / âge | MANQUANTE |
-| revenu / runway | MANQUANTE |
 
 ### `dossiers/puis-je-me-permettre-reconversion.html` — budget / dettes
 
@@ -85,63 +69,6 @@ Promesse : **puis-je me permettre une reconversion ? budget, voies courtes et se
 | logement propriétaire / locataire | MANQUANTE |
 | dette / surendettement | MANQUANTE |
 | charges compressibles / non | TRAITEE |
-
-### `dossiers/quitter-cdi-avec-credit-immobilier.html` — reconversion / trajectoire pro
-
-Promesse : **quitter son cdi avec un crédit : séquencer emploi, financement et transition | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| salarié | TRAITEE |
-| demandeur emploi | TRAITEE |
-| public | MANQUANTE |
-| indépendant | MANQUANTE |
-| santé / inaptitude | MANQUANTE |
-| sans diplôme | MANQUANTE |
-| senior / âge | MANQUANTE |
-| revenu / runway | TRAITEE |
-
-### `articles/competences-transferables.html` — reconversion / trajectoire pro
-
-Promesse : **changer de métier sans repartir de zéro : compétences transférables | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| salarié | TRAITEE |
-| demandeur emploi | TRAITEE |
-| public | MENTIONNEE |
-| indépendant | TRAITEE |
-| santé / inaptitude | TRAITEE |
-| sans diplôme | TRAITEE |
-| senior / âge | MANQUANTE |
-| revenu / runway | MANQUANTE |
-
-### `articles/construire-epargne-de-zero.html` — budget / dettes
-
-Promesse : **construire son épargne à partir de zéro : premier coussin, réserve puis investissement | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| déficit temporaire / structurel | MANQUANTE |
-| revenu stable / variable | TRAITEE |
-| solo / couple | MENTIONNEE |
-| logement propriétaire / locataire | MANQUANTE |
-| dette / surendettement | TRAITEE |
-| charges compressibles / non | TRAITEE |
-
-### `dossiers/are-arce-acre-creation-entreprise.html` — entrepreneuriat
-
-Promesse : **are, arce, acre : choisir pour créer son entreprise en 2026 | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| activité principale / complément | TRAITEE |
-| micro / EI / société | TRAITEE |
-| activité réglementée | MANQUANTE |
-| chômage / aides | TRAITEE |
-| TVA | MANQUANTE |
-| financement / BFR | TRAITEE |
-| associés | MANQUANTE |
 
 ### `dossiers/comparer-strategies-immobilieres.html` — investissement locatif
 
@@ -157,46 +84,6 @@ Promesse : **comparer les stratégies immobilières : usage, capital, revenu et 
 | IR / IS | MANQUANTE |
 | crédit / cash | TRAITEE |
 | gestion | TRAITEE |
-
-### `dossiers/creer-entreprise-avec-peu-argent.html` — budget / dettes
-
-Promesse : **créer une entreprise avec peu d’argent : budget de départ réaliste | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| déficit temporaire / structurel | TRAITEE |
-| revenu stable / variable | MANQUANTE |
-| solo / couple | TRAITEE |
-| logement propriétaire / locataire | MENTIONNEE |
-| dette / surendettement | ROUTEE |
-| charges compressibles / non | TRAITEE |
-
-### `dossiers/formation-vaut-elle-le-cout.html` — entrepreneuriat
-
-Promesse : **choisir une formation pour une reconversion : coût, rncp et débouchés | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| activité principale / complément | TRAITEE |
-| micro / EI / société | MANQUANTE |
-| activité réglementée | TRAITEE |
-| chômage / aides | TRAITEE |
-| TVA | MANQUANTE |
-| financement / BFR | TRAITEE |
-| associés | MANQUANTE |
-
-### `dossiers/patrimoine-marge-de-manoeuvre.html` — budget / dettes
-
-Promesse : **patrimoine et marge de manœuvre : combien de liberté vos actifs donnent-ils ? | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| déficit temporaire / structurel | MANQUANTE |
-| revenu stable / variable | TRAITEE |
-| solo / couple | TRAITEE |
-| logement propriétaire / locataire | MENTIONNEE |
-| dette / surendettement | TRAITEE |
-| charges compressibles / non | TRAITEE |
 
 ## Lecture par famille
 
@@ -218,15 +105,15 @@ Pages détectées : **1**. Promesses larges `NON_READY` : **0**. Variantes le pl
 
 ### reconversion / trajectoire pro
 
-Pages détectées : **11**. Promesses larges `NON_READY` : **3**. Variantes le plus souvent non détectées : **senior / âge** (7), **public** (6), **indépendant** (4), **sans diplôme** (3), **santé / inaptitude** (3), **revenu / runway** (2).
+Pages détectées : **11**. Promesses larges `NON_READY` : **0**. Variantes le plus souvent non détectées : **senior / âge** (7), **public** (6), **indépendant** (4), **sans diplôme** (3), **santé / inaptitude** (3), **revenu / runway** (2).
 
 ### entrepreneuriat
 
-Pages détectées : **6**. Promesses larges `NON_READY` : **2**. Variantes le plus souvent non détectées : **TVA** (4), **associés** (4), **activité réglementée** (1), **micro / EI / société** (1).
+Pages détectées : **5**. Promesses larges `NON_READY` : **0**. Variantes le plus souvent non détectées : **TVA** (3), **associés** (3), **activité réglementée** (1).
 
 ### budget / dettes
 
-Pages détectées : **10**. Promesses larges `NON_READY` : **4**. Variantes le plus souvent non détectées : **logement propriétaire / locataire** (4), **déficit temporaire / structurel** (3), **dette / surendettement** (1), **revenu stable / variable** (1).
+Pages détectées : **10**. Promesses larges `NON_READY` : **1**. Variantes le plus souvent non détectées : **logement propriétaire / locataire** (4), **déficit temporaire / structurel** (2), **dette / surendettement** (1), **revenu stable / variable** (1).
 
 ### travailler moins / qualité de vie
 
