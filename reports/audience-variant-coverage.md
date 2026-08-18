@@ -6,7 +6,7 @@ Cet audit cherche les **variantes raisonnablement attirées par la promesse visi
 
 Le score est heuristique. `NON_READY` signifie : **relire humainement avant d’utiliser cette page comme destination d’acquisition large**. Une page technique volontairement étroite peut être parfaitement conforme.
 
-Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **2**.
+Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses larges à relire avant acquisition : **1**.
 
 ## Priorités de relecture
 
@@ -16,7 +16,6 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 | 14 | NON_READY | budget / dettes | `dossiers/puis-je-me-permettre-reconversion.html` | déficit temporaire / structurel, dette / surendettement |
 | 9 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/changer-travail-avant-credit-immobilier.html` | santé / inaptitude, sans diplôme |
 | 8 | ROUTE_FIRST | reconversion / trajectoire pro | `dossiers/quitter-cdi-avec-credit-immobilier.html` | santé / inaptitude, sans diplôme |
-| 7 | NON_READY | investissement locatif | `dossiers/comparer-strategies-immobilieres.html` | SCI |
 | 5 | ROUTE_FIRST | achat immobilier / crédit | `dossiers/indivision-couple-separation-rachat-soulte.html` | indépendant |
 | 5 | ROUTE_FIRST | couple / logement / séparation | `dossiers/indivision-couple-separation-rachat-soulte.html` | SCI |
 | 5 | ROUTE_FIRST | travailler moins / qualité de vie | `dossiers/passer-80-pourcent-cout-reel.html` | indépendant |
@@ -40,6 +39,7 @@ Pages/familles détectées : **42**. Pages `noindex` exclues : **79**. Promesses
 | 0 | COVERED_OR_NARROW | achat immobilier / crédit | `dossiers/changer-travail-avant-credit-immobilier.html` | — |
 | 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/combien-chiffre-affaires-pour-vivre.html` | — |
 | 0 | COVERED_OR_NARROW | reconversion / trajectoire pro | `dossiers/combien-epargne-avant-demissionner.html` | — |
+| 0 | COVERED_OR_NARROW | investissement locatif | `dossiers/comparer-strategies-immobilieres.html` | — |
 | 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/creer-entreprise-avec-peu-argent.html` | — |
 | 0 | COVERED_OR_NARROW | entrepreneuriat | `dossiers/creer-entreprise-sans-diplome.html` | — |
 | 0 | COVERED_OR_NARROW | couple / logement / séparation | `dossiers/decider-a-deux-travail-patrimoine.html` | — |
@@ -70,21 +70,6 @@ Promesse : **puis-je me permettre une reconversion ? budget, voies courtes et se
 | dette / surendettement | MANQUANTE |
 | charges compressibles / non | TRAITEE |
 
-### `dossiers/comparer-strategies-immobilieres.html` — investissement locatif
-
-Promesse : **comparer les stratégies immobilières : usage, capital, revenu et sortie | contre-évidence**
-
-| Variante | Signal automatique |
-|---|---|
-| détention directe | MANQUANTE |
-| SCI | MANQUANTE |
-| location nue | TRAITEE |
-| location meublée | TRAITEE |
-| courte durée | TRAITEE |
-| IR / IS | MANQUANTE |
-| crédit / cash | TRAITEE |
-| gestion | TRAITEE |
-
 ## Lecture par famille
 
 ### couple / logement / séparation
@@ -97,7 +82,7 @@ Pages détectées : **5**. Promesses larges `NON_READY` : **0**. Variantes le pl
 
 ### investissement locatif
 
-Pages détectées : **2**. Promesses larges `NON_READY` : **1**. Variantes le plus souvent non détectées : **IR / IS** (1), **SCI** (1), **détention directe** (1).
+Pages détectées : **2**. Promesses larges `NON_READY` : **0**. Variantes le plus souvent non détectées : **IR / IS** (1).
 
 ### transmission / succession
 
